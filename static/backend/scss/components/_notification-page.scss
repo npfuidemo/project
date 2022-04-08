@@ -1,0 +1,150 @@
+.notification-popup {
+    .tab-content {
+        padding: 0;
+        height: calc(100vh - 140px);
+        overflow: auto;
+    }
+}
+.border-bottom-blue{
+    border-bottom:1px solid $brand-color !important;
+}
+.notification-popup {
+    .list-group {
+        .list-group-item {
+            font-size: 13px;
+            h5{
+                font-weight: 400;
+                font-size: 13px;
+            }
+            strong{
+                font-weight: 500;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .material-icons {
+        font-size: 20px;
+        margin: -2px 2px 0 0 !important;
+    }
+}
+
+.readall {
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.badge-light {
+    background: $color-primary;
+    text-align: center;
+    color: $color-white;
+    margin-left: 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    text-transform: capitalize;
+    font-size: 11px;
+
+    .bg-primary {
+        background-color: $color-white !important;
+        padding: 2.9px 8px;
+        margin-left: 4px;
+        border-radius: 8px;
+        color: rgba(0, 0, 0, .87);
+    }
+}
+
+.modal-footer {
+    a {
+        &.btn.btn-sm {
+            font-size: 12px;
+        }
+    }
+}
+
+.link-readall {
+    right: 11px;
+    top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.notification-popup {
+    .inline_tabs {
+        .nav-tabs {
+            .nav-item {
+                .nav-link {
+                    padding: 7px 5px;
+                }
+            }
+        }
+    }
+}
+
+.list-group {
+    a {
+        &:first-child {
+            border-top: none !important;
+        }
+    }
+}
+.show-all{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 2px 15px;
+    &:hover {
+        background: #4b7bdd;
+        border-radius: 20px;
+        color: #fff;
+    }
+}
+.notification-popup{
+    .inline_tabs{
+        .nav-tabs .nav-item {
+            margin: 0 15px;
+            .nav-link {
+                color: #b3b3b3 !important;
+                font-size: 14px;
+                font-weight: 400;
+            &.active{
+                color: #1a1a1a !important;
+
+            }
+            }
+        }
+        .link-readall{
+            font-size: 11px;
+        }
+        li {
+            a {
+                span{
+                    &.badge {
+                        background: #ccc;
+                        border-radius: 10px;
+                        padding: 5px 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+.modal-title{
+    font-size: 16px;
+    span{
+        line-height: 1.6;
+        &.badge{
+            line-height: 1;
+            padding: 3px 12px;
+        }
+    }
+
+}
+.modal-dialog {
+    .modal-content {
+        box-shadow: 0 27px 24px 0 rgb(0 0 0 / 20%), 0 40px 77px 0 rgb(0 0 0 / 8%);
+    }
+}
+

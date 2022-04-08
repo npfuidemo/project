@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon.png">
+    <link rel="icon" type="image/ico" href="../favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Teams</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <!--  Fonts and icons -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons|Material+Icons+Outlined" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="../static/backend/css/main.css" rel="stylesheet" />
+    <link rel="preload" href="../static/backend/css/config.css" as="style" onload="this.rel='stylesheet'">
+    <!-- <link href="../static/backend/css/user-permissions.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+    <div class="jumbotron">
+        <button class="m-2 btn btn-primary" data-toggle="modal" data-target="#purgeRequestDetail">Primary
+            Button</button>
+        <button class="m-2 btn btn-secondary">Secondary Button</button>
+        <button class="m-2 btn btn-info">Information Button</button>
+        <button class="m-2 btn btn-warning">Warning Button</button>
+        <button class="m-2 btn btn-danger">Danger Button</button>
+        <button class="m-2 btn btn-success">Success Button</button>
+        <br>
+        <br>
+        <button class="m-2 btn-round btn btn-primary">Primary Button</button>
+        <button class="m-2 btn-round btn btn-secondary">Secondary Button</button>
+        <button class="m-2 btn-round btn btn-info">Information Button</button>
+        <button class="m-2 btn-round btn btn-warning">Warning Button</button>
+        <button class="m-2 btn-round btn btn-danger">Danger Button</button>
+        <button class="m-2 btn-round btn btn-success">Success Button</button>
+        <br>
+        <br>
+        <button class="m-2 btn-round btn btn-outline-primary">Primary Button</button>
+        <button class="m-2 btn-round btn btn-outline-secondary">Secondary Button</button>
+        <button class="m-2 btn-round btn btn-outline-info">Information Button</button>
+        <button class="m-2 btn-round btn btn-outline-warning">Warning Button</button>
+        <button class="m-2 btn-round btn btn-outline-danger">Danger Button</button>
+        <button class="m-2 btn-round btn btn-outline-success">Success Button</button>
+        <br>
+    </div>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-tertiary">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-quaternary">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-quinary">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-senary">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-septenary">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-octonary">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-nonary">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-denary">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-eleventh">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-twelfth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-thirteenth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-fourteenth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-fifteenth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-sixteenth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-seventeenth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-eighteenth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-nineteenth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-twentieth">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-twentifirst">Theme Colors</div>
+            </div>
+            <div class="col-2">
+                <div class="p-3 mb-3 rounded text-dark bg-duodenary">Theme Colors</div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <input type="text" id="searchInput" onkeyup="filterFunction()" />
+                <select name="from" id="undo_redo" class="form-control multi-select-pill" multiple="multiple">
+                    <option value="1">C++</option>
+                    <option value="2">C#</option>
+                    <option value="3">Haskell</option>
+                    <option value="4">Java</option>
+                    <option value="5">JavaScript</option>
+                    <option value="6">Lisp</option>
+                    <option value="7">Lua</option>
+                    <option value="8">MATLAB</option>
+                    <option value="9">NewLISP</option>
+                    <option value="10">PHP</option>
+                    <option value="11">Perl</option>
+                    <option value="12">SQL</option>
+                    <option value="13">Unix shell</option>
+                </select>
+                <script>
+                    function filterFunction() {
+                        var input, filter, ul, li, option, i;
+                        input = document.getElementById("searchInput");
+                        filter = input.value.toUpperCase();
+                        div = document.getElementById("undo_redo");
+                        option = div.getElementsByTagName("option");
+                        for (i = 0; i < option.length; i++) {
+                            txtValue = option[i].textContent || option[i].innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                option[i].style.display = "";
+                            } else {
+                                option[i].style.display = "none";
+                            }
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="jumbotron">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="user_permission" data-user-id="{{user_id}}" name="user_permission"
+                            value="individual" {% if user.access_level=="individual" %} checked="True" {% endif %}>
+                        <span class="custom-btn-span"></span>
+                        <span>sjgdvasdfjdgvfjsdf gdsgf sdkjhfg dsjfhgsd kjfhgsd fkjsdf</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="jumbotron">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="custom-radio">
+                                <input type="radio" class="user_permission" data-user-id="{{user_id}}"
+                                    name="user_permission" value="individual">
+                                <span class="custom-btn-span"></span>
+                                <span>sjdkhfgsdujyfgds fgsdkjhgsdkfjhsdgfkjdsgf k</span>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <label class="custom-radio">
+                                <input type="radio" class="user_permission" data-user-id="{{user_id}}"
+                                    name="user_permission" value="individual">
+                                <span class="custom-btn-span"></span>
+                                <span>sjdkhfgsdujyfgdsfgsd kjhgsdkfjhsdgfkjdsgf k</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade offCanvasModal right" id="purgeRequestDetail">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content h-100">
+                <div class="modal-header border-bottom-blue">
+                    <h5 class="modal-title my-0" id="exampleModalLabel">
+                        Purge Request -
+                        <span class="font-weight-normal">Request id</span>
+                    </h5>
+                    <button type="button" class="close" data-toggle="tooltip" title="Click here to close"
+                        data-placement="left" data-container="body" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body p-0">
+                    <div class="d-inline-block w-100" id="purgeDetailsCollapse">
+                        <div class="row no-gutters">
+                            <div class="col-sm-12 col-md-4">
+                                <div class="sticky-top sticky-menu-setting">
+                                    <div class="setting-menu rounded-0 card my-0">
+                                        <div class="list-group py-0">
+                                            <a href="#request1" data-toggle="collapse"
+                                                class="list-group-item list-group-item-action flex-nowrap align-items-start content-none active">
+                                                <div class="min-w">
+                                                    <h6 class="my-0">
+                                                        <span class="text-truncate d-block">Request 1</span>
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                            <a href="#request2" data-toggle="collapse"
+                                                class="list-group-item list-group-item-action flex-nowrap align-items-start content-none">
+                                                <div class="min-w">
+                                                    <h6 class="my-0">
+                                                        <span class="text-truncate d-block">Request 2</span>
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                            <a href="#request3" data-toggle="collapse"
+                                                class="list-group-item list-group-item-action flex-nowrap align-items-start content-none">
+                                                <div class="min-w">
+                                                    <h6 class="my-0">
+                                                        <span class="text-truncate d-block">Request 3</span>
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                            <a href="#request4" data-toggle="collapse"
+                                                class="list-group-item list-group-item-action flex-nowrap align-items-start content-none">
+                                                <div class="min-w">
+                                                    <h6 class="my-0">
+                                                        <span class="text-truncate d-block">Request 4</span>
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                            <a href="#request5" data-toggle="collapse"
+                                                class="list-group-item list-group-item-action flex-nowrap align-items-start content-none">
+                                                <div class="min-w">
+                                                    <h6 class="my-0">
+                                                        <span class="text-truncate d-block">Request 5</span>
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                            <a href="#request6" data-toggle="collapse"
+                                                class="list-group-item list-group-item-action flex-nowrap align-items-start content-none">
+                                                <div class="min-w">
+                                                    <h6 class="my-0">
+                                                        <span class="text-truncate d-block">Request 6</span>
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                            <a href="#request7" data-toggle="collapse"
+                                                class="list-group-item list-group-item-action flex-nowrap align-items-start content-none">
+                                                <div class="min-w">
+                                                    <h6 class="my-0">
+                                                        <span class="text-truncate d-block">Request 7</span>
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-8">
+                                <div class="p-3">
+                                    <div class="collapse show" id="request1" data-toggle="false" data-parent="#purgeDetailsCollapse">Request
+                                        1
+                                    </div>
+                                    <div class="collapse" id="request2" data-toggle="false" data-parent="#purgeDetailsCollapse">Request 2
+                                    </div>
+                                    <div class="collapse" id="request3" data-toggle="false" data-parent="#purgeDetailsCollapse">Request 3
+                                    </div>
+                                    <div class="collapse" id="request4" data-toggle="false" data-parent="#purgeDetailsCollapse">Request 4
+                                    </div>
+                                    <div class="collapse" id="request5" data-toggle="false" data-parent="#purgeDetailsCollapse">Request 5
+                                    </div>
+                                    <div class="collapse" id="request6" data-toggle="false" data-parent="#purgeDetailsCollapse">Request 6
+                                    </div>
+                                    <div class="collapse" id="request7" data-toggle="false" data-parent="#purgeDetailsCollapse">Request 7
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/backend/js/core/jquery.min.js"></script>
+    <script src="../static/backend/js/core/popper.min.js"></script>
+    <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
+
+    <script>
+        $('#purgeDetailsCollapse [data-toggle="collapse"]').click(function(){
+            $('#purgeDetailsCollapse [data-toggle="collapse"]').removeClass('active');
+            $('#purgeDetailsCollapse [data-toggle="collapse"]').removeAttr('style');
+            $(this).addClass('active');
+            $('#purgeDetailsCollapse [data-toggle="collapse"].active').css('pointer-events', 'none');
+        });
+    </script>
+
+    <!-- Plugins Files -->
+    <!-- <script src="../static/backend/js/plugins/moment.min.js"></script> -->
+    <!-- <script src="../static/backend/js/plugins/bootstrap-datetimepicker.js"></script> -->
+    <!-- <script src="../static/backend/js/plugins/nouislider.min.js"></script> -->
+    <!-- <script src="../static/backend/js/plugins/ckeditor.js"></script> -->
+
+    <!--  Theme JS Files  -->
+    <!-- <script src="../static/backend/js/material-kit.js?v=2.0.7"></script> -->
+    <!-- <script src="../static/backend/js/bootstrap-select.js"></script> -->
+    <!--<script src="https://materializecss.com/bin/materialize.js"></script>-->
+
+    <!-- <script src="https://cdn.ckeditor.com/4.16.2/basic/ckeditor.js"></script> -->
+    <!-- <script src="../static/backend/js/owl.carousel/dist/owl.carousel.js"></script> -->
+
+
+    <!-- <script src="../static/backend/js/base/common.js"></script> -->
+    <!-- <script src="../static/backend/js/plugins/bootstrap-tagsinput.min.js"></script> -->
+    <!-- <script src="../static/backend/js/plugins/typehead.js"></script> -->
+    <!-- <script src="../static/backend/js/plugins/multiselect.min.js"></script> -->
+    <!-- <script src="../static/backend/js/plugins/transfer.js"></script> -->
+
+    <!-- <script>
+        $('.sorting').click(function () {
+            $('.sorting').not(this).removeClass('sorting_asc sorting_desc');
+            if ($(this).hasClass('sorting_desc') || $(this).hasClass('sorting_asc')) {
+                $(this).toggleClass('sorting_desc sorting_asc');
+            }
+            else {
+                $(this).addClass('sorting_desc');
+            }
+        });
+        $('.expended-search-link').click(function () {
+            $(this).next('.expended-search-wrpper').toggleClass('active');
+        });
+        $('.expended-search-wrpper [data-dismiss="search"]').click(function () {
+            $('#searchTicket').val('');
+            $('.expended-search-wrpper').removeClass('active');
+        });
+        $('.expended-search-wrpper #search_filter').on('shown.bs.select', function () {
+            $('.expended-search-wrpper #searchBox').css('overflow', 'unset');
+        });
+
+        $('.expended-search-wrpper #search_filter').on('hidden.bs.select', function () {
+            $('.expended-search-wrpper #searchBox').css('overflow', 'hidden');
+        });
+
+        // dropdownMenuPlacement with body
+        function dropdownMenuPlacement() {
+            $('.dropdown.show[data-container="body"]').dropdown('toggle');
+            // hold onto the drop down menu
+            var dropdownMenu;
+            // and when you show it, move it to the body
+            $('.dropdown[data-container="body"]').on('show.bs.dropdown', function (e) {
+
+                // grab the menu
+                dropdownMenu = $(e.target).find('.dropdown-menu');
+                var dropHeight = dropdownMenu.outerHeight() - 50;
+
+                // detach it and append it to the body
+                $('body').append(dropdownMenu.detach());
+
+                // grab the new offset position
+                var eOffset = $(e.target).offset();
+                var offsetDropPos = eOffset.top - dropHeight;
+                // make sure to place it where it would normally go (this could be improved)
+                dropdownMenu.css({
+                    'display': 'block',
+                    //'top': eOffset.top + $(e.target).outerHeight(),
+                    'top': (offsetDropPos < 0) ? 0 : offsetDropPos,
+                    'left': eOffset.left - 135
+                });
+            });
+            // and when you hide it, reattach the drop down, and hide it normally
+            $('.dropdown[data-container="body"]').on('hide.bs.dropdown', function (e) {
+                $(e.target).append(dropdownMenu.detach());
+                dropdownMenu.hide();
+            });
+        }
+
+        $('.dropdown[data-container="body"]:not(.show)').click(function () {
+            dropdownMenuPlacement();
+        });
+        // $('.chosen-select').chosen();
+        $('.tags-input').tagsinput();
+    </script> -->
+    <!-- <script>
+        $('[data-toggle="tooltip"][data-trigger="hover"]').click(function () {
+            $('.tooltip').remove();
+        });
+    </script> -->
+    <!-- <script>
+
+
+        let tableElement = $('table tbody').html();
+        for (let i = 0; i < 3; i++) {
+            $('table tbody').append(tableElement);
+        }
+        let skeletonCard = $('#skeleton-card').html();
+        for (let i = 0; i < 2; i++) {
+            $('#skeleton-card').append(skeletonCard);
+        }
+        $('#team-user').hide();
+        setTimeout(() => {
+            $('#skeleton-card').hide();
+            $('#team-user').show();
+        }, 4500);
+    </script> -->
+</body>
+
+</html>
+<!-- <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Collapsible Group Item #1
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Collapsible Group Item #2
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          Some placeholder content for the second accordion panel. This panel is hidden by default.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Collapsible Group Item #3
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+        </div>
+      </div>
+    </div>
+  </div> -->

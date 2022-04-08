@@ -1,0 +1,197 @@
+/*** Modal open left & Right ***/
+.modal {
+
+    &.left,
+    &.right {
+        .modal-body {
+            max-height:calc(100% - 100px);
+            &.fullHeight{
+                max-height:calc(100% - 0px)!important;
+            }
+        }
+    }
+
+    &.left {
+        &.fade {
+            .modal-dialog {
+                left: -500px;
+                -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+                -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+                -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+                transition: opacity 0.3s linear, left 0.3s ease-out;
+
+                &.modal-lg {
+                    left: -$modal-lg;
+                }
+
+                &.modal-llg {
+                    left: -$modal-llg;
+                }
+
+                &.modal-sm {
+                    left: -$modal-sm;
+                }
+
+                &.modal-md {
+                    left: -$modal-md;
+                }
+
+                &.modal-xlg {
+                    left: -$modal-xlg;
+                }
+            }
+
+            &.show {
+                .modal-dialog {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &.right {
+        &.fade {
+            .modal-dialog {
+                right: -500px;
+                -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+                -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+                -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+                transition: opacity 0.3s linear, right 0.3s ease-out;
+
+                &.modal-lg {
+                    right: -$modal-lg;
+                }
+
+                &.modal-llg {
+                    right: -$modal-llg;
+                }
+
+                &.modal-sm {
+                    right: -$modal-sm;
+                }
+
+                &.modal-md {
+                    right: -$modal-md;
+                }
+
+                &.modal-xlg {
+                    right: -$modal-xlg;
+                }
+            }
+
+            &.show {
+                .modal-dialog {
+                    right: 0;
+                }
+
+                .modal-detail {
+                    right: $modal-md;
+                }
+            }
+        }
+    }
+}
+
+/* ----- MODAL STYLE --- */
+
+/*** Date Range Picker z-index value increase for popup
+.daterangepicker {
+    z-index: 99911 !important;
+}
+
+/*--- Body scroll hidden
+body.scrollHidden{
+    overflow: hidden!important;
+}*/
+
+@include media("<tablet") {
+    .modal {
+
+        &.left,
+        &.right {
+            .modal-dialog {
+                width: 100% !important;
+            }
+        }
+
+        &.right {
+            &.fade {
+                .modal-dialog {
+                    right: -100%;
+                }
+            }
+        }
+
+        &.left {
+            &.fade {
+                .modal-dialog {
+                    left: -100%;
+                }
+            }
+        }
+    }
+}
+
+.modal.offCanvasModal {
+    .modal-dialog {
+        height: 100%;
+        position: fixed;
+        transform: translate(0, 0);
+    }
+
+    .modal-content {
+        border-radius: 0;
+        height: 100vh;
+    }
+
+    .modal-header {
+        padding: .75rem 1rem;
+    }
+
+    .modal-body {
+        padding: 0 0 50px !important;
+        margin: 0 0 50px !important;
+    }
+
+    .modal-footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .btn.btn-light {
+        background: rgba(76, 121, 220, .1) !important;
+
+    }
+
+    &.floating {
+        .modal-content {
+            height: calc(100vh - 20px);
+            border-radius: 10px;
+            margin-top: 10px;
+
+            .modal-accordion {
+                max-height: calc(100vh - 172px);
+            }
+
+            .modal-footer {
+                bottom: 10px;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+
+        &.right {
+            .modal-dialog {
+                right: 10px;
+            }
+        }
+    }
+
+    &#filterPopup,
+    &#reassign-popup {
+        .modal-content .modal-body {
+            padding: 15px 15px 50px !important;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+$line-height: 10;
+@for $i from 3 through $line-height {
+    .leading-#{$i} {
+        line-height: $i / 4;
+    }
+}

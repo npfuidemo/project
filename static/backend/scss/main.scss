@@ -1,0 +1,90 @@
+@import 'abstracts/variable-overwrite',
+'vendors/material-kit/variables',
+'abstracts/variables',
+'vendors/material-kit/mixins',
+'abstracts/mixins',
+'vendors/material-kit/core-bootstrap',
+'vendors/material-kit/reboot';
+
+// Core Components
+@import 'vendors/material-kit/type',
+'vendors/material-kit/layout',
+'vendors/material-kit/buttons',
+'vendors/material-kit/misc',
+'vendors/material-kit/checkboxes',
+'vendors/material-kit/custom-forms',
+'vendors/material-kit/switches',
+'vendors/material-kit/radios',
+'vendors/material-kit/carousel',
+'vendors/material-kit/forms',
+'vendors/material-kit/input-group',
+'vendors/material-kit/list-group',
+'vendors/material-kit/nav',
+'vendors/material-kit/images',
+'vendors/material-kit/navbar',
+'vendors/material-kit/badges',
+'vendors/material-kit/alerts',
+'vendors/material-kit/pagination',
+'vendors/material-kit/pills',
+'vendors/material-kit/info-areas',
+'vendors/material-kit/tabs',
+'vendors/material-kit/tooltip',
+'vendors/material-kit/popover',
+'vendors/material-kit/modal',
+'vendors/material-kit/dropdown',
+'vendors/material-kit/drawer',
+'vendors/material-kit/progress',
+'vendors/material-kit/togglebutton',
+'vendors/material-kit/ripples',
+'vendors/material-kit/headers',
+'vendors/material-kit/footers';
+
+// Component
+@import 'vendors/include-media',
+'components/scroll-theme',
+'components/navbar',
+'components/humburger-icon',
+'layout/sidenav',
+'base/fonts',
+'layout/maincontainer',
+'components/nameinitials',
+'base/header';
+
+// Cards
+@import 'vendors/material-kit/cards',
+'vendors/material-kit/cards/card-carousel',
+'vendors/material-kit/cards/card-login',
+'vendors/material-kit/cards/card-plain';
+//'vendors/bootstrap-tour/bootstrap-tour-standalone.min.css';
+
+// Core Plugins
+@import 'vendors/material-kit/plugins/plugin-datetime-picker', 'vendors/datepicker';
+
+// Sections and  pages
+@import 'vendors/material-kit/responsive',
+'components/customtab',
+'vendors/bootstrap-select/bootstrap-select.scss',
+'base/genric',
+'components/breadcrumb',
+'components/listIcon',
+'components/two-step-modal',
+'components/noDataFoundDiv',
+'components/callInfoOver',
+'components/searchicon',
+'components/crossicon',
+'components/notification',
+'components/modal-overwrite',
+'components/offcanvasModal',
+'components/notifyAlert',
+'components/alert-modal',
+'components/callout-alert',
+'components/skeleton-loader',
+'components/spinner',
+'components/tokenModal',
+'components/custom-input',
+'components/shadow',
+'components/line-height',
+'components/width',
+'components/height',
+'components/z-index',
+'components/font-size';

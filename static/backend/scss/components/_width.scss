@@ -1,0 +1,120 @@
+$width: 8;
+
+@for $a from 0 through $width {
+    .w-#{$a} {
+        width: $a / 8 + rem;
+        min-width: $a / 8 + rem;
+    }
+}
+
+$width: 12;
+
+@for $b from 9 through $width {
+    .w-#{$b} {
+        width: $b/4 + rem;
+        min-width: $b/4 + rem;
+    }
+}
+
+$width: 20;
+
+@for $b from 13 through $width {
+    @if $b%2==0 {
+        .w-#{$b} {
+            width: $b/4 + rem;
+            min-width: $b/4 + rem;
+        }
+    }
+}
+
+$width: 99;
+
+@for $b from 24 through $width {
+    @if $b%4==0 {
+        .w-#{$b} {
+            width: $b/4 + rem;
+            min-width: $b/4 + rem;
+        }
+    }
+}
+
+// Min Width
+
+$min-width: 8;
+
+@for $a from 0 through $min-width {
+    .min-w-#{$a} {
+        min-width: $a / 8 + rem;
+    }
+}
+
+$min-width: 12;
+
+@for $b from 9 through $min-width {
+    .min-w-#{$b} {
+        min-width: $b/4 + rem;
+    }
+}
+
+$min-width: 20;
+
+@for $b from 13 through $min-width {
+    @if $b%2==0 {
+        .min-w-#{$b} {
+
+            min-width: $b/4 + rem;
+        }
+    }
+}
+
+$min-width: 99;
+
+@for $b from 24 through $min-width {
+    @if $b%4==0 {
+        .min-w-#{$b} {
+
+            min-width: $b/4 + rem;
+        }
+    }
+}
+
+
+// Max Width
+
+$max-width: 8;
+
+@for $a from 0 through $max-width {
+    .max-w-#{$a} {
+        max-width: $a / 8 + rem;
+    }
+}
+
+$max-width: 12;
+
+@for $b from 9 through $max-width {
+    .max-w-#{$b} {
+        max-width: $b/4 + rem;
+    }
+}
+
+$max-width: 20;
+
+@for $b from 13 through $max-width {
+    @if $b%2==0 {
+        .max-w-#{$b} {
+
+            max-width: $b/4 + rem;
+        }
+    }
+}
+
+$max-width: 99;
+
+@for $b from 24 through $max-width {
+    @if $b%4==0 {
+        .max-w-#{$b} {
+
+            max-width: $b/4 + rem;
+        }
+    }
+}

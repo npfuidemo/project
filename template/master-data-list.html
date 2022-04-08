@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon.png">
+   <link rel="icon" type="image/ico" href="../favicon.ico">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <title>Master Data</title>
+   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+   <!--  Fonts and icons -->
+   <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons|Material+Icons+Outlined" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+   <!-- CSS Files -->
+   <link href="../static/backend/css/main.css" rel="stylesheet" />
+   <link rel="preload" href="../static/backend/css/config.css" as="style" onload="this.rel='stylesheet'">
+   <link href="../static/backend/css/master-data.css" rel="stylesheet" />
+   <style>
+
+   </style>
+</head>
+
+<body class="dark-mode">
+   <!-- Header With Side Nav Start-->
+
+   <nav class="navbar fixed-top navbar-expand-lg border-bottom shadow-none brand-color" color-on-scroll="100"
+      id="sectionsNav">
+      <div class="d-flex w-100">
+         <div class="navbar-translate d-flex justify-content-between w-100 pl-2">
+            <button class="navbar-toggler d-none d-lg-block" id="navbar-toggler-desktop" type="button"
+               data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="navbar-toggler-icon"></span>
+               <span class="navbar-toggler-icon"></span>
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-2" href="#"><img src="../static/backend/images/placeholderLogo.svg" width="150"
+                  class="img-responsive d-none d-lg-block" alt="NoPaperForms">
+               <img src="../static/backend/images/mobile-logo.png" class="img-responsive d-block d-lg-none d-flex ml-1"
+                  height="32" alt="NoPaperForms">
+            </a>
+
+            <div class="select-box">
+               <select class="selectpicker" id="number" data-live-search="true" data-style="select-blank"
+                  title="Select a number">
+                  <option selected>Select College</option>
+                  <option>ABBS College</option>
+                  <option>Lovely Pro Univercity</option>
+                  <option>ABES College</option>
+                  <option>ABBS College</option>
+                  <option>Lovely Pro Univercity</option>
+                  <option>ABES College</option>
+               </select>
+            </div>
+
+            <div class="navbar-nav-scroll ml-auto mr-lg-2 close-btn-mobile">
+               <ul class=" navbar-nav bd-navbar-nav flex-row">
+                  <li class="nav-item d-none d-lg-block">
+                     <a class="nav-link hover-effect rounded-circle" href="#" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-container="body" data-original-title="Settings"> <i
+                           class="material-icons">settings</i> </a>
+                  </li>
+
+
+                  <li class="nav-item d-none d-lg-block">
+                     <a class="nav-link hover-effect rounded-circle" href="javascript:void(0);" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-container="body" data-original-title="Help"
+                        onclick="zE('webWidget', 'toggle');"><i class="material-icons">help_outline</i></a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block">
+                     <a class="nav-link hover-effect rounded-circle" href="#" target="_blank" rel="noopener" title=""
+                        data-toggle="modal" data-target="#notification"><i
+                           class="material-icons">notifications_none</i></a>
+                  </li>
+                  <li class="d-sm-block ml-2">
+                     <div class="nameInitials">
+                        <button type="button" class="btn btn-primary btn-ni rounded-circle dropdown-toggle"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           DM
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right p-0">
+                           <div class="d-flex p-3 align-items-center">
+                              <div class="mr-2">
+                                 <span class="niVal rounded-circle">DM</span>
+                              </div>
+                              <div class="userInfo">
+                                 <div class="font-weight-bold">Dhiraj Mishra</div>
+                                 <div class="useremail">dhiraj.mishra@nopaperforms.com</div>
+                              </div>
+                           </div>
+                           <div class="p-3 bg-light d-flex justify-content-between">
+                              <a class="btn btn-white btn-sm" href="/users/update-password">Change Password
+                              </a>
+                              <a class="btn btn-white btn-sm" href="/Logout">Sign Out </a>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="collapse navbar-collapse">
+            <aside id="sidebar-wrapper" class="sidebar active">
+               <nav id="sidebar" class="sidebar-mask">
+                  <div class="sidebar__inner scrollCustom">
+                     <div class="sidebar-quickLinks active" style="display:none;">
+                        <div class="pull-left ql">Quick Links</div>
+                        <a href="javascript:void(0);" class="sidebarCollapse sidebarClose"><span
+                              class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a>
+                     </div>
+                     <ul class="list-unstyled components mainList">
+                        <li class="active" data-p="0" data-m="98">
+                           <a data-am="98" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#Dashboard"><i class="lineicon-98"></i><span>Dashboard</span></a>
+                           <ul class="collapse list-unstyled" id="Dashboard" data-menu="Dashboard">
+                              <li class="active " data-p="98" data-m="151"><a class="active "
+                                    href="/analytics/admin-dashboard">Admin Dashboard </a></li>
+                              <li class="" data-p="98" data-m="72"><a class="" href="/counsellors/dashboard">Counsellor
+                                    Dashboard </a></li>
+                              <li class="" data-p="98" data-m="154"><a class=""
+                                    href="/analytics/marketing-dashboard">Marketing Dashboard </a></li>
+                              <li class="" data-p="98" data-m="84"><a class=""
+                                    href="/colleges/benchmarking-dashboard">Benchmarking Dashboard </a></li>
+                              <li class="" data-p="98" data-m="86"><a class="" href="/reports/trend-analysis">Trend
+                                    Analysis </a></li>
+                              <li class="" data-p="98" data-m="87"><a class="" href="/colleges/sqi-dashboard">Student
+                                    Quality Index </a></li>
+                              <li class="" data-p="98" data-m="106"><a class="" href="/area/agent-dashboard">Agent
+                                    Dashboard </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="2">
+                           <a data-am="2" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#FormDesk"><i class="lineicon-2"></i><span>FormDesk</span></a>
+                           <ul class="collapse list-unstyled" id="FormDesk" data-menu="FormDesk">
+                              <li class="" data-p="2" data-m="3"><a class="" href="/colleges/create-institute">Create
+                                    Institute </a></li>
+                              <li class="" data-p="2" data-m="131"><a class="" href="/colleges/manager">Manage Institute
+                                    (New) </a></li>
+                              <li class="" data-p="2" data-m="6"><a class="" href="/form/create-form">Create Form </a>
+                              </li>
+                              <li class="" data-p="2" data-m="132"><a class="" href="/form/manager">Manage Form (New)
+                                 </a></li>
+                              <li class="" data-p="2" data-m="49"><a class="" href="/form/csv-mapping-list">Manage CSV
+                                    Mapping </a></li>
+                              <li class="" data-p="2" data-m="36"><a class="" href="/colleges/list-documents">Manage
+                                    Documents </a></li>
+                              <li class="" data-p="2" data-m="4"><a class="" href="/colleges/manage-institute">Manage
+                                    Institutes </a></li>
+                              <li class="" data-p="2" data-m="7"><a class="" href="/form/manage-form">Manage Forms </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="89">
+                           <a data-am="89" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#LeadsManager"><i class="lineicon-89"></i><span>Leads Manager</span></a>
+                           <ul class="collapse list-unstyled" id="LeadsManager" data-menu="Leads Manager">
+                              <li class="" data-p="89" data-m="30"><a class="" href="/leads/lead-manager">Manage Leads
+                                 </a></li>
+                              <li class="" data-p="89" data-m="70"><a class=""
+                                    href="/leads/offline_lead_import_report">Offline Upload Logs </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="90">
+                           <a data-am="90" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#ApplicationManager"><i class="lineicon-90"></i><span>Application Manager</span></a>
+                           <ul class="collapse list-unstyled" id="ApplicationManager" data-menu="Application Manager">
+                              <li class="" data-p="90" data-m="8"><a class=""
+                                    href="/applications/application-manager">Manage Applications </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="75">
+                           <a data-am="75" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#Marketing"><i class="lineicon-75"></i><span>Marketing</span></a>
+                           <ul class="collapse list-unstyled" id="Marketing" data-menu="Marketing">
+                              <li class="" data-p="75" data-m="93"><a class=""
+                                    href="/offline/create-offline-list">Upload Raw Data </a></li>
+                              <li class="" data-p="75" data-m="76"><a class="" href="/offline/list-manager">Manage List
+                                 </a></li>
+                              <li class="" data-p="75" data-m="77"><a class="" href="/offline/manage-segment">Manage
+                                    Segment </a></li>
+                              <li class="" data-p="75" data-m="91"><a class="" href="/automation/list-manager">Manage
+                                    Automation </a></li>
+                              <li class="" data-p="75" data-m="39"><a class=""
+                                    href="/communications/communications-log">Communication Performance </a></li>
+                              <li class="" data-p="75" data-m="79"><a class="" href="/offline/import-log">Raw Data
+                                    Upload Logs </a></li>
+                              <li class="" data-p="75" data-m="111"><a class=""
+                                    href="/communications/communication_transaction_report">Communication Transaction
+                                    Report </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="66">
+                           <a data-am="66" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#CampaignManager"><i class="lineicon-66"></i><span>Campaign Manager</span></a>
+                           <ul class="collapse list-unstyled" id="CampaignManager" data-menu="Campaign Manager">
+                              <li class="" data-p="66" data-m="67"><a class=""
+                                    href="/campaign-manager/dashboard">Campaign Dashboard </a></li>
+                              <li class="" data-p="66" data-m="62"><a class="" href="/publishers/managePublisher">Manage
+                                    Publishers </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="40">
+                           <a data-am="40" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#QueryManager"><i class="lineicon-40"></i><span>Query Manager</span></a>
+                           <ul class="collapse list-unstyled" id="QueryManager" data-menu="Query Manager">
+                              <li class="" data-p="40" data-m="41"><a class="" href="/query/lists">Manage Applicant
+                                    Queries </a></li>
+                              <li class="" data-p="40" data-m="42"><a class="" href="/query/faq-lists">Manage FAQ </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="56">
+                           <a data-am="56" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#PaymentManager"><i class="lineicon-56"></i><span>Payment Manager</span></a>
+                           <ul class="collapse list-unstyled" id="PaymentManager" data-menu="Payment Manager">
+                              <li class="" data-p="56" data-m="57"><a class="" href="/discount-coupons/create">Create
+                                    Discount </a></li>
+                              <li class="" data-p="56" data-m="58"><a class="" href="/discount-coupons/lists">Manage
+                                    Discounts </a></li>
+                              <li class="" data-p="56" data-m="10"><a class="" href="/voucher">Manage Voucher </a></li>
+                              <li class="" data-p="56" data-m="11"><a class="" href="/voucher/lists">Voucher Lists </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="32">
+                           <a data-am="32" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#ReportsandAnalytics"><i class="lineicon-32"></i><span>Reports and
+                                 Analytics</span></a>
+                           <ul class="collapse list-unstyled" id="ReportsandAnalytics"
+                              data-menu="Reports and Analytics">
+                              <li class="" data-p="32" data-m="125">
+                                 <a data-am="125" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#Reports"><i class="lineicon-125"></i><span>Reports</span></a>
+                                 <ul class="collapse list-unstyled" id="Reports" data-menu="Reports">
+                                    <li class="" data-p="125" data-m="35"><a class=""
+                                          href="/reports/folder-listing">Manage Folder </a></li>
+                                    <li class="" data-p="125" data-m="34"><a class=""
+                                          href="/reports/list-reports">Reports Manager </a></li>
+                                    <li class="" data-p="125" data-m="33"><a class=""
+                                          href="/reports/manage-reports-schedule">Schedule Reports </a></li>
+                                 </ul>
+                              </li>
+                              <li class="" data-p="32" data-m="126">
+                                 <a data-am="126" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#NPFTracker"><i class="lineicon-126"></i><span>NPF Tracker</span></a>
+                                 <ul class="collapse list-unstyled" id="NPFTracker" data-menu="NPF Tracker">
+                                    <li class="" data-p="126" data-m="81"><a class=""
+                                          href="/reports/client-health-monitoring">Client Health Monitoring </a></li>
+                                    <li class="" data-p="126" data-m="83"><a class=""
+                                          href="/reports/finance-monitoring">Finance Monitoring </a></li>
+                                    <li class="" data-p="126" data-m="82"><a class="" href="/reports/qa-monitoring">QA
+                                          Monitoring </a></li>
+                                    <li class="" data-p="126" data-m="108"><a class="" href="/datalogs/listings">Mongo
+                                          Data Logs </a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="19">
+                           <a data-am="19" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#TemplateManager"><i class="lineicon-19"></i><span>Template Manager</span></a>
+                           <ul class="collapse list-unstyled" id="TemplateManager" data-menu="Template Manager">
+                              <li class="" data-p="19" data-m="63"><a class=""
+                                    href="/templates/manage-landing-page">Manage Landing Pages </a></li>
+                              <li class="" data-p="19" data-m="21"><a class="" href="/colleges/manage-templates">Manage
+                                    Document Templates </a></li>
+                              <li class="" data-p="19" data-m="38"><a class=""
+                                    href="/communications/manage-template">Manage Communication Templates </a></li>
+                              <li class="" data-p="19" data-m="100"><a class="" href="/templates/manage-widget">Manage
+                                    Website Widgets </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="43">
+                           <a data-am="43" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#UserAccessControl"><i class="lineicon-43"></i><span>User Access Control</span></a>
+                           <ul class="collapse list-unstyled" id="UserAccessControl" data-menu="User Access Control">
+                              <li class="" data-p="43" data-m="113"><a class="" href="/users/create">Create New User
+                                 </a></li>
+                              <li class="" data-p="43" data-m="114"><a class="" href="/users/user-manager">Manage Users
+                                 </a></li>
+                              <li class="" data-p="43" data-m="45"><a class="" href="/users/manage-sessions">Users
+                                    Sessions </a></li>
+                              <li class="" data-p="43" data-m="44"><a class="" href="/users/activity">Users Activity
+                                 </a></li>
+                              <li class="" data-p="43" data-m="31"><a class="" href="/users/account-manager">Account
+                                    Manager </a></li>
+                              <li class="" data-p="43" data-m="15">
+                                 <a data-am="15" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#Permission"><i class="lineicon-15"></i><span>Permission</span></a>
+                                 <ul class="collapse list-unstyled" id="Permission" data-menu="Permission">
+                                    <li class="" data-p="15" data-m="26"><a class=""
+                                          href="/permissions/colleges-view">Manage Institute Permissions </a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="51">
+                           <a data-am="51" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#PostApplication"><i class="lineicon-51"></i><span>Post Application</span></a>
+                           <ul class="collapse list-unstyled" id="PostApplication" data-menu="Post Application">
+                              <li class="" data-p="51" data-m="52"><a class="" href="/reports/generate-list">Add Custom
+                                    List </a></li>
+                              <li class="" data-p="51" data-m="55"><a class=""
+                                    href="/reports/interview-manager">Interview Shortlist </a></li>
+                              <li class="" data-p="51" data-m="54"><a class=""
+                                    href="/reports/merit-list-generator">Meritlist Generator </a></li>
+                              <li class="" data-p="51" data-m="53"><a class="" href="/reports/list-data-normalizer">Data
+                                    Normalizer </a></li>
+                              <li class="" data-p="51" data-m="101">
+                                 <a data-am="101" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#GD-PIManagement"><i class="lineicon-101"></i><span>GD-PI
+                                       Management</span></a>
+                                 <ul class="collapse list-unstyled" id="GD-PIManagement" data-menu="GD-PI Management">
+                                    <li class="" data-p="101" data-m="102"><a class="" href="/gdpi">Venue City Maximum
+                                          Capacity </a></li>
+                                    <li class="" data-p="101" data-m="103"><a class=""
+                                          href="/gdpi/plan-gdpi-process/process">Plan GD-PI Process </a></li>
+                                    <li class="" data-p="101" data-m="104"><a class=""
+                                          href="/gdpi/gdpi-schedule/manage-venue">Manage Venue </a></li>
+                                    <li class="" data-p="101" data-m="105"><a class=""
+                                          href="/gdpi/allot-venue/allot-venue-and-panel">Allot Venue and Panel </a></li>
+                                 </ul>
+                              </li>
+                              <li class="" data-p="51" data-m="127">
+                                 <a data-am="127" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#Scorecard"><i class="lineicon-127"></i><span>Scorecard</span></a>
+                                 <ul class="collapse list-unstyled" id="Scorecard" data-menu="Scorecard">
+                                    <li class="" data-p="127" data-m="121"><a class=""
+                                          href="/settings/scoring-panel">Manage Scorecard </a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="73">
+                           <a data-am="73" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#Settings"><i class="lineicon-73"></i><span>Settings</span></a>
+                           <ul class="collapse list-unstyled" id="Settings" data-menu="Settings">
+                              <li class="" data-p="73" data-m="130">
+                                 <a data-am="130" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#InstituteConfiguration"><i class="lineicon-130"></i><span>Institute
+                                       Configuration</span></a>
+                                 <ul class="collapse list-unstyled" id="InstituteConfiguration"
+                                    data-menu="Institute Configuration">
+                                    <li class="" data-p="130" data-m="107"><a class=""
+                                          href="/college-settings/counsellor-allocation-logic">Counsellor Allocation
+                                          Logic </a></li>
+                                    <li class="" data-p="130" data-m="99"><a class=""
+                                          href="/users/manage-registration-fields">Manage Registration Fields </a></li>
+                                    <li class="" data-p="130" data-m="122"><a class=""
+                                          href="/colleges/applicant-flow-configuration">Applicant Flow Configuration
+                                       </a></li>
+                                    <li class="" data-p="130" data-m="115"><a class=""
+                                          href="/settings/enrolment-mapping">Enrolment Mapping </a></li>
+                                    <li class="" data-p="130" data-m="110"><a class=""
+                                          href="/college-settings/lead-upload-setting">Upload Limit Configuration </a>
+                                    </li>
+                                    <li class="" data-p="130" data-m="112"><a class=""
+                                          href="/college-settings/role-limit-list">User Limit Configuration </a></li>
+                                    <li class="" data-p="130" data-m="74"><a class=""
+                                          href="/colleges/leadActivitiesAndScoringConfig">Lead Activities and Scoring
+                                       </a></li>
+                                    <li class="" data-p="130" data-m="109"><a class=""
+                                          href="/college-settings/offline-campaign-tags">Offline Campaign Tags </a></li>
+                                    <li class="" data-p="130" data-m="50"><a class=""
+                                          href="/colleges/get-purge-data">Purge History </a></li>
+                                    <li class="" data-p="130" data-m="69"><a class=""
+                                          href="/campaign-manager/activity-logs">Publisher Mapping Logs </a></li>
+                                    <li class="" data-p="130" data-m="25"><a class="" href="/menu/lists">Menu </a></li>
+                                    <li class="" data-p="130" data-m="59"><a class=""
+                                          href="/discount-coupons/activity-logs">Discount Logs </a></li>
+                                    <li class="" data-p="130" data-m="134"><a class=""
+                                          href="/college-settings/zone-configuration">Zone Configuration </a></li>
+                                 </ul>
+                              </li>
+                              <li class="" data-p="73" data-m="22">
+                                 <a data-am="22" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#Taxonomy"><i class="lineicon-22"></i><span>Taxonomy</span></a>
+                                 <ul class="collapse list-unstyled" id="Taxonomy" data-menu="Taxonomy">
+                                    <li class="" data-p="22" data-m="23"><a class=""
+                                          href="/taxonomies/create-category">Create Taxonomy </a></li>
+                                    <li class="" data-p="22" data-m="24"><a class=""
+                                          href="/taxonomies/manage-category">Manage Taxonomy </a></li>
+                                 </ul>
+                              </li>
+                              <li class="" data-p="73" data-m="133"><a class=""
+                                    href="/college-settings/connectors-list">Extensions </a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </aside>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Header With Side Nav End-->
+
+   <div
+      class="header-info bg-white d-flex flex-wrap justify-content-between px-0 px-lg-3 py-0 py-lg-2 shadow-bottom position-sticky mb-4">
+      <!-- <h1 class="m-0 h2">Settings</h1>-->
+
+      <div class="section-header-breadcrumb d-flex align-items-center w-sm-100 px-3 px-lg-0 py-2 py-lg-0">
+         <!-- <div class="breadcrumb-item fs-12 active"><span class="material-icons text-highlight">home</span></div>
+         <div class="breadcrumb-item fs-12"><span class="text-highlight">Communications</span></div>
+         <div class="breadcrumb-item fs-12">SMS</div> -->
+         <h3 class="h5 d-inline-block my-1">Master Data</h3>
+      </div>
+
+      <div class="input_search w-sm-100 px-3 px-lg-0 my-2 my-lg-0 d-none justify-content-end">
+         <!-- <div class="form-group has-search mb-0 py-0">
+            <span class="material-icons search_icon text-primary">search</span>
+            <input type="text" class="form-control pl-4" placeholder="What are you looking for?">
+         </div> -->
+         <div class="expandSearch">
+            <div class="form-group has-search mb-0 py-0 bmd-form-group">
+               <span class="material-icons search_icon text-primary">search</span>
+               <input type="search" name="" id="" class="form-control pl-4" placeholder="Search by ID">
+            </div>
+         </div>
+         <a href="#filterPopup"
+            class="filter-btn d-flex justify-content-center align-items-center p-1 ml-2 rounded-circle hover-effect"
+            data-toggle="modal">
+            <span class="material-icons-outlined" data-toggle="tooltip" data-placement="bottom" title=""
+               data-container="body" title="Filter" data-original-title="Filter"> filter_alt </span>
+         </a>
+      </div>
+
+   </div>
+
+   <div id="main" class="wrapper">
+      <div class="main-container px-md-3 pb-md-3 pt-0">
+         <div class="row">
+            <div class="col-12">
+               <div id="myCanvasNav" class="overlay" onclick="closeNav()">
+                  <a href="javascript:void(0)" class="closebtn d-block d-lg-none" onclick="closeNav()">&times;</a>
+               </div>
+               <div class="d-none">
+                  <div class="topHead w-100 d-inline-block px-3 mb-3">
+                     <div class="border-bottom pb-2">
+                        <div class="row">
+                           <div class="col-12 col-md-6 d-flex">
+                              <h3 class="h5 d-inline-block my-1">Manage Student Query</h3>
+                              <a href="javascript:void(0);" data-placement="bottom" data-container="body"
+                                 data-toggle="popover" data-trigger="focus" data-html="true"
+                                 data-content="<ul class='videoList list-none ml-0 pl-0'><li> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440883765' class='btn-video mb-3 text-secondary' id='qmsGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o' aria-hidden='true'></i> <span class='vidText'>Query Management System</span> </a> </li><li> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440647484' class='btn-video mb-3 text-secondary' id='huqmsGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o' aria-hidden='true'></i> <span class='vidText'>How to use Query Management System?</span> </a> </li><li> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440878633' class='btn-video mb-3 text-secondary' id='huptffGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o' aria-hidden='true'></i> <span class='vidText'>How to use the Push to FAQ functionality?</span> </a> </li></ul>"
+                                 data-original-content="<ul class='videoList ml-0 pl-0 mb-0'><li> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440883765' class='btn-video mb-3 text-secondary' id='qmsGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o' aria-hidden='true'></i> <span class='vidText'>Query Management System</span> </a> </li><li> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440647484' class='btn-video mb-3 text-secondary' id='huqmsGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o' aria-hidden='true'></i> <span class='vidText'>How to use Query Management System?</span> </a> </li><li> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440878633' class='btn-video mb-3 text-secondary' id='huptffGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o' aria-hidden='true'></i> <span class='vidText'>How to use the Push to FAQ functionality?</span> </a> </li></ul>"
+                                 class="d-flex align-items-center ml-1"><span class="material-icons-outlined">
+                                    play_circle_outline </span></a>
+                           </div>
+                           <div class="col-12 col-md-6 d-flex align-items-end justify-content-end">
+                              <div class="expandSearch">
+                                 <div class="form-group has-search mb-0 py-0 bmd-form-group">
+                                    <span class="material-icons search_icon text-primary">search</span>
+                                    <input type="search" name="" id="" class="form-control pl-4"
+                                       placeholder="Search by ID">
+                                 </div>
+                              </div>
+                              <a href="javascript:void(0);"
+                                 class="d-flex border border-primary p-1 ml-4 rounded-circle">
+                                 <span class="material-icons-outlined" data-toggle="tooltip" data-placement="bottom"
+                                    title="" data-container="body" title="Filter" data-original-title="Filter">
+                                    filter_alt
+                                 </span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-table w-100 mt-4 mt-sm-2" id="tableCollapseParent">
+                  <div class="row align-items-center justify-content-between mb-2">
+                     <div class="col-6 col-sm-4 d-md-none d-block">
+                        <label for="mob-table-head" class="d-flex align-items-center mb-0">
+                           <input type="checkbox" id="mob-table-head" class="mr-2">
+                           Select All
+                        </label>
+                     </div>
+                     <div class="col-6 col-sm-4">
+                        <div class="d-flex justify-content-end justify-content-md-start text-center">
+                           <span class="font-weight-bold">Total 31 Records</span>
+                           <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom"
+                              data-container="body" title="Download" class="pl-3 d-sm-none ">
+                              <i class="lineicon-download" aria-hidden="true"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="col-12 col-sm-4 text-right d-none d-sm-block">
+                        <a href="javascript:void(0);" class="btn btn-outline-primary btn-sm btn-round">
+                           <i class="lineicon-download" aria-hidden="true"></i>
+                           <span class="font-weight-bold">Download</span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="responsive-table">
+                     <div class="grid-listing">
+                        <ul class="grid-head p-0 mb-0">
+                           <li class="grid-list">
+                              <div class="grid-column min-max-350 sorting">Ticket Details</div>
+                              <div class="grid-column min-max-250 sorting">Personal Details</div>
+                              <div class="grid-column min-max-200 sorting">Category</div>
+                              <div class="grid-column min-max-200">Assigned To</div>
+                              <div class="grid-column min-max-100">Status</div>
+                              <div class="grid-column min-max-100 ml-auto text-right">Action</div>
+                           </li>
+                        </ul>
+                        <ul class="grid-body p-0">
+                           <li class="grid-list great-grandparent expanded">
+                              <div class="grid-column min-max-350">
+                                 <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                    <i class="text-success mr-2 list-accordion-icon" aria-hidden="true"></i>
+                                    #786543
+                                 </a>
+                              </div>
+                              <div class="grid-column min-max-250">Great Grandparent</div>
+                              <div class="grid-column min-max-200">Withdraw</div>
+                              <div class="grid-column min-max-200">Alok Sharma</div>
+                              <div class="grid-column min-max-100">In Progress</div>
+                              <div class="grid-column min-max-100 ml-auto text-right">
+                                 <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                    data-toggle="dropdown" aria-haspopup="true">
+                                    <span class="lineicon-73 material-icons h5 my-0"></span>
+                                 </a>
+                                 <div class="dropdown-menu">
+                                    <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                       Details</a>
+                                    <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                       Assign</a>
+                                    <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="grid-sublist grandparent expanded">
+                              <ul class="grid-sublist-item">
+                                 <li class="grid-list expanded">
+                                    <div class="grid-column min-max-330">
+                                       <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                          <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                          #786543
+                                       </a>
+                                    </div>
+                                    <div class="grid-column min-max-250">Grandparent</div>
+                                    <div class="grid-column min-max-200">Withdraw</div>
+                                    <div class="grid-column min-max-200">Alok Sharma</div>
+                                    <div class="grid-column min-max-100">In Progress</div>
+                                    <div class="grid-column min-max-100 ml-auto text-right">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true">
+                                          <span class="lineicon-73 material-icons h5 my-0"></span>
+                                       </a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="grid-sublist parent">
+                                    <ul class="grid-sublist-item">
+                                       <li class="grid-list">
+                                          <div class="grid-column min-max-310">
+                                             <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                #786543
+                                             </a>
+                                          </div>
+                                          <div class="grid-column min-max-250">Parent</div>
+                                          <div class="grid-column min-max-200">Withdraw</div>
+                                          <div class="grid-column min-max-200">Alok Sharma</div>
+                                          <div class="grid-column min-max-100">In Progress</div>
+                                          <div class="grid-column min-max-100 ml-auto text-right">
+                                             <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="lineicon-73 material-icons h5 my-0"></span>
+                                             </a>
+                                             <div class="dropdown-menu">
+                                                <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                   Details</a>
+                                                <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                   Assign</a>
+                                                <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                             </div>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="grid-sublist parent">
+                                    <ul class="grid-sublist-item">
+                                       <li class="grid-list expanded">
+                                          <div class="grid-column min-max-310">
+                                             <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                #786543
+                                             </a>
+                                          </div>
+                                          <div class="grid-column min-max-250">Parent</div>
+                                          <div class="grid-column min-max-200">Withdraw</div>
+                                          <div class="grid-column min-max-200">Alok Sharma</div>
+                                          <div class="grid-column min-max-100">In Progress</div>
+                                          <div class="grid-column min-max-100 ml-auto text-right">
+                                             <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="lineicon-73 material-icons h5 my-0"></span>
+                                             </a>
+                                             <div class="dropdown-menu">
+                                                <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                   Details</a>
+                                                <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                   Assign</a>
+                                                <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                             </div>
+                                          </div>
+                                       </li>
+                                       <li class="grid-sublist Child">
+                                          <ul class="grid-sublist-item">
+                                             <li class="grid-list expanded">
+                                                <div class="grid-column min-max-290">
+                                                   <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                      <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                      #786543
+                                                   </a>
+                                                </div>
+                                                <div class="grid-column min-max-250">Child</div>
+                                                <div class="grid-column min-max-200">Withdraw</div>
+                                                <div class="grid-column min-max-200">Alok Sharma</div>
+                                                <div class="grid-column min-max-100">In Progress</div>
+                                                <div class="grid-column min-max-100 ml-auto text-right">
+                                                   <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                      data-toggle="dropdown" aria-haspopup="true">
+                                                      <span class="lineicon-73 material-icons h5 my-0"></span>
+                                                   </a>
+                                                   <div class="dropdown-menu">
+                                                      <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                         Details</a>
+                                                      <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                         Assign</a>
+                                                      <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                                   </div>
+                                                </div>
+                                             </li>
+                                             <li class="grid-sublist grandchild">
+                                                <ul class="grid-sublist-item">
+                                                   <li class="grid-list expanded">
+                                                      <div class="grid-column min-max-270">
+                                                         <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                            <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                            #786543
+                                                         </a>
+                                                      </div>
+                                                      <div class="grid-column min-max-250">Grandchild</div>
+                                                      <div class="grid-column min-max-200">Withdraw</div>
+                                                      <div class="grid-column min-max-200">Alok Sharma</div>
+                                                      <div class="grid-column min-max-100">In Progress</div>
+                                                      <div class="grid-column min-max-100 ml-auto text-right">
+                                                         <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                            data-toggle="dropdown" aria-haspopup="true">
+                                                            <span class="lineicon-73 material-icons h5 my-0"></span>
+                                                         </a>
+                                                         <div class="dropdown-menu">
+                                                            <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                               Details</a>
+                                                            <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                               Assign</a>
+                                                            <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                                         </div>
+                                                      </div>
+                                                   </li>
+                                                   <li class="grid-sublist great-grandchild">
+                                                      <ul class="grid-sublist-item">
+                                                         <li class="grid-list expanded">
+                                                            <div class="grid-column min-max-250">
+                                                               <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                                  <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                                  #786543
+                                                               </a>
+                                                            </div>
+                                                            <div class="grid-column min-max-250">Great Grandchild</div>
+                                                            <div class="grid-column min-max-200">Withdraw</div>
+                                                            <div class="grid-column min-max-200">Alok Sharma</div>
+                                                            <div class="grid-column min-max-100">In Progress</div>
+                                                            <div class="grid-column min-max-100 ml-auto text-right">
+                                                               <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                                  data-toggle="dropdown" aria-haspopup="true">
+                                                                  <span class="lineicon-73 material-icons h5 my-0"></span>
+                                                               </a>
+                                                               <div class="dropdown-menu">
+                                                                  <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                                     Details</a>
+                                                                  <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                                     Assign</a>
+                                                                  <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </li>
+
+                              </ul>
+                           </li>
+                           <li class="grid-sublist grandparent">
+                              <ul class="grid-sublist-item">
+                                 <li class="grid-list expanded">
+                                    <div class="grid-column min-max-330">
+                                       <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                          <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                          #786543
+                                       </a>
+                                    </div>
+                                    <div class="grid-column min-max-250">Grandparent</div>
+                                    <div class="grid-column min-max-200">Withdraw</div>
+                                    <div class="grid-column min-max-200">Alok Sharma</div>
+                                    <div class="grid-column min-max-100">In Progress</div>
+                                    <div class="grid-column min-max-100 ml-auto text-right">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true">
+                                          <span class="lineicon-73 material-icons h5 my-0"></span>
+                                       </a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="grid-sublist parent">
+                                    <ul class="grid-sublist-item">
+                                       <li class="grid-list">
+                                          <div class="grid-column min-max-310">
+                                             <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                #786543
+                                             </a>
+                                          </div>
+                                          <div class="grid-column min-max-250">Parent</div>
+                                          <div class="grid-column min-max-200">Withdraw</div>
+                                          <div class="grid-column min-max-200">Alok Sharma</div>
+                                          <div class="grid-column min-max-100">In Progress</div>
+                                          <div class="grid-column min-max-100 ml-auto text-right">
+                                             <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="lineicon-73 material-icons h5 my-0"></span>
+                                             </a>
+                                             <div class="dropdown-menu">
+                                                <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                   Details</a>
+                                                <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                   Assign</a>
+                                                <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                             </div>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="grid-sublist parent">
+                                    <ul class="grid-sublist-item">
+                                       <li class="grid-list expanded">
+                                          <div class="grid-column min-max-310">
+                                             <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                #786543
+                                             </a>
+                                          </div>
+                                          <div class="grid-column min-max-250">Parent</div>
+                                          <div class="grid-column min-max-200">Withdraw</div>
+                                          <div class="grid-column min-max-200">Alok Sharma</div>
+                                          <div class="grid-column min-max-100">In Progress</div>
+                                          <div class="grid-column min-max-100 ml-auto text-right">
+                                             <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="lineicon-73 material-icons h5 my-0"></span>
+                                             </a>
+                                             <div class="dropdown-menu">
+                                                <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                   Details</a>
+                                                <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                   Assign</a>
+                                                <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                             </div>
+                                          </div>
+                                       </li>
+                                       <li class="grid-sublist Child">
+                                          <ul class="grid-sublist-item">
+                                             <li class="grid-list expanded">
+                                                <div class="grid-column min-max-290">
+                                                   <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                      <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                      #786543
+                                                   </a>
+                                                </div>
+                                                <div class="grid-column min-max-250">Child</div>
+                                                <div class="grid-column min-max-200">Withdraw</div>
+                                                <div class="grid-column min-max-200">Alok Sharma</div>
+                                                <div class="grid-column min-max-100">In Progress</div>
+                                                <div class="grid-column min-max-100 ml-auto text-right">
+                                                   <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                      data-toggle="dropdown" aria-haspopup="true">
+                                                      <span class="lineicon-73 material-icons h5 my-0"></span>
+                                                   </a>
+                                                   <div class="dropdown-menu">
+                                                      <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                         Details</a>
+                                                      <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                         Assign</a>
+                                                      <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                                   </div>
+                                                </div>
+                                             </li>
+                                             <li class="grid-sublist grandchild">
+                                                <ul class="grid-sublist-item">
+                                                   <li class="grid-list expanded">
+                                                      <div class="grid-column min-max-270">
+                                                         <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                            <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                            #786543
+                                                         </a>
+                                                      </div>
+                                                      <div class="grid-column min-max-250">Grandchild</div>
+                                                      <div class="grid-column min-max-200">Withdraw</div>
+                                                      <div class="grid-column min-max-200">Alok Sharma</div>
+                                                      <div class="grid-column min-max-100">In Progress</div>
+                                                      <div class="grid-column min-max-100 ml-auto text-right">
+                                                         <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                            data-toggle="dropdown" aria-haspopup="true">
+                                                            <span class="lineicon-73 material-icons h5 my-0"></span>
+                                                         </a>
+                                                         <div class="dropdown-menu">
+                                                            <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                               Details</a>
+                                                            <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                               Assign</a>
+                                                            <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                                         </div>
+                                                      </div>
+                                                   </li>
+                                                   <li class="grid-sublist great-grandchild">
+                                                      <ul class="grid-sublist-item">
+                                                         <li class="grid-list expanded">
+                                                            <div class="grid-column min-max-250">
+                                                               <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                                                  <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                                                  #786543
+                                                               </a>
+                                                            </div>
+                                                            <div class="grid-column min-max-250">Great Grandchild</div>
+                                                            <div class="grid-column min-max-200">Withdraw</div>
+                                                            <div class="grid-column min-max-200">Alok Sharma</div>
+                                                            <div class="grid-column min-max-100">In Progress</div>
+                                                            <div class="grid-column min-max-100 ml-auto text-right">
+                                                               <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                                                  data-toggle="dropdown" aria-haspopup="true">
+                                                                  <span class="lineicon-73 material-icons h5 my-0"></span>
+                                                               </a>
+                                                               <div class="dropdown-menu">
+                                                                  <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                                                     Details</a>
+                                                                  <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                                                     Assign</a>
+                                                                  <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </li>
+
+                              </ul>
+                           </li>
+                           <li class="grid-list great-grandparent">
+                              <div class="grid-column min-max-350">
+                                 <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                    <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                    #786543
+                                 </a>
+                              </div>
+                              <div class="grid-column min-max-250">Great Grandparent</div>
+                              <div class="grid-column min-max-200">Withdraw</div>
+                              <div class="grid-column min-max-200">Alok Sharma</div>
+                              <div class="grid-column min-max-100">In Progress</div>
+                              <div class="grid-column min-max-100 ml-auto text-right">
+                                 <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                    data-toggle="dropdown" aria-haspopup="true">
+                                    <span class="lineicon-73 material-icons h5 my-0"></span>
+                                 </a>
+                                 <div class="dropdown-menu">
+                                    <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                       Details</a>
+                                    <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                       Assign</a>
+                                    <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="grid-list great-grandparent">
+                              <div class="grid-column min-max-350">
+                                 <a href="javascript:void(0);" class="text-primary text-decoration-none">
+                                    <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                    #786543
+                                 </a>
+                              </div>
+                              <div class="grid-column min-max-250">Great Grandparent</div>
+                              <div class="grid-column min-max-200">Withdraw</div>
+                              <div class="grid-column min-max-200">Alok Sharma</div>
+                              <div class="grid-column min-max-100">In Progress</div>
+                              <div class="grid-column min-max-100 ml-auto text-right">
+                                 <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                    data-toggle="dropdown" aria-haspopup="true">
+                                    <span class="lineicon-73 material-icons h5 my-0"></span>
+                                 </a>
+                                 <div class="dropdown-menu">
+                                    <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                       Details</a>
+                                    <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                       Assign</a>
+                                    <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="responsive-table d-none">
+                     <table class="table table-borderless" data-last-col="true" data-colfix="2" data-col-left="50">
+                        <thead>
+                           <tr>
+                              <th class="min-max-250 sorting">Ticket Details</th>
+                              <th class="min-max-350 sorting">Personal Details</th>
+                              <th class="min-max-200 sorting">Category</th>
+                              <th class="min-max-200">Assigned To</th>
+                              <th>Status</th>
+                              <th>Action</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="grid-table-row great-grandparent">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="mr-2  list-accordion-icon" aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Great Grandparent
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row grandparent is-first-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Grandparent
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row grandparent">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="text-success mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Grandparent
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row grandparent is-last-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Grandparent
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row parent  is-first-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Parent
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row parent">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Parent
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row parent is-last-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Parent
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row child  is-first-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Child
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row child is-last-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Child
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row grandchild is-last-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Child
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row great-grandchild is-last-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Child
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row grandchild  is-first-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Grandchild
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row grandchild">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Grandchild
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row grandchild is-last-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Grandchild
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row great-grandchild  is-first-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Great Grandchild
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row great-grandchild">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Great Grandchild
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row great-grandchild">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon expanded"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Great Grandchild
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row great-grandchild is-last-row">
+                              <td class="min-max-250 font-weight-bold" data-title="Ticket Details">
+                                 <i class="fa fa-minus-circle text-danger mr-2 table-collapse-icon"
+                                    aria-hidden="true"></i>
+                                 <a class="primary-color" href="#detail-popup" data-toggle="modal">
+                                    #786543
+                                 </a>
+                              </td>
+                              <td class="min-max-300" data-title="Personal Details">
+                                 Great Grandchild
+                              </td>
+                              <td class="min-max-200" data-title="Category">
+                                 Withdraw
+                              </td>
+                              <td class="min-max-200" data-title="Assigned To">
+                                 Alok Sharma
+                              </td>
+                              <td data-title="Status">
+                                 In Progress
+                              </td>
+                              <td data-title="Action">
+                                 <div class="d-flex">
+                                    <div class="dropdown">
+                                       <a href="javascript:void(0);" class="px-2 dropdown-toggle content-none"
+                                          data-toggle="dropdown" aria-haspopup="true"><span
+                                             class="lineicon-73 material-icons h5 my-0"></span></a>
+                                       <div class="dropdown-menu">
+                                          <a href="#detail-popup" data-toggle="modal" class="dropdown-item">View
+                                             Details</a>
+                                          <a href="#reasign-popup" data-toggle="modal" class="dropdown-item">Re
+                                             Assign</a>
+                                          <a href="javascript:void(0);" class="dropdown-item">Mark as unread</a>
+                                       </div>
+                                    </div>
+                                    <!-- <a data-toggle="collapse" href="#tableCollapse1" role="button" aria-expanded="false"
+                                       class="px-2 d-flex py-1 hover-effect rounded-circle"><i class="fa fa-angle-down"
+                                          aria-hidden="true"></i></a> -->
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                     <span class="mr-1 text-muted small">Show Rows</span>
+                     <div class="form-group my-0 mr-1 p-0">
+                        <select name="" id="" class="normal-select p-1 border small">
+                           <option value="">10</option>
+                           <option value="">20</option>
+                           <option value="">50</option>
+                           <option value="">100</option>
+                        </select>
+                     </div>
+                     <span class="mx-2 text-muted small">Go to</span>
+                     <div class="form-group m-0 p-0">
+                        <input type="text" class="pagination-input border small text-center">
+                     </div>
+                     <span class="ml-1 mr-2 text-muted small">of 3</span>
+                     <div class="npf-pagination">
+                        <a href="javascript:void(0);" class="bg-white border inactive" data-toggle="tooltip"
+                           data-placement="top" title="" data-container="body" data-original-title="Previous"><i
+                              class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        <a href="javascript:void(0);" class="bg-white border" data-toggle="tooltip" data-placement="top"
+                           title="" data-container="body" data-original-title="Next"><i class="fa fa-angle-right"
+                              aria-hidden="true"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <footer class="footer footer-white border-top">
+      <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+         <a class="footer-brand text-muted" href="#">Copyright © 2021 NoPaperForms. All rights reserved</a>
+
+         <ul class="social-buttons float-right">
+            <li>
+               <a href="https://www.facebook.com/nopaperforms" data-toggle="tooltip" data-placement="top" title=""
+                  data-container="body" data-original-title="Facebook" target="_blank"
+                  class="btn btn-just-icon btn-link btn-facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://twitter.com/nopaperforms1" target="_blank" data-toggle="tooltip" data-placement="top"
+                  title="" data-container="body" data-original-title="Twitter"
+                  class="btn btn-just-icon btn-link btn-twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+               </a>
+            </li>
+
+            <li>
+               <a href="https://www.linkedin.com/company/nopaperforms-com/" target="_blank" data-toggle="tooltip"
+                  data-placement="top" title="" data-container="body" data-original-title="Linkedin"
+                  class="btn btn-just-icon btn-link btn-linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://www.youtube.com/channel/UCcHtB-AXJ0qXMUs9-DyjjcA" target="_blank" data-toggle="tooltip"
+                  data-placement="top" title="" data-container="body" data-original-title="Youtube"
+                  class="btn btn-just-icon btn-link btn-youtube">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </footer>
+
+   <div class="modal fade offCanvasModal right" id="detail-popup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-llg" role="document">
+         <div class="modal-content h-100">
+            <div class="modal-header border-bottom-blue">
+               <h5 class="modal-title my-0" id="exampleModalLabel">
+                  <span class="title font-weight-bold"> <span class="text-secondary font-weight-normal">Ticket Id -
+                     </span>22323</span>
+               </h5>
+
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+                  data-placement="left" title="" data-container="body" data-original-title="Click Here to Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body p-0">
+               <div class="row no-gutters">
+                  <div class="col-12 col-md-5 bg-white px-0">
+                     <div class="ticket-left-panel">
+                        <div class="py-2 px-3 border-bottom">
+                           <h3 class="my-0 h6">Status: <span class="text-success">In Progress</span> </h3>
+                        </div>
+                        <div class="modal-accordion" id="popup-accordion">
+                           <a href="#modal-collapse" data-toggle="collapse" aria-expanded="false"
+                              class="px-3 py-2 border-bottom d-block text-dark">View Lead Details</a>
+                           <div class="collapse border-bottom" data-parent="#popup-accordion" id="modal-collapse">
+                              <div class="p-3">
+                                 <span class="text-muted font-weight-light small d-block">Email Address</span>
+                                 <p>test13501209@yopmail.com</p>
+                                 <span class="text-muted font-weight-light small d-block">City</span>
+                                 <p>Ludhiana</p>
+                                 <span class="text-muted font-weight-light small d-block">Course</span>
+                                 <p>B.Tech (CSE)</p>
+                                 <span class="text-muted font-weight-light small d-block">Mobile Number</span>
+                                 <p>+91 999 299 2929</p>
+                                 <span class="text-muted font-weight-light small d-block">State</span>
+                                 <p>Punjab</p>
+                                 <span class="text-muted font-weight-light small d-block">How did you come to know about
+                                    Apeejay</span>
+                                 <p>Social Media</p>
+                                 <span class="text-muted font-weight-light small d-block">Name</span>
+                                 <p>Jashanpreet singh</p>
+                                 <span class="text-muted font-weight-light small d-block">Programme</span>
+                                 <p>Under Graduate</p>
+                                 <div class="d-flex justify-content-end">
+                                    <a href="javascript:void(0);" class="d-flex align-items-center border-bottom-blue">
+                                       <span class="material-icons-outlined font-16 mr-1"> person </span>
+                                       View Profile
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <a href="#modal-collapse1" data-toggle="collapse" aria-expanded="false"
+                              class="py-2 px-3 border-bottom d-block text-dark">Ticket Details</a>
+                           <div class="collapse border-bottom" data-parent="#popup-accordion" id="modal-collapse1">
+                              <div class="p-3">
+                                 <span class="text-muted font-weight-light small d-block">Raised By</span>
+                                 <p>Jashanpreet singh</p>
+                                 <span class="text-muted font-weight-light small d-block">Category</span>
+                                 <p>Fees Details</p>
+                                 <span class="text-muted font-weight-light small d-block">Lead Stage</span>
+                                 <p>untouched</p>
+                                 <div class="d-flex justify-content-end">
+                                    <a href="javascript:void(0);"
+                                       class="d-flex justify-content-center align-items-center mx-2 border-bottom-blue">
+                                       <span class="material-icons-outlined font-16 mr-1"> edit </span>
+                                       Edit Application
+                                    </a>
+                                    <a href="javascript:void(0);"
+                                       class="d-flex justify-content-center align-items-center mx-2 border-bottom-blue">
+                                       <span class="material-icons-outlined font-16 mr-1"> person </span>
+                                       Reassign Ticket
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-md-7 bg-light px-0">
+                     <div class="ticket-right-panel">
+                        <div class="p-2 border-bottom d-flex justify-content-between align-items-center">
+                           <h3 class="m-0 h6">Ticket Conversation</h3>
+                           <div class="action-links dropdown">
+                              <!-- <a href="javascript:void(0);" class="dropdown-toggle text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <span class="material-icons-outlined"> more_vert </span>
+                              </a> -->
+                              <div class="dropdown-menu">
+                                 <ul class="list-group">
+                                    <li class="list-group-items"><a href="javascript:void(0);">Open</a></li>
+                                    <li class="list-group-items"><a href="javascript:void(0);">Close</a></li>
+                                    <li class="list-group-items"><a href="javascript:void(0);">In Progress</a></li>
+                                 </ul>
+                              </div>
+
+                           </div>
+                        </div>
+                        <div class="chat-wrapper position-relative">
+                           <div class="w-100 chat-box">
+                              <div class="chat-container position-relative px-3">
+                                 <ul class="d-flex flex-column justify-content-end">
+                                    <li class="chat-msg d-flex  flex-column position-relative sent-msg mt-auto">
+                                       <small
+                                          class="sender-info ml-auto block bg-secondary text-white p-2 text-sm rounded-circle">RP</small>
+                                       <div class="msg">Lorem Ipsum is simply dummy text of the
+                                          printing and typesetting industry. Lorem Ipsum has
+                                          been the
+                                          industry's standard dummy text ever since the 1500s.
+                                       </div>
+                                       <div class="msg file d-flex align-items-center">
+                                          <i class="icon-file p-2 h3 m-0 primary-color" aria-hidden="true"></i>
+                                          <a href="javascript:void(0);" class="primary-color font-weight-bold">
+                                             Screenshot--001234.png
+                                          </a>
+                                       </div>
+                                       <small class="text-muted ml-auto mt-1">
+                                          18 Apr, 2021, 4:00 PM
+                                       </small>
+                                    </li>
+                                    <li class="chat-msg d-flex  flex-column position-relative receive-msg">
+                                       <small class="text-muted mb-1">Team Admission, College
+                                          Name</small>
+                                       <div class="msg">Lorem Ipsum is simply dummy text of the
+                                          printing and typesetting industry. Lorem Ipsum has
+                                          been the
+                                          industry's standard dummy text ever since the 1500s.
+                                       </div>
+                                       <small class="text-muted mt-1">
+                                          18 Apr, 2021, 4:00 PM
+                                       </small>
+                                    </li>
+                                    <li class="chat-msg d-flex  flex-column position-relative sent-msg mt-auto">
+                                       <small
+                                          class="sender-info ml-auto block bg-secondary text-white p-2 text-sm rounded-circle">RP</small>
+                                       <div class="msg">Lorem Ipsum is simply dummy text of the
+                                          printing and typesetting industry. Lorem Ipsum has
+                                          been the
+                                          industry's standard dummy text ever since the 1500s.
+                                       </div>
+                                       <small class="text-muted ml-auto mt-1">
+                                          18 Apr, 2021, 4:00 PM
+                                       </small>
+                                    </li>
+                                 </ul>
+                                 <div class="ticket-status position-relative d-flex justify-content-center">
+                                    <span class="position-absolute small text-danger font-weight-bold">
+                                       Ticket Closed
+                                    </span>
+                                 </div>
+                                 <ul>
+                                    <li class="chat-msg d-flex  flex-column position-relative receive-msg">
+                                       <small class="text-muted mb-1">Team Admission, College
+                                          Name</small>
+                                       <div class="msg">Lorem Ipsum is simply dummy text of the
+                                          printing and typesetting industry. Lorem Ipsum has
+                                          been the
+                                          industry's standard dummy text ever since the 1500s.
+                                       </div>
+                                       <div class="msg file d-flex align-items-center">
+                                          <i class="icon-file p-2 h3 m-0 primary-color" aria-hidden="true"></i>
+                                          <a href="javascript:void(0);" class="primary-color font-weight-bold">
+                                             Screenshot--001234.png
+                                          </a>
+                                       </div>
+                                       <small class="text-muted mt-1">
+                                          18 Apr, 2021, 4:00 PM
+                                       </small>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div
+                              class="chat-area position-absolute fixed-bottom bg-white d-flex align-items-center justify-content-between w-100 p-0">
+                              <div class="chat-file border-bottom position-absolute bg-white w-100 px-2 py-1 d-none">
+                                 <div class="d-flex justify-content-between align-items-center">
+                                    <small class="file-name"></small>
+                                    <button class="btn p-0 remove-file bg-white" data-toggle="tooltip"
+                                       data-placement="left" data-container="body" title="Remove">
+                                       <i class="text-danger fa fa-trash-o"></i>
+                                    </button>
+                                 </div>
+                              </div>
+                              <textarea name="editor1" id="" resize="none" class="py-1 px-2 small w-100"
+                                 placeholder="Write your message here..."></textarea>
+                              <!-- <label for="attachment" class="fileBrowseCustom p-2 mb-0 mt-0 h6" role="button" tabindex="0">
+                                 <i class="fa fa-paperclip mr-1" aria-hidden="true"></i>
+                                 <input type="file" class="sr-only" id="attachment">
+                              </label>
+                              <a href="javascript:void(0);" class="btn btn-primary send-btn btn-round btn-sm small mr-2">
+                                 <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                              </a> -->
+                           </div>
+                           <!-- Submit Feedback -->
+                           <!-- <div class="ticket-status-label position-absolute fixed-bottom bg-white d-flex justify-content-between align-items-center px-3 py-3 border-top">
+                               <div class="d-flex">
+                                   <p class="mb-0 pr-2 mr-2 border-right  text-danger font-weight-bold">Ticket Closed</p>
+                                   <a href="javascript:void(0);" class="primary-color">Re-open Query</a>
+                               </div>
+                               <div class="d-flex align-items-center feedback-response">
+                                   <p class="mb-0">Feedback</p>
+                                   <a href="javascript:void(0);" class="bg-light-success text-base p-2 mx-2 rounded-circle">
+                                       <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                   </a>
+                                   <a href="javascript:void(0);" class="bg-light-danger text-base p-2 rounded-circle">
+                                       <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                   </a>
+                               </div>
+                           </div> -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <div class="form-group p-0 m-0">
+                     <select name="" id="" class="form-control selectpicker">
+                        <option value="">In Progress</option>
+                        <option value="">Close</option>
+                        <option value="">Open</option>
+                     </select>
+                  </div>
+                  <label for="attachment" class="fileBrowseCustom text-primary p-2 mx-2 h5 my-0" role="button"
+                     tabindex="0">
+                     <i class="fa fa-paperclip" aria-hidden="true"></i>
+                     <!-- Attach File -->
+                     <input type="file" class="sr-only" id="attachment">
+                  </label>
+                  <a href="javascript:void(0);" class="btn btn-primary send-btn btn-round btn-sm small">
+                     <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade offCanvasModal right" id="reasign-popup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+         <div class="modal-content h-100">
+            <div class="modal-header border-bottom-blue">
+               <h5 class="modal-title my-0" id="exampleModalLabel">
+                  <span class="title font-weight-bold">Reassign Ticket</span>
+               </h5>
+
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+                  data-placement="left" title="" data-container="body" data-original-title="Click Here to Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="form-group pt-0">
+                  <select name="" id="" class="form-control selectpicker" data-live-search="true"
+                     title="Select Category" data-style="px-2 border">
+                     <option value="">Admission</option>
+                     <option value="">General</option>
+                     <option value="">Technical</option>
+                  </select>
+               </div>
+               <div class="form-group pt-0">
+                  <select name="" id="" class="form-control selectpicker" data-live-search="true"
+                     title="Select Sub Category" data-style="px-2 border">
+                     <option value="">Admission</option>
+                     <option value="">General</option>
+                     <option value="">Technical</option>
+                  </select>
+               </div>
+               <div class="form-group pt-0">
+                  <select name="" id="" class="form-control selectpicker" data-live-search="true" title="Select User"
+                     data-style="px-2 border">
+                     <option value="">Admission</option>
+                     <option value="">General</option>
+                     <option value="">Technical</option>
+                  </select>
+               </div>
+               <div class="modal-footer justify-content-between">
+                  <button class="btn btn-sm btn-dark rounded-0">Reset</button>
+                  <button class="btn btn-sm btn-primary rounded-0">Apply</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade offCanvasModal right" id="filterPopup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+         <div class="modal-content h-100">
+            <div class="modal-header border-bottom-blue">
+               <h5 class="modal-title my-0" id="exampleModalLabel">
+                  <span class="title font-weight-bold">Filter</span>
+               </h5>
+
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+                  data-placement="left" title="" data-container="body" data-original-title="Click Here to Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="form-group pt-0">
+                  <select name="" id="" class="form-control selectpicker" data-live-search="true" title="Select College"
+                     data-style="px-2 border">
+                     <option value="">college 1</option>
+                     <option value="">college 1</option>
+                     <option value="">college 1</option>
+                  </select>
+               </div>
+               <div class="form-group pt-0">
+                  <select name="" id="" class="form-control selectpicker" data-live-search="true" title="Select Form"
+                     data-style="px-2 border">
+                     <option value="">Admission</option>
+                     <option value="">General</option>
+                     <option value="">Technical</option>
+                  </select>
+               </div>
+               <div class="modal-footer justify-content-between">
+                  <button class="btn btn-sm btn-dark rounded-0">
+                     Reset
+                  </button>
+                  <button class="btn btn-sm btn-primary rounded-0">Apply</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade modalvideoGenric outside-cross-modal" id="productVideos" tabindex="-1">
+      <div class="modal-dialog" role="dialog">
+         <div class="modal-content">
+            <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body p-0">
+               <!-- <i class="fa fa-spinner fa-spin"></i> -->
+               <iframe class="vimeovideo border-0" src="../static/backend/images/blank.gif" width="100%" height="360"
+                  frameborder="0" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen
+                  allowfullscreen></iframe>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- notification modal-->
+   <div class="modal fade offCanvasModal right" id="notification" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document">
+         <div class="modal-content h-100">
+            <div class="modal-header border-bottom-blue">
+               <h5 class="modal-title my-0" id="exampleModalLabel">
+                  <span class="title font-weight-bold">Your Notifications</span>
+                  <span class="badge badge-pill badge-light">Unread<span
+                        class="all-unread-count unread-count-text"><span class="badge bg-primary">8</span></span></span>
+               </h5>
+
+               <button type="button" class="close d-md-none" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+
+            </div>
+            <div class="modal-body p-0">
+               <div class="notification-popup">
+                  <div class="nav-tabs-navigation inline_tabs">
+                     <div class="nav-tabs-wrapper">
+                        <ul class="nav nav-tabs flex-nowrap" data-tabs="tabs">
+                           <li class="nav-item">
+                              <a class="nav-link active show" href="#viewall" data-toggle="tab"><span
+                                    class="material-icons">visibility</span> View All
+                                 <div class="ripple-container"></div>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#tasks" data-toggle="tab"><span class="material-icons">
+                                    content_copy
+                                 </span> Tasks (8)</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#noti" data-toggle="tab"><span
+                                    class="material-icons">notifications_none</span> Notifications (0)</a>
+                           </li>
+                        </ul>
+                        <a href="#" class="position-absolute link-readall d-none d-sm-block">Mark All As Read</a>
+                     </div>
+                  </div>
+                  <div class="tab-content">
+                     <div class="tab-pane active show" id="viewall">
+
+                        <div class="list-group py-0">
+
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+
+                        </div>
+
+                     </div>
+                     <div class="tab-pane" id="tasks">
+                        <div class="list-group py-0">
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management &amp; Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                        </div>
+                     </div>
+                     <div class="tab-pane" id="noti">
+                        <div class="list-group py-0">
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management &amp; Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+            <div class="modal-footer py-2 px-0 justify-content-center">
+               <a href="#" target="_blank" class="btn btn-outline-primary btn-sm text-capitilize text-capitalize">Show
+                  All Notifications</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--  Core JS Files  -->
+   <script src="../static/backend/js/core/jquery.min.js"></script>
+   <script src="../static/backend/js/core/popper.min.js"></script>
+   <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
+
+   <!--  Plugins Files  -->
+   <script src="../static/backend/js/plugins/moment.min.js"></script>
+   <script src="../static/backend/js/plugins/bootstrap-datetimepicker.js"></script>
+   <script src="../static/backend/js/plugins/nouislider.min.js"></script>
+   <!-- <script src="../static/backend/js/plugins/ckeditor.js"></script> -->
+
+   <!--  Theme JS Files  -->
+   <script src="../static/backend/js/material-kit.js?v=2.0.7"></script>
+   <script src="../static/backend/js/bootstrap-select.js"></script>
+   <!--<script src="https://materializecss.com/bin/materialize.js"></script>-->
+
+   <script src="https://cdn.ckeditor.com/4.16.2/basic/ckeditor.js"></script>
+   <script src="../static/backend/js/owl.carousel/dist/owl.carousel.js"></script>
+
+
+   <script src="../static/backend/js/base/common.js"></script>
+   <script src="../static/custom/js/qms/qms.js"></script>
+
+   <script>
+      $('.sorting').click(function () {
+         $('.sorting').not(this).removeClass('sorting_asc sorting_desc');
+         if ($(this).hasClass('sorting_desc') || $(this).hasClass('sorting_asc')) {
+            $(this).toggleClass('sorting_desc sorting_asc');
+         }
+         else {
+            $(this).addClass('sorting_desc');
+         }
+      });
+   </script>
+   <script>
+      $('.grid-column:first-child').css('cursor','pointer');
+      $('.grid-column:first-child').click(function(){
+         $(this).parent('.grid-list').toggleClass('expanded');
+      });
+   </script>
+
+</body>
+
+</html>

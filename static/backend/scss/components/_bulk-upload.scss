@@ -1,0 +1,39 @@
+.bulk-upload {
+    &-option{
+        &-header {
+            position: relative;
+        }
+
+        &-pill {
+            right: 10px;
+            top: 16px;
+        }
+    }
+    &-feature{
+        background: #f8fbff;
+        border-radius: .5rem;
+        border: 2px dashed #dddfff;
+        cursor: pointer;
+        .material-icons-outlined{
+            font-size: 3.5rem;
+            opacity: .4;
+        }
+        &:hover{
+            background-color: #ebf3ff;
+        }
+    }
+    &-file{
+        &-remove{
+            display: flex;
+            background: none;
+            background-color: #f8fbff;
+            &:hover{
+                background: #f2f2f2;
+            }
+        }
+    }
+}
+
+.back-btn{
+    left: 10px;
+}

@@ -1,0 +1,19 @@
+$fs-css-prefix:        fs !default;
+
+.#{$fs-css-prefix}-lg {
+  font-size: (4em / 3);
+}
+
+.#{$fs-css-prefix}-xs {
+  font-size: .75em;
+}
+
+.#{$fs-css-prefix}-sm {
+  font-size: .875em;
+}
+
+@for $i from 1 through 6 {
+  .#{$fs-css-prefix}-#{$i}xl {
+    font-size: $i * 1em;
+  }
+}

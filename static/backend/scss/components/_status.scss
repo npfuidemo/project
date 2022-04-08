@@ -1,0 +1,48 @@
+.table .badge,.custom-badge{
+    border-radius: 10px;
+    text-transform: capitalize;
+    color: #111;
+    padding: 4px 10px 4px 15px;
+    font-size: 85%;
+    position: relative;
+    &:before{
+        content: '\002B24';
+        position: absolute;
+        left: 0;
+        font-size: 10px;
+    }
+    &.data-Open:before{
+        color: #ee554b;
+    }
+    &.data-In.Progress:before{
+        color: #e49f20;
+    }
+    &.data-Closed:before{
+        color: #65c640;
+    }
+    &.data-schedualed{
+        margin-left:10px;
+        &:before{
+        color:#e49f20;
+        font-size:18px;
+        content:'\e191';
+        font-family:'Material Icons';
+        position: absolute;
+        top: 0;
+        left: -10px;
+        }
+    }
+
+    &.data-excuted{
+        margin-left:10px;
+        &:before{
+        color:#65c640;
+        font-size:18px;
+        content:'\e858';
+        font-family:'Material Icons';
+        position: absolute;
+        top: 0;
+        left: -8px;
+        }
+    }
+}

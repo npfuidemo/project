@@ -1,0 +1,41 @@
+.tab-content {
+    .arrow-icon {
+        i,.fa {
+            width: 20px;
+            height: 20px;
+            border: 1px solid $brand-color;
+            border-radius: 50%;
+            padding: 1px;
+            color: $brand-color;
+        }
+    }
+    .card:last-child:not(:first-child){
+        margin-bottom: 0 !important;
+    }
+}
+
+.config-accordian {
+    .arrow-icon[aria-expanded="true"] {
+        .fa {
+            color: $brand-color;
+            border-color: $brand-color;
+            transition: all ease 0.5s;
+            transform: rotate(180deg);
+            transition: transform .4s ease-in-out;
+        }
+
+    }
+
+    .arrow-icon[aria-expanded="false"] {
+        .fa {
+            transform: rotate(0deg);
+            transition: transform .4s ease-in-out;
+        }
+    }
+}
+
+.arrow-icon {
+    .ripple-container {
+        border-radius: 50%;
+    }
+}

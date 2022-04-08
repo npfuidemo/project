@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon.png">
+   <link rel="icon" type="image/ico" href="../favicon.ico">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <title>NoPaperForms Backend</title>
+   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+   <!--  Fonts and icons -->
+   <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+   <!-- CSS Files -->
+   <link href="../static/backend/css/main.css" rel="stylesheet" />
+   <link rel="preload" href="../static/backend/css/config.css" as="style" onload="this.rel='stylesheet'">
+   <!--<link href="../static/backend/css/config.css" rel="stylesheet" />-->
+</head>
+
+<body>
+   <!-- Header With Side Nav Start-->
+
+   <nav class="navbar fixed-top navbar-expand-lg border-bottom shadow-none brand-color" color-on-scroll="100"
+      id="sectionsNav">
+      <div class="d-flex w-100 pl-2 pl-lg-0">
+         <div class="navbar-translate d-flex justify-content-between w-100">
+            <button class="navbar-toggler d-none d-lg-block" id="navbar-toggler-desktop" type="button"
+               data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="navbar-toggler-icon"></span>
+               <span class="navbar-toggler-icon"></span>
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="../static/backend/images/placeholderLogo.svg" width="150"
+                  class="img-responsive d-none d-lg-block" alt="NoPaperForms">
+               <img src="../static/backend/images/mobile-logo.png" class="img-responsive d-block d-lg-none d-flex ml-1"
+                  height="32" alt="NoPaperForms">
+            </a>
+
+            <div class="select-box">
+               <select class="selectpicker" id="number" data-live-search="true" data-style="select-blank"
+                  title="Select a number">
+                  <option selected>Select College</option>
+                  <option>ABBS College</option>
+                  <option>Lovely Pro Univercity</option>
+                  <option>ABES College</option>
+                  <option>ABBS College</option>
+                  <option>Lovely Pro Univercity</option>
+                  <option>ABES College</option>
+               </select>
+            </div>
+
+            <div class="navbar-nav-scroll ml-auto mr-lg-2 close-btn-mobile">
+               <ul class=" navbar-nav bd-navbar-nav flex-row">
+                  <li class="nav-item d-none d-lg-block">
+                     <a class="nav-link hover-effect rounded-circle" href="#" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-container="body" data-original-title="Settings"> <i
+                           class="material-icons">settings</i> </a>
+                  </li>
+
+
+                  <li class="nav-item d-none d-lg-block">
+                     <a class="nav-link hover-effect rounded-circle" href="javascript:void(0);" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-container="body" data-original-title="Help"
+                        onclick="zE('webWidget', 'toggle');"><i class="material-icons">help_outline</i></a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block">
+                     <a class="nav-link hover-effect rounded-circle" href="#" target="_blank" rel="noopener" title=""
+                        data-toggle="modal" data-target="#notification"><i
+                           class="material-icons">notifications_none</i></a>
+                  </li>
+                  <li class="d-sm-block ml-2">
+                     <div class="nameInitials">
+                        <button type="button" class="btn btn-primary btn-ni rounded-circle dropdown-toggle"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           DM
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right p-0">
+                           <div class="d-flex p-3 align-items-center">
+                              <div class="mr-2">
+                                 <span class="niVal rounded-circle">DM</span>
+                              </div>
+                              <div class="userInfo">
+                                 <div class="font-weight-bold">Dhiraj Mishra</div>
+                                 <div class="useremail">dhiraj.mishra@nopaperforms.com</div>
+                              </div>
+                           </div>
+                           <div class="p-3 bg-light d-flex justify-content-between">
+                              <a class="btn btn-white btn-sm" href="/users/update-password">Change Password
+                              </a>
+                              <a class="btn btn-white btn-sm" href="/Logout">Sign Out </a>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="collapse navbar-collapse">
+            <aside id="sidebar-wrapper" class="sidebar active">
+               <nav id="sidebar" class="sidebar-mask">
+                  <div class="sidebar__inner scrollCustom">
+                     <div class="sidebar-quickLinks active" style="display:none;">
+                        <div class="pull-left ql">Quick Links</div>
+                        <a href="javascript:void(0);" class="sidebarCollapse sidebarClose"><span
+                              class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a>
+                     </div>
+                     <ul class="list-unstyled components mainList">
+                        <li class="active" data-p="0" data-m="98">
+                           <a data-am="98" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#Dashboard"><i class="lineicon-98"></i><span>Dashboard</span></a>
+                           <ul class="collapse list-unstyled" id="Dashboard" data-menu="Dashboard">
+                              <li class="active " data-p="98" data-m="151"><a class="active "
+                                    href="/analytics/admin-dashboard">Admin Dashboard </a></li>
+                              <li class="" data-p="98" data-m="72"><a class="" href="/counsellors/dashboard">Counsellor
+                                    Dashboard </a></li>
+                              <li class="" data-p="98" data-m="154"><a class=""
+                                    href="/analytics/marketing-dashboard">Marketing Dashboard </a></li>
+                              <li class="" data-p="98" data-m="84"><a class=""
+                                    href="/colleges/benchmarking-dashboard">Benchmarking Dashboard </a></li>
+                              <li class="" data-p="98" data-m="86"><a class="" href="/reports/trend-analysis">Trend
+                                    Analysis </a></li>
+                              <li class="" data-p="98" data-m="87"><a class="" href="/colleges/sqi-dashboard">Student
+                                    Quality Index </a></li>
+                              <li class="" data-p="98" data-m="106"><a class="" href="/area/agent-dashboard">Agent
+                                    Dashboard </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="2">
+                           <a data-am="2" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#FormDesk"><i class="lineicon-2"></i><span>FormDesk</span></a>
+                           <ul class="collapse list-unstyled" id="FormDesk" data-menu="FormDesk">
+                              <li class="" data-p="2" data-m="3"><a class="" href="/colleges/create-institute">Create
+                                    Institute </a></li>
+                              <li class="" data-p="2" data-m="131"><a class="" href="/colleges/manager">Manage Institute
+                                    (New) </a></li>
+                              <li class="" data-p="2" data-m="6"><a class="" href="/form/create-form">Create Form </a>
+                              </li>
+                              <li class="" data-p="2" data-m="132"><a class="" href="/form/manager">Manage Form (New)
+                                 </a></li>
+                              <li class="" data-p="2" data-m="49"><a class="" href="/form/csv-mapping-list">Manage CSV
+                                    Mapping </a></li>
+                              <li class="" data-p="2" data-m="36"><a class="" href="/colleges/list-documents">Manage
+                                    Documents </a></li>
+                              <li class="" data-p="2" data-m="4"><a class="" href="/colleges/manage-institute">Manage
+                                    Institutes </a></li>
+                              <li class="" data-p="2" data-m="7"><a class="" href="/form/manage-form">Manage Forms </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="89">
+                           <a data-am="89" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#LeadsManager"><i class="lineicon-89"></i><span>Leads Manager</span></a>
+                           <ul class="collapse list-unstyled" id="LeadsManager" data-menu="Leads Manager">
+                              <li class="" data-p="89" data-m="30"><a class="" href="/leads/lead-manager">Manage Leads
+                                 </a></li>
+                              <li class="" data-p="89" data-m="70"><a class=""
+                                    href="/leads/offline_lead_import_report">Offline Upload Logs </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="90">
+                           <a data-am="90" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#ApplicationManager"><i class="lineicon-90"></i><span>Application Manager</span></a>
+                           <ul class="collapse list-unstyled" id="ApplicationManager" data-menu="Application Manager">
+                              <li class="" data-p="90" data-m="8"><a class=""
+                                    href="/applications/application-manager">Manage Applications </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="75">
+                           <a data-am="75" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#Marketing"><i class="lineicon-75"></i><span>Marketing</span></a>
+                           <ul class="collapse list-unstyled" id="Marketing" data-menu="Marketing">
+                              <li class="" data-p="75" data-m="93"><a class=""
+                                    href="/offline/create-offline-list">Upload Raw Data </a></li>
+                              <li class="" data-p="75" data-m="76"><a class="" href="/offline/list-manager">Manage List
+                                 </a></li>
+                              <li class="" data-p="75" data-m="77"><a class="" href="/offline/manage-segment">Manage
+                                    Segment </a></li>
+                              <li class="" data-p="75" data-m="91"><a class="" href="/automation/list-manager">Manage
+                                    Automation </a></li>
+                              <li class="" data-p="75" data-m="39"><a class=""
+                                    href="/communications/communications-log">Communication Performance </a></li>
+                              <li class="" data-p="75" data-m="79"><a class="" href="/offline/import-log">Raw Data
+                                    Upload Logs </a></li>
+                              <li class="" data-p="75" data-m="111"><a class=""
+                                    href="/communications/communication_transaction_report">Communication Transaction
+                                    Report </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="66">
+                           <a data-am="66" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#CampaignManager"><i class="lineicon-66"></i><span>Campaign Manager</span></a>
+                           <ul class="collapse list-unstyled" id="CampaignManager" data-menu="Campaign Manager">
+                              <li class="" data-p="66" data-m="67"><a class=""
+                                    href="/campaign-manager/dashboard">Campaign Dashboard </a></li>
+                              <li class="" data-p="66" data-m="62"><a class="" href="/publishers/managePublisher">Manage
+                                    Publishers </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="40">
+                           <a data-am="40" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#QueryManager"><i class="lineicon-40"></i><span>Query Manager</span></a>
+                           <ul class="collapse list-unstyled" id="QueryManager" data-menu="Query Manager">
+                              <li class="" data-p="40" data-m="41"><a class="" href="/query/lists">Manage Applicant
+                                    Queries </a></li>
+                              <li class="" data-p="40" data-m="42"><a class="" href="/query/faq-lists">Manage FAQ </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="56">
+                           <a data-am="56" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#PaymentManager"><i class="lineicon-56"></i><span>Payment Manager</span></a>
+                           <ul class="collapse list-unstyled" id="PaymentManager" data-menu="Payment Manager">
+                              <li class="" data-p="56" data-m="57"><a class="" href="/discount-coupons/create">Create
+                                    Discount </a></li>
+                              <li class="" data-p="56" data-m="58"><a class="" href="/discount-coupons/lists">Manage
+                                    Discounts </a></li>
+                              <li class="" data-p="56" data-m="10"><a class="" href="/voucher">Manage Voucher </a></li>
+                              <li class="" data-p="56" data-m="11"><a class="" href="/voucher/lists">Voucher Lists </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="32">
+                           <a data-am="32" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#ReportsandAnalytics"><i class="lineicon-32"></i><span>Reports and
+                                 Analytics</span></a>
+                           <ul class="collapse list-unstyled" id="ReportsandAnalytics"
+                              data-menu="Reports and Analytics">
+                              <li class="" data-p="32" data-m="125">
+                                 <a data-am="125" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#Reports"><i class="lineicon-125"></i><span>Reports</span></a>
+                                 <ul class="collapse list-unstyled" id="Reports" data-menu="Reports">
+                                    <li class="" data-p="125" data-m="35"><a class=""
+                                          href="/reports/folder-listing">Manage Folder </a></li>
+                                    <li class="" data-p="125" data-m="34"><a class=""
+                                          href="/reports/list-reports">Reports Manager </a></li>
+                                    <li class="" data-p="125" data-m="33"><a class=""
+                                          href="/reports/manage-reports-schedule">Schedule Reports </a></li>
+                                 </ul>
+                              </li>
+                              <li class="" data-p="32" data-m="126">
+                                 <a data-am="126" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#NPFTracker"><i class="lineicon-126"></i><span>NPF Tracker</span></a>
+                                 <ul class="collapse list-unstyled" id="NPFTracker" data-menu="NPF Tracker">
+                                    <li class="" data-p="126" data-m="81"><a class=""
+                                          href="/reports/client-health-monitoring">Client Health Monitoring </a></li>
+                                    <li class="" data-p="126" data-m="83"><a class=""
+                                          href="/reports/finance-monitoring">Finance Monitoring </a></li>
+                                    <li class="" data-p="126" data-m="82"><a class="" href="/reports/qa-monitoring">QA
+                                          Monitoring </a></li>
+                                    <li class="" data-p="126" data-m="108"><a class="" href="/datalogs/listings">Mongo
+                                          Data Logs </a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="19">
+                           <a data-am="19" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#TemplateManager"><i class="lineicon-19"></i><span>Template Manager</span></a>
+                           <ul class="collapse list-unstyled" id="TemplateManager" data-menu="Template Manager">
+                              <li class="" data-p="19" data-m="63"><a class=""
+                                    href="/templates/manage-landing-page">Manage Landing Pages </a></li>
+                              <li class="" data-p="19" data-m="21"><a class="" href="/colleges/manage-templates">Manage
+                                    Document Templates </a></li>
+                              <li class="" data-p="19" data-m="38"><a class=""
+                                    href="/communications/manage-template">Manage Communication Templates </a></li>
+                              <li class="" data-p="19" data-m="100"><a class="" href="/templates/manage-widget">Manage
+                                    Website Widgets </a></li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="43">
+                           <a data-am="43" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#UserAccessControl"><i class="lineicon-43"></i><span>User Access Control</span></a>
+                           <ul class="collapse list-unstyled" id="UserAccessControl" data-menu="User Access Control">
+                              <li class="" data-p="43" data-m="113"><a class="" href="/users/create">Create New User
+                                 </a></li>
+                              <li class="" data-p="43" data-m="114"><a class="" href="/users/user-manager">Manage Users
+                                 </a></li>
+                              <li class="" data-p="43" data-m="45"><a class="" href="/users/manage-sessions">Users
+                                    Sessions </a></li>
+                              <li class="" data-p="43" data-m="44"><a class="" href="/users/activity">Users Activity
+                                 </a></li>
+                              <li class="" data-p="43" data-m="31"><a class="" href="/users/account-manager">Account
+                                    Manager </a></li>
+                              <li class="" data-p="43" data-m="15">
+                                 <a data-am="15" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#Permission"><i class="lineicon-15"></i><span>Permission</span></a>
+                                 <ul class="collapse list-unstyled" id="Permission" data-menu="Permission">
+                                    <li class="" data-p="15" data-m="26"><a class=""
+                                          href="/permissions/colleges-view">Manage Institute Permissions </a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="51">
+                           <a data-am="51" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#PostApplication"><i class="lineicon-51"></i><span>Post Application</span></a>
+                           <ul class="collapse list-unstyled" id="PostApplication" data-menu="Post Application">
+                              <li class="" data-p="51" data-m="52"><a class="" href="/reports/generate-list">Add Custom
+                                    List </a></li>
+                              <li class="" data-p="51" data-m="55"><a class=""
+                                    href="/reports/interview-manager">Interview Shortlist </a></li>
+                              <li class="" data-p="51" data-m="54"><a class=""
+                                    href="/reports/merit-list-generator">Meritlist Generator </a></li>
+                              <li class="" data-p="51" data-m="53"><a class="" href="/reports/list-data-normalizer">Data
+                                    Normalizer </a></li>
+                              <li class="" data-p="51" data-m="101">
+                                 <a data-am="101" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#GD-PIManagement"><i class="lineicon-101"></i><span>GD-PI
+                                       Management</span></a>
+                                 <ul class="collapse list-unstyled" id="GD-PIManagement" data-menu="GD-PI Management">
+                                    <li class="" data-p="101" data-m="102"><a class="" href="/gdpi">Venue City Maximum
+                                          Capacity </a></li>
+                                    <li class="" data-p="101" data-m="103"><a class=""
+                                          href="/gdpi/plan-gdpi-process/process">Plan GD-PI Process </a></li>
+                                    <li class="" data-p="101" data-m="104"><a class=""
+                                          href="/gdpi/gdpi-schedule/manage-venue">Manage Venue </a></li>
+                                    <li class="" data-p="101" data-m="105"><a class=""
+                                          href="/gdpi/allot-venue/allot-venue-and-panel">Allot Venue and Panel </a></li>
+                                 </ul>
+                              </li>
+                              <li class="" data-p="51" data-m="127">
+                                 <a data-am="127" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#Scorecard"><i class="lineicon-127"></i><span>Scorecard</span></a>
+                                 <ul class="collapse list-unstyled" id="Scorecard" data-menu="Scorecard">
+                                    <li class="" data-p="127" data-m="121"><a class=""
+                                          href="/settings/scoring-panel">Manage Scorecard </a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="" data-p="0" data-m="73">
+                           <a data-am="73" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                              href="#Settings"><i class="lineicon-73"></i><span>Settings</span></a>
+                           <ul class="collapse list-unstyled" id="Settings" data-menu="Settings">
+                              <li class="" data-p="73" data-m="130">
+                                 <a data-am="130" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#InstituteConfiguration"><i class="lineicon-130"></i><span>Institute
+                                       Configuration</span></a>
+                                 <ul class="collapse list-unstyled" id="InstituteConfiguration"
+                                    data-menu="Institute Configuration">
+                                    <li class="" data-p="130" data-m="107"><a class=""
+                                          href="/college-settings/counsellor-allocation-logic">Counsellor Allocation
+                                          Logic </a></li>
+                                    <li class="" data-p="130" data-m="99"><a class=""
+                                          href="/users/manage-registration-fields">Manage Registration Fields </a></li>
+                                    <li class="" data-p="130" data-m="122"><a class=""
+                                          href="/colleges/applicant-flow-configuration">Applicant Flow Configuration
+                                       </a></li>
+                                    <li class="" data-p="130" data-m="115"><a class=""
+                                          href="/settings/enrolment-mapping">Enrolment Mapping </a></li>
+                                    <li class="" data-p="130" data-m="110"><a class=""
+                                          href="/college-settings/lead-upload-setting">Upload Limit Configuration </a>
+                                    </li>
+                                    <li class="" data-p="130" data-m="112"><a class=""
+                                          href="/college-settings/role-limit-list">User Limit Configuration </a></li>
+                                    <li class="" data-p="130" data-m="74"><a class=""
+                                          href="/colleges/leadActivitiesAndScoringConfig">Lead Activities and Scoring
+                                       </a></li>
+                                    <li class="" data-p="130" data-m="109"><a class=""
+                                          href="/college-settings/offline-campaign-tags">Offline Campaign Tags </a></li>
+                                    <li class="" data-p="130" data-m="50"><a class=""
+                                          href="/colleges/get-purge-data">Purge History </a></li>
+                                    <li class="" data-p="130" data-m="69"><a class=""
+                                          href="/campaign-manager/activity-logs">Publisher Mapping Logs </a></li>
+                                    <li class="" data-p="130" data-m="25"><a class="" href="/menu/lists">Menu </a></li>
+                                    <li class="" data-p="130" data-m="59"><a class=""
+                                          href="/discount-coupons/activity-logs">Discount Logs </a></li>
+                                    <li class="" data-p="130" data-m="134"><a class=""
+                                          href="/college-settings/zone-configuration">Zone Configuration </a></li>
+                                 </ul>
+                              </li>
+                              <li class="" data-p="73" data-m="22">
+                                 <a data-am="22" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                                    href="#Taxonomy"><i class="lineicon-22"></i><span>Taxonomy</span></a>
+                                 <ul class="collapse list-unstyled" id="Taxonomy" data-menu="Taxonomy">
+                                    <li class="" data-p="22" data-m="23"><a class=""
+                                          href="/taxonomies/create-category">Create Taxonomy </a></li>
+                                    <li class="" data-p="22" data-m="24"><a class=""
+                                          href="/taxonomies/manage-category">Manage Taxonomy </a></li>
+                                 </ul>
+                              </li>
+                              <li class="" data-p="73" data-m="133"><a class=""
+                                    href="/college-settings/connectors-list">Extensions </a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </aside>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Header With Side Nav End-->
+
+   <div class="header-info bg-white d-flex flex-wrap justify-content-between px-0 px-lg-3 py-0 py-lg-2 shadow-bottom position-sticky">
+     <!-- <h1 class="m-0 h2">Settings</h1>-->
+
+     <div class="section-header-breadcrumb d-flex align-items-center w-sm-100 px-3 px-lg-0 py-2 py-lg-0">
+      <div class="breadcrumb-item fs-12 active"><span class="material-icons text-highlight">home</span></div>
+      <div class="breadcrumb-item fs-12"><span class="text-highlight">Communications</span></div>
+      <div class="breadcrumb-item fs-12">SMS</div>
+    </div>
+
+      <div class="input_search w-sm-100 px-3 px-lg-0 my-2 my-lg-0">
+         <div class="form-group has-search mb-0 py-0">
+            <span class="material-icons search_icon text-primary">search</span>
+            <input type="text" class="form-control pl-4" placeholder="What are you looking for?">
+         </div>
+      </div>
+
+   </div>
+
+   <div id="main" class="wrapper">
+      <div class="main-container p-md-3">
+         <div class="row">
+            <div id="myCanvasNav" class="overlay" onclick="closeNav()">
+               <a href="javascript:void(0)" class="closebtn d-block d-lg-none" onclick="closeNav()">&times;</a>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3" id="mobile-slide">
+
+               <div class="sticky-top sticky-menu-setting">
+                  <div class="setting-menu rounded card my-0">
+                     <div class="list-group py-0">
+                        <a href="#" class="list-group-item list-group-item-action flex-nowrap align-items-start active">
+                           <div class="mr-2 mt-1"><i class="lineicon-19 mx-0"></i></div>
+                           <div class="min-w">
+                              <h6 class="my-0"><span class="text-truncate d-block">Communications</span></h6>
+                              <div class="my-1 font-light-small"><span tabindex="0" class="text-truncate d-block" data-toggle="popover" data-trigger="hover" data-content="View/Edit settings related to lead capturing data" data-container="body">SMS Email and Whatsapp related settings</span></div>
+                           </div>
+                        </a>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9" id="right-content">
+               <div class="setting_right">
+                  <div class="setting_right_tabs">
+
+                     <div class="d-block d-lg-none d-flex">
+                        <h3 class="my-0 ml-1"><a href="javascript:void(0);" onclick="openNav()" class="icon-rounded text-center pull-left mr-2">
+
+                           <i class="material-icons">
+                              more_horiz
+                           </i>
+                        </a> CRM Settings</h3>
+                     </div>
+
+                     <div class="nav-tabs-navigation inline_tabs position-sticky">
+                        <div class="nav-tabs-wrapper">
+                           <ul class="nav nav-tabs flex-nowrap" data-tabs="tabs">
+                              <li class="nav-item">
+                                 <a class="nav-link active show" href="#lead-allocation" data-toggle="tab">SMS</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#lead-prioritization" data-toggle="tab">Email</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#landing-page" data-toggle="tab">Whatsapp</a>
+                              </li>
+
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="tab-content">
+                        <div class="tab-pane active show" id="lead-allocation">
+                           <div>
+                              <div class="accordion config-accordian" id="l-allocationlist">
+                                 <div class="my-2"><span class="badge badge-secondary">National</span></div>
+                                 <div class="card my-2">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">Transitional SMS Configuration (National)</h5>
+                                             <div class="fs-12 text-muted">Show AM fIlters and columns in LM</div>
+
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div>
+                                                <span class="mb-0">
+                                                   <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                      aria-expanded="false" data-toggle="collapse"
+                                                      data-target="#collapse1"><i class="fa fa-angle-down"
+                                                         data-toggle="tooltip" data-placement="bottom"
+                                                         data-container="body"
+                                                         data-original-title="Click to expand /collapse"></i></button>
+                                                </span>
+                                             </div>
+
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+                                       <div id="collapse1" class="collapse" data-parent="#l-allocationlist">
+                                          <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure transactional SMS within India</div>
+
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Select Vendor</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <select id="inputState6"
+                                                      class="selectpicker form-control border-bottom-form">
+                                                      <option selected>Select the SMS vendor from the list</option>
+                                                      <option>Gupshup API</option>
+                                                      <option>Solutions Infini API</option>
+
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Entity Id</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Entity Id</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Sender Id For National NPFREG</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Sender Id For National NPFREG</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Sender Id For National NPFSUB</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Sender Id For National NPFSUB</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Feed Key</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the API Feed Key</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Username</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Username for API</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Password</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Password for API</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+
+                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                   <button class="btn btn-primary btn-sm btn-round">Save<div class="ripple-container">
+                                                      </div>
+                                                      <div class="ripple-container"></div>
+                                                   </button>
+                                                </div>
+                                             </div>
+
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                                 <div class="card my-2">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">Promotional SMS Configuration (National)</h5>
+                                             <div class="fs-12 text-muted">Show AM fIlters and columns in LM</div>
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div>
+                                                <span class="mb-0">
+                                                   <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                      aria-expanded="false" data-toggle="collapse"
+                                                      data-target="#collapse3"><i class="fa fa-angle-down"
+                                                         data-toggle="tooltip" data-placement="bottom"
+                                                         data-container="body"
+                                                         data-original-title="Click to expand /collapse"></i></button>
+                                                </span>
+                                             </div>
+
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+                                       <div id="collapse3" class="collapse" data-parent="#l-allocationlist">
+                                       <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure promotional SMS within India</div>
+
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Select Vendor</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <select id="inputState6"
+                                                   class="selectpicker form-control border-bottom-form">
+                                                   <option selected>Select the SMS vendor from the list</option>
+                                                   <option>Gupshup API</option>
+                                                   <option>Solutions Infini API</option>
+
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Entity Id</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Entity Id</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">API Feed ID</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Api Feed ID</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">API Username</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Username for API</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">API Password</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Password for API</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Sender ID List</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label for="formcontroltextarea" class="bmd-label-floating">Enter the Sender IDs seprated by comma(,)</label>
+                                                <textarea class="form-control" id="formcontroltextarea" rows="2"></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                             <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                <button class="btn btn-primary btn-sm btn-round">Save<div class="ripple-container">
+                                                   </div>
+                                                   <div class="ripple-container"></div>
+                                                <div class="ripple-container"></div></button>
+                                             </div>
+                                          </div>
+
+                                       </div>
+
+                                       </div>
+
+                                    </div>
+
+                                 </div>
+
+                                 <div class="card my-2">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">SMS Price and Limit Configuration (National)</h5>
+                                             <div class="fs-12 text-muted">XXXXXXtion manager filters and columns
+                                                visible in Lead
+                                                Manager</div>
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div>
+                                                <span class="mb-0">
+                                                   <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                      data-toggle="collapse" data-target="#collapse4"><i
+                                                         class="fa fa-angle-down" data-toggle="tooltip"
+                                                         data-placement="bottom" data-container="body"
+                                                         data-original-title="Click to expand /collapse"></i></button>
+                                                </span>
+                                             </div>
+
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+                                       <div id="collapse4" class="collapse" aria-labelledby="collapseseven"
+                                          data-parent="#l-allocationlist">
+                                          <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to set the price and limits for National SMS</div>
+
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Cost per/SMS</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the cost per/SMS</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Count of Free SMS Top-up</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the total number of free SMS to be top-up</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Count of Billable SMS Top-up</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the total number of billable SMS to be top-up</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Net Available Credit :</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                0
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                             <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                             </div>
+                                          </div>
+
+                                       </div>
+
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="card mt-2 mb-4">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">OTP SMS Configuration (National)</h5>
+                                             <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                                visible in
+                                                Lead Manager</div>
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div>
+                                                <span class="mb-0">
+                                                   <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                      data-toggle="collapse" data-target="#collapse-8"><i
+                                                         class="fa fa-angle-down" data-toggle="tooltip"
+                                                         data-placement="bottom" data-container="body"
+                                                         data-original-title="Click to expand /collapse"></i></button>
+                                                </span>
+                                             </div>
+
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+                                       <div id="collapse-8" class="collapse" aria-labelledby="collapseseven"
+                                          data-parent="#l-allocationlist">
+                                          <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure OTP SMS within India</div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Select Vendor</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <select id="inputState6"
+                                                      class="selectpicker form-control border-bottom-form">
+                                                      <option selected>Select the SMS vendor from the list</option>
+                                                      <option>Gupshup API</option>
+                                                      <option>Solutions Infini API</option>
+
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Entity ID</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Entity ID</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Sender ID</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the SenderID for National OTP</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Key</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the API Key</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+
+                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                   <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                                </div>
+                                             </div>
+
+                                          </div>
+
+                                       </div>
+                                    </div>
+                                 </div>
+
+
+                                 <div class="my-2"><span class="badge badge-secondary">International</span></div>
+                                 <div class="card my-2">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">Transitional SMS Configuration (International)                                             </h5>
+                                             <div class="fs-12 text-muted">XXXXXXtion manager filters and columns
+                                                visible in Lead
+                                                Manager</div>
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div>
+                                                <span class="mb-0">
+                                                   <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                      data-toggle="collapse" data-target="#collapse5"><i
+                                                         class="fa fa-angle-down" data-toggle="tooltip"
+                                                         data-placement="bottom" data-container="body"
+                                                         data-original-title="Click to expand /collapse"></i></button>
+                                                </span>
+                                             </div>
+
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+                                       <div id="collapse5" class="collapse" aria-labelledby="collapseseven"
+                                          data-parent="#l-allocationlist">
+                                          <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure promotional SMS outside India</div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Select Vendor</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <select id="inputState6"
+                                                      class="selectpicker form-control border-bottom-form">
+                                                      <option selected>Select the SMS vendor from the list</option>
+                                                      <option>Gupshup API</option>
+                                                      <option>Solutions Infini API</option>
+
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Entity Id</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Entity Id</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Sender Id For NPFREG</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Sender Id For NPFREG</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Sender Id For NPFSUB</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Sender Id For NPFSUB</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Feed ID</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the API Feed ID</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Username</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Username for API</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Password</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Password for API</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+
+                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                   <button class="btn btn-primary btn-sm btn-round">Save<div class="ripple-container">
+                                                      </div>
+                                                      <div class="ripple-container"></div>
+                                                   </button>
+                                                </div>
+                                             </div>
+
+                                          </div>
+
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="card my-2">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">Promotional SMS Configuration (International)</h5>
+                                             <div class="fs-12 text-muted">XXXXXXtion manager filters and columns
+                                                visible in Lead
+                                                Manager</div>
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div>
+                                                <span class="mb-0">
+                                                   <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                      data-toggle="collapse" data-target="#collapse6"><i
+                                                         class="fa fa-angle-down" data-toggle="tooltip"
+                                                         data-placement="bottom" data-container="body"
+                                                         data-original-title="Click to expand /collapse"></i></button>
+                                                </span>
+                                             </div>
+
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+                                       <div id="collapse6" class="collapse" aria-labelledby="collapseseven"
+                                          data-parent="#l-allocationlist">
+
+                                          <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure promotional SMS outside India</div>
+
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Select Vendor</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <select id="inputState6"
+                                                      class="selectpicker form-control border-bottom-form">
+                                                      <option selected>Select the SMS vendor from the list</option>
+                                                      <option>Gupshup API</option>
+                                                      <option>Solutions Infini API</option>
+
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Entity Id</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Entity Id</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Feed ID</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Api Feed ID</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Username</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Username for API</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">API Password</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="p1" class="bmd-label-floating">Enter the Password for API</label>
+                                                   <input type="password" class="form-control" id="p1">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Sender ID List</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label for="formcontroltextarea" class="bmd-label-floating">Enter the Sender IDs seprated by comma(,)</label>
+                                                   <textarea class="form-control" id="formcontroltextarea" rows="2"></textarea>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+
+                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                   <button class="btn btn-primary btn-sm btn-round">Save<div class="ripple-container">
+                                                      </div>
+                                                      <div class="ripple-container"></div>
+                                                   <div class="ripple-container"></div></button>
+                                                </div>
+                                             </div>
+
+                                          </div>
+
+
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="card my-2">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">SMS Price and Limit Configuration (International)</h5>
+                                             <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                                visible in
+                                                Lead Manager</div>
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div>
+                                                <span class="mb-0">
+                                                   <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                      data-toggle="collapse" data-target="#collapse7"><i
+                                                         class="fa fa-angle-down" data-toggle="tooltip"
+                                                         data-placement="bottom" data-container="body"
+                                                         data-original-title="Click to expand /collapse"></i></button>
+                                                </span>
+                                             </div>
+
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+                                       <div id="collapse7" class="collapse" aria-labelledby="collapseseven"
+                                          data-parent="#l-allocationlist">
+                                          <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to set the price and limits for International SMS</div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Cost per/SMS</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the cost per/SMS</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Count of Free SMS Top-up</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the total number of free SMS to be top-up</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Count of BIllable SMS Top-up </label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the total number of billable SMS to be top-up</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Net Available Credit:</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   0
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+
+                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                   <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                                </div>
+                                             </div>
+
+                                          </div>
+
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="card mt-2 mb-4">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">OTP SMS Configuration (International)</h5>
+                                             <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                                visible in
+                                                Lead Manager</div>
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div>
+                                                <span class="mb-0">
+                                                   <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                      data-toggle="collapse" data-target="#collapse-9"><i
+                                                         class="fa fa-angle-down" data-toggle="tooltip"
+                                                         data-placement="bottom" data-container="body"
+                                                         data-original-title="Click to expand /collapse"></i></button>
+                                                </span>
+                                             </div>
+
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+                                       <div id="collapse-9" class="collapse" aria-labelledby="collapseseven"
+                                          data-parent="#l-allocationlist">
+                                          <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enable Bulk Email/SMS activity by job ID in Lead Manager</div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Select Vendor</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <select id="inputState6"
+                                                      class="selectpicker form-control border-bottom-form">
+                                                      <option selected>Select the SMS vendor from the list</option>
+                                                      <option>Gupshup API</option>
+                                                      <option>Solutions Infini API</option>
+
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Entity ID</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the Entity ID</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+                                             <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                                <div class="form-group mb-1 bmd-form-group">
+                                                   <label class="text-dark">Sender ID</label>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                                <div class="form-group mb-1">
+                                                   <label for="Email7" class="bmd-label-floating">Enter the SenderID for National OTP</label>
+                                                   <input type="email" class="form-control" id="Email7">
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <div class="row align-items-end">
+
+                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                   <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                                </div>
+                                             </div>
+
+                                          </div>
+
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="my-2"><span class="badge badge-secondary">DND</span></div>
+
+                                 <div class="card my-2">
+                                    <div class="card-body py-3 px-3">
+                                       <div
+                                          class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                          <div>
+                                             <h5 class="my-0 h6">Revert DND SMS Credit</h5>
+                                             <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                                visible in
+                                                Lead Manager</div>
+                                          </div>
+                                          <div class="d-flex ml-auto">
+                                             <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                      class="toggle"></span></label></div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+                        </div>
+
+
+                        </div>
+
+                        <div class="tab-pane" id="lead-prioritization">
+                           <div class="accordion config-accordian" id="l-prioritizationlist">
+
+                              <div class="card my-3">
+                                 <div class="card-body py-3 px-3">
+                                    <div
+                                       class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                       <div>
+                                          <h5 class="my-0 h6">Transactional Email Configuration</h5>
+                                          <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                             visible in
+                                             Lead Manager</div>
+                                       </div>
+                                       <div class="d-flex ml-auto">
+                                          <div>
+                                             <span class="mb-0">
+                                                <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                   data-toggle="collapse" data-target="#email1"><i
+                                                      class="fa fa-angle-down" data-toggle="tooltip"
+                                                      data-placement="bottom" data-container="body"
+                                                      data-original-title="Click to expand /collapse"></i></button>
+                                             </span>
+                                          </div>
+
+                                          <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                   class="toggle"></span></label></div>
+                                       </div>
+                                    </div>
+                                    <div id="email1" class="collapse" aria-labelledby="collapseseven"
+                                       data-parent="#l-prioritizationlist">
+                                       <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure transactional Email</div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Select Vendor</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <select id="inputState6"
+                                                   class="selectpicker form-control border-bottom-form">
+                                                   <option selected>Select the Email vendor from the list</option>
+                                                   <option>Falconide API</option>
+                                                   <option>Amazon API</option>
+
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Name of Email Sender</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Entity ID</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">SMTP From Email</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFREG</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Bearer Key</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFSUB</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                             <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                             </div>
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="card my-3">
+                                 <div class="card-body py-3 px-3">
+                                    <div
+                                       class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                       <div>
+                                          <h5 class="my-0 h6">Promotional Email Configuration</h5>
+                                          <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                             visible in
+                                             Lead Manager</div>
+                                       </div>
+                                       <div class="d-flex ml-auto">
+                                          <div>
+                                             <span class="mb-0">
+                                                <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                   data-toggle="collapse" data-target="#email2"><i
+                                                      class="fa fa-angle-down" data-toggle="tooltip"
+                                                      data-placement="bottom" data-container="body"
+                                                      data-original-title="Click to expand /collapse"></i></button>
+                                             </span>
+                                          </div>
+
+                                          <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                   class="toggle"></span></label></div>
+                                       </div>
+                                    </div>
+                                    <div id="email2" class="collapse" aria-labelledby="collapseseven"
+                                       data-parent="#l-prioritizationlist">
+                                       <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure Promotional  Email</div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Select Vendor</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <select id="inputState6"
+                                                   class="selectpicker form-control border-bottom-form">
+                                                   <option selected>Select the Email vendor from the list</option>
+                                                   <option>Falconide API</option>
+                                                   <option>Amazon API</option>
+
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Email Sender Name </label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Email Sender Name</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">SMTP From Email</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="formcontroltextarea2" class="bmd-label-floating">Enter the Sender ID for National NPFREG</label>
+                                                <textarea class="form-control" id="formcontroltextarea2" rows="3"></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Bearer Key</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Bk1" class="bmd-label-floating">Enter the Bearer Key</label>
+                                                <input type="email" class="form-control" id="Bk1">
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Allow Emails to Offline Leads Via Promotional Route</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <select id="inputState6" class="selectpicker form-control border-bottom-form">
+                                                   <option selected>Select</option>
+                                                   <option>Falconide API</option>
+                                                   <option>Amazon API</option>
+
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+                                       <div class="row align-items-end">
+
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                             <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                             </div>
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="card my-3">
+                                 <div class="card-body py-3 px-3">
+                                    <div
+                                       class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                       <div>
+                                          <h5 class="my-0 h6">Email Price and Limit Configuration
+                                          </h5>
+                                          <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                             visible in
+                                             Lead Manager</div>
+                                       </div>
+                                       <div class="d-flex ml-auto">
+                                          <div>
+                                             <span class="mb-0">
+                                                <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                   data-toggle="collapse" data-target="#email3"><i
+                                                      class="fa fa-angle-down" data-toggle="tooltip"
+                                                      data-placement="bottom" data-container="body"
+                                                      data-original-title="Click to expand /collapse"></i></button>
+                                             </span>
+                                          </div>
+
+                                          <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                   class="toggle"></span></label></div>
+                                       </div>
+                                    </div>
+                                    <div id="email3" class="collapse" aria-labelledby="collapseseven"
+                                       data-parent="#l-prioritizationlist">
+                                       <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure Promotional  Email</div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Select Vendor</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <select id="inputState6"
+                                                   class="selectpicker form-control border-bottom-form">
+                                                   <option selected>Select the Email vendor from the list</option>
+                                                   <option>Falconide API</option>
+                                                   <option>Amazon API</option>
+
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Email Sender Name </label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Email Sender Name</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">SMTP From Email</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFREG</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Bearer Key</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFSUB</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                             <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                             </div>
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+
+                        <div class="tab-pane" id="landing-page">
+
+                           <div class="accordion config-accordian" id="l-pagelist">
+
+                              <div class="card my-3">
+                                 <div class="card-body py-3 px-3">
+                                    <div
+                                       class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                       <div>
+                                          <h5 class="my-0 h6">Configuration for National Message</h5>
+                                          <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                             visible in
+                                             Lead Manager</div>
+                                       </div>
+                                       <div class="d-flex ml-auto">
+                                          <div>
+                                             <span class="mb-0">
+                                                <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                   data-toggle="collapse" data-target="#whatsapp1"><i
+                                                      class="fa fa-angle-down" data-toggle="tooltip"
+                                                      data-placement="bottom" data-container="body"
+                                                      data-original-title="Click to expand /collapse"></i></button>
+                                             </span>
+                                          </div>
+
+                                          <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                   class="toggle"></span></label></div>
+                                       </div>
+                                    </div>
+                                    <div id="whatsapp1" class="collapse" aria-labelledby="collapseseven"
+                                       data-parent="#l-pagelist">
+                                       <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure transactional Email</div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Select Vendor</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <select id="inputState6"
+                                                   class="selectpicker form-control border-bottom-form">
+                                                   <option selected>Select the Email vendor from the list</option>
+                                                   <option>Falconide API</option>
+                                                   <option>Amazon API</option>
+
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Name of Email Sender</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Entity ID</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">SMTP From Email</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFREG</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Bearer Key</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFSUB</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                             <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                             </div>
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="card my-3">
+                                 <div class="card-body py-3 px-3">
+                                    <div
+                                       class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                       <div>
+                                          <h5 class="my-0 h6">Configuration for International Message</h5>
+                                          <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                             visible in
+                                             Lead Manager</div>
+                                       </div>
+                                       <div class="d-flex ml-auto">
+                                          <div>
+                                             <span class="mb-0">
+                                                <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                   data-toggle="collapse" data-target="#whatsapp2"><i
+                                                      class="fa fa-angle-down" data-toggle="tooltip"
+                                                      data-placement="bottom" data-container="body"
+                                                      data-original-title="Click to expand /collapse"></i></button>
+                                             </span>
+                                          </div>
+
+                                          <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                   class="toggle"></span></label></div>
+                                       </div>
+                                    </div>
+                                    <div id="whatsapp2" class="collapse" aria-labelledby="collapseseven"
+                                       data-parent="#l-pagelist">
+                                       <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure Promotional  Email</div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Select Vendor</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <select id="inputState6"
+                                                   class="selectpicker form-control border-bottom-form">
+                                                   <option selected>Select the Email vendor from the list</option>
+                                                   <option>Falconide API</option>
+                                                   <option>Amazon API</option>
+
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Email Sender Name </label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Email Sender Name</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">SMTP From Email</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFREG</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Bearer Key</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFSUB</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                             <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                             </div>
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="card my-3">
+                                 <div class="card-body py-3 px-3">
+                                    <div
+                                       class="d-flex flex-wrap justify-content-md-between align-items-start">
+                                       <div>
+                                          <h5 class="my-0 h6">Configuration for Auto-Text</h5>
+                                          <div class="fs-12 text-muted">XXXXXXXXXtion manager filters and columns
+                                             visible in
+                                             Lead Manager</div>
+                                       </div>
+                                       <div class="d-flex ml-auto">
+                                          <div>
+                                             <span class="mb-0">
+                                                <button type="button" class="btn btn-link py-0 px-0 mx-3 arrow-icon"
+                                                   data-toggle="collapse" data-target="#whatsapp3"><i
+                                                      class="fa fa-angle-down" data-toggle="tooltip"
+                                                      data-placement="bottom" data-container="body"
+                                                      data-original-title="Click to expand /collapse"></i></button>
+                                             </span>
+                                          </div>
+
+                                          <div class="togglebutton"><label><input type="checkbox" checked=""><span
+                                                   class="toggle"></span></label></div>
+                                       </div>
+                                    </div>
+                                    <div id="whatsapp3" class="collapse" aria-labelledby="collapseseven"
+                                       data-parent="#l-pagelist">
+                                       <div class="h6 heading-highlight border-bottom text-secondary mt-3 mb-0 py-2 position-relative">Enter the details below to configure Promotional  Email</div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Select Vendor</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <select id="inputState6"
+                                                   class="selectpicker form-control border-bottom-form">
+                                                   <option selected>Select the Email vendor from the list</option>
+                                                   <option>Falconide API</option>
+                                                   <option>Amazon API</option>
+
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Email Sender Name </label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Email Sender Name</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">SMTP From Email</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFREG</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+                                          <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-none d-sm-block">
+                                             <div class="form-group mb-1 bmd-form-group">
+                                                <label class="text-dark">Bearer Key</label>
+                                             </div>
+                                          </div>
+
+                                          <div class="col-12 col-sm-9 col-md-9 col-lg-6">
+                                             <div class="form-group mb-1">
+                                                <label for="Email7" class="bmd-label-floating">Enter the Sender ID for National NPFSUB</label>
+                                                <input type="email" class="form-control" id="Email7">
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="row align-items-end">
+
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                             <div class="form-group mb-1 mt-4 pt-3 btn-round text-right">
+                                                <button class="btn btn-primary btn-sm btn-round">Save</button>
+                                             </div>
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+                                 </div>
+                              </div>
+
+
+
+                           </div>
+
+                        </div>
+
+
+                     </div>
+
+
+                  </div>
+
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+
+   </div>
+   </div>
+
+
+   <footer class="footer footer-white border-top">
+      <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+         <a class="footer-brand text-muted" href="#">Copyright © 2021 NoPaperForms. All rights reserved</a>
+
+         <ul class="social-buttons float-right">
+            <li>
+               <a href="https://www.facebook.com/nopaperforms" data-toggle="tooltip" data-placement="top" title=""
+                  data-container="body" data-original-title="Facebook" target="_blank"
+                  class="btn btn-just-icon btn-link btn-facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://twitter.com/nopaperforms1" target="_blank" data-toggle="tooltip" data-placement="top"
+                  title="" data-container="body" data-original-title="Twitter"
+                  class="btn btn-just-icon btn-link btn-twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+               </a>
+            </li>
+
+            <li>
+               <a href="https://www.linkedin.com/company/nopaperforms-com/" target="_blank" data-toggle="tooltip"
+                  data-placement="top" title="" data-container="body" data-original-title="Linkedin"
+                  class="btn btn-just-icon btn-link btn-linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+               </a>
+            </li>
+            <li>
+               <a href="https://www.youtube.com/channel/UCcHtB-AXJ0qXMUs9-DyjjcA" target="_blank" data-toggle="tooltip"
+                  data-placement="top" title="" data-container="body" data-original-title="Youtube"
+                  class="btn btn-just-icon btn-link btn-youtube">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </footer>
+
+
+   <!-- notification modal-->
+   <div class="modal fade offCanvasModal right" id="notification" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document">
+         <div class="modal-content h-100">
+            <div class="modal-header py-2 px-3 border-bottom">
+               <h5 class="modal-title font-weight-bold my-0" id="exampleModalLabel">
+                  <span class="title">Your Notifications</span>
+                  <span class="badge badge-pill badge-light">Unread<span
+                        class="all-unread-count unread-count-text"><span class="badge bg-primary">8</span></span></span>
+               </h5>
+
+               <button type="button" class="close d-md-none" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+
+            </div>
+            <div class="modal-body p-0">
+               <div class="notification-popup">
+                  <div class="nav-tabs-navigation inline_tabs">
+                     <div class="nav-tabs-wrapper">
+                        <ul class="nav nav-tabs flex-nowrap" data-tabs="tabs">
+                           <li class="nav-item">
+                              <a class="nav-link active show" href="#viewall" data-toggle="tab"><span
+                                    class="material-icons">visibility</span> View All
+                                 <div class="ripple-container"></div>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#tasks" data-toggle="tab"><span class="material-icons">
+                                    content_copy
+                                 </span> Tasks (8)</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#noti" data-toggle="tab"><span
+                                    class="material-icons">notifications_none</span> Notifications (0)</a>
+                           </li>
+                        </ul>
+                        <a href="#" class="position-absolute link-readall d-none d-sm-block">Mark All As Read</a>
+                     </div>
+                  </div>
+                  <div class="tab-content">
+                     <div class="tab-pane active show" id="viewall">
+
+                        <div class="list-group py-0">
+
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management & Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+
+                        </div>
+
+                     </div>
+                     <div class="tab-pane" id="tasks">
+                        <div class="list-group py-0">
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management &amp; Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                        </div>
+                     </div>
+                     <div class="tab-pane" id="noti">
+                        <div class="list-group py-0">
+                           <a href="#"
+                              class="list-group-item list-group-item-action flex-nowrap align-items-start border-top">
+                              <div class="mr-2 mt-1"><span class="material-icons mx-0">content_copy</span></div>
+                              <div>
+                                 <h5 class="my-0">Bulk Data Updated for 10 leads.</h5>
+                                 <p class="my-1">Apeejay Institute of Management &amp; Engineering Technical Campus</p>
+                                 <p class="text-muted mb-0">08/03/2021 3:36 pm</p>
+                              </div>
+
+                           </a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+            <div class="modal-footer py-2 px-0 justify-content-center">
+               <a href="#" target="_blank" class="btn btn-outline-primary btn-sm text-capitilize text-capitalize">Show
+                  All Notifications</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--  Core JS Files  -->
+   <script src="../static/backend/js/core/jquery.min.js"></script>
+   <script src="../static/backend/js/core/popper.min.js"></script>
+   <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
+
+   <!--  Plugins Files  -->
+   <script src="../static/backend/js/plugins/moment.min.js"></script>
+   <script src="../static/backend/js/plugins/bootstrap-datetimepicker.js"></script>
+   <script src="../static/backend/js/plugins/nouislider.min.js"></script>
+   <script src="../static/backend/js/plugins/ckeditor.js"></script>
+
+   <!--  Theme JS Files  -->
+   <script src="../static/backend/js/material-kit.js?v=2.0.7"></script>
+   <script src="../static/backend/js/bootstrap-select.js"></script>
+   <!--<script src="https://materializecss.com/bin/materialize.js"></script>-->
+
+   <!-- Inline Plugin Init -->
+   <script>
+      $('.datetimepicker').datetimepicker({
+         icons: {
+            time: "fa fa-clock-o",
+            date: "fa fa-calendar",
+            up: "fa fa-chevron-up",
+            down: "fa fa-chevron-down",
+            previous: 'fa fa-chevron-left',
+            next: 'fa fa-chevron-right',
+            today: 'fa fa-screenshot',
+            clear: 'fa fa-trash',
+            close: 'fa fa-remove'
+         }
+      });
+
+      //$('.selectpicker').selectpicker();
+
+      /* function openNav() {
+   document.getElementById("sidebar-wrapper").style.width = "250px";
+   document.getElementById("main").style.marginLeft = "250px";
+ }
+
+ function closeNav() {
+   document.getElementById("sidebar-wrapper").style.width = "0";
+   document.getElementById("main").style.marginLeft= "0";
+ }*/
+
+      $("[data-toggle='sidebar']").click(function () {
+         $('body').toggleClass('sidebar-collapse');
+         $('#sidebar-wrapper').toggleClass('active');
+      })
+
+      $('.clickableClass').click(function () {
+         $('.mainList li').removeClass('active');
+         $(this).parent().addClass('active');
+      });
+      $(".sidebar").find("li").on("click", "a[data-toggle]", function () {
+         $(this).parent().siblings().find('.collapse').collapse('hide');
+      });
+
+      function openNav() {
+         document.getElementById("mobile-slide").style.width = "75%";
+         document.getElementById("mobile-slide").style.left = "0";
+         document.getElementById("myCanvasNav").style.width = "100%";
+         document.getElementById("myCanvasNav").style.opacity = "1";
+         document.body.classList.add("bodyFrizze");
+         //document.getElementById("right-content").style.marginLeft = "0";
+      }
+
+      function closeNav() {
+         document.getElementById("mobile-slide").style.width = "0";
+         document.getElementById("mobile-slide").style.left = "-50px";
+         document.getElementById("myCanvasNav").style.width = "0";
+         document.getElementById("myCanvasNav").style.opacity = "0";
+         document.body.classList.remove("bodyFrizze");
+         //document.getElementById("right-content").style.marginLeft= "0";
+      }
+   </script>
+   <script>
+      ClassicEditor
+         .create(document.querySelector('#editor'), {
+            // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+         })
+         .then(editor => {
+            window.editor = editor;
+         })
+         .catch(err => {
+            console.error(err.stack);
+         });
+   </script>
+
+   <script id="ze-snippet"
+      src="https://static.zdassets.com/ekr/snippet.js?key=b9b28bfa-4d51-41ba-952f-2249befa4784"></script>
+   <script type="text/javascript">
+      zE('webWidget', 'prefill', {
+         email: {
+            value: 'narendra@nopaperforms.com',
+            //readOnly: true // optional
+         },
+         name: {
+            value: 'NPF Automation',
+            //readOnly: true // optional
+         }
+      });
+      window.zESettings = {
+         webWidget: {
+            position: {
+               horizontal: 'right', vertical: 'bottom',
+            },
+            offset: {
+               horizontal: '-12px',
+               vertical: '-12px',
+            },
+            /*color: {
+               theme: '#75b740',
+               launcher: '#75b740',
+               launcherText: '#fff',
+               button: '#75b740',
+               resultLists: '#75b740',
+               header: '#75b740',
+               articleLinks: '#FF4500'
+            },*/
+            launcher: {
+               mobile: {
+                  labelVisible: false
+               }
+            }
+         }
+      };
+      var myVar;
+      zE('webWidget:on', 'open', function () {
+         myVar = setInterval(removeZndeskIconTimer, 100)
+      });
+
+      zE('webWidget:on', 'close', function () {
+         stopRemoveZndeskIconTimer();
+      });
+
+      function removeZndeskIconTimer() {
+         var $iframe = $('#webWidget');
+         var $emailParent = $iframe.contents().find("input[name='email']").parent();
+         $emailParent.find('small#emailMsg').remove();
+         $emailParent.append('<small id= "emailMsg" style="color:#004085">our team will get back to you on this email id</small>');
+         $iframe.contents().find("svg#Layer_1").remove();
+      }
+
+      function stopRemoveZndeskIconTimer() {
+         clearInterval(myVar);
+      }
+      zE('webWidget', 'helpCenter:setSuggestions', { search: 'Admin Dashboard' });
+   </script>
+
+</body>
+
+</html>

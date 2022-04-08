@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon.png">
+  <link rel="icon" type="image/ico" href="../favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>User Profile</title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--  Fonts and icons -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons|Material+Icons+Outlined" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../static/backend/css/main.css" rel="stylesheet" />
+  <link rel="preload" href="../static/backend/css/config.css" as="style" onload="this.rel='stylesheet'">
+  <link href="../static/backend/css/user-permissions.css" rel="stylesheet" />
+  <style>
+    .setting-menu {
+      height: calc(100vh - 260px);
+    }
+
+    .search-input {
+      position: relative;
+    }
+
+    .search-input input {
+      padding-left: 22px;
+    }
+
+    .search-input:before {
+      content: '\e8b6';
+      font-family: 'Material Icons';
+      position: absolute;
+      top: 19px;
+      left: 15px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <!-- Header With Side Nav Start-->
+  <nav class="navbar fixed-top navbar-expand-lg border-bottom shadow-none brand-color" color-on-scroll="100"
+    id="sectionsNav">
+    <div class="d-flex w-100">
+      <div class="navbar-translate d-flex justify-content-between w-100 pl-2">
+        <button class="navbar-toggler d-none d-lg-block" id="navbar-toggler-desktop" type="button"
+          data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mr-2" href="#"><img src="../static/backend/images/placeholderLogo.svg" width="150"
+            class="img-responsive d-none d-lg-block" alt="NoPaperForms">
+          <img src="../static/backend/images/mobile-logo.png" class="img-responsive d-block d-lg-none d-flex ml-1"
+            height="32" alt="NoPaperForms">
+        </a>
+
+        <div class="select-box">
+          <select class="selectpicker" id="number" data-live-search="true" data-style="select-blank"
+            title="Select a number">
+            <option selected>Select College</option>
+            <option>ABBS College</option>
+            <option>Lovely Pro Univercity</option>
+            <option>ABES College</option>
+            <option>ABBS College</option>
+            <option>Lovely Pro Univercity</option>
+            <option>ABES College</option>
+          </select>
+        </div>
+
+        <div class="navbar-nav-scroll ml-auto mr-lg-2 close-btn-mobile">
+          <ul class=" navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link hover-effect rounded-circle" href="#" data-toggle="tooltip" data-placement="bottom"
+                title="" data-container="body" data-original-title="Settings">
+                <i class="material-icons">settings</i> </a>
+            </li>
+
+
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link hover-effect rounded-circle" href="javascript:void(0);" data-toggle="tooltip"
+                data-placement="bottom" title="" data-container="body" data-original-title="Help"
+                onclick="zE('webWidget', 'toggle');"><i class="material-icons">help_outline</i></a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link hover-effect rounded-circle" href="#" target="_blank" rel="noopener" title=""
+                data-toggle="modal" data-target="#notification"><i class="material-icons">notifications_none</i></a>
+            </li>
+            <li class="d-sm-block ml-2">
+              <div class="nameInitials">
+                <button type="button" class="btn btn-primary btn-ni rounded-circle dropdown-toggle"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DM
+                </button>
+                <div class="dropdown-menu dropdown-menu-right p-0">
+                  <div class="d-flex p-3 align-items-center">
+                    <div class="mr-2">
+                      <span class="niVal rounded-circle">DM</span>
+                    </div>
+                    <div class="userInfo">
+                      <div class="font-weight-bold">Dhiraj Mishra</div>
+                      <div class="useremail">dhiraj.mishra@nopaperforms.com</div>
+                    </div>
+                  </div>
+                  <div class="p-3 bg-light d-flex justify-content-between">
+                    <a class="btn btn-white btn-sm" href="/users/update-password">Change Password
+                    </a>
+                    <a class="btn btn-white btn-sm" href="/Logout">Sign Out </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <aside id="sidebar-wrapper" class="sidebar active">
+          <nav id="sidebar" class="sidebar-mask">
+            <div class="sidebar__inner scrollCustom">
+              <div class="sidebar-quickLinks active" style="display:none;">
+                <div class="pull-left ql">Quick Links</div>
+                <a href="javascript:void(0);" class="sidebarCollapse sidebarClose"><span
+                    class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a>
+              </div>
+              <ul class="list-unstyled components mainList">
+                <li class="active" data-p="0" data-m="98">
+                  <a data-am="98" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#Dashboard"><i class="lineicon-98"></i><span>Dashboard</span></a>
+                  <ul class="collapse list-unstyled" id="Dashboard" data-menu="Dashboard">
+                    <li class="active " data-p="98" data-m="151"><a class="active "
+                        href="/analytics/admin-dashboard">Admin Dashboard </a></li>
+                    <li class="" data-p="98" data-m="72"><a class="" href="/counsellors/dashboard">Counsellor
+                        Dashboard </a></li>
+                    <li class="" data-p="98" data-m="154"><a class="" href="/analytics/marketing-dashboard">Marketing
+                        Dashboard </a></li>
+                    <li class="" data-p="98" data-m="84"><a class=""
+                        href="/colleges/benchmarking-dashboard">Benchmarking Dashboard </a></li>
+                    <li class="" data-p="98" data-m="86"><a class="" href="/reports/trend-analysis">Trend
+                        Analysis </a></li>
+                    <li class="" data-p="98" data-m="87"><a class="" href="/colleges/sqi-dashboard">Student
+                        Quality Index </a></li>
+                    <li class="" data-p="98" data-m="106"><a class="" href="/area/agent-dashboard">Agent
+                        Dashboard </a></li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="2">
+                  <a data-am="2" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#FormDesk"><i
+                      class="lineicon-2"></i><span>FormDesk</span></a>
+                  <ul class="collapse list-unstyled" id="FormDesk" data-menu="FormDesk">
+                    <li class="" data-p="2" data-m="3"><a class="" href="/colleges/create-institute">Create
+                        Institute </a></li>
+                    <li class="" data-p="2" data-m="131"><a class="" href="/colleges/manager">Manage
+                        Institute
+                        (New) </a></li>
+                    <li class="" data-p="2" data-m="6"><a class="" href="/form/create-form">Create
+                        Form </a>
+                    </li>
+                    <li class="" data-p="2" data-m="132"><a class="" href="/form/manager">Manage
+                        Form (New)
+                      </a></li>
+                    <li class="" data-p="2" data-m="49"><a class="" href="/form/csv-mapping-list">Manage CSV
+                        Mapping </a></li>
+                    <li class="" data-p="2" data-m="36"><a class="" href="/colleges/list-documents">Manage
+                        Documents </a></li>
+                    <li class="" data-p="2" data-m="4"><a class="" href="/colleges/manage-institute">Manage
+                        Institutes </a></li>
+                    <li class="" data-p="2" data-m="7"><a class="" href="/form/manage-form">Manage
+                        Forms </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="89">
+                  <a data-am="89" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#LeadsManager"><i class="lineicon-89"></i><span>Leads Manager</span></a>
+                  <ul class="collapse list-unstyled" id="LeadsManager" data-menu="Leads Manager">
+                    <li class="" data-p="89" data-m="30"><a class="" href="/leads/lead-manager">Manage Leads
+                      </a></li>
+                    <li class="" data-p="89" data-m="70"><a class="" href="/leads/offline_lead_import_report">Offline
+                        Upload Logs </a></li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="90">
+                  <a data-am="90" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#ApplicationManager"><i class="lineicon-90"></i><span>Application
+                      Manager</span></a>
+                  <ul class="collapse list-unstyled" id="ApplicationManager" data-menu="Application Manager">
+                    <li class="" data-p="90" data-m="8"><a class="" href="/applications/application-manager">Manage
+                        Applications </a></li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="75">
+                  <a data-am="75" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#Marketing"><i class="lineicon-75"></i><span>Marketing</span></a>
+                  <ul class="collapse list-unstyled" id="Marketing" data-menu="Marketing">
+                    <li class="" data-p="75" data-m="93"><a class="" href="/offline/create-offline-list">Upload Raw Data
+                      </a></li>
+                    <li class="" data-p="75" data-m="76"><a class="" href="/offline/list-manager">Manage List
+                      </a></li>
+                    <li class="" data-p="75" data-m="77"><a class="" href="/offline/manage-segment">Manage
+                        Segment </a></li>
+                    <li class="" data-p="75" data-m="91"><a class="" href="/automation/list-manager">Manage
+                        Automation </a></li>
+                    <li class="" data-p="75" data-m="39"><a class=""
+                        href="/communications/communications-log">Communication Performance </a>
+                    </li>
+                    <li class="" data-p="75" data-m="79"><a class="" href="/offline/import-log">Raw
+                        Data
+                        Upload Logs </a></li>
+                    <li class="" data-p="75" data-m="111"><a class=""
+                        href="/communications/communication_transaction_report">Communication
+                        Transaction
+                        Report </a></li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="66">
+                  <a data-am="66" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#CampaignManager"><i class="lineicon-66"></i><span>Campaign
+                      Manager</span></a>
+                  <ul class="collapse list-unstyled" id="CampaignManager" data-menu="Campaign Manager">
+                    <li class="" data-p="66" data-m="67"><a class="" href="/campaign-manager/dashboard">Campaign
+                        Dashboard </a></li>
+                    <li class="" data-p="66" data-m="62"><a class="" href="/publishers/managePublisher">Manage
+                        Publishers </a></li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="40">
+                  <a data-am="40" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#QueryManager"><i class="lineicon-40"></i><span>Query Manager</span></a>
+                  <ul class="collapse list-unstyled" id="QueryManager" data-menu="Query Manager">
+                    <li class="" data-p="40" data-m="41"><a class="" href="/query/lists">Manage
+                        Applicant
+                        Queries </a></li>
+                    <li class="" data-p="40" data-m="42"><a class="" href="/query/faq-lists">Manage
+                        FAQ </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="56">
+                  <a data-am="56" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#PaymentManager"><i class="lineicon-56"></i><span>Payment
+                      Manager</span></a>
+                  <ul class="collapse list-unstyled" id="PaymentManager" data-menu="Payment Manager">
+                    <li class="" data-p="56" data-m="57"><a class="" href="/discount-coupons/create">Create
+                        Discount </a></li>
+                    <li class="" data-p="56" data-m="58"><a class="" href="/discount-coupons/lists">Manage
+                        Discounts </a></li>
+                    <li class="" data-p="56" data-m="10"><a class="" href="/voucher">Manage Voucher
+                      </a></li>
+                    <li class="" data-p="56" data-m="11"><a class="" href="/voucher/lists">Voucher
+                        Lists </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="32">
+                  <a data-am="32" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#ReportsandAnalytics"><i class="lineicon-32"></i><span>Reports and
+                      Analytics</span></a>
+                  <ul class="collapse list-unstyled" id="ReportsandAnalytics" data-menu="Reports and Analytics">
+                    <li class="" data-p="32" data-m="125">
+                      <a data-am="125" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#Reports"><i class="lineicon-125"></i><span>Reports</span></a>
+                      <ul class="collapse list-unstyled" id="Reports" data-menu="Reports">
+                        <li class="" data-p="125" data-m="35"><a class="" href="/reports/folder-listing">Manage Folder
+                          </a></li>
+                        <li class="" data-p="125" data-m="34"><a class="" href="/reports/list-reports">Reports Manager
+                          </a></li>
+                        <li class="" data-p="125" data-m="33"><a class=""
+                            href="/reports/manage-reports-schedule">Schedule Reports </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="" data-p="32" data-m="126">
+                      <a data-am="126" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#NPFTracker"><i class="lineicon-126"></i><span>NPF Tracker</span></a>
+                      <ul class="collapse list-unstyled" id="NPFTracker" data-menu="NPF Tracker">
+                        <li class="" data-p="126" data-m="81"><a class=""
+                            href="/reports/client-health-monitoring">Client Health
+                            Monitoring </a></li>
+                        <li class="" data-p="126" data-m="83"><a class="" href="/reports/finance-monitoring">Finance
+                            Monitoring </a></li>
+                        <li class="" data-p="126" data-m="82"><a class="" href="/reports/qa-monitoring">QA
+                            Monitoring </a></li>
+                        <li class="" data-p="126" data-m="108"><a class="" href="/datalogs/listings">Mongo
+                            Data Logs </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="19">
+                  <a data-am="19" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#TemplateManager"><i class="lineicon-19"></i><span>Template
+                      Manager</span></a>
+                  <ul class="collapse list-unstyled" id="TemplateManager" data-menu="Template Manager">
+                    <li class="" data-p="19" data-m="63"><a class="" href="/templates/manage-landing-page">Manage
+                        Landing Pages </a></li>
+                    <li class="" data-p="19" data-m="21"><a class="" href="/colleges/manage-templates">Manage
+                        Document Templates </a></li>
+                    <li class="" data-p="19" data-m="38"><a class="" href="/communications/manage-template">Manage
+                        Communication Templates
+                      </a></li>
+                    <li class="" data-p="19" data-m="100"><a class="" href="/templates/manage-widget">Manage
+                        Website Widgets </a></li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="43">
+                  <a data-am="43" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#UserAccessControl"><i class="lineicon-43"></i><span>User Access
+                      Control</span></a>
+                  <ul class="collapse list-unstyled" id="UserAccessControl" data-menu="User Access Control">
+                    <li class="" data-p="43" data-m="113"><a class="" href="/users/create">Create
+                        New User
+                      </a></li>
+                    <li class="" data-p="43" data-m="114"><a class="" href="/users/user-manager">Manage Users
+                      </a></li>
+                    <li class="" data-p="43" data-m="45"><a class="" href="/users/manage-sessions">Users
+                        Sessions </a></li>
+                    <li class="" data-p="43" data-m="44"><a class="" href="/users/activity">Users
+                        Activity
+                      </a></li>
+                    <li class="" data-p="43" data-m="31"><a class="" href="/users/account-manager">Account
+                        Manager </a></li>
+                    <li class="" data-p="43" data-m="15">
+                      <a data-am="15" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#Permission"><i class="lineicon-15"></i><span>Permission</span></a>
+                      <ul class="collapse list-unstyled" id="Permission" data-menu="Permission">
+                        <li class="" data-p="15" data-m="26"><a class="" href="/permissions/colleges-view">Manage
+                            Institute Permissions
+                          </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="51">
+                  <a data-am="51" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#PostApplication"><i class="lineicon-51"></i><span>Post
+                      Application</span></a>
+                  <ul class="collapse list-unstyled" id="PostApplication" data-menu="Post Application">
+                    <li class="" data-p="51" data-m="52"><a class="" href="/reports/generate-list">Add Custom
+                        List </a></li>
+                    <li class="" data-p="51" data-m="55"><a class="" href="/reports/interview-manager">Interview
+                        Shortlist </a></li>
+                    <li class="" data-p="51" data-m="54"><a class="" href="/reports/merit-list-generator">Meritlist
+                        Generator </a></li>
+                    <li class="" data-p="51" data-m="53"><a class="" href="/reports/list-data-normalizer">Data
+                        Normalizer </a></li>
+                    <li class="" data-p="51" data-m="101">
+                      <a data-am="101" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#GD-PIManagement"><i class="lineicon-101"></i><span>GD-PI
+                          Management</span></a>
+                      <ul class="collapse list-unstyled" id="GD-PIManagement" data-menu="GD-PI Management">
+                        <li class="" data-p="101" data-m="102"><a class="" href="/gdpi">Venue
+                            City Maximum
+                            Capacity </a></li>
+                        <li class="" data-p="101" data-m="103"><a class="" href="/gdpi/plan-gdpi-process/process">Plan
+                            GD-PI Process </a>
+                        </li>
+                        <li class="" data-p="101" data-m="104"><a class=""
+                            href="/gdpi/gdpi-schedule/manage-venue">Manage Venue </a></li>
+                        <li class="" data-p="101" data-m="105"><a class=""
+                            href="/gdpi/allot-venue/allot-venue-and-panel">Allot Venue and
+                            Panel </a></li>
+                      </ul>
+                    </li>
+                    <li class="" data-p="51" data-m="127">
+                      <a data-am="127" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#Scorecard"><i class="lineicon-127"></i><span>Scorecard</span></a>
+                      <ul class="collapse list-unstyled" id="Scorecard" data-menu="Scorecard">
+                        <li class="" data-p="127" data-m="121"><a class="" href="/settings/scoring-panel">Manage
+                            Scorecard </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="73">
+                  <a data-am="73" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#Settings"><i class="lineicon-73"></i><span>Settings</span></a>
+                  <ul class="collapse list-unstyled" id="Settings" data-menu="Settings">
+                    <li class="" data-p="73" data-m="130">
+                      <a data-am="130" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#InstituteConfiguration"><i class="lineicon-130"></i><span>Institute
+                          Configuration</span></a>
+                      <ul class="collapse list-unstyled" id="InstituteConfiguration"
+                        data-menu="Institute Configuration">
+                        <li class="" data-p="130" data-m="107"><a class=""
+                            href="/college-settings/counsellor-allocation-logic">Counsellor
+                            Allocation
+                            Logic </a></li>
+                        <li class="" data-p="130" data-m="99"><a class=""
+                            href="/users/manage-registration-fields">Manage Registration
+                            Fields </a></li>
+                        <li class="" data-p="130" data-m="122"><a class=""
+                            href="/colleges/applicant-flow-configuration">Applicant Flow
+                            Configuration
+                          </a></li>
+                        <li class="" data-p="130" data-m="115"><a class="" href="/settings/enrolment-mapping">Enrolment
+                            Mapping </a></li>
+                        <li class="" data-p="130" data-m="110"><a class=""
+                            href="/college-settings/lead-upload-setting">Upload Limit
+                            Configuration </a>
+                        </li>
+                        <li class="" data-p="130" data-m="112"><a class="" href="/college-settings/role-limit-list">User
+                            Limit
+                            Configuration </a></li>
+                        <li class="" data-p="130" data-m="74"><a class=""
+                            href="/colleges/leadActivitiesAndScoringConfig">Lead Activities
+                            and Scoring
+                          </a></li>
+                        <li class="" data-p="130" data-m="109"><a class=""
+                            href="/college-settings/offline-campaign-tags">Offline Campaign
+                            Tags </a></li>
+                        <li class="" data-p="130" data-m="50"><a class="" href="/colleges/get-purge-data">Purge History
+                          </a></li>
+                        <li class="" data-p="130" data-m="69"><a class=""
+                            href="/campaign-manager/activity-logs">Publisher Mapping Logs
+                          </a></li>
+                        <li class="" data-p="130" data-m="25"><a class="" href="/menu/lists">Menu </a></li>
+                        <li class="" data-p="130" data-m="59"><a class=""
+                            href="/discount-coupons/activity-logs">Discount Logs </a></li>
+                        <li class="" data-p="130" data-m="134"><a class=""
+                            href="/college-settings/zone-configuration">Zone Configuration
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li class="" data-p="73" data-m="22">
+                      <a data-am="22" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#Taxonomy"><i class="lineicon-22"></i><span>Taxonomy</span></a>
+                      <ul class="collapse list-unstyled" id="Taxonomy" data-menu="Taxonomy">
+                        <li class="" data-p="22" data-m="23"><a class="" href="/taxonomies/create-category">Create
+                            Taxonomy </a></li>
+                        <li class="" data-p="22" data-m="24"><a class="" href="/taxonomies/manage-category">Manage
+                            Taxonomy </a></li>
+                      </ul>
+                    </li>
+                    <li class="" data-p="73" data-m="133"><a class=""
+                        href="/college-settings/connectors-list">Extensions </a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </nav>
+  <!-- Header With Side Nav End-->
+  <div
+    class="header-info bg-white d-flex flex-wrap justify-content-between px-0 px-lg-3 py-0 py-lg-2 shadow-bottom position-sticky mb-2">
+    <div class="d-none d-md-flex section-header-breadcrumb align-items-center w-sm-100 px-3 px-lg-0 py-lg-0">
+      <h3 class="h5 d-inline-block my-1">User Profile</h3>
+    </div>
+    <div
+      class="input_search w-sm-100 px-3 px-lg-0 my-2 my-lg-0 d-flex align-items-center justify-content-md-end justify-content-between">
+      <h3 class="h5 d-inline-block my-1 d-block d-md-none">User Profile</h3>
+    </div>
+
+  </div>
+  <div id="main" class="wrapper">
+    <div class="main-container px-4 pb-md-3 pt-1">
+      <div id="myCanvasNav" class="overlay" onclick="closeNav()">
+        <a href="javascript:void(0)" class="closebtn d-block d-lg-none" onclick="closeNav()">&times;</a>
+      </div>
+      <div class="bg-light-info p-3 mb-3 d-flex justify-content-center align-items-center flex-column">
+        <div class="profile-section position-relative">
+          <div id="profile-img"
+            class="w-24 h-24 bg-white rounded-circle d-flex justify-content-center align-items-center"
+            style="background-repeat: no-repeat; background-position: center; background-size: cover;">
+            <h3 id="profile-name" class="m-0 h1 font-weight-normal">BR</h3>
+          </div>
+          <label for="imgInp" class="text-secondary position-absolute cam-icon m-0 cursor-pointer">
+            <span class="material-icons"> photo_camera </span>
+            <input type="file" class="sr-only" id="imgInp">
+          </label>
+        </div>
+        <h3 class="text-dark my-2">B Rakesh Kumar Patro</h3>
+        <div class="d-flex">
+          <div class="mr-3">
+            <p class="text-secondary">Assigned colleges :</p>
+          </div>
+          <div class="mr-3">
+            <p class="text-secondary">
+              <span class="material-icons-outlined fs-sm text-warning"> star </span>
+              SRM University
+            </p>
+          </div>
+          <div class="mr-3">
+            <p class="text-secondary">
+              <span class="material-icons-outlined fs-sm">star_border</span>
+              Manipal University
+            </p>
+          </div>
+          <div class="mr-3">
+            <p class="text-secondary">
+              <span class="material-icons-outlined fs-sm">star_border</span>
+              Kalinga University
+            </p>
+          </div>
+          <div class="mr-3">
+            <p class="text-secondary">
+              <span class="material-icons-outlined fs-sm">star_border</span>
+              Dav Public School
+            </p>
+          </div>
+          <div class="mr-3">
+            <div class="dropdown">
+              <button class="badge btn btn-secondary dropdown-toggle content-none rounded" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                200 More
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="assigned-uni">
+                <div class="p-2 search-input">
+                  <input type="search" name="" id="searchInput" class="border py-2" onchange="filterFunction()" />
+                </div>
+                <a class="dropdown-item" href="#"><span class="material-icons-outlined fs-sm mr-2">star_border</span>
+                  SRM University</a>
+                <a class="dropdown-item" href="#"><span class="material-icons-outlined fs-sm mr-2">star_border</span>
+                  Manipal University</a>
+                <a class="dropdown-item" href="#"><span class="material-icons-outlined fs-sm mr-2">star_border</span>
+                  Kalinga University</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+          <div class="sticky-top sticky-menu-setting">
+            <div class="setting-menu rounded-0 card my-0 shorten">
+              <div class="list-group py-0">
+                <a id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="personal"
+                  aria-selected="true"
+                  class="list-group-item list-group-item-action flex-nowrap align-items-start active">
+                  <div class="min-w">
+                    <h6 class="my-0">
+                      <span class="text-truncate d-block">Personal Information</span>
+                    </h6>
+                    <small class="m-0 text-muted text-small">Information about yourself.</small>
+                  </div>
+                </a>
+                <a id="address-tab" data-toggle="tab" href="#address" role="tab" aria-controls="address"
+                  aria-selected="false" class="list-group-item list-group-item-action flex-nowrap align-items-start">
+                  <div class="min-w">
+                    <h6 class="my-0">
+                      <span class="text-truncate d-block">Address Information</span>
+                    </h6>
+                    <small class="m-0 text-muted text-small">Detailed address information.</small>
+                  </div>
+                </a>
+                <a id="social-tab" data-toggle="tab" href="#social" role="tab" aria-controls="social"
+                  aria-selected="false" class="list-group-item list-group-item-action flex-nowrap align-items-start">
+                  <div class="min-w">
+                    <h6 class="my-0">
+                      <span class="text-truncate d-block">Social Information</span>
+                    </h6>
+                    <small class="m-0 text-muted text-small">Detailed social information.</small>
+                  </div>
+                </a>
+                <a id="mobile-tab" data-toggle="tab" href="#mobile" role="tab" aria-controls="mobile"
+                  aria-selected="false" class="list-group-item list-group-item-action flex-nowrap align-items-start">
+                  <div class="min-w">
+                    <h6 class="my-0">
+                      <span class="text-truncate d-block">Mobile Information</span>
+                    </h6>
+                    <small class="m-0 text-muted text-small">Detailed about mobile devices.</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+          <div class="tab-content">
+            <div class="module-list mb-4 tab-pane fade show active" id="personal">
+              <div class="card m-0">
+                <div class="card-body py-3 px-3">
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">First Name</label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" name="" id="" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Last Name</label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" name="" id="" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Email Id</label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" name="" id="" class="form-control" disabled />
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Phone No</label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" name="" id="" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Designation </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" name="" id="" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Date of Birth </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <div class="date-picker">
+                          <input type="text" name="" id="" class="form-control date-picker" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-9 text-right">
+                      <button class="btn btn-outline-primary btn-sm btn-round mr-3">Cancel</button>
+                      <button class="btn btn-primary btn-sm btn-round border border-primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="module-list mb-4 tab-pane fade" id="address">
+              <div class="card m-0">
+                <div class="card-body py-3 px-3">
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Country </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <select class="selectpicker" id="number" data-live-search="true"
+                          data-style="btn border-bottom rounded-0 p-1 select-blank" title="Select a number">
+                          <option selected>Select Country</option>
+                          <option>ABC</option>
+                          <option>DEF</option>
+                          <option>GHI</option>
+                          <option>JKL</option>
+                          <option>MNO</option>
+                          <option>PQRS</option>
+                          <option>TUV</option>
+                          <option>WXYZ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">State </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <select class="selectpicker" id="number" data-live-search="true"
+                          data-style="btn border-bottom rounded-0 p-1 select-blank" title="Select a number">
+                          <option selected>Select State</option>
+                          <option>ABC</option>
+                          <option>DEF</option>
+                          <option>GHI</option>
+                          <option>JKL</option>
+                          <option>MNO</option>
+                          <option>PQRS</option>
+                          <option>TUV</option>
+                          <option>WXYZ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Zip Code </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Enter Zip Code" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">City </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <select class="selectpicker" id="number" data-live-search="true"
+                          data-style="btn border-bottom rounded-0 p-1 select-blank" title="Select a number">
+                          <option selected>Select City</option>
+                          <option>ABC</option>
+                          <option>DEF</option>
+                          <option>GHI</option>
+                          <option>JKL</option>
+                          <option>MNO</option>
+                          <option>PQRS</option>
+                          <option>TUV</option>
+                          <option>WXYZ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Time Zone </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <select class="selectpicker" id="number" data-live-search="true"
+                          data-style="btn border-bottom rounded-0 p-1 select-blank" title="Select a number">
+                          <option selected>Select Time Zone</option>
+                          <option>ABC</option>
+                          <option>DEF</option>
+                          <option>GHI</option>
+                          <option>JKL</option>
+                          <option>MNO</option>
+                          <option>PQRS</option>
+                          <option>TUV</option>
+                          <option>WXYZ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Address </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <textarea class="form-control"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-9 text-right">
+                      <button class="btn btn-outline-primary btn-sm btn-round mr-3">Cancel</button>
+                      <button class="btn btn-primary btn-sm btn-round border border-primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="module-list mb-4 tab-pane fade" id="social">
+              <div class="card m-0">
+                <div class="card-body py-3 px-3">
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">LinkedIn profile url </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="LinkedIn profile url" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Facebook Profile Url </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Facebook profile url" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Twitter Profile Url </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Twitter profile url" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-9 text-right">
+                      <button class="btn btn-outline-primary btn-sm btn-round mr-3">Cancel</button>
+                      <button class="btn btn-primary btn-sm btn-round border border-primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="module-list mb-4 tab-pane fade" id="mobile">
+              <div class="card m-0">
+                <div class="card-body py-3 px-3">
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Device OS </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Enter Device OS" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Device Details </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Device Details" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Device Model </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Device Model" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">OS Version </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="OS Version" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">App Version </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="App Version" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="row align-items-start">
+                      <div class="col-9 col-sm-3 col-md-3 col-lg-3">
+                        <label class="mb-0 pt-3">Recording App </label>
+                      </div>
+                      <div class="col-3 col-sm-9 col-md-9 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Recording App" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-9 text-right">
+                      <button class="btn btn-outline-primary btn-sm btn-round mr-3">Cancel</button>
+                      <button class="btn btn-primary btn-sm btn-round border border-primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-white border-top">
+      <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+        <a class="footer-brand text-muted" href="#">Copyright © 2021 NoPaperForms. All rights reserved</a>
+
+        <ul class="social-buttons float-right">
+          <li>
+            <a href="https://www.facebook.com/nopaperforms" data-toggle="tooltip" data-placement="top" title=""
+              data-container="body" data-original-title="Facebook" target="_blank"
+              class="btn btn-just-icon btn-link btn-facebook">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/nopaperforms1" target="_blank" data-toggle="tooltip" data-placement="top"
+              title="" data-container="body" data-original-title="Twitter"
+              class="btn btn-just-icon btn-link btn-twitter">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/company/nopaperforms-com/" target="_blank" data-toggle="tooltip"
+              data-placement="top" title="" data-container="body" data-original-title="Linkedin"
+              class="btn btn-just-icon btn-link btn-linkedin">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCcHtB-AXJ0qXMUs9-DyjjcA" target="_blank" data-toggle="tooltip"
+              data-placement="top" title="" data-container="body" data-original-title="Youtube"
+              class="btn btn-just-icon btn-link btn-youtube">
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!--  Core JS Files  -->
+    <script src="../static/backend/js/core/jquery.min.js"></script>
+    <script src="../static/backend/js/core/popper.min.js"></script>
+    <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
+    <!-- Plugin  -->
+    <script src="../static/backend/js/bootstrap-select.js"></script>
+
+    <script src="../static/backend/js/plugins/moment.min.js"></script>
+    <script src="../static/backend/js/plugins/bootstrap-datetimepicker.js"></script>
+    <script src="../static/backend/js/plugins/date-range-picker.js"></script>
+    <script src="../static/backend/js/jquery.datetimepicker.full.js"></script>
+    <script>
+      $('.selectpicker').selectpicker();
+
+      $(document).ready(function () {
+        if ($('.date-range-picker').length) {
+          $('.date-range-picker').daterangepicker({
+            "drops": "up",
+            "opens": "left",
+            showDropdowns: true,
+            showWeekNumbers: true,
+            autoUpdateInput: false,
+            "alwaysShowCalendars": true,
+            locale: {
+              format: 'DD/MM/YYYY',
+              separator: ","
+            },
+            ranges: {
+              'Today': [moment(), moment()],
+              'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+              'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+              'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+              'This Month': [moment().startOf('month'), moment().endOf('month')],
+              'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+          });
+          $('.date-range-picker').on('apply.daterangepicker', function (ev, picker) {
+            $(this).val(picker.startDate.format('DD/MM/YYYY') + ',' + picker.endDate.format('DD/MM/YYYY'));
+          });
+          $('.date-range-picker').on('cancel.daterangepicker', function (ev, picker) {
+            $(this).val('');
+          })
+
+
+        }
+      });
+      function filterFunction() {
+        var input, filter, div, option, i;
+        input = document.getElementById("searchInput")
+        filter = input.value.toUpperCase();
+        div = document.getElementById("assigned-uni");
+        option = div.getElementsByTagName("a");
+        for (i = 0; i < option.length; i++) {
+          txtValue = option[i].textContent || option[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            option[i].style.display = "";
+          } else {
+            option[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+
+    <script>
+      imgInp.onchange = evt => {
+        const [file] = imgInp.files
+        if (file) {
+          document.getElementById("profile-img").style.backgroundImage = 'url(' + URL.createObjectURL(file) + ')';
+          document.getElementById("profile-name").style.display = 'none';
+        }
+      }
+      let dtpInitNew = (timePickerBoolean,formatTime) => {
+        $('input.date-picker').datetimepicker({
+          format: 'd/m/y',
+          formatTime: formatTime,
+          timepicker: timePickerBoolean,
+        });
+      }
+      dtpInitNew(false)
+    </script>
+
+</body>
+
+</html>

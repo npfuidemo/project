@@ -1,0 +1,116 @@
+@import '../abstracts/mixins';
+
+.team-hierarchy {
+    .hierarchy-item {
+        position: relative;
+        margin-bottom: 1rem;
+
+        .hover-effect {
+            &:hover {
+                box-shadow: 0 0 25px rgba(0, 0, 0, .09);
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            background: #ccc;
+        }
+
+        &:before {
+            width: 1px;
+            left: 30px;
+            top: 55px;
+            height: calc(100% - 80px);
+        }
+
+        &:after {
+            width: 18px;
+            height: 1px;
+            top: 30px;
+            left: -18px;
+        }
+
+        &.pointers-none a,
+        .pointers-none>a {
+            filter: grayscale(1);
+        }
+
+        &:last-child {
+            >div:before {
+                content: '';
+                width: 2px;
+                background-color: #fff;
+                position: absolute;
+                left: -18px;
+                top: 31px;
+                height: calc(100% - 42px);
+            }
+
+
+        }
+    }
+
+    &.short-hierarchy {
+        .hierarchy-item {
+            &:before {
+                top: 30px;
+                height: calc(100% - 50px);
+            }
+
+            &:after {
+                top: 20px;
+            }
+
+            &:last-child>div:before {
+                top: 21px;
+            }
+        }
+
+    }
+
+    >.hierarchy-item:after {
+        content: none;
+    }
+
+    [data-toggle="collapse"]:before {
+        content: '\e5df';
+        font-family: 'Material Icons';
+        color: #323232;
+        font-size: 25px;
+    }
+
+    [data-toggle="collapse"][aria-expanded="true"]:before {
+        @include rotate(90);
+    }
+}
+
+.editable-wrapper {
+    z-index: 9;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-left-color: #fff;
+
+    .editable-option {
+        display: flex;
+        width: 0;
+        height: calc(100% + 2px);
+        left: 0;
+        top: -1px;
+        align-items: center;
+        opacity: 0;
+        z-index: -1;
+        border-radius: 0 20px 20px 0;
+        transition: all 1s ease-in-out;
+    }
+
+    &:hover,
+    &.active {
+        .editable-option {
+            width: 110px;
+            left: calc(100% - 1px);
+            opacity: 1;
+        }
+    }
+}

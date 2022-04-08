@@ -1,0 +1,18 @@
+.edit-stage-btn {
+
+  .stage-save-icon {
+    display: none;
+  }
+
+  .stage-edit-icon {
+    display: block;
+  }
+
+  &.enableSave .stage-save-icon {
+    display: block;
+  }
+
+  &.enableSave .stage-edit-icon {
+    display: none;
+  }
+}
