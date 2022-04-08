@@ -446,3 +446,26 @@ overflow: hidden;
     }
   }
 }
+
+
+.tagdropdown{
+  .dropdown-toggle{
+    padding:0;
+    border: 0;
+    background: transparent;
+    &:after{
+      display: none;
+    }
+  }
+}
+
+.filterCount{
+  .badge {
+      position: absolute;
+      border-radius: 50%;
+      padding: 3px 3px;
+      right: -8px;
+      min-width: 15px;
+      text-align: center;
+   }
+}

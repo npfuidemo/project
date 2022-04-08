@@ -1472,7 +1472,6 @@ input[type="checkbox"] {
 }
 
 .form-group {
-
     input.form-control,
     textarea.form-control {
         &::placeholder{
@@ -1481,27 +1480,4 @@ input[type="checkbox"] {
             font-weight: 500 !important;
         }
     }
-}
-
-
-button[data-toggle="collapse"] {
-    &:active,&:hover,&:focus,&:target{
-        background-color: none!important;
-        box-shadow: none!important;
-        border: none!important;
-    }
-}
-
-
-
-
-.filterCount{
-    .badge {
-        position: absolute;
-        border-radius: 50%;
-        padding: 3px 3px;
-        right: -8px;
-        min-width: 15px;
-        text-align: center;
-     }
 }

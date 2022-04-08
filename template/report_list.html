@@ -14,8 +14,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
    <!-- CSS Files -->
    <link href="../static/backend/css/main.css" rel="stylesheet" />
-   <link rel="preload" href="../static/backend/css/config.css" as="style" onload="this.rel='stylesheet'">
-   <link href="../static/backend/css/user-permissions.css" rel="stylesheet" />
+   <link href="../static/backend/css/reportBuilder.css" rel="stylesheet" />
 </head>
 
 <body class="dark-mode">
@@ -461,7 +460,7 @@
                data-container="body" title="Filter" data-original-title="Filter"> filter_alt </span>
          </a>
 
-         <a href="#create-user-popup" data-toggle="modal" class="ml-2 btn btn-sm btn-primary d-flex align-items-center">
+         <a href="reportBuilderNoreport.html" class="ml-2 btn btn-sm btn-primary d-flex align-items-center">
             <span class="material-icons-outlined" style="font-size: 18px;"> add </span>
             Create New
          </a>
@@ -526,32 +525,28 @@
                            </tr>
                         </thead>
                         <tbody>
-                           <tr class="grid-table-row">
+                        <tr class="grid-table-row">
                               <td class="has-checkbox min-max-50">
                                  <input type="checkbox" class="" />
                               </td>
                               <td class="min-max-350 font-weight-bold" >
-                                    <div class="d-flex">
+                                    <div class="d-flex dropdown tagdropdown" data-container="body">
                                        <span>
                                           Lead Stage VS Counsellor Lead Allocation
                                        </span>
-                                       <div class="tag">
-                                          <a href="#"><span class="fs-16 material-icons-outlined">
+                                       <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <span class="material-icons-outlined text-muted fs-19">
                                              local_offer
-                                             </span>
-                                          </a>
-                                          <ul class="tagcontainer nogap nolist ">
-                                             <li>Management</li>
-                                             <li>Automation</li>
-                                             <li>Admission</li>
-                                          </ul>
-                                          <p class="text-center">
-                                             <a href="#" class="d-flex">
-                                                <span class="material-icons-outlined  fs-19">add</span>
-                                                <span class="font-weight-bold align-self-center fs-13">Create</span>
-                                             </a>
-                                          </p>
-                                       </div>
+                                          </span>
+                                        </button>
+                                        <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
+                                             <div class="createdtaglist">
+                                                <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                                   <div class="tag label label-primary remove_tag">
+                                                      application
+                                                   </div>
+                                             </div>
+                                           </div>
                                     </div>
                               </td>
                               <td class="min-max-150 ">Joseph Jhone</td>
@@ -573,7 +568,185 @@
                                     </div>
                                  </div>
                               </td>
-                           </tr>
+                        </tr>
+
+                        <tr class="grid-table-row">
+                           <td class="has-checkbox min-max-50">
+                              <input type="checkbox" class="" />
+                           </td>
+                           <td class="min-max-350 font-weight-bold" >
+                                 <div class="d-flex dropdown tagdropdown" data-container="body">
+                                    <span>
+                                       Lead Stage VS Counsellor Lead Allocation
+                                    </span>
+                                    <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       <span class="material-icons-outlined text-muted fs-19">
+                                          local_offer
+                                       </span>
+                                     </button>
+                                     <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
+                                          <div class="createdtaglist">
+                                             <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                                <div class="tag label label-primary remove_tag">
+                                                   application
+                                                </div>
+                                          </div>
+                                        </div>
+                                 </div>
+                           </td>
+                           <td class="min-max-150 ">Joseph Jhone</td>
+                           <td class="min-max-200 ">11/02/2022 04:07 PM</td>
+                           <td data-title="Action" class="min-max-50">
+                              <div class="d-flex justify-content-lg-end  table-last-action">
+                                 <div class="dropdown" data-container="body">
+                                    <a aria-haspopup="true"
+                                       class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                                       data-toggle="dropdown" href="javascript:void(0);">
+                                       <span class="material-icons-outlined">more_horiz</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                       <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
+                                       <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
+                                       <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
+                                       <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                     </tr>
+                     <tr class="grid-table-row">
+                        <td class="has-checkbox min-max-50">
+                           <input type="checkbox" class="" />
+                        </td>
+                        <td class="min-max-350 font-weight-bold" >
+                              <div class="d-flex dropdown tagdropdown" data-container="body">
+                                 <span>
+                                    Lead Stage VS Counsellor Lead Allocation
+                                 </span>
+                                 <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="material-icons-outlined text-muted fs-19">
+                                       local_offer
+                                    </span>
+                                  </button>
+                                  <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
+                                       <div class="createdtaglist">
+                                          <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                             <div class="tag label label-primary remove_tag">
+                                                application
+                                             </div>
+                                       </div>
+                                     </div>
+                              </div>
+                        </td>
+                        <td class="min-max-150 ">Joseph Jhone</td>
+                        <td class="min-max-200 ">11/02/2022 04:07 PM</td>
+                        <td data-title="Action" class="min-max-50">
+                           <div class="d-flex justify-content-lg-end  table-last-action">
+                              <div class="dropdown" data-container="body">
+                                 <a aria-haspopup="true"
+                                    class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                                    data-toggle="dropdown" href="javascript:void(0);">
+                                    <span class="material-icons-outlined">more_horiz</span>
+                                 </a>
+                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </td>
+                  </tr>
+                  <tr class="grid-table-row">
+                     <td class="has-checkbox min-max-50">
+                        <input type="checkbox" class="" />
+                     </td>
+                     <td class="min-max-350 font-weight-bold" >
+                           <div class="d-flex dropdown tagdropdown" data-container="body">
+                              <span>
+                                 Lead Stage VS Counsellor Lead Allocation
+                              </span>
+                              <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <span class="material-icons-outlined text-muted fs-19">
+                                    local_offer
+                                 </span>
+                               </button>
+                               <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
+                                    <div class="createdtaglist">
+                                       <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                          <div class="tag label label-primary remove_tag">
+                                             application
+                                          </div>
+                                    </div>
+                                  </div>
+                           </div>
+                     </td>
+                     <td class="min-max-150 ">Joseph Jhone</td>
+                     <td class="min-max-200 ">11/02/2022 04:07 PM</td>
+                     <td data-title="Action" class="min-max-50">
+                        <div class="d-flex justify-content-lg-end  table-last-action">
+                           <div class="dropdown" data-container="body">
+                              <a aria-haspopup="true"
+                                 class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                                 data-toggle="dropdown" href="javascript:void(0);">
+                                 <span class="material-icons-outlined">more_horiz</span>
+                              </a>
+                              <div class="dropdown-menu">
+                                 <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
+                                 <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
+                                 <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
+                                 <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+               </tr>
+               <tr class="grid-table-row">
+                  <td class="has-checkbox min-max-50">
+                     <input type="checkbox" class="" />
+                  </td>
+                  <td class="min-max-350 font-weight-bold" >
+                        <div class="d-flex dropdown tagdropdown" data-container="body">
+                           <span>
+                              Lead Stage VS Counsellor Lead Allocation
+                           </span>
+                           <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="material-icons-outlined text-muted fs-19">
+                                 local_offer
+                              </span>
+                            </button>
+                            <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
+                                 <div class="createdtaglist">
+                                    <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                       <div class="tag label label-primary remove_tag">
+                                          application
+                                       </div>
+                                 </div>
+                               </div>
+                        </div>
+                  </td>
+                  <td class="min-max-150 ">Joseph Jhone</td>
+                  <td class="min-max-200 ">11/02/2022 04:07 PM</td>
+                  <td data-title="Action" class="min-max-50">
+                     <div class="d-flex justify-content-lg-end  table-last-action">
+                        <div class="dropdown" data-container="body">
+                           <a aria-haspopup="true"
+                              class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                              data-toggle="dropdown" href="javascript:void(0);">
+                              <span class="material-icons-outlined">more_horiz</span>
+                           </a>
+                           <div class="dropdown-menu">
+                              <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
+                              <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
+                              <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
+                              <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+            </tr>
+
                         </tbody>
                      </table>
                   </div>
@@ -747,16 +920,24 @@
    <!-- <script src="../static/custom/js/qms/qms.js"></script> -->
 
    <script>
-      $('.').click(function () {
-         $('.').not(this).removeClass('_asc _desc');
-         if ($(this).hasClass('_desc') || $(this).hasClass('_asc')) {
-            $(this).toggleClass('_desc _asc');
-         }
-         else {
-            $(this).addClass('_desc');
-         }
-      });
-      $('.expended-search-link').click(function () {
+   $(".toggletag a.basicTemplateTag").click(function () {
+   $(this).css({'z-index':'11', 'position':'relative'});
+   $(".tagcontainer").toggleClass('open');
+   if($(".tagcontainer").hasClass('open')){
+      $(".tagcontainer-backdrop").show();
+   }
+   else{
+      $(".tagcontainer-backdrop").hide();
+   }
+});
+
+$(".tagcontainer-backdrop").click(function () {
+   $("a.basicTemplateTag").css('z-index','0');
+   $(".tagcontainer").removeClass('open');
+   $(".tagcontainer-backdrop").hide();
+});
+
+ $('.expended-search-link').click(function () {
          $(this).next('.expended-search-wrpper').toggleClass('active');
       });
       $('.expended-search-wrpper [data-dismiss="search"]').click(function () {
