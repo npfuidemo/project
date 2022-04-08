@@ -373,6 +373,7 @@
 .selectedFilterContainer{
   height: 44px;
   overflow: hidden;
+  padding-right: 10px;
   &:before, &:after{
     content: '';
     position: absolute;
@@ -391,6 +392,14 @@
   }
   &:hover{
     overflow-x:auto;
+  }
+  .stickyleft{
+    position:sticky;
+    left:0;
+    z-index: 1;
+  }
+  &:first-child .selectedFilter{
+    margin-left: 30px;
   }
 }
 
@@ -417,7 +426,23 @@
     max-height: calc(100vh - 292px);
     overflow: auto;
     overflow-x: hidden;
-    padding-right: 10px;
+    padding-right: 15px;
     padding-left: 15px;
+  }
+}
+
+
+.text-truncated-custom{
+overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card{
+  & [aria-expanded="true"]{
+    .text-truncated-custom{
+      overflow: visible;
+      white-space: normal;
+    }
   }
 }
