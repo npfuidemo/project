@@ -66,12 +66,13 @@
   background: #fff;
   min-height: 200px;
   border-radius: 10px;
+  z-index: 03;
 
 
 
   &.active {
     left: 15px;
-    z-index: 1;
+    z-index: 12;
     opacity: 1;
     @media (max-width:767px){
       z-index: 11111;
@@ -136,6 +137,7 @@
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 11;
     background: rgba(255, 255, 255, .9);
     display: block;
     @media (max-width:767px){
@@ -467,5 +469,6 @@ overflow: hidden;
       right: -8px;
       min-width: 15px;
       text-align: center;
+      z-index: 03;
    }
 }
