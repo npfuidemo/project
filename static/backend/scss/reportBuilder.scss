@@ -380,7 +380,7 @@
 
 .selectedFilterContainer{
   height: 44px;
-  overflow: hidden;
+  overflow: auto;
   padding-right: 10px;
   position: relative;
   &:before, &:after{
@@ -392,6 +392,7 @@
     background: rgb(255,255,255);
     background: linear-gradient(270deg, rgba(255,255,255,.5) 34%, rgba(255,255,255,1) 100%);
     z-index: 1;
+    display: none;
   }
   &:before{
     left:0px;

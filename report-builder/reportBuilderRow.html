@@ -412,7 +412,7 @@
             <div class="col-md-3 col-sm-4" id="mobile-slide">
                <div class="leftColumnReport h-100">
                   <div class="card m-0 shadow-none border-right h-100">
-                     <div class="form-group p-3 mb-0">
+                     <div class="form-group p-3 mb-0 d-none">
                         <div class="text-dark  pb-md-0 d-block font-weight-bold">Dataset</div>
                         <select class="form-control selectpicker" data-live-search="true"
                            data-selected-text-format="count > 1" data-style="px-2 border" name="dataset" id=""
@@ -429,7 +429,7 @@
                         </select>
                      </div>
 
-                     <div id="accordion" class="accordion config-accordian maxheight450">
+                     <div id="accordion" class="accordion config-accordian maxheight450 mt-3">
                         <div class="row justify-content-center">
                            <div class="col-12 col-sm-12">
                               <div class="card shadow-none mb-3 mt-0">
@@ -651,9 +651,9 @@
                      </div>
 
                      <div class="d-flex justify-content-end  totalSort mt-3 mr-3">
-                        <a href="javascript:void(0)" onclick="showhideMenuDiv(this)"
+                        <a href="reportBuilderTotal.html" onclick="showhideMenuDiv(this)"
                            class=" btn btn-outline-primary btn-sm">Total</a>
-                        <a href="javascript:void(0)" onclick="showhideMenuDiv(this)"
+                        <a href="reportBuilderSort.html" onclick="showhideMenuDiv(this)"
                            class="ml-3  btn btn-outline-secondary btn-sm">Sort</a>
                      </div>
                   </div>
@@ -758,16 +758,7 @@
                   <hr>
 
                   <div class="row d-none">
-                     <div class="col-sm-9">
-                        <div class="d-flex align-items-center mb-3">
-                              <span class=""> Dashboard Filters:</span>
-                              <a class="d-flex align-items-center justify-content-end btn btn-outline-primary btn-sm py-1 px-2 ml-2"
-                                 href="#">
-                                 <span class="material-icons-outlined  fs-16">add</span>
-                                 <span class="lineHeight16 fs-12">Add</span>
-                              </a>
-                           </div>
-
+                     <div class="col-sm-12">
                            <div class="selectedFilterContainer d-flex align-items-cente  mb-3">
                               <div class="stickyleft bg-white" >
                                  <div class="position-relative filterCount  mr-2" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Total 10 Filter Added">
@@ -878,7 +869,7 @@
                            </div>
 
                      </div>
-                     <div class="col-sm-3 text-md-right">
+                     <div class="col-sm-3 text-md-right d-none">
                         <div class="d-flex justify-content-md-end">
                            <span>View Type: </span>
                            <select data-container="body" class="form-control selectpicker customSelectMenu chart"
