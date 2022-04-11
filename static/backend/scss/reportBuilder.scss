@@ -54,6 +54,12 @@
 }
 
 
+.createdtaglist{
+.tag{
+  font-size: 13px;
+}
+}
+
 .addMenudiv {
   left: -375px;
   position:absolute;
@@ -376,10 +382,11 @@
   height: 44px;
   overflow: hidden;
   padding-right: 10px;
+  position: relative;
   &:before, &:after{
     content: '';
     position: absolute;
-    width: 30px;
+    width: 20px;
     height: 35px;
     display: block;
     background: rgb(255,255,255);
@@ -387,10 +394,10 @@
     z-index: 1;
   }
   &:before{
-    left:45px;
+    left:0px;
   }
   &:after{
-    right:5px;
+    right:0px;
   }
   &:hover{
     overflow-x:auto;

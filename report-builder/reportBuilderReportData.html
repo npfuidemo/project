@@ -768,11 +768,14 @@
                               </a>
                            </div>
                      <div class="d-flex">
-                        <div class="stickyleft bg-white" >
+                        <div class="stickyleft bg-white mr-2" >
                            <div class="position-relative filterCount " data-toggle="tooltip" data-placement="bottom" data-container="body" title="Total 10 Filter Added">
                               <span class="material-icons-outlined text-secondary"> filter_alt</span>
                               <span class="badge bg-danger">10</span>
                            </div>
+                        </div>
+                        <div class="add mt-1">
+                           <a href="javascript:void(0)" onclick="showhideMenuDiv(this)" class="ml-3 mr-2 border-bottom-blue">Add</a>
                         </div>
                            <div class="selectedFilterContainer d-flex align-items-cente  mb-3 ml-3">
                               <div class="selectedFilter bg-light">
@@ -1303,7 +1306,7 @@
    <script src="../static/backend/js/plugins/typehead.js"></script>
    <!-- <script src="../static/custom/js/qms/qms.js"></script> -->
 
-   <script>
+<script>
 $(".toggletag a.basicTemplateTag").click(function () {
    $(this).css({'z-index':'12', 'position':'relative'});
    $(".tagcontainer").toggleClass('open');
