@@ -36,38 +36,44 @@
   .config-accordian{
   & .card {
     border-radius: 4px;
-    .card-body{
-      border-radius: 4px;
-    }
-    // .card-body {
-    //   &>[aria-expanded="true"] {
-    //     border:1px solid #f2f2f2;
-    //     border-bottom: 0;
-    //     padding: 5px 10px;
-    //     border-radius: 4px 4px 0 0 ;
-    //     background-color: #fff;
-    //     &+.collapse.show{
-    //       border:1px solid #f2f2f2;
-    //       border-top: 0;
-    //       border-radius: 0 0 4px 4px;
-    //       background-color: #fff;
-    //     }
-    //   }
-
-    //     &>[aria-expanded="false"] {
-    //       border:1px solid #f2f2f2;
-    //     border-bottom: 0;
-    //     padding: 5px 10px;
-    //     border-radius: 4px 4px 0 0 ;
-    //     background-color: #ccc;
-    //       &+.collapse{
-    //         border:0px solid #f2f2f2;
-    //       border-top: 0;
-    //       border-radius: 0 0 4px 4px;
-    //       background-color: #ccc;
-    //       }
-    //   }
+    // .card-body{
+    //   border-radius: 4px;
     // }
+    .heading-highlight{
+      visibility: hidden;
+   }
+    .card-body {
+      &>[aria-expanded="true"] {
+        border:1px solid #f2f2f2;
+        border-bottom-color: transparent;
+        padding: 5px 10px;
+        border-radius: 4px 4px 0 0 ;
+        background-color: #fff;
+        &+.collapse.show{
+          border:1px solid #f2f2f2;
+          border-top-color: transparent;
+          border-radius: 0 0 4px 4px;
+          background-color: #fff;
+          .heading-highlight{
+             visibility: visible;
+          }
+        }
+
+      }
+        &>[aria-expanded="false"] {
+          border:1px solid transparent;
+          padding: 5px 10px;
+          border-radius: 4px 4px 0 0 ;
+          background-color: #f8f9fa;
+          &+.collapse{
+            border:1px solid  transparent;
+            border-top: 0;
+            border-radius: 0 0 4px 4px;
+            background-color: #f8f9fa;
+
+          }
+      }
+    }
   }
 }
 }
@@ -468,7 +474,7 @@
   }
 
   .maxheight450{
-    max-height: calc(100vh - 292px);
+    max-height: calc(100vh - 175px);
     overflow: auto;
     overflow-x: hidden;
     padding-right: 15px;
