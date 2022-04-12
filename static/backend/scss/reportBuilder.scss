@@ -33,10 +33,43 @@
 .leftColumnReport {
   position: relative;
   z-index: 11;
-}
+  .config-accordian{
+  & .card {
+    border-radius: 4px;
+    .card-body{
+      border-radius: 4px;
+    }
+    // .card-body {
+    //   &>[aria-expanded="true"] {
+    //     border:1px solid #f2f2f2;
+    //     border-bottom: 0;
+    //     padding: 5px 10px;
+    //     border-radius: 4px 4px 0 0 ;
+    //     background-color: #fff;
+    //     &+.collapse.show{
+    //       border:1px solid #f2f2f2;
+    //       border-top: 0;
+    //       border-radius: 0 0 4px 4px;
+    //       background-color: #fff;
+    //     }
+    //   }
 
-.leftColumnReport .card {
-  border-radius: 0;
+    //     &>[aria-expanded="false"] {
+    //       border:1px solid #f2f2f2;
+    //     border-bottom: 0;
+    //     padding: 5px 10px;
+    //     border-radius: 4px 4px 0 0 ;
+    //     background-color: #ccc;
+    //       &+.collapse{
+    //         border:0px solid #f2f2f2;
+    //       border-top: 0;
+    //       border-radius: 0 0 4px 4px;
+    //       background-color: #ccc;
+    //       }
+    //   }
+    // }
+  }
+}
 }
 
 .addmenucontainer {
