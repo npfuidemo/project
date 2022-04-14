@@ -17,7 +17,7 @@
    <link href="../static/backend/css/reportBuilder.css" rel="stylesheet" />
 </head>
 
-<body class="dark-mode">
+<body class="dark-mode reportbuilder">
    <!-- Header With Side Nav Start-->
    <nav class="navbar fixed-top navbar-expand-lg border-bottom shadow-none brand-color" color-on-scroll="100"
       id="sectionsNav">
@@ -404,258 +404,254 @@
 
    <div id="main" class="wrapper">
       <div class="main-container  p-3 overflow-hidden fullHeight">
-         <div class="row no-gutters h-100">
+         <div class="row no-gutters h-100 bg-white reportBuilderContainer">
             <div id="myCanvasNav" class="overlay" onclick="closeNav()">
                <a href="javascript:void(0)" class="closebtn d-block d-lg-none" onclick="closeNav()">×</a>
             </div>
             <!-- leftColumnReport start-->
-            <div class="col-md-3 col-sm-4" id="mobile-slide">
-               <div class="leftColumnReport h-100">
-                  <div class="card m-0 shadow-none border-right h-100">
-                     <div class="form-group p-3 mb-0 d-none">
-                        <div class="text-dark  pb-md-0 d-block font-weight-bold">Dataset</div>
-                        <select class="form-control selectpicker" data-live-search="true"
-                           data-selected-text-format="count > 1" data-style="px-2 border" name="dataset" id=""
-                           data-size="6">
-                           <option value="">Select Form</option>
-                           <option value="1">Form 1</option>
-                           <option value="1">Form 2</option>
-                           <option value="1">Form 3</option>
-                           <option value="1">Form 4</option>
-                           <option value="5">Form 5</option>
-                           <option value="6">Form 6</option>
-                           <option value="7">Form 7</option>
-                           <option value="8">Form 8</option>
-                        </select>
-                     </div>
+            <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport" id="mobile-slide">
+                  <div class="form-group p-3 mb-0 d-none">
+                     <div class="text-dark  pb-md-0 d-block font-weight-bold">Dataset</div>
+                     <select class="form-control selectpicker" data-live-search="true"
+                        data-selected-text-format="count > 1" data-style="px-2 border" name="dataset" id=""
+                        data-size="6">
+                        <option value="">Select Form</option>
+                        <option value="1">Form 1</option>
+                        <option value="1">Form 2</option>
+                        <option value="1">Form 3</option>
+                        <option value="1">Form 4</option>
+                        <option value="5">Form 5</option>
+                        <option value="6">Form 6</option>
+                        <option value="7">Form 7</option>
+                        <option value="8">Form 8</option>
+                     </select>
+                  </div>
 
-                     <div id="accordion" class="accordion config-accordian maxheight450 mt-3">
-                        <div class="row justify-content-center">
-                           <div class="col-12 col-sm-12">
-                              <div class="card shadow-none mb-3 mt-0">
-                                 <div class="card-body py-0 px-0 my-0">
-                                    <div
-                                       class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
-                                       aria-expanded="true" data-toggle="collapse" data-target="#metricsFields"
-                                       aria-controls="level-metricsFields" role="tablist">
-                                       <div class="w-75">
-                                          <h5 class="my-0 h6 text-dark">Metrics</h5>
-                                       </div>
-                                       <div class="d-flex ml-auto">
-                                          <div>
-                                             <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed "
-                                                aria-expanded="true" data-toggle="collapse"
-                                                data-target="#metricsFields">
-                                                <span class="fa fa-angle-down" data-toggle="tooltip"
-                                                   data-placement="bottom" data-container="body"
-                                                   data-original-title="Click to expand /collapse"></span>
-                                             </button>
-                                          </div>
-                                       </div>
-                                       <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
-                                          institute consists of these
-                                          Registration forms
-                                          and Widgets.</div>
+                  <div id="accordion" class="accordion config-accordian maxheight450 mt-3">
+                     <div class="row justify-content-center">
+                        <div class="col-12 col-sm-12">
+                           <div class="card shadow-none mb-3 mt-0">
+                              <div class="card-body py-0 px-0 my-0">
+                                 <div
+                                    class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
+                                    aria-expanded="true" data-toggle="collapse" data-target="#metricsFields"
+                                    aria-controls="level-metricsFields" role="tablist">
+                                    <div class="w-75">
+                                       <h5 class="my-0 h6 text-dark">Metrics</h5>
                                     </div>
-                                    <div id="metricsFields" class="collapse left-nav-accordion show"
-                                       data-parent="#accordion">
-                                       <div
-                                          class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+                                    <div class="d-flex ml-auto">
+                                       <div>
+                                          <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed "
+                                             aria-expanded="true" data-toggle="collapse"
+                                             data-target="#metricsFields">
+                                             <span class="fa fa-angle-down" data-toggle="tooltip"
+                                                data-placement="bottom" data-container="body"
+                                                data-original-title="Click to expand /collapse"></span>
+                                          </button>
                                        </div>
-                                       <div class="row">
-                                          <div class="col-sm-12 addmenucontainer"></div>
-                                          <div class="col-sm-12">
-                                             <p class="text-center text-secondary fs-12 mt-3 lineHeight16">
-                                                No Metrics Added<br>
-                                                Add your Metrics to see here
-                                             </p>
-                                             <div class="row d-flex justify-content-center mb-3">
-                                                <div class="col-sm-4 col-4 text-center">
-                                                   <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1 mr-2"
-                                                      href="javascript:void(0)" onclick="showhideMenuDiv(this)">
-                                                      <span class="material-icons-outlined  fs-16">add</span>
-                                                      <span class="lineHeight16 fs-12">Add</span>
-                                                   </a>
-                                                </div>
+                                    </div>
+                                    <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
+                                       institute consists of these
+                                       Registration forms
+                                       and Widgets.</div>
+                                 </div>
+                                 <div id="metricsFields" class="collapse left-nav-accordion show"
+                                    data-parent="#accordion">
+                                    <div
+                                       class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-12 addmenucontainer"></div>
+                                       <div class="col-sm-12">
+                                          <p class="text-center text-secondary fs-12 mt-3 lineHeight16">
+                                             No Metrics Added<br>
+                                             Add your Metrics to see here
+                                          </p>
+                                          <div class="row d-flex justify-content-center mb-3">
+                                             <div class="col-sm-4 col-4 text-center">
+                                                <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1 mr-2"
+                                                   href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                                   <span class="material-icons-outlined  fs-16">add</span>
+                                                   <span class="lineHeight16 fs-12">Add</span>
+                                                </a>
                                              </div>
                                           </div>
-
                                        </div>
+
                                     </div>
                                  </div>
                               </div>
-
-
-                              <div class="card shadow-none mt-0 mb-3">
-                                 <div class="card-body py-0 px-0 my-0">
-                                    <div
-                                       class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
-                                       aria-expanded="false" data-toggle="collapse" data-target="#rowFields"
-                                       aria-controls="level-metricsFields" role="tablist">
-                                       <div class="w-75">
-                                          <h5 class="my-0 h6 text-dark">Row</h5>
-                                       </div>
-                                       <div class="d-flex ml-auto">
-                                          <div>
-                                             <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
-                                                aria-expanded="false" data-toggle="collapse" data-target="#rowFields">
-                                                <span class="fa fa-angle-down" data-toggle="tooltip"
-                                                   data-placement="bottom" data-container="body"
-                                                   data-original-title="Click to expand /collapse"></span>
-                                             </button>
-                                          </div>
-                                       </div>
-                                       <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
-                                          institute consists of these
-                                          Registration forms
-                                          and Widgets.</div>
-                                    </div>
-                                    <div id="rowFields" class="collapse left-nav-accordion" data-parent="#accordion">
-                                       <div
-                                          class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
-                                       </div>
-                                       <div class="row">
-                                          <div class="col-sm-12 addmenucontainer">
-                                             <a class="d-flex align-items-center justify-content-end  mr-2"
-                                                href="javascript:void(0)" onclick="showhideMenuDiv(this)">
-                                                <span class="material-icons-outlined  fs-16">add</span>
-                                                <span class="lineHeight16 fs-12">Add</span>
-                                             </a>
-                                          </div>
-                                          <div class="col-sm-12">
-                                             <ul class="selectedField p-2">
-                                                <li class="bg-light">
-                                                   <span>Lead</span>
-                                                   <a href="javascript:void(0)" class="removeList">
-                                                      <span class="material-icons-outlined fs-12">
-                                                         close
-                                                      </span>
-                                                   </a>
-                                                </li>
-                                                <li class="bg-light">
-                                                   <span>Application</span>
-                                                   <a href="javascript:void(0)" class="removeList">
-                                                      <span class="material-icons-outlined fs-12">
-                                                         close
-                                                      </span>
-                                                   </a>
-                                                </li>
-                                             </ul>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-
-                              <div class="card shadow-none mt-0 mb-3">
-                                 <div class="card-body py-0 px-0 my-0">
-                                    <div
-                                       class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
-                                       aria-expanded="false" data-toggle="collapse" data-target="#columnsFields"
-                                       aria-controls="level-columnsFields" role="tablist">
-                                       <div class="w-75">
-                                          <h5 class="my-0 h6 text-dark">Columns</h5>
-                                       </div>
-                                       <div class="d-flex ml-auto">
-                                          <div>
-                                             <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
-                                                aria-expanded="false" data-toggle="collapse"
-                                                data-target="#columnsFields">
-                                                <span class="fa fa-angle-down" data-toggle="tooltip"
-                                                   data-placement="bottom" data-container="body"
-                                                   data-original-title="Click to expand /collapse"></span>
-                                             </button>
-                                          </div>
-                                       </div>
-                                       <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
-                                          institute consists of these
-                                          Registration forms
-                                          and Widgets.</div>
-                                    </div>
-                                    <div id="columnsFields" class="collapse left-nav-accordion"
-                                       data-parent="#accordion">
-                                       <div
-                                          class="heading-highlight border-bottom text-dark  mt-2 mt-lg-0 mb-2 pb-2 position-relative">
-                                       </div>
-                                       <div class="row d-flex justify-content-center mt-3 mb-3">
-                                          <div class="col-sm-12">
-                                             <p class="text-center text-secondary  fs-12 lineHeight16">
-                                                No Columns Added<br>
-                                                Add your Columns to see here
-                                             </p>
-                                          </div>
-                                          <div class="col-sm-4 col-4 text-center">
-                                             <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1"
-                                                href="javascript:void(0)" onclick="showhideMenuDiv(this)">
-                                                <span class="material-icons-outlined  fs-16">add</span>
-                                                <span class="lineHeight16 fs-12">Add</span>
-                                             </a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-
-                              <div class="card shadow-none mt-0 mb-0">
-                                 <div class="card-body py-2 px-2 my-0 pt-0">
-                                    <div
-                                       class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
-                                       aria-expanded="false" data-toggle="collapse" data-target="#filterFields"
-                                       aria-controls="level-filterFields" role="tablist">
-                                       <div class="w-75">
-                                          <h5 class="my-0 h6 text-dark">FIlter</h5>
-                                       </div>
-                                       <div class="d-flex ml-auto">
-                                          <div>
-                                             <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
-                                                aria-expanded="false" data-toggle="collapse"
-                                                data-target="#filterFields">
-                                                <span class="fa fa-angle-down" data-toggle="tooltip"
-                                                   data-placement="bottom" data-container="body"
-                                                   data-original-title="Click to expand /collapse"></span>
-                                             </button>
-                                          </div>
-                                       </div>
-                                       <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
-                                          institute consists of these
-                                          Registration forms
-                                          and Widgets.</div>
-                                    </div>
-                                    <div id="filterFields" class="collapse left-nav-accordion" data-parent="#accordion">
-                                       <div
-                                          class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
-                                       </div>
-                                       <div class="row d-flex justify-content-center mt-3 mb-3">
-                                          <div class="col-sm-12">
-                                             <p class="text-center text-secondary  fs-12 lineHeight16">
-                                                No Filter Added<br>
-                                                Add your Filter to see here
-                                             </p>
-                                          </div>
-                                          <div class="col-sm-4 col-4 text-center">
-                                             <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1"
-                                                href="javascript:void(0)" onclick="showhideMenuDiv(this)">
-                                                <span class="material-icons-outlined  fs-16">add</span>
-                                                <span class="lineHeight16 fs-12">Add</span>
-                                             </a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
                            </div>
+
+
+                           <div class="card shadow-none mt-0 mb-3">
+                              <div class="card-body py-0 px-0 my-0">
+                                 <div
+                                    class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
+                                    aria-expanded="false" data-toggle="collapse" data-target="#rowFields"
+                                    aria-controls="level-metricsFields" role="tablist">
+                                    <div class="w-75">
+                                       <h5 class="my-0 h6 text-dark">Row</h5>
+                                    </div>
+                                    <div class="d-flex ml-auto">
+                                       <div>
+                                          <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
+                                             aria-expanded="false" data-toggle="collapse" data-target="#rowFields">
+                                             <span class="fa fa-angle-down" data-toggle="tooltip"
+                                                data-placement="bottom" data-container="body"
+                                                data-original-title="Click to expand /collapse"></span>
+                                          </button>
+                                       </div>
+                                    </div>
+                                    <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
+                                       institute consists of these
+                                       Registration forms
+                                       and Widgets.</div>
+                                 </div>
+                                 <div id="rowFields" class="collapse left-nav-accordion" data-parent="#accordion">
+                                    <div
+                                       class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-12 addmenucontainer">
+                                          <a class="d-flex align-items-center justify-content-end  mr-2"
+                                             href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                             <span class="material-icons-outlined  fs-16">add</span>
+                                             <span class="lineHeight16 fs-12">Add</span>
+                                          </a>
+                                       </div>
+                                       <div class="col-sm-12">
+                                          <ul class="selectedField p-2">
+                                             <li class="bg-light">
+                                                <span>Lead</span>
+                                                <a href="javascript:void(0)" class="removeList">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      close
+                                                   </span>
+                                                </a>
+                                             </li>
+                                             <li class="bg-light">
+                                                <span>Application</span>
+                                                <a href="javascript:void(0)" class="removeList">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      close
+                                                   </span>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+
+                           <div class="card shadow-none mt-0 mb-3">
+                              <div class="card-body py-0 px-0 my-0">
+                                 <div
+                                    class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
+                                    aria-expanded="false" data-toggle="collapse" data-target="#columnsFields"
+                                    aria-controls="level-columnsFields" role="tablist">
+                                    <div class="w-75">
+                                       <h5 class="my-0 h6 text-dark">Columns</h5>
+                                    </div>
+                                    <div class="d-flex ml-auto">
+                                       <div>
+                                          <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
+                                             aria-expanded="false" data-toggle="collapse"
+                                             data-target="#columnsFields">
+                                             <span class="fa fa-angle-down" data-toggle="tooltip"
+                                                data-placement="bottom" data-container="body"
+                                                data-original-title="Click to expand /collapse"></span>
+                                          </button>
+                                       </div>
+                                    </div>
+                                    <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
+                                       institute consists of these
+                                       Registration forms
+                                       and Widgets.</div>
+                                 </div>
+                                 <div id="columnsFields" class="collapse left-nav-accordion"
+                                    data-parent="#accordion">
+                                    <div
+                                       class="heading-highlight border-bottom text-dark  mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+                                    </div>
+                                    <div class="row d-flex justify-content-center mt-3 mb-3">
+                                       <div class="col-sm-12">
+                                          <p class="text-center text-secondary  fs-12 lineHeight16">
+                                             No Columns Added<br>
+                                             Add your Columns to see here
+                                          </p>
+                                       </div>
+                                       <div class="col-sm-4 col-4 text-center">
+                                          <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1"
+                                             href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                             <span class="material-icons-outlined  fs-16">add</span>
+                                             <span class="lineHeight16 fs-12">Add</span>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+
+                           <div class="card shadow-none mt-0 mb-0">
+                              <div class="card-body py-0 px-0 my-0 pt-0">
+                                 <div
+                                    class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
+                                    aria-expanded="false" data-toggle="collapse" data-target="#filterFields"
+                                    aria-controls="level-filterFields" role="tablist">
+                                    <div class="w-75">
+                                       <h5 class="my-0 h6 text-dark">FIlter</h5>
+                                    </div>
+                                    <div class="d-flex ml-auto">
+                                       <div>
+                                          <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
+                                             aria-expanded="false" data-toggle="collapse"
+                                             data-target="#filterFields">
+                                             <span class="fa fa-angle-down" data-toggle="tooltip"
+                                                data-placement="bottom" data-container="body"
+                                                data-original-title="Click to expand /collapse"></span>
+                                          </button>
+                                       </div>
+                                    </div>
+                                    <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
+                                       institute consists of these
+                                       Registration forms
+                                       and Widgets.</div>
+                                 </div>
+                                 <div id="filterFields" class="collapse left-nav-accordion" data-parent="#accordion">
+                                    <div
+                                       class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+                                    </div>
+                                    <div class="row d-flex justify-content-center mt-3 mb-3">
+                                       <div class="col-sm-12">
+                                          <p class="text-center text-secondary  fs-12 lineHeight16">
+                                             No Filter Added<br>
+                                             Add your Filter to see here
+                                          </p>
+                                       </div>
+                                       <div class="col-sm-4 col-4 text-center">
+                                          <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1"
+                                             href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                             <span class="material-icons-outlined  fs-16">add</span>
+                                             <span class="lineHeight16 fs-12">Add</span>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
                         </div>
                      </div>
 
-                     <div class="d-flex justify-content-end  totalSort mt-3 mr-3">
-                        <a href="reportBuilderTotal.html" onclick="showhideMenuDiv(this)"
-                           class=" btn btn-outline-primary btn-sm">Total</a>
-                        <a href="reportBuilderSort.html" onclick="showhideMenuDiv(this)"
-                           class="ml-3  btn btn-outline-secondary btn-sm">Sort</a>
-                     </div>
+                  <div class="d-flex justify-content-end  totalSort ">
+                     <a href="reportBuilderTotal.html" onclick="showhideMenuDiv(this)"
+                        class=" btn btn-outline-primary btn-sm">Total</a>
+                     <a href="reportBuilderSort.html" onclick="showhideMenuDiv(this)"
+                        class="ml-3  btn btn-outline-secondary btn-sm">Sort</a>
                   </div>
                </div>
             </div>
@@ -671,8 +667,8 @@
                      </span>
                   </a>
                </div>
-               <div class="p-3 bg-white  h-100 shadow-bottom">
-                  <div class="row" id="topsection">
+
+                  <div class="row mt-2 ml-0 mr-0" id="topsection">
                      <div class="col-sm-4">
                         <div class="reportName d-flex align-items-center form-group pt-0 mb-0">
                            <a href="#" class="mr-2 favouriteBtn" data-toggle="tooltip" data-container="body"
@@ -760,7 +756,7 @@
                   </div>
                   <hr>
 
-                  <div class="row">
+                  <div class="row  mt-2 ml-0 mr-0 mb-2">
                      <div class="col-sm-12">
                         <div class="d-flex">
                            <div class="stickyleft bg-white" >
@@ -897,9 +893,8 @@
                      </div>
                   </div>
 
-                  <div class="reportData row no-gutters align-items-center justify-content-center grid-table">
-                     <div class="responsive-table col-sm-12 mb-0">
-                        <table id="tableProductivity" class="table table-borderless">
+                  <div class="reportData align-items-center justify-content-center ">
+                        <table class="tableView table table-sm" cellespacing="0" cellpadding="0">
                            <thead>
                               <tr>
                                  <th rowspan="2" class="bdr-r fixColLeft">
@@ -998,9 +993,8 @@
                               </tr>
                            </tbody>
                         </table>
-                     </div>
                   </div>
-               </div>
+
 
 
                <!-- addMenuDiv  start here -->
