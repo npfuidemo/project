@@ -405,11 +405,15 @@
    <div id="main" class="wrapper">
       <div class="main-container  p-3 overflow-hidden fullHeight">
          <div class="row no-gutters h-100 bg-white reportBuilderContainer">
-            <div id="myCanvasNav" class="overlay" onclick="closeNav()">
-               <a href="javascript:void(0)" class="closebtn d-block d-lg-none" onclick="closeNav()">×</a>
-            </div>
             <!-- leftColumnReport start-->
-            <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport" id="mobile-slide">
+            <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport" id="desktop-slide">
+               <div class="sidebarToggle"  data-toggle="tooltip" title="Hide Reports Filter">
+                  <a class="btn btn-primary p-2 pl-3 pr-3" href="javascript:void(0);" onclick="hideSideNav()">
+                     <span class="material-icons-outlined">
+                        menu_open
+                     </span>
+                  </a>
+               </div>
                   <div class="form-group p-3 mb-0 d-none">
                      <div class="text-dark  pb-md-0 d-block font-weight-bold">Dataset</div>
                      <select class="form-control selectpicker" data-live-search="true"
@@ -659,14 +663,15 @@
 
             <!-- rightColumnReport start-->
             <div class="col-md-9 col-sm-8 rightColumnReport">
+                <div id="showSidebar" data-toggle="tooltip" title="Show Reports Filter" onclick="showSideNav()">
+                        <a href="javascript:void(0)" class="btn btn-primary d-lg-none" onclick="showSideNav()">
+                           <span class="material-icons-outlined">
+                              menu_open
+                           </span>
+                        </a>
+                  </div>
                <div class="tagcontainer-backdrop" style="display: none;"></div>
-               <div class="d-block d-lg-none d-flex mob-config-btn">
-                  <a class="" href="javascript:void(0);" onclick="openNav()">
-                     <span class="material-icons-outlined">
-                        menu_open
-                     </span>
-                  </a>
-               </div>
+
 
                   <div class="row mt-2 ml-0 mr-0" id="topsection">
                      <div class="col-sm-4">
@@ -752,7 +757,7 @@
                         </a>
                         <div class="savedrop d-flex dropdown " data-container="body">
                            <button type="button" class="  ml-2 btn btn-sm btn-primary">Save</button>
-                           <button type="button" class="pt-0 pb-0 pr-0 pl-0 btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                           <button type="button" disabled  class="pt-0 pb-0 pr-0 pl-0 btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
                               <span class="sr-only">Toggle Dropdown</span>
                            </button>
                            <ul class="dropdown-menu">
@@ -1490,6 +1495,16 @@
    <!-- <script src="../static/custom/js/qms/qms.js"></script> -->
 
    <script>
+function hideSideNav() {
+   $("#desktop-slide").addClass("opened");
+   $("#showSidebar a").removeClass("d-lg-none");
+}
+
+function showSideNav() {
+   $("#desktop-slide").removeClass("opened");
+   $("#showSidebar a").addClass("d-lg-none");
+}
+
       $(".toggletag a.basicTemplateTag").click(function () {
          $(this).css({ 'z-index': '12', 'position': 'relative' });
          $(".tagcontainer").toggleClass('open');
