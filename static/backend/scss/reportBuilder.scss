@@ -103,6 +103,10 @@ margin-left:2px;
           display: flex;
         }
       }
+      @media(max-width:767px){
+        padding: 0 15px!important;
+        margin-bottom: 30px;
+      }
   }
 
   .rightColumnReport {
@@ -476,9 +480,12 @@ margin-left:2px;
 }
 
 .totalSort{
-  position:absolute;
-  bottom: 20px;
-  right: 23px;
+  margin-top: 25px;
+  @media (min-width:767px) {
+    bottom: 20px;
+    position:absolute;
+    right: 23px;
+  }
 }
 
 
@@ -586,6 +593,28 @@ overflow: hidden;
 }
 
 
+
+#desktop-slide{
+  transition: .5s;
+  padding: 0;
+  &.opened{
+      height: 100%;
+      width: 0;
+      position: absolute;
+      z-index: 9999;
+      top: 0px;
+      left: -50px;
+  &+.rightColumnReport{
+      flex: 0 0 100%;
+      max-width:100%;
+      #showSidebar{
+        display: flex;
+      }
+  }
+}
+}
+
+
 .sidebarToggle{
   position: absolute;
   bottom: 70px;
@@ -595,6 +624,12 @@ overflow: hidden;
 a{
   padding: 5px 5px 0 5px!important;
 }
+@media (max-width:767px){
+  top:70px;
+  bottom: auto;
+  right: 10px;
+  display: inline-block;
+}
 }
 
 
@@ -603,6 +638,7 @@ a{
   bottom: 80px;
   z-index: 111;
   left: -3px;
+  display: none;
 
   a{
     padding:5px 5px 0px 5px!important;
