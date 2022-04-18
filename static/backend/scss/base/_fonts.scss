@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'lineicon';
-  src:  url('../fonts/lineicon.woff2?30mar2022');
+  src:  url('../fonts/lineicon.woff2?11apr22');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -40,6 +40,10 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.lineicon-user-activity:before {
+  content: "\e980";
 }
 
 .lineicon-teams:before {
