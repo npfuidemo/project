@@ -407,13 +407,6 @@
          <div class="row no-gutters h-100 bg-white reportBuilderContainer">
             <!-- leftColumnReport start-->
             <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport" id="desktop-slide">
-               <div class="sidebarToggle"  data-toggle="tooltip" title="Hide Reports Filter" data-trigger="hover">
-                  <a class="btn btn-primary p-2 pl-3 pr-3" href="javascript:void(0);" onclick="hideSideNav()">
-                     <span class="material-icons-outlined">
-                        menu_open
-                     </span>
-                  </a>
-               </div>
                   <div class="form-group p-3 mb-0 d-none">
                      <div class="text-dark  pb-md-0 d-block font-weight-bold">Dataset</div>
                      <select class="form-control selectpicker" data-live-search="true"
@@ -663,13 +656,20 @@
 
             <!-- rightColumnReport start-->
             <div class="col-md-9 col-sm-8 rightColumnReport">
-                <div id="showSidebar" data-toggle="tooltip" title="Show Reports Filter" data-trigger="hover" onclick="showSideNav()">
+               <div class="sidebarToggle"  data-toggle="tooltip" title="Hide Reports Filter" data-trigger="hover">
+                     <a class="" href="javascript:void(0);" onclick="hideSideNav()">
+                        <span class="material-icons-outlined">
+                           chevron_left
+                           </span>
+                  </a>
+               </div>
+                <!-- <div id="showSidebar" data-toggle="tooltip" title="Show Reports Filter" data-trigger="hover" onclick="showSideNav()">
                         <a href="javascript:void(0)" class="btn btn-primary d-lg-none" onclick="showSideNav()">
                            <span class="material-icons-outlined">
                               menu_open
                            </span>
                         </a>
-                  </div>
+                  </div> -->
                <div class="tagcontainer-backdrop" style="display: none;"></div>
 
 
@@ -1496,8 +1496,9 @@
 
    <script>
 function hideSideNav() {
-   $("#desktop-slide").addClass("opened");
-   $("#showSidebar a").removeClass("d-lg-none");
+   $("#desktop-slide").toggleClass("opened");
+   $("#showSidebar a").toggleClass("d-lg-none");
+   $(".sidebarToggle").toggleClass("clicked");
 }
 
 function showSideNav() {
@@ -1505,7 +1506,7 @@ function showSideNav() {
    $("#showSidebar a").addClass("d-lg-none");
 }
 
-      $(".toggletag a.basicTemplateTag").click(function () {
+   $(".toggletag a.basicTemplateTag").click(function () {
          $(this).css({ 'z-index': '12', 'position': 'relative' });
          $(".tagcontainer").toggleClass('open');
          if ($(".tagcontainer").hasClass('open')) {
@@ -1514,7 +1515,7 @@ function showSideNav() {
          else {
             $(".tagcontainer-backdrop").hide();
          }
-      });
+   });
 
       $(".tagcontainer-backdrop").click(function () {
          $("a.basicTemplateTag").css('z-index', '0');
