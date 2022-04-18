@@ -106,6 +106,19 @@ margin-left:2px;
           z-index: 99999999999;
           padding:80px;
           margin-right: 0;
+          &:before{
+            background: #f1f3f4 url(.././images/grid.png) 0 0 repeat;
+            background-size: 1%;
+            content: '';
+            height: calc(100vh - 130px);
+            width:100%;
+            z-index: 1;
+            top: 0;
+            position: absolute;
+            opacity: .05;
+            left:0;
+            right:0;
+          }
       }
       .tableView{
         border: 1px solid #dfdfdf;
@@ -135,7 +148,7 @@ margin-left:2px;
             }
         }
       }
-        @media (min-width:767px){
+      @media (min-width:767px){
             height:calc(100vh - 220px);
             box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.050) inset;
             background: #fbfbfb ;
@@ -144,17 +157,6 @@ margin-left:2px;
             right:0;
             overflow: scroll;
             z-index: 11;
-          &:before{
-            background: #f1f3f4 url(.././images/grid.png) 0 0 repeat;
-            background-size: 1%;
-            content: '';
-            height: 100%;
-            width:100%;
-            z-index: 1;
-            top: 0;
-            position: absolute;
-            opacity: .05;
-          }
        }
     }
   }
