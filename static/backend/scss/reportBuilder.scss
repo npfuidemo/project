@@ -59,12 +59,12 @@ margin-left:2px;
           border:1px solid #f2f2f2;
           border-bottom-color: transparent;
           padding: 5px 10px;
-          border-radius: 4px 4px 0 0 ;
+          border-radius: 5px 5px 0 0 ;
           background-color: #fff;
           &+.collapse.show{
             border:1px solid #f2f2f2;
             border-top-color: transparent;
-            border-radius: 0 0 4px 4px;
+            border-radius: 0 0 5px 5px;
             background-color: #fff;
             .heading-highlight{
               visibility: visible;
@@ -75,12 +75,12 @@ margin-left:2px;
           &>[aria-expanded="false"] {
             border:1px solid transparent;
             padding: 5px 10px;
-            border-radius: 4px 4px 0 0 ;
+            border-radius: 5px ;
             background-color: #f8f9fa;
             &+.collapse{
               border:1px solid  transparent;
               border-top: 0;
-              border-radius: 0 0 4px 4px;
+              border-radius: 0 0 5px 5px;
               background-color: #f8f9fa;
 
             }
