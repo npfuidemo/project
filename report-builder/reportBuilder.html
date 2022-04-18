@@ -750,8 +750,18 @@
                               sync
                            </span>
                         </a>
-
-                        <a href="" class="d-flex  ml-2 btn btn-sm btn-primary">Save</a>
+                        <div class="savedrop d-flex dropdown " data-container="body">
+                           <button type="button" class="  ml-2 btn btn-sm btn-primary">Save</button>
+                           <button type="button" class="pt-0 pb-0 pr-0 pl-0 btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                              <span class="sr-only">Toggle Dropdown</span>
+                           </button>
+                           <ul class="dropdown-menu">
+                                 <li><a class="dropdown-item" href="#">Save</a></li>
+                                 <li><a class="dropdown-item" href="#">Add to Dashboard</a></li>
+                                 <li><a class="dropdown-item" href="#">Save as New</a></li>
+                                 <li><a class="dropdown-item" href="#">Export</a></li>
+                              </ul>
+                        </div>
                      </div>
                   </div>
                   <hr>
@@ -893,7 +903,8 @@
                      </div>
                   </div>
 
-                  <div class="reportData align-items-center justify-content-center ">
+                  <div class="reportData ">
+                     <div class="reportinner">
                         <table class="tableView table table-sm" cellespacing="0" cellpadding="0">
                            <thead>
                               <tr>
@@ -901,20 +912,26 @@
                                     Counsellor Name</th>
                                  <th rowspan="2" class="bdr-r text-center">Lead Assigned </th>
                                  <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                 <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                 <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                 <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                 <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                 <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                 <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                 <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
                                  <th colspan="2" data-colspan="2"
-                                    class="bdr-r text-center headerCollapseSubStage_LeadsEngaged">Leads Engaged </th>
-
+                                    class="bdr-r text-center headerCollapseSubStage_LeadsEngaged bg-light">Leads Engaged </th>
                                  <th colspan="2" data-colspan="2"
                                     class="bdr-r text-center headerCollapseSubStage_LeadsEngaged">new Leads Engaged</th>
                               </tr>
                               <tr>
-                                 <th class="bdr-r nowrap text-center">
+                                 <th class="bdr-r nowrap text-center bg-light font-weight-normal">
                                     Overall </th>
-                                 <th class="bdr-r nowrap text-center collapseSubStage_LeadsEngaged">Assigned </th>
+                                 <th class="bdr-r nowrap text-center collapseSubStage_LeadsEngaged bg-light  font-weight-normal">Assigned </th>
 
-                                 <th class="bdr-r nowrap text-center">
+                                 <th class="bdr-r nowrap text-center  font-weight-normal">
                                     Overall new</th>
-                                 <th class="bdr-r nowrap text-center collapseSubStage_LeadsEngaged">Assigned new</th>
+                                 <th class="bdr-r nowrap text-center collapseSubStage_LeadsEngaged  font-weight-normal">Assigned new</th>
                               </tr>
                            </thead>
                            <tbody id="accordionyui" role="tablist" aria-multiselectable="true">
@@ -925,43 +942,14 @@
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center collapseSubStage_LeadsEngaged">0</td>
-                              </tr>
-                              <tr>
-                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
                                  <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center collapseSubStage_LeadsEngaged">0</td>
-                              </tr>
-                              <tr>
-                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center collapseSubStage_LeadsEngaged">0</td>
-                              </tr>
-                              <tr>
-                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center collapseSubStage_LeadsEngaged">0</td>
-                              </tr>
-                              <tr>
-                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center collapseSubStage_LeadsEngaged">0</td>
                               </tr>
 
                               <tr>
@@ -971,7 +959,48 @@
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center collapseSubStage_LeadsEngaged">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                              </tr>
+
+                              <tr>
+                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                              </tr>
+
+                              <tr>
+                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
                               </tr>
                               <tr>
                                  <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
@@ -980,7 +1009,14 @@
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center collapseSubStage_LeadsEngaged">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
                               </tr>
                               <tr>
                                  <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
@@ -989,10 +1025,85 @@
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
                                  <td class="bdr-r text-center">0</td>
-                                 <td class="bdr-r text-center collapseSubStage_LeadsEngaged">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
                               </tr>
+                              <tr>
+                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                              </tr>
+                              <tr>
+                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                              </tr>
+                              <tr>
+                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                              </tr>
+                              <tr>
+                                 <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center bg-light">0</td>
+                                 <td class="bdr-r text-center ">0</td>
+                                 <td class="bdr-r text-center">0</td>
+                              </tr>
+
+
+
                            </tbody>
                         </table>
+                     </div>
                   </div>
 
 

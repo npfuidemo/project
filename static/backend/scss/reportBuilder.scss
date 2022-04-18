@@ -32,9 +32,16 @@ body.reportbuilder{
   min-width: 95px;
 }
 
+.dropdown-toggle-split{
+border-radius: 0 4px 4x 0;
+padding: 1.75px!important;
+margin-left:2px;
+}
+
 .reportBuilderContainer{
   overflow: hidden;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid  #dfdfdf;
+  border-radius: 4px;
 
   .leftColumnReport {
     z-index: 13;
@@ -94,23 +101,30 @@ body.reportbuilder{
 
   .rightColumnReport {
     .reportData{
-      display: flex;
-
+      .reportinner{
+          position:absolute;
+          z-index: 99999999999;
+          padding:80px;
+          margin-right: 0;
+      }
       .tableView{
-        border: 1px solid #ccc;
+        border: 1px solid #dfdfdf;
         width: auto;
         background-color: #fff;
         position: relative;
         z-index: 1;
+        margin: 0;
+        thead{
+          border-bottom: 1px solid #f3f3f3;
+        }
         tr{
             th,td{
               padding: 3px 5px;
+              border: 0;
+              white-space:nowrap;
             }
             th{
-              border-top: 1px solid #ccc;
-              border-left: 1px solid #ccc;
-              background-color: #e0e4e6;
-              border-bottom: 0;
+              vertical-align: middle;
             }
             &:first-child th{
               border-top:0;
@@ -122,11 +136,13 @@ body.reportbuilder{
       }
         @media (min-width:767px){
             height:calc(100vh - 220px);
-            overflow: auto;
-            padding: 50px;
             box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.050) inset;
             background: #fbfbfb ;
-            position: relative;
+            position:absolute;
+            left:0;
+            right:0;
+            overflow: scroll;
+            z-index: 11;
           &:before{
             background: #f1f3f4 url(.././images/grid.png) 0 0 repeat;
             background-size: 1%;
@@ -136,7 +152,7 @@ body.reportbuilder{
             z-index: 1;
             top: 0;
             position: absolute;
-            opacity: .1;
+            opacity: .05;
           }
        }
     }
