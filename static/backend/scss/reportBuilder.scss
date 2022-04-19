@@ -117,6 +117,8 @@ margin-left:2px;
         position: relative;
       .reportinner{
           margin-right: 0;
+          padding: 25px;
+          display: inline-block;
           @media(min-width:768px){
             position:absolute;
             padding:80px;
@@ -134,6 +136,10 @@ margin-left:2px;
             opacity: .05;
             left:0;
             right:0;
+            display: none;
+            @media (min-width:767px){
+              display: block;
+            }
           }
       }
       .tableView{
