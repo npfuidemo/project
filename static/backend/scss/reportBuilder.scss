@@ -107,18 +107,22 @@ margin-left:2px;
 
   .rightColumnReport {
     overflow: hidden;
+    flex: 0 0 100%;
+    max-width:100%;
     .reportData{
       .reportinner{
-          position:absolute;
-          z-index: 99999999999;
-          padding:80px;
+          z-index: 1111;
           margin-right: 0;
+          @media(min-width:768px){
+            position:absolute;
+            padding:80px;
+          }
           &:before{
             background: #f1f3f4 url(.././images/grid.png) 0 0 repeat;
             background-size: 1%;
             background-attachment: fixed;
             content: '';
-            height: calc(100vh - 130px);
+            height: calc(100vh - 205px);
             width:100%;
             z-index: 1;
             top: 0;
@@ -206,6 +210,8 @@ margin-left:2px;
       z-index: 11111;
       max-width: 100%;
       width: calc(100% - 25px);
+      position: fixed;
+      top:45px;
       overflow: auto;
     }
   }
@@ -558,7 +564,9 @@ margin-left:2px;
 .text-truncated-custom{
 overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  @media(min-width:767px){
+    white-space: nowrap;
+  }
 }
 
 .card{
@@ -598,16 +606,20 @@ overflow: hidden;
 
 #desktop-slide{
   padding: 0;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 111;
+  top: 0px;
+  left: -50px;
   &.opened{
-      height: 100%;
-      width: 0;
-      position: absolute;
-      z-index: 9999;
-      top: 0px;
-      left: -50px;
+width: auto;
+position:relative;
+left:auto;
+top:auto;
   &+.rightColumnReport{
-      flex: 0 0 100%;
-      max-width:100%;
+      flex: 0 0 75%;
+      max-width:75%;
       #showSidebar{
         display: flex;
       }
@@ -630,8 +642,9 @@ a{
   }
 }
 @media (max-width:767px){
-  top:50%;
-  right: 10px;
+  top:100px;
+  position: fixed;
+  z-index: 11111;
 }
 &:after {
   width: 50px;

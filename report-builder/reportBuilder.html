@@ -406,7 +406,7 @@
       <div class="main-container  p-3 overflow-hidden fullHeight">
          <div class="row no-gutters h-100 bg-white reportBuilderContainer">
             <!-- leftColumnReport start-->
-            <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport" id="desktop-slide">
+            <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport opened" id="desktop-slide">
                   <div class="form-group p-3 mb-0 d-none">
                      <div class="text-dark  pb-md-0 d-block font-weight-bold">Dataset</div>
                      <select class="form-control selectpicker" data-live-search="true"
@@ -1499,7 +1499,19 @@ function hideSideNav() {
    $("#desktop-slide").toggleClass("opened");
    $("#showSidebar a").toggleClass("d-lg-none");
    $(".sidebarToggle").toggleClass("clicked");
+   if($(".sidebarToggle").hasClass('clicked')){
+      $(".sidebarToggle").attr("data-original-title","Show Reports Filter")
+   }
+   else{
+      $(".sidebarToggle").attr("data-original-title","HIde Reports Filter")
+   }
 }
+
+$(document).ready(function(){
+   if ($(window).width() < 767) {
+      $("#desktop-slide").removeClass("opened")
+   }
+});
 
 function showSideNav() {
    $("#desktop-slide").removeClass("opened");
