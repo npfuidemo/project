@@ -110,8 +110,12 @@ margin-left:2px;
     flex: 0 0 100%;
     max-width:100%;
     .reportData{
+        box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.050) inset;
+        background: #fbfbfb ;
+        overflow: scroll;
+        z-index: 11;
+        position: relative;
       .reportinner{
-          z-index: 1111;
           margin-right: 0;
           @media(min-width:768px){
             position:absolute;
@@ -160,13 +164,9 @@ margin-left:2px;
       }
       @media (min-width:767px){
             height:calc(100vh - 197px);
-            box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.050) inset;
-            background: #fbfbfb ;
             position:absolute;
             left:0;
             right:0;
-            overflow: scroll;
-            z-index: 11;
        }
     }
     &:hover{
@@ -611,15 +611,17 @@ overflow: hidden;
   position: absolute;
   z-index: 111;
   top: 0px;
-  left: -50px;
+  left: -500px;
   &.opened{
 width: auto;
 position:relative;
 left:auto;
 top:auto;
   &+.rightColumnReport{
-      flex: 0 0 75%;
-      max-width:75%;
+      @media(min-width:767px){
+        flex: 0 0 75%;
+        max-width:75%;
+      }
       #showSidebar{
         display: flex;
       }
