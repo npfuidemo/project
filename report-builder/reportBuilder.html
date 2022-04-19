@@ -1509,7 +1509,8 @@ function hideSideNav() {
 
 $(document).ready(function(){
    if ($(window).width() < 767) {
-      $("#desktop-slide").removeClass("opened")
+      $("#desktop-slide").removeClass("opened");
+      $(".sidebarToggle").addClass("clicked");
    }
 });
 
