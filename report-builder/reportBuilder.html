@@ -1556,19 +1556,26 @@ function showSideNav() {
 
       const hideMenuFn = (e) => {
          $(".addMenudiv.active").removeClass('active');
+         $('body').css("overflow","auto")
+         $('.sidebarToggle').css("z-index","1111")
       }
 
       showhideMenuDiv = () => {
          if ($(".addMenudiv").hasClass('active')) {
             $(".addMenudiv").removeClass('active');
+            $('body').css("overflow","auto")
+            $('.sidebarToggle').css("z-index","0")
          }
          else {
             $(".addMenudiv").addClass('active');
+            $('body').css("overflow","hidden")
+            $('.sidebarToggle').css("z-index","0")
          }
       };
 
       $('.addMenudiv-backdrop').click(function () {
          hideMenuFn();
+
       });
 
 

@@ -210,7 +210,7 @@ margin-left:2px;
 
   &.active {
     left: 15px;
-    z-index: 12;
+    z-index: 13;
     opacity: 1;
     @media (max-width:767px){
       z-index: 11111;
@@ -277,7 +277,7 @@ margin-left:2px;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 11;
+    z-index: 12;
     background: rgba(255, 255, 255, .9);
     display: block;
     @media (max-width:767px){
@@ -640,7 +640,7 @@ top:auto;
   position: absolute;
   top: 50%;
   left: -8px;
-  z-index: 111;
+  z-index: 12;
   display: flex;
 a{
   padding: 5px 5px 0 5px!important;
