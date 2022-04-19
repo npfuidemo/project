@@ -306,6 +306,11 @@ margin-left:2px;
       transform: rotate(0deg)!important;
     }
   }
+  .closebtn {
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
 }
 
 
@@ -639,14 +644,14 @@ top:auto;
 .sidebarToggle{
   position: absolute;
   top: 50%;
-  left: -8px;
+  left: -3px;
   z-index: 12;
   display: flex;
 a{
   padding: 5px 5px 0 5px!important;
   color: #fff;
   .material-icons-outlined{
-    font-size: 24px;
+    font-size:18px;
   }
 }
 @media (max-width:767px){
@@ -662,12 +667,12 @@ a{
   position: absolute;
   z-index: -1;
   border-radius: 50%;
-  left: -22px;
-  top: -7px;
+  left: -25px;
+  top: -9px;
 }
 &.clicked {
   &::after{
-    top:-5px;
+    top:-8px;
   }
   a{
     transform: rotate(180deg);
