@@ -406,14 +406,7 @@
       <div class="main-container  p-3 overflow-hidden fullHeight">
          <div class="row no-gutters h-100 bg-white reportBuilderContainer">
             <!-- leftColumnReport start-->
-            <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport" id="desktop-slide">
-               <div class="sidebarToggle"  data-toggle="tooltip" title="Hide Reports Filter" data-trigger="hover">
-                  <a class="btn btn-primary p-2 pl-3 pr-3" href="javascript:void(0);" onclick="hideSideNav()">
-                     <span class="material-icons-outlined">
-                        menu_open
-                     </span>
-                  </a>
-               </div>
+            <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport opened" id="desktop-slide">
                   <div class="form-group p-3 mb-0 d-none">
                      <div class="text-dark  pb-md-0 d-block font-weight-bold">Dataset</div>
                      <select class="form-control selectpicker" data-live-search="true"
@@ -663,13 +656,20 @@
 
             <!-- rightColumnReport start-->
             <div class="col-md-9 col-sm-8 rightColumnReport">
-                <div id="showSidebar" data-toggle="tooltip" title="Show Reports Filter" data-trigger="hover" onclick="showSideNav()">
+               <div class="sidebarToggle"  data-toggle="tooltip" title="Hide Reports Filter" data-trigger="hover">
+                     <a class="" href="javascript:void(0);" onclick="hideSideNav()">
+                        <span class="material-icons-outlined">
+                           menu_open
+                           </span>
+                  </a>
+               </div>
+                <!-- <div id="showSidebar" data-toggle="tooltip" title="Show Reports Filter" data-trigger="hover" onclick="showSideNav()">
                         <a href="javascript:void(0)" class="btn btn-primary d-lg-none" onclick="showSideNav()">
                            <span class="material-icons-outlined">
                               menu_open
                            </span>
                         </a>
-                  </div>
+                  </div> -->
                <div class="tagcontainer-backdrop" style="display: none;"></div>
 
 
@@ -755,7 +755,7 @@
                               sync
                            </span>
                         </a>
-                        <div class="savedrop d-flex dropdown " data-container="body">
+                        <div class="savedrop d-flex dropdown btn-group" data-container="body">
                            <button type="button" class="  ml-2 btn btn-sm btn-primary">Save</button>
                            <button type="button" disabled  class="pt-0 pb-0 pr-0 pl-0 btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
                               <span class="sr-only">Toggle Dropdown</span>
@@ -1116,6 +1116,11 @@
                <!-- addMenuDiv  start here -->
                <div class="addMenudiv">
                   <div class="searchbar bg-light p-3">
+                     <a href="javascript:void(0)" class="addMenudiv-backdrop  closebtn d-md-none">
+                        <span class="material-icons-outlined">
+                        close
+                        </span>
+                     </a>
                      <h5 class="my-0 h6 text-dark mb-0">Metrics</h5>
                      <div class="fs-12 text-muted lineHeight16 mb-2">This institute consists of these Registration forms
                         and Widgets.</div>
@@ -1496,16 +1501,30 @@
 
    <script>
 function hideSideNav() {
-   $("#desktop-slide").addClass("opened");
-   $("#showSidebar a").removeClass("d-lg-none");
+   $("#desktop-slide").toggleClass("opened");
+   $("#showSidebar a").toggleClass("d-lg-none");
+   $(".sidebarToggle").toggleClass("clicked");
+   if($(".sidebarToggle").hasClass('clicked')){
+      $(".sidebarToggle").attr("data-original-title","Show Reports Filter")
+   }
+   else{
+      $(".sidebarToggle").attr("data-original-title","HIde Reports Filter")
+   }
 }
+
+$(document).ready(function(){
+   if ($(window).width() < 767) {
+      $("#desktop-slide").removeClass("opened");
+      $(".sidebarToggle").addClass("clicked");
+   }
+});
 
 function showSideNav() {
    $("#desktop-slide").removeClass("opened");
    $("#showSidebar a").addClass("d-lg-none");
 }
 
-      $(".toggletag a.basicTemplateTag").click(function () {
+   $(".toggletag a.basicTemplateTag").click(function () {
          $(this).css({ 'z-index': '12', 'position': 'relative' });
          $(".tagcontainer").toggleClass('open');
          if ($(".tagcontainer").hasClass('open')) {
@@ -1514,7 +1533,7 @@ function showSideNav() {
          else {
             $(".tagcontainer-backdrop").hide();
          }
-      });
+   });
 
       $(".tagcontainer-backdrop").click(function () {
          $("a.basicTemplateTag").css('z-index', '0');
@@ -1543,19 +1562,26 @@ function showSideNav() {
 
       const hideMenuFn = (e) => {
          $(".addMenudiv.active").removeClass('active');
+         $('body').css("overflow","auto")
+         $('.sidebarToggle').css("z-index","1111")
       }
 
       showhideMenuDiv = () => {
          if ($(".addMenudiv").hasClass('active')) {
             $(".addMenudiv").removeClass('active');
+            $('body').css("overflow","auto")
+            $('.sidebarToggle').css("z-index","0")
          }
          else {
             $(".addMenudiv").addClass('active');
+            $('body').css("overflow","hidden")
+            $('.sidebarToggle').css("z-index","0")
          }
       };
 
       $('.addMenudiv-backdrop').click(function () {
          hideMenuFn();
+
       });
 
 

@@ -98,11 +98,7 @@ margin-left:2px;
           background-color: #f3f3f3!important;
         }
       }
-      &:hover{
-        .sidebarToggle{
-          display: flex;
-        }
-      }
+
       @media(max-width:767px){
         padding: 0 15px!important;
         margin-bottom: 30px;
@@ -110,18 +106,29 @@ margin-left:2px;
   }
 
   .rightColumnReport {
+    overflow: hidden;
+    flex: 0 0 100%;
+    max-width:100%;
     .reportData{
+        box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.050) inset;
+        background: #fbfbfb ;
+        overflow: scroll;
+        z-index: 11;
+        position: relative;
       .reportinner{
-          position:absolute;
-          z-index: 99999999999;
-          padding:80px;
           margin-right: 0;
+          padding: 25px;
+          display: inline-block;
+          @media(min-width:768px){
+            position:absolute;
+            padding:80px;
+          }
           &:before{
             background: #f1f3f4 url(.././images/grid.png) 0 0 repeat;
             background-size: 1%;
-            background-position: fixed;
+            background-attachment: fixed;
             content: '';
-            height: calc(100vh - 130px);
+            height: calc(100vh - 205px);
             width:100%;
             z-index: 1;
             top: 0;
@@ -129,6 +136,10 @@ margin-left:2px;
             opacity: .05;
             left:0;
             right:0;
+            display: none;
+            @media (min-width:767px){
+              display: block;
+            }
           }
       }
       .tableView{
@@ -159,14 +170,15 @@ margin-left:2px;
       }
       @media (min-width:767px){
             height:calc(100vh - 197px);
-            box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.050) inset;
-            background: #fbfbfb ;
             position:absolute;
             left:0;
             right:0;
-            overflow: scroll;
-            z-index: 11;
        }
+    }
+    &:hover{
+      .sidebarToggle{
+        display: flex;
+      }
     }
   }
 }
@@ -198,12 +210,14 @@ margin-left:2px;
 
   &.active {
     left: 15px;
-    z-index: 12;
+    z-index: 13;
     opacity: 1;
     @media (max-width:767px){
       z-index: 11111;
       max-width: 100%;
       width: calc(100% - 25px);
+      position: fixed;
+      top:45px;
       overflow: auto;
     }
   }
@@ -263,7 +277,7 @@ margin-left:2px;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 11;
+    z-index: 12;
     background: rgba(255, 255, 255, .9);
     display: block;
     @media (max-width:767px){
@@ -292,6 +306,12 @@ margin-left:2px;
       transform: rotate(0deg)!important;
     }
   }
+  .closebtn {
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    position: absolute;
+}
 }
 
 
@@ -556,7 +576,9 @@ margin-left:2px;
 .text-truncated-custom{
 overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  @media(min-width:767px){
+    white-space: nowrap;
+  }
 }
 
 .card{
@@ -595,18 +617,23 @@ overflow: hidden;
 
 
 #desktop-slide{
-  transition: .5s;
   padding: 0;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 111;
+  top: 0px;
+  left: -500px;
   &.opened{
-      height: 100%;
-      width: 0;
-      position: absolute;
-      z-index: 9999;
-      top: 0px;
-      left: -50px;
+width: auto;
+position:relative;
+left:auto;
+top:auto;
   &+.rightColumnReport{
-      flex: 0 0 100%;
-      max-width:100%;
+      @media(min-width:767px){
+        flex: 0 0 75%;
+        max-width:75%;
+      }
       #showSidebar{
         display: flex;
       }
@@ -617,18 +644,40 @@ overflow: hidden;
 
 .sidebarToggle{
   position: absolute;
-  bottom: 70px;
-  right: -10px;
-  z-index: 111;
-  display: none;
+  top: 50%;
+  left: -3px;
+  z-index: 12;
+  display: flex;
 a{
   padding: 5px 5px 0 5px!important;
+  color: #fff;
+  .material-icons-outlined{
+    font-size:18px;
+  }
 }
 @media (max-width:767px){
-  top:70px;
-  bottom: auto;
-  right: 10px;
-  display: inline-block;
+  top:100px;
+  position: fixed;
+  z-index: 11111;
+}
+&:after {
+  width: 50px;
+  height: 50px;
+  background: #4c79dc;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  left: -25px;
+  top: -9px;
+}
+&.clicked {
+  &::after{
+    top:-8px;
+  }
+  a{
+    transform: rotate(180deg);
+    }
 }
 }
 
