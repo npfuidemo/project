@@ -1,0 +1,53 @@
+.sidebar {
+    @extend .primary-bg;
+    @extend .text-white;
+    @extend .position-fixed;
+    @extend .d-flex;
+    @extend .shadow-lg;
+    min-width: $two*110;
+    max-width: $two*110;
+    transition: all .3s;
+    height: 100%;
+    left: 0;
+    // overflow-x: hidden;
+    li:first-child{
+        border-bottom: 1px solid;
+        border-color: $brand-darken;
+    }
+
+    a {
+        @extend .text-white;
+        i{
+            pointer-events: none;
+            min-width: 52px;
+            font-size: 1.25rem;
+        }
+
+        span {
+            white-space: nowrap;
+            font-size: 1rem;
+        }
+
+        &.active i,
+        &:hover i {
+            @extend .rounded-circle;
+            background: rgba(255, 255, 255, .28);
+        }
+
+    }
+}
+
+.wrapper.active{
+    .sidebar {
+        min-width: $two*35;
+        max-width: $two*35;
+        text-align: center;
+        height: 100%;
+        a i{
+            pointer-events: auto;
+        }
+        a span{
+            font-size: 0;
+        }
+    }
+}

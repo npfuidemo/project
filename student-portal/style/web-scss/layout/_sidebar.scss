@@ -1,0 +1,111 @@
+.sidebar {
+    @extend .primary-bg;
+    @extend .position-fixed;
+    @extend .d-flex;
+    @extend .shadow-lg;
+    color: var(--primary-text-color);
+    min-width: $sidebar-width;
+    max-width: $sidebar-width;
+    transition: all .3s;
+    height: 100%;
+    left: 0;
+
+    >ul {
+        // overflow: hidden;
+        // overflow-y: scroll;
+    }
+
+    li {
+        font-size: $font-size-base;
+
+        &:first-child {
+            border-bottom: 1px solid;
+            border-color: $brand-dark;
+        }
+    }
+
+    a {
+        color: var(--primary-text-color);
+
+        i {
+            @extend %flex-center;
+            pointer-events: none;
+            font-size: 1.25rem;
+            min-width: 46px;
+            min-height: 46px;
+        }
+
+        span {
+            white-space: nowrap;
+            font-size: 1rem;
+        }
+
+        &.active i,
+        &:hover i {
+            @extend .rounded-circle;
+            background: rgba(255, 255, 255, .28);
+        }
+
+    }
+}
+
+.wrapper.active {
+    .sidebar {
+        min-width: $sidebar-width-collapse;
+        max-width: $sidebar-width-collapse;
+        text-align: center;
+        height: 100%;
+
+        a i {
+            pointer-events: auto;
+        }
+
+        a span {
+            font-size: 0;
+        }
+
+        ol {
+            display: none;
+        }
+    }
+}
+
+.wrapper .sidebar {
+    ol {
+        list-style-type: none;
+        max-height: 140px;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 0 10px 0 5px;
+        margin-left: 60px;
+        display: block;
+        border-radius: 4px;
+
+        li {
+            border: none;
+            font-size: $font-size-base - .125rem;
+
+            a {
+                @extend .d-inline-block;
+                @extend .p-2;
+                @extend .d-flex;
+                @extend .align-items-center;
+                color: var(--primary-text-color);
+
+                span {
+                    font-size: 95%;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+}
+
+
+.wrapper:not(.active) {
+    .sidebar>ul {
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}

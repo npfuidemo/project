@@ -1,0 +1,117 @@
+@import '../abstracts/variable-overwrite';
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+
+@import '../components/grid-table';
+
+
+.my-queries {
+    .queries-btn {
+        span {
+            white-space: nowrap;
+            line-height: 1.4;
+        }
+    }
+
+}
+
+.my-queries .mobile-queries-block {
+    display: none;
+}
+
+@media only screen and (max-width: 1025px) {
+
+    .my-queries .queries-btn span {
+        white-space: normal;
+    }
+
+    .my-queries table tbody tr td .table-des {
+        max-width: 150px;
+    }
+
+    .queries-block>div {
+        max-width: 995px;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            background: #fff;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.125);
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: #cacccd;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #cacccd;
+        }
+    }
+}
+
+@media only screen and (max-width: 2200px) {
+    .wrapper {
+        .my-queries .label-grid  .queries-btn span span{
+            display: none;
+        }
+
+        &.active {
+            .my-queries .label-grid  .queries-btn span span{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 769px) {
+    .wrapper {
+        .my-queries {
+            .mobile-queries-block {
+                display: block;
+            }
+
+            .web-queries-block {
+                display: none;
+            }
+
+            .raise-btn-container {
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+
+        }
+
+        &.active {
+
+            .my-queries {
+                .mobile-queries-block {
+                    display: none;
+                }
+
+                .web-queries-block {
+                    display: block;
+                }
+
+                .raise-btn-container {
+                    flex: 0 0 auto;
+                    max-width: 33%;
+                }
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,280 @@
+input,
+textarea {
+  @extend .py-2;
+}
+
+select option {
+  @extend .px-0;
+}
+
+input,
+textarea,
+select {
+  @extend .px-0;
+  border-width: 0 0 1px 0 !important;
+  @extend .rounded-0;
+
+  &:focus {
+    border-color: rgb(118, 118, 118);
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.form-group {
+  @extend .mb-4;
+}
+
+.field-disabled{
+  pointer-events: none;
+  opacity: .5;
+}
+
+label {
+  @extend .mb-1;
+  font-size: 90%;
+  color: #999;
+}
+
+.dropdown {
+  a {
+    @extend .position-relative;
+
+    &[aria-expanded="true"]:before {
+      @extend .fa;
+      @extend .fa-caret-up;
+      @extend .position-absolute;
+      @extend .text-white;
+      bottom: -23px;
+      right: 7px;
+      font-size: 41px;
+      z-index: 1111;
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+    &.menu-right {
+      @extend .position-absolute;
+      left: auto;
+      right: 0;
+    }
+
+    &.notification-dropdown {
+      min-width: 280px;
+
+      li:hover {
+        background: #fafafa;
+
+      }
+
+      small {
+        line-height: 1.1;
+      }
+    }
+  }
+}
+
+.floating-input {
+  @extend .position-relative;
+  padding-top: 20px;
+
+  label {
+    @extend .position-absolute;
+    @extend .bg-white;
+    opacity: 0;
+    top: 9px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+  }
+
+  input,
+  select,
+  textarea {
+    position: relative;
+
+    &:not(:placeholder-shown)+label {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.fileBrowseCustom {
+  height: calc(1.5em + 0.75rem + 2px);
+
+}
+
+.floating-input {
+
+  &.verified:after {
+    font: $icon-font;
+    content: "\e91d";
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    color: $green;
+  }
+
+  .verify-btn {
+    display: none;
+    width: 110px;
+    height: 30px;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px 5px 0 0;
+    color: $white;
+    background: $green;
+  }
+
+  &.to-verify .verify-btn {
+    display: block;
+  }
+}
+
+.floating-input {
+  .dropdown {
+    .dropdown-toggle {
+      display: block;
+      padding: 7.5px 0;
+      border: none;
+      border-bottom: 1px solid #ced4da;
+    }
+
+    .dropdown-menu {
+      input {
+        @extend .position-relative;
+        z-index: 1;
+        background: transparent;
+      }
+
+      .icon-finder {
+        right: 16px;
+        top: 19px;
+        z-index: -1;
+        color: var(--brand-primary);
+      }
+
+      ul {
+        max-height: 150px;
+        overflow-y: scroll;
+
+        li a {
+          color: var(--brand-primary);
+
+          &:hover {
+            background-color: $brand-lightest;
+            color: var(--brand-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropdown.bootstrap-select {
+  .dropdown-toggle {
+    @extend .bg-transparent;
+    @extend .rounded-0;
+    color: $base-color !important;
+    border-width: 0 0 1px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ced4da;
+
+    &:after {
+      font: $fa;
+      content: '\f107';
+      border: none;
+      @include transition-ease(all, .5s);
+    }
+
+    &[aria-expanded="true"]:after {
+      @include rotate(-180deg);
+    }
+
+    &:active {
+      @extend .bg-transparent;
+    }
+
+    &:focus {
+      @extend .shadow-none;
+      outline: none !important;
+    }
+  }
+
+  .dropdown-menu {
+    @extend .rounded-0;
+    @extend .mt-1;
+    width: 100%;
+    max-width: 500px;
+
+    .bs-searchbox {
+      @extend .position-relative;
+      @extend .py-0;
+      @extend .px-2;
+      margin-bottom: .5rem;
+
+      input {
+        @extend .bg-transparent;
+        @extend .p-2;
+        padding-right: 22px !important;
+        border: 1px solid #dee2e6 !important;
+      }
+
+      &:after {
+        font: $icon-font;
+        content: "\e90c";
+        @extend .position-absolute;
+        right: 15px;
+        top: 10px;
+        z-index: -1;
+        color: var(--brand-primary);
+      }
+    }
+
+    ul.dropdown-menu {
+      padding: 0 .5rem;
+      @extend .py-0;
+      @extend .px-2;
+
+      a {
+        padding: .25rem;
+        color: var(--brand-primary);
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.selected {
+          background-color: $brand-lightest;
+          color: var(--brand-primary);
+        }
+      }
+    }
+  }
+
+  &.dropup {
+    .dropdown-toggle {
+
+      &:after {
+        @include rotate(-180deg);
+      }
+
+      &[aria-expanded="true"]:after {
+        @include rotate(0deg);
+      }
+
+    }
+  }
+}

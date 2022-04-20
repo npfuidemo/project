@@ -1,0 +1,19 @@
+@import '../abstracts/variable';
+@import '../abstracts/variable-overwrite';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+@import '../components/timeline';
+
+@import '../../vendor/owl.carousel/src/scss/owl.carousel.scss';
+@import '../components/owl-carousal';
+
+@import '../../vendor/bootstrap-tour/bootstrap-tour-standalone.min.css';
+
+@media only screen and (min-width: 992px){
+    .notification-card {
+        position: sticky !important;
+        top: 0;
+        height: auto;
+    }
+}

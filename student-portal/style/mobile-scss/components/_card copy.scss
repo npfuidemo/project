@@ -1,0 +1,48 @@
+.card {
+    border-radius: .6rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.10);
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+
+    .card-body {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .content-action {
+        i {
+            font-size: 1.25rem;
+            padding: 10px;
+            border-radius: 100%;
+            transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+        }
+
+        &:hover i {
+            color: var(--brand-primary);
+            background-color:$brand-light-55;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0.125rem 2rem rgba(0, 0, 0, 0.10);
+    }
+
+    &.hover-effect {
+        opacity: .5;
+    }
+}
+
+.wrapper .student-content .card.application-card strong{
+    display: block;
+}
+
+.wrapper .student-content .card .h5{
+    font-size : $font-size-base * 1.025;
+}
+
+.wrapper.active .student-content .card.application-card strong{
+    display: inline-block;
+}
+.wrapper.active .student-content .card .h5{
+    font-size : $font-size-base * 1.25;
+}

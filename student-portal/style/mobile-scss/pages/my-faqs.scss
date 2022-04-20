@@ -1,0 +1,12 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+@import '../components/ans-que';
+
+@import '../components/welcome-panel';
+@import '../components/accordion';
+
+.faq-content{
+    min-height: 60vh;
+}

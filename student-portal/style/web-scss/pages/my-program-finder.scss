@@ -1,0 +1,14 @@
+@import '../abstracts/variable-overwrite';
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/grid-table';
+
+
+@media only screen and (max-width:1023px){
+    .queries-block>div {
+        max-width: 1000px;
+        overflow-x: scroll;
+
+    }
+}

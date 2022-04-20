@@ -1,0 +1,160 @@
+.text-black {
+  color: $black;
+}
+
+.text-base {
+  color: $base-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $base-color;
+  }
+}
+
+
+.text-brand {
+  color: $anchor-color;
+}
+
+.font-medium {
+  font-weight: 600;
+}
+
+.content-none {
+
+  &:before,
+  &:after {
+    content: none !important;
+  }
+}
+
+.badge-notify {
+  @extend .position-absolute;
+  top: 4px;
+  right: -2px;
+  border-radius: 50%;
+  font-size: 11px;
+  line-height: 20px;
+  min-height: 20px;
+  text-align: center;
+  min-width: 20px;
+  display: block;
+  background: #ee4f57;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.tooltip {
+  z-index: 999;
+}
+
+.no-wrap {
+  @extend %no-wrap;
+}
+
+.text-truncate-2 {
+  @extend %text-truncate-2;
+}
+
+.col-span-2 {
+  grid-column: span 2/span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3/span 3;
+}
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.gray-scroll {
+  @extend %gray-scroll;
+}
+
+.back-btn {
+  color: #666;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #f1f1f1;
+  @extend %flex-center;
+
+  &:hover {
+    color: var(--brand-primary);
+    background-color: $brand-light-55;
+  }
+}
+
+.bg-light-info {
+
+  &:active,
+  &.active {
+    background-color: #81b5ff !important;
+    box-shadow: 0 0 0 0.15rem $info;
+  }
+}
+
+.bg-light-warning {
+
+  &:active,
+  &.active {
+    background-color: #f8d587 !important;
+    box-shadow: 0 0 0 0.15rem $warning;
+  }
+}
+
+.bg-light-success {
+
+  &:active,
+  &.active {
+    background-color: #9ee8c7 !important;
+    box-shadow: 0 0 0 0.15rem $success;
+  }
+}
+
+.bg-light-danger {
+
+  &:active,
+  &.active {
+    background-color: #f59eb6 !important;
+    box-shadow: 0 0 0 0.15rem $danger;
+  }
+}
+
+.fade {
+  opacity: 1;
+}
+
+.cont-rght-tour-element {
+  position: fixed;
+  top: 19%;
+  right: 0px;
+  width: 30px;
+  height: 110px;
+}
+
+.popover {
+  .popover-title {
+    @extend .primary-bg;
+    @extend .primary-text-color;
+  }
+
+  .popover-navigation {
+    .btn:hover {
+      color: #fff;
+    }
+  }
+
+  &.right>.arrow {
+    left: -15px !important;
+  }
+
+  &.left>.arrow {
+    right: -16px !important;
+  }
+}

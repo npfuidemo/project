@@ -1,0 +1,46 @@
+.card {
+    border-radius: .3rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.10);
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+
+    .card-body a span {
+        display: block;
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+
+    .card-grid {
+        @include grid(3, .5em, 1em);
+    }
+    .content-action {
+
+        i {
+            font-size: 1rem;
+            padding: 5px;
+            border-radius: 100%;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+        }
+
+        &:hover i {
+            color: var(--brand-primary);
+            background-color: $brand-light-55;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0.125rem 2rem rgba(0, 0, 0, 0.10);
+    }
+
+    &.hover-effect {
+        opacity: .5;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .card .card-grid {
+        @include grid(2, .7em, 1em);
+    }
+
+}

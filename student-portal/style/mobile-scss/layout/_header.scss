@@ -1,0 +1,20 @@
+header {
+    background: #fff;
+
+    .hamburger-icon {
+        width: 30px;
+        height: 30px;
+        @extend %flex-center;
+    }
+    .query-icon{
+        color: #ee4f57;
+    }
+
+    .navbar-brand{
+        img{
+            max-width: 120px;
+            object-fit: contain;
+        }
+    }
+
+}

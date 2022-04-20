@@ -1,0 +1,72 @@
+@import '../abstracts/variable-overwrite';
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/grid-table';
+
+
+.my-payments {
+    .payment-btn {
+        span {
+            line-height: 1.4;
+        }
+    }
+
+}
+@media only screen and (min-width: 1124px) and (max-width: 2200px){
+    .wrapper.active .my-payments .payment-btn span{
+        white-space: nowrap;
+    }
+    .wrapper .my-payments .payment-btn span{
+        white-space: normal;
+    }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1365px) {
+    .wrapper {
+        .my-payments .label-grid {
+
+            .col-3 {
+                flex: 0 0 33%;
+                max-width: 33%;
+            }
+        }
+
+        &.active {
+            .my-payments .label-grid {
+                .col-3 {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 2200px),
+ only screen and (min-width: 767px) and (max-width: 1024px),
+ only screen and (min-width: 1125px) and (max-width: 1367px) {
+    .wrapper {
+        .my-payments .label-grid {
+            .payment-btn i {
+                display: none;
+            }
+        }
+
+        &.active {
+            .my-payments .label-grid {
+
+                .payment-btn i {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    .queries-block>div {
+        max-width: 767px;
+        overflow-x: scroll;
+    }
+}

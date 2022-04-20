@@ -1,0 +1,41 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+@import '../components/ans-que';
+
+@import '../components/welcome-panel';
+
+
+.my-payments {
+
+    .label-grid {
+        @include grid(2, 1em, 2em);
+    }
+    .queries-block{
+        min-height: 60vh;
+    }
+
+    .queries-grid {
+        font-size: 90%;
+        @include grid(3, 1em, .3em);
+
+        span.d-block{
+            white-space: nowrap;
+        }
+    }
+}
+
+@media only screen and (max-width: 359px) {
+    .my-queries {
+        .card .card-body {
+            padding: 1rem .8rem;
+        }
+    }
+}
+
+@media only screen and (max-width:767px){
+    .my-payments .label-grid {
+        @include grid(2, 1em, .8em);
+    }
+}

@@ -1,0 +1,46 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+@import '../components/timeline';
+@import '../components/ans-que';
+
+@import '../../vendor/owl.carousel/src/scss/owl.carousel.scss';
+@import '../components/owl-carousal';
+
+@import "../../vendor/bootstrap-tour/bootstrap-tour-standalone.min.css";
+
+.card-section {
+    .student-content {
+        top: -35px;
+    }
+}
+
+.welcome-panel {
+    padding-top: 20px;
+}
+
+.application-grid{
+    @include grid(3, .5em, 1em);
+}
+
+.application-grid a span{
+    white-space: nowrap;
+}
+
+
+@media only screen and (max-width:991px){
+    .application-grid{
+        @include grid(3, .5em, 1em);
+    }
+}
+
+@media only screen and (max-width:767px){
+    .application-grid{
+        @include grid(2, .7em, .5em);
+    }
+    .card .card-body{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="./style/web-css/style.css">
+    <link rel="stylesheet" href="./style/web-css/pages/my-documents.css">
+    <link rel="shortcut icon" type="image/jpg" href="./img/fav-icon.png" />
+    <!-- <style>
+        :root {
+
+            /* Brand primary font Variable */
+            --primary-font: "Open Sans", sans-serif;
+
+            /* Brand color for primary Variable */
+            --brand-hue: 5;
+            --brand-saturation: 100%;
+            --brand-light: 50%;
+
+            --brand-primary: hsl(var(--brand-hue),
+                    var(--brand-saturation),
+                    var(--brand-light));
+
+            /* Brand color for primary font color */
+            --primary-text-color: yellow;
+
+            /* Brand color for secondary Variable */
+            --secondary-hue: 205;
+            --secondary-saturation: 100%;
+            --secondary-light: 50%;
+
+            --brand-secondary: hsl(var(--secondary-hue),
+                    var(--secondary-saturation),
+                    var(--secondary-light));
+
+            /* Brand color for secondary font color */
+            --secondary-text-color: white;
+
+            /* Brand color for buttons */
+            --cta-hue: 105;
+            --cta-saturation: 100%;
+            --cta-light: 50%;
+
+            --cta-primary: hsl(var(--cta-hue),
+                    var(--cta-saturation),
+                    var(--cta-light));
+
+            /* Brand color for button font color */
+            --cta-text-color: purple;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="container-fluid p-0">
+            <div class="wrapper active">
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <ul class="nav nav-sidebar flex-nowrap flex-column w-100">
+                        <li class="text-center w-100 d-block py-1  mb-2">
+                            <a href="javascript:void(0);" class="w-100 d-flex align-items-center pl-2 pr-3 py-1">
+                                <i class="icon-navigation p-2" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="text-center w-100 d-block">
+                            <a href="./index.html" class="w-100 d-flex align-items-center pl-2 pr-3 mb-1">
+                                <i class="icon-dashboard p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="Dashboard"></i>
+                                <span class="ml-3">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="text-center w-100 d-block">
+                            <a href="./my-program-finder.html" class="w-100 d-flex align-items-center pl-2 pr-3 mb-1">
+                                <i class="icon-finder p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="Program Finder" aria-hidden="true"></i>
+                                <span class="ml-3">Program Finder</span>
+                            </a>
+                            <ol class="program-list">
+                                <li><a href="javascript:void(0);"><span>Engineering &amp; Technology
+                                        </span><span class="ml-auto">20</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Science &amp; Humanities
+                                        </span><span class="ml-auto">10</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Management </span><span
+                                            class="ml-auto">5</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Engineering &amp; Technology
+                                        </span><span class="ml-auto">8</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Science &amp; Humanities
+                                        </span><span class="ml-auto">3</span></a></li>
+                                <li><a href="javascript:void(0);"><span
+                                            class="program-icon septenary-bg"></span><span>Management </span><span
+                                            class="ml-auto">6</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Management </span><span
+                                            class="ml-auto">5</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Engineering &amp; Technology
+                                        </span><span class="ml-auto">8</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Science &amp; Humanities
+                                        </span><span class="ml-auto">3</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Management </span><span
+                                            class="ml-auto">6</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Management </span><span
+                                            class="ml-auto">5</span></a></li>
+                            </ol>
+                        </li>
+                        <li class="text-center w-100 d-block">
+                            <a href="./my-application.html" class="w-100 d-flex align-items-center pl-2 pr-3 mb-1">
+                                <i class="icon-file p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="My Applications" aria-hidden="true"></i>
+                                <span class="ml-3">My Applications</span>
+                            </a>
+                        </li>
+                        <li class="text-center w-100 d-block">
+                            <a href="./my-queries.html" class="w-100 d-flex align-items-center pl-2 pr-3 mb-1">
+                                <i class="icon-queries p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="My Queries" aria-hidden="true"></i>
+                                <span class="ml-3">My Queries</span>
+                            </a>
+                        </li>
+                        <li class="text-center w-100 d-block">
+                            <a href="./my-communications.html" class="w-100 d-flex align-items-center pl-2 pr-3 mb-1">
+                                <i class="icon-chat-faq p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="My Communication" aria-hidden="true"></i>
+                                <span class="ml-3">My Communication</span>
+                            </a>
+                        </li>
+                        <li class="text-center w-100 d-block">
+                            <a href="./my-payments.html" class="w-100 d-flex align-items-center pl-2 pr-3 mb-1">
+                                <i class="icon-payment p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="My Payment" aria-hidden="true"></i>
+                                <span class="ml-3">My Payment</span>
+                            </a>
+                        </li>
+                        <li class="text-center w-100 d-block">
+                            <a href="./my-faqs.html" class="w-100 d-flex align-items-center pl-2 pr-3 mb-1">
+                                <i class="icon-faq p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="FAQs" aria-hidden="true"></i>
+                                <span class="ml-3">Faqs</span>
+                            </a>
+                        </li>
+                        <li class="text-center w-100 d-block">
+                            <a href="./my-activity.html" class="w-100 d-flex align-items-center pl-2 pr-3 mb-1">
+                                <i class="icon-history p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="My Activity" aria-hidden="true"></i>
+                                <span class="ml-3">My Activity</span>
+                            </a>
+                        </li>
+                        <li class="text-center w-100 d-block mt-auto">
+                            <a href="javascript:void(0);" class="w-100 d-flex align-items-center pl-2 pr-3">
+                                <i class="icon-sign-out p-2" data-toggle="tooltip" data-placement="right"
+                                    data-container="body" title="Sign Out" aria-hidden="true"></i>
+                                <span class="ml-3">Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main my-documents">
+                    <!-- header -->
+                    <header class="px-5">
+                        <nav class="navbar align-items-center border-bottom px-0">
+                            <a class="navbar-brand d-flex" href="javascript:void(0);">
+                                <!-- <span class="p-3 primary-bg rounded-lg mr-2">
+                                </span>
+                                <h1 class="h4 mb-0 font-medium">University Logo</h1> -->
+                                <img src="./img/manipal-logo.png" alt="" aria-hidden="true">
+                            </a>
+                            <ul class="navbar-nav ml-auto flex-row align-items-center">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle content-none px-1 mr-4" href="#"
+                                        id="notificationDropdown" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="icon-notifications bell-icon" aria-hidden="true"></i>
+                                        <span class="badge-notify text-white">33</span>
+                                    </a>
+                                    <div class="dropdown-menu notification-dropdown border-0 p-0 menu-right">
+                                        <ul class="list-group list-group-flush border-0">
+                                            <li class="list-group-item">
+                                                <a href="javascript:void(0);">
+                                                    <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                        natus error sit voluptatem accusantium doloremque
+                                                        laudantium.</span>
+                                                    <small class="text-muted d-block text-right">
+                                                        Mar 09, 2021
+                                                    </small>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="javascript:void(0);">
+                                                    <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                        natus error sit voluptatem accusantium doloremque
+                                                        laudantium.</span>
+                                                    <small class="text-muted d-block text-right">
+                                                        Mar 09, 2021
+                                                    </small>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="javascript:void(0);">
+                                                    <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                        natus error sit voluptatem accusantium doloremque
+                                                        laudantium.</span>
+                                                    <small class="text-muted d-block text-right">
+                                                        Mar 09, 2021
+                                                    </small>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="text-center my-3 d-inline-block w-100">
+                                            <a href="javascript:void(0);"
+                                                class="btn btn-outline-secondary btn-sm rounded-0">
+                                                <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+                                                Load More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle content-none" href="#" id="profileDropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <div class="block bg-secondary text-white p-2 text-sm rounded-circle">
+                                            RP
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu border-0 p-0 menu-right">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item py-3 border-0">
+                                                <a href="./my-profile.html" class="font-medium">
+                                                    Ritvik Pathak
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item py-3 border-0">
+                                                <a href="./index.html" class="font-weight-normal">
+                                                    <i class="icon-dashboard mr-2 primary-color" aria-hidden="true"></i>
+                                                    My Dashboard
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item py-3 border-0">
+                                                <a href="./my-profile.html" class="font-weight-normal">
+                                                    <i class="icon-user-o mr-2 primary-color" aria-hidden="true"></i>
+                                                    My Profile
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item py-3 border-0">
+                                                <a href="./change-password.html" class="font-weight-normal">
+                                                    <i class="icon-change-password mr-2 primary-color"
+                                                        aria-hidden="true"></i>
+                                                    Change Password
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item py-3 border-0">
+                                                <a href="javascript:void(0);" class="font-weight-normal">
+                                                    <i class="icon-sign-out mr-2 primary-color" aria-hidden="true"></i>
+                                                    Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </header>
+                    <div class="page-content px-5">
+                        <section class="pt-3">
+                            <div class="student-heading">
+                                <h1 class="font-medium h3">
+                                    My Documents
+                                </h1>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="queries-block d-block px-0 pt-3 my-3">
+                                <div class="gray-scroll">
+                                    <table class="table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <td>Document Title</td>
+                                                <td>Status</td>
+                                                <td>Remark</td>
+                                                <td>Action</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="font-medium">
+                                                    <a class="primary-color" href="javascript:void(0);">
+                                                        UPLOAD 10th Marksheet
+                                                    </a>
+                                                </td>
+                                                <td>Not Verified</td>
+                                                <td>
+                                                    <div class="remark-col">
+                                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="action-col">
+                                                        <a href="javascript:void(0);" class="btn btn-outline-secondary">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                            Preview
+                                                        </a>
+                                                        <a href="javascript:void(0);" class="btn btn-outline-secondary">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                            Preview
+                                                        </a>
+                                                    </div>
+                                                    <div class="d-inline-block mt-2">
+                                                        <label for="attachment" class="btn cs-btn px-4 ml-0">
+                                                            <input type="file" class="sr-only" id="attachment" />
+                                                            Choose File
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="primary-color font-medium">
+                                                    <a class="primary-color" href="javascript:void(0);">
+                                                        Upload Your Recent Photographs
+                                                    </a>
+                                                </td>
+                                                <td>Verified</td>
+                                                <td>
+                                                    <div class="remark-col">
+                                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="action-col">
+                                                        <a href="javascript:void(0);" class="btn btn-outline-secondary">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                            Preview
+                                                        </a>
+                                                        <a href="javascript:void(0);" class="btn btn-outline-secondary">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                            Preview
+                                                        </a>
+                                                    </div>
+                                                    <div class="d-inline-block mt-2">
+                                                        <label for="attachment" class="btn cs-btn px-4 ml-0">
+                                                            <input type="file" class="sr-only" id="attachment" />
+                                                            Choose File
+                                                        </label>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="primary-color font-medium">
+                                                    <a class="primary-color" href="javascript:void(0);">
+                                                        Upload Your Last Sem Marksheet
+                                                    </a>
+                                                </td>
+                                                <td>In Progress</td>
+                                                <td>
+                                                    <div class="remark-col">
+                                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="action-col">
+                                                        <a href="javascript:void(0);" class="btn btn-outline-secondary">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                            Preview
+                                                        </a>
+                                                        <a href="javascript:void(0);" class="btn btn-outline-secondary">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                            Preview
+                                                        </a>
+                                                    </div>
+                                                    <div class="d-inline-block mt-2">
+                                                        <label for="attachment" class="btn cs-btn px-4 ml-0">
+                                                            <input type="file" class="sr-only" id="attachment" />
+                                                            Choose File
+                                                        </label>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- footer -->
+                    <footer class="mt-3">
+                        <div class="d-flex justify-content-end align-items-center px-5 py-3">
+                            Powered By
+                            <i class="icon-brand-logo pl-2"></i>
+                        </div>
+                    </footer>
+                    <!-- Question & Answer  -->
+                    <div class="cont-rght-side-fixed">
+                        <a href="javascript:void(0);" class="btn cont-btn">Ask Queries</a>
+                        <div class="cont-us-block" id="contact-us-block">
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-xs-6">
+                                            <h5 class="mb-0 font-medium">Ask your Query</h5>
+                                        </div>
+                                        <div class="col-lg-7 col-xs-6 text-right">
+                                            <a href="./my-faqs.html" class="btn secondary-bg secondary-text-color">
+                                                FAQs
+                                            </a>
+                                            <a href="javascript:void(0);" class="query-btn">
+                                                <!-- <i class="fa fa-comments-o" aria-hidden="true"></i> -->
+                                                My Queries
+                                            </a>
+                                        </div>
+                                        <div class="col-12">
+                                            <form>
+                                                <div class="floating-input mb-3">
+                                                    <input type="text" class="form-control" id="student-name"
+                                                        placeholder="Name*">
+                                                    <label for="student-name">Name*</label>
+                                                    <small class="text-danger">Name is Required.</small>
+                                                </div>
+                                                <div class="relative mb-3">
+                                                    <label for="query-cat">Query Category*</label>
+                                                    <select id="query-cat" class="form-control selectpicker"
+                                                        data-live-search="true">
+                                                        <option value="">Admission</option>
+                                                        <option value="">General</option>
+                                                        <option value="">Technical</option>
+                                                    </select>
+                                                </div>
+                                                <div class="relative mb-3">
+                                                    <label for="select-form">Select Form*</label>
+                                                    <select id="select-form" class="form-control selectpicker"
+                                                        data-live-search="true">
+                                                        <option value="">Admission</option>
+                                                        <option value="">General</option>
+                                                        <option value="">Technical</option>
+                                                    </select>
+                                                </div>
+                                                <div class="floating-input mb-3">
+                                                    <textarea id="query-des" class="form-control"
+                                                        placeholder="Query's Description*"></textarea>
+                                                    <label for="query-des">Query's Description*</label>
+                                                    <small class="form-text text-muted">Total characters count:
+                                                        0/500.</small>
+                                                </div>
+                                                <div class="form-group fileBrowseCustom">
+                                                    <div class="input-group">
+                                                        <input type="text"
+                                                            class="text-small form-control bg-transparent text-muted"
+                                                            readonly>
+                                                        <input type="file" class="sr-only" id="inputGroupFile03">
+                                                        <label for="inputGroupFile03"
+                                                            class="btn ml-3 py-2 rounded-circle primary-bg text-white">
+                                                            <i class="icon-attachment h6" aria-hidden="true"></i>
+                                                        </label>
+                                                    </div>
+                                                    <small>Maximum size: 2MB. Formats allowed: PDF, DOC, JPG, PNG,
+                                                        JPEG</small>
+                                                </div>
+                                                <div class="mt-5 text-right">
+                                                    <button type="submit"
+                                                        class="btn secondary-bg secondary-text-color px-4">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont-side-fixed-bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade refund-popup" id="refundModal" tabindex="-1" aria-labelledby="refundModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="refundModalLabel">Raise Refund Request</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="relative mb-3">
+                            <label for="form-name">Select Form*</label>
+                            <select id="form-name" class="form-control selectpicker" data-live-search="true">
+                                <option value="">Form 1</option>
+                                <option value="">Form 2</option>
+                                <option value="">Form 3</option>
+                            </select>
+                        </div>
+                        <div class="relative mb-3">
+                            <label for="payment-cat">Fee Type *</label>
+                            <select id="payment-cat" class="selectpicker w-100" multiple>
+                                <option value="">Token Fee</option>
+                                <option value="">Exam Fee</option>
+                                <option value="">Preference Fee</option>
+                            </select>
+                        </div>
+                        <div class="form-group floating-input">
+                            <textarea type="text" class="form-control" id="reason" placeholder="Reason*"></textarea>
+                            <label for="reason">Reason*</label>
+                            <small class="text-danger">Reason is Required.</small>
+                        </div>
+                        <div class="my-2">
+                            <button data-dismiss="modal" class="btn primary-bg primary-text-color px-5 w-100">Send
+                                Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-page-spinner">
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+        <span class="sr-only">Loading</span>
+    </div>
+    <script src="./js/vendor/jquery/jquery.min.js"></script>
+    <script src="./js/vendor/bootstrap-js/popper.min.js"></script>
+    <script src="./js/vendor/bootstrap-js/bootstrap.min.js"></script>
+    <script src="./js/vendor/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="./js/vendor/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="./js/theme.js"></script>
+</body>
+
+</html>

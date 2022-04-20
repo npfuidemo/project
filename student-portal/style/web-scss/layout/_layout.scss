@@ -1,0 +1,22 @@
+.wrapper {
+    @extend .d-flex;
+    align-items: stretch;
+    height: 100%;
+
+
+    .main {
+        min-height: 90vh;
+        @extend .d-inline-block;
+        width: calc(100% - 290px);
+        transition: all .3s;
+        margin-left: $sidebar-width;
+    }
+
+    &.active {
+
+        .main {
+            width: calc(100% - 76px);
+            margin-left: $sidebar-width-collapse;
+        }
+    }
+}

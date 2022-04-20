@@ -1,0 +1,180 @@
+@import '../components/scroll-bar';
+@import '../components/cta';
+
+@import '../components/modal';
+@import '../components/cs-btn';
+
+* {
+  padding: 0;
+  margin: 0;
+  &:focus{
+    outline: none !important;
+  }
+}
+
+body {
+  font-size: $font-size-base;
+  color: $base-color;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+}
+
+.primary- {
+
+  &font {
+    font-family: $primary-font;
+  }
+
+  &color {
+    color: var(--brand-primary);
+  }
+  &text-color{
+    color: var(--primary-text-color);
+    &:focus,
+    &:hover,
+    &:active{
+      color: var(--primary-text-color);
+    }
+  }
+
+  &bg {
+    background: var(--brand-primary);
+    &-light{
+      background : $brand-light;
+    }
+    &:hover{
+      background: var(--brand-primary);
+    }
+  }
+}
+
+.secondary- {
+
+  &color {
+    color: var(--brand-secondary);
+  }
+  &text-color{
+    color: var(--secondary-text-color);
+    &:hover{
+      color: var(--secondary-text-color);
+    }
+  }
+
+  &bg {
+    background: var(--brand-secondary);
+    &:hover{
+      background: var(--brand-secondary);
+    }
+  }
+}
+
+.tertiary- {
+  &color {
+    color: var(--brand-tertiary);
+  }
+
+  &bg {
+    background: var(--brand-tertiary);
+  }
+}
+.quaternary- {
+  &color {
+    color: var(--brand-quaternary);
+  }
+
+  &bg {
+    background: var(--brand-quaternary);
+  }
+}
+.quinary- {
+  &color {
+    color: var(--brand-quinary);
+  }
+
+  &bg {
+    background: var(--brand-quinary);
+  }
+}
+.senary- {
+  &color {
+    color: var(--brand-senary);
+  }
+
+  &bg {
+    background: var(--brand-senary);
+  }
+}
+.septenary- {
+  &color {
+    color: var(--brand-septenary);
+  }
+
+  &bg {
+    background: var(--brand-septenary);
+  }
+}
+.octonary- {
+  &color {
+    color: var(--brand-octonary);
+  }
+
+  &bg {
+    background: var(--brand-octonary);
+  }
+}
+.nonary- {
+  &color {
+    color: var(--brand-nonary);
+  }
+
+  &bg {
+    background: var(--brand-nonary);
+  }
+}
+.denary- {
+  &color {
+    color: var(--brand-denary);
+  }
+
+  &bg {
+    background: var(--brand-denary);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .primary-font;
+}
+
+a{
+  color: $base-color;
+  // font-weight: 500;
+  text-decoration: none;
+  &:hover{
+    @extend a;
+    color: var(--brand-primary);
+  }
+}
+
+.full-page-spinner,
+.section-spinner{
+  @extend %flex-center;
+  position: fixed;
+  width:100%;
+  height: 100%;
+  top:0;
+  z-index: 99999;
+  background: rgba(255,255,255,0.8);
+  i{
+    color: var(--brand-primary);
+  }
+}
+
+.section-spinner{
+  position: absolute;
+  z-index: 1;
+}

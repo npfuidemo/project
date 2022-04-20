@@ -1,0 +1,10 @@
+.welcome-panel{
+    @extend %flex-center;
+    min-height: 200px;
+    i[class^=icon-],
+    i[class^=-icon]{
+        font-size: 28px;
+        border-radius: 100%;
+        background: rgba(255,255,255,.125);
+    }
+}

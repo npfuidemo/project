@@ -1,0 +1,130 @@
+@import '../abstracts/variable-overwrite';
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+
+@import '../components/card';
+@import '../components/custom-input';
+
+.my-queries {
+    .ticket-detail {
+        .status-label {
+            position: relative;
+            left: -21px;
+            padding: 5px;
+            padding-left: 23px;
+            border-radius: 0 20px 20px 0;
+        }
+    }
+
+    .ticket-description {
+        .ticket-conversation {
+
+            .chat-container {
+                width: 100%;
+                max-width: 800px;
+                height: calc(100vh - 190px);
+                min-height: 100%;
+                padding: 15px 30px;
+                margin: 0 auto;
+                overflow-y: scroll;
+                padding-bottom: 85px;
+
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        width: 80%;
+                        margin: 15px 0;
+                        position: relative;
+
+                        .msg {
+                            padding: 10px;
+                            border-radius: 5px;
+                            background: #f7f7f7;
+                            color : #111;
+
+                            &:before {
+                                content: '\f0da';
+                                font: $fa;
+                                position: absolute;
+                                font-size: 18px;
+                                color: #f5f5f5;
+                                top: 14px;
+                                left: 0;
+                            }
+
+                            +.msg {
+                                margin-top: 8px;
+                            }
+                        }
+
+                        .sender-info {
+                            width: 20px;
+                            height: 20px;
+                            margin-bottom: 8px;
+                            @extend %flex-center;
+
+                        }
+
+                        &.sent-msg {
+                            margin-left: auto;
+
+                            .msg:before {
+                                content: '\f0d9';
+                                right: 0;
+                                left: auto;
+                                top: 19px;
+                            }
+                        }
+                    }
+                }
+                .ticket-status{
+                    text-align: center;
+                    border-bottom: 1px solid #f1f1f1;
+
+                    span{
+                        background: $white;
+                        top: -9px;
+                        padding: 0 10px;
+                        // box-shadow: 0 0 .2rem rgba(0,0,0,0.125);
+                    }
+                }
+
+            }
+
+            .chat-area {
+                z-index: 1;
+                border-top: 1px solid #ececec !important;
+
+                .chat-file{
+                    top: -26px;
+                    i{
+                        font-size: 16px;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                    border: 1px solid #f5f5f5;
+                    border-width: 0 1px 0 0 !important;
+                }
+
+                .send-btn {
+                    width: 30px;
+                    height: 30px;
+                    @extend %flex-center;
+                }
+            }
+
+            .ticket-status-label {
+                .feedback-response a {
+                    @extend %flex-center;
+                    width: 30px;
+                    height: 30px;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.chat-modal {
+    .modal-dialog {
+        padding: 0;
+
+        .modal-content {
+            border-radius: 0;
+
+            width: 100%;
+
+            .modal-body {
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767px) {
+
+    .chat-modal .modal-dialog {
+        margin: 0;
+
+        .modal-content {
+            height: calc(100vh - 1px);
+            min-height: 99vh;
+        }
+    }
+}
+
+.modal.verify-popup {
+    .modal-dialog {
+        .form-control {
+            font-size: 1.3rem;
+        }
+    }
+}

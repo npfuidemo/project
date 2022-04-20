@@ -1,0 +1,16 @@
+@import '../abstracts/variable';
+@import '../abstracts/variable-overwrite';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+
+.my-communications {
+    .card {
+        .card-body {
+            padding: 1rem;
+        }
+        &.hover-effect{
+            opacity: 1;
+        }
+    }
+}

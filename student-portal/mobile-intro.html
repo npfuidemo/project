@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="./style/mobile-css/style.css">
+    <link rel="stylesheet" href="./style/mobile-css/pages/dashboard.css">
+    <link rel="shortcut icon" type="image/jpg" href="./img/fav-icon.png" />
+    <!-- <style>
+        :root {
+            --brand-hue: 60;
+            --brand-saturation: 100%;
+            --brand-light: 0%;
+            --brand-primary: hsl(var(--brand-hue),
+                    var(--brand-saturation),
+                    var(--brand-light));
+            --brand-primary: hsl(var(--brand-hue),
+            var(--brand-saturation),
+            var(--brand-light));
+            --primary-text-color:  orange;
+            --secondary-hue: 255;
+            --secondary-saturation: 100%;
+            --secondary-light: 50%;
+            --brand-secondary: hsl(var(--secondary-hue),
+                    var(--secondary-saturation),
+                    var(--secondary-light));
+            --secondary-text-color:  purple;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="mobile-wrapper d-block">
+        <header>
+            <div class="py-2 px-3">
+                <nav class="navbar align-items-center p-0">
+                    <a class="navbar-brand d-flex align-items-center" href="./mobile.html">
+                        <!-- <span class="p-3 primary-bg rounded-lg mr-2">
+                        </span> -->
+                        <img src="./img/manipal-logo.png" alt="" aria-hidden="true">
+                        <!-- <h1 class="h6 mb-0 font-medium">University Logo</h1> -->
+                    </a>
+                    <ul class="navbar-nav ml-auto flex-row align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link px-1 mr-3 query-icon" href="#chatModal" role="button" data-toggle="modal"
+                                aria-haspopup="true" aria-expanded="false" id="tour-element-1">
+                                <i class="icon-queries-advanced h4" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle content-none px-1 mr-3" href="#" id="navbarNotification"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-notifications bell-icon h4" aria-hidden="true"></i>
+                                <span class="badge-notify text-white">33</span>
+                            </a>
+                            <div class="dropdown-menu notification-dropdown border-0 p-0 menu-right">
+                                <ul class="list-group list-group-flush border-0">
+                                    <li class="list-group-item">
+                                        <a href="javascript:void(0);">
+                                            <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                natus error sit voluptatem accusantium doloremque
+                                                laudantium.</span>
+                                            <small class="text-muted d-block text-right">
+                                                Mar 09, 2021
+                                            </small>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="javascript:void(0);">
+                                            <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                natus error sit voluptatem accusantium doloremque
+                                                laudantium.</span>
+                                            <small class="text-muted d-block text-right">
+                                                Mar 09, 2021
+                                            </small>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="javascript:void(0);">
+                                            <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                natus error sit voluptatem accusantium doloremque
+                                                laudantium.</span>
+                                            <small class="text-muted d-block text-right">
+                                                Mar 09, 2021
+                                            </small>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="text-center my-3 d-inline-block w-100">
+                                    <a href="javascript:void(0);" class="btn btn-outline-secondary btn-sm rounded-0">
+                                        <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+                                        Load More
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle content-none hamburger-menu" href="#" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="block bg-secondary text-white text-sm rounded-circle hamburger-icon">
+                                    RP
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0 p-0 menu-right">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="./my-profile-mobile.html" class="font-medium">
+                                            Ritvik Pathak
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="./mobile.html">
+                                            <i class="icon-dashboard mr-2 primary-color" aria-hidden="true"></i>
+                                            My Dashboard
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="./my-profile-mobile.html">
+                                            <i class="icon-user-o mr-2 primary-color" aria-hidden="true"></i>
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="./change-password-mobile.html">
+                                            <i class="icon-change-password mr-2 primary-color" aria-hidden="true"></i>
+                                            Change Password
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="javascript:void(0);">
+                                            <i class="icon-sign-out mr-2 primary-color" aria-hidden="true"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section>
+            <div class="welcome-panel primary-bg pb-5 px-3 primary-text-color">
+                <div class="student-heading">
+                    <h2 class="h6 font-medium">
+                        Good evening, John!
+                    </h2>
+                    <p class="mb-3">Welcome to your Student Admission Portal of
+                        <strong>{{CollegeName}}</strong>. Choose from any of the below options to
+                        continue your journey at <strong>{{CollegeName}}</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="card-section px-3">
+                <div class="student-content position-relative">
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            <div class="row mb-4">
+                                <div class="col-sm-12">
+                                    <div class="card border-0 mb-4 last-active-form position-relative" id="lastFormCard">
+                                        <div class="card-body">
+                                            <div class="content-header">
+                                                <h3 class="h6 font-weight-bold mb-2">
+                                                    <i class="icon-file primary-color" aria-hidden="true"></i>
+                                                    Last Active Form
+                                                </h3>
+                                            </div>
+                                            <a class="content-action d-flex justify-content-between align-items-center"
+                                                href="javascript:void(0);">
+                                                <span class="h6 font-weight-normal mb-0" data-toggle="tooltip"
+                                                    data-placement="bottom" data-container="body"
+                                                    title="Bachelor of Technology, Bachelor of Technology">Continue</span>
+                                                <i class="icon-long-arrow" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="card border-0 application-card my-application" id="applicationCard">
+                                        <div class="card-body">
+                                            <div class="content-header">
+                                                <h3 class="h6 font-weight-bold mb-2">
+                                                    <i class="icon-user-o primary-color" aria-hidden="true"></i>
+                                                    My Applications
+                                                </h3>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="application-grid mt-2">
+                                                    <a href="javasccript:void(0);">
+                                                        <span class="h6 font-weight-light mb-0 mr-2 border-right">
+                                                            <strong>
+                                                                5
+                                                            </strong>
+                                                            All Forms</span>
+                                                    </a>
+                                                    <a href="javasccript:void(0);">
+                                                        <span class="h6 font-weight-light mb-0 mr-2 pr-2 border-right">
+                                                            <strong>
+                                                                3
+                                                            </strong>
+                                                            In Progress</span>
+                                                    </a>
+                                                    <a href="javasccript:void(0);">
+                                                        <span class="h6 font-weight-light mb-0">
+                                                            <strong>
+                                                                2
+                                                            </strong>
+                                                            Completed</span>
+                                                    </a>
+                                                </div>
+                                                <a href="javasccript:void(0);" class="content-action">
+                                                    <i class="icon-long-arrow" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 program-finder" id="programCard">
+                                <div class="card-body">
+                                    <div class="content-header">
+                                        <h3 class="h6 font-weight-bold mb-2">
+                                            <i class="icon-finder primary-color" aria-hidden="true"></i>
+                                            Program Finder
+                                        </h3>
+                                    </div>
+                                    <a class="content-action d-flex justify-content-between align-items-center"
+                                        href="javascript:void(0);">
+                                        <span class="h6 font-weight-light mb-0">
+                                            <strong>22</strong>
+                                            Programs Available</span>
+                                        <i class="icon-long-arrow" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card border-0 mt-3 my-queries" id="queriesCard">
+                                <div class="card-body">
+                                    <div class="content-header">
+                                        <h3 class="h6 font-weight-bold mb-2">
+                                            <i class="icon-queries primary-color" aria-hidden="true"></i>
+                                            My Queries
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="card-grid mt-2">
+                                            <a href="javascript:void(0);">
+                                                <span class="h6 font-weight-light pr-2 mb-0 mr-2 border-right ">
+                                                    <strong>12</strong>
+                                                    Open</span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span class="h6 font-weight-light mb-0 pr-2 mb-0 mr-2 border-right">
+                                                    <strong>8</strong>
+                                                    In Process</span>
+                                            </a>
+                                            <a href="javascript:void(0);">
+                                                <span class="h6 font-weight-light mb-0">
+                                                    <strong>20</strong>
+                                                    Closed</span>
+                                            </a>
+                                        </div>
+                                        <a href="javascript:void(0);" class="content-action">
+                                            <i class="icon-long-arrow" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="card notification-card border-0 mt-4 latest-notifications" id="latestNotification">
+                                <div class="card-body">
+                                    <div class="content-header">
+                                        <h3 class="h6 font-weight-bold mb-3">
+                                            <i class="icon-chat-faq primary-color" aria-hidden="true"></i>
+                                            Latest Notifications
+                                        </h3>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <ul class="notifications">
+                                            <li class="notice">
+                                                <p>Join our experts in an exclusive, interactive webinar on
+                                                    'Careers after MBA'</p>
+                                                <span>Mar 15, 2021</span>
+                                            </li>
+                                            <li class="notice">
+                                                <p>Result of phase 1 of written Ability Tests announced.</p>
+                                                <span>Mar 15, 2021</span>
+                                            </li>
+                                            <li class="notice">
+                                                <p>Latest date of submit your application forms has been
+                                                    extended till 31 March 2021</p>
+                                                <span>Mar 15, 2021</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="carousel-wrap">
+                <div class="owl-carousel">
+                    <div class="item py-3 pr-3 pl-1">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="content-header">
+                                    <h3 class="h6 font-weight-bold d-flex mb-0">
+                                        <span class="icon-chat-faq primary-color mr-3"></span>
+                                        FAQ's
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item py-3 pr-3 pl-1">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="content-header">
+                                    <h3 class="h6 font-weight-bold d-flex mb-0">
+                                        <span class="icon-download primary-color mr-3"></span>
+                                        Download Brochure
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item py-3 pr-3 pl-1">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="content-header">
+                                    <h3 class="h6 font-weight-bold d-flex mb-0">
+                                        <span class="icon-deg-360 primary-color mr-3"></span>
+                                        Virtual Campus Tour
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item py-3 pr-3 pl-1">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="content-header">
+                                    <h3 class="h6 font-weight-bold d-flex mb-0">
+                                        <span class="icon-download primary-color mr-3"></span>
+                                        Download Recipient
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item py-3 pr-3 pl-1">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="content-header">
+                                    <h3 class="h6 font-weight-bold d-flex mb-0">
+                                        <span class="icon-download primary-color mr-3"></span>
+                                        Download Acknowledgement
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item py-3 pr-3 pl-1">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="content-header">
+                                    <h3 class="h6 font-weight-bold d-flex mb-0">
+                                        <span class="icon-queries primary-color mr-3"></span>
+                                        Help
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="power-section mt-3">
+            <div class="d-flex justify-content-end align-items-center p-3">
+                <small>Powered By</small>
+                <i class="icon-brand-logo pl-2"></i>
+            </div>
+        </section>
+        <footer class="w-100">
+            <nav>
+                <ul class="mb-0">
+                    <li id="tour-element-5"><a href="./my-queries-mobile.html" data-toggle="tooltip" data-placement="top"
+                            data-container="body" title="My Queries"><i class="icon-queries p-3"></i></a></li>
+                    <li id="tour-element-3"><a href="./my-program-finder-mobile.html" data-toggle="tooltip" data-placement="top"
+                            data-container="body" title="Program Finder"><i class="icon-finder p-3"></i></a></li>
+                    <li id="tour-element-2"><a href="./mobile.html" class="active" data-toggle="tooltip" data-placement="top"
+                            data-container="body" title="Dashboard"><i class="icon-dashboard p-3"></i></a></li>
+                    <li id="tour-element-4"><a href="./my-application-mobile.html" data-toggle="tooltip" data-placement="top"
+                            data-container="body" title="My Applications"><i class="icon-file p-3"></i></a></li>
+                    <li id="sidebarTour"><a href="javascript:void(0);" class="mob-nav"><i class="icon-navigation p-3"></i></a></li>
+                </ul>
+            </nav>
+            <div class="cont-rght-side-fixed">
+                <div class="cont-us-block">
+                    <ul class="pb-2">
+                        <li class="mb-3">
+                            <a href="javascript:void(0);"
+                                class="primary-text-color py-3 pl-4 pr-2 d-flex align-items-center justify-content-between close-nav"><span>Navigation</span>
+                                <i class="p-3 bg-transparent icon-long-arrow" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./mobile.html" class="active primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-dashboard" aria-hidden="true"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-program-finder-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-finder" aria-hidden="true"></i>
+                                <span>Program Finder</span>
+                            </a>
+                            <ol class="program-list mb-3">
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Engineering &
+                                            Technology
+                                        </span><span class="ml-auto">20</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Science & Humanities
+                                        </span><span class="ml-auto">10</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">5</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Engineering &
+                                            Technology
+                                        </span><span class="ml-auto">8</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Science & Humanities
+                                        </span><span class="ml-auto">3</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">6</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">5</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Engineering &
+                                            Technology
+                                        </span><span class="ml-auto">8</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Science & Humanities
+                                        </span><span class="ml-auto">3</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">6</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">5</span></a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="./my-application-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-file" aria-hidden="true"></i>
+                                <span>My Applications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-queries-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-queries" aria-hidden="true"></i>
+                                <span>My Queries</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-communications-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-chat-faq" aria-hidden="true"></i>
+                                <span>My Communication</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-payments-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-payment" aria-hidden="true"></i>
+                                <span>My Payment</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-faqs-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-faq" aria-hidden="true"></i>
+                                <span>FAQ's</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-activity-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-history" aria-hidden="true"></i>
+                                <span>My Activity</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-sign-out" aria-hidden="true"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont-side-fixed-bg"></div>
+        </footer>
+        <!-- <a href="#chatModal" data-toggle="modal" class="chat-btn">Q&A</a> -->
+    </div>
+    <div class="modal chat-modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="chatModalLabel">Ask your Query</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row d-none">
+                        <div class="col-12">
+                            <form>
+                                <div class="form-group floating-input">
+                                    <input type="text" class="form-control" id="student-name" placeholder="Name*">
+                                    <label for="student-name">Name*</label>
+                                    <small class="text-danger">Name is Required.</small>
+                                </div>
+                                <div class="form-group floating-input">
+                                    <select id="query-cat" class="form-control">
+                                        <option value="">Admission</option>
+                                        <option value="">General</option>
+                                        <option value="">Technical</option>
+                                    </select>
+                                    <label for="query-cat">Query Category*</label>
+                                </div>
+                                <div class="form-group floating-input">
+                                    <select id="select-form" class="form-control">
+                                        <option value="">Admission</option>
+                                        <option value="">General</option>
+                                        <option value="">Technical</option>
+                                    </select>
+                                    <label for="select-form">Select Form*</label>
+                                </div>
+                                <div class="form-group floating-input">
+                                    <textarea id="query-des" class="form-control"
+                                        placeholder="Query's Description*"></textarea>
+                                    <label for="query-des">Query's Description*</label>
+                                    <small class="form-text text-muted">Total characters count: 0/500.</small>
+                                </div>
+                                <div class="form-group d-inline-block fileBrowseCustom">
+                                    <div class="input-group mb-3">
+                                        <input type="text"
+                                            class="text-small form-control py-2 bg-transparent text-muted" readonly="">
+                                        <input type="file" class="sr-only" id="inputGroupFile03">
+                                        <label for="inputGroupFile03"
+                                            class="btn ml-3 py-2 primary-bg text-white">
+                                            <i class="icon-attachment h6" aria-hidden="true"></i>
+                                        </label>
+                                        <small>Maximum size: 2MB. Formats allowed: PDF, DOC, JPG, PNG, JPEG</small>
+                                    </div>
+                                </div>
+                                <div class="mt-5">
+                                    <button type="submit"
+                                        class="btn secondary-bg secondary-text-color px-5 w-100">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="query-response pb-5">
+                        <h2 class="h6 font-medium">Dear Mr/Ms. {{Name}}</h2>
+                        <p class="mb-4">We are in receipt of your query. Your query will be answered shortly. You may
+                            check the status of your query at <a class="primary-color" href="javascript:void(0);">My
+                                Queries</a></p>
+
+                        <p class="mb-0 font-medium">Best wishes,</p>
+                        <p class="mb-0 font-medium">Acharya Institutes</p>
+                        <div class="text-center py-4">
+                            <button class="btn cs-btn px-4">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/vendor/jquery/jquery.min.js"></script>
+    <script src="./js/vendor/bootstrap-js/popper.min.js"></script>
+    <script src="./js/vendor/bootstrap-js/bootstrap.min.js"></script>
+    <script src="./js/vendor/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="./js/vendor/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="./js/vendor/bootstrap-tour/bootstrap-tour-standalone.min.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/tour-steps-mobile.js"></script>
+</body>
+
+</html>

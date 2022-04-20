@@ -1,0 +1,28 @@
+footer {
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    z-index: 9;
+    nav ul {
+        list-style-type: none;
+        @include grid(5, .5em, 1em);
+
+        a {
+            @extend %flex-center;
+
+            i {
+                border-radius: 100%;
+                pointer-events: none;
+                min-width: 52px;
+                font-size: 1.25rem  !important;
+                color: var(--brand-primary);
+            }
+            &.active i,
+            &:hover i{
+                background : $brand-light-55;
+            }
+        }
+    }
+}

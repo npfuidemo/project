@@ -1,0 +1,21 @@
+.accordion {
+    .card{
+        border-radius: 0 !important;
+    }
+    [data-toggle="collapse"] {
+        &:after {
+            font: $fa;
+            content: "\f107";
+            position: absolute;
+            right: 0;
+            top: 5px;
+            font-size: 23px;
+            color: $base-color;
+            @include transition-ease(all, 0.5s);
+        }
+
+        &[aria-expanded="true"]:after {
+            @include rotate(-180deg);
+        }
+    }
+}

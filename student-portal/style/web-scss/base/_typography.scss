@@ -1,0 +1,176 @@
+@import "../../vendor/font-awesome-scss/scss/font-awesome.scss";
+
+@font-face {
+  font-family: 'iconFont';
+  src: url('../fonts/icon-font.eot');
+  src: url('../fonts/icon-font.eot?l2li#iefix') format('embedded-opentype'),
+    url('../fonts/icon-font.ttf?l2li') format('truetype'),
+    url('../fonts/icon-font.woff?l2li') format('woff'),
+    url('../fonts/icon-font.svg?l2li#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconFont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    font-family: 'iconFont' !important;
+    // content: '';
+  }
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+
+.icon-long-arrow:before {
+  content: "\e901";
+}
+
+.icon-long-arrow-left {
+  &:before {
+    content: "\e901";
+    @extend .d-inline-block;
+    @include rotate(180deg);
+  }
+}
+
+.icon-chat-faq:before {
+  content: "\e902";
+}
+
+.icon-dashboard:before {
+  content: "\e903";
+}
+
+.icon-download:before {
+  content: "\e904";
+}
+
+.icon-history:before {
+  content: "\e905";
+}
+
+.icon-file:before {
+  content: "\e906";
+}
+
+.icon-payment:before {
+  content: "\e907";
+}
+
+.icon-user-o:before {
+  content: "\e908";
+}
+
+.icon-queries:before {
+  content: "\e909";
+}
+
+.icon-navigation:before {
+  content: "\e90a";
+}
+
+.icon-notifications:before {
+  content: "\e90b";
+}
+
+.icon-finder:before {
+  content: "\e90c";
+}
+
+.icon-sign-out:before {
+  content: "\e90d";
+}
+
+.icon-video-cam:before {
+  content: "\e90e";
+}
+
+.icon-brand-logo:before {
+  content: "\e90f";
+}
+
+.icon-change-password:before {
+  content: "\e910";
+}
+
+.icon-search:before {
+  content: "\e911";
+}
+
+.icon-download:before {
+  content: "\e912";
+}
+
+.icon-deg-360:before {
+  content: "\e913";
+}
+
+.icon-chat-queries:before {
+  content: "\e914";
+}
+
+.icon-queries-advanced:before {
+  content: "\e915";
+}
+
+.icon-support:before {
+  content: "\e916";
+}
+
+.icon-send:before {
+  content: "\e917";
+}
+
+.icon-attachment:before {
+  content: "\e918";
+}
+
+.icon-radio:before {
+  content: "\e919";
+}
+
+.icon-radio-checked:before {
+  content: "\e91a";
+}
+
+.icon-check-box:before {
+  content: "\e91b";
+}
+
+.icon-check-box-checked:before {
+  content: "\e91c";
+}
+
+.icon-verified:before {
+  content: "\e91d";
+}
+
+.icon-call:before {
+  content: "\e91e";
+}
+.icon-sms:before {
+  content: "\e91f";
+}
+.icon-mail:before {
+  content: "\e920";
+}
+
+.icon-faq:before {
+  content: "\e921";
+}

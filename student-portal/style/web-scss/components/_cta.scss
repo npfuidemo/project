@@ -1,0 +1,102 @@
+
+
+.main-content .cont-rght-side-fixed {
+    z-index: 9;
+    position: relative;
+    font-size: 90%;
+    // opacity .3s linear,right .3s ease-out
+
+    .cont-btn {
+        @include rotate(-90deg);
+        @extend .position-fixed;
+        @extend .font-weight-normal;
+        border-radius: 10px 10px 0 0;
+        background : var(--brand-secondary);
+        color: var(--secondary-text-color);
+        cursor: pointer;
+        right: -40px;
+        margin-top: -30px;
+        padding: 5px 12px;
+        text-decoration: none;
+        top: 30%;
+        transition: all 0.8s ease 0s;
+        -webkit-transition: all 0.8s ease 0s;
+        -moz-transition: all 0.8s ease 0s;
+        -ms-transition: all 0.8s ease 0s;
+        -o-transition: all 0.8s ease 0s;
+        width: auto;
+    }
+
+    .cont-us-block {
+        width: 500px !important;
+        position: fixed;
+        right: 0;
+        bottom: calc(100% - 586px);
+        transform: translateX(101%);
+        -webkit-transform: translateX(101%);
+        -moz-transform: translateX(101%);
+        -ms-transform: translateX(101%);
+        -o-transform: translateX(101%);
+        transition: transform 0.8s ease 0s;
+        -webkit-transition: transform 0.8s ease 0s;
+        -moz-transition: transform 0.8s ease 0s;
+        -ms-transition: transform 0.8s ease 0s;
+        -o-transition: transform 0.8s ease 0s;
+        z-index: 1111;
+
+        .panel {
+            @extend .bg-white;
+            @extend .p-2;
+            @extend .rounded;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
+            .panel-body {
+                padding: 10px 20px;
+                min-height: 520px;
+            }
+
+            .query-btn {
+                @extend .text-decoration-underline;
+                @extend .p-2;
+                @extend .font-weight-normal;
+                color: var(--brand-secondary);
+                &:hover{
+                @extend .text-decoration-none;
+                }
+            }
+        }
+    }
+
+    &.open {
+        .cont-btn {
+            right: 458px;
+        }
+
+        .cont-us-block {
+            transform: translateX(1%);
+            -webkit-transform: translateX(1%);
+            -moz-transform: translateX(1%);
+            -ms-transform: translateX(1%);
+            -o-transform: translateX(1%);
+        }
+    }
+}
+
+.main-content .cont-rght-side-fixed.open+.cont-side-fixed-bg {
+    display: block;
+}
+
+.cont-side-fixed-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    display: none;
+}
+
+
+
+

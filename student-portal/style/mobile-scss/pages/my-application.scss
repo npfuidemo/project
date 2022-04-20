@@ -1,0 +1,76 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+@import '../components/ans-que';
+
+@import '../components/welcome-panel';
+@import '../components/inner-tab';
+
+@import '../../vendor/jquery-bootstrap-scrolling-tabs/dist/jquery.scrolling-tabs.min.css';
+
+.my-application {
+    .card {
+        border: none;
+        border-radius: 8px;
+        border-left: 7px solid var(--brand-primary);
+
+        .card-body {
+            padding: 1rem;
+
+            a span {
+                display: inline-block;
+                font-size: .9rem;
+            }
+        }
+    }
+
+    .grid {
+        @include grid(2, 1em, .5em);
+    }
+
+    .download-grid {
+        @include grid(2, 1em, .5em);
+    }
+
+    .form-action {
+        min-height: 100%;
+    }
+}
+
+
+.scrtabs-tab-container {
+    display: flex;
+    align-items: center;
+
+    .scrtabs-tab-scroll-arrow {
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        @extend %flex-center;
+        padding: 0;
+        position:relative;
+        border: 0;
+        color: var(--brand-primary);
+        background-color: $brand-light-55;
+
+        &.hover {
+            color: var(--brand-primary);
+            background-color: $brand-light-55;
+        }
+
+        &.scrtabs-disable {
+            opacity: 0.5;
+            color: #666;
+            background-color: #f5f5f5;
+        }
+        &.scrtabs-tab-scroll-arrow-left{
+            left: -6px;
+        }
+        &.scrtabs-tab-scroll-arrow-right{
+            right: -6px;
+        }
+    }
+
+}
