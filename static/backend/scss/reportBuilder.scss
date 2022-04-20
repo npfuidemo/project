@@ -111,10 +111,30 @@ margin-left:2px;
     max-width:100%;
     .reportData{
         box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.050) inset;
-        background: #fbfbfb ;
         overflow: scroll;
         z-index: 11;
         position: relative;
+        background: #fbfbfb url(.././images/grid.png) 0 0 repeat;
+          background-size: 1%;
+          background-attachment: fixed;
+
+        &:after{
+          background: #f1f3f4 url(.././images/grid.png) 0 0 repeat;
+          background-size: 1%;
+          background-attachment: fixed;
+          content: '';
+          height: calc(100% + 0px);
+          width:100%;
+          z-index: 1;
+          top: 0;
+          position: absolute;
+          opacity: .05;
+          display: none;
+            @media (min-width:767px){
+              display: none;
+            }
+        }
+
       .reportinner{
           margin-right: 0;
           padding: 25px;
@@ -122,24 +142,7 @@ margin-left:2px;
           @media(min-width:768px){
             position:absolute;
             padding:80px;
-          }
-          &:before{
-            background: #f1f3f4 url(.././images/grid.png) 0 0 repeat;
-            background-size: 1%;
-            background-attachment: fixed;
-            content: '';
-            height: calc(100vh - 205px);
-            width:100%;
-            z-index: 1;
-            top: 0;
-            position: absolute;
-            opacity: .05;
-            left:0;
-            right:0;
-            display: none;
-            @media (min-width:767px){
-              display: block;
-            }
+            z-index: 2;
           }
       }
       .tableView{
