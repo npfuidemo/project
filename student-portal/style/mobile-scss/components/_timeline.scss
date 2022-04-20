@@ -1,0 +1,46 @@
+.timeline-content .notifications {
+    .notice {
+        position: relative;
+        font-size: 14px;
+        list-style-type: none;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        z-index: 0;
+        color: #1a1a1a;
+
+        &:before {
+            font: $fa;
+            content: "\f192";
+            position: absolute;
+            color: var(--brand-primary);
+            top: 5px;
+            left: 0;
+            z-index: 1;
+
+        }
+
+        &:after {
+            position:absolute;
+            content: '';
+            left: 5px;
+            top: 18px;
+            border-left: 2px dashed #999;
+            height: 102%;
+            z-index: -1;
+        }
+
+        span {
+            color: #999;
+        }
+
+        p {
+            line-height: 1.4;
+            margin-bottom: .25rem;
+        }
+
+        &:last-child:after {
+            content: none;
+        }
+    }
+
+}

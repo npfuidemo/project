@@ -1,0 +1,16 @@
+.cs-btn{
+    padding: 6px 5px;
+    text-align: center;
+    margin: 5px 10px;
+    border-radius: 5px;
+    font-size: 90%;
+    font-weight: normal;
+    white-space: nowrap;
+    background: var(--cta-primary);
+    color: var(--cta-text-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    &:hover{
+        background: $cta-primary-dark;
+        color: var(--cta-text-color);
+    }
+}

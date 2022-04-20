@@ -1,0 +1,54 @@
+{
+  "_args": [
+    [
+      "bootstrap-scss@4.5.3",
+      "E:\\code\\npf-student-portal"
+    ]
+  ],
+  "_from": "bootstrap-scss@4.5.3",
+  "_id": "bootstrap-scss@4.5.3",
+  "_inBundle": false,
+  "_integrity": "sha512-sWnHNg9oFHGWPOIm5j8WkuSLZVWFbfL4OssNe1rsTADzRhKTNCM8mmeRMhhezz8bu+WjJ9xCuEeTZ2lkxolq6A==",
+  "_location": "/bootstrap-scss",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "bootstrap-scss@4.5.3",
+    "name": "bootstrap-scss",
+    "escapedName": "bootstrap-scss",
+    "rawSpec": "4.5.3",
+    "saveSpec": null,
+    "fetchSpec": "4.5.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-scss/-/bootstrap-scss-4.5.3.tgz",
+  "_spec": "4.5.3",
+  "_where": "E:\\code\\npf-student-portal",
+  "author": {
+    "name": "Cristian Trifan",
+    "email": "criss.trifan@gmail.com",
+    "url": "https://crissdev.com"
+  },
+  "bugs": {
+    "url": "https://github.com/crissdev/bootstrap-scss/issues"
+  },
+  "description": "Bootstrap's SCSS files (only)",
+  "homepage": "https://github.com/crissdev/bootstrap-scss",
+  "keywords": [
+    "bootstrap",
+    "bootstrap-scss",
+    "responsive",
+    "scss"
+  ],
+  "license": "MIT",
+  "main": "bootstrap.scss",
+  "name": "bootstrap-scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crissdev/bootstrap-scss.git"
+  },
+  "version": "4.5.3"
+}

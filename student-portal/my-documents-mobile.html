@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="./style/mobile-css/style.css">
+    <link rel="stylesheet" href="./style/mobile-css/pages/my-documents.css">
+    <link rel="shortcut icon" type="image/jpg" href="./img/fav-icon.png" />
+    <!-- <style>
+        :root {
+
+            /* Brand primary font Variable */
+            --primary-font: "Open Sans", sans-serif;
+
+            /* Brand color for primary Variable */
+            --brand-hue: 5;
+            --brand-saturation: 100%;
+            --brand-light: 50%;
+
+            --brand-primary: hsl(var(--brand-hue),
+                    var(--brand-saturation),
+                    var(--brand-light));
+
+            /* Brand color for primary font color */
+            --primary-text-color: yellow;
+
+            /* Brand color for secondary Variable */
+            --secondary-hue: 205;
+            --secondary-saturation: 100%;
+            --secondary-light: 50%;
+
+            --brand-secondary: hsl(var(--secondary-hue),
+                    var(--secondary-saturation),
+                    var(--secondary-light));
+
+            /* Brand color for secondary font color */
+            --secondary-text-color: white;
+
+            /* Brand color for buttons */
+            --cta-hue: 105;
+            --cta-saturation: 100%;
+            --cta-light: 50%;
+
+            --cta-primary: hsl(var(--cta-hue),
+                    var(--cta-saturation),
+                    var(--cta-light));
+
+            /* Brand color for button font color */
+            --cta-text-color: purple;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="mobile-wrapper my-documents d-block">
+        <header>
+            <div class="py-2 px-3">
+                <nav class="navbar align-items-center p-0">
+                    <a class="navbar-brand d-flex align-items-center" href="./mobile.html">
+                        <!-- <span class="p-3 primary-bg rounded-lg mr-2">
+                        </span>
+                        <h1 class="h6 mb-0 font-medium">University Logo</h1> -->
+                        <img src="./img/manipal-logo.png" alt="" aria-hidden="true">
+                    </a>
+                    <ul class="navbar-nav ml-auto flex-row align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link px-1 mr-3 query-icon" href="#chatModal" role="button" data-toggle="modal"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-queries-advanced h4" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle content-none px-1 mr-3" href="#" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-notifications bell-icon h4" aria-hidden="true"></i>
+                                <span class="badge-notify text-white">33</span>
+                            </a>
+                            <div class="dropdown-menu notification-dropdown border-0 p-0 menu-right">
+                                <ul class="list-group list-group-flush border-0">
+                                    <li class="list-group-item">
+                                        <a href="javascript:void(0);">
+                                            <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                natus error sit voluptatem accusantium doloremque
+                                                laudantium.</span>
+                                            <small class="text-muted d-block text-right">
+                                                Mar 09, 2021
+                                            </small>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="javascript:void(0);">
+                                            <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                natus error sit voluptatem accusantium doloremque
+                                                laudantium.</span>
+                                            <small class="text-muted d-block text-right">
+                                                Mar 09, 2021
+                                            </small>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="javascript:void(0);">
+                                            <span class="small mb-1 d-block">Sed ut perspiciatis unde omnis iste
+                                                natus error sit voluptatem accusantium doloremque
+                                                laudantium.</span>
+                                            <small class="text-muted d-block text-right">
+                                                Mar 09, 2021
+                                            </small>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="text-center my-3 d-inline-block w-100">
+                                    <a href="javascript:void(0);" class="btn btn-outline-secondary btn-sm rounded-0">
+                                        <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+                                        Load More
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle content-none hamburger-menu" href="#" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="block bg-secondary text-white text-sm rounded-circle hamburger-icon">
+                                    RP
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0 p-0 menu-right">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="./my-profile-mobile.html" class="font-medium">
+                                            Ritvik Pathak
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="./mobile.html">
+                                            <i class="icon-dashboard mr-2 primary-color" aria-hidden="true"></i>
+                                            My Dashboard
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="./my-profile-mobile.html">
+                                            <i class="icon-user-o mr-2 primary-color" aria-hidden="true"></i>
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="./change-password-mobile.html">
+                                            <i class="icon-change-password mr-2 primary-color" aria-hidden="true"></i>
+                                            Change Password
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item py-3 border-0">
+                                        <a href="javascript:void(0);">
+                                            <i class="icon-sign-out mr-2 primary-color" aria-hidden="true"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="border-top">
+            <div class="d-flex pt-4 px-3">
+                <a href="javascript:void(0);" class="mr-2 back-btn" data-toggle="tooltip" data-placement="bottom" data-container="body" title="" data-original-title="Back to Query Listing">
+                    <i class="fa fa fa-angle-left " role="button" aria-hidden="true"></i>
+                </a>
+                <h1 class="h4 font-medium">My Documents</h1>
+            </div>
+        </section>
+        <section>
+            <div class="queries-block d-block px-3 pt-4">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="content-header">
+                                    <span class="d-block primary-color">Documents Title</span>
+                                    <span class="d-block primary-color font-medium">UPLOAD 10th Marksheet</span>
+                                </div>
+                                <div class="content-des pt-3 pb-2">
+                                    <div class="queries-grid">
+                                        <div class="query-category">
+                                            <small class="text-muted">Status</small>
+                                            <span class="d-block font-medium">Not Verified</span>
+                                        </div>
+                                        <div class="query-date col-span-2">
+                                            <small class="text-muted">Remarks</small>
+                                            <span class="font-medium text-truncate-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-action mb-2 mt-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-6">
+                                            <a href="javascript:void(0);" class="btn btn-outline-secondary btn-block">
+                                                <i class="fa fa-eye" aria-hidden="true"></i> Preview
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="javascript:void(0);" class="btn btn-outline-secondary btn-block">
+                                                <i class="fa fa-eye" aria-hidden="true"></i> Preview
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="attachment" class="btn cs-btn px-5 py-2 mt-3 ml-0">
+                                                <input type="file" id="attachment" class="sr-only">
+                                                Choose File
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="content-header">
+                                    <span class="d-block primary-color">Documents Title</span>
+                                    <span class="d-block primary-color font-medium">Upload Your Recent Photographs</span>
+                                </div>
+                                <div class="content-des pt-3 pb-2">
+                                    <div class="queries-grid">
+                                        <div class="query-category">
+                                            <small class="text-muted">Status</small>
+                                            <span class="d-block font-medium">Not Verified</span>
+                                        </div>
+                                        <div class="query-date col-span-2">
+                                            <small class="text-muted">Remarks</small>
+                                            <span class="font-medium text-truncate-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-action mb-2 mt-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-6">
+                                            <a href="javascript:void(0);" class="btn btn-outline-secondary btn-block">
+                                                <i class="fa fa-eye" aria-hidden="true"></i> Preview
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="javascript:void(0);" class="btn btn-outline-secondary btn-block">
+                                                <i class="fa fa-eye" aria-hidden="true"></i> Preview
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="attachment" class="btn cs-btn px-5 py-2 mt-3 ml-0">
+                                                <input type="file" id="attachment" class="sr-only">
+                                                Choose File
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="power-section mt-3">
+            <div class="d-flex justify-content-end align-items-center p-3">
+                <small>Powered By</small>
+                <i class="icon-brand-logo pl-2"></i>
+            </div>
+        </section>
+        <footer class="w-100">
+            <nav>
+                <ul class="mb-0">
+                    <li><a href="./my-queries-mobile.html" data-toggle="tooltip" data-placement="top"
+                            data-container="body" title="My Queries"><i class="icon-queries p-3"></i></a>
+                    </li>
+                    <li><a href="./my-program-finder-mobile.html" data-toggle="tooltip" data-placement="top"
+                            data-container="body" title="Program Finder"><i class="icon-finder p-3"></i></a></li>
+                    <li><a href="./mobile.html" data-toggle="tooltip" data-placement="top" data-container="body"
+                            title="Dashboard"><i class="icon-dashboard p-3"></i></a></li>
+                    <li><a href="./my-application-mobile.html" data-toggle="tooltip" data-placement="top"
+                            data-container="body" title="My Applications"><i class="icon-file p-3"></i></a></li>
+                    <li><a href="javascript:void(0);" class="mob-nav"><i class="icon-navigation p-3"></i></a></li>
+                </ul>
+            </nav>
+            <div class="cont-rght-side-fixed">
+                <div class="cont-us-block">
+                    <ul class="pb-2">
+                        <li class="mb-3">
+                            <a href="javascript:void(0);"
+                                class="primary-text-color py-3 pl-4 pr-2 d-flex align-items-center justify-content-between close-nav"><span>Navigation</span>
+                                <i class="p-3 bg-transparent icon-long-arrow" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-dashboard" aria-hidden="true"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-program-finder-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-finder" aria-hidden="true"></i>
+                                <span>Program Finder</span>
+                            </a>
+                            <ol class="program-list mb-3">
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Engineering &
+                                            Technology
+                                        </span><span class="ml-auto">20</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Science & Humanities
+                                        </span><span class="ml-auto">10</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">5</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Engineering &
+                                            Technology
+                                        </span><span class="ml-auto">8</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Science & Humanities
+                                        </span><span class="ml-auto">3</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">6</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">5</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Engineering &
+                                            Technology
+                                        </span><span class="ml-auto">8</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Science & Humanities
+                                        </span><span class="ml-auto">3</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">6</span></a></li>
+                                <li><a class="font-weight-light" href="javascript:void(0);"><span>Management
+                                        </span><span class="ml-auto">5</span></a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="./my-application.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-file" aria-hidden="true"></i>
+                                <span>My Applications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-queries-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-queries" aria-hidden="true"></i>
+                                <span>My Queries</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-communications-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-chat-faq" aria-hidden="true"></i>
+                                <span>My Communication</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-payments-mobile.html" class="active primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-payment" aria-hidden="true"></i>
+                                <span>My Payment</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-faqs-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-faq" aria-hidden="true"></i>
+                                <span>FAQ's</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./my-activity-mobile.html" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-history" aria-hidden="true"></i>
+                                <span>My Activity</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="primary-text-color py-2 px-3 d-block"><i
+                                    class="p-3 mr-2 icon-sign-out" aria-hidden="true"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont-side-fixed-bg"></div>
+        </footer>
+        <!-- <a  class="chat-btn">Q&A</a> -->
+    </div>
+    <div class="modal chat-modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="chatModalLabel">Ask your Query</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <form>
+                                <div class="form-group floating-input">
+                                    <input type="text" class="form-control" id="student-name" placeholder="Name*">
+                                    <label for="student-name">Name*</label>
+                                    <small class="text-danger">Name is Required.</small>
+                                </div>
+                                <div class="form-group floating-input">
+                                    <select id="query-cat" class="form-control">
+                                        <option value="">Admission</option>
+                                        <option value="">General</option>
+                                        <option value="">Technical</option>
+                                    </select>
+                                    <label for="query-cat">Query Category*</label>
+                                </div>
+                                <div class="form-group floating-input">
+                                    <select id="select-form" class="form-control">
+                                        <option value="">Admission</option>
+                                        <option value="">General</option>
+                                        <option value="">Technical</option>
+                                    </select>
+                                    <label for="select-form">Select Form*</label>
+                                </div>
+                                <div class="form-group floating-input">
+                                    <textarea id="query-des" class="form-control"
+                                        placeholder="Query's Description*"></textarea>
+                                    <label for="query-des">Query's Description*</label>
+                                    <small class="form-text text-muted">Total characters count: 0/500.</small>
+                                </div>
+                                <div class="form-group d-inline-block w-100 fileBrowseCustom">
+                                    <div class="input-group">
+                                        <input type="text"
+                                            class="text-small form-control py-2 bg-transparent text-muted" readonly="">
+                                        <input type="file" class="sr-only" id="inputGroupFile03">
+                                        <label for="inputGroupFile03"
+                                            class="btn ml-3 py-2 primary-bg rounded-circle text-white">
+                                            <i class="icon-attachment h6" aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                    <small>Maximum size: 2MB. Formats allowed: PDF, DOC, JPG, PNG, JPEG</small>
+                                </div>
+                                <div class="mt-5">
+                                    <button type="submit"
+                                        class="btn secondary-bg secondary-text-color px-5 w-100">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade refund-popup" id="refundModal" tabindex="-1" aria-labelledby="refundModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="refundModalLabel">Raise Refund Request</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="relative mb-3">
+                            <label for="form-name">Select Form*</label>
+                            <select id="form-name" class="form-control selectpicker" data-live-search="true">
+                                <option value="">Form 1</option>
+                                <option value="">Form 2</option>
+                                <option value="">Form 3</option>
+                            </select>
+                        </div>
+                        <div class="relative mb-3">
+                            <label for="payment-cat">Fee Type *</label>
+                            <select id="payment-cat" class="selectpicker w-100" multiple>
+                                <option value="">Token Fee</option>
+                                <option value="">Exam Fee</option>
+                                <option value="">Preference Fee</option>
+                            </select>
+                        </div>
+                        <div class="form-group floating-input">
+                            <textarea type="text" class="form-control" id="reason" placeholder="Reason*"></textarea>
+                            <label for="reason">Reason*</label>
+                            <small class="text-danger">Reason is Required.</small>
+                        </div>
+                        <div class="my-2">
+                            <button data-dismiss="modal" class="btn primary-bg primary-text-color px-5 w-100">Send
+                                Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-page-spinner">
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+        <span class="sr-only">Loading</span>
+    </div>
+    <script src="./js/vendor/jquery/jquery.min.js"></script>
+    <script src="./js/vendor/bootstrap-js/popper.min.js"></script>
+    <script src="./js/vendor/bootstrap-js/bootstrap.min.js"></script>
+    <script src="./js/vendor/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="./js/vendor/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="./js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+@import '../components/ans-que';
+
+@import '../components/welcome-panel';
+
+
+.communication-content {
+    min-height: 60vh;
+    .communication-card {
+        display: inline-block;
+        i {
+            border-radius: 100%;
+            background: $brand-lightest;
+        }
+    }
+}

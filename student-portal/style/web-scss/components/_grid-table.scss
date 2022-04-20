@@ -1,0 +1,59 @@
+table {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fafafa;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .125);
+
+    tr {
+        margin: 10px 0;
+        padding: 10px 0;
+
+        td {
+            padding-right: 0;
+            white-space: nowrap;
+            margin: 0;
+            border: none;
+            background-color: #fff;
+        }
+    }
+
+    thead {
+        tr {
+            box-shadow: 0 0 10px rgb(0, 0, 0, .125);
+            border-radius: 15px;
+            border: 10px solid #e6e6e6;
+            border-width: 0 10px 0 10px;
+
+            td {
+                font-size: 90%;
+                background: #e6e6e6;
+                font-weight: 600;
+            }
+
+        }
+
+    }
+
+    tbody tr {
+        border: 11px solid #fafafa;
+
+        td {
+            &:first-child {
+                border-radius: 20px 0 0 20px;
+                overflow: hidden;
+            }
+
+            &:last-child {
+                overflow: hidden;
+                border-radius: 0 20px 20px 0;
+            }
+
+            .table-des {
+                max-width: 290px;
+                white-space: normal;
+                @extend %text-truncate-2;
+            }
+        }
+    }
+}

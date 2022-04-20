@@ -1,0 +1,19 @@
+.chat-btn{
+    background: var(--brand-secondary);
+    color: var(--secondary-text-color);
+    padding: 20px 0;
+    position: fixed;
+    bottom: 160px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-left: auto;
+    @extend %flex-center;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    &:hover{
+        background: var(--brand-secondary);
+        color: $white;
+    }
+}

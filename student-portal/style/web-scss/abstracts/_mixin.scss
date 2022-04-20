@@ -1,0 +1,74 @@
+@mixin rotate($rotate) {
+  transform: rotate($rotate) !important;
+  -webkit-transform: rotate($rotate) !important;
+  -moz-transform: rotate($rotate);
+  -o-transform: rotate($rotate);
+  -ms-transform: rotate($rotate);
+}
+
+@mixin grid($grid-col, $row-gap, $col-gap) {
+  display: grid;
+  row-gap: $row-gap;
+  column-gap: $row-gap;
+  grid-template-columns: repeat($grid-col, minmax(0, 1fr));
+}
+
+@mixin transition-ease($transition, $time) {
+  transition: $transition $time ease;
+  -webkit-transition: $transition $time ease;
+  -moz-transition: $transition $time ease;
+  -ms-transition: $transition $time ease;
+  -o-transition: $transition $time ease;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%no-wrap {
+  white-space: nowrap;
+}
+
+%text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%gray-scroll {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background: #fff;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.125);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #cacccd;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #cacccd;
+  }
+}

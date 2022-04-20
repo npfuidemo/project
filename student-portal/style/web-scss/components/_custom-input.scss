@@ -1,0 +1,31 @@
+.cs-input{
+    position:relative;
+    input{
+        position: absolute;
+        z-index: -9999;
+    }
+    label{
+        // padding-left: 30px;
+        &:before{
+            font: $icon-font;
+            content: '';
+            color: $base-color;
+        }
+    }
+    input[type="radio"]+label:before{
+        content: "\e919";
+    }
+    input[type="radio"]:checked+label:before{
+        content: "\e91a";
+        color: var(--brand-primary);
+    }
+    input[type="checkbox"]+label:before{
+        content: "\e91b";
+    }
+    input[type="checkbox"]:checked+label:before{
+        content: "\e91c";
+        color: var(--brand-primary);
+    }
+
+
+}

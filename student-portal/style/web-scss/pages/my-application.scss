@@ -1,0 +1,47 @@
+@import '../abstracts/variable';
+@import '../abstracts/variable-overwrite';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+@import '../components/inner-tab';
+
+
+.my-application {
+    .card {
+        border: none;
+        border-radius: 8px;
+        border-left: 7px solid var(--brand-primary);
+        .card-body{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .grid {
+        @include grid(4, .1em, 1em);
+    }
+
+    .download-grid {
+        @include grid(4, .6em, 1em);
+    }
+    .form-action{
+        min-height: 100%;
+
+    }
+}
+
+
+
+@media only screen and (max-width : 1025px){
+    .my-application .grid,
+    .my-application .download-grid{
+        @include grid(3, .5em, 1em);
+    }
+}
+
+@media only screen and (max-width : 769px){
+    .my-application .grid,
+    .my-application .download-grid{
+        @include grid(2, .5em, 1em);
+    }
+}

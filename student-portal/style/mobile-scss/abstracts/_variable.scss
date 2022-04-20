@@ -1,0 +1,162 @@
+$brand-hue: 217;
+$brand-saturation: 74%;
+$brand-lightness: 42%;
+
+$brand-primary: hsl($brand-hue, $brand-saturation, $brand-lightness);
+
+
+$brand-dark: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-light) - 5%));
+
+$brand-darken: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-light) - 10%));
+
+$brand-darkest: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-light) - 15%));
+
+$cta-hue: 717;
+$cta-saturation: 74%;
+$cta-lightness: 42%;
+
+$cta-primary: hsl($cta-hue, $cta-saturation, $cta-lightness);
+
+$cta-text-color: var(--cta-text-color);
+
+$cta-primary-dark: hsl(var(--cta-hue), var(--cta-saturation), calc(var(--cta-light) - 5%));
+
+$secondary-hue: 357;
+$secondary-saturation: 82%;
+$secondary-lightness: 62%;
+
+
+$brand-secondary: hsl($secondary-hue, $secondary-saturation, $secondary-lightness);
+
+$primary-text-color : hsl($brand-hue, $brand-saturation, $brand-lightness + 95%);
+
+$secondary-text-color : hsl($brand-hue, $brand-saturation, $brand-lightness + 95%);
+
+
+$brand-tertiary :hsl(20, 100%, 65%);
+$brand-quaternary:hsl(343, 53%, 58%);
+$brand-quinary:hsl(193, 77%, 37%);
+$brand-senary:hsl(173, 52%, 20%);
+$brand-septenary:hsl(165, 80%, 43%);
+$brand-octonary:hsl(46, 89%, 74%);
+$brand-nonary:hsl(351, 78%, 64%);
+$brand-denary:hsl(327, 55%, 33%);
+$base-color: hsl(0, 0%, 20%);
+
+// $brand-darken: darken($brand-primary, 5%);
+
+$brand-light: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-light) + 1%));
+$brand-lighten: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-light) + 5%));
+$brand-lightest: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-light) + 52%));
+
+
+$brand-sec-light: hsl($brand-hue, $brand-saturation, $brand-lightness + 25%);
+$brand-primary-light: rgba(23, 50, 70, 0.5);
+
+$brand-light-55: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-light) + 45%));
+
+
+:root {
+        --brand-hue: #{$brand-hue};
+        --brand-saturation: #{$brand-saturation};
+        --brand-lightness: #{$brand-lightness};
+
+        --brand-primary: #{$brand-primary};
+
+        --primary-text-color: #{$primary-text-color};
+
+
+        --cta-hue: #{$cta-hue};
+        --cta-saturation: #{$cta-saturation};
+        --cta-lightness: #{$cta-lightness};
+
+        --cta-primary: #{$cta-primary};
+
+        --cta-text-color: #{$cta-text-color};
+
+
+
+        --brand-secondary:#{$brand-secondary};
+
+        --secondary-hue: #{$brand-hue};
+        --secondary-saturation: #{$brand-saturation};
+        --secondary-lightness: #{$brand-lightness};
+
+        --secondary-text-color: #{$secondary-text-color};
+
+        --brand-tertiary: #{$brand-tertiary};
+        --brand-quaternary: #{$brand-quaternary};
+        --brand-quinary: #{$brand-quinary};
+        --brand-senary: #{$brand-senary};
+        --brand-septenary: #{$brand-septenary};
+        --brand-octonary: #{$brand-octonary};
+        --brand-nonary: #{$brand-nonary};
+        --brand-denary: #{$brand-denary};
+}
+
+:root {
+        --brand-hue: 217;
+        --brand-saturation: 74%;
+        --brand-light: 42%;
+
+        --brand-primary: hsl(var(--brand-hue),
+                        var(--brand-saturation),
+                        var(--brand-light));
+
+        --primary-text-color:
+                hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-light) + 100%));
+
+        --primary-font: "Open Sans", sans-serif;
+        --cta-hue: 217;
+        --cta-saturation: 74%;
+        --cta-light: 42%;
+
+        --cta-primary: hsl(var(--cta-hue),
+                        var(--cta-saturation),
+                        var(--cta-light));
+
+        --cta-text-color:
+                hsl(var(--cta-hue), var(--cta-saturation), calc(var(--cta-light) + 100%));
+
+
+
+        --secondary-hue: 217;
+        --secondary-saturation: 74%;
+        --secondary-light: 42%;
+
+        --secondary-primary: hsl(var(--secondary-hue),
+                        var(--secondary-saturation),
+                        var(--secondary-light));
+
+        --primary-text-color:
+                hsl(var(--secondary-hue), var(--secondary-saturation), calc(var(--secondary-light) + 100%));
+}
+
+
+
+$fa : normal normal normal 14px/1 FontAwesome;
+
+$icon-font : normal normal normal 16px/1 iconFont;
+
+$btn-bg: hsl(205, 24%, 32%);
+$anchor-color: #0064b1;
+
+$black: #212544;
+$white: #fff;
+
+$two : 2px;
+
+$primary-font: var(--primary-font);
+
+$sidebar-width : 290px;
+$sidebar-width-collapse : 76px;
+
+
+$device-xs-all: #{"only screen and (max-width: 767px)"};
+$device-xxs: #{"only screen and (max-width: 410px)"};
+$device-xs: #{"only screen and (min-width: 410px) and (max-width: 767px)"};
+$device-sm: #{"only screen and (min-width: 767px) and (max-width: 991px)"};
+$device-md: #{"only screen and (min-width: 992px) and (max-width: 1025px)"};
+$device-lg: #{"only screen and (min-width: 1026px) and (max-width: 1370px)"};
+$device-xl: #{"only screen and (min-width: 1371px) and (max-width: 1699px)"};
+$device-xxl: #{"only screen and (min-width: 1700px) and (max-width: 2400px)"};

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Popup</title>
+    <link rel="stylesheet" href="./style/web-css/style.css">
+    <link rel="stylesheet" href="./style/web-css/pages/query-detail.css">
+</head>
+
+<body>
+    <div class="jumbotron d-flex flex-column">
+        <h2>Modals</h2>
+        <div class="col-12 p-0">
+            <button type="button" class="btn cs-btn px-3" data-toggle="modal" data-target="#confirmation-modal">Primary Default</button>
+            <button type="button" class="btn btn-light-success"  data-toggle="modal" data-target="#success-modal">Success</button>
+            <button type="button" class="btn btn-light-danger"  data-toggle="modal" data-target="#danger-modal">Danger</button>
+            <button type="button" class="btn btn-light-warning"  data-toggle="modal" data-target="#warning-modal">Warning</button>
+            <button type="button" class="btn btn-light-info"  data-toggle="modal" data-target="#info-modal">Info</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade confirmation-popup default-primary" id="confirmation-modal" data-backdrop="static"
+        data-keyboard="false" tabindex="-1" aria-labelledby="confirmationLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="confirmationLabel">Confirmation Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center py-4 h5 font-weight-normal">
+                    Are you sure you want to save these changes?
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary col-4" data-dismiss="modal">Discard</button>
+                    <button type="button" class="btn btn-primary col-4 py-2 cs-btn">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade feedback-popup" id="feedback-modal" data-backdrop="static" data-keyboard="false"
+        tabindex="-1" aria-labelledby="feedbackLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="feedbackLabel">Feedback</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <h2 class="h5 text-center">Are you satisfied with the response?</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <div class="cs-input">
+                                        <input type="radio" name="feedback-response" id="unsatisfied">
+                                        <label for="unsatisfied"
+                                            class="text-danger d-flex align-items-center justify-content-center"
+                                            role="button">
+                                            <i class="fa fa fa-thumbs-o-down fa-3x ml-3" aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="cs-input">
+                                        <input type="radio" name="feedback-response" id="satisfied">
+                                        <label for="satisfied"
+                                            class="text-success d-flex align-items-center justify-content-center"
+                                            role="button">
+                                            <i class="fa fa fa-thumbs-o-up fa-3x ml-3" aria-hidden="true"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary col-4 cs-btn py-2">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade confirmation-popup default-success" id="success-modal" data-backdrop="static"
+        data-keyboard="false" tabindex="-1" aria-labelledby="confirmationLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="confirmationLabel">Confirmation Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade confirmation-popup default-danger" id="danger-modal" data-backdrop="static"
+        data-keyboard="false" tabindex="-1" aria-labelledby="confirmationLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="confirmationLabel">Confirmation Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade confirmation-popup default-warning" id="warning-modal" data-backdrop="static"
+        data-keyboard="false" tabindex="-1" aria-labelledby="confirmationLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="confirmationLabel">Confirmation Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade confirmation-popup default-info" id="info-modal" data-backdrop="static"
+        data-keyboard="false" tabindex="-1" aria-labelledby="confirmationLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-medium" id="confirmationLabel">Confirmation Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/vendor/jquery/jquery.min.js"></script>
+    <script src="./js/vendor/bootstrap-js/popper.min.js"></script>
+    <script src="./js/vendor/bootstrap-js/bootstrap.min.js"></script>
+    <script src="./js/vendor/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="./js/vendor/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="./js/theme.js"></script>
+</body>
+
+</html>

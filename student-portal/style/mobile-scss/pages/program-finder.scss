@@ -1,0 +1,23 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/card';
+@import '../components/ans-que';
+
+@import '../components/welcome-panel';
+
+.program-finder {
+
+    .label-grid {
+        @include grid(2, 1em, .8em);
+    }
+
+    .queries-grid {
+        font-size: 90%;
+        @include grid(3, 1em, .3em);
+
+        span.d-block{
+            white-space: nowrap;
+        }
+    }
+}

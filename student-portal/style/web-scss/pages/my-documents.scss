@@ -1,0 +1,17 @@
+@import '../abstracts/variable-overwrite';
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+@import '../components/grid-table';
+
+
+.my-documents {
+    .remark-col{
+        max-width: 180px;
+        width: 180px;
+        min-height: 70px;
+        white-space: normal;
+        @extend  %text-truncate-3;
+    }
+
+}
