@@ -1,0 +1,28 @@
+.profile-dropdown-menu.dropdown-menu {
+  max-width: 330px;
+
+  a {
+    color: $primary;
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+
+  .profile-name {
+    position: relative;
+
+    &:after {
+      content: '\e3c9';
+      color: #a5a5a5;
+      font-family: 'Material Icons';
+      visibility: hidden;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    &:hover:after {
+      visibility: visible;
+    }
+  }
+}

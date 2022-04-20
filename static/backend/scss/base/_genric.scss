@@ -1472,9 +1472,10 @@ input[type="checkbox"] {
 }
 
 .form-group {
+
     input.form-control,
     textarea.form-control {
-        &::placeholder{
+        &::placeholder {
             font-size: .75rem !important;
             color: #9c9c9c !important;
             font-weight: 500 !important;
@@ -1482,3 +1483,11 @@ input[type="checkbox"] {
     }
 }
 
+
+
+.hover-bg-none {
+    &:hover {
+        background: none !important;
+        box-shadow: none !important;
+    }
+}
