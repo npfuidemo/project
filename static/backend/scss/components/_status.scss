@@ -1,48 +1,63 @@
-.table .badge,.custom-badge{
-    border-radius: 10px;
+.table .badge,
+.custom-badge {
+    border-radius: 20px;
     text-transform: capitalize;
     color: #111;
-    padding: 4px 10px 4px 15px;
+    padding: 4px 12px;
     font-size: 85%;
     position: relative;
-    &:before{
-        content: '\002B24';
+    border: 1px solid;
+
+    &:before {
+        // content: '\002B24';
         position: absolute;
         left: 0;
         font-size: 10px;
     }
-    &.data-Open:before{
-        color: #ee554b;
+
+    &.data-Open {
+        background: rgba($danger, .2);
+        border-color: rgba($danger, .5);
+        color: $danger;
     }
-    &.data-In.Progress:before{
-        color: #e49f20;
+
+    &.data-In.Progress {
+        background: rgba($warning, .2);
+        border-color: rgba($warning, .5);
+        color: $warning;
     }
-    &.data-Closed:before{
-        color: #65c640;
+
+    &.data-Closed {
+        background: rgba($success, .2);
+        border-color: rgba($success, .5);
+        color: $success;
     }
-    &.data-schedualed{
-        margin-left:10px;
-        &:before{
-        color:#e49f20;
-        font-size:18px;
-        content:'\e191';
-        font-family:'Material Icons';
-        position: absolute;
-        top: 0;
-        left: -10px;
+
+    &.data-schedualed {
+        margin-left: 10px;
+
+        &:before {
+            color: $warning;
+            font-size: 18px;
+            content: '\e191';
+            font-family: 'Material Icons';
+            position: absolute;
+            top: 0;
+            left: -10px;
         }
     }
 
-    &.data-excuted{
-        margin-left:10px;
-        &:before{
-        color:#65c640;
-        font-size:18px;
-        content:'\e858';
-        font-family:'Material Icons';
-        position: absolute;
-        top: 0;
-        left: -8px;
+    &.data-excuted {
+        margin-left: 10px;
+
+        &:before {
+            color: $success;
+            font-size: 18px;
+            content: '\e858';
+            font-family: 'Material Icons';
+            position: absolute;
+            top: 0;
+            left: -8px;
         }
     }
 }

@@ -10,6 +10,10 @@
       left: -2px;
       top: 16px;
     }
+
+    .all-timeline-loaded:before {
+      height: calc(100% - 95px);
+    }
   }
 
   &-item {
