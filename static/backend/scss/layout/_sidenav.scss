@@ -53,6 +53,32 @@
                     display: inline-block;
                     line-height: 100%;
                     visibility: visible;
+
+                    &.highlighted {
+                        position: relative;
+
+                        &:after {
+                            content: 'New';
+                            right: -30px;
+                            top: -12px;
+                            font-size: 9px;
+                            padding: 1px 3px;
+                            position: absolute;
+                            border-radius: 4px;
+                            display: inline-block;
+                            color: $primary;
+                            // background: #4c79dc;
+                            font-weight: 100;
+                            animation: blinking 4s infinite;
+                        }
+                        &.highlighted-bg:after{
+                            padding: 1px 3px;
+                            color: #fff;
+                            animation: grow 2s infinite;
+                            background-color: rgba($primary, .5);
+                            outline : 1px solid $primary;
+                        }
+                    }
                 }
 
                 &:hover {
@@ -84,6 +110,7 @@
 
     .mainList {
         padding-bottom: 51px;
+
         >li {
             >a {
                 border-bottom: 1px solid darken($sidebar-color, 2%);
@@ -406,4 +433,127 @@
 
 .sidebar a[aria-expanded="true"]:before {
     content: 'expand_less';
+}
+
+@keyframes blinking {
+    0% {
+        color: $danger;
+        transform: scale(1);
+    }
+
+    10% {
+        color: $warning;
+        transform: scale(1.5);
+
+    }
+
+    20% {
+        color: $success;
+        transform: scale(1);
+
+    }
+
+    30% {
+        color: $warning;
+        transform: scale(1.5);
+
+    }
+
+    40% {
+        color: $danger;
+        transform: scale(1);
+
+    }
+
+    50% {
+        color: $warning;
+        transform: scale(1.5);
+
+    }
+
+    60% {
+        color: $success;
+        transform: scale(1);
+
+    }
+
+    70% {
+        color: $warning;
+        transform: scale(1.5);
+
+    }
+
+    80% {
+        color: $danger;
+        transform: scale(1);
+
+    }
+
+    90% {
+        color: $warning;
+        transform: scale(1.5);
+
+    }
+
+    100% {
+        color: $success;
+        transform: scale(1);
+
+    }
+}
+
+@keyframes grow {
+    0% {
+        outline : 1px solid rgba($primary, 1)
+    }
+
+    10% {
+        outline : 2px solid rgba($primary,  .8)
+
+    }
+
+    20% {
+        outline : 3px solid rgba($primary,  .6)
+
+    }
+
+    30% {
+        outline : 4px solid rgba($primary,  .4)
+
+    }
+
+    40% {
+        outline : 5px solid rgba($primary,  .2)
+
+    }
+
+    50% {
+        outline : 5px solid rgba($primary,  .1)
+
+    }
+
+    60% {
+        outline : 4px solid rgba($primary,  .2)
+
+    }
+
+    70% {
+        outline : 3px solid rgba($primary,  .4)
+
+    }
+
+    80% {
+        outline : 2px solid rgba($primary,  .6)
+
+    }
+
+    90% {
+        outline : 1px solid rgba($primary,  .8)
+
+    }
+
+    100% {
+        outline : 0px solid rgba($primary,  1)
+
+    }
 }
