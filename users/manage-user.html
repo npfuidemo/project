@@ -72,7 +72,8 @@
                         </li>
                         <li class="d-sm-block ml-2">
                             <div class="">
-                                <button type="button" class="btn btn-primary w-10 h-10 p-2 content-none rounded-circle dropdown-toggle"
+                                <button type="button"
+                                    class="btn btn-primary w-10 h-10 p-2 content-none rounded-circle dropdown-toggle"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     DM
                                 </button>
@@ -80,11 +81,15 @@
                                     <div class="bg-light p-3">
                                         <div class="row">
                                             <div class="col-2">
-                                                <div class="bg-primary p-1 rounded-circle w-10 h-10 text-white d-flex justify-content-center align-items-center">DM</div>
+                                                <div
+                                                    class="bg-primary p-1 rounded-circle w-10 h-10 text-white d-flex justify-content-center align-items-center">
+                                                    DM</div>
                                             </div>
                                             <div class="col-10">
-                                                <a href="javascript:void(0)" class="text-primary hover-bg-none profile-name">Dhiraj Mishra</a>
-                                                <p class="text-secondary text-truncate">dhiraj.mishra@nopaperforms.com</p>
+                                                <a href="javascript:void(0)"
+                                                    class="text-primary hover-bg-none profile-name">Dhiraj Mishra</a>
+                                                <p class="text-secondary text-truncate">dhiraj.mishra@nopaperforms.com
+                                                </p>
                                                 <div class="d-flex">
                                                     <small class=" mr-2">Account Manager :</small>
                                                     <small class=" text-dark">Rakesh</small>
@@ -102,14 +107,18 @@
                                     </div>
                                     <div class="list-group list-group-flush">
                                         <div class="list-group-item">
-                                            <a href="javascript:void(0);" class="text-dark d-flex align-items-center hover-bg-none">
-                                                <span class="material-icons-outlined fs-18 text-primary mr-2"> lock </span>
+                                            <a href="javascript:void(0);"
+                                                class="text-dark d-flex align-items-center hover-bg-none">
+                                                <span class="material-icons-outlined fs-18 text-primary mr-2"> lock
+                                                </span>
                                                 Change Password
                                             </a>
                                         </div>
                                         <div class="list-group-item">
-                                            <a href="javascript:void(0);" class="text-dark d-flex align-items-center hover-bg-none">
-                                                <span class="material-icons-outlined fs-18 text-primary mr-2"> logout </span>
+                                            <a href="javascript:void(0);"
+                                                class="text-dark d-flex align-items-center hover-bg-none">
+                                                <span class="material-icons-outlined fs-18 text-primary mr-2"> logout
+                                                </span>
                                                 Sign Out
                                             </a>
                                         </div>
@@ -144,7 +153,7 @@
                 </div>
             </div>
             <div class="collapse navbar-collapse">
-                <aside id="sidebar-wrapper" class="sidebar ">
+                <aside id="sidebar-wrapper" class="sidebar active">
                     <nav id="sidebar" class="sidebar-mask">
                         <div class="sidebar__inner scrollCustom">
                             <div class="sidebar-quickLinks active" style="display:none;">
@@ -155,7 +164,8 @@
                             <ul class="list-unstyled components mainList">
                                 <li class="active" data-p="0" data-m="98">
                                     <a data-am="98" class="clickableClass" data-toggle="collapse" aria-expanded="false"
-                                        href="#Dashboard"><i class="lineicon-98"></i><span class="highlighted highlighted-bg">Dashboard</span></a>
+                                        href="#Dashboard"><i class="lineicon-98"></i><span
+                                            class="highlighted highlighted-bg">Dashboard</span></a>
                                     <ul class="collapse list-unstyled" id="Dashboard" data-menu="Dashboard">
                                         <li class="active " data-p="98" data-m="151"><a class="active "
                                                 href="/analytics/admin-dashboard">Admin Dashboard </a></li>
@@ -359,7 +369,8 @@
                                 </li>
                                 <li class="" data-p="0" data-m="43">
                                     <a data-am="43" class="clickableClass" data-toggle="collapse" aria-expanded="false"
-                                        href="#UserAccessControl"><i class="lineicon-43"></i><span class="highlighted">User Access
+                                        href="#UserAccessControl"><i class="lineicon-43"></i><span
+                                            class="highlighted">User Access
                                             Control</span></a>
                                     <ul class="collapse list-unstyled" id="UserAccessControl"
                                         data-menu="User Access Control">
@@ -1785,6 +1796,51 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="bg-light p-3 boder-bottom">
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <div class="d-flex justify-content-between">
+                                    <div class="">
+                                        <span class="text-muted">User Limit :</span> <span class="text-dark">65</span>
+                                    </div>
+                                    <div class="">
+                                        <span class="text-muted">Existing Users :</span> <span class="text-dark">50</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 mt-2">
+                                <div class="bg-white w-100 rounded overflow-hidden shadow d-flex">
+                                    <div class="bg-primary h-4 rounded w-0 filled-bar"></div>
+                                    <!-- <div class="bg-warning h-4 rounded w-8 "></div>
+                                    <div class="bg-danger h-4 rounded w-4 "></div> -->
+                                </div>
+                            </div>
+                            <style>
+                                .filled-bar {
+                                    transition: width 2s;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                    <div class="bg-light py-2 border-bottom d-inline-block w-100">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-3 text-right pr-0 leading-3">
+                                <div class="gauge-headercol">
+                                    <svg class="gauge" viewBox="0 0 120 120">
+                                        <circle class="gauge-base" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                        <circle class="gauge-arc" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                    </svg>
+                                    <div class="gauge-percentage">50 <small class="d-block text-muted">Users</small></div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="">
+                                    <span class="text-muted">User Limit :</span> <span class="text-dark">65</span>
+                                </div>
+                                <span class="text-muted">Existing User :</span> <span class="text-dark">50</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="p-3">
                         <div class="form-group pt-0 mb-3">
                             <div class="row form-required">
@@ -2624,6 +2680,17 @@
     <script src="../static/backend/js/plugins/multiselect.min.js"></script>
     <script src="../static/backend/js/plugins/transfer.js"></script>
     <script src="../static/backend/js/plugins/chosen.js"></script>
+
+    <script>
+        $('#create-user-popup').on('shown.bs.modal', function () {
+            setTimeout(() => {
+                $('.filled-bar').css('width', '80%');
+            }, 600);
+            setTimeout(() => {
+                $('.gauge-arc').css('stroke-dasharray', '312.673, 351.858');
+            }, 100);
+        });
+    </script>
 
     <script>
         function filterFunction() {
