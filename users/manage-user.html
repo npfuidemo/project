@@ -16,6 +16,8 @@
     <link href="../static/backend/css/main.css" rel="stylesheet" />
     <link rel="preload" href="../static/backend/css/config.css" as="style" onload="this.rel='stylesheet'">
     <link href="../static/backend/css/user-permissions.css" rel="stylesheet" />
+    <style>.click-copy{position: relative; overflow: hidden; cursor: pointer;}
+        .click-copy.item-copied:before{content: 'Copied'; padding: 2px 0; background: #6a757d; position: absolute; width: 100%; height: 25px; text-align: center; color: #fff; border-radius: 10px; font-weight: 500; cursor: none;}</style>
 </head>
 
 <body class="dark-mode">
@@ -530,7 +532,24 @@
                     <div class="row">
                         <div class="col-4 col-md-6 d-flex justify-content-between pr-0 pr-sm-2">
                             <div class="d-flex">
-                                <h3 class="h5 d-inline-block my-1">Manage User</h3>
+                                <h3 class="h5 d-inline-block my-1 leading-7 pr-3 border-right">Manage User</h3>
+                                <div class="nav-tabs-navigation inline_tabs mb-0 header-tabs">
+                                    <div class="nav-tabs-wrapper content-none">
+                                        <ul class="nav nav-tabs flex-nowrap border-bottom-0" data-tabs="tabs"
+                                            role="tablist">
+                                            <li class="nav-item mx-2">
+                                                <a class="nav-link active show" href="#users"
+                                                    data-toggle="tab">User</a>
+                                            </li>
+                                            <li class="nav-item mx-2">
+                                                <a class="nav-link" href="#user-teams" data-toggle="tab">Teams</a>
+                                            </li>
+                                            <li class="nav-item mx-2">
+                                                <a class="nav-link" href="#user-roles" data-toggle="tab">Roles</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-8 col-md-6 pl-0 pl-md-3 d-flex align-items-end justify-content-md-end">
@@ -611,7 +630,13 @@
                     <div class="col-12">
                         <div class="border-bottom mb-3">
                             <div class="row align-items-center">
-                                <div class="col-12 col-sm-4">
+                                <div class="col-sm-4">
+                                    <div class="btn-group"><a
+                                            class=" bg-white py-1 px-3 rounded mr-2 user-tab"
+                                            data-status="1" href="javascript:void(0);" id="active-user-action">Active&nbsp;(292)</a> <a class="bg-light text-muted py-1 px-3 rounded mr-2 border user-tab"
+                                            data-status="2" href="javascript:void(0);" id="inactive-user-action">Inactive&nbsp;(96)</a> <a class="bg-light text-muted py-1 px-3 rounded mr-2 border user-tab" data-status="73" href="javascript:void(0);" id="unconfirmed-user-action">Unconfirmed&nbsp;(4)</a></div>
+                                </div>
+                                <div class="col-12 col-sm-4 d-none">
                                     <div class="nav-tabs-navigation inline_tabs spotlight mb-0">
                                         <div class="nav-tabs-wrapper">
                                             <ul class="nav nav-tabs flex-nowrap border-bottom-0" data-tabs="tabs"
@@ -718,10 +743,12 @@
                                                             Ajay Kumar Saini
                                                         </a>
                                                     </td>
-                                                    <td class="min-max-200 sorting" data-title="Email">
-                                                        ajay.kumar.saini@gmail.com
+                                                    <td class="min-max-200" data-title="Email">
+                                                        <span class="click-copy" data-toggle="tooltip" title="click to Copy" data-container="body" data-placement="bottom" data-clipboard="ajay.kumar.saini@gmail.com">
+                                                            ajay.kumar.saini@gmail.com
+                                                        </span>
                                                     </td>
-                                                    <td class="min-max-150 sorting" data-title="Role">
+                                                    <td class="min-max-150" data-title="Role">
                                                         <a href="#create-user-popup" data-toggle="modal"
                                                             class="text-primary">Counsellor</a>
                                                     </td>
@@ -1795,8 +1822,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="bg-light p-3 boder-bottom">
+                <div class="modal-body permission-view">
+                    <div class="bg-light p-3 border-bottom">
                         <div class="row justify-content-center">
                             <div class="col-8">
                                 <div class="d-flex justify-content-between">
@@ -1804,7 +1831,8 @@
                                         <span class="text-muted">User Limit :</span> <span class="text-dark">65</span>
                                     </div>
                                     <div class="">
-                                        <span class="text-muted">Existing Users :</span> <span class="text-dark">50</span>
+                                        <span class="text-muted">Existing Users :</span> <span
+                                            class="text-dark">50</span>
                                     </div>
                                 </div>
                             </div>
@@ -1822,15 +1850,16 @@
                             </style>
                         </div>
                     </div>
-                    <div class="bg-light py-2 border-bottom d-inline-block w-100">
-                        <div class="row justify-content-center align-items-center">
+                    <div class="bg-light py-2 d-none w-100">
+                        <div class="row justify-content-center align-items-center m-0">
                             <div class="col-3 text-right pr-0 leading-3">
                                 <div class="gauge-headercol">
                                     <svg class="gauge" viewBox="0 0 120 120">
                                         <circle class="gauge-base" r="56" cx="60" cy="60" stroke-width="8"></circle>
                                         <circle class="gauge-arc" r="56" cx="60" cy="60" stroke-width="8"></circle>
                                     </svg>
-                                    <div class="gauge-percentage">50 <small class="d-block text-muted">Users</small></div>
+                                    <div class="gauge-percentage">50 <small class="d-block text-muted">Users</small>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-5">
@@ -1841,91 +1870,164 @@
                             </div>
                         </div>
                     </div>
-                    <div class="p-3">
-                        <div class="form-group pt-0 mb-3">
-                            <div class="row form-required">
-                                <div class="col-4">
-                                    <label class="text-dark mb-0 mt-2 pt-1">College Name</label>
+                    <div class="row justify-content-start m-0">
+                        <div class="col p-3 position-relative popup-element">
+                            <div class="form-group pt-0 mb-3">
+                                <div class="row form-required">
+                                    <div class="col-4">
+                                        <label class="text-dark mb-0 mt-2 pt-1">College Name</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <select class="selectpicker" data-style="px-2 border" data-live-search="true"
+                                            title="Select College ">
+                                            <option>College Name</option>
+                                            <option>College Name</option>
+                                            <option>College Name</option>
+                                            <option>College Name</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-8">
-                                    <select class="selectpicker" data-style="px-2 border" data-live-search="true"
-                                        title="Select College ">
-                                        <option>College Name</option>
-                                        <option>College Name</option>
-                                        <option>College Name</option>
-                                        <option>College Name</option>
-                                    </select>
+                            </div>
+                            <div class="form-group pt-0 mb-3">
+                                <div class="row form-required">
+                                    <div class="col-4">
+                                        <label class="text-dark mb-0 mt-2 pt-1">Email</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <textarea name="" id="" class="form-control tags-input"
+                                            placeholder="Enter Email ID"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group pt-0 mb-3">
+                                <div class="row form-required">
+                                    <div class="col-4">
+                                        <label class="text-dark mb-0 mt-2 pt-1">Role</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <a href="#team-hierarchy-popup" data-toggle="modal"
+                                            class="btn btn-link p-2 text-left border border-input d-block rounded-sm text-muted"
+                                            data-backdrop="false">Assign a Role</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group pt-0 mb-3">
+                                <div class="row form-required">
+                                    <div class="col-4">
+                                        <label class="text-dark mb-0 mt-2 pt-1">Permission</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <select class="selectpicker" data-style="px-2 border" data-live-search="true"
+                                            title="Assign a Permission">
+                                            <option>Permission</option>
+                                            <option>Permission</option>
+                                            <option>Permission</option>
+                                            <option>Permission</option>
+                                        </select>
+                                        <a class="pull-right" href="javascript:void(0);" onclick="viewPermission()">
+                                            <small class="text-primary arrow-right notch ">View Permission Set</small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group pt-0 mb-3">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label class="text-dark mb-0 mt-2 pt-1">Terms</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <select class="selectpicker" data-style="px-2 border" data-live-search="true"
+                                            title="Assign a Term" multiple>
+                                            <option>Terms</option>
+                                            <option>Terms</option>
+                                            <option>Terms</option>
+                                            <option>Terms</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group w-100 mb-3 pt-0">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label class="text-dark">Allocated Forms</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <select name="" id="" class="chosen-select form-control border" multiple
+                                            data-placeholder="Select">
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group pt-0 mb-3">
-                            <div class="row form-required">
-                                <div class="col-4">
-                                    <label class="text-dark mb-0 mt-2 pt-1">Email</label>
-                                </div>
-                                <div class="col-8">
-                                    <textarea name="" id="" class="form-control tags-input"
-                                        placeholder="Enter Email ID"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group pt-0 mb-3">
-                            <div class="row form-required">
-                                <div class="col-4">
-                                    <label class="text-dark mb-0 mt-2 pt-1">Role</label>
-                                </div>
-                                <div class="col-8">
-                                    <a href="#team-hierarchy-popup" data-toggle="modal"
-                                        class="btn btn-link p-2 text-left border border-input d-block rounded-sm text-muted"
-                                        data-backdrop="false">Assign a Role</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group pt-0 mb-3">
-                            <div class="row form-required">
-                                <div class="col-4">
-                                    <label class="text-dark mb-0 mt-2 pt-1">Permission</label>
-                                </div>
-                                <div class="col-8">
-                                    <select class="selectpicker" data-style="px-2 border" data-live-search="true"
-                                        title="Assign a Permission">
-                                        <option>Permission</option>
-                                        <option>Permission</option>
-                                        <option>Permission</option>
-                                        <option>Permission</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group pt-0 mb-3">
-                            <div class="row">
-                                <div class="col-4">
-                                    <label class="text-dark mb-0 mt-2 pt-1">Terms</label>
-                                </div>
-                                <div class="col-8">
-                                    <select class="selectpicker" data-style="px-2 border" data-live-search="true"
-                                        title="Assign a Term" multiple>
-                                        <option>Terms</option>
-                                        <option>Terms</option>
-                                        <option>Terms</option>
-                                        <option>Terms</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group w-100 mb-3 pt-0">
-                            <div class="row">
-                                <div class="col-4">
-                                    <label class="text-dark">Allocated Forms</label>
-                                </div>
-                                <div class="col-8">
-                                    <select name="" id="" class="chosen-select form-control border" multiple
-                                        data-placeholder="Select">
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                        <option>Option</option>
-                                    </select>
+                        <div class="col permission-set bg-light p-0">
+                            <style>
+                                /* .popup-element{max-width: 492px;} */
+                                .permission-set {
+                                    display: none;
+                                    top: 0;
+                                    height: 100%;
+                                    width: 300px;
+                                }
+                                .permission-view:after {content: ''; right: 0; bottom: 0; width: 50%; z-index: 0; height: 100%; position: absolute; background: #f8f9fa; border-left: 1px solid #e2e1e6;}
+
+                            </style>
+                            <div class="">
+                                <div id="permission-accordion" class="modal-accordion">
+                                    <a href="#module-1" data-toggle="collapse"
+                                        class="py-3 border-bottom d-block text-dark border-left collapsed">Module
+                                        Name</a>
+                                    <div class="border-bottom border-left bg-light collapse" id="module-1"
+                                        data-parent="#permission-accordion">
+                                        <div class="p-0">
+                                            <ul class="mt-2 pl-4 ml-2">
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#module-2" data-toggle="collapse"
+                                        class="py-3 border-bottom d-block border-left text-dark collapsed">Module
+                                        Name</a>
+                                    <div class="border-bottom border-left bg-light collapse" id="module-2"
+                                        data-parent="#permission-accordion">
+                                        <div class="p-0">
+                                            <ul class="mt-2 pl-4 ml-2">
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                                <li>Permission </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1937,6 +2039,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="modal fade offCanvasModal right" id="team-hierarchy-popup" tabindex="-1" role="dialog"
@@ -2680,7 +2783,24 @@
     <script src="../static/backend/js/plugins/multiselect.min.js"></script>
     <script src="../static/backend/js/plugins/transfer.js"></script>
     <script src="../static/backend/js/plugins/chosen.js"></script>
+    <script>
 
+        $(document).on('click','.click-copy', function(){
+            let copyClipboard = $(this).data('clipboard');
+            navigator.clipboard.writeText(copyClipboard);
+            $(this).addClass('item-copied');
+            setTimeout(() => {
+                $('.click-copy').removeClass('item-copied')
+            }, 1000);
+        });
+        $(document).on('click','[data-toggle="tooltip"][data-container="body"]', function(){
+           $('.tooltip').remove();
+        });
+        const viewPermission = () => {
+            $('#create-user-popup.modal .modal-dialog').toggleClass('modal-lg');
+            $('.permission-set').toggleClass('d-block');
+        }
+    </script>
     <script>
         $('#create-user-popup').on('shown.bs.modal', function () {
             setTimeout(() => {
