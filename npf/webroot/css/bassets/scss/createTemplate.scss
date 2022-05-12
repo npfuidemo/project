@@ -14,49 +14,27 @@
 
   .radiotabs{
     .nav-tabs{
-      border: 0;
       li{
-        a{
-          color: #666;
-          border: 1px solid transparent;
-          border-radius: 5px;
-          padding: 7px 15px;
-        }
-        &.active{
-          a{
-            color:#0074d9;
-            border: 1px solid #0074d9;
-            border-radius: 5px;
-
-            &:after{
-              content: '';
-              width: 0;
-              height: 0;
-              border-left:15px solid transparent;
-              border-right: 15px solid transparent;
-              border-bottom:15px solid #f9f9f9;
-              position: absolute;
-              bottom:-18px;
-              left: 15px;
-          }
+          &:first-child{
+            margin-left: 0;
           }
         }
       }
-    }
     .tab-content{
       padding: 0;
-      margin-top: 15px;
       position: relative;
 
       .tab-pane{
       padding:15px  30px 20px 30px;
       background-color: #f9f9f9;
+      border: 1px solid #f3f3f3;
+      border-top:0;
 
       .linkbtn{
         border-bottom: 2px solid #0074d9;
         text-decoration: none;
         &:hover{
-          color: #0074d9;
+          color: #0262b5;
         }
       }
       }
