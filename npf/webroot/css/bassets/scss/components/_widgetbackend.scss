@@ -1,0 +1,56 @@
+.preview_desktop,.preview_mobile,.preview_tablet,.preview_mobile_portrait,.preview_tablet_portrait{font-size:25px!important;color:#333;cursor:pointer}.preview_mobile_portrait,.preview_tablet_portrait{-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);transform:rotate(90deg)}.formControl{background-color:#fff;border:1px solid #ddd;border-radius:2px;min-height:30px;padding:5px 10px}.font22{font-size:22px}.table-noborder th,.table-noborder td{border:none!important;padding:0!important}.checkboxSpace{margin-right:5px!important}.widgetSetting{padding:10px;border-right:1px solid #ddd;margin-right:-1px}.widgetSetting h4{min-height:30px;font-size:17px}.panel-group .panel{margin-bottom:10px;border:1px solid #ddd;border-radius:2px}.widgetSetting .panel > .panel-heading,.widgetSetting .panel.panel-default > .panel-heading{background-color:#fff}.widgetSetting .panel-title > a{background-color:#f8f8f8;color:#111;font-size:15px}.widgetSetting .panel-title > a.collapsed{background-color:#fff}.widgetSetting .form-group{padding-bottom:0;margin:0}.npf-form-group .widgetSetting .form-control{margin-top:0}.widgetSetting label{font-size:12px;color:#111}.custom_preview_option{border-left:1px solid #ddd;float:left;padding:10px 30px}.custom_preview_option > div{padding-right:2px;padding-left:2px}.npf-form-group .custom_preview_option .form-control,.custom_preview_option .btn{margin:0;padding:4px 8px}.npf-form-group .custom_preview_option .form-control{height:30px}.default_preview_option .fa{color:#999;margin-right:1px}.default_preview_option .fa.active{color:#111}.default_preview_option .preview_desktop,.default_preview_option .preview_tablet_portrait{margin-right:4px}.font18{font-size:18px}.widgetFrame{display:inline-block}.desktop{width:915px;height:600px}.mobile{width:373px;height:704px!important;background:url(../../../img/widget/iphone.svg) no-repeat;display:inline-block;padding:105px 19px}.mobile_portrait{width:704px;height:370px!important;background:url(../../../img/widget/iphone-landscap.svg) no-repeat;display:inline-block;padding:16px 103px 16px 104px}.tablet{width:871px;height:1241px!important;background:url(../../../img/widget/ipad.svg) no-repeat;display:inline-block;padding:106px 44px 16px}.tablet_portrait{width:915px;height:700px!important;background:url(../../../img/widget/ipad-landscap.svg) no-repeat;display:inline-block;padding:32px 71px 45px 78px;background-size:contain}.custom-frame{border:20px solid #eceff1;border-radius:10px;overflow-x:auto;overflow-y:hidden;max-width:915px}.widgetHolder{border:1px solid #ddd;display:inline-block;width:100%;margin-top:30px}.widgetSepBdr{border-left:1px solid #ddd;margin-left:-15px}.previewOpt{background-color:#f8f8f8;padding:0 15px;margin-bottom:15px;box-shadow:0 4px 4px -4px #666}.dynamic_area_preview{margin:0 auto;width:100%;text-align:center;margin:30px 0}.mobile #dynamic_load{height:500px!important}.mobile_portrait #dynamic_load{height:335px!important}.tablet #dynamic_load{height:1038px!important}.tablet_portrait #dynamic_load{height:580px!important}.desktop #dynamic_load{height:600px!important}.code-example{padding:20px}.modal-body .code-example{padding:0;text-align:left}.code-example pre{position:relative}.copyToClipboard{position:absolute;right:0;top:0;background-color:#ddd;display:block;padding:4px 10px;text-decoration:none!important;border-left:1px solid #ccc;border-bottom:1px solid #ccc;border-radius:0 0 0 5px;color:#111}.npf-form-group .widgetSetting textarea.form-control{height: auto;}.form_register_mapping_div{background-color:#fafafa;padding: 10px;border: 1px solid #eee;margin-top: 5px;border-radius: 2px;}.form_register_mapping_div:first-child{ margin-top:0}.form_register_mapping_div .chosen-container-single .chosen-single{line-height:34px;}.form_register_mapping_div .SelectBox{padding:7px 10px;}.form_register_mapping_div .SumoSelect{margin:8px 0;vertical-align:top;}.form_register_mapping_div .chosen-container{ vertical-align:top;}
+.SumoSelect>.optWrapper.multiple>.options li.opt.selected span i, .SumoSelect .select-all.partial>span i, .SumoSelect .select-all.selected>span i, .switchBtn input:checked + label,
+.SumoSelect>.optWrapper.multiple>.options li.opt.selected span i{
+    background-color: #4b7bdd;
+}
+.tableNew.table-border th, .tableNew .table-bordered th {
+    background-color: rgb(224, 227, 232);
+    border-color: #eeeef0;
+}
+.tableNew table.table-hover tbody tr:hover td {
+    background-color: #f5f6f8 !important;
+}
+
+
+
+.widjetstep1 tr:last-child .SumoSelect>.optWrapper,.widjetstep1 tr:last-child .chosen-container .chosen-drop {
+    top: auto !important;
+    bottom: 32px!important;
+}
+.otpenable{
+    display:none;
+    &.active{
+    display:revert;
+    }
+}
+
+.innertable{
+	table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+ td {
+    padding: 12px 8px;
+}
+}
+
+
+.multiselect{
+    margin:15px 0!important;
+    .SumoSelect{
+        margin:0!important;
+    }
+}
+
+@media (max-width:480px){
+    .mgt-xs-4{
+		margin-top: 18px !important;
+	}
+    .custom_preview_option{
+        width: 100%;
+    }
+    .topHeadFields{
+        .filter_btn span{
+            display: none;
+        }
+    } 
+}

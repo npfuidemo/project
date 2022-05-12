@@ -1,0 +1,194 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.logo{
+    text-align: center;
+    padding: 0 10px;
+    line-height: 51px;
+	max-width: 140px;
+	img{
+		display:inline-block;
+	}
+}
+.header{
+	position: relative;
+	z-index: 1000;
+    .dropdown-btn{
+        padding: 8px 15px;
+		line-height: 30px; 
+		min-height: 50px;
+        &:hover{
+            background: lighten($brand-color, 8%)   
+        }
+    }
+    .open{
+        .dropdown-btn{
+            background: lighten($brand-color, 8%)
+        } 
+    }
+	.sbarCollapsebtn{
+		padding:10px 14px 11px;
+		&:hover{
+            background: rgba(0, 0, 0, 0.05);		
+        }
+	}
+	.clg_header{
+		padding:0;
+		white-space:nowrap;
+	}
+	
+	.navbar{
+		background-color: #fff;
+		z-index: 10000;
+		box-shadow: 0 5px 10px -6px #eee;
+		border-bottom: 1px solid #eee;
+		margin-bottom:0;
+	}
+	
+	.header_select{
+		.chosen-container .chosen-single {
+			line-height: 50px;
+			border-right: 1px solid #eee;
+		}
+	}
+}
+
+@include media(">tablet") {
+	.header .navbar{
+		max-height:51px;
+	}
+	.logo{
+		border-right: 1px solid #eee;
+		min-width: 170px;
+	}
+	.header_select{
+		display: inline-block;
+		min-width:30rem;
+		max-width:30rem;
+		.chosen-container{
+			.chosen-single{
+				border: none;
+				box-shadow: none;
+			}
+		.chosen-container .chosen-results li{padding:8px 6px!important;}
+		}
+		.chosen-container-single{
+			.chosen-single{
+				padding: 0 10px;
+				color:#111;
+				font-weight:500;
+				div{right:6px;}
+			}
+			.chosen-default{
+				color:#111;
+				font-weight:500;
+			}
+		}
+	}
+	.mobHide{
+		display:none;
+	}
+}
+
+@media(max-width:991px){
+	.logo{padding:5px 0; margin-top: 5px;
+		img{height:30px!important; width:auto!important;}
+	}
+	.userDropDown span{background:transparent!important;}
+	.sbarCollapsebtn > span{background:#fff!important;}
+	.npf-navbar .navbar-nav>li i[class*=lineicon] {color: #fff !important;}
+	.header{
+		.navbar{
+			background-color:#4c79dc !important;
+		}
+	}
+	.onlyDesktop{display:none !important;}
+	.header_select{padding-bottom:10px;}
+	.header .header_select .chosen-container .chosen-single{line-height:30px!important;}
+	#h_college_id_chosen .chosen-drop{width:100%!important}
+	.header .sbarCollapsebtn{border:0!important}
+	.dragItem{display:none!important;}
+}
+
+@media(max-width:767px){
+.text-center-m{text-align:center!important;}
+.mt-5-m{margin-top:5px;}
+
+}
+
+
+
+ .sbarCollapsebtn{
+  width: 45px;
+  height:51px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+.sbarCollapsebtn > span{
+  display: block;
+  position: absolute;
+  height:1.5px;
+  width:50%;
+  background: #555;
+  border-radius:6px;
+  opacity: 1;
+  left:20%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+
+/* Icon 3 */
+
+.sbarCollapsebtn span:nth-child(1) {
+  top: 18px;
+}
+
+.sbarCollapsebtn span:nth-child(2), 
+.sbarCollapsebtn span:nth-child(3) {
+  top:24px;
+}
+
+.sbarCollapsebtn span:nth-child(4) {
+  top:30px;
+}
+
+.activeBodyNav .sbarCollapsebtn span:nth-child(1) {
+  top:36px;
+  width: 0%;
+  left: 50%;
+}
+
+.activeBodyNav .sbarCollapsebtn span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.activeBodyNav .sbarCollapsebtn span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.activeBodyNav .sbarCollapsebtn span:nth-child(4) {
+  top:36px;
+  width: 0%;
+  left: 50%;
+}

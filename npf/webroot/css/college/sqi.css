@@ -1,0 +1,138 @@
+/*** SQI Dashboard ***/
+.panel-graph {border:1px solid #ddd;}
+.pg-footer {background-color:#ddd;padding:10px;}
+
+.chart {
+  width: 100%;
+  background:url("../../img/loader_big.gif") no-repeat center center;
+}
+.chartUserManager {
+  background:url("../../img/loader_big.gif") no-repeat center center;
+}
+
+
+.fselection-widget{ position:relative;}
+.fselection-widget .form-group{
+	margin:0;
+	padding:0;
+}
+.fselection-widget .SumoSelect > .CaptionCont{
+	padding: 0 0 5px;
+	border:none;
+	border-bottom:2px solid #aaa;
+	bottom:-2px;
+	box-shadow:none;
+}
+.fselection-widget  .SumoSelect.open > .optWrapper{
+	 top: 27px;
+}
+.fselection-widget  .SumoSelect.open > .CaptionCont,
+.fselection-widget  .SumoSelect:focus > .CaptionCont,
+.fselection-widget  .SumoSelect:hover > .CaptionCont{
+	box-shadow:none;
+	border-bottom-color:#9fc349;
+}
+
+.fselection-widget .SumoSelect.open .search-txt{ padding:0;}
+
+.fselection-widget .error-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+	bottom: -20px;
+}
+
+.onformselect h4{ margin-top:0;}
+
+.sqi-dashboard .insights h5{color:#4b7bdd;}
+.sqi-dashboard .insights ol,
+.sqi-dashboard .insights ul{
+	list-style-position: inside;
+    margin: 5px 0 0;
+    padding: 0;
+}
+
+.button-box{ margin-bottom:20px;}
+.btn-inflow{
+	border: none;
+    border-bottom:2px solid #fff;
+    margin-right: 10px;
+    padding: 5px 15px;
+	background:#fff;
+}
+.btn-inflow.active, .btn-inflow:hover{
+    border-bottom-color:#4b7bdd;
+	color:#4b7bdd;
+}
+.btn-inflow.active{ font-weight:bold;}
+.inflow-table{padding:0 30px 40px;}
+.insights.min-height{min-height:120px;}
+
+		svg { margin: 0 auto; display: inherit; }
+        .states path { stroke-width: 1px; stroke:#c2c2c2; fill: #f2f2f2; cursor: pointer; }
+        .arcs path { stroke-width: 1px; stroke: #3b5998; pointer-events: none; fill: none; }
+        .d3-tip { line-height: 1; font: 12px/22px "robotoregular", sans-serif;z-index:999; padding: 0px 4px; background: #fff;  border: 1px solid #000; color: #000; border-radius: 2px; opacity: 0.001%; top:0; }
+        .d3-tip:after { box-sizing: border-box; display: inline; font-size: 10px; width: 100%; line-height: 1; color: #000; content: "\25BC"; position: absolute; text-align: center; opacity: 0.001%; }
+        .d3-tip.n:after { margin: -1px 0 0 0; top: 100%; left: 0; opacity: 0.001%; }
+        .area:hover { fill: brown; }
+        .d3-tip a{text-decoration: none;color: #3b5998;}
+        .d3-tip a:hover{text-decoration: underline; }
+
+        .map-img-right {display:inline-block;width:100%;position:relative; }
+
+
+
+@media(min-width:1024px){
+.chart {
+  min-height: 300px;
+}
+.map-img-right{width:480px;}
+
+}
+
+@media(max-width:768px){
+	.mob-display {
+	  display:block !important;
+	  padding:0;
+	  width:100% !important;
+	}
+	svg{width: 100%;}
+	.form-horizontal, .npf-form-group  .margin-top-30{
+		margin-top:0;
+	}
+	.fselection-widget{ text-align:left;}
+	.fselection-widget .form-group{ padding-bottom:10px;}
+}
+
+.panel-Inflow{position:relative;}
+.enrollMsg-section{position:absolute;top:0;left:0;right:0;bottom:0;height:100%;
+background-color:rgba(255, 255, 255, 0.7);filter: blur(2px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);}
+
+.enrollment-Graphtext{
+	text-align: center;
+font-size: 15px;
+border-radius: 50px;
+border: 1px solid #2864dc;
+color: #2864dc;
+position: absolute;
+top: 200px;
+left: 0;
+background-color: rgba(255, 255, 255, 0.8);
+padding: 10px 20px 12px;
+box-shadow: 0 0 10px #aaa;
+}
+
+.enrollment-Graphtext .fa-cogs{top:-50px;
+position: absolute;
+font-size: 40px;
+left: 50%;
+margin-left: -30px;}
+
+text {
+    font-family: roboto;
+}

@@ -1,0 +1,18 @@
+/* jQuery Gridly
+ * Copyright 2015 Kevin Sylvestre
+ * 1.2.9
+ */
+.gridly{position:relative;} 
+.gridly, .gridly > :not(.dragging) {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+.gridly .dragging {z-index: 800; }
+#scoreBoardDashlet{height:320px;}
+.dashlets{height:400px;}
+.dashlets:last-child .panel-reports{margin-bottom:0;}
+.panel-reports{height: 100%;}
+.brickEdit{border: 1px dashed #75b740;}
+.dragging{box-shadow:rgba(0, 0, 0, 0.3) 0 5px 10px;border-color:#111;cursor: move;cursor: grab;cursor:-webkit-grab;}
+.brick.small{width:50%;}
+.brick.large{width:100%;}

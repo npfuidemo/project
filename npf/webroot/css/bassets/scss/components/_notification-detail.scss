@@ -1,0 +1,126 @@
+#download_report_container{
+    ul{
+        list-style:none;
+        padding:0;
+        li{
+            border:1px solid rgba($black-color,.05);
+            padding:$two*7+1 $two*7+1 $two*5 $two*7+1;
+            margin:25px 0;
+            @include border-radius($two*2+1);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .20), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            .action{
+                a{
+                    padding:$two+1.5 $two*7+1;
+                    text-decoration:none;
+                    text-transform:capitalize;
+                }
+            }
+            &:first-child{
+                margin-top:0;
+            }
+            .iconbox{
+                display:inline-block;
+                width:32px;
+                height:32px;
+                background:$white-color;
+                border-radius:50%;
+                color:$white-color;
+                margin-right:10px;
+                align-items: flex-start;
+                vertical-align:top;
+                border:1px solid $base-color;
+
+                i{
+                    padding:4px 6px;
+                    font-size:18px;
+                    display: block;
+                    color:$base-color;
+                    }
+            }
+            .information{
+                width:calc(100% - 12px);
+                display:inline-block;
+
+                .created_by{
+                    span{
+                        display:inline-block;
+                        line-height:$two*11;
+                        vertical-align:bottom;
+                    }
+
+                    .college{
+                        white-space:nowrap;
+                        text-overflow:ellipsis;
+                        overflow:hidden;
+                        display:inline-block;
+                        max-width:250px;
+                    }
+                }
+
+                p{
+                    margin:0;
+                    &.notificationTitle{
+                        min-height:$two*11;
+                        margin-bottom:5px;
+                    }
+                }
+
+                .action {
+                    min-width:$two*38;
+                }
+
+            }
+
+        &.unclicked-item{
+            .iconbox{position:relative;
+                i{
+                    &:after{
+                        content:'';
+                        width:6px;
+                        height:6px;
+                        position:absolute;
+                        left:2px;
+                        top:0px;
+                        background:red;
+                        border-radius:50%;
+                    }
+                }
+            }
+            p{
+                &.notificationTitle{
+                     font-weight:500;
+                }
+            }
+        }
+        }
+    }
+    .downloadRequestMenu li{
+        border: none;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        a{
+            padding: 10px 12px;
+        }
+
+    }
+}
+
+
+
+
+
+body.collegesettings_connectorslist,body.reports_notificationlist{
+    .topHead {
+        border: 0;
+    }
+}
+
+
+.muted{
+    color:lighten($black-color,70%);
+}
+
+.mute{
+    color:lighten($black-color,50%);
+}

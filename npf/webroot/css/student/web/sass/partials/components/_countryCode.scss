@@ -1,0 +1,12 @@
+.input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group{margin-right:-2px;}
+.input-group-btn{vertical-align:top;}
+.input-group .country_dial_code{ margin-bottom:0;}
+.btn .caret {margin-left: 2px;}
+.input-group-btn .dropdown-menu{padding:5px;text-transform:capitalize;min-width:300px;}
+.input-group-btn .dropdown-menu .search_box_code {background:#fff;border:1px solid #ccc;margin:1px 0;padding:4px;width:100%;font-size:12px;color:#333;box-shadow:inset 0 1px 1px rgba(0,0,0,.075);height:30px;}
+.input-group-btn .dropdown-menu .dropdown-menu-list {color:#333;max-height:200px;padding:8px 0;position:relative;overflow-x:hidden;overflow-y:auto;margin-bottom:0;}
+.input-group-btn .dropdown-menu .dropdown-menu-list li {font-size: 12px;line-height: 1.42857143;list-style: none;margin: 0;padding: 2px 5px;font-size: 13px;text-align: left;cursor: pointer;}
+.input-group-btn .dropdown-menu .dropdown-menu-list li:hover {background-color:#75b740;color:#fff;}
+
+/*** DatePicker ***/
+.datepicker table{width:100%;}

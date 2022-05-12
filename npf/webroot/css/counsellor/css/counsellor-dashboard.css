@@ -1,0 +1,67 @@
+.common-manager h3{font-size:16px;margin:10px 0 20px;}
+.info-box {color: #fff;margin-bottom:30px;min-height:140px;padding:20px;text-align:center;box-shadow:0 0 4px #ddd;}
+.blue-bg{ background-color:#1f97df;}
+.red-bg{ background-color:#e7505a;}
+.golden-bg{ background-color:#f2ae38;}
+.syan-bg{ background-color:#00bc9b;}
+.info-box  .glyphicon-user{display: inline-block;font-size: 40px; margin-right: 20px;	}
+.info-box .count {display:inline-block;font-size:45px;vertical-align:middle;}
+.info-box .count a{color:#fff;text-decoration:none;}
+.box-counsellor {border:1px solid #eee;display:inline-block;width:100%;}
+.activityLogs-group {list-style:none;margin:0;padding: 0;}
+.activityLogs-group > li {border-bottom: 1px solid #ddd;padding: 10px;}
+.activityLogs-group li:last-child{border-bottom:none;}
+.iconactivity {background-color: #ddd;border-radius: 50%;display: inline-block;font-size: 16px;line-height: 36px;padding: 0 10px;vertical-align: middle;}
+.activityMsg {display:inline-block;padding:0 10px;vertical-align:middle;width:70%;text-align:left;font-size:13px}
+.activityLogs-group time{display:inline-block;text-align:right;vertical-align:middle;width:20%;font-size:12px;color:#999;}
+.box-counsellor .npf-form-group {padding: 0 180px;}
+.sumoFull .SumoSelect {max-width:100%;}
+
+.tablViewtab{margin-bottom:20px;width:100%;border-bottom:1px solid #eee;}
+
+/*** Calender ***/
+.fc-view, .fc-view > table{box-shadow:0 0 2px #ddd;}
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number{float:none;line-height:48px;}
+.fc-button-group{margin-top:15px;}
+.fc th, .fc td{text-align:center;}
+.fc-toolbar .fc-center{float:left;margin-left: 10px;}
+.fc button{height: 1.8em;padding: 0 .5em;font-size: 1em;}
+.fc-button-group{margin-top:0;}
+.fc .fc-button-group > *{margin:5px 0 0 -1px;}
+.fc-icon{line-height: 0.5em;font-size: 10px;height: auto;}
+.fc-right a.btn{padding:5px 10px;margin:4px 0 0 0;}
+
+.fc th {background-color: #f2f2f2;padding: 10px !important;position: unset;}
+.fc-unthemed td.fc-today{background:#1f97df;color:#fff;}
+.fc-toolbar.fc-header-toolbar{ margin-bottom:0;}
+.box-calendar .fc-right .fc-button-group{ margin-top:15px;}
+.box-calendar .noDataFound{font-size:18px;color:#999;}
+.fc-toolbar .fc-left h3{ margin-bottom:10px;}
+
+.box-calendar{position:relative;}
+#popupdiv{background-color:rgba(255, 255, 255, 0.95);height:40%; position:absolute;text-align:center;left:25%;top:30%;width:50%;z-index:11;border:1px solid #75b740;padding:0;}
+#followupActivityDiv{background-color:rgba(255, 255, 255, 0.95);position:absolute;text-align:center;top:52px;width:100%;z-index:11;}
+#eventDetailDiv{font-size: 18px;display: table;vertical-align:middle;height:100%;width: 100%;}
+.follow-up-user {display:table-cell;width:50%;border:1px solid #75b740;vertical-align:middle;background-color:#f2f2f2;padding:10px;}
+#activityLogsDiv .noDataFound{font-size:18px;margin-top:20px;color:#999;}
+.follow-up-user .linkTable {text-decoration:none;font-size:14px;}
+.box-counsellor .form-group{margin:0;padding:0;}
+.box-counsellor .form-group .form-control{margin-bottom:0;}
+.fc-time{ display: none;} 
+
+/*** Responsive Design ***/
+@media (min-width: 768px) {
+	.box-counsellor {max-height:419px;min-height:419px;}
+	.bcAutoheight{min-height:338px;}
+	.box-calendar .noDataFound{line-height:408px;}
+	#followupActivityDiv{height:408px;}
+	#activityLogsDiv .noDataFound{margin-top:150px;}
+	.fc-toolbar.fc-header-toolbar{ margin-bottom:0;}
+	.box-calendar .fc-right .fc-button-group{ margin-top:15px;}
+}
+@media (max-width: 767px) {
+	.common-manager h3{font-size:16px; text-align:left;}
+	.box-counsellor{overflow:visible !important;}
+	.chart-filter{margin-bottom:0 !important;}
+	.formChildNoMargin{margin-bottom:10px !important;}
+}

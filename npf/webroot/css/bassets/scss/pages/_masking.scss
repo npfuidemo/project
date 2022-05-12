@@ -1,0 +1,55 @@
+.select-columns{
+	h5{
+		color:$brand-color;
+	}
+}
+
+.column-block{
+	border: 1px solid #dedede;
+	padding: 10px;
+	height: auto;
+	overflow-y: scroll;
+	margin-bottom: 10px;
+}
+ 
+.nonscroll{
+	overflow-y: inherit;
+}
+
+.column-box{
+	select{
+		width:100%;
+		padding:5px;
+		background-color:#f7f7f7;
+		border:1px solid #e5e5e5;
+		option{
+			padding: 3px;
+			font-size:13px;
+			&:checked{
+				background:#ccc;
+			}
+		}
+	}
+} 
+
+.arrow-selected{
+	position: relative;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	ul{
+		padding:0;
+		list-style:none;
+	}
+	a{
+		font-size:2em;
+	}
+}
+
+@include media(">tablet"){
+	.column-block{
+		min-height: 585px;
+	}
+	.arrow-selected{
+		padding-top:15em;
+	}
+}

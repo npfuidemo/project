@@ -1,0 +1,21 @@
+ul.checklist {
+  list-style-type: none;
+  padding: 0 0 0 30px;
+
+  > li {
+    position: relative;
+
+    &:before {
+      content: '';
+      // content: '\2713';
+      position: absolute;
+      top: 2px;
+      left: -20px;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      background-size: cover;
+      background-image: url('../../../img/task-check-blue.svg');
+    }
+  }
+}

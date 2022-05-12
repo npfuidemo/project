@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+  // 2. Components
+@import
+  'components/plusMinushide';
+
+
+  .radiotabs{
+    .nav-tabs{
+      border: 0;
+      li{
+        a{
+          color: #666;
+          border: 1px solid transparent;
+          border-radius: 5px;
+        }
+        &.active{
+          a{
+            color:#0074d9;
+            border: 1px solid #0074d9;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .tab-content{
+      padding: 0;
+      margin-top: 15px;
+      position: relative;
+      &:before{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left:12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom:12px solid #f9f9f9;
+        position: absolute;
+        top:-12px;
+        left: 15px;
+    }
+      .tab-pane{
+      padding:15px  30px 20px 30px;
+      background-color: #f9f9f9;
+      }
+    }
+  }

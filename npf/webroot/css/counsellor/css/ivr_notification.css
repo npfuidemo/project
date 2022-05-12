@@ -1,0 +1,41 @@
+.notifyCountUl{}
+.notifyCountUl li {display:table;width:100%;font-size:14px;border-bottom:1px solid #ccc;-moz-border-image:-moz-linear-gradient(right, white, #ddd, #ddd, white) 1 20%;border-image:linear-gradient(to right, white 0%, #ddd 40%, #ddd 60%, white 100%) 1 20%;padding: 10px;}
+.notifyCountUl .dropdown-menu {padding:0;}
+.notifyCountUl .dropdown-menu ul{padding: 0;margin: 0;}
+.notifyCountUl button{background-color:transparent;border:none;padding:11px 5px 8px;}
+.notifyCountUl audio{width:100%;margin:0}
+.disAudio{min-width:220px;vertical-align: middle; padding-right:20px;}
+.disMobile{min-width:140px;vertical-align: middle;}
+.disBtn{vertical-align: middle;}
+.btn-notification{margin:0;border:1px solid #4b7bdd;padding:2px 5px !important;text-transform:capitalize;background-color:#4b7bdd;color:#fff !important;
+font-size:14px;}
+.btn-notification:hover{color:#111 !important;}
+.notifyCountUl .count{background-color:#4b7bdd; padding:2px 7px;border-radius:2px;color:#fff;margin-left:5px;}
+.notifyCountUl .fa-phone-square{font-size:18px;vertical-align:top;}
+.notifyCountUl .dropdown-header{text-align: center; padding:8px 10px;background-color:#f2f2f2;position:relative;z-index:11111;}
+.notifyCountUl .dropdown-header .heading{font-size: 15px;}
+
+.loadMoreNotification{padding:5px 10px;padding:5px 10px;display:inline-block;text-align:center;text-decoration:none !important;color:#111;border:1px solid #aaa;border-radius:2px;background-color:#f8f8f8;font-size:13px;}
+
+.notifyCountUl .triangle:before, 
+.notifyCountUl .triangle:after {position:absolute;z-index:1111;top:-21px;right:12px;content:'';border-color:transparent transparent #ccc transparent;border-width:10px;border-style:solid;
+}
+.notifyCountUl .triangle:after{border-color:transparent transparent #f2f2f2 transparent;top: -19px;}
+.notifyCountUl .callIco{vertical-align: middle; display: inline-block; margin-right: 5px; position:relative;}
+.notifyCountUl .callIco .fa-phone-square{vertical-align:middle;}
+.missedCall{background: url(/img/missed-call-icon.png) no-repeat; width: 18px; height: 18px; background-size: 18px;}
+.missedCallIcon{max-width:32px!important; position: relative;left: -5px; top: -4px;}
+.missedCallListing{background:url(/img/missed-call-icon.png) no-repeat;background-size:auto auto; width: 18px; height: 18px;background-size: 18px; display: inline-block; vertical-align: top;}
+
+.inbound_Campaign_tab{white-space:nowrap;min-width:250px;}
+.inbound_Campaign_tab > li{display:inline-block;width:auto;font-size: 12px;padding: 0;border-bottom: none;}
+.inbound_Campaign_tab > li > a{padding:5px 10px;color:#999;}
+.inbound_Campaign_tab>li.active>a, 
+.inbound_Campaign_tab>li.active>a:focus, 
+.inbound_Campaign_tab>li.active>a:hover{background-color:#f6f8fe;color:#111;}
+
+/*** without Campaign Dailing ***/
+.inbound_Campaign_tab.li-full-width{border:none;}
+.inbound_Campaign_tab.li-full-width li{width:100%;}
+.inbound_Campaign_tab.li-full-width>li.active>a, .inbound_Campaign_tab.li-full-width>li.active>a:focus, .inbound_Campaign_tab.li-full-width>li.active>a:hover{
+border: none;text-align: center;}

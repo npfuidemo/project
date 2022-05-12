@@ -1,0 +1,126 @@
+.sidebar{
+	padding:0;
+	.simplebar-track{
+		right:5px;
+		&.horizontal{
+			display:none;
+		}
+	}
+}
+.nav-sidebar{
+	background-color: inherit;
+	> li{
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		text-align:center;
+		> ul{
+			padding:5px 0 0;
+			background-color:rgba(0, 0, 0, 0.2);
+			>a{
+				color:#fff;
+			}
+		}
+		> a{
+			padding:10px 4px;
+			color:#fff;
+			min-height:30px;
+			line-height:16px;
+			font-size:13px;
+			span{
+				vertical-align:middle;
+			}
+			.npf-icon{
+				display:block;
+				margin:0;
+				font-size: 20px;
+			}
+		}
+		&.active{
+			> a{
+				color:#fff;	
+				font-family:$font-stack-semibold;
+				background-color:rgba(0, 0, 0, 0.15);
+				font-weight:600;
+				/*&:before{
+					border-color: transparent #fff transparent transparent;
+					border-style: solid;
+					border-width: 10px;
+					content: "";
+					position: absolute;
+					right: 0px;
+					top: 12px;
+				}*/
+			}
+		}
+		.glyphicon, .fa{
+			vertical-align:middle;
+			margin-right:5px;
+		}
+		a{
+			&:hover{
+				background-color:transparent;
+				color:#fff;
+			}
+			&:focus{
+				background-color:inherit;
+				color:#fff;
+				&:before{
+					background-color:rgba(0,0,0,0.15);
+					content:'';
+					height:100%;
+					width:100%;
+					position:absolute;
+					left:0;
+					top:0;
+					z-index: 1;
+				}
+			}
+			> i, > span{
+				z-index: 1;
+				position:relative;
+			}
+		}
+	}
+	.nav-child{
+		padding-left:0;
+		padding-right:0;
+		> li{
+			margin-bottom: 5px;
+			&.cat{
+			  &:before{
+				border-style: solid;
+				border-width: 2px;
+				content: "";
+				height: 100%;
+				position: absolute;
+				top: 0;
+			  }	
+			 }
+			>a{
+				color:#ddd;
+				padding:6px 10px 6px 12px;
+				font-size:13px;
+				line-height: 20px;
+				&:hover{
+					color:#fff;
+				}
+			 }
+			 
+			 &.active{
+				>a{
+					color:#fff;
+					background-color:rgba(0, 0, 0, 0.2);
+				}
+			 }
+		}
+	}
+	.fakeAnchor{
+		padding: 10px;
+		color: #ddd;
+		min-height: 30px;
+		position: relative;
+		display: block;
+		span{
+			color:#999;
+		}
+	}
+}

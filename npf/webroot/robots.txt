@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admission-india/
+Disallow: /npf-branding/
+Disallow: /npf-branding-old/
+Disallow: /sharda/
+Disallow: /uploads/
+Allow: /uploads/template/
+Disallow: /theme/
+Disallow: /google/
+Disallow: /lpusmarttech.html
+Disallow: /direct-login/
+Disallow: /verify/

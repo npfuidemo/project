@@ -1,0 +1,11 @@
+.edit-btn-mode {
+  visibility: hidden;
+  opacity: 0;
+}
+
+table tr:hover {
+  .edit-btn-mode {
+    visibility: visible;
+    opacity: 1;
+  }
+}

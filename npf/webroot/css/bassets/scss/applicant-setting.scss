@@ -1,0 +1,361 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import 'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins',
+'vendor/include-media';
+
+// 2. Components
+@import 'components/topHeading',
+'components/rowSpace',
+'components/fieldSize',
+'components/modalfix',
+'components/tableNew',
+'components/fieldset',
+'components/_widgetNav.scss',
+'components/newTableStyle';
+
+.seprator-top {
+    border-top: 1px solid #eeeef0;
+}
+
+.pt-15 {
+    padding-top: 15px;
+}
+
+.padding-left-20 {
+    padding-left: 20px;
+}
+
+a.btn-payment-info {
+    text-decoration: none;
+}
+
+.arrow-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: 0px !important;
+
+        a {
+            color: #838383;
+            font-size: 14px;
+            display: block;
+            padding: 7px 25px 7px 25px;
+
+            &:hover {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+
+    .step.active {
+        background-color: #4b7bdd;
+
+        a {
+            color: #fff !important;
+            text-decoration: none;
+        }
+    }
+}
+
+.arrow-steps li:first-child.step.active:after {
+    border-left: 17px solid #4b7bdd;
+}
+
+.template-steps .nav-tabs:before {
+    position: absolute;
+    bottom: 34%;
+    border-bottom: none;
+    width: 55%;
+    z-index: 0;
+    left: 22%;
+}
+
+.steps_txt {
+    margin-bottom: 0;
+}
+
+.npf-form-style label {
+    font-size: 14px;
+    color: #111;
+    line-height: 100%;
+}
+
+.npf-form-style label[data-type="disabled"] {
+    color: #999;
+    cursor: not-allowed
+}
+
+.npf-form-style .label-main {
+    color: #111 !important;
+    font-weight: 500;
+}
+
+.npf-form-style .form-group {
+    display: inline-block;
+    width: 100%;
+}
+
+.npf-form-style textarea.form-control {
+    height: auto !important;
+    margin: 0 !important;
+}
+
+.npf-form-group .form-control {
+    margin: 0 !important;
+}
+
+.tab-content {
+    max-width: 80%;
+    margin: 0 auto;
+    /*background-color:#f9f9f9;*/
+    margin-top: 0;
+    padding: 4px 0 0;
+    /*border:1px solid #ddd;*/
+}
+
+.npf-form-style .form-group {
+    margin-top: 15px;
+}
+
+.template-steps .nav-tabs li.stepPrev .step {
+    border-color: #4b7bdd;
+    color: #4b7bdd;
+}
+
+.template-steps .nav-tabs li.stepPrev .steps_txt {
+    color: #4b7bdd;
+}
+
+li.disabled:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    height: 100%;
+    top: 0;
+    background-color: transparent;
+}
+
+#dataToBePurgedBody td strong {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.pd-15 {
+    padding: 15px;
+}
+
+.pd-20 {
+    padding: 0 20px 20px;
+}
+
+table:last-child {
+    margin-bottom: 0
+}
+
+b,
+strong {
+    font-weight: 500;
+}
+
+.panel-title {
+    font-size: 15px;
+}
+
+.panel-title>a {
+    color: #111;
+}
+
+.labelClick {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.template-steps {
+    width: auto;
+
+    .nav-tabs li {
+        width: auto;
+        display: inline-block;
+        float: none;
+    }
+}
+
+.line-steps .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 0px 0px;
+    transition: all 0.5s;
+}
+
+.template-steps .nav-tabs li.active .step,
+.template-steps .nav-tabs li .step:hover {
+    background-color: #4b7bdd !important;
+}
+
+.btn-npf {
+    color: #fff;
+    background-color: #4b7bdd;
+    border-color: #4b7bdd;
+}
+
+.btn-npf:hover,
+.btn-npf:focus {
+    background-color: #fff;
+    color: #4b7bdd;
+    border-color: #4b7bdd;
+}
+
+/* Hide the browser's default checkbox */
+.labelClick {
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+/* On mouse-over, add a grey background color */
+.labelClick:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.labelClick input:checked~.checkmark {
+    background-color: #4b7bdd;
+}
+.labelClick input:disabled~.checkmark {
+    cursor: not-allowed;
+    opacity: .7;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.labelClick input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.labelClick .checkmark:after {
+    left: 6px;
+    top: 1px;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.bluecolor_search .chosen-container-single .chosen-search:before {
+    color: #4b7bdd;
+}
+
+.panel.panel-default>.panel-heading {
+    /*background-color: #ddd;*/
+    background-color: #f5f5f5;
+}
+
+.panel-heading .accordion-toggle:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e260";
+    float: right;
+    color: grey;
+}
+
+.panel-heading .accordion-toggle.collapsed:after {
+    content: "\e259";
+}
+
+.common-manager .npf-form-group .form-control.textarea {
+    min-height: 150px;
+}
+
+.max700 {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.steps_txt {
+    display: none;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+@include media("<=tablet") {
+    .layerBelow {
+        .tab-content {
+            max-width: 100%;
+
+            .pd-20 {
+                padding: 0;
+            }
+        }
+    }
+
+    .line-steps .template-steps .nav-tabs li .step {
+        min-width: 115px;
+        margin-bottom: 15px;
+    }
+
+    .d-none-xs {
+        display: none !important;
+    }
+
+    .arrow-steps li a {
+        padding: 7px 12px 7px 19px;
+    }
+
+    .topHeadFields {
+        .filter_btn {
+            float: right;
+        }
+    }
+
+    .topHead .title {
+        text-align: center;
+        display: block;
+    }
+
+    .npf-form-group {
+        .form-control {
+            height: auto !important;
+        }
+    }
+
+}

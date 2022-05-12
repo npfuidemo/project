@@ -1,0 +1,61 @@
+/*** New Design ***/
+#__npfdivChatMain .chatHeader{max-height:60px;}
+#__npfdivChatMain .chatBody{background:url(/img/chatbot/bgpattern.png) repeat center center;background-color:#f2f2f2;}
+#__npfdivChatMain #__npfchatWindow .ac-pushButton{display:inline-flex;width:auto;border-width:1px;padding:4px 10px;margin:3px 8px 3px 0;color:var(--brand-color);background-color:#fff;font-size:12px!important;}
+#__npfdivChatMain #__npfchatWindow .ac-pushButton:hover{background-color: var(--brand-color) !important;color: #fff !important;}
+/*.__npfchatmsg_left .ac-container:after{display:none;}*/
+#__npfdivChatMain #__npfchatWindow .__npfchatmsg_left:not(.buttonCardDiv) .ac-container, 
+#__npfdivChatMain .chatBody .message-in .messageText{border-radius:0 5px 5px 5px;max-width:90%;min-width:80px;width:auto;padding:5px 10px !important;}
+
+#__npfdivChatMain #__npfchatWindow .__npfchatmsg_left .ac-container{box-shadow:0 1px 3px #999;} 
+#__npfdivChatMain #__npfchatWindow .__npfchatmsg_right .ac-container{box-shadow:0 1px 0.5px rgba(0, 0, 0, .13);} 
+#__npfdivChatMain #__npfchatWindow .buttonCardDiv .ac-container, 
+#__npfdivChatMain #__npfchatWindow .sessionButtonCardDiv .ac-container{box-shadow:none;}
+
+.__npfchatmsg_right .botIcon{margin-left:12px;}
+.__npfchatmsg_left .botIcon{margin-right:12px;}
+.__npfchatmsg_left .ac-container:after, 
+.__npfchatmsg_right .ac-container:after{
+	content: '';
+    position: absolute;
+    top: -1px;
+}
+.__npfchatmsg_left .ac-container:after {
+	left:-10px;
+	border-top:15px solid var(--brand-light-color);
+	border-left:15px solid transparent;
+}
+.__npfchatmsg_right .ac-container:after {
+	right: -10px;
+	border-top:15px solid var(--brand-tertiary-color);
+	border-right:15px solid transparent;
+}
+
+#__npfdivChatMain #__npfchatWindow .__npfchatmsg_right .ac-container{border-radius:5px 5px 0 5px;min-width:80px;}
+
+.sessionButtonCardDiv .buttonCard{text-align:center;}
+
+.buttonCardDiv .botIcon, .buttonCardDiv .npfChat_loader, .buttonCardDiv.__npfchatmsg_left .ac-container:after,.otpCardDiv .botIcon, .otpCardDiv .npfChat_loader, .otpCardDiv.__npfchatmsg_left .ac-container:after, .sessionButtonCardDiv .botIcon, .sessionButtonCardDiv .npfChat_loader, .sessionButtonCardDiv.__npfchatmsg_left .ac-container:after{display:none;}
+.buttonCardDiv .ac-adaptiveCard .ac-textBlock, .buttonCardDiv .ac-adaptiveCard .ac-textBlock .message, .sessionButtonCardDiv .ac-adaptiveCard .ac-textBlock, .sessionButtonCardDiv .ac-adaptiveCard .ac-textBlock .message{background:transparent;}
+#__npfdivChatMain #__npfchatWindow  .buttonCardDiv  .ac-container,  
+#__npfdivChatMain #__npfchatWindow  .sessionButtonCardDiv  .ac-container
+#__npfdivChatMain .chatBody .buttonCardDiv .message-in .messageText, 
+#__npfdivChatMain .chatBody .sessionButtonCardDiv .message-in .messageText{
+background-color:transparent!important;border:none!important;margin:0 !important;padding:0 10px 0 45px !important;}
+
+#__npfdivChatMain #__npfchatWindow .__npfchatmsg_left.sessionButtonCardDiv .ac-container{    
+	background: transparent !important;
+    border: transparent !important;
+    width: 100% !important;
+    text-align: center;
+    max-width: 100% !important;
+    padding: 0 !important;
+	cursor:pointer;
+}
+.sessionButtonCard{text-align:center;}
+.otpCardDiv{align-items:center;justify-content:center;}
+#__npfdivChatMain #__npfchatWindow .__npfchatmsg_left.otpCardDiv .ac-adaptiveCard{background-color:#fff !important;border-radius:4px;width:80%;box-shadow:0 0 5px #ccc;padding:2px !important;margin:20px 0;}
+#__npfdivChatMain #__npfchatWindow .__npfchatmsg_left.otpCardDiv .ac-adaptiveCard .ac-textBlock{background-image:none;padding:15px;background-color:#fff;}
+#__npfdivChatMain #__npfchatWindow .__npfchatmsg_left.otpCardDiv .ac-textBlock .message{background-color:transparent;}
+
+.chatLoader .typing{color:var(--brand-color);}

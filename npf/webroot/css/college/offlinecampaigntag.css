@@ -1,0 +1,89 @@
+.width-4{width:33.33333333%; display:inline-block;}
+.filter-block .btn{padding:9px 30px;margin:0;vertical-align:top; margin-left:10px;}
+.max-width-1000{max-width:1000px;}
+.m-auto{margin:0 auto;}
+.bg-light-container{border:1px solid #ddd;padding:20px;background-color:#f2f2f2;}
+
+.stv-radio-tabs-wrapper {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  border-bottom:4px solid #75b740;
+  padding: 0 10px;
+  position: relative;
+}
+
+input.stv-radio-tab, input.enable_custom_tag {
+  position: absolute;
+  left: -99999em;
+  top: -99999em;
+}
+input.stv-radio-tab + label {
+  cursor: pointer;
+  float: left;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  background-color: #fff;
+  margin-right: -1px;
+  margin-bottom:0;
+  padding: .5em 1em .5em 2em;
+  position: relative;
+  border-radius:4px 4px 0 0;
+  color:#999;
+  margin-top: 2px;
+}
+input.stv-radio-tab + label:before {content:'';position:absolute;border:1px solid #aaa;width:11px;height:11px;border-radius:50%;left:13px;top:13px;}
+input.stv-radio-tab + label:hover{background-color: #eee;}
+input.stv-radio-tab:checked + label{border-color:#75b740;z-index:1;color:#111;font-weight:500;border-top-width:3px;margin-top:0;}
+input.stv-radio-tab + label:after{content:'';position:absolute;width:5px;height:5px;left:16px;top:16px;background-color:#fff;border-radius: 50%;}
+input.stv-radio-tab:checked + label:after{background-color:#111;}
+.predefinedcheckbox{margin-top:20px;}
+.custom_tag_enable{padding: 10px 10px 10px 30px;display: inline-block;border:1px solid #ddd;width:100%;margin:0;font-size:14px;border-radius:2px;font-weight:500;cursor:pointer;color:#666;position:relative;}
+.custom_tag_enable:hover{ background-color: #f2f2f2;}
+input.enable_custom_tag + label:before{content:'';position:absolute;border:1px solid #aaa;width:15px;height:15px;border-radius:2px;left:10px;top:13px;}
+input.enable_custom_tag:checked + label:before {border-color:#75b740;background-color:#75b740;}
+input.enable_custom_tag:checked + label:after {content:"\f00c";font-family: 'FontAwesome';position: absolute;font-size:10px;left:13px;top:13px;color:#fff;}
+.margin-bottom-30{margin-bottom:30px;}
+.form-row{margin-right:-5px;margin-left:-5px;}
+.form-row div[class^="col-"], .form-row div[class*=" tocolor-"]{ padding-left:5px; padding-right:5px;}
+.mt-0{ margin-top:0;}
+
+.dd-list{position:relative;}
+.dd-list .dd-list{padding:0;margin:20px 0 0;background-color:rgba(230, 230, 230, 0.5);}
+.dd-list .dd-list > li {background-color:rgba(230, 230, 230, 0.5); border-top:1px solid #ccc;}
+.dd-list .dd-list > li:first-child{border-top:none;}
+.dd-list .dd-list .dd-list{background-color:rgba(0, 0, 0, 0.05);}
+.dd-list .dd-list .dd-list > li{background-color:transparent;border-top:1px solid #ccc;}
+.dd-list .dd-list .dd-list > li:first-child{border-top:none;}
+.dd-list .dd-item, .dd-list .dd-empty, .dd-list .dd-placeholder{border:none;margin:10px 0;padding:15px;background-color:#fff;}
+.dd-item .actions i.fa-cog{color:#666;font-size:14px !important;}
+.ellipsis-left .dropdown .dropdown-tc{background-color:transparent!important;line-height:12px;padding:0 !important;}
+.closecTag{position:absolute;right:-10px;top:-6px;background-color:#f44336;border:none;border-radius:50%;box-shadow:0 0 4px #aaa;color:#fff;font-size:12px;}
+
+.common-manager .npf-form-group .form-control.form-textarea{margin-bottom:0;}
+.inputBtn .btn{margin:0 10px 0 0;display:inline-block;height:35px;}
+.common-manager .npf-form-group .form-control.m0{margin:0;}
+#savesource{min-height:40px;}
+
+.edittag .actions{margin-top:10px;}
+.dd-list .dd-item.no_tag_found {
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #f00;
+    margin-top: 0 !important;
+    font-size: 13px; text-align: center;
+}
+.dd-list .dd-item.no_tag_found a{display:inline-block;border:1px solid;padding:0 10px;border-radius:4px;text-decoration:none;margin-top: 5px;margin-left:5px;}
+ol ol ol.dd-list .dd-item.no_tag_found {
+    background: #ebebeb !important;
+}
+.common-manager .npf-form-group .form-control.fc-small{height:35px;padding: 7px 10px;}
+.mt-10{margin-top: 10px !important;}
+.addmorelink .btn{border:1px solid #ccc;padding: 5px 15px;text-transform: capitalize;}
+
+.dd-list .dd-list{ margin: 0 20px;}
+.dd-list .dd-list + .addmorelink, .form-inline + .addmorelink{ margin-left:20px;}
+.dd-list .dd-list + .form-inline{ margin-left:5PX;}
+
+.inputBtn .btn-info{border:1px solid #ccc;}

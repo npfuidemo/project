@@ -1,0 +1,40 @@
+.dropdown-menu{
+	min-width:100%;
+	padding:0;
+	> li {
+		> a{
+			white-space:normal;
+		}
+	}
+	&.datepicker-dropdown{
+		min-width:auto;
+		.datepicker-orient-bottom:after, .datepicker-orient-bottom:before{
+			display:none;
+		}
+		
+	}
+}
+.dropList{
+	margin:0;
+	padding:0;
+	>li{
+		list-style:none;
+		>a{
+			white-space:normal;
+			border-top:1px solid #f8f8f8;
+			padding:4px 12px;	
+			display:block;
+			font-size:13px;
+			color:#333;
+			font-family:$font-stack-semibold;
+			&:hover{
+				background-color:#f8f8f8;
+			}
+		}
+		&:first-child{
+			>a{
+				border-top:none;
+			}
+		}
+	}
+}

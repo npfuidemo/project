@@ -1,0 +1,233 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Reports Admin Dashboard Page.
+// -----------------------------------------------------------------------------
+.button-special{
+	background: transparent;
+    border:1px solid #ccc;
+    padding:4px 15px;
+    margin-top: 3px;
+    line-height: 30px;
+	border-radius: 20px;
+	&.btn-flag-red{
+		background: rgba(255, 0, 0, 0.05);
+		border-color:#f00;
+		color:#f00;
+		&:hover{
+			background:rgba(255, 0, 0, 0.02);
+			border-color:rgba(255, 0, 0, 0.8);
+		}
+	}
+	&.btn-flag-info{
+		background: #e6f4f9;
+		border-color: #1f77b4;
+		color: #1f77b4;
+		&:hover{
+			background: rgba(230, 244, 249, 0.2);
+			border-color:rgba(31, 119, 180, 0.8);
+		}
+	}
+}
+
+.nav-style-1{
+	border-bottom: 1px solid #e4e3e8;
+	> li{
+		>a{
+			padding:8px 15px;
+			border-radius:4px 4px 0 0;
+			border-bottom:none;
+			background-color:#e6f4f9;
+			color:#111;
+			&:hover{
+				background-color:#1f77b4;
+				border-color: #1f77b4;
+			}
+		}
+		&.active{
+			>a{
+				background-color: #1f77b4;
+				border-color: #1f77b4;
+			}
+		}
+	}
+}
+
+.activeUserWidget{
+	display:block;
+	text-align:center;
+	padding:45px 0;
+	position:relative;
+	z-index:2;
+	.rightNowText{
+		font-size:28px;
+		display:block;
+	}
+	
+	.activeUsers{
+		font-size: 6.5em;
+		line-height:100%;
+	}
+	.activeUserTextBelow{
+		display: block;
+		font-size: 14px;
+	}
+}
+
+.gaqKb{
+	padding: 10px 0;
+	margin: 30px 0 0;
+	display: inline-block;
+	width: 100%;
+	text-align:center;
+}
+.garab {
+	margin-bottom:5px;
+	.action-filter{
+		display: inline-block;
+		margin-right:4px;
+		em{
+			height:0.8em;
+			width:0.8em;
+			display:inline-block;
+		}
+		span{
+			padding:0 3px;
+		}
+	}
+}
+
+.gaow{
+	white-space:nowrap;
+	.action-filter{
+		display: inline-block;
+	}
+	.GAeUm{
+		border-radius:4px 0 0 4px;	
+	}
+	.gafv{
+		color:#FFF;
+		&:last-child{
+			border-radius:0 4px 4px 0;
+		}
+	}
+	
+	.GAeUt{
+		height:19px;
+		vertical-align: top;
+	}
+}
+
+.tabletRemove{
+	.GAeUd {
+		border-radius:0 4px 4px 0;
+	}
+}
+
+.GAeUm, .gaom em{background-color:#50b432;}
+.GAeUd, .gaod em{background-color:#ed561b;}
+.GAeUt, .gaot em{background-color:#058dc7;}
+
+.dashlets {
+	height:auto;
+	.panel-reports{
+		min-height: 150px;
+	}
+}
+
+.panel-reports{
+	&.panel-highlight{
+		border-top:4px solid #1f77b4;
+		&:before{
+			content: '';
+			border-top: 4px solid #ed561b;
+			width: 50%;
+			height: 4px;
+			position: absolute;
+			right: 0;
+			top: 0px;
+		}
+	}
+}
+
+.lwg{
+	background-color: #fff;
+	display: inline-block;
+	padding: 20px;
+	margin: 50px auto;
+	border: 2px dashed #ddd;
+	border-radius: 4px;
+}
+
+@include media(">tablet") {
+	.brick{
+		&.small30{
+			width: 30%;
+			height: 355px;
+		}
+		&.small68{
+			width:68%;
+			height:355px;
+		}
+	}
+	.tableHeadFixed {
+		position:relative;
+		th{ 
+			position:absolute;
+		}
+	}
+	
+	.panel-reports{
+		&.panel-highlight{
+			&:before{
+				top:-4px;
+			}
+		}
+	}
+}
+
+@include media("<tablet") {
+	.nav-style-1{
+		margin-top:20px;
+		padding-bottom:0;
+	}
+
+}
+
+.loader-block{
+	  background-image: url(../../../img//chart-loader.gif);
+	  background-position:center 50%;
+	  background-repeat: no-repeat;
+	  height: 100%;
+	  position: absolute;
+	  left: 0;
+	  text-align: center;
+	  top: 0;
+	  width: 100%;
+	  background-color:#fff;
+	  z-index: 999;
+}
+
+.mw-400{
+	display: inline-block;
+    word-break: break-word;
+    max-width: 400px;
+}
+
+.npf-close {
+    right: 0;
+    top: 5px;
+    color: #fff;
+    opacity: 0.9;
+    font-size: 18px;
+    position: relative;
+	&:hover{
+		color: #fff;
+	}
+}
+
+.erroralert{
+	padding: 10px;
+	background-color: rgba(255, 0, 0, 0.04);
+	border: 1px solid rgba(255, 0, 0, 0.2);
+	border-left: 2px solid #f00;
+	color: #f00;
+}

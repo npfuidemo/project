@@ -1,0 +1,359 @@
+.stepsErp{display:block;width:100%;margin:30px auto;}
+.stepsErp .nav-tabs{background-color:transparent;border:0; position:relative;}
+.stepsErp .nav-tabs li.active .step, 
+.stepsErp .nav-tabs li .step:hover{
+	background-color:#058dc7;
+	color: #fff;
+	border:1px solid #fff;
+}
+.stepsErp .nav-tabs li.prevState .step, 
+.stepsErp .nav-tabs li.prevState .step:hover{
+	background-color: #e6f4f9;
+    color: #058dc7;
+    border-color: #058dc7;
+}
+
+.stepsErp .nav-tabs li .step{
+	background-color: #fff;
+    padding: 2px 8px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 20px;
+    margin-right: 5px;
+    border: 1px solid;
+}
+.stepsErp .nav-tabs:before {
+    position: absolute;
+    border-left: 1px solid #058dc7;
+    width: 1px;
+    z-index: 0;
+    left: 12px;
+    height: 100%;
+}
+.stepsErp .nav-tabs li{width:100%;margin-bottom:20px;}
+.stepsErp .nav-tabs li:last-child{margin-bottom:0;}
+.stepsErp .nav-tabs li .steps_txt{color: #b2b2b2;font-weight: 500;margin-bottom:0;}
+.stepsErp .nav-tabs li.active .steps_txt{color: #111;}
+.stepsErp .nav-tabs li.prevState .steps_txt{color:#666;}
+
+.clickWidget{
+	position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color:rgba(5, 141, 199, 0.02);
+    border-top:1px solid rgba(5, 141, 199, 0.1);
+	span{
+		line-height: 20px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+		color: #666;
+	}
+}
+
+.infoMsg{
+	margin-bottom:15px;
+    border: 1px solid rgba(5, 141, 199, 0.2);
+    padding: 10px;
+    border-left: 3px solid #058dc7;
+    background-color: rgba(230, 244, 249, 0.1);
+}
+
+.erp-box{padding:20px;}
+
+.request-response label{margin-right:20px;}
+.request-response input{margin-right:4px;}
+.keyValue{background-color:#fbfcfd;padding:10px 20px 0 !important;border:1px solid #eee;margin-top:10px;border-radius:2px;}
+.npf-form-group .keyValue .form-control{height:36px;}
+.keyValue:before{content:'';border-width:8px;border-style:solid;border-color:transparent transparent #eee transparent;position:absolute;left: 15px;top:-16px;}
+.logicBox{background-color:#fafafa;padding:10px;border:1px solid #f2f2f2;}
+.alert{font-size:14px!important;font-weight:400;}
+
+.stepsErp input, .stepsErp textarea {font-size:12px;}
+
+.stepsErp .nav-tabs li:not(.prevState).active:after {
+    content:'';
+    border-color:transparent #fff transparent transparent;
+    border-style:solid;
+    border-width:10px;
+    position:absolute;
+    right:-20px;
+    top:2px;
+}
+
+.panel-group .panel.panel-default{border-left-width:2px;}
+.panel-group .panel-default:nth-child(10n+1){border-left-color:#e84118}
+.panel-group .panel-default:nth-child(10n+2){border-left-color:#fbc531}
+.panel-group .panel-default:nth-child(10n+3){border-left-color:#487eb0}
+.panel-group .panel-default:nth-child(10n+4){border-left-color:#44bd32}
+.panel-group .panel-default:nth-child(10n+5){border-left-color:#00bcf2}
+
+.flotifyLabelCustom{
+	.form-group{
+		&.floatifyDiv{
+			margin-bottom:20px;
+		}
+	}
+	.flc{
+		.floatify__label{
+			background-color: transparent;
+			top: -17px;
+			left: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+/* Root element */
+#fullscreen{position:relative;}
+.fullScreenIcon{color:#111;position:absolute;right:0;top:0;}
+.exitfullscreen {position: fixed;}
+
+/* Syntax highlighting for JSON objects */
+ul.json-dict, ol.json-array {
+  list-style-type: none;
+  margin: 0 0 0 1px;
+  border-left: 1px dotted #ccc;
+  padding-left: 2em;
+}
+.json-string {
+  color: #0B7500;
+}
+.json-literal {
+  color: #1A01CC;
+  font-weight: bold;
+}
+
+/* Toggle button */
+a.json-toggle {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+a.json-toggle:focus {
+  outline: none;
+}
+a.json-toggle:before {
+  font-size: 1.1em;
+  color: #c0c0c0;
+  content: "\25BC"; /* down arrow */
+  position: absolute;
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  line-height: 1em;
+  left: -1.2em;
+}
+a.json-toggle:hover:before {
+  color: #aaa;
+}
+a.json-toggle.collapsed:before {
+  /* Use rotated down arrow, prevents right arrow appearing smaller than down arrow in some browsers */
+  transform: rotate(-90deg);
+}
+
+/* Collapsable placeholder links */
+a.json-placeholder {
+  color: #aaa;
+  padding: 0 1em;
+  text-decoration: none;
+}
+a.json-placeholder:hover {
+  text-decoration: underline;
+}
+
+.erpConfSection{
+	label {
+		margin-bottom: 0;
+		font-weight: 400;
+		&.font14{
+			font-size:14px;
+			font-weight:500;
+		}
+	}
+}
+
+.validateBtn{
+	margin-top:-2px;
+}
+
+.chatbots_createchatbot #content, 
+.chatbots_chatbotsteptwo  #content,
+.chatbots_chatbotstepthree  #content 
+{
+    padding: 54px 0 48px;
+}
+
+.erpConfSection{
+	display:flex;
+	width:100%;
+	.content-left{
+		background-color: #eef2f6;
+		width: 20%;
+		padding: 20px;
+		min-height:calc(100vh - 102px);
+		position:relative;
+		.onlyTitle{
+			margin-top:0;
+			width:100%;
+			span{
+				color: #333;
+				display: block;
+				font-size: 14px;
+				font-weight: normal;
+				text-transform: capitalize;
+				line-height:150%;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				width: 100%;
+				white-space: nowrap;
+			}
+			
+		}
+	}
+
+	.content-main{
+		width: 80%;
+		vertical-align: top;
+		position:relative;
+	}
+}
+
+.npf-form-group .npf-textarea .form-control {
+    height: auto !important;
+}
+
+.light-blue-accodian{
+	&.panel-group{
+		.panel{
+			border-left-width:2px;
+			border-left-color:#eef2f6;
+			background-color:#fff;
+			> .panel-heading{
+				background-color:#fff;
+				a[aria-expanded="true"] {
+					background-color:lighten(#eef2f6, 4%);
+				}
+			}
+		}
+	}
+}
+
+.light-blue-accodian .panel-default + .panel-default{margin-top:10px;}
+.light-blue-accodian .panel-default:nth-child(10n+1){border-left-color:#e84118}
+.light-blue-accodian .panel-default:nth-child(10n+2){border-left-color:#fbc531}
+.light-blue-accodian .panel-default:nth-child(10n+3){border-left-color:#487eb0}
+.light-blue-accodian .panel-default:nth-child(10n+4){border-left-color:#44bd32}
+.light-blue-accodian .panel-default:nth-child(10n+5){border-left-color:#00bcf2}
+.light-blue-accodian .panel-default:nth-child(10n+6){border-left-color:#2f3640}
+.light-blue-accodian .panel-default:nth-child(10n+7){border-left-color:#f368e0}
+.light-blue-accodian .panel-default:nth-child(10n+8){border-left-color:#ec008c}
+.light-blue-accodian .panel-default:nth-child(10n+9){border-left-color:#10ac84}
+.light-blue-accodian .panel-default:nth-child(10n+10){border-left-color:#a29bfe}
+
+
+.requestResponse{
+	label{
+		margin: 0 15px 0 0;
+		font-weight:normal;
+		input[type="radio"]{
+			margin-right:5px;
+		}
+	}
+}
+
+.labelViewInside{
+	.insideField{
+		position:relative;
+		> label{
+			position:absolute;
+			z-index: 1;
+			left: 15px;
+			font-size:11px;
+			color:#999;
+			top:7px;
+			margin:0;
+			line-height:100%;
+		}
+	}
+	.chosen-container-single .chosen-single{
+		padding-top: 12px;
+		line-height: 30px;
+		font-weight:500;
+	}
+	.chosen-container-single .chosen-single div{ line-height:52px;}
+}
+
+/*** Chosen Multiselect css which need to make sass file ***/
+.chosen-container-multi .chosen-choices{
+	padding:5px 8px
+}
+.chosen-container-multi .chosen-choices li.search-choice{
+	border-color:#31708f;
+	background-color:rgba(0,68,101,.1);
+	background-image:none;color:#31708f;
+}
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:before {
+	color:#31708f
+}
+
+.button-pos-bottom{
+	position: absolute;
+    bottom: 3px;
+    width: 100%;
+    left: 0;
+    padding: 5px 15px;
+    text-align: right;}
+	
+.erpConfSection .content-left .panel-default > .panel-heading{ background-color:#fff;}
+.erpConfSection .content-left .panel-title {
+    font-size: 14px;
+    font-weight: 400;
+}
+.erpConfSection .content-left input[type="text"] {
+    height: 34px;
+}
+
+
+.flexbox{
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:flex;
+	flex-wrap:wrap
+}
+.space-between{
+	justify-content:space-between;
+	-webkit-box-align:space-between;
+	-moz-box-align:space-between;	
+}
+
+.option-chatbot{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0px;
+    border-bottom: 1px solid #eee;
+    z-index: 11;
+}
+
+.option-chatbot-list{ padding: 0 15px;}
+
+.preview_option{margin:5px 0;}
+
+.custom-width{border-left:1px solid #eee;padding-left:10px;padding-top:4px;}
+.custom-width .form-group{ max-width:70px;}
+.custom-width .form-group .form-control{width:105%;}
+
+.preview-screen{ margin-right:10px;}
+.preview-screen > a.active {
+    color: #111;
+}
+.preview-screen > a {
+    color: #ddd;
+    margin: 0 5px;
+}
+
+.option-chatbot-list h4{ margin-top:18px;}

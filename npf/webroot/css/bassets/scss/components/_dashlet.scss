@@ -1,0 +1,48 @@
+.dashletsContainer{
+	padding-top:10px;
+	.category{
+		border-bottom: 1px solid #eee;
+		padding:10px 0;
+		h4{
+			margin:0 0 5px;
+			color:#004465;
+			font-size: 14px;
+		}
+		p{
+			font-size: 12px;
+			line-height: 18px;
+			color: #666;
+			margin-bottom:0;
+		}
+		&:hover{
+			background-color: rgba(0,68,101,.02);
+		}
+	}
+}
+
+.modal{
+	&.right{
+		.modal-body{
+			&.dashletsContainer{
+				padding:0 15px 38px;
+			}
+		}
+	}
+}
+
+@include media("<tablet") {
+	.catForm{
+		margin-top:10px;
+	}
+}
+
+@include media(">tablet") {
+	.catForm{
+		display: inline-block;
+		width: 210px;
+		top: 0px;
+		position: relative;
+		margin-right: 30px;
+		float: right;
+	}
+}

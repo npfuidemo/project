@@ -1,0 +1,120 @@
+$base-color:#4b7bdd;
+$light-blue-color:#f6f8fe;
+$white-color:#ffffff;
+$grey-color:#cccccc;
+$black-color:#000000;
+$verified-color: #00a65a;
+$unverified-color: #dd4b39;
+$both:both;
+$hid:hidden;
+
+$fr:right;
+$fl:left;
+// size
+$z:0;
+$two:2px;
+$zero:0;
+$both:both;
+$hid:hidden;
+$fr:right;
+
+
+//Utilities
+$none:none;
+$top:top;
+$right:right;
+$left:left;
+$bottom:bottom;
+$center:center;
+$middle:middle;
+
+$fw300:300;
+$fw500:500;
+$fw700:700;
+$fw900:900;
+
+$nor:normal;
+
+$bl:block;
+$in:inline;
+$inbl:inline-block;
+$fl:flex;
+
+$fix:fixed;
+$abs:absolute;
+$rel:relative;
+$sti:sticky;
+
+$full:100%;
+$hald:50%;
+
+
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(117, 183, 64) !default;
+
+/// whatsapp brand color
+/// @type Color
+$whatsapp-color: rgb(37, 211, 102) !default;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(17, 17, 17) !default;
+
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// White color
+/// @white Color
+$white-color: rgb(255, 255, 255) !default;
+
+$sidebar-color: #2f353a;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+$primary-color: #00c0ef;
+$instance-color: #B33771;
+$secondary-color: #9d1cb2;
+$tertiary-color: #f39c12;
+$verified-color: #00a65a;
+$unverified-color: #dd4b39;
+$application-color: #195d8e;
+$enrollment-color: #e377c2;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+
+$base-image-url: '../../../img/' !default;
+$base-font-url: '../../fonts/' !default;
+
+
+
+ 

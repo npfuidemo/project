@@ -1,0 +1,81 @@
+.chosen-container {
+  vertical-align: top; }
+.chosen-container .chosen-single {
+  line-height: 30px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 13px !important;
+  border-radius: 2px;
+  color: #333; }
+.chosen-container .chosen-single span {
+  color: #333; }
+.chosen-container.chosen-container-single-nosearch .chosen-search {
+  display: none; }
+.chosen-container.chosen-container-single-nosearch .chosen-drop {
+  padding-top: 5px; }
+.chosen-container.chosen-container-multi .chosen-choices {
+  border-color: #ccc;
+  border-radius: 2px;
+  box-shadow: none; }
+
+.SumoSelect {
+  min-width: 100%; }
+.SumoSelect > .CaptionCont {
+  padding: 5px 10px;
+  border-radius: 2px;
+  box-shadow: none; }
+.SumoSelect > .CaptionCont > span.placeholder {
+  color: #333; }
+.SumoSelect > .CaptionCont > label {
+  line-height: 30px; }
+.SumoSelect.open .search-txt {
+  padding: 5px 10px; }
+.SumoSelect.open > .optWrapper {
+  top: 33px; }
+
+.form-control {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  color: #333 !important;
+  border-color: #ccc !important;
+  border-radius: 2px !important; }
+
+.form-group {
+  padding-bottom: 0; }
+
+.filter-block .btn, .bottomButton .btn {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.npf-form-group .form-control {
+  height: 32px !important; }
+.npf-form-group textarea.form-control {
+  height: auto !important; }
+.npf-form-group .iconDate {
+  top: 7px;
+  font-size: 12px; }
+
+label {
+  font-weight: 500; }
+
+/*** For Big Fields ***/
+.filter-block .chosen-container .chosen-single {
+  line-height: 38px; }
+.filter-block .SumoSelect {
+  min-width: 100%; }
+.filter-block .SumoSelect > .CaptionCont {
+  padding: 8px 10px 9px; }
+.filter-block .SumoSelect > .CaptionCont > label {
+  line-height: 38px; }
+.filter-block .SumoSelect.open .search-txt {
+  padding: 8px 10px; }
+.filter-block .SumoSelect.open > .optWrapper {
+  top: 38px; }
+.filter-block .npf-form-group .form-control {
+  height: 40px !important; }
+.filter-block .npf-form-group .iconDate {
+  top: 10px; }
+.filter-block .formAreaCols {
+  margin-top: 10px !important; }
+
+/*# sourceMappingURL=pref-config.css.map */

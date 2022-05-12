@@ -1,0 +1,38 @@
+/*** Exam Entrigation Page ***/
+.checkbox-inline-3 .checkbox {display: inline-block;margin-right:3%;min-width:30%;}
+.checkbox-exam{position:static;}
+.checkbox-exam.checkbox{margin-bottom:0;}
+.checkbox-exam.checkbox + .checkbox-exam.checkbox{margin-top:10px;}
+.smallLabel{font-size: 14px;line-height: 1.25;color: #333;}
+.actionDivId{background-color:#fafafa;padding:15px;border:1px solid #f2f2f2;margin-bottom:20px;position:relative;}
+.exam_slot_booking{z-index:111111;}
+.exam_result{z-index:11111;}
+.exam_re_schedule{z-index:1111;}
+.exam_retake{z-index:111;}
+.exam_graph{z-index:11;}
+.collected_by_vendor{z-index:1;}
+
+/* Exam step 3 */
+.examVendorClass{padding: 10px;}
+.vendorConfig{padding: 15px;border:1px solid #eee;border-left:3px solid #ccc;margin-bottom:15px;}
+.vendorConfig:nth-child(5n+1){border-left-color:#e84118;}
+.vendorConfig:nth-child(5n+2){border-left-color:#fbc531;}
+.vendorConfig:nth-child(5n+3){border-left-color:#487eb0;}
+.vendorConfig:nth-child(5n+4){border-left-color:#44bd32;}
+.vendorConfig:nth-child(5n+5){border-left-color:#00bcf2;}
+.vendorConfig:nth-child(5n+6){border-left-color:#2f3640;}
+.vendorConfig:hover{background-color: #f7f7f7;}
+
+.reTake .SumoSelect {max-width: 100%; width: 100%; min-width: 100%;}
+.fixed-scoring-field .chosen-container .chosen-results { position: relative; max-height: 100px; overflow-y: scroll;}
+.fixed-scoring-field .chosen-container .chosen-results li:last-child {position: sticky !important; bottom: 0; background: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, .07);}
+.fixed-scoring-field .chosen-container .chosen-results li:last-child:before { content: '+'; margin-right: 5px; background: #2b78e4; padding: 0; border-radius: 100%; width: 20px; height: 20px; padding: 2px; display: inline-block; color: #fff; text-align: center;}
+.fixed-scoring-field .chosen-container .chosen-results li.disabled-result:before{background: #85b1ef;}
+.mapping-card .panel{padding: 10px; box-shadow: none; margin: 0}
+.mapping-card [data-toggle="collapse"]{width: 100%; display: block; padding:10px 15px; position:relative; background: rgba(0,0,0,.01); color: #323232;}
+.mapping-card [data-toggle="collapse"]:after{content: '\f107'; font-family: FontAwesome; position:absolute; right: 20px;}
+.mapping-card [data-toggle="collapse"][aria-expanded="true"]:after{ transform: rotate(180deg);}
+.json-result-pre{min-height: 284px; max-height: 284px; margin-top: 10px; overflow: scroll;}
+.json-result-pre .fullScreenIcon{position: absolute; right: 10px; top: 10px;}
+.add_result_mapping_block{position: relative;}
+.add_result_mapping_block:before {content: ' ';  background: #fff;  width: calc(100% -  6px); height:  60px;    position: absolute;    right: 3px;    bottom: -20px;    border-top: 1px solid #f4f4f4;}

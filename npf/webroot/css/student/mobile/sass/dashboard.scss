@@ -1,0 +1,112 @@
+@import "partials/base/mixinVariables";
+@import "partials/theme/theme";
+@import "partials/base/base";
+@import "partials/fonts/font";
+@import "partials/fonts/font-awesome";
+@import "partials/layout/layout";
+@import "partials/components/override";
+@import "partials/components/offCanvasNav";
+@import "partials/components/button";
+@import "partials/components/header";
+@import "partials/components/notification";
+@import "partials/components/profile";
+@import "partials/components/dropdown";
+@import "partials/components/table";
+@import "partials/components/tab";
+@import "partials/components/floatLabel";
+@import "partials/components/form";
+@import "partials/components/accodian";
+@import "partials/components/utility";
+@import "partials/components/chat";
+@import "partials/components/feedback";
+@import "partials/components/passwordview";
+@import "partials/components/timeline";
+@import "partials/components/filter";
+@import "partials/components/footer";
+@import "partials/components/callout";
+@import "partials/components/image_gallery";
+@import "partials/components/offCanvasMOdalheader";
+@import "partials/components/maintenance";
+@import "partials/components/countryCode";
+@import "partials/components/whatsapp-communication-widget";
+@import "partials/components/checkBoxToggle";
+@import "partials/components/notify-alert";
+
+
+.page-header-links {
+    display: none;
+}
+
+.help_text.small {
+    font-size: 85%;
+}
+
+.document-row {
+    display: grid;
+    row-gap: 1em;
+    column-gap: 0.5em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.pdall8 {
+    padding: 8px;
+}
+
+.mgr10 {
+    margin-right: 10px;
+}
+
+.mgr5 {
+    margin-right: 5px;
+}
+
+.mgb5 {
+    margin-bottom: 5px;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.btn-doc{
+    border: 1px solid #337ab7;
+}
+
+.text-danger{
+    color : #dc3545 !important;
+}
+
+.document-table label {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #999;
+    display: block;
+    font-size: 12px;
+}
+
+.file-upload-btn {
+    max-width: 130px;
+}
+
+.single-pay-btn{
+    .dropdown-menu{
+        border: none;
+        top: 41px;
+        min-width: 100%;
+        &:before{
+            content: '\f0d8';
+            font: normal normal normal 28px/1 FontAwesome;
+            position: absolute;
+            right: 15%;
+            color: #f0f0f0;
+            top: -20px;
+        }
+        >li>a{
+        padding: 10px;
+        font-size: 90%;
+        font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.wrapText{
+	word-break: break-word;
+    display: inline-block;
+    white-space: normal;
+	&.wrapBig{
+		max-width: 250px;
+		min-width: 180px;
+	}
+}

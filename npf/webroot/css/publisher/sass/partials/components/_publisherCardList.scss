@@ -1,0 +1,50 @@
+.cardList {
+    display: table;
+    margin: 0 0 20px;
+    width: 100%;
+	border-spacing: 20px 0;
+	border-collapse: separate;
+	.publisherCard{
+		display:table-cell;
+		background-color:#fff;
+		box-shadow: 0 0 5px #aaa;
+		.pubCardHead {
+			background-color: #eaeaea;
+			padding: 8px 10px;
+			text-align: center;
+			font-family: "opensanssemibold", sans-serif;
+		}
+		.pubCardName {
+			padding: 20px 10px;
+			text-align: center;
+		}
+	}
+	
+}
+
+@media screen and (min-width:769px) and (max-width:970px) { 
+ .cardList {
+    display: block;
+	text-align:center;
+	padding: 0 15px;
+	.publisherCard{
+		display:inline-block;
+		margin: 1%;
+		width: 47%;
+	}	
+  }
+}
+
+@media screen and (max-width:768px) { 
+ .cardList {
+    display: block;
+	text-align:center;
+	padding: 0 15px;
+	margin: 20px 0;
+	.publisherCard{
+		display:inline-block;
+		margin:0 0 15px;
+		width: 100%;
+	}	
+  }
+}

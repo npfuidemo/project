@@ -1,0 +1,92 @@
+.fullHeightAutoScroll{
+    max-height:calc(100vh - 100px);
+    min-height:calc(100vh - 100px);
+	overflow:auto;
+
+    .multiColorTable{
+        height:100%;
+        &.mctHeadFix{
+            .colGroup1{
+                background-color:#ededed;
+                white-space:nowrap;
+            }
+            .colGroup2{
+                background-color:#f7f7f7;
+                white-space:nowrap;
+            }
+
+            & .rowone th {
+                top:1px;
+                font-weight:900;
+                min-width:120px;
+
+                &:first-child{
+                    padding-left:20px!important;
+                    background:#fff!important;
+                    min-width:200px;
+                    max-width:300px;
+                }
+                
+            }
+
+            & .rowtwo th {
+                top:39px;
+                font-weight:500;
+                min-width:120px;
+                
+            }
+        }
+
+        table{
+            margin-bottom:$z;
+            thead{ 
+                tr{
+                    th{ 
+                        position:sticky;
+                        z-index:999;
+                        border:none !important;
+                        vertical-align:middle;
+                        white-space:nowrap;
+                        padding:$two*5 $two*4!important;
+    
+                        &.fixleft{
+                            position: sticky;
+                            left:0px;
+                            top:0;
+                            text-align:left;
+                            z-index:999999;
+                        }
+                        
+                    }
+                    
+                }
+            }
+
+            tr{
+                td{
+                    vertical-align:middle!important;
+                    white-space:nowrap;
+                    padding:$two*6 $two*5!important;
+    
+                    &.fixleft{
+                        position: sticky;
+                        left:0px;
+                        background: #fff;
+                        z-index: 99;
+                        text-align:left;
+                    } 
+                
+                    &:first-child{
+                        padding-left:20px!important;
+                        background:#fff!important;
+                        min-width:200px;
+                        max-width:300px;
+                    }
+                }
+
+                
+            }
+
+        }
+    }
+}

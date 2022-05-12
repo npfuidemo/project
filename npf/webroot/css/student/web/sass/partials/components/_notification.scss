@@ -1,0 +1,81 @@
+.navbar-nav{
+	.notification{
+		a{
+			&.dropdown-toggle{
+				padding:15px;
+				margin:0;
+				color: #111;
+			}	
+		}
+		.fa-bell-o{
+			font-size: 24px;
+		}
+		.badge-notifi{
+			background-color: #ec4d51;
+			position: absolute;
+			right: 10px;
+			top: 6px;
+		}
+		
+		.dropdown-menu{
+			min-width:400px;	
+		}
+		>a{
+			&:focus, &:hover{
+				background-color: rgba(0,0,0,0.1) !important;
+			}
+		}
+		&.open{
+			>a{
+				background-color: rgba(0,0,0,0.1) !important;
+			}
+		}
+	}
+}
+
+.dropNotification{
+	padding:5px 0;
+	list-style:none;
+	font-size:13px;
+	line-height:18px;
+	color: #111;
+	> li{
+		padding:8px 10px 8px 35px;
+		border-bottom: 1px solid #eee;
+		position:relative;
+		cursor: pointer;
+		&:last-child{
+			border-bottom:none;
+		}
+		&.new{
+			font-family:$font-stack-semibold;
+		}
+		&.viewed{}
+		.notifiCon{
+			position: absolute;
+			left: 8px;
+			top: 6px;
+			font-size: 12px !important;
+			background-color: #75b740;
+			padding: 5px 5px;
+			color: #fff;
+			border-radius: 50%;
+		}
+	}
+}
+
+.showNotificationList{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	background-color: #f2f2f2;
+	padding: 5px 0;
+	font-size:12px;
+	font-family: $font-stack-semibold;;
+}
+
+.gmacNotification{
+	.dropNotification>li .notifiCon{
+		background-color:#006DA5;
+	}
+}

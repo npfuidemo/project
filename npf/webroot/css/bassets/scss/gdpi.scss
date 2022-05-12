@@ -1,0 +1,64 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Pages
+@import
+  'components/tabs',
+  'components/fieldSize';
+  
+// GDPI Specific Styles
+.gdpi-form{
+	.form-control{
+		margin:0 !important;
+	}
+	label[for="captionIdValue"]{
+		font-size:14px;
+		cursor:pointer;
+	}
+	input[type="checkbox"]{
+		margin-right:5px;
+	}
+	.panel-title a em {
+		color:#999;
+		margin-right:5px;
+		font-style:normal;
+	}
+	.slot-allocation{
+		label{
+			margin-right:10px;
+			cursor:pointer;
+		}
+	}
+	.fieldtab{
+		text-align:left;
+	}
+}
+
+.gdpiProcessForm{
+	padding:15px;
+	background-color:#fdfdfd;
+	margin:0 -15px;
+	box-shadow:0 3px 4px -4px #aaa;
+	label{
+		text-align:left;
+		margin:0;
+		input[disabled="disabled"] + span{
+			color:#999;
+		}
+	}
+}
+input[type=checkbox], input[type=radio]{
+	display:inline-block;
+}
+.sumo_application_stage{
+	max-width:200px;
+	vertical-align:middle;
+	min-width:auto;
+}
+	

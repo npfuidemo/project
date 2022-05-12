@@ -1,0 +1,17 @@
+.btn-group-toggle{
+    .btn{
+        background:transparent!important;
+        border-color:#ccc;
+        box-shadow:none;
+        color:#666; 
+        &:hover{
+            background:transparent!important;
+            
+        }
+        &.active{
+            background:#4b7bdd!important;
+            border-color:#4b7bdd!important;
+            color:#fff!important;
+        }
+    }
+}

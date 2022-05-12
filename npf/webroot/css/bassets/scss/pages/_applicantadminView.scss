@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Counsellor Dashboard.
+// -----------------------------------------------------------------------------
+.cpList {
+    display: inline-block;
+    padding: 5px 10px;
+    width: 100%;
+	strong {
+		width: 180px;
+		display: inline-block;
+	}
+}
+
+.btn[type="button"]{
+	padding: 8px 30px;
+    font-size: 14px;
+}

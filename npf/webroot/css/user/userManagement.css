@@ -1,0 +1,68 @@
+.userPageHolder {background-color: #f2f2f2;display: inline-block;width: 100%;border: 1px solid #f2f2f2;box-shadow: 0px 0px 10px #f2f2f2;}
+.userImg {display:inline-block;width:100%;padding:20px;}
+.userData {display:inline-block;width:100%;background-color:#fff;vertical-align:top;}
+
+.userPageHolder .form-group label.control-label{font-size:14px;color:#111;margin-top:12px;}
+.userPageHolder .SumoSelect{max-width:100%;}
+
+.userPageHolder .merge_field_div .bs-dropdown-to-select-group { padding-left:0;padding-right: 12px;}
+.userPageHolder .merge_field_div .bs-dropdown-to-select span{color:#7f7f7f;}
+
+.userImgDumy{background-color:#ddd;display:inline-block;border-radius:50%;border:1px solid #ccc;height:100px;max-height:100px;max-width: 100%;overflow: hidden;width: 100px;}
+.userImgDumy img{width:100px;height:100px;}
+.userImgDumy i{line-height:100px;color:#999;}
+
+.graphSlider{background-color:#fcfcfc;padding:15px;border:1px solid #ddd;border-radius:2px;box-shadow:0 0 5px #f2f2f2;overflow:hidden;margin-bottom:20px;}
+.userManagerSlider .owl-buttons {top: 50%;position:absolute; width:100%; margin-top:-10px;}
+.userManagerSlider .owl-prev{border:1px solid #ddd;padding:4px 10px;float:left; background-color:#f2f2f2;}
+.userManagerSlider .owl-next{float:right;padding:4px 10px;border:1px solid #ddd;background-color:#f2f2f2;}
+.userManagerSlider .owl-prev:before {content: '';border-color: #ccc #ccc transparent transparent;border-width:5px;border-style:solid;position:absolute;bottom:-10px;left: 0;}
+.userManagerSlider .owl-next:before {content: '';border-color:transparent;border-width: 5px;border-style:solid;position:absolute;bottom:-10px;right: 0;}
+
+.showforList{clear:both;margin:5px 0;}
+
+/*** User Limit Exceeded ***/
+#MsgBody{margin-bottom:0;}
+.amDetail{margin:0;padding:0;display:inline-block;width:100%;text-align:left;vertical-align:middle;}
+.amDetail li{display:inline-block;list-style:none;vertical-align:middle;}
+.amDetail .amImg{width:70px;height:70px;overflow:hidden;border-radius:50%;border:1px solid #333;}
+.amDetail .amInfo{margin-left:10px;}
+
+/**  Browse button hover Color ***/
+.input-group-btn .npf-btn{border:1px solid #333;}
+.input-group-btn .npf-btn:hover{border-color:#aaa;}
+
+/*** remove filename ***/
+.file-attachmentui{position:relative;}
+.file-attachmentui small{display:none;}
+.file-attachmentui span{display:none;position:absolute;top:-3px;right:72px;color:#f00;font-size:18px;}
+.file-attachmentui:hover span{display:block;}
+
+/*** Popover ***/
+.newTableStyle .table>tbody>tr:hover>td{background-color:#f5f6f8!important}
+.popover.right > .arrow:after{border-right-color: #f2f2f2;}
+
+#uploaderrro + .info{display:none;}
+
+.npf-btn.disabled{background-color:#ddd !important;cursor:default;color:#333 !important;border-color:#aaa; }
+
+.npf-form-group .form-control {
+	height:36px !important;
+}
+
+.npf-form-group .chosen-container .chosen-single{
+    line-height:36px;
+}
+
+.npf-form-group .SumoSelect > .CaptionCont {
+        padding: 6.6px 10px;
+        border-radius: 2px;
+        box-shadow: none;
+}
+
+@media (min-width:768px){
+.userImg {width:20%;}
+.userData {width:80%;padding:20px;}
+.smRight{ text-align:right;}
+.showforList{clear:none;}		
+}

@@ -1,0 +1,74 @@
+ .styled-input {
+    margin: 2rem 0 1rem;
+    position: relative;
+
+      .placeholder{
+      color: #999;
+      padding:0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      pointer-events: none;
+      background:$white-color;
+      font-weight:normal;
+      font-size:14px;
+      }
+
+      input{
+         border:0; 
+         border-bottom:1px solid #ccc; 
+         width:100%;
+
+      &:focus{outline:none;}
+      select{
+         border:0; 
+         border-bottom:1px solid #ccc; 
+         width:100%;
+         &:focus{outline:none;}
+      }
+
+      textarea{
+         border:0; 
+         border-bottom:1px solid #ccc; 
+         width:100%;
+         &:focus{outline:none;}
+      }
+      
+      & ~ .line,textarea ~ .line {
+         display: block;
+         width: 0;
+         height:2px;
+         background:$base-color;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         -webkit-transition: all 0.5s ease;
+         transition: all 0.5s ease;
+      }
+      &:focus ~ .line,
+      textarea:focus ~ .line {
+        width: 100%;
+        -webkit-transition: all 0.05s ease;
+        transition: all 0.05s ease;
+      }
+
+      &:focus ~ .placeholder, textarea:focus ~ .placeholder, &:valid ~ .placeholder, textarea:valid ~ .placeholder {
+         font-size: 0.75em;
+         color:$base-color;
+         top: -2.25rem;
+         -webkit-transition: all 0.5s ease;
+         transition: all 0.5s ease;
+        }
+   }
+
+   .SumoSelect{
+      .CaptionCont {
+         border:0; 
+         border-bottom:1px solid #ccc; 
+         width:100%;
+         border-radius:0;
+      }
+   }
+}

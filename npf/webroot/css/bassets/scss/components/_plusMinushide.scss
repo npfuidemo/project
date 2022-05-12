@@ -1,0 +1,32 @@
+.plusMinushide,.Whatsapp-business-number-div{
+    .row,.rowSpaceReduce{
+        &:first-child{
+            .remove-div{
+                display:none!important;
+            }
+            .add-div{
+                display:none;
+            }
+
+            .report-form label{
+                font-size:14px !important;
+            }  
+        }
+        .add-div{
+            display:none;
+        }
+        &:last-child{
+            .add-div{
+                display:inline-block;
+            }
+            .remove-div{
+                display:inline-block;
+            }
+        }
+        &.clone+.clone{
+            .report-form-cloned .control-label{
+                display:none;
+            }
+        }  
+    }
+}

@@ -1,0 +1,103 @@
+.button-container{
+	margin-top:20px;
+}
+
+.btn-line-info{
+	border-color:$brand-color;
+	color:$brand-color;
+	font-size: 13px;
+	&:hover{
+		background-color:$brand-color;
+		color:#fff;
+	}
+}
+
+.btn-line-secondary{
+	border-color:#6c757d;
+	color:#333;
+	font-size: 13px;
+	&:hover{
+		background-color:#6c757d;
+		color:#fff;
+	}
+}
+
+.btn-success{
+	background-color:#75b740;
+}
+
+.btn-brand{
+	background-color:$brand-color;
+	color:#fff;
+	font-family:$font-stack-semibold;
+	&:hover{
+		color:#fff;
+		background-color:lighten($brand-color, 10%);
+	}
+}
+
+.btn-reset{
+	background-color:#e6e6e6;
+	font-family:$font-stack-semibold;
+	&:hover{
+		background-color:rgba(230, 230, 230, 0.8);
+	}
+}
+
+.btn-cancel{
+	font-family:$font-stack-semibold;
+	border:1px solid #aaa;
+	&:hover{
+		background-color:#fff;
+	}
+}
+
+.btn-c-size{
+	padding: 8px 25px;
+    font-size: 15px;
+}
+
+.qms-submit-btn{
+	border:none;
+}
+
+.btn-warning{
+	color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+	&:hover{
+		background-color:#f0ad4e;
+		border-color:#eea236;
+	}
+}
+
+.mock-btn{
+	margin-top:5px;
+}
+
+.category-table{
+	.btn{
+		margin:5px
+	}
+}
+//btn overwrite
+
+.btn-fill-blue {
+    background-color: #4b7bdd;
+    color: #fff;
+    border-color: #4b7bdd;
+	&:hover {
+		background-color: #fff;
+		color: #4b7bdd;
+	}
+}
+
+.btn-line-secondary {
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+	&:hover {
+		background-color: #6c757d;
+		color: #fff;
+	}
+}

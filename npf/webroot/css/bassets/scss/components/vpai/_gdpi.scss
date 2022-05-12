@@ -1,0 +1,112 @@
+.text-primary{color:$base-color!important;}
+ 
+.dropzone{border:1px dashed $base-color; background:#f9f9f9; border-radius:6px;
+ button{border:0;background:none;}
+ .fa{color:$base-color; font-size:36px;}
+ .or{color:$base-color;}
+  span{display:block; text-decoration:underline; color:#000}
+&:hover .or span{text-decoration:none;}
+}
+
+.linetab li a{
+  min-height:27px!important;
+}
+
+.vpaibox{
+ form{ 
+  label{margin:0; padding:0; font-size:14px!important; color:$black-color2!important;
+  }
+  .form-group{padding:0;}
+  .radio-inline,.radio,.checkbox,.checkbox-inline{margin:0 20px;}
+ }
+ .form-control[readonly]{background:$white-color;}
+ .input-group{
+  .form-control{border-radius:5px 0 0 5px!important;}
+ }
+ .criteriaSelectionDiv{position: relative; z-index:99999;}
+ .onlineBookingParameters,.offlineBookingParameters  {
+   .form-group{
+     .row{min-height:38px;}
+   }
+ }
+ .bootstrap-datetimepicker-widget a[data-action]{padding:0!important; margin:0;}
+ .w150{width:auto; max-width:100%; min-width:100px; word-break:break-word;}
+ .toggle__checkbox input[type=checkbox], .toggle__checkbox input[type=radio]{position: absolute;}
+ #intdate{min-width:100px; border-radius:5px 0 0 5px!important;}
+ #timeslot{min-width:60px; border-radius:5px 0 0 5px!important;}
+ .datePicker,.timePicker {font-size:12px;}
+ .switch{background:none; box-shadow:none; margin:0; padding:0;
+  .switch-handle{top:1px;}
+  .switch-input:checked ~ .switch-label{background:$base-color;}
+  .switch-label{font-size:12px;}
+ }
+ .minheight form{min-height:calc(100vh - 300px);}
+}
+
+.modal-content .modal-header{background:$base-color;}
+.modal-header .close{color:$white-color; opacity:1;}
+
+.processtabs-content .tab-content{padding:0;}
+
+.editabletags{min-height:80px; border:1px solid #ccc; padding:10px;}
+.tag{padding:5px 0;
+  .btn{cursor: text; display:inline;}
+  .btn[contenteditable="true"]{border:1px dashed $base-color;}
+  i{cursor: pointer; display:inline; margin-left:5px;}
+  &:hover i{color:$base-color;}
+}
+
+
+.vpaibox .minheight {
+  height:350px;
+}
+
+
+.greybg{background:#f2f2f2!important;}
+.text-warning{color:orange;}
+
+.mandetory:after{content:'*'; color:red;}
+ 
+
+.border-all{border:1px solid #f2f2f2!important;}
+.form-control{box-shadow:none; outline:0;}
+.form-control.bordernone{border:0!important}
+
+
+.offlineBookingParameters,.onlineBookingParameters{
+   .checkbox label, .radio label{padding-left:20px;}
+}
+
+.SumoSelect>.CaptionCont{box-shadow: none; padding: 0; border: 1px solid #f2f2f2; border-radius: 4px; min-height: 35px;
+ span {background: none;text-align: left;border: 0;border-radius: 0px; cursor: move; padding:5px 24px 5px 10px;
+ }
+}
+
+#addMoreProcess{position: absolute; top:15px; right:15px;}
+
+.SumoSelect>.optWrapper>.options li label{font-size:13px!important;}
+ 
+.addOptionDiv,.reviewSlotTable{margin:5px 0 0px 0;
+.saveOption{padding:7px 10px}
+.SumoSelect{min-width:auto; max-width:auto;;
+  .CaptionCont span{max-width:120px; min-width:120px;}
+  .optWrapper{position:sticky; min-width:100%; max-width:100%;
+    >.options{max-height:120px;}
+  }
+ }
+}
+.SumoSelect.open+.addOptionDiv{display:none!important;}
+
+.savebooking{position: relative;
+.form-control.slotCapacityValue{border-radius:5px 0 0 5px!important;}
+.saveBookingDetails{border-radius:0px 5px 5px 0; border:0; height:34px; padding:6px 10px;;}
+}
+
+.arrow-steps .step.current{background-color:$base-color;}
+.a.cke_dialog_ui_button_ok{background:$base-color!important; border-color:$base-color!important;}
+
+
+@media(max-width:1024px){
+.table-responsive-m{overflow-x:auto;}
+}
+ 

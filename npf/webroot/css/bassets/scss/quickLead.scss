@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/tabs';
+
+
+.fileBrowseCustomHeight{height:36px;}
+  .fileBrowsewithrest{ 
+    width:calc(100% - 40px); 
+    display:inline-block; 
+  .file,.input{
+    position: absolute;
+    width: calc(100% + 0px);
+    height: 36px;
+    top: 0;
+    .input_type_file {
+      position: absolute;
+      top:0;
+      z-index: 11;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      font-size: 26px;
+      opacity: 0;
+     cursor: pointer;
+    }
+  }
+  }
+
+  #resetbtn{
+    display:inline-block; 
+    border:0; 
+    text-align:center; 
+    width:32px; 
+    margin:0 0 0 5px; 
+    padding:11px 5px; 
+    vertical-align:top; 
+    border-radius:5px; 
+    background:#f2f2f2!important;
+
+  img{display:block; margin:0 auto;}
+
+  &:hover{
+    background:#dddddd!important;
+  }
+
+  }

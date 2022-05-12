@@ -1,0 +1,126 @@
+.tour-backdrop {
+  background-color: #000;
+  filter: alpha(opacity = 80);
+  opacity: .8;
+  position: absolute;
+  z-index: 1111;
+}
+
+.popover[class*="tour-"] {
+  font-family:$text-font-stack;
+  z-index: 1112;
+  padding:0;
+  background-color:#fff;
+  border-radius: 5px;
+  color:#111;
+  border:2px solid #4b7bdd ;
+  .popover-title{
+	background-color:#fff;
+	font-size: 15px;
+	border:none;
+	border-radius:5px;
+	margin-top:5px;
+  }
+  .popover-content {
+	padding: 6px 12px;
+	font-size: 13px;
+  }
+
+  .popover-navigation {
+    overflow: hidden;
+    padding: 9px 14px;
+	*[data-role="end"] {
+      float: right;
+    }
+    .btn{
+		&:first-child{
+			float: left;
+		}
+	}
+
+    *[data-role="prev"],
+    *[data-role="next"],
+    *[data-role="end"] {
+      cursor: pointer;
+
+      &.disabled {
+        cursor: default;
+      }
+    }
+  }
+
+  &.orphan {
+    left: 50%;
+    margin-top: 0;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .arrow {
+      display: none;
+    }
+  }
+  
+  &.left{
+	>.arrow{
+		right:-11px;
+		&:after{
+			border-left-color:#4b7bdd ;
+		}
+	}
+  }
+  
+  &.right{
+	>.arrow{
+		left:-11px;
+		&:after{
+			border-right-color:#4b7bdd ;
+		}
+	}
+  }
+  
+  &.top{
+	>.arrow{
+		&:after{
+			border-top-color:#4b7bdd ;
+		}
+	}
+  }
+  
+   &.bottom{
+	>.arrow{
+		&:after{
+			border-bottom-color:#4b7bdd ;
+		}
+	}
+  }
+}
+
+.tour-tour-element{
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 32px;
+	}
+	.advanceFilterModal{
+		background-color:#4b7bdd ;
+		color: #fff;
+	}
+}
+
+.closeTour {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ddd;
+	font-size:16px;
+}
+
+.tour .btn-npf {
+  color: #fff;
+  background-color: #4b7bdd ;
+  border-color: #4b7bdd ;
+}

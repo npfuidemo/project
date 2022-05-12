@@ -1,0 +1,74 @@
+@media (min-width:768px){
+  .equalheight{
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    display: flex;  
+    clear:both;
+  
+      &.row > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+
+        &>.well{
+          min-height:calc(100vh - 124px);
+          margin-bottom:0;
+        }
+    }
+  }
+
+  .offCanvasModal{
+    .equalheight{
+      .well{
+        height:calc(100vh - 124px)!important;
+        min-height:auto!important;
+        margin-bottom:0;
+      }
+    }
+  }
+
+}
+
+  .equalheight{
+  clear:both;
+
+    &.row > [class*='col-'] {
+      
+
+      &>.well{
+        background:#fff; 
+        @include border-radius($two*2+1); 
+        padding:$two*8 - 1px; 
+        height:100%; 
+        position:relative; 
+        border:$z; 
+        box-shadow:$none;
+        margin:0; 
+        /*margin:0 0 20px 0;*/
+
+
+          .help_video{ 
+                      margin-left:5px;
+
+              &>a{
+                font-size:15px; 
+                margin-left:5px; 
+                color:$grey-color;
+              &:hover,&:focus{
+                color:$base-color;
+                }
+              }
+          }
+          &.bhoechie-tab-content{
+            background:#f6f8fe!important;
+            padding:0;
+          }
+          
+      }
+  }
+
+  &.row > [class*='col-'] {
+    &.bhoechie-tab-menu .well{background:$white-color; min-height:calc(100vh - 200px);}
+    &.bhoechie-tab .well {padding:$z; background:#f6f8fe;}
+  }
+}

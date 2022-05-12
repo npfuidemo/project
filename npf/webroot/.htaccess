@@ -1,0 +1,626 @@
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>
+
+#<IfModule mod_headers.c>
+#    SetEnvIf Origin "https?://(www\.)?(srmdomain1.com|npf.com|srmist.edu.in)$" AccessControlAllowOrigin=$0$1
+#    Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+#    Header add Access-Control-Request-Headers "x-requested-with"
+#    Header add Access-Control-Allow-Methods "POST"
+#</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+#    RewriteCond %{HTTP_HOST} ^srmdomain1.com$ [OR]
+#    RewriteCond %{HTTP_HOST} ^www.srmdomain1.com$
+#    RewriteRule (.*)$ https://www.npf.com/$1 [R=301,L]
+
+
+    #forbidden requests block
+    RewriteCond %{REQUEST_URI} ^/login.cgi$ [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} MJ12bot.* [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} PxBroker/0.3.1/8065 [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} Python-urllib/2.7 [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ZmEu.* [NC]
+    RewriteRule ^.*$ - [F,L]
+
+    RewriteCond %{HTTP_HOST} !(.*)api\.nopaperforms\.com [NC]
+    RewriteCond %{HTTP_HOST} !(.*)api\.nopaperforms\.in [NC]
+    RewriteCond %{HTTP_USER_AGENT} wget.* [NC]
+    RewriteRule ^.*$ - [F,L]
+
+    <FilesMatch "\.(htaccess|htpasswd|asp|aspx|tar.gz|tar|tar.xz|sql|jsp|bak|pem)$">
+        Order Allow,Deny
+        Deny from all
+    </FilesMatch>
+    #forbidden requests block ends
+
+    <filesMatch "\.html$"> 
+        <ifModule mod_headers.c>
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate" 
+        Header set Pragma "no-cache" 
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT" 
+        </ifModule>
+    </filesMatch>
+
+    #Rewrite Marketing Pages Request to their actual place
+    RewriteCond %{REQUEST_URI} \.html$
+    RewriteCond %{REQUEST_URI} !index\.html$
+    RewriteCond %{REQUEST_URI} !npfcdn\.html$
+    RewriteCond %{REQUEST_URI} !lpusmarttech\.html$
+    RewriteRule ^ /marketing_pages/%{HTTP_HOST}%{REQUEST_URI} [QSA,END]
+
+    RewriteCond %{HTTP_HOST} !(.*)\.nopaperforms\.com [NC]
+    RewriteCond %{HTTP_HOST} !(.*)\.nopaperforms\.in [NC]
+    RewriteCond %{HTTP_HOST} !(.*)\.nopaperforms\.net [NC]
+    RewriteCond %{HTTP_HOST} !(.*)\.nopaperforms\.io [NC]
+    RewriteCond %{HTTP_HOST} !npf.com [NC]
+    RewriteCond %{HTTP_HOST} !npf.net [NC]
+    RewriteCond   %{REQUEST_URI}    ^/colleges/login$
+    RewriteRule   ^ https://admission.nopaperforms.com/colleges/login  [L,R=301,QSD]
+
+    RewriteCond %{HTTP_HOST} (.*)gmac\.nopaperforms\.com [NC]
+    RewriteCond   %{REQUEST_URI}    ^/publishers/login$
+    RewriteRule   ^ https://gmacpublisher.nopaperforms.com  [L,R=301,QSD]
+    
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.com [NC]
+    RewriteCond   %{REQUEST_URI}    ^/publishers/login$
+    RewriteRule   ^ https://publisher.nopaperforms.com  [L,R=301,QSD]
+
+    ###########Migration from admission to frontend#############
+    ##Delhi Public School, Varanasi
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/delhi-public-school-varanasi$ [NC]
+    RewriteRule   ^ https://dpsvaranasi.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/delhi-public-school-varanasi/(.*)$ [NC]
+    RewriteRule   ^ https://dpsvaranasi.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Delhi Public School, Nashik
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/delhi-public-school-nashik$ [NC]
+    RewriteRule   ^ https://dpsnashik.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/delhi-public-school-nashik/(.*)$ [NC]
+    RewriteRule   ^ https://dpsnashik.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Sheila Raheja lnstitute of Hotel Management (SRIHM), Mumbai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/sheila-raheja-hotel-catering-school-mumbai$ [NC]
+    RewriteRule   ^ https://srihm.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/sheila-raheja-hotel-catering-school-mumbai/(.*)$ [NC]
+    RewriteRule   ^ https://srihm.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Delhi Film Institute, New Delhi
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/delhi-film-institute$ [NC]
+    RewriteRule   ^ https://dfi.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/delhi-film-institute/(.*)$ [NC]
+    RewriteRule   ^ https://dfi.nopaperforms.com/%1$1  [L,R=301]
+
+    ##ASSK Academy of Business and Management, Delhi
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/assk-academy-of-business-management-delhi$ [NC]
+    RewriteRule   ^ https://asskabm.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/assk-academy-of-business-management-delhi/(.*)$ [NC]
+    RewriteRule   ^ https://asskabm.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Greater Noida Institute of Technology (GNIOT)
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/gniot$ [NC]
+    RewriteRule   ^ https://gniot.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/gniot/(.*)$ [NC]
+    RewriteRule   ^ https://gniot.nopaperforms.com/%1$1  [L,R=301]
+
+    ##ITM University, Raipur
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/itm-university-raipur [NC]
+    RewriteRule   ^ https://itmraipur.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/itm-university-raipur/(.*)$ [NC]
+    RewriteRule   ^ https://itmraipur.nopaperforms.com/%1$1  [L,R=301]
+
+    ##IIAS Group Of Institutions
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/iias [NC]
+    RewriteRule   ^ https://iias.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/iias/(.*)$ [NC]
+    RewriteRule   ^ https://iias.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Vidya Vihar Residential School, Purnea
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/vidya-vihar-residential-school-purnea [NC]
+    RewriteRule   ^ https://vvrspatna.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/vidya-vihar-residential-school-purnea/(.*)$ [NC]
+    RewriteRule   ^ https://vvrspatna.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Bivha International School, Patna
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/bivha-international-school-bihar [NC]
+    RewriteRule   ^ https://bispatna.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/bivha-international-school-bihar/(.*)$ [NC]
+    RewriteRule   ^ https://bispatna.nopaperforms.com/%1$1  [L,R=301]
+
+    ##IBSAR, Navi Mumbai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/ibsar-navi-mumbai [NC]
+    RewriteRule   ^ https://ibsarnmumbai.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/ibsar-navi-mumbai/(.*)$ [NC]
+    RewriteRule   ^ https://ibsarnmumbai.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Athena School of Management, Mumbai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/athena-school-of-management-mumbai [NC]
+    RewriteRule   ^ https://athenasmm.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/athena-school-of-management-mumbai/(.*)$ [NC]
+    RewriteRule   ^ https://athenasmm.nopaperforms.com/%1$1  [L,R=301]
+
+    ##EMDI Institute of Media and Communication, Mumbai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/emdi [NC]
+    RewriteRule   ^ https://emdi.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/emdi/(.*)$ [NC]
+    RewriteRule   ^ https://emdi.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Ironwood Sports Management Global Academy (ISMGA)
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/ironwood-sports-management-global-academy-ismga-mumbai [NC]
+    RewriteRule   ^ https://ismga.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/ironwood-sports-management-global-academy-ismga-mumbai/(.*)$ [NC]
+    RewriteRule   ^ https://ismga.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Harvard Business School Club of India Mumbai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/harvard-business-school-club-of-india-mumbai [NC]
+    RewriteRule   ^ https://hbscim.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/harvard-business-school-club-of-india-mumbai/(.*)$ [NC]
+    RewriteRule   ^ https://hbscim.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Xavier Institute of Development Action and Studies Jabalpur
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/xavier-institute-of-management-jabalpur [NC]
+    RewriteRule   ^ https://xavierjabalpur.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/xavier-institute-of-management-jabalpur/(.*)$ [NC]
+    RewriteRule   ^ https://xavierjabalpur.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Delhi Pubic School Lava, Nagpur City
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/delhi-public-school [NC]
+    RewriteRule   ^ https://dpslnagpur.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/delhi-public-school/(.*)$ [NC]
+    RewriteRule   ^ https://dpslnagpur.nopaperforms.com/%1$1  [L,R=301]
+
+    ##World Media Academy (WMA) Mumbai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/world-media-academy-wma [NC]
+    RewriteRule   ^ https://wma.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/world-media-academy-wma/(.*)$ [NC]
+    RewriteRule   ^ https://wma.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Apeejay Institute of Hospitality Navi Mumbai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/apeejay-institute-of-hospitality-navi-mumbai [NC]
+    RewriteRule   ^ https://aihnavimumbai.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/apeejay-institute-of-hospitality-navi-mumbai/(.*)$ [NC]
+    RewriteRule   ^ https://aihnavimumbai.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Orient Flights - Aviation Academy
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/orient-flights-aviation-academy [NC]
+    RewriteRule   ^ https://ofaa.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/orient-flights-aviation-academy/(.*)$ [NC]
+    RewriteRule   ^ https://ofaa.nopaperforms.com/%1$1  [L,R=301]
+
+    ##IIKM Business School Chennai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/iikm-chennai [NC]
+    RewriteRule   ^ https://iikmbs.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/iikm-chennai/(.*)$ [NC]
+    RewriteRule   ^ https://iikmbs.nopaperforms.com/%1$1  [L,R=301]
+
+    ##CIMP
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/chandragupt-institute-of-management-patna [NC]
+    RewriteRule   ^ https://cimp.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/chandragupt-institute-of-management-patna/(.*)$ [NC]
+    RewriteRule   ^ https://cimp.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Indira Gandhi Technological And Medical Sciences University Ziro
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/indira-gandhi-technological-and-medical-sciences-university-ziro [NC]
+    RewriteRule   ^ https://igtmsuz.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/indira-gandhi-technological-and-medical-sciences-university-ziro/(.*)$ [NC]
+    RewriteRule   ^ https://igtmsuz.nopaperforms.com/%1$1  [L,R=301]
+
+    ##SARADA College of Hotel Management Hyderabad
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/sri-sarada-college-of-hotel-management-hyderabad [NC]
+    RewriteRule   ^ https://saradachm.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/sri-sarada-college-of-hotel-management-hyderabad/(.*)$ [NC]
+    RewriteRule   ^ https://saradachm.nopaperforms.com/%1$1  [L,R=301]
+
+    ##IFIM Institutions Bengaluru
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/ifim [NC]
+    RewriteRule   ^ https://ifim.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/ifim/(.*)$ [NC]
+    RewriteRule   ^ https://ifim.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/sri-chandrasekharendra-saraswathi-viswa-mahavidyalaya [NC]
+    RewriteRule   ^ https://scsvm.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/sri-chandrasekharendra-saraswathi-viswa-mahavidyalaya/(.*)$ [NC]
+    RewriteRule   ^ https://scsvm.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Centre for Management Technology Greater Noida
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/centre-for-management-technology-greater-noida [NC]
+    RewriteRule   ^ https://cmtgreaternoida.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/centre-for-management-technology-greater-noida/(.*)$ [NC]
+    RewriteRule   ^ https://cmtgreaternoida.nopaperforms.com/%1$1  [L,R=301]
+
+    ##ITM Vocational University
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/itm-vocational-university [NC]
+    RewriteRule   ^ https://itmvoc.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/itm-vocational-university/(.*)$ [NC]
+    RewriteRule   ^ https://itmvoc.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Bharat Group of Institutions Sonipat
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/bharat-group-of-institutions-sonipat [NC]
+    RewriteRule   ^ https://bgisonipat.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/bharat-group-of-institutions-sonipat/(.*)$ [NC]
+    RewriteRule   ^ https://bgisonipat.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Vidya Vihar Institute of Technology Purnia
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/vidya-vihar-institute-of-technology-purnea [NC]
+    RewriteRule   ^ https://vvit.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/vidya-vihar-institute-of-technology-purnea/(.*)$ [NC]
+    RewriteRule   ^ https://vvit.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Hindustan International School
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/hindustan-international-school [NC]
+    RewriteRule   ^ https://his.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/hindustan-international-school/(.*)$ [NC]
+    RewriteRule   ^ https://his.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Guru Nanak Khalsa College of Arts Science Commerce Mumbai
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/guru-nanak-khalsa-college-of-arts-science-commerce-mumbai [NC]
+    RewriteRule   ^ https://gnkcasc.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/guru-nanak-khalsa-college-of-arts-science-commerce-mumbai/(.*)$ [NC]
+    RewriteRule   ^ https://gnkcasc.nopaperforms.com/%1$1  [L,R=301]
+
+    ##Rathinavel Subramaniam College Of Arts And Commerce
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/rathnavel-subramaniam-college-of-arts-and-commerce [NC]
+    RewriteRule   ^ https://rscaac.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/rathnavel-subramaniam-college-of-arts-and-commerce/(.*)$ [NC]
+    RewriteRule   ^ https://rscaac.nopaperforms.com/%1$1  [L,R=301]
+
+    ##ah Ventures
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/ah-ventures [NC]
+    RewriteRule   ^ https://ahventures.nopaperforms.com$1  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} (.*)admission\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} npf.com [NC]
+    RewriteCond %{REQUEST_URI}    ^/ah-ventures/(.*)$ [NC]
+    RewriteRule   ^ https://ahventures.nopaperforms.com/%1$1  [L,R=301]
+
+    ###########For LPU manifest.json#############
+
+    RewriteCond %{HTTP_HOST} admission.lpu.in [NC]
+    RewriteCond %{REQUEST_URI}    ^/manifest.json [NC]
+    RewriteRule   ^ https://admission.lpu.in/manifest_lpu.json  [L,R=301]
+
+    RewriteCond %{HTTP_HOST} 524-s3.nopaperforms.in [NC]
+    RewriteCond %{REQUEST_URI}    ^/manifest.json [NC]
+    RewriteRule   ^ https://524-s3.nopaperforms.in/manifest_lpu.json  [L,R=301]
+
+    ###########Migration from admission to frontend#############
+
+    RewriteCond %{HTTP_HOST} enroll\.careerutsav\.com [NC]
+    RewriteCond %{REQUEST_URI} ^/$
+    RewriteRule ^(.*)$ https://enroll.careerutsav.com/registration/$1 [R=301,L]
+
+    RewriteCond %{HTTP_HOST} ^forms\.pgdmex\.imt\.edu$ [NC]
+    RewriteRule ^(.*)$ https://forms.imt.edu/pgdmex/$1 [R=301,L]
+    
+    RewriteCond   %{REQUEST_URI}    ^/itm-pgdm-business-school-application-form$
+    RewriteRule   ^ https://forms.itm.edu/pgdm/$1  [L,R=301]
+
+    RewriteRule ^/?hindustan-institute-of-technology-science-chennai/(.*)/?$ https://apply.hindustanuniv.ac.in/$1 [L,QSA]
+    RewriteRule ^/?hindustan-institute-of-technology-science-chennai?$ https://apply.hindustanuniv.ac.in/$1 [L,QSA]
+    RewriteRule ^/?hindustan-institute-of-technology-science-chennai/?$ https://apply.hindustanuniv.ac.in/$1 [L,QSA]
+
+    RewriteRule ^ifim-centre-for-professional-learning-bengaluru/?$ $1/ifim$2 [R=301,L]
+
+    RewriteCond %{HTTP_HOST} ^gu\.nopaperforms\.com$ [NC]
+    RewriteRule ^(.*)$ https://admissions.galgotiasuniversity.edu.in/$1 [R=301,L]
+
+#    RewriteRule ^(.*)$ https://forms.imt.edu/$1 [L,R=301]
+    # download college file/document
+    RewriteRule ^(.*)downloads/(.*) uploads/college/document/$2
+
+    RewriteCond %{HTTP_HOST} ^kc.nopaperforms.com$ [OR]
+    RewriteCond %{HTTP_HOST} ^www.kc.nopaperforms.com$
+    RewriteRule (.*)$ https://admission.nopaperforms.com/kishinchand-chellaram-college$1 [R=301,L]
+
+    RewriteCond %{HTTP_HOST} admission\.rayatbahra\.com [NC]
+    RewriteCond %{REQUEST_URI} ^/rayat-bahra-university/$
+    RewriteRule ^(.*)$ https://admission.rayatbahrauniversity.edu.in/rayat-bahra-university [R=301,L]
+
+    RewriteCond %{HTTP_HOST} admission\.nopaperforms\.com [NC]
+    RewriteCond %{REQUEST_URI} ^/reva-university/reva-academy-for-corporate-excellence$
+    RewriteRule ^(.*)$ https://admission.nopaperforms.com/reva-academy-for-corporate-excellence [R=301,L]
+
+    # Payment URL rule
+    RewriteRule ^payment-process/ccav/ccav_request$ /payment-process/ccav/ccav_request.php [L]
+    RewriteRule ^payment-process/ccav/ccav_response$ /payment-process/ccav/ccav_response.php [L]
+
+    # freshchat whatsapp rule for file
+    RewriteRule ^applications/print-application/(.*)/(.*)\.pdf$ /applications/print-application/$1 [NC,L,R=301]
+    RewriteRule ^ack-pdf/(.*)/(.*)\.pdf$ /ack-pdf/$1 [NC,L,R=301]
+    RewriteRule ^admit-card-pdf/(.*)/(.*)\.pdf$ /admit-card-pdf/$1 [NC,L,R=301]
+
+    #for redirecting non www to www
+    #RewriteCond %{HTTP_HOST} !^www\.
+    #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+    # For redirecting www to non www url
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # HTTP to HTTPS
+    #RewriteCond %{HTTPS} off
+    #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{HTTP_HOST} (.*)static\.nopaperforms\.com [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)static\.nopaperforms\.in [NC,OR]
+    RewriteCond %{HTTP_HOST} (.*)static\.npf.com [NC]
+    RewriteRule ^ npfcdn.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+#    RewriteRule ^ index.html [L]
+
+#    RewriteCond ^(.+)/document/(.+)$ 
+    <If "%{QUERY_STRING} =~ /.*?ws=b061b6abae687fbd43e1bc2260c04b6a/">
+       Header edit Set-Cookie ^(.*)$ "$1; Secure; SameSite=None"
+   </If>
+</IfModule>
+

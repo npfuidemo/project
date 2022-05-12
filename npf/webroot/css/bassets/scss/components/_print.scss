@@ -1,0 +1,14 @@
+@include media("print") {
+	.print-none{
+		display:none;
+		visibility: hidden;
+	}
+	.print-width-100{
+		width:100% !important;
+	}
+	.chartData{
+		padding:0;
+		border:none;
+	}
+	
+}

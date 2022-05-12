@@ -1,0 +1,28 @@
+body{
+	background:#b9f4ee url(/img/publisher/banner.jpg) repeat;
+	min-height:100vh;
+}
+
+.form-part{
+	margin:12vh 0;
+	text-align:center;
+	.formMidBox{
+		background-color: #fff;
+		box-shadow: 0 0 5px #aaa;
+		padding: 40px;
+		max-width:420px;
+		border-radius:5px;
+		display:inline-block;
+		width:100%;
+		text-align:left;
+	}
+}
+
+@media screen and (min-width:970px) {
+	.footer{
+		position:fixed;
+		bottom:0;
+		left:0;
+		width:100%;
+	}
+}

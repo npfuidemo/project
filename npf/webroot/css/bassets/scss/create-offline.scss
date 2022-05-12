@@ -1,0 +1,80 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/topHeading',
+  'components/stepsOffline',
+  'components/rowSpace';
+  
+// Page Specific CSS
+$error : #d93025;
+.npf-form-group{
+	.form-control{
+		height:40px;
+		padding:8px 10px;
+		box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+		&:focus{
+			box-shadow:0 0 5px rgba(0,0,0,0.3);
+			border-color: #5897fb;
+		}
+	}
+	.chosen-container{
+		vertical-align:top;
+	}
+	.SumoSelect{
+		max-width:100%;
+	}
+	.control-label{
+		margin:10px 0 0;
+		font-weight:500;
+	}
+	.npf-textarea{
+		.form-control{
+			height:auto;
+		}
+	}
+	.notEmpty {
+		background-color: #f2f2f2;
+		display:inline-block;
+		border: 1px solid #ccc;
+		.input_img{
+			max-width:150px;
+		}
+	}
+	.input_file{
+		position: absolute;
+		top: 0;
+		z-index: 11;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		font-size: 26px;
+		opacity: 0;
+	}
+	.has-error{
+		.error, .control-label{
+			color:$error;
+		}
+		.form-control{
+			border-color:$error;
+		}
+		.chosen-container-single{
+			.chosen-single{
+				border-color:$error;
+			}
+		}
+		
+		.SumoSelect{
+			>.CaptionCont{
+				border-color:$error;
+			}
+		}
+	}
+}

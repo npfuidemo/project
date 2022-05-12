@@ -1,0 +1,28 @@
+fieldset {
+    margin: 0 0 30px;
+	legend {
+		margin-bottom: 15px;
+		font-size: 18px;
+		border-color: #f2f2f2;
+		color: #004465;
+		font-weight: 500;
+		.data-highlight{
+			border-bottom:1px solid;
+			position: relative;
+			bottom: -2px;
+			.fa{
+				color:#ccc;
+			}
+		}
+	}
+	.input_file{
+		position: absolute;
+		top: 0;
+		z-index: 11;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		font-size: 26px;
+		opacity: 0;
+	}
+}

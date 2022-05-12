@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/expandableSearch',
+  'components/topHeading',
+  'components/rowSpace',
+  'components/newTableStyle',
+  'components/fieldSize',
+  'components/flag',
+  'components/dataStatus',
+  'components/filterModal',
+  'components/offcanvasModal';
+  
+  .getLinkList{
+		background-color: #f8f8f8;
+		padding: 2px 5px;
+		border-radius: 2px;
+		margin-bottom: 10px;
+		border: 1px solid #eee;
+	}

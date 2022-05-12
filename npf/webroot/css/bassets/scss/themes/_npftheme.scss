@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// NoPaperForms.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(117, 183, 64) !default;
+

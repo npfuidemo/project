@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'npf-icons';
+  src:  url('/css/student/fonts/gmac/npf-icons.eot?gxkrv8');
+  src:  url('/css/student/fonts/gmac/npf-icons.eot?gxkrv8#iefix') format('embedded-opentype'),
+    url('/css/student/fonts/gmac/npf-icons.ttf?gxkrv8') format('truetype'),
+    url('/css/student/fonts/gmac/npf-icons.woff?gxkrv8') format('woff'),
+    url('/css/student/fonts/gmac/npf-icons.svg?gxkrv8#npf-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'npf-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-malaysia:before {
+  content: "\e91e";
+}
+.icon-ringgit:before {
+  content: "\e91f";
+}
+.icon-payment:before {
+  content: "\e91c";
+}
+.icon-Additional-school-preferences:before {
+  content: "\e91d";
+}
+.icon-additional-school-preferences:before {
+  content: "\e912";
+}
+.icon-communication:before {
+  content: "\e913";
+}
+.icon-logout:before {
+  content: "\e914";
+}
+.icon-retake:before {
+  content: "\e915";
+}
+.icon-schedule:before {
+  content: "\e916";
+}
+.icon-scorecard:before {
+  content: "\e917";
+}
+.icon-application-Manager:before {
+  content: "\e918";
+}
+.icon-query-Manager:before {
+  content: "\e919";
+}
+.icon-payment-Manager:before {
+  content: "\e91a";
+}
+.icon-post-Application:before {
+  content: "\e91b";
+}
+.icon-advanced:before {
+  content: "\e900";
+}
+.icon-application:before {
+  content: "\e901";
+}
+.icon-application-navi:before {
+  content: "\e902";
+}
+.icon-bell:before {
+  content: "\e903";
+}
+.icon-calendar:before {
+  content: "\e904";
+}
+.icon-campaigns:before {
+  content: "\e905";
+}
+.icon-dashboard:before {
+  content: "\e906";
+}
+.icon-details:before {
+  content: "\e907";
+}
+.icon-down-arrow:before {
+  content: "\e908";
+}
+.icon-download:before {
+  content: "\e909";
+}
+.icon-drop-down:before {
+  content: "\e90a";
+}
+.icon-filter:before {
+  content: "\e90b";
+}
+.icon-geographical:before {
+  content: "\e90c";
+}
+.icon-info:before {
+  content: "\e90d";
+}
+.icon-lead:before {
+  content: "\e90e";
+}
+.icon-unverified-leads:before {
+  content: "\e90f";
+}
+.icon-up-arrow:before {
+  content: "\e910";
+}
+.icon-verified-leads:before {
+  content: "\e911";
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe0qMImSLYBIv1o4X1M8cceyI9tScg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe0qMImSLYBIv1o4X1M8ccezI9tScg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe0qMImSLYBIv1o4X1M8cce9I9s.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Nunito Sans SemiBold'), local('NunitoSans-SemiBold'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe03MImSLYBIv1o4X1M8cc9iB85iU1EQVg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Nunito Sans SemiBold'), local('NunitoSans-SemiBold'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe03MImSLYBIv1o4X1M8cc9iB85jU1EQVg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Nunito Sans SemiBold'), local('NunitoSans-SemiBold'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe03MImSLYBIv1o4X1M8cc9iB85tU1E.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Sans Bold'), local('NunitoSans-Bold'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe03MImSLYBIv1o4X1M8cc8GBs5iU1EQVg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Sans Bold'), local('NunitoSans-Bold'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe03MImSLYBIv1o4X1M8cc8GBs5jU1EQVg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Sans Bold'), local('NunitoSans-Bold'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe03MImSLYBIv1o4X1M8cc8GBs5tU1E.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

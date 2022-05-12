@@ -1,0 +1,17 @@
+.advanceFilter{
+	&.active{background:$white-color;
+		.filter-header,.filter-body{
+			background:$white-color;
+		}
+		&:before{ 
+				content: "";
+				width: 100%;
+				height: 100%;
+				position:fixed;
+				z-index: -1;
+				background: rgba(0,0,0,.5);
+				left: 0;
+				top: 0;
+		}
+	}
+}

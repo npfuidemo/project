@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "e-vidyabharati-dev",
+  "private_key_id": "6e7764294812fe8cc22d1551349e8cfa6fc10636",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9AuWFhUxzHNKS\nW2totFLYYd+QW876BLj3gPRnamSwNCJHwDwc11DDYmdPog0/uiLiVqWTp0WLrQA0\ng7YZGpn8h7VGa3ytP/XBfJLmTDDCHogU5huM8mNnvgMdPzivJ7izYqq2e4LA+WPy\n4i2QO9HDoIZFOkY37FGPtC5xdIAKzAPjRKsCi3N8bIw8tTiKYfgeTE82Jk1OcYEz\n/sZcs+2PWFzMQdbKXNbmgZj2qpZJevJA+4ToUXYqkRjBfLNrZpNisfHqAkYcydXL\nnGvi7avrqkTcQevSaGaKE1aZ36NJDf+rsY8ZnYKM1Bro2DdLO0/ST2qP99wtBF9b\nGVzRHRynAgMBAAECggEABnXS4n1r34NcryPwx+Nh8YNm4MhCiskeiVcfA2nfhyZB\nBbLMWzAA0qzKWy5uxX7XMmVDw4g0GFIRb7oQv0rpeHgq+f0yhblp7PMVEkoIYJoq\njIxQ5MBkJWeZM6a1iUcSSQ9WRmZyUaY0hFi2tfdVdBpIfJVBUSgCoabG75nLxpKj\nfWRZ2IRhnQVHNkDxhH20+nLnJsTb5sbzsvrc5ELtL0km3ko+/KRZTRaAXCzVzKs2\n0V/FA8S8JzknlsXBaQcvUmIsTc/fcx3I6rV/YGho1XH4NYBoJG4HvPKKgogtnO5b\nGsn7QkhnoKdDUbieuq6DwglAx7Qk2Kpf4lSg+SW6AQKBgQDrFv2KQxP9mtwwVU4i\n8kuHogf6HmxmhJITnkZnevqpQKwcRXPQeFZ3t99kfQ+Gk4Y803mUtI9mLTL9CScd\nmFe54Lt/Bsg5BQY78ofNDAr9++g1MaUXFOuizFz2IZY8dnSFJIRd8SW64z4Be8Np\nL6dTuB3ChiSL2njytGhzdv/GHQKBgQDN0rIvvAMaStVcaiC14yXQd7WFW9bafL8l\nIq8+EUmPBqJn55d6j9Cp/UjlimImZWIGRlrO4i/JIyk3KC5ABUaUwcq2i+Rr1kBl\nrWBEkIKJnDzX9Jlxcc99ADHeD8A+AppjikCdeIGeZg5UvgCjrFmmGLT93zSfUM4a\nvfJczmCikwKBgC5mSD5sxNpOIV1syNI+7kdj5J0qOgz153r1x0GPVT/oos+lqZkg\n1zgj03Sa9mCCZ4FD4ABIrvDkxOaKUu0Vb2MhhwAoT4ZphnR4hvMiiFzexlMRbFsk\n5ukn2sU9ldBzNMY+kd2UxfSf+1IBomz1Wdo9QapuHXJ4+Vw13VPEzfDFAoGAYuSm\nivr6PqrQI2w2tU4jwCuUgzQiYq5npS8qJldmEZutcuE6zj/FkbfKS8gW6r3xwHQT\nc64IKcuEJSVgO5CNXjJS9Sz4Hrw+CtyoEamhnv772QOEqpZ1jGkIjNrikqjrh4JJ\nE6BwHyyIHD2CzyGjnYPnisexYA8SSJUVm3PpyJMCgYEA5IMzQHG7dTRFUEFjsPdN\nYVAoGx9kmQBiygrhUVvOcue3k7QYW8AXKZnMVzbRSvobCMSjlIDrLlc8R30TQP7E\nXQc4DGTBsQb+cd4dNE2WjN+Z4mgc8VjjAs3PjDLYda9BXI95q1upYFGzhwL0YwGC\n5M65p8M1czWMePKs7UM+jSQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "partner-testuni@e-vidyabharati-dev.iam.gserviceaccount.com",
+  "client_id": "113908989201976164420",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/partner-testuni%40e-vidyabharati-dev.iam.gserviceaccount.com"
+}

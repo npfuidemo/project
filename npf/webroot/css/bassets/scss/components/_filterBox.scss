@@ -1,0 +1,20 @@
+.filterCon{
+	margin-top:10px;
+	display:inline-block;
+}
+.filterBox{
+	padding:4px 10px;
+	border-bottom: 1px solid #ddd;
+	border-bottom-width:2px;
+	background-color:#fcfcfc;
+	.SelectBox {
+		padding: 6px 10px;
+	}
+}
+
+@include media(">=tablet") {
+	.filterCon{
+		float:right;
+		margin-top:0;
+	}
+}

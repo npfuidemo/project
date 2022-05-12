@@ -1,0 +1,21 @@
+#creatscoringcard,#processtabs{border-radius:0;border:0;
+	li{background:none; margin:0 8px;
+	 &:first-child{margin-left:0;}
+	a{background:none; border:0; border-bottom:1.5px solid transparent; padding:0 0 5px 0; color:#000; font-size:15px; font-weight:400; text-transform:capitalize;
+	.btn{font-size:100%; padding:0;}
+	}
+	&.active a{color:$base-color; border-bottom-color:$base-color;}
+	&.disabled a{pointer-events:none; color:$grey-color;}
+	&.disabled:hover{cursor:not-allowed;}
+	}
+ }
+
+ 
+ .tab-content{
+	 .nav-tabs{border:0; background:rgba(0,0,0,.01); margin:-1px -15px 0 -15px; border:1px solid rgba(0,0,0,0.05); border-left:0; border-right:0; padding:10px 15px;
+		 li{border:0; margin-right:15px;
+			 a{border-radius:20px; font-size:13px; border:1px solid $white-color; background:$white-color; color:$black-color; padding:5px 15px;}
+			 &.active a{background:$base-color; color:$white-color; border:0}
+		 }
+	 }
+ }

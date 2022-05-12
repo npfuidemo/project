@@ -1,0 +1,386 @@
+/*** Once Filter open than remove scroll from body ***/
+#load_msg_div{
+    -webkit-transition:width 0.5s;
+    -moz-transition:width 0.5s;
+    -o-transition:width 0.5s;
+    transition:width 0.5s;
+    width:100%;
+}
+.aligner-middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding:5rem 0;
+    width:100%;
+    .alignerIcon{
+        font-size:6rem;
+    }
+	.text-info{
+		color:#004465;
+	}
+}
+.filterOpen{
+    overflow:hidden;
+    #load_msg_div{
+        width:50%;
+        &.filterSml{
+            width:65%;
+        }
+    }
+}
+/*** Modal open left & Right ***/
+.advanceFilter{
+    position:fixed;
+    left:auto;
+    top:0;
+    margin:auto;
+    width:100%;
+    height:100%;
+    box-shadow:0 8px 12px 2px rgba(0,0,0,.25);
+    z-index:9999;
+    background-color:#fff;
+	.modal-header{
+		background-color:#004465;
+        padding:10px;
+		color:#fff;
+		.info-icon{
+			color:#fff;
+		}
+		.close{
+			opacity: 0.9;
+			color: #fff;
+			font-weight: 300;
+			font-size: 14px;
+			margin-top: 4px;
+		}
+	}
+    .filter-header{
+        padding:10px 10px 0;
+        .cf-row{
+            margin-bottom:5px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        [class*=' col-']{
+            margin-top:8px;
+        }
+        &.fh-all{
+            display:inline-block;
+            width:100%;
+            h3{
+                margin:0;
+            }
+            .close {
+                margin-top:-5px;
+            }
+        }
+    }
+    .filter-content{
+        border-radius:0;
+        border:none;
+        height:100%;
+        overflow-y:auto;
+    }
+    .filter-body{
+        padding:15px;
+        min-height:300px;
+    }
+    .filter-footer{
+        position:relative;
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        padding: 8px 0;
+        box-shadow: 0 -5px 5px -5px #eee;
+		border-top:1px solid #ddd;
+        .btn{
+            margin-right:10px;
+            font-weight:500;
+            &:last-child{
+                margin:0;
+            }
+			&:last-child{
+				margin-right:0;
+			}
+        }
+    }
+    
+    /*** Left position ***/
+    &.left{
+        left:-102%;
+        -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+        &.filter-lg{
+            left:-102%;
+        }
+        &.filter-sm{
+            left:-102%;
+        }
+        &.active{
+            left:0;
+        }
+    }
+    /*** Right position ***/
+    &.right{
+        right:-102%;
+        -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+        &.filter-lg{
+            right:-102%;
+        }
+        &.filter-sm{
+            right:-102%;
+        }
+        &.active{
+            right:0;
+        }
+    }
+    
+    .chosen-container{
+        .chosen-drop{
+            min-width:250px;
+        }
+    }
+    .SumoSelect{
+        &.open{
+            >.optWrapper{
+                min-width: 235px;
+            }
+        }
+    }
+    .aligner-middle{
+        height:300px;
+    }
+}
+
+.advanceFilterModal{
+    &.active{
+        z-index: 11;
+        position: relative;
+    }
+}
+
+.block-repeat{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    .filterAppMatch{
+        display:block;
+    }
+}
+.logicBox{
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    width:100%;
+    display:inline-block;
+    .logicRowAction{
+            margin-top: 7px;
+            display: -webkit-box; 
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex; 
+            display: flex;
+            flex-flow: row-reverse;
+        .fa{
+            font-size:24px;
+        }
+    }
+    .condition_div{
+        display:inline-block;
+        padding: 8px;
+        width:100%;
+        vertical-align:top;
+        &:hover{
+            background-color:rgba(0, 0, 0, 0.02);
+        }
+        + .condition_div{
+            border-top:1px solid rgba(0, 0, 0, 0.02);
+        }
+    }
+    .SumoSelect{
+        min-width:100%;
+    }
+}
+
+.pageFilter{
+    .panel-body{
+        padding:15px 15px 50px;
+    }
+}
+
+@include media("<tablet"){
+    .advanceFilter{
+        overflow-x:hidden;
+        overflow-y:auto;
+        .filter-header{
+            .cf-row{
+                width: 100%;
+            }
+        }
+        .filter-footer{
+            margin-top:0px;
+            .clearline{
+                width:100%;
+                margin-top:10px;
+            }
+        }
+    }
+}
+
+@include media(">tablet"){
+    .advanceFilter{
+        top:0;
+        width:400px;
+        height:100%;
+        z-index:99911;
+        .filter-header{
+            .cf-row{
+                margin-bottom:0;
+                float:right;
+            }
+            .close{
+                margin-top:10px;
+            }
+            .college-col{
+                padding-right:5px;
+            }
+            .form-col{
+                padding-left:5px;
+            }
+            .chosen-container{
+                position:unset;
+                .chosen-single{
+                    font-weight:500;
+                }
+                .chosen-drop{
+					top: 92px;
+					left: 0;
+					padding: 0 5px;
+					border:none;
+                }
+            }
+            [class*=' col-']{
+             position:unset; 
+             margin-top:0;
+            }
+        }
+        .filter-body{
+            overflow:auto;
+            height:428px;
+            max-height:100%;
+        }
+        .filter-footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        &.filter-lg{
+            width:700px;
+        }
+        &.filter-sm{
+            width:600px;
+        }
+        
+        /*** Left position ***/
+        &.left{
+            left:-400px;
+            &.filter-lg{
+                left:-700px;
+            }
+            &.filter-sm{
+                left:-600;
+            }
+            &.active{
+                left:0;
+            }
+        }
+        
+        /*** Right position ***/
+        &.right{
+            right:-410px;
+            &.filter-lg{
+                right:-710px;
+            }
+            &.filter-sm{
+                right:-610px;
+            }
+            &.active{
+                right:0;
+            }
+        }
+    }
+	.filterOpen{
+		#content{z-index:unset;}
+	}
+	
+    .pageFilter{
+        position: absolute;
+        height:auto;
+        top:40px;
+        .SumoSelect{
+            >.optWrapper{
+                >.options{
+                    max-height:220px;
+                }
+            }
+        }
+    }
+    .aligner-middle{
+        height: 400px;
+        padding:0;
+        .alignerIcon{
+            font-size:8rem;
+        }
+    }
+    .block-repeat{
+        .filterAppMatch{
+            display:inline-block;
+            margin-right:15px;
+        }
+        .form-group{
+            margin:0;
+        }
+        .removeElementClassBlock{
+            display:none;
+        }
+        &:hover{
+            .removeElementClassBlock{
+                display:block;
+            }
+        }
+    }
+    .logicBox{
+        .logicRowAction{
+            .fa{
+                font-size:16px;
+            }
+        }
+    }
+}
+
+@include media("<=tablet"){
+    .pageFilter{
+        .filter-footer{
+            position: fixed;
+            bottom: 0;
+            text-align:left;
+        }
+    }
+}
+
+.backdrop-filter{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 10;
+    + .backdrop-filter{display:none;}
+}

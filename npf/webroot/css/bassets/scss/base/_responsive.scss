@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains  basic responsive styles.
+// -----------------------------------------------------------------------------
+
+@include media(">tablet") {
+    .sm-textright{
+		text-align:right;
+	}
+	.aboveMobile{
+		display:block;
+	}
+	.onlyMobile{
+		display:none;
+	}
+	.sumo-select{
+		visibility: hidden;
+		height: 0 !important;
+	}
+}
+
+@include media("<tablet") {
+	.aboveMobile{
+		display:none;
+	}
+	.onlyDesktopShow{
+		display:none;
+	}
+	.onlyMobile{
+		display:block;
+	}
+	#content{padding-bottom:95px!important;}
+}

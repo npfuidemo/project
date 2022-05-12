@@ -1,0 +1,149 @@
+.btn{
+	&.btn-blank{
+		background-color: #fff;
+		font-size: 18px;
+		padding: 5px;
+		line-height: 100%;
+		color: #111;
+		&.active{
+			color:$brand-color;
+		}
+		&[disabled]{
+			i{
+				color:#999;
+			}
+		}
+	}
+	
+}
+.recurringBtn{
+	display: inline-block;
+    vertical-align: top;
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+    margin-left:10px;
+	height:32px;
+	.fa{
+		color: #666;
+		font-size: 18px;
+		vertical-align: middle;
+	}
+}
+.fallbackBtn{
+	display: inline-block;
+    vertical-align: top;
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+    margin-left: 15px;
+	.fa{
+		color: #666;
+		font-size: 18px;
+		vertical-align: middle;
+	}
+}
+
+.dependentBox{
+	background-color: rgba(0, 0, 0, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    margin-top: 15px;
+    padding: 15px 0;
+	margin-bottom:-10px;
+	position: relative;
+    z-index: 11;
+	.floatify.floatify__active .floatify__label{
+		top: -5px;
+		padding: 0 2px;
+		line-height: 10px;
+	}
+	.iconDate{
+		top: 9px !important;
+	}
+}
+
+.layerTop {
+    z-index: 11111;
+}
+
+.attachmentFile {
+    position: absolute;
+    bottom: 51px;
+    left: 13%;
+    background-color: #fff;
+    max-width: 74%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-bottom: none;
+	z-index: 999;
+	box-shadow:0 0 8px 2px #ddd;
+	ol{
+		padding: 0;
+		font-size: 90%;
+		color: #333;
+		list-style-position: inside;
+	}
+	li{
+		margin-bottom:5px;
+	}
+}
+
+#bulk_communication_html .attachmentFile .file-attachmentui{
+	margin-top:0;
+	text-align:center;
+}
+
+.closeAttachment {
+    background: #f2f2f2;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px 8px;
+    line-height: 100%;
+    font-size: 12px;
+}
+
+.uploadAttachmentBtn{
+	color:#249cc5;
+	margin:0;
+}
+
+.comtoggleBox .btn{
+	padding:7px 15px;
+}
+
+.bootstrap-datetimepicker-widget{
+	.picker-switch td span {
+		line-height: 1.5 !important;
+		height: auto !important;
+	}
+	.glyphicon-time, .glyphicon-calendar {
+		font-size: 2.5rem;
+	}
+}
+
+#disperror{
+	li {
+		display: inline-block;
+		margin-right: 30px;
+		list-style: disc;
+		padding-left: 10px;
+		list-style-position: inside;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 6px;
+			background-color: #a94442;
+			border-radius: 50%;
+			height: 5px;
+			width: 5px;
+		}
+	}
+}
+
+.popover.tour-userCommunication{
+	z-index:11111 !important;
+}
+
+#bulk_communication_html .tour-backdrop{ opacity:0.5 }

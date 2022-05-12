@@ -1,0 +1,20 @@
+.main-content{
+	opacity:0;
+	-webkit-transition:opacity 0.5s;
+    -moz-transition:opacity 0.5s;
+    -ms-transition:opacity 0.5s;
+    -o-transition:opacity 0.5s;
+    transition:opacity 0.5s;
+	&.fadeIn{
+		opacity:1;
+	}
+}
+.main{
+	min-height:495px;
+	min-height: 83vh;
+	padding-right:40px;
+	padding-bottom:15px;
+}
+.page-header{
+	margin-top:15px;
+}

@@ -1,0 +1,29 @@
+.disableArea{
+	position:relative;
+	background-color:rgba(204, 204, 204, 0.2);
+	padding:10px 0;
+	&:before{
+		background-color:transparent;
+		content:"";
+		height:100%;
+		left:0;
+		position:absolute;
+		top:0;
+		width:100%;
+		z-index:111;
+	}
+	.label_snapshot{
+		position:absolute;
+		width:100%;
+		z-index:111;
+		p{
+			text-align:center;
+			padding:153px;
+			color:#000;
+			font-size:24px;
+		}
+	}
+	.search-block, .filterby-belowsearch{
+		opacity: 0.4;
+	}
+}

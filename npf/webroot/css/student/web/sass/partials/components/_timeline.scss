@@ -1,0 +1,86 @@
+.timeline{
+	display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 3rem;
+    padding: 2rem;
+	ul{
+		list-style:none;
+		padding-left:100px;
+		position:relative;
+		li{
+			border-left:2px solid #ccc;
+			padding-bottom:20px;
+			padding-left:35px;
+		}
+	}
+	time{
+		left:0;
+		position:absolute;
+		color:#333;
+		font-size:12px;
+		line-height: 18px;
+		span{
+			display:block;
+		}
+	}
+	&.myComTimeLine{
+		margin-top:0;
+		padding:1rem 2rem 0;
+		background-color:transparent;
+		border:none;
+		box-shadow:none;
+		time{
+			color:#000;
+		}
+		.icontimeline{
+			height:36px;
+			line-height:18px;
+		}
+		.icontimeline{
+			background-color:$gmac-color;
+		}
+	}
+}
+.icontimeline{
+	background-color:$brand-color;
+	border:1px solid #ccc;
+	border-radius:50%;
+	color:#fff;
+	font-size:16px;
+	left:83px;
+	line-height:24px;
+	padding:5px 10px;
+	position:absolute;
+}
+.tmMsg{
+	background-color:#f2f2f2;
+	padding:8px 15px;
+	position:relative;
+	display:inline-block;
+	border:1px solid #eee;
+	width:100%;
+	min-height:35px;
+	a{
+		font-family:$font-stack-semibold;
+	}
+}
+.tmMsg:before{
+	border-color:transparent #ddd transparent transparent;
+	border-style:solid;
+	border-width:8px;
+	content:"";
+	left:-17px;
+	position:absolute;
+	top:8px;
+}
+.tmMsg:after{
+	border-color:transparent #f2f2f2 transparent transparent;
+	border-style:solid;
+	border-width:8px;
+	content:"";
+	left:-16px;
+	position:absolute;
+	top:8px;
+}
+

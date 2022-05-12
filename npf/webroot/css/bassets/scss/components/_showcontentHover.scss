@@ -1,0 +1,47 @@
+.mouseHoverContent{
+    position: relative;
+    .showOnHover{
+        color:#0074d9;}
+    .hoverContent{
+        display:none;
+        position:absolute; 
+        top:20px; 
+        left:-125px;
+        z-index:999; 
+        border:1px solid #ccc; 
+        padding:10px; 
+        background:#fff; 
+        width:250px; 
+        white-space: normal;
+
+        &:before{
+            content:'';
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom:10px solid #fff;
+            position:absolute;
+            left:50%;
+            z-index:99;
+            top:-9px;
+        }
+
+        &:after{
+            content:'';
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom:10px solid #ccc;
+            position:absolute;
+            left:50%;
+            top:-10px;
+            }
+    }
+    &:hover{cursor: pointer;
+        .hoverContent{
+            display:block;
+        }
+    }
+}

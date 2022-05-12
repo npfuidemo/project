@@ -1,0 +1,50 @@
+.navbar-nav{
+	.profile{
+		a{
+			&.dropdown-toggle{
+				padding:17px 15px 18px;
+				margin:0;
+				color:#111;
+				border-left: 1px solid rgba(0, 0, 0, 0.2);
+				border-right: 1px solid rgba(0, 0, 0, 0.2);
+				min-width: 165px;
+			}
+			&:hover, &:focus{
+				background-color: rgba(0,0,0,0.1) !important;
+			}			
+		}
+		.pName{
+			overflow:hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width:140px;
+			display: inline-block;
+			vertical-align: top;
+			font-family: $font-stack-semibold;
+			font-size: 15px;
+		}
+	}
+	.open{
+	 .dropdown-menu{
+		&:before{
+			content: '';
+			position: absolute;
+			border-color: transparent transparent rgba(0,0,0,.15) transparent;
+			border-style: solid;
+			border-width: 10px;
+			top: -21px;
+			right: 10px;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			border-color: transparent transparent #fff transparent;
+			border-style: solid;
+			border-width: 10px;
+			top: -20px;
+			right: 10px;
+		}
+	  }
+	}
+}
+

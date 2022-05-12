@@ -1,0 +1,13 @@
+.roundselect{
+    &+.chosen-container{
+        .chosen-single{
+            @include border-radius($two*10);
+            padding:$z $two*7+1;
+            text-align:left;
+        }
+        .chosen-drop{
+            margin-top:$two*2+1; 
+            border-top:$two/2 solid #ddd;
+        }
+    } 
+}

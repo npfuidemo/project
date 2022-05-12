@@ -1,0 +1,22 @@
+.table .status-badge{
+  border-radius: 10px;
+  text-transform: capitalize;
+  color: #111;
+  padding: 4px 10px 4px 15px;
+  position: relative;
+  &:before{
+      content: '\002B24';
+      position: absolute;
+      left: 0;
+      font-size: 10px;
+  }
+  &.closed:before{
+      color: #ee554b;
+  }
+  &.in-progress:before{
+      color: #e49f20;
+  }
+  &.open:before{
+      color: #65c640;
+  }
+}

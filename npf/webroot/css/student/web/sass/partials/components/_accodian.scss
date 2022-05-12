@@ -1,0 +1,16 @@
+.panel-faqs{margin-top:35px;}
+.more-less{float:right;}
+.panel-default{
+	.panel-heading{
+		background-color: #e5e5e5;
+		padding:0px;
+		a{
+			padding:10px 15px;	
+			display:block;
+			color: #111;
+			font-size: 15px;
+		}
+	}
+}
+.panel-title{font-size:14px;}
+.panel-group .panel + .panel{margin-top:10px;}

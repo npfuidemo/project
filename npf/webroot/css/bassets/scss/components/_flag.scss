@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.flag-msg{
+	padding: 3px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    min-width: 80px;
+    font-size: 10px;
+	border: 1px solid #999;
+	color:#333;
+	font-weight:500;
+	
+	&.danger-flag{
+		border-color:#f44336;
+		color:#f44336;
+	}
+	&.success-flag {
+		border-color:#28a745;
+		color:#28a745;
+	}
+	&.warning-flag {
+		border-color:#f2b500;
+		color:#f2b500;
+	}
+	&.secondary-flag {
+		border-color:#6c757d;
+		color:#6c757d;
+	}
+}
+

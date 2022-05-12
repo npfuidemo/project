@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+'abstracts/newAbstracts/variables',
+'abstracts/functions',
+'abstracts/newAbstracts/mixins',
+'vendor/include-media';
+
+// 2. Components
+@import
+  'components/expandableSearch',
+  'components/topHeading',
+  'components/rowSpace',
+  'components/fieldSize',
+  'components/filterModal',
+  'components/offcanvasModal',
+  'components/conditional-block',
+  'components/widget-header',
+  'components/tableNew',
+  'components/tabs',
+  'components/rmvStylePageSync',
+  'components/bootstrap-tour', 
+  'components/vpai/auto_assignment',
+  'components/vpai/creat_evaluator',
+  'components/equalHeightColumn',
+  'components/columnFilterModal',
+  'components/drag-item',
+  'components/circleButton',
+  'components/boxWidthArrow',
+  'components/mutedBorder',
+  'components/modalshadow',
+  'components/offCanvasModalheader',
+  'components/newTableStyle',
+  'components/callout',
+  'vendor/sumoselect',
+  'components/image_gallery',
+  'components/expandSearch';
+
+  
+// 3. Pages
+@import
+  'pages/application';

@@ -1,0 +1,51 @@
+/*** Zendesk ***/
+.dragItem{float:right;}
+.filterOpen #dragItem,
+.modal-open #dragItem{z-index:0!important}
+#launcher{display:none}
+.dragItem:not(.dragging) 
+.dragItemheader:hover .hoverHideClick,
+.dragItemheader:hover .supportZendesk{display:block}
+.dragItemheader .supportZendesk{display:block;text-align:center;color:#fb641b;padding:13px 5px 6px; text-decoration:none; border:none;z-index:1;transition: all 0.5s ease;}
+.dragItemheader .supportZendesk:hover{text-decoration:none;}
+.hoverHideClick{position:absolute;left:0;top:0;height:10px;background-color:transparent;width:60px;z-index:11;display:none}
+.supportImg{background-color:#75b740;border-radius:50%;max-width:60px!important;display:inline-block;position:relative;z-index:11}
+.dragging .supportImg,.dragging .supportZendesk{box-shadow:0 4px 4px #ddd}
+.survayLink{
+	button{
+		border: 0;
+		background: none;
+		padding:6px 0 6px 5px;
+		font-size: 24px;
+		color:#5f6368;
+		i{color:#5f6368;}
+	}
+}
+
+#zsitc_minimize, #zsitc_close{padding:5px;text-align: center;}
+.bottomBand .bandBar{border:none !important}
+.sCWrapMinimize.CenterPop{top:105vh !important;}
+
+@media (max-width: 967px){
+	.dragItem {
+		width: auto;
+	}
+	.dragItemheader .supportZendesk{
+		padding: 5px;
+		display: inline-block;
+		min-width: auto;
+		white-space: nowrap;
+	}
+}
+@media (max-width:1024px){
+	.dragItemheader .supportZendesk{
+		margin-right: 10px;
+		padding: 10px;
+	}
+}
+
+@media (min-width:768px){
+	#feedbackSurvay .modal-dialog{
+		width:600px;	
+	}	
+}

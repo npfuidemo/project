@@ -1,0 +1,76 @@
+
+.whitebg{background:#fff;}
+.slotstable{min-width:600px; margin-bottom:0; padding-bottom:0;
+	.control-label{line-height:30px;}
+	thead{background:#f6f8fe;
+		th{border:0!important; padding:8px 15px!important; padding-bottom:0!important;}
+	}
+
+	tbody{
+		tr{background:#f6f8fe; border-bottom:20px solid #FFF;
+			td{position: relative;border:0!important; padding:15px;
+			  .well{padding:15px; margin-bottom:0px;}
+			  .collaspable{position:relative; min-height:20px;
+				&:after{font-family: "FontAwesome";
+						content: "\f078";
+						font-size:14px;
+						line-height: 14px;
+						float: right;
+						transition: all .5s;
+						-webkit-transform: rotate(180deg);
+						-moz-transform: rotate(180deg);
+						transform: rotate(180deg);
+						position: absolute;
+						top:3px;
+						right:15px;
+						cursor: pointer;
+						padding:8px;
+			 	}
+			 }
+
+				& .collapsed:after{
+					-webkit-transform: rotate(0deg);
+					-moz-transform: rotate(0deg);
+					transform: rotate(0deg);
+				} 
+				.collapsed .hidecollapsed{display:none;}
+				&[aria-expanded="true"]{border:0;}
+				}
+	    	}
+    }
+	.form-group{margin-bottom:10px;}
+	.form-control{padding:5px 15px 5px 5px!important; height:32px!important;}
+}
+
+ 
+
+  #autoassignmentModal .SumoSelect>.CaptionCont{border:0; background:none; box-shadow:none;}
+
+#viewScoreCard{
+	.chosen-container-multi .chosen-choices li.search-field input[type=text]{width:auto!important}
+	.chosen-container .chosen-default span{color:#999!important;}
+	.bootstrap-datetimepicker-widget{
+	 a[data-action]{padding:0; margin:0;}
+	 table td span{margin:0;}
+	}
+	#allocateToScorecard {
+		.iconDate{right:23px;}
+	}
+	.bootstrap-datetimepicker-widget a[data-action]{padding:0;}
+	.bootstrap-datetimepicker-widget table td span{margin:0;}
+	.chosen-container.chosen-container-multi.chosen-container-active .chosen-choices,.dateFormGroup .form-control:focus,.chosen-container .chosen-single:focus{border:1px solid #2b78e4;}
+}
+
+.parent-table{overflow-x:hidden!important;}
+
+@media (min-width:1024px){ 
+#autoassignmentModal .modal-dialog.modal-sm{width:700px;}
+#viewScoreCard .modal-dialog.reassign-dialog{width:700px!important}
+}
+
+
+@media (max-width:767px){ 
+	.formbox {
+		margin: 10px 0 0px 0px;
+	}
+}

@@ -1,0 +1,139 @@
+.chosen-container{vertical-align:top;}
+.form-page{padding-bottom:0;}
+.flexboxSep{
+	margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.01);
+    padding: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.01);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+}
+.sectionBreakUp{
+	margin-bottom:0;
+}
+.flexboxSep .panel-title{font-size:18px; font-weight:600; color:#006ea4; margin-bottom:15px;}
+.f_info{ margin-bottom:10px;}
+.f_info label {
+    margin-right:5px;
+    text-align: left;
+    color: #111;
+    font-weight: 600; margin-bottom:0; font-size:14px;
+}
+.column2 .error{
+	padding:0;
+}
+.panel{margin-bottom:0;}
+.checkoutContainer{
+	margin-top:15px;
+}
+body{
+	padding-bottom:45px;
+}
+.rowProduct{
+	border-bottom:1px solid #f2f2f2;
+	padding-bottom:10px;
+	margin-bottom:15px; width:100%;
+}
+.rowProduct:last-child{
+	border-bottom:none;
+	padding-bottom:0;
+	margin-bottom:0;
+
+}
+
+.padding-left-10{
+    padding-left: 10px;
+}
+
+.prdList {
+    display: inline-block;
+    width: 100%;
+}
+.prdList[style="display:block"]{ display:inline-block!important;}
+.prdList .checkbox{
+	margin:0;
+}
+.prdList label{
+	color:#111;
+}
+.totalSum{
+	border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.rowProduct .radio{
+	margin:0;
+
+}
+.rowProduct .radio label{
+	padding-left:22px; color:#111;font-weight:600;
+}
+
+.voucherInput{
+	border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 2px;
+	width:100%;
+}
+.btn-voucher{
+	font-size: 16px;
+    border: 1px solid #006DA5;
+    background-color: #006DA5;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+.breakUpPrd{
+	border-bottom:none;
+	margin-bottom:0;
+}
+.buttonHolder{
+	display:inline-block;
+	width:100%;
+    text-align: center;
+    margin-top:20px;
+}
+.checkout_title{
+	margin:0;
+	font-size:18px;
+	font-weight:500;
+}
+.btn-payment {
+    background-color: #f28927;
+    border: #f28927;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 600;
+    width:100%;
+    font-size: 18px;
+}
+.btn-payment-cancel {
+    background-color: #8080807a;
+    border: grey;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 2px;
+    width: 49%;
+    font-size: 18px;
+}
+.btn-payment:hover {
+    background-color: #f97d09;
+}
+
+.back_btn{color:#006ea4;}
+
+.checkout_title .back_btn{border:1px solid #006ea4;padding: 5px 8px;display: inline-block;border-radius: 2px;font-size: 14px;vertical-align: top;margin-top: -3px;}
+.checkout_title .back_btn:hover{background-color:#006ea4;color:#fff;}
+
+.back_btn:hover{color:#333;}
+.apply-btn{margin:0px;width:100%;line-height:32px;}
+.pay_div .requiredError{top:-10px;}
+.kit-label{margin-top: 0!important; font-size: 14px!important; color: #333!important; line-height: 18px!important;}
+
+.lpukit_radio{margin-bottom:15px;}
+.choosen_small{padding-left:10px!important;}
+.choosen_small .chosen-container-single .chosen-single{line-height:30px!important; max-width:100px!important;}
+.choosen_small .chosen-container-single .chosen-single div b {background: url(../../img/npf-sprite.png) no-repeat 0 5px!important ;}
+.choosen_small .chosen-container-active.chosen-with-drop .chosen-single div b{background-position:-18px 5px!important;}

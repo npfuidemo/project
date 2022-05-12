@@ -1,0 +1,81 @@
+h2 span{color:#75b740;font-weight:normal;}
+	.panel-group .panel{border:1px solid #ddd;}
+	.panel-group .panel + .panel {margin-top: 8px;}
+	.panel-title > a{color:#111; font-size:15px;}
+	.advance-color{background-color:rgba(0,0,0, 0.01);}
+	.table-border th.th-color, .table-bordered th.th-color{background-color:#eee;}
+	.table{margin-bottom:0;}
+	strong{font-weight:500;}
+	
+	.topSelectors{}
+	.topSelectors label{margin:0;background-color:#ddd;padding:8px 15px;display:inline-block;}
+	
+.stv-radio-tabs-wrapper {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  border-bottom:1px solid #1f77b4;
+  position: relative;
+}
+
+input.stv-radio-tab, input.enable_custom_tag {
+  position: absolute;
+  left: -99999em;
+  top: -99999em;
+}
+input.stv-radio-tab + label {
+  cursor: pointer;
+  float: left;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  background-color: #fff;
+  margin-right: -1px;
+  margin-bottom:0;
+  padding: .5em 1em .5em 2em;
+  position: relative;
+  border-radius:4px 4px 0 0;
+  color:#999;
+  margin-top: 2px;
+}
+input.stv-radio-tab + label:before{content:'';position:absolute;border:1px solid #aaa;width:11px;height:11px;border-radius:50%;left:13px;top:13px;}
+input.stv-radio-tab + label:hover{background-color: #eee;}
+input.stv-radio-tab:checked + label{border-color:#1f77b4;z-index:1;color:#1f77b4;font-weight:500;border-top-width:3px;margin-top:0;}
+input.stv-radio-tab + label:after{content:'';position:absolute;width:5px;height:5px;left:16px;top:16px;background-color:#fff;border-radius: 50%;}
+input.stv-radio-tab:checked + label:after{background-color:#111;}
+
+.highlight_title{color:#999;font-weight:300;border-bottom:2px solid #75b740;}	
+	
+.unmaskBox{display:inline-block;width:100%;}
+.unmaskBox label{margin-bottom:0; margin-top:10px;padding:0;}
+.unmaskBox .SumoSelect label{margin-top:0;}
+.showIsTrial{position:relative;}
+.showIsTrial label{margin-top:8px;}
+.istrial{margin-right:5px!important;}
+.isTriaDate{position:absolute;top:2px;margin-left:5px;left:160px;width:350px;}
+.isTriaDate .dateinput{ margin:0;}
+.isTriaDate .dropdown-menu{min-width:250px;}
+.isTriaDate .form-group{margin:0 8px;padding:0;}
+.isTriaDate .form-group .form-control{margin:0 !important;border-color:#ccc;}
+.topSelectors{height:10px;}
+
+.topHeadFields .chosen-container .chosen-single {line-height: 30px;}
+.sumoBox{min-width:200px;max-width:200px;display:inline-block;}
+.sumoBox .SumoSelect.open .search-txt{padding-top:5px; padding-bottom:5px;}
+.sumoBox .SumoSelect>.CaptionCont>label{line-height:30px;}
+
+.unmask{font-size:13px;margin-left:10px;}
+.unmask input[type=checkbox]{vertical-align:middle;margin:0;}
+.bootstrap-datetimepicker-widget{width:250px !important;}
+
+.panel-group .panel.permissionsSaved{
+	border-left: 2px solid #75b740;
+}
+.panel-group .panel.permissionsNotSaved{
+	border-left: 2px solid #f00;
+}
+.static_legends{text-align: right;}
+.static_legends ul{padding:0; list-style:none;}
+.static_legends li{display:inline-block;margin-left:10px;color:#666;font-size: 12px;}
+.static_legends li span{background-color:#ccc;width:8px;height:8px;display:inline-block;border-radius: 50%;}
+.static_legends li.per_not_saved span{background-color:#f00;}
+.static_legends li.per_saved span{background-color:#75b740;}

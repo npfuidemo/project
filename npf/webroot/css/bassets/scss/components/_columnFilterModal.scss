@@ -1,0 +1,151 @@
+.offCanvasModal {
+    .modal-content.modalHeaderFixed{height:calc(100%)!important; overflow-y:hidden!important;}
+    .modal-body{height:calc(100% - 50px)!important;
+        &.pt-0{
+            padding-top:$z;
+        }
+        &.pb-0{
+            padding-bottom:$z;
+        }
+    }
+    #reopen_form_logic{
+            height:calc(100vh - 50px)!important;
+            overflow:auto;
+    }
+} 
+
+.filter-body{ height:calc(100vh - 100px)!important;}
+.modal{
+   
+    .filter-search{
+        width:100%; 
+        border: 1px solid #eee; 
+        margin:$two*7+1px $z;
+        background:$white-color;
+        @include border-radius($two*10);
+
+                input{width:calc(100% - 15px)!important; padding:0 $two*4; border:$z;}
+            .fa-search{
+                color:#4b7bdd;
+            }
+        &.floatify{
+            input[type=text]{
+                height:auto;
+            }
+        }
+    }
+    .filterscrollbar{
+        width:100%;
+        height:100%;
+        margin:0;
+        .filterList{
+            height:calc(100vh - 170px);
+            overflow-y:auto;
+
+            li{
+                &.active{
+                    a{
+                        font-weight:500;
+                        text-decoration:none;
+                        cursor: text;
+                    }
+                }
+                a{
+                    color:#111;
+                }
+            }
+        }
+        ul{
+            margin:0 -15px;
+            &>li{
+                margin-bottom:5px;
+                a{padding:0 15px;
+                    .glyphicon {
+                        font-size:$two*5; 
+                        line-height:$two*11; 
+                        vertical-align:top;
+                        margin-right:2px;
+                    }
+                }
+                
+                ul.filterCollaspData {
+                    width:calc(100%); 
+                    margin:0 0 10px 0;
+                    padding:0;
+                    
+                    li{
+                        border-top:1px solid #f1f1f1; 
+                        position: relative;
+                        padding:$two*4 $two*7+1;
+                        margin-bottom:0;
+                        
+                        &:first-child{border-top:0}
+                        &:only-child{border-bottom:1px solid #f1f1f1; }
+                        label{
+                            font-weight:normal;
+                            font-size:$two*6;
+                            margin:$z;
+                            display:block;
+                            padding:0 $two*10 0 $two*2+1;
+                            cursor:pointer;
+                            input{position:absolute; right:$two*7+1;}
+                        }
+                        &:hover{background:#f1f1f1;}
+
+                        a{
+                            .glyphicon{
+                                transform:rotate(0deg);
+                            }
+                         }
+                    }
+                }
+
+             &.active{
+                 a{
+                    .glyphicon{
+                        transform:rotate(90deg);
+                            font-size:$two*5; 
+                    }
+                 }
+                ul.filterCollaspData {
+                    display:block!important;
+                }
+             }
+            }
+        }
+    }
+    .equalheight{
+        min-height:calc(100vh - 0px);
+    }
+}
+
+.blue-color{
+    color:#4b7bdd;
+    a{
+        color:#4b7bdd;
+    }
+    &:hover,&:focus{
+        color:#4b7bdd;
+    }
+}
+
+.topHeadFields .topsearchCat .chosen-container .chosen-single{
+    border:1px solid #e5e5e5;
+}
+
+
+@media (max-width:767px){
+    .modal{
+        .filterscrollbar{
+            width:calc(100% - 15px);
+
+            .filterList{
+                height:calc(50vh - 100px);
+            }       
+        }
+        .columns_dragble{
+            max-height: calc(50vh - 100px);
+			overflow:auto;
+        }
+    }
+}

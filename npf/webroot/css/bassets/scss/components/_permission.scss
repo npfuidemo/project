@@ -1,0 +1,76 @@
+.permissions_collegesview,.permissions_view  {
+    background:#f6f8fe;
+
+    .topHead{
+        border:0;
+    }
+    .title{
+        border:0;
+        margin-bottom:0;
+    }
+    .aligner-middle {
+        background: #fff;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        min-height: calc(100vh - 215px);
+        height:auto;
+    }
+
+    .well{
+        background:#fff;
+        box-shadow:none;
+        border:0;
+    }
+    #accordion{
+        min-height:190px;
+    }
+    #panel_list,#colleges_panellist{
+        .panel-body{
+            border:0;
+            border-top:1px solid #eee;
+        }
+        .table-bordered{
+            margin-bottom:0;
+            th{
+                background-color:#FAFAFA!important;
+            }
+            th,td{
+                border-color:#eee;
+            }
+        }
+    }
+    .newStyleUi{
+        .topSearch{
+            .btn{
+                background:transparent!important;
+            }
+        }
+    }
+
+    .chosen-container-single .chosen-search:before{
+        color:#4b7bdd;
+    }
+}
+
+@media (min-width:767px)  and (max-width: 991px){
+    .topSearch {
+        width: auto !important;
+        margin-bottom:0px !important;
+        margin-right:5px;
+        input[type=search] {
+            padding:5px 32px 5px 10px;
+        }
+    }
+}
+
+
+@media (max-width:767px){
+    .filter_btn{margin-top:10px;}
+    .advanceFilterModal{
+        display:block;
+        width:100%;
+    }
+}
+
+

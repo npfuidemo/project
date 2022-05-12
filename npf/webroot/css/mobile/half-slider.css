@@ -1,0 +1,61 @@
+/*!
+ * Start Bootstrap - Half Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+
+.carousel {
+    height: 466px;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+footer {
+    margin: 50px 0 0;
+}
+
+.carousel-control .icon-next, .carousel-control .icon-prev {
+    font-size: 60px;
+    height: 60px;
+    margin-top: -30px;
+    
+    width: 20px;
+}
+.carousel-control .icon-prev{margin-left:-30%;}
+.carousel-control .icon-next{margin-right:-30%;}
+@media only screen and (max-width:360px) {.carousel {
+    height: 125px;
+}
+}
+@media only screen and (min-width:361px) and (max-width:440px) {.carousel {
+    height: 150px;
+}
+}
+@media only screen and (min-width:441px) and (max-width:540px) {.carousel {
+    height: 180px;
+}
+}
+
+@media only screen and (min-width:541px) and (max-width:768px) {.carousel {
+    height: 260px;
+}
+}
+
+.carousel-indicators{display:none;}

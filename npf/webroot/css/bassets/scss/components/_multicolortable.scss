@@ -1,0 +1,43 @@
+.multiColorTable{
+	.colGroup1{
+		background-color:rgba(0, 0, 0, 0.04);
+	}
+	.colGroup2{
+		background-color:rgba(0, 0, 0, 0.07);
+	}
+	th{
+		border:none !important;
+	}
+	&.mctHeadFix{
+		.colGroup1{
+			background-color:#f5f5f5;
+		}
+		.colGroup2{
+			background-color:#ededed;
+		}
+		th{
+			position:sticky;
+			z-index:111;
+			background-color:#fff;
+		}
+		.rowone{
+			th{
+				top:0;
+			}
+		}
+		.rowtwo{
+			th{
+				top:42px;
+			}
+		}
+	}
+}
+
+
+
+.solidgrey .colGroup1{
+	background:#f5f5f5!important;
+}
+.solidgrey .colGroup2{
+	background:#ededed!important;
+} 

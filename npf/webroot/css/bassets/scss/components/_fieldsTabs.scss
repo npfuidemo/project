@@ -1,0 +1,33 @@
+.fieldtabs{
+	display:inline-block;
+	width:100%;
+	margin:0 -5px;
+}
+
+.fieldtab {
+	display:inline-block;
+	margin:0 5px;
+	vertical-align:top;
+	.SumoSelect{
+		max-width:200px;
+	}
+	.chosen-container{
+		min-width:160px;
+		text-align:left;
+	}
+	.form-control{
+		height:34px;
+		padding:2px 30px 2px 8px;
+	}
+	.dateFormGroup .iconDate{
+		top:4px;
+	}
+	.chosen-container-single{
+		.chosen-single{
+			line-height: 32px;
+			padding: 0 0 0 8px;
+			border-color:#ccc;
+		}
+	}
+}
+

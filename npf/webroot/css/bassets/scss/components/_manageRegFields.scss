@@ -1,0 +1,19 @@
+.users_manageregistrationfields {
+  .dm-new {
+    min-height: auto;
+    margin: 0;
+
+    &:after {
+      bottom: 12px;
+    }
+  }
+}
+
+.app-status-map {
+  min-width: 150px;
+  max-width: 200px;
+  .SumoSelect>.optWrapper>.options{
+    max-height: 160px;
+    overflow-y: overlay;
+  }
+}

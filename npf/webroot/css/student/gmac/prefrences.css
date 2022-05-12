@@ -1,0 +1,20 @@
+.aroundFlexSelect{border:1px solid #ddd;}
+.plusMinIcon{font-size:1.8em;}
+/*** Flex Box ***/
+.flexbox{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display: -webkit-flex;display:flex;display:flex;align-items:center;}
+.column2{-webkit-flex:50%;-ms-flex:50%;flex:50%;padding:15px;}
+.addmore_dropdown {background-color: #fff;border-right: 1px solid #ddd;min-height:190px;}
+.prefrenceDiv{background-color: #f2f2f2;padding: 20px;position: relative;}
+.prefrenceDiv:before{content:'';border-color:transparent #f2f2f2 transparent transparent;border-style:solid;border-width:15px;position:absolute;left:-28px;top: 50%;margin-top: -10px;}
+.aroundFlexSelect .form-group>label{font-weight: 600;text-align: left;margin-top:0;vertical-align:middle;width:100%;}
+.requiredStar {display: inline-block;color: #f00;font-weight: 600;}
+.requiredError{display:none;}
+.dropup .chosen-container .chosen-drop{top:auto;bottom:100%;border-top:1px solid #aaa}
+.margin-left-8{margin-left:8px;}
+.addmorebutton, .removeElementClass{margin-top:8px;}
+#ConfirmMsgBody{font-size:20px;margin-bottom:20px;}
+.nD .chosen-container ul.chosen-results li.highlighted{background-color:#006ea4!important}
+.feedbackHideOnForm{display:none;}
+
+.applicant_school_preference .addmore_dropdown > .formAreaCols >.row{margin-bottom:15px;}
+.applicant_school_preference .addmore_dropdown .chosen-container-single .chosen-single {line-height: 38px;padding: 0 0 0 8px;}

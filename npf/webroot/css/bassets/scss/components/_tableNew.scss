@@ -1,0 +1,115 @@
+.table-border{
+	border-color:#eee;
+}
+.table>thead>tr>th{border-bottom:none;}
+.table-border th, 
+.table-bordered th {
+    background-color:#f6f8fe;
+    border-color:#eee;
+}
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th {
+    padding: 12px 8px;
+	border-top-color:#eee;
+}
+
+.table.table-condensed>tbody>tr>td, .table.table-condensed>tbody>tr>th, .table.table-condensed>tfoot>tr>td, .table.table-condensed>tfoot>tr>th, .table.table-condensed>thead>tr>td, .table.table-condensed>thead>tr>th{
+	padding: 8px
+}
+
+table.table-hover tbody tr:hover{
+	box-shadow:none;
+	td{
+		background-color:#fafbfe !important;
+	}
+}
+th{
+	font-weight:500;
+}
+
+/*** Check Box Design ***/
+.input-right{
+	position:relative;
+	&.checkmarkbox{
+		width:14px;
+	}
+	input[type=checkbox]{
+		position:relative;
+		z-index:11;
+		opacity:0;
+		width: 15px;
+		height: 15px;
+	}
+	.checkmark{
+		position:absolute;
+		border: 1px solid #bababa;
+		border-radius: 3px;
+		width: 13px;
+		height: 13px;
+		top: 5px;
+		left: 0;
+		z-index: 1;
+		overflow: hidden;
+		background-color: #fff;
+		.draw-check{
+			display:none;
+		}
+	}
+	input:checked ~ .checkmark {
+		background-color: #1d48f5;
+		color: #fff;
+		border-color:#1d48f5;
+	}
+	input:checked ~ .checkmark .draw-check{
+		top:0;
+		position:relative;
+		font-size:10px;
+		left:0;
+		display:block;
+	}
+}
+th{
+	.input-right{
+		.checkmark{
+			top:2px;
+		}
+	}
+}
+.fixColLeft + .fixColLeft{
+	border-right:1px solid #eee;
+}
+.fixColRight{
+	border-left:1px solid #eee;
+}
+
+.btn.active, .btn:active{box-shadow:none;-webkit-box-shadow:none;}
+
+.clickToCall{font-size:14px;vertical-align:middle;}
+.clickToCall .draw-whatsapp{color:#2cb742;}
+
+
+.ellipsis-left .fa {
+    color: #111;
+    font-size: 18px;
+}
+
+
+.customborder{
+	border:0!important;
+	tr{
+		td,th{
+		border:0!important;
+		vertical-align:middle!important;
+		padding:8px 0px!important;
+		}
+	&:first-child{
+		td,th{
+			vertical-align:top!important;
+		}
+	}
+	} 
+}

@@ -1,0 +1,19 @@
+.navbar-nav{
+	.profile{
+		a{
+			&.dropdown-toggle{
+				padding:17px 15px 18px;
+				margin:0;
+			}	
+		}
+		.pName{
+			overflow:hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width:140px;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+}
+

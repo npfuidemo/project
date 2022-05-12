@@ -1,0 +1,11 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 14px / 1.6 $text-font-stack;
+}
+
+.google-visualization-table-table{
+	font-family: $text-font-stack !important;
+}

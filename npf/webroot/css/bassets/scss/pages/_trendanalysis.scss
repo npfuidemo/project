@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Trend Anylis.
+// -----------------------------------------------------------------------------
+.pd-0{
+	padding:0 !important;
+}
+
+.titleh2{
+	margin: 5px 0 15px;
+    font-size: 20px;
+}
+
+.oneLevelDependent{
+	margin-top:10px !important;
+	input[type=checkbox]{
+		margin: 0;
+		vertical-align: middle;
+	}
+	label{
+		font-style: italic;
+		font-size:13px;
+		color: #666;
+		margin:0 0 0 4px;
+		line-height:14px;
+		display: inline-block;
+		font-weight:400;
+	}
+}
+
+.SumoSelect>.CaptionCont>span, 
+.chosen-container-single a span{color:#333;}
+
+
+.select-sml-style.styled .chosen-container-single .chosen-single{line-height:28px;}
+
+.btchMsg{position:relative;top:0;left:0;text-align:center;width:100%;} 
+
+.sorting_parent_pos {
+    position: relative;
+    padding-right:20px !important;
+	min-width:150px;
+	.sorting_span.sorting_span_inline{
+		position:absolute;
+		top:50%;
+		right:8px;
+		margin-top:-14px;
+	}
+	&.sorting-small{
+		min-width:124px;
+	}
+}
+.sorting_parent_inline_pos{
+	position: relative;
+    padding-right:15px !important;
+	display:inline-block;
+	.sorting_span.sorting_span_inline{
+		position:absolute;
+		top:50%;
+		right:3px;
+		margin-top:-14px;
+	}
+}
+
+.trend-arrow {
+    font-size: 10px;
+}
+.totalTr th {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.margin-bottom-30{ margin-bottom:30px;}

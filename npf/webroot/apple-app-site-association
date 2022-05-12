@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [
+      "AH78626LKA.com.nopaperforms.education"
+    ],
+    "details": [
+      {
+        "appID": "AH78626LKA.com.nopaperforms.education",
+        "paths": ["*"         
+        ]
+      }
+    ]
+  }
+}

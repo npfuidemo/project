@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  //'vendor/chosen';
+  'vendor/sumoselect'; 
+  
+  .widget_container{
+    .field-select:before{
+      display:none;
+    }
+    .chosen-container-single{
+      .chosen-single{
+        padding:0 12px;
+        line-height:34px;
+        border-radius:4px;
+        div{right:5px;
+          b{
+            background:none;
+          }
+        }
+      }
+      .chosen-drop{
+        margin-top:-3px;
+      }
+      .chosen-search:before{
+        display:none;
+      }
+    } 
+  }

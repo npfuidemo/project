@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+// Max width wrapper
+$wrapper-width: pxtoem(1140, 16);
+
+@mixin box-sizing($boxsizing){
+    -webkit-box-sizing:$boxsizing;
+    -moz-box-sizing:$boxsizing;
+    -ms-box-sizing:$boxsizing;
+    -o-box-sizing:$boxsizing;
+    box-sizing:$boxsizing;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -ms-transition: $transition;
+      -moz-transition: $transition;
+        -o-transition: $transition;
+		   transition: $transition;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+	  -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+	  -o-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin background-size-cover($cover) {
+  -webkit-background-size: $cover;
+	 -moz-background-size: $cover;
+	 -ms-background-size: $cover;
+       -o-background-size: $cover;
+          background-size: $cover;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+	 -moz-transform: $transform;
+	  -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+@mixin backface-visibility($backfacevisibility) {
+  -webkit-backface-visibility: $backfacevisibility;
+	 -moz-backface-visibility: $backfacevisibility;
+	 -ms-backface-visibility: $backfacevisibility;
+       -o-backface-visibility: $backfacevisibility;
+          backface-visibility: $backfacevisibility;
+}
+
+@mixin button(){
+	text-decoration:	none;
+	background-color:	#ffdb15;
+		   border:	none;
+		  padding:	8px 10px;
+		   margin:	0px;
+		   border:	1px solid #ffca02;
+		   cursor:	pointer;	
+		   font-family:$font-stack-bold;
+		   font-weight: normal;
+		   color: #111;
+		   text-transform: uppercase;
+}
+
+@mixin buttonHover(){
+  background-color: #ccc !important; 
+	border:	1px solid #b7b9bd !important; 
+	color:	#333 !important;	
+}
+
+@mixin formTag(){
+    background-color: #fff; 
+	border: 1px solid #ccc; 
+	padding: 8px 10px;	
+}
+
+@mixin formTagFocus(){
+  border-color: #96c2db;
+  outline: none;
+}

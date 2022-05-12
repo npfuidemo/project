@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/newAbstracts/variables',
+  'abstracts/functions',
+  'abstracts/newAbstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/topHeading',
+  'components/fieldSize',
+  'components/filterModal',
+  'components/offcanvasModal',
+  'components/tabs',
+  'components/flex',
+  'components/panel',
+  'components/leaDistributions',
+  'components/labelviewInside',
+  'components/tableNewGenric',
+  'components/graphTabs',
+  'components/print',
+  'components/_table',
+  'components/equalHeightColumn.scss',
+  'components/columnFilterModal',
+  'components/drag-item',
+  'components/circleButton',
+  'components/offCanvasModalheader.scss',
+  'components/newTableStyle';
+
+  
+// 3. Pages
+@import
+  'pages/productivity-report';

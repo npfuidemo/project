@@ -1,0 +1,107 @@
+.yourapplicationprocess{height:calc(100% - 0px); 
+  .ui-sortable-handle span{background-color:$base-color; color:$white-color;}
+  .innercontent{padding:15px; border-radius:5px; background:#f6f8fe; border:1px dashed #cdcdcd; height:100%; min-height:330px;}
+ ul li{text-align:center; clear: both; position:relative; margin:15px 0; 
+  &:before{content: "\f107"; display:inline-block; font:normal normal normal 16px/1 FontAwesome; text-rendering:auto; -webkit-font-smoothing:antialiased; position: absolute; left:calc(50% - .5px);
+  top:40PX;z-index: 9999;transform: translate(-50%, 0%); color:$grey-color;}
+
+  &.ui-sortable-helper span:after{content:"\f178"; display: inline-block;font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased; margin-left:5px;}
+
+  }
+}
+
+
+
+.yourapplicationprocess .ui-sortable{display: flex; flex-direction: column; margin:0;}
+#sortable1{height:calc(100% - 100px); justify-content:center;
+	&:before{content: "";
+		width: 1px;
+		height:calc(100% + 35px);
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		transform: translate(-50%, 0px);
+		z-index: 0;
+		background:$grey-color;}
+ li{min-height:40px;
+  &.start,&.end{pointer-events:none;}
+  &:hover span{cursor:all-scroll;}
+  &.ui-sortable-placeholder{width:auto; margin:0 auto!important; max-width:300px;}
+ }
+ &:hover+#process_error{display:none;}
+}
+
+#sortable2{margin:0;  width: 100%; min-height: 450px; 
+ li{margin:10px 0 0px 0;
+	&:first-child{margin-top:0;}
+ }
+}
+
+
+.ui-sortable{padding:0; list-style: none; font-size:13px; position: relative;
+ li{margin:5px 0;  -ms-touch-action: none; touch-action: none;
+   span{background:$white-color; padding:5px 15px; text-align:center; border-radius:20px; display:inline-block; border:1px solid $base-color; color:$base-color; z-index:10; position:relative;}
+ &.ui-sortable-placeholder{visibility:visible!important; position: relative;
+  span{position: relative;}
+ }
+ &.ui-sortable-placeholder{display:inline-block; width:auto; max-width: 100%!important; background:$white-color;  border:1px dashed $grey-color1; visibility:visible!important; min-height:30px; border-radius:20px; }
+ &.ui-sortable-handle span{cursor: pointer; font-size:13px;}
+ & >span:hover,&>span:focus{background:$base-color; color:$white-color; }
+ &.blank{color:#999!important; border:0; min-height:auto; pointer-events:none;
+  .hovercontent{border:1px dashed $grey-color2; vertical-align:middle; border-radius:8px; margin:0 auto; font-weight:normal; text-align:center; padding:10px;  white-space:break-spaces; font-size:12px; background:rgba(255,255,255,1); max-width:300px; color:$grey-color1;}
+  &:before,&:after{display:none;}  
+   span{background:none!important; color:$white-color!important; border:0!important; padding:60px 90px;
+   &:before{color:#999;}
+  }
+}
+ &.ui-sortable-placeholder+.blank{display:none;}
+ &.blank+.ui-sortable-placeholder{position:absolute;left:50%; top:50%; transform:translate(-50% , -50%);}
+ }
+}
+
+
+.start{
+  li{margin-top:0!important;
+  &:after{content:''; width:1px; height:17px; position:absolute;top:50%; left:50%; transform: translate(-50%, 15px); z-index:0; background:$grey-color;}
+    span{opacity:.7; cursor:not-allowed; background:$white-color!important; border:1px solid $base-color!important; color:$base-color!important;
+      &:hover,&:focus{background:$white-color!important; border:0;}
+    }
+  }
+}
+
+.end{
+ li{margin-bottom:0!important;
+  span{opacity:.7; cursor:not-allowed;  background:$white-color; border-color:$base-color; color:$base-color;
+    &:hover,&:focus{background:$white-color;   color:$base-color;}
+  }
+  &:after,&:before{display:none!important}
+ }
+}
+
+
+
+
+.ui-sortable-helper:before{display:none!important;}
+.ui-sortable-helper:after{display:none;}
+.ui-draggable-disabled{user-drag: none; user-select: none;-moz-user-select: none;-webkit-user-drag: none;-webkit-user-select: none;-ms-user-select: none;}
+.postapplicationprocess{ position:sticky; top:75px;
+ul li{
+  &.ui-sortable-helper span:before{content:"\f177"; display: inline-block;font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased; margin-right:5px;}
+}
+}
+
+
+.vpaibox  .SumoSelect>.optWrapper>.options li ul li.opt {
+  padding-left: 15px;
+}
+
+
+
+ 
+@media (min-width:1025px){ 
+ .ui-sortable li{white-space: nowrap;
+  span{white-space: nowrap;}
+ }
+}

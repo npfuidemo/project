@@ -1,0 +1,621 @@
+$goldColor: darken(#ffc815, 5%);
+$darkerThemeColor: darken($themeColor, 15%);
+
+$baseRangeColor: lighten(#2a8eb0, 5%);
+$compareRangeColor:lighten($themeColor, 10%); 
+
+$warningRangeColor: darken(#ffa500, 5%);
+$errorColor: #990000;
+
+.dateCardContainer {
+    width:100% !important;
+    top:0px;
+    left:0; // only card that starts visible
+    display:block;
+    overflow:visible;
+    pointer-events:all;
+	min-width:300px;
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .disableApply {
+      opacity: 0.6;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .enableApply {
+      opacity: 1;
+      pointer-events: all;
+      cursor: pointer;
+    }
+
+    .disableInput {
+      border: none !important;
+    }  
+
+    .enableInput {
+      border: 2px solid !important;
+    }  
+
+    .disableControl {
+      pointer-events: none;
+      border: none !important;
+	  background-color: #eee;
+    }
+
+    .enableControl {
+      pointer-events: all;
+      border: 2px solid !important;
+    }
+
+    span.baseRangeTxt {
+      color: $baseRangeColor;
+      font-size: 13px;
+      font-weight: normal;
+    }
+
+    span.compareRangeTxt {
+      color: $themeColor;
+      font-size: 13px;
+      font-weight: normal;
+    }
+
+    .errorInputTxt {
+      color: $errorColor;
+      
+    }
+
+    span.warningRangeTxt {
+      color: $warningRangeColor;
+    }
+
+    .calendarContainer {
+      @include commonDiv;
+      padding: 15px 20px;
+      height:auto;
+      overflow: visible;
+    
+    }
+
+    input {
+		display: inline-block;
+		font-size:11px;
+		height: auto;
+		width:100px;
+    }
+	span.hyphen{margin: 0 12px;}
+	
+     input[type="checkbox"] {
+      width: 14px !important;
+	  top: 2px;
+	position: relative;
+     }
+
+    h4.baseTitle {
+      margin-left: 0px;
+      font-family: "Geogrotesque-Medium", Georgia, serif, Verdana;
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+
+    .compareRowContainer {
+       @include commonDiv;
+       width: 100%;
+	   min-height:75px;
+       overflow: visible;
+	   margin:15px 0;
+    }
+
+  
+    .datepicker-calendar {
+      @include commonDiv;
+      height: 248px;
+
+      .datepicker {
+        /*width: 502px !important;
+        height: 140px !important;*/
+      }
+
+    }
+
+  div.datepicker {
+    position: relative;
+    font-size: 12px;
+    /*width: 196px;
+    height: 147px;*/
+    position: absolute;
+    cursor: default;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .datepickerContainer {
+    position: absolute;
+	width:100% !important
+  }
+
+  /* Hide border divs by default */
+  .datepickerBorderT,
+  .datepickerBorderB,
+  .datepickerBorderL,
+  .datepickerBorderR,
+  .datepickerBorderTL,
+  .datepickerBorderTR,
+  .datepickerBorderBL,
+  .datepickerBorderBR {
+    display:none;
+  }
+
+  .datepickerHidden {
+    display: none;
+  }
+  div.datepicker table {
+    border-collapse:collapse;
+  }
+  div.datepicker a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+  }
+  div.datepicker table td {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /*div.datepicker table.datepickerViewDays td{
+	padding:6px;
+  }*/
+  
+  .datepickerSpace{
+	min-width:10px;
+  }
+  
+  div.datepicker th {
+    text-align: center;
+    color: #666;
+    font-weight: normal;
+    padding:0;
+  }
+  div.datepicker tbody a {
+    display: inline-block;
+	padding:6px 8px;
+  }
+  .datepickerDays a {
+    cursor: pointer;
+  }
+  .datepickerYears a,
+  .datepickerMonths a{
+    width: 39px;
+    line-height: 36px;
+    height: 36px;
+    text-align: center;
+  }
+  .datepickerMonths td:first-child a,
+  .datepickerMonths td:last-child a,
+  .datepickerYears td:first-child a,
+  .datepickerYears td:last-child a {
+    width:38px;
+  }
+  td.datepickerNotInMonth a {
+    color: #666666;
+  }
+  tbody.datepickerDays td.datepickerSelected{
+    background: $baseRangeColor;
+    pointer-events: none !important;
+    cursor: default !important; 
+  }
+  tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {
+    background: #17384d;
+  }
+  tbody.datepickerYears td.datepickerSelected,
+  tbody.datepickerMonths td.datepickerSelected{
+    background: #17384d;
+  }
+  div.datepicker td.datepickerSelected a {
+    color:white;
+  }
+  div.datepicker a:hover,
+  div.datepicker a:hover {
+    color: #88c5eb;
+  }
+  div.datepicker td.datepickerNotInMonth a:hover {
+    color: #999999;
+  }
+  .datepickerSpace div {
+    width: 20px;
+  }
+  .datepickerBlock {
+    vertical-align:top;
+  }
+  a.datepickerGoNext,
+  a.datepickerGoPrev,
+  a.datepickerMonth {
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    float:left;
+  }
+  div.datepicker th a.datepickerGoNext,
+  div.datepicker th a.datepickerGoPrev {
+    width: 20px;
+    color: #666666;
+    display:none;
+  }
+  div.datepicker th a.datepickerMonth {
+    width:114px;
+    display:block;
+  }
+  /* Only display the previous/next arrows on the first/last calendars */
+  div.datepicker .datepickerFirstView th a.datepickerGoPrev,
+  div.datepicker .datepickerLastView th a.datepickerGoNext {
+    display:block;
+  }
+  /* Compensate for the space lost by not having a previous arrow */
+  div.datepicker th a.datepickerMonth {
+    margin-left:10px;
+  }
+  div.datepicker .datepickerFirstView th a.datepickerMonth {
+    margin-left:0;
+  }
+  /* Day mode calendar body */
+  table.datepickerViewDays tbody.datepickerMonths,
+  table.datepickerViewDays tbody.datepickerYears {
+    display: none;
+  }
+  /* Month mode calendar body */
+  table.datepickerViewMonths tbody.datepickerDays,
+  table.datepickerViewMonths tbody.datepickerYears,
+  table.datepickerViewMonths tr.datepickerDoW {
+    display: none;
+  }
+  /* Year mode calendar body */
+  table.datepickerViewYears tbody.datepickerDays,
+  table.datepickerViewYears tbody.datepickerMonths,
+  table.datepickerViewYears tr.datepickerDoW {
+    display: none;
+  }
+  td.datepickerDisabled a,
+  td.datepickerDisabled.datepickerNotInMonth a{
+    color: #555555;
+    pointer-events: none !important;
+    cursor: default !important; 
+  }
+  td.datepickerDisabled a:hover {
+    color: #333333;
+    pointer-events: none !important;
+    cursor: default !important; 
+  }
+  /* Not used by default, calendar cells can be marked as special if desired (doesn't seem to be totally working) */
+  div.datepicker tbody.datepickerDays td.datepickerSpecial a {
+    background: #770000;
+    color:white;
+  }
+  div.datepicker tbody.datepickerDays td.datepickerSpecial.datepickerSelected a {
+    background: #aa0000;
+  }
+
+  /* style the 'not in month' day cell away */
+  tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {
+    background-color:transparent;
+  }
+  div.datepicker td.datepickerNotInMonth a span {
+    color: #ccc;
+    cursor: not-allowed;
+	visibility:hidden;
+  }
+  div.datepicker td.datepickerNotInMonth a:hover span {
+    display:none;
+  }
+  div.datepicker tbody.datepickerDays td.datepickerNotInMonth:hover {
+    background-color: transparent;
+  }
+
+  //////////////////////////// RANGE
+
+  input[type="input"] {
+    width: 80px;
+  }
+
+  input.baseRange:focus {
+    outline: none;
+  }
+
+  input.baseRangeSelected {
+    border-color:$baseRangeColor !important;
+  }
+
+
+  input.compareRange:focus {
+    outline: none;
+  }
+
+  input.compareRangeSelected {
+    border-color:$themeColor !important;
+  }
+
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+
+  input[type="radio"]{
+    display: inline-block;
+  }
+
+
+  /* red cell color for selected compare days */
+  tbody.datepickerDays td.datepickerCompareSelected {
+    background-color: $compareRangeColor;
+   
+  }
+
+  tbody.datepickerDays td.datepickerCompareSelected a {
+   color: white;
+  }
+
+  .testsContainer {
+    margin-top: 40px;
+  }
+
+  .validMessage {
+    color:#333;
+  }
+
+  .errorMessage {
+    color:#f00;
+  }
+
+  label {
+    font-size:14px;
+    color:#666;
+  }
+
+  .selectContainer {
+    display: inline-block;
+  }
+  
+  .baseSelect{
+	width:145px;
+  }
+
+  .toFrom  {
+	position:relative;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+	&:after {
+		content: '';
+		background-color: transparent;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 30px;
+		z-index: 11;
+		cursor: not-allowed;
+	}
+  }
+
+  .selectContainer .form-control{
+	height:30px;
+    font-size: 12px;
+  }
+
+  #compareRange, .compareRange1 {
+    display: inline-block;
+	margin:0 10px 0 2px;
+  }
+
+  .buffer {
+    margin-bottom: 15px;
+  }
+
+  .footerBar {
+    /*display: block; 
+    width: 530px; 
+    height: 30px; 
+    margin: 0px; 
+    padding: 0px;
+    margin-top:8px;*/
+
+  }
+
+  .validationContainer {
+    display: inline-block; 
+    width:100%; 
+    margin: 0px; 
+    padding: 0px;
+  }
+
+  .validationText {
+    display: block; 
+    width:100%; 
+    margin: 0px; 
+    padding: 0px;
+    font-size: 12px;
+  }
+
+  .rangeButtonContainers {
+    /*display: inline-block; 
+    width: 158px;
+    margin: 0px; 
+    padding: 0px;
+    float: right;*/
+
+    .dateButton {
+      width: 70px;
+      margin-right:10px;
+    }
+
+    /*.dateButton:focus {
+      border: none;
+      outline: none;
+    }*/
+  }
+
+
+  //////////////////////////// CLEAN
+
+  /* Datepicker border styling */
+
+  /* Tighten up the spacing between multiple calendars */
+  .datepickerSpace div {
+    width:2px;
+  }
+
+  /* Grey background behind Month Name row, and blue text */
+  div.datepicker th {
+    background-color:#eee;
+  }
+  div.datepicker th a.datepickerMonth {
+    color:#333;
+    font-weight:500;
+  }
+
+  /* style the day of week header cells */
+  div.datepicker th {
+    padding:2px;
+  }
+  /* grey underline beneath day of week row */
+  div.datepicker table thead tr.datepickerDoW th {
+    border-bottom: 1px solid #CCCCCC;
+  }
+
+  /* Black text, white background, and grey borders around day cells */
+  div.datepicker a,
+  div.datepicker a:hover {
+    color: #333;
+  }
+  div.datepicker table.datepickerViewDays,
+  div.datepicker table.datepickerViewMonths,
+  div.datepicker table.datepickerViewYears {
+    background-color:white;
+  }
+  div.datepicker table tbody.datepickerDays td {
+    border: 1px solid #F7F7F7;
+  }
+
+  /* blue cell color for selected days */
+  tbody.datepickerDays td.datepickerSelected {
+    background-color: $baseRangeColor;
+  }
+
+  /* Grey out dates in the future */
+  div.datepicker td.datepickerFuture {
+    pointer-events: none !important;
+    cursor: default !important; 
+  }
+
+  div.datepicker td.datepickerFuture a {
+    color:#DDDDDD;
+    pointer-events: none !important;
+    cursor: default !important; 
+  }
+
+  /* Grey out dates in the future */
+  div.datepicker td.datepickerFuture a:hover {
+    pointer-events: none;
+    background-color:#DDDDDD !important;
+    pointer-events: none !important;
+    cursor: default !important; 
+  }
+
+  /* Grey out dates in the future */
+  div.datepicker td.datepickerFuture td:hover {
+    pointer-events: none;
+    background-color:#DDDDDD !important;
+    pointer-events: none !important;
+    cursor: default !important; 
+  }
+
+
+  /* yellow cell background on hover */
+  div.datepicker tbody.datepickerDays td:hover {
+    background-color: #FFCC33; 
+  }
+
+  /* Bold today's date */
+  div.datepicker td.datepickerToday a {
+    font-weight:bold;
+  }
+
+  /* cells are wider in the clean style */
+  .datepickerYears a, .datepickerMonths a {
+    width: 42px;
+  }
+  .datepickerMonths td:first-child a,
+  .datepickerYears td:first-child a {
+    width:39px;
+  }
+  div.datepicker th a.datepickerMonth {
+    width:121px;
+	text-align: left;
+  }
+}
+.datepickerGoNext{
+	float: right !important;
+    margin-right: 5px;
+}
+
+.compareBox{
+	height:50px;
+}
+
+.compareRangeTo{
+	font-size:12px;
+	color:#666;
+	font-weight:500;
+}
+
+
+@include media(">tablet") {
+	.dateCardContainer{
+		width:760px !important;
+		left:520px; // only card that starts visible
+    }
+	.dashlets{
+		&.small{
+			.dateCardContainer{
+				width:514px !important;
+			}
+			.col-sm-8, .col-sm-4{
+				width:100%;
+			}
+			.col-sm-4{
+				margin-top:15px;
+			}
+			.hideCompare{
+				display:none !important;
+			}
+		}
+    }
+}
+
+@include media("<tablet") {
+	.dd-range{
+		position:fixed;
+		left:0;
+		top:0;
+		margin:0;
+	}
+	.dateCardContainer{
+		.calendarContainer{
+			padding:0 15px;
+		}
+		.datepicker-calendar{
+			margin-bottom:20px;
+		}
+	}
+	
+}

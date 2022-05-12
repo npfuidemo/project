@@ -1,0 +1,17 @@
+// 1. Import ListNew scss
+@import 'create',
+'./components/conditional-block';
+
+// 2. Components
+@import 'pages/agentcenterVisit';
+
+
+
+.logicBox span.control-span {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+.logicBox .logicRowAction {
+  margin-top: 10px;
+}

@@ -1,0 +1,38 @@
+//overwrite css for modal header
+.offCanvasModalheader{
+    background-color: #fff !important;
+    color: #000;
+    border-bottom: 1px solid #4b7bdd;
+    padding:10px!important;
+    
+    .modal-title {
+        color: #000!important;
+    }   
+
+    .close {
+        color: #000 !important;
+        opacity: 1 !important;
+        border-radius: 50%;
+        padding: 8px;
+        font-size: 20px;
+        margin-top: 0 !important;
+        position: absolute;
+        right: 3px;
+        top: 7px;
+        font-size: 14px;
+        z-index:9999;
+        
+        &:hover {
+            background: rgba(0,0,0,.07);
+            span.glyphicon {
+                color:red!important;
+            }
+        }
+    }
+}
+
+.cmodal-sm{
+    .modal-dialog {
+        max-width: 400px;
+    }
+}

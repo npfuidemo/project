@@ -1,0 +1,40 @@
+input[type="text"], input[type="email"], input[type="password"], textarea, select{
+  padding: 8px 10px;
+  border: 1px solid #dedede;
+  background-color: #fff;
+  color:#444;
+  box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  width:100%;
+}
+
+.checkbox label{font-family:"opensansregular",sans-serif;}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus{
+	border-color: #b9f4ee;
+	box-shadow:0 1px 1px rgba(185, 244, 238, 0.75) inset;
+}
+
+.formBox {
+    background-color: #fff;
+    box-shadow: 0 0 5px #aaa;
+    margin-top: -85px;
+    padding: 30px;
+	margin-bottom:40px;
+	label{
+		display:block;
+		font-size:13px;
+		margin-bottom:2px;
+		color:#111;
+	}
+}
+
+
+.form-group{
+	select, input[type="text"], input[type="email"]{
+		width:100%;
+	}
+}
+
+.daterangepicker .ranges ul{
+	width:320px !important;
+}

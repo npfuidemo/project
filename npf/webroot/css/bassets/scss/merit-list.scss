@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/topHeading',
+  'components/rowSpace',
+  'components/fieldSize',
+  'components/conditional-block';
+  
+// Page Specific CSS
+	.template-steps{width:70%;}
+	.template-steps .nav-tabs li{width:50%}
+	.template-steps .nav-tabs:before{position: absolute;bottom:34%;border-bottom:4px #75b740 solid;width:55%;z-index:0;left:22%;}
+	.steps_txt{margin-bottom:0;}
+	.npf-form-style label{font-size:14px; color:#111;line-height:100%;}
+	.npf-form-style label[data-type="disabled"]{color:#999; cursor:not-allowed}
+	.npf-form-style .label-main{color:#111 !important;font-weight:500;}
+	.npf-form-style .form-group{display:inline-block;width:100%;}
+	.npf-form-style textarea.form-control {height:auto !important; margin:0 !important;}
+	.npf-form-group .form-control{margin:0 !important;}
+	.max80{max-width: 80%;margin: 0 auto;}
+	.tab-content{background-color: #f9f9f9;border: 1px solid #ddd;margin-top: -44px;padding:0;}
+	.template-steps .nav-tabs li.stepPrev .step{border-color:#75b740; color:#75b740;}
+	.template-steps .nav-tabs li.stepPrev .steps_txt{color:#75b740;}
+	li.disabled:before {content:'';position: absolute;left: 0;width: 100%;z-index: 999999;height: 100%;top: 0;background-color:transparent;}
+	#dataToBePurgedBody td strong{ font-size:14px; font-weight:300;}

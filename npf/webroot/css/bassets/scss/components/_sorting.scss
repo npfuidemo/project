@@ -1,0 +1,22 @@
+.sorting_span{
+    display:inline-block !important;
+    vertical-align:middle;
+    margin:-2px 0 0 4px;
+    line-height: 14px;
+    font-size: 14px;
+	i{
+        color: #ddd;
+        display: block;
+        cursor: pointer;
+        line-height: 8px;
+        overflow: hidden;
+        &:before {
+            display:inline-block;
+            line-height:10px;
+        }
+        &.active{
+            color: #346ef8;
+        }
+	}
+}
+    

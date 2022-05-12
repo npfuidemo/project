@@ -1,0 +1,240 @@
+body{
+	background-color:#fff;
+}
+.dashboard-page table{box-shadow:0 0 5px #eee;}
+.page-header{
+	margin-top:12px;
+	border-color:#f2f2f2;
+	font-size:20px;
+	color:$gmac-color;
+}
+
+.timeline, 
+.prepProduct{
+	border:1px solid #ddd;
+	box-shadow:0 0 5px #f2f2f2;
+	padding:10px;
+}
+.prepProduct{
+	align-items: center;
+	min-height:238px;
+}
+.featured-prd{
+	background-color: #fefaed;
+	border-color: #f6e7b8;
+}
+.prepProductList{
+	list-style:none;
+	>li{
+		margin-bottom:10px;
+		border-bottom:1px solid #f2f2f2;
+		padding-bottom:5px;
+		&:last-child{
+			border-bottom:none;
+		}
+	}
+	h5{
+		margin-bottom:5px;
+		font-weight:500;
+		color: #333;
+		font-size:16px;
+		line-height:130%;
+	}
+	.mt-15{
+		margin-top:15px;
+	}
+}
+
+.clickForGuide{
+	font-family:$font-stack-semibold;
+	display:inline-block;
+	text-align:center;
+	font-size:18px;
+	line-height:30px;
+}
+.btn-gmac{
+	background-color:$gmac-color;
+	color:#fff;
+	font-family:$font-stack-semibold;
+	&:hover, &:focus{
+		color:#fff;
+		background-color:lighten($gmac-color, 10%);
+	}
+	&[disabled="disabled"]{
+		background-color:#ccc;
+		color:#111;
+	}
+}
+.btn-npf{
+	background-color:$gmac-color;
+	color:#fff;
+	font-family:$font-stack-semibold;
+	&:hover, &:focus{
+		color:#fff;
+		background-color:lighten($gmac-color, 10%);
+	}
+}
+.btn-npf-alt{
+	background-color:#666 !important;
+	color:#fff;
+	font-family:$font-stack-semibold;
+	&:hover, &:focus{
+		color:#fff;
+		background-color:#999;
+	}
+}
+
+.btn-npf-alt{margin-left:10px;}
+
+.font-weight-normal{
+	font-weight:normal;
+}
+.pt-10{
+	padding-top: 10px;
+}
+
+.pb-10{
+	padding-bottom: 10px;
+}
+.mb-15{
+	margin-bottom: 15px;
+}
+
+.btn-width-145{
+	min-width:145px;
+}
+.btn-width-95{
+	min-width:105px;
+}
+.text-red{
+	color: #ff0000d1;
+}
+.font-weight-bold{
+	font-weight: 600;
+}
+.d-block{
+	display: block;
+}
+.utility-text{
+	color:$gmac-color;
+	.npf-icon {
+		font-size: 22px;
+		vertical-align: middle;
+		display: inline-block;
+	}
+	strong{
+		margin-top: 2px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.navbar-nav .profile a.dropdown-toggle, 
+.qms-form .form-group label.control-label{
+	font-weight:600 !important;
+}
+
+.cont-btn{
+	background-color:rgb(242, 137, 39) !important;
+	color:#fff !important;
+}
+.btn-npf{background-color:$gmac-color;}
+.qms-form .cont-browse-btn .npf-btn{
+	background-color:$gmac-color !important;
+}
+.msg_receive{
+	background-color:rgba($gmac-color, 0.15)
+}
+
+#ErrorPopupArea .modal-header{
+	background-color:$gmac-color !important;
+	color:#fff;
+}
+
+.modal-header{
+    background-color: $gmac-color;
+	.modal-title{ font-size:18px;}
+	.close{
+		color:#fff;
+		opacity: 1;
+	}
+}
+
+
+.btn-grey {
+    background-color:#676767;
+    color: #fff;
+    font-family: Tahoma,Geneva,sans-serif;
+}
+
+
+.system-check {
+	.title{
+		color: #006da5;
+		font-weight: bold;
+		font-size: 16px;
+		margin-bottom: 5px;
+		margin-top: 8px;
+	}
+	.bg-blue{
+		background-color: #e1f5ff;
+		border-color: #e1f5ff;
+	}
+	.prepProduct{
+		padding: 24px;
+        min-height: 180px;
+	}
+	.icon{
+		background-color: #006da5;
+		border-radius: 50%;
+		width: 85px;
+		height: 85px;
+		line-height: 85px;
+		img{
+			max-width: 55px;
+		}
+	}
+}
+
+
+.flexrow{
+	.grow-2{
+		flex-grow:2;
+	}
+	.align-items-end{
+		align-items: flex-end;
+	}
+}
+@media (max-width:1199px){
+	.md-mt-20{
+		margin-top:20px;
+	}
+}
+
+.checkbox label span, 
+.radio label span{
+	line-height:18px;
+	display:inline-block;
+}
+.checkbox:last-child, 
+.radio:last-child{margin-bottom:0}
+.lh20{line-height:20px;}
+.margin-right-10{margin-right:10px;}
+#communication_preference_form .radio-inline label{font-size:13px; margin:0;}
+.nowrap{white-space:nowrap}
+
+.nD .chosen-container ul.chosen-results li.highlighted{background-color:#006ea4!important}
+
+.btn-line-gmac{
+	border: 1px solid #e77a14;
+    font-weight: 500;
+	color: #fff;
+    background-color: #f28927 ;
+}
+.btn-line-gmac:hover{
+	color: #fff;
+	background-color:rgba(242, 137, 39, 0.8);
+}
+.clickForGuide{
+	padding-top:14px;
+}

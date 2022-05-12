@@ -1,0 +1,38 @@
+.noDataFoundDiv{
+    min-height:calc(100vh - 220px); 
+    background:$white-color; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    .innerHtml{
+        img,span{
+            display:block;
+            margin:0 auto;
+            text-align:center;
+            font-weight:bold;
+            color:lighten($black-color,60%);
+        }
+    }
+}
+
+.noDataFoundBlock{
+    height:inherit; 
+    background:$white-color; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    .innerHtml{
+        img,span{
+                display:block;
+                margin:0 auto;
+                text-align:center;
+        }
+        img{
+            max-width:70%!important;
+        }
+        span{font-size:14px; color:#666;}
+    }
+}
+
+.d-flex{display:flex;}
+.align-items-center{align-items: center;}

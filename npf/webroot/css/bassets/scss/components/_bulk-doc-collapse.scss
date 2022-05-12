@@ -1,0 +1,148 @@
+.bulk-doc,
+.bulk-rqst {
+  overflow: scroll;
+
+  td [data-toggle="collapse"] {
+    position: relative;
+    padding-left: 25px;
+    color: #323232;
+    text-decoration: none;
+
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:hover {
+      &:before {
+        background: #f6f8fe;
+      }
+    }
+  }
+
+  td [data-toggle="collapse"]:before {
+    content: '\f105';
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #323232;
+    border-radius: 100%;
+  }
+
+  td [data-toggle="collapse"][aria-expanded="true"] {
+    font-weight: 500;
+
+    &:before {
+      transform: rotate(90deg);
+      background: #f6f8fe;
+    }
+  }
+
+  .additional-row {
+    background: rgba(0, 0, 0, .025);
+
+    td {
+      border: none;
+
+      &:first-child {
+        padding-right: 0;
+        padding-left: 40px
+      }
+    }
+
+    label {
+      font-size: 12px;
+    }
+
+    .form-control {
+      min-height: 35px;
+
+      &:disabled,
+      &:read-only {
+        cursor: not-allowed;
+      }
+    }
+
+    .SumoSelect {
+      min-width: 110px;
+
+      >.CaptionCont {
+        min-height: 35px;
+        max-height: 35px;
+        padding-top: 9px;
+      }
+    }
+  }
+
+  .parent-request {
+    background: rgba(0, 0, 0, .025);
+
+    td {
+      font-weight: 500;
+    }
+  }
+
+  .sticky-row {
+    position: sticky;
+    top: -15px;
+    z-index: 2;
+    padding: 10px 0;
+    background: white;
+  }
+}
+
+.bulk-doc {
+  thead {
+    position: sticky;
+    top: 37px;
+    z-index: 1;
+  }
+
+  td:last-child {
+    min-width: 130px;
+  }
+}
+
+.bulk-rqst {
+  overflow: auto;
+
+  td {
+    min-width: 130px;
+  }
+
+  td.rqst-id {
+    padding-left: 35px !important;
+
+    [data-toggle="collapse"] {
+      padding-left: 0 !important;
+      text-decoration: none;
+
+      &:before {
+        line-height: 1.6;
+        left: -25px;
+        background: #f6f8fe;
+        transform: rotate(90deg);
+      }
+
+      &[aria-expanded="true"]:before {
+        transform: rotate(270deg);
+      }
+    }
+
+
+  }
+
+
+  .additional-row {
+    background: rgba(0, 0, 0, .025);
+
+    td:first-child {
+      padding-right: 0;
+      padding-left: 35px;
+    }
+  }
+}

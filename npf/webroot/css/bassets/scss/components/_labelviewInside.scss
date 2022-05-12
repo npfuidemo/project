@@ -1,0 +1,23 @@
+.labelViewInside{
+	.insideField{
+		position:relative;
+		> label{
+			position:absolute;
+			z-index: 1;
+			left: 15px;
+			font-size:11px;
+			color:#999;
+			top:7px;
+			margin:0;
+			line-height:100%;
+		}
+	}
+	
+	.chosen-container-single .chosen-single{
+		padding-top: 12px;
+		line-height: 30px;
+		font-weight:500;
+	}
+	
+	.chosen-container-single .chosen-single div{ line-height:52px;}
+}

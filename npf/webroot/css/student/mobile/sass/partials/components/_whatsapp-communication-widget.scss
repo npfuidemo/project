@@ -1,0 +1,101 @@
+.whatsapp-communication-widget {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    transform: translateY(101%);
+    -webkit-transform: translateY(101%);
+    -moz-transform: translateY(101%);
+    -ms-transform: translateY(101%);
+    -o-transform: translateY(101%);
+    transition: transform .8s ease 0s;
+    -webkit-transition: transform .8s ease 0s;
+    -moz-transition: transform .8s ease 0s;
+    -ms-transition: transform .8s ease 0s;
+    -o-transition: transform .8s ease 0s;
+
+    &.active {
+        transform: translateY(1%);
+        -webkit-transform: translateY(1%);
+        -moz-transform: translateY(1%);
+        -ms-transform: translateY(1%);
+        -o-transform: translateY(1%);
+        z-index: 999992;
+    }
+}
+
+.whatsapp-communication-widget.active+.whatsapp-communication-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    left: 0;
+    top: 0;
+    z-index: 999991;
+}
+
+.whatsapp-comm-btn {
+    position: fixed;
+    right: 0;
+    bottom: 160px;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    line-height: 1;
+    border-radius: 5px 0 0 5px;
+    background-color: #25d366;
+
+    i {
+        font-size: 20px;
+    }
+}
+
+.whatsapp-widget-wrapper {
+    min-height: 70px;
+    border-radius: 0 5px 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+.whatsapp-widget-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    background: #e1e1e1;
+    border-radius: 15px 15px 0 0;
+
+    h4 {
+        margin: 0;
+        font-weight: 700;
+        padding: 15px 10px;
+    }
+    i{
+        font-size: 20px;
+        color: #25d366;
+    }
+}
+
+.whatsapp-widget-content {
+    padding: 15px;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.whatsapp-widget-close {
+    background: none;
+    border: none;
+    display: flex;
+    margin: 0 auto 10px;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+}

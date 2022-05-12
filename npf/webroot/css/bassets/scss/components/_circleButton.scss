@@ -1,0 +1,38 @@
+.circlebtn{
+    border-radius:50%;
+    border:$z;
+    text-align:center;
+    vertical-align:middle;
+    padding:$two*2;
+    width:$two*15;
+    height:$two*15;
+
+
+    .glyphicon {
+        font-size:$two*7;
+        line-height:$two*10;
+        display:block;
+        margin:0 auto;
+        line-height:$two*12;       
+    }
+
+    .fa {
+        font-size:$two*9;
+        line-height:$two*10;
+       ;
+    }
+
+    &.btn-default{
+        background:lighten($black-color,95%);
+
+        &:hover{
+            background:lighten($black-color,80%);
+        }
+    }
+}
+
+.btn-filter-view{
+    color:#4b7bdd!important;
+    border-bottom-color:#4b7bdd!important;
+    padding:0!important;
+}

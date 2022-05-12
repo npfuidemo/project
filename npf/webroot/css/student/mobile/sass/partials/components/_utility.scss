@@ -1,0 +1,141 @@
+.back-header {
+    font-size: 16px;
+    margin: 10px 0 -10px;
+}
+.ticket-link{
+	font-family:$font-stack-semibold;
+}
+.utility-link{
+	font-size:90%;
+	margin:8px 15px 8px 0;
+	font-family:$font-stack-semibold;
+	display:inline-block;
+}
+
+
+.font0{
+	display:none;
+
+}
+
+.border-box{
+	border:1px solid #eee;
+}
+
+.pad20{
+	padding:20px;
+}
+
+.verify-no {
+    background-color: #30aab8;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 10px;
+    padding: 0 8px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+	z-index:111;
+}
+
+.npf-icon{
+	margin-right:4px;
+}
+
+.mb-0{
+	margin-bottom:0;
+}
+
+.brand-color{
+	color:$brand-color;
+}
+
+.lh-18{
+	line-height:18px;
+}
+
+.mb-25{
+	margin-bottom:25px;
+}
+.mb-10{
+	margin-bottom:10px;
+}
+.mt-10{
+	margin-top:10px;
+}
+.mr-10{
+	margin-right:10px;
+}
+
+.blend-line{
+	background-image: -webkit-linear-gradient(left, transparent 0%, #ddd 50%, #ddd 50%, transparent 100%);
+	background-image: linear-gradient(left, transparent 0%, #ddd 50%, #ddd 50%, transparent 100%);
+	height: 1px;
+	margin: 20px 0;
+	position: relative;
+}
+
+.select-default{
+	.form-control{
+		height:38px;
+	}
+}
+
+.smlFont{font-size:13px;}
+
+.text-danger, .classOpen{color:#dc3545;}
+.text-primary{color:#007bff;}
+.text-secondary{color:#6c757d;}
+.text-success, .classClosed{color:#28a745;}
+.text-warning{color:#ffc107;}
+.text-info{color:#17a2b8;}
+.text-light{color:#f8f9fa;}
+.text-dark{color:#343a40;}
+
+.newLoader{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 100%;
+    text-align: center;
+    z-index: 999999;
+	img{
+		position: relative;
+		top: 50%;
+	}
+}
+
+.modal-header{
+	background-color:$brand-color;
+	color:#fff;
+	border-radius: 5px 5px 0 0;
+}
+
+.msgarw{
+	background-color: #eee;
+    padding: 2px 8px;
+    font-size: 11px;
+    position: relative;
+	.fa{
+		vertical-align: top;
+		display: inline-block;
+		margin-top: 2px;
+		margin-right: 5px;
+	}
+}
+
+.draw-cross{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+	&:before{
+		content: "\e014";
+	}
+}

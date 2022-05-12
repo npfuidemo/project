@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Trend Anylis.
+// -----------------------------------------------------------------------------
+.SumoSelect>.CaptionCont>span, 
+.chosen-container-single a span{color:#333;}
+
+.fieldtab, .select-sml-style{
+	.chosen-container{vertical-align: top;}
+	.chosen-container-single .chosen-single{line-height:32px;box-shadow: none;}
+	.SelectBox{padding:6px 10px 6px;box-shadow: none;}
+	.SumoSelect>.CaptionCont>label>i, .chosen-container-single .chosen-single div b{top:13px;}
+	.chosen-container-active.chosen-with-drop .chosen-single div b{top:8px;}
+	.SumoSelect.open .search-txt{padding:5px 10px;}
+	.SumoSelect.open>.optWrapper{top:33px;}
+	.form-control{ 
+		height:34px !important;
+		box-shadow: none !important;
+	}
+	.iconDate{font-size:12px;}
+	.action-btn-select .pad-for-drop, .action-btn-select .btn-for-view{padding:7px 11px !important;}
+}
+.select-sml-style.styled .chosen-container-single .chosen-single{line-height:28px;}

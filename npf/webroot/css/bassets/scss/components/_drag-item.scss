@@ -1,0 +1,197 @@
+.clearfix {
+    zoom: 1;
+    &:after {
+      content: '.';
+      display: $bl;
+      clear: $both;
+      visibility: $hid;
+      font-size: $z;
+      line-height: $z;
+      height: $z;
+    }
+  }
+
+  .sel_col {
+      margin:$two*10 0 0 0;
+      padding: $z;
+      font-size: $two * 7;
+      margin-bottom: $two * 5;
+  
+      span {
+        text-align: $fr;
+        font-size: $two * 6;
+        float: $fr;
+        color: #cacaca;
+        font-weight: normal;
+      }
+  }
+  
+  .columns_dragble {
+    padding:$z $two * 2+1px $two * 7+1px  $two * 7+1px!important;
+    margin: $z $z $z $z;
+    background-color: $white-color;
+    border: $z;
+    border-radius: $two * 2;
+    box-shadow: none;
+    max-height: calc(100vh - 145px);
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x:hidden!important;
+
+
+    .widgetDragableChild{
+      > li{
+        h5 {
+          margin: 0;
+          padding: 0px 0 0 0 !important;
+          font-size: 14px;
+          font-weight: normal;
+        }
+        ul.list{
+          margin:0!important;
+          li{
+            background:#fff!important;
+            margin:5px 0 ;
+            &::before{
+              content:'';
+              display:none;
+            }
+          }
+        }
+      }
+    }
+  
+  
+    & ul {
+      list-style-type: none;
+      margin: $z $z $two * 5 $two * 5;
+      padding: $z;
+  
+      &.list {
+        .fa {
+          margin-right: $two;
+        }
+        li {
+          width: 100%;
+          font-size: $two * 6;
+          border: $two/2 solid rgba($grey-color,.5);
+          cursor: all-scroll;
+          position: $rel;
+          margin: $two * 4 $z;
+          padding: $two * 3+1px $two * 10+5  $two * 3+1px $two * 5;
+          background-color: $white-color;
+          border-radius:3px;
+  
+          &.placeholder {
+            border-style: dashed;
+            background-color: rgba(255, 255, 255, 0);
+            border: $two dashed $base-color;
+            font-size: $two * 9;
+            display: $bl;
+            padding: $two * 2 $two * 5;
+            min-height: $two * 17+1px;
+            margin: $two * 4 $z;
+            z-index: 99;
+          }
+  
+          .remove_draggable {
+            position: absolute;
+            pointer-events:auto!important;
+            right:$two * 2+1;
+            top: $two * 2+1;
+            background: none;
+            border: $z;
+            box-shadow: none;
+            font-size: $two * 9;
+            line-height: $two * 10;
+            color: $black-color;
+            text-decoration: none;
+            background:transparent;
+            border-radius:50%;
+            z-index:101;
+            &:hover {
+              color: red;
+              text-decoration: none;
+              background:#f3f3f3; 
+            }
+          }
+
+          &:hover{
+              border-color:$base-color;
+              background:#fff!important; 
+          }
+        }
+      }
+    }
+  }
+
+  .applications_applicationmanager .columns_dragble{
+    max-height: calc(100vh - 180px);
+  }
+  
+  .widget_dragable,
+  #non_dragable {
+    li {
+      &::before {
+        content: ' ';
+        position: $abs;
+        top: $two *4;
+        left: -$two * 13+1;
+        width: $two * 10;
+        height: $two * 9;
+        font-size: $two * 8+1px;
+        background-image: url(../../../img/vpai/drag-icon.png);
+        background-repeat: no-repeat;
+        
+      }
+  
+      &:after {
+        display: none;
+      }
+      &:hover{
+       border-color:rgba(75,123,221,.8);
+       
+      }
+    }
+  }
+
+  #non_dragable {
+    li {
+      pointer-events:none!important;
+      cursor: auto !important;
+      &:before{
+        opacity: 0.3;
+      }
+      &:hover{
+        border-color:rgba(204,204,204,.5)!important;     
+       }
+    }
+  }
+
+  .widget_dragable{
+    >li{
+      background:#fafafa!important;
+    }
+  }
+  
+  .addremove_filter {
+    button.close {
+      -webkit-appearance: $none;
+      padding: $z;
+      cursor: pointer;
+      background: 0 0;
+      border: $z;
+      opacity: $two/4;
+    }
+  }
+  
+  #ConfirmDownloadPopupArea {
+    z-index: 11112 !important;
+  }
+  
+ 
+  
+  .greybg {
+    background: #fcfcfc;
+  }
+  

@@ -1,0 +1,90 @@
+// Pills
+  // -------------------------
+  .nav-npf {
+    > li {
+      float: left;
+      background-color:#ddd;
+     > a{
+         color:#666;
+         padding: 8px 15px;        
+     }
+      // Links rendered as pills
+      + li {
+        margin-left: 2px;
+      }
+  
+      // Active state
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: #fff;
+          background-color: $brand-color;
+		  font-weight:600;
+        }
+      }
+      &:hover{
+          a{
+            color:#111;
+          }
+       
+      }
+    }
+	&.withBdr{
+		border-bottom: 1px solid #ccc;
+	}
+  }
+  
+.roundTab{
+	> li{
+		margin-right:5px !important;
+		> a{
+			border:none;
+			border-radius:20px;
+			padding:5px 12px;
+			font-size:12px;
+			background-color:#f2f2f2;
+			color:#333;
+			font-weight: 500;
+			&.active{
+				background-color:$brand-color;
+				color:#fff;
+			}
+		}
+	}
+}
+
+.nav-xs{
+  padding-bottom: 8px;
+  >li{
+	float:none;
+	display:inline-block;
+    >a{
+      padding: 5px 12px;
+      font-size: 12px;
+	  border-radius:25px;
+	  border:1px solid #ddd;
+	  &.active{
+			background-color:#ddd;
+			color:#111;
+		}
+    }
+  }
+  &.withOutBdr{
+	padding-bottom: 0;
+	border:none;
+  }
+}
+
+.right-navbar{
+	margin:0;
+	padding:0;
+	li{
+		float:left;
+		list-style:none;
+	}
+	.dropdown-menu{
+		left:auto;
+		right:0;
+	}
+}

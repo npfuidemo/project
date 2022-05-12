@@ -1,0 +1,247 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn{
+	border-radius:2px;
+	font-size:13px;
+	padding:5px 15px;
+	&[name="search_btn"], &[type="reset"]{
+		padding:8px 30px;
+		font-size:14px;
+	}
+	.caret{
+		color: #999;
+		border-width: 5px;
+	}
+	.glyphicon-menu-down{
+		color:#999;
+		font-size:11px;
+	}
+	&.btn-lg{
+		font-size:15px;
+		padding:9px 14px;
+	}
+	&.btn-xs{
+		padding:1px 5px;
+	}
+}
+.btn-npf {
+    color:#fff;
+    background-color:$brand-color;
+    border-color:darken($brand-color, 4%);
+    &:hover, &:focus{
+        color:#fff;
+        background-color:lighten($brand-color, 8%);
+        border-color:darken($brand-color, 6%);
+    }
+}
+.btn-reset{
+    color:#333;
+    background-color: #eee;
+    border-color:darken(#eee, 4%);
+    &:hover {
+        background-color:lighten(#eee, 4%);
+        border-color:darken(#eee, 6%);
+    }
+}
+
+.btn-download{
+    color:#fff;
+    background-color:#dfb41e;
+    border-color:darken(#dfb41e, 4%);
+    &:hover{
+		color:#fff;
+        background-color:lighten(#dfb41e, 8%);
+        border-color:darken(#dfb41e, 6%);
+    }
+}
+
+.btn-line{
+	border-color:$brand-color;
+    color:$brand-color;
+	background-color:#fff;
+	&:hover{
+        background-color:$brand-color;
+        color:#fff;
+    }
+	&.active{
+		background-color:$brand-color;
+		color:#fff;
+	}
+}
+
+.btn-line-blue{
+	border-color:#4b7bdd;
+    color:#4b7bdd;
+	background-color:#fff;
+	&:hover{
+        background-color:#4b7bdd;
+        color:#fff;
+    }
+	&.active, &:focus{
+		background-color:#4b7bdd;
+		color:#fff;
+	}
+}
+
+.btn-fill-blue{
+	background-color:#4b7bdd;
+    color:#fff;
+	border-color:#4b7bdd;
+	.glyphicon-menu-down{
+		 color:#fff;
+	}
+	&:hover{
+        background-color:#fff;
+        color:#4b7bdd;
+		.glyphicon-menu-down{
+			color:#4b7bdd;
+		}
+    }
+	&.active, &:focus{
+		background-color:#fff;
+		color:#4b7bdd;
+		.glyphicon-menu-down{
+			color:#4b7bdd;
+		}
+	}	
+}
+
+.radius-20{
+	border-radius:20px;
+}
+
+
+.btn-line-secondary{
+	background-color:transparent;
+	border:1px solid #6c757d;
+    color:#6c757d;
+	&:hover{
+        background-color:#6c757d;
+        color:#fff;
+    }
+	&.active{
+		background-color:#6c757d;
+		color:#fff;
+	}
+}
+
+.btn-secondary-2{
+	background-color:#fff;
+	border:1px solid #6c757d;
+    color:#6c757d;
+	&:hover{
+        background-color:#6c757d;
+        color:#fff;
+		&.caret{
+			color:#fff;
+		}
+    }
+	&.active{
+		background-color:#6c757d;
+		color:#fff;
+		&.caret{
+			color:#fff;
+		}
+	}
+}
+
+.btn-secondary{
+	background-color:#6c757d;
+	border:1px solid darken(#6c757d, 5%);
+    color:#fff;
+	&:hover, &.active, &:focus{
+        background-color:lighten(#6c757d, 5%);
+		color:#fff;
+    }
+}
+
+.btn-column{
+   background-color: #fff;
+    font-size: 18px;
+	padding:8px 18px;
+	&:hover{
+		background-color:$brand-color;
+		color:#fff;
+	}
+}
+
+.open{
+	.btn-column{
+		background-color:$brand-color;
+		color:#fff;
+	}
+}
+
+.btn-medium{
+    padding:8px 30px;
+}
+
+.browse {
+    padding: 9px 20px;
+}
+
+.filterBtn{
+	font-size: 18px;
+	color: #111;
+	padding:0;
+	i{
+		color: #111;
+		font-size: 28px;
+		display: inline-block;
+		line-height: 20px;
+		vertical-align: middle;
+	}
+	&.collapsed{
+		color: #666;
+		i{
+			color: #666;
+		}
+		&:hover{
+			color: #111;
+			i{
+				color: #111;
+			}
+		}
+	}
+}
+.btn-border{
+	border-bottom:1px solid #75b740;
+	padding:0 0 3px;
+	border-radius:0;
+	text-transform:capitalize;
+	color:#75b740!important;
+	&.active{
+		box-shadow:none;
+	}
+}
+.btn-filter-view{
+	border-bottom:1px solid #4b7bdd;
+	padding:0 0 3px;
+	border-radius:0;
+	text-transform:capitalize;
+	color:#4b7bdd!important;
+	&.active{
+		box-shadow:none;
+	}
+	.glyphicon-menu-down{
+		color:#4b7bdd;
+	}
+}
+
+.btn-theme1{
+	background-color:#f6f8fe;
+	border:1px solid darken(#f6f8fe, 5%);
+    color:#333;
+	&:hover, &.active{
+        background-color:lighten(#f6f8fe, 5%);
+		color:#333;
+    }
+}
+
+a{
+	&.disabled{
+		color: gray;
+		pointer-events: none;
+	}
+}

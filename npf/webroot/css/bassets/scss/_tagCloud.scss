@@ -1,0 +1,34 @@
+.falseInputTag {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #fff;
+  padding: 5px 10px;
+  .border_selected_tag {
+      display: inline-block;
+      margin: 0;
+      .tag {
+          margin-bottom: 5px;
+          background:#4b7bdd;
+      }
+      +.input {
+          display: inline-block;
+      }
+  }
+  input[type="text"] {
+      border: none;
+      min-width: 200px;
+  }
+}
+
+ul.autosuggest {
+  top: 0;
+  border-color: #ddd;
+  box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
+  >li {
+      border-color: #ddd;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+}
+
+

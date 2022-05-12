@@ -1,0 +1,33 @@
+ .overlaydiv{
+    display:none; 
+    @include border-radius( $two*2+1); 
+    background:$white-color; 
+    z-index:999; 
+    transition:.5s all; 
+    height:calc(100% - 0px);  
+
+      &.in{
+       display:block;
+      }
+
+    .content{
+      h2{margin-bottom:$two*5;
+         padding:$two*2+1 $z;
+         .back{
+         margin:$z $two*5 $z $two*5; 
+         color:$black-color;
+
+            &:hover{
+            color:$base-color;
+            }
+         }
+      }
+      .innergap{
+         padding:$z $two*7+1 $two*7+1 $two*7+1;
+         h2{margin-left:-$two*7+1;}
+      }
+    }
+}
+
+
+ 

@@ -1,0 +1,13 @@
+.status {
+    display: inline-block;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+	&.status-enable{
+		background-color:#47d02d;
+	}
+	&.status-disable{
+		background-color:#ff5f5f;
+	}
+}

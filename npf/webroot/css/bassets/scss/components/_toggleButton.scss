@@ -1,0 +1,55 @@
+.toggleBtn{
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+	padding-left: 35px;
+	position: relative;
+	margin: 0;
+	font-size: 14px;
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    position: absolute; 
+    visibility: hidden !important;
+  }
+
+  input[type="checkbox"] + label, input[type="radio"] + label {
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -7.5px;
+      box-sizing: border-box;
+    }
+
+    &:before {
+      width: 30px;
+      height: 15px;
+      left: 0px;
+      background: #fff;
+      border: 1px solid #e4e3e1;
+      border-radius: 15px;
+    }
+
+    &:after {
+      width: 15px;
+      height: 15px;
+      left: 15px;
+      background: #BDBDBD;
+      border-radius: 50%;
+      transition: all 200ms ease-out;
+    }
+  }
+
+  input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+    &:after {
+      left: 0px;
+      background: #FF9800;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+$error :#f44336;
+.form-control {
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 0; 
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+.formAreaCols{
+    margin-bottom: 15px;
+}
+
+/*** calendar icon with input ***/
+.dateFormGroup{
+    position: relative;
+    .iconDate{
+        position: absolute;
+        right: 8px;
+        top:8px;
+        color: #999;
+    }
+   .form-control{
+       position: relative;
+       background-color: transparent;
+       &[readonly="readonly"]{
+        background-color: rgba(221, 221, 221, 0.7);
+       } 
+   }
+}
+
+/*** Form file upload ***/
+.custombrowse{
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.file {
+    visibility: hidden;
+    position: absolute;
+  }
+
+/*** Custom Checkbox ***/
+
+ 
+
+/*** Custom Radio ***/
+
+/* Style the indicator (dot/circle) */
+ /* Customize the label (the container) */
+ .form-custom {
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+    margin-right:20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .form-custom input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .form-custom:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .form-custom input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .form-custom input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .form-custom .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+  } 
+  
+  /*** Error ***/
+  .has-error{
+		.form-control{
+			border-color:$error !important;
+		}
+  }
+  
+  @include media("<tablet") {
+	 .form-control{
+		margin-bottom:10px;
+	 }
+}
+ 

@@ -1,0 +1,26 @@
+.search-block {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 600px;
+    .form-control{
+        border: 2px solid #ddd;
+        border-radius: 50px;
+        height: auto;
+        line-height: 30px;
+        padding: 10px 10px 10px 65px;
+    }
+    .form-group{
+        margin-bottom: 0;
+    }
+    .btn-search{
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        padding: 5px 10px;
+        color: $brand-color;
+        border-right: 1px solid #ddd;
+        font-size: 18px;
+    }
+}
+

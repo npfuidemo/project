@@ -1,0 +1,31 @@
+.header-search{
+    .chosen-container{
+        margin-top:7px;
+        .chosen-single{
+            border-radius: 30px;
+            padding: 0 20px;
+            line-height: 35px;
+            border-color: transparent;
+            div{
+                right:10px;
+            }
+        }
+    }
+}
+
+
+@include media("<=tablet") {
+    .header-search{
+        .chosen-container{
+            margin-bottom:10px;
+        }
+    }
+}
+
+@include media(">tablet") {
+    .header-search{
+        .chosen-container{
+            margin-top:7px;
+        }
+    }
+}

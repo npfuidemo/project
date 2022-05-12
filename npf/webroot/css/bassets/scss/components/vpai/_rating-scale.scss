@@ -1,0 +1,124 @@
+// Rating Scale Popup
+.blend-line {
+    display: inline-block;
+    width: 100%;
+}
+
+table .rating-scale {
+    min-width: 150px;
+}
+
+.rating-scale {
+    display: inline-block;
+    width: 100%;
+
+    .chosen-container .chosen-results {
+        max-height: 150px;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .color-span {
+        width: 100%;
+        height: 23px;
+        cursor: pointer;
+        display: inline-block;
+        background: transparent;
+    }
+
+    input[type="color"] {
+        -webkit-appearance: none;
+        border: none;
+        width: 23px;
+        height: 23px !important;
+        padding: 0;
+        margin-right: 10px !important;
+
+        &::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+
+        &::-webkit-color-swatch {
+            border: none;
+        }
+    }
+
+    .formAreaCols {
+        display: inline-block;
+    }
+
+    .list-badge {
+        border-radius: 4px;
+        width: 30px;
+        height: 100%;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .color-badge {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 2px;
+        border-radius: 2px;
+        background: #fff;
+        margin-bottom: 0;
+        border: 1px solid #eaeaea;
+
+        span {
+            font-weight: normal;
+        }
+    }
+
+    .color-input {
+        border: none;
+        display: none;
+    }
+
+    .bg-light {
+        background: #f1f1f1;
+    }
+
+    .bg-dark {
+        background: #dbdbdb;
+    }
+
+    .bg-white {
+        background: #fff;
+    }
+
+    .color-block {
+        margin: 0;
+        width: 100%;
+        padding-top: 10px;
+        display: block;
+
+        &:first-child {
+            margin-top: 10px;
+            padding-bottom: 5px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+}
+
+.modal#scoringfieldfilter .box.rating-scale .formAreaCols {
+    margin: 0 !important;
+}

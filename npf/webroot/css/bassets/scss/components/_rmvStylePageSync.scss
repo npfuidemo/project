@@ -1,0 +1,58 @@
+/*** Remove save style from common css once all page sync ***/
+.chart-filter{
+	.dropbtnOptions{
+		margin-top:0;
+		padding:5px 10px;
+	}
+}
+.tabsCustom{
+	padding:10px 15px;
+}
+.parent-graph-tab {
+    margin-bottom:10px;
+}
+.graph-footer-msg {
+    padding: 5px 0;
+    color: #999;
+    text-align: center;
+    font-size: 11px;
+}
+
+.itemsCount{
+	margin-top:3px;
+	.items-show {
+		padding: 2px 5px 0 0;
+		.totalRecord {
+			font-size: 13px;
+		}
+	}
+}
+.styled .chosen-container-single .chosen-single {
+    line-height: 24px;
+}
+.styled .chosen-container-single .chosen-single div b {
+    top: 10px;
+}
+
+/*** Google grpah Tooltip Style ***/
+div.google-visualization-tooltip{
+    min-width: 120px !important;
+	ul{
+		li{
+			span{
+				font-size:11px !important	;
+			}
+		}
+	}
+}
+
+
+.radioWithLabelUp{
+	label{
+		margin-right:15px;
+		font-weight:400;
+	}
+	input[type=radio]{
+		margin-right:5px;
+	}
+}

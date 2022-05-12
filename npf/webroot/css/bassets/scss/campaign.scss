@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/topHeading',
+  'components/fieldSize',
+  'components/filterModal',
+  'components/offcanvasModal',
+  'components/tabs',
+  'components/flex',
+  'components/panel',
+  'components/leaDistributions',
+  'components/labelviewInside',
+  'components/tableNewGenric',
+  'components/graphTabs',
+  'components/print';
+
+// 3. Pages
+@import
+  'pages/campaign-manager';

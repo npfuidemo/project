@@ -1,0 +1,67 @@
+/*** Conditional block ***/
+.block-repeat{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+	.filterAppMatch{
+		display:block;
+	}
+}
+.logicBox{
+	background-color: #f8f8f8;
+	border: 1px solid #eee;
+    border-radius: 2px;
+	width:100%;
+	display:inline-block;
+	.logicRowAction{
+		    margin-top: 7px;
+			display: -webkit-box; 
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex; 
+			display: flex;
+			flex-flow: row-reverse;
+		.fa{
+			font-size:24px;
+		}
+	}
+	.condition_div{
+		display:inline-block;
+		padding: 8px;
+		width:100%;
+		vertical-align:top;
+		&:hover{
+			background-color:rgba(0, 0, 0, 0.02);
+		}
+		+ .condition_div{
+			border-top:1px solid rgba(0, 0, 0, 0.02);
+		}
+	}
+}
+
+@include media(">tablet"){
+	.block-repeat{
+		.filterAppMatch{
+			display:inline-block;
+			margin-right:15px;
+		}
+		.form-group{
+			margin:0;
+		}
+		.removeElementClassBlock{
+			display:none;
+		}
+		&:hover{
+			.removeElementClassBlock{
+				display:block;
+			}
+		}
+	}
+	.logicBox{
+		.logicRowAction{
+			.fa{
+				font-size:16px;
+			}
+		}
+	}
+}

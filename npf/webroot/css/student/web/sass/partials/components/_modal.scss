@@ -1,0 +1,14 @@
+.modalWide{
+	.modal-dialog{
+		width:800px;
+	}
+}
+.modalError{
+	.modal-header {
+		background-color: #b8282f;
+		padding: 8px 15px;
+	}
+	.modal-dialog{
+		max-width:400px;
+	}
+}

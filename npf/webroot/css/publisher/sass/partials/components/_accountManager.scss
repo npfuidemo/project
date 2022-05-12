@@ -1,0 +1,31 @@
+.acManager {
+    position: absolute;
+    right: 0;
+    top: 80px;
+	width: 355px;
+	z-index:111;
+	.acManagerBox {
+		background-color:#fff;
+		padding: 8px;
+		display:inline-block;
+		box-shadow: 0 0 5px #aaa;
+		width: 100%;
+		font-size:13px;
+		word-wrap: break-word;
+	}
+	.acmName{
+		max-width:245px;
+	}
+}
+
+@media screen and (max-width:767px) { 
+	.acManager {
+		position: relative;
+		top: 0;
+		display:inline-block;
+		text-align:center;
+	}
+	.formBox{
+		margin-top:20px;
+	}
+}

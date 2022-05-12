@@ -1,0 +1,57 @@
+.search-block {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+	.searchbox{
+		display: inline-block;
+		width: 100%;
+		position: relative;
+		.glyphicon-search{
+			position: absolute;
+			top:15px;
+			left:15px;
+			font-size:17px;
+			color: $brand-color;
+		}
+		.form-control{
+			border-radius: 20px;
+			min-height: 45px;
+			padding-left: 40px;
+			font-family:$font-stack-semibold;
+		}
+	}
+	.form-group{
+		margin:0;
+	}
+}
+
+.filter-block {
+    position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+	.filterSearch{
+		position:relative;
+		width:100%;
+		display:inline-block;
+		a{
+			position: absolute;
+			left: 50%;
+			top: 7px;
+			margin-left: -40px;
+			background-color: #fff;
+			padding: 0 20px;
+			font-family:$font-stack-semibold;
+			.fa-angle-up{
+				display:none;
+			}
+			&.collapsed{
+				.fa-angle-up{
+					display:inline-block;
+				}
+				.fa-angle-down{
+					display:none;
+				}
+			}
+		}
+	}
+}

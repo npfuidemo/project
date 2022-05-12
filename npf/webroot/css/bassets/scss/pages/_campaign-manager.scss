@@ -1,0 +1,208 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Campaign Manager.
+// -----------------------------------------------------------------------------
+body {
+  background-color: #eee;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.pd-tb-0 {
+  @extend .pt-0;
+  @extend .pb-0;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.chartData {
+  border: 1px solid #ddd;
+  padding: 10px;
+  overflow: auto;
+  width: 100%;
+}
+
+.fc__tooltip.fusioncharts-div {
+  white-space: normal !important;
+}
+
+.table-head-border {
+  table {
+    @-moz-document url-prefix() {
+      border-collapse: inherit;
+
+      th {
+        border-bottom: none !important;
+      }
+    }
+
+    margin-bottom:0;
+
+    thead>tr>th {
+      border-bottom: 1px solid #eee !important;
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+    }
+  }
+
+  th {
+    vertical-align: middle !important;
+  }
+
+  .bdr-r {
+    border-right: 1px solid #eee !important;
+  }
+}
+
+.dataRow {
+  &:hover {
+    box-shadow: 0 8px 6px -7px rgba(0, 0, 0, 0.15), 0 -7px 6px -7px rgba(0, 0, 0, 0.15);
+
+    >td {
+      background-color: #fff !important;
+    }
+  }
+}
+
+.sidebar.active+#content #reg-chart-header {
+  white-space: nowrap;
+}
+
+
+@include media('>phone', '<=largephone') {
+  .xs-mb-10 {
+    margin-bottom: 10px;
+  }
+
+  .xs-ml-10 {
+    margin-left: 10px;
+  }
+
+  .topHeadFields {
+    &.text-right {
+      text-align: left;
+    }
+
+    .thField {
+      margin: 5px 5px 0 0;
+    }
+  }
+}
+
+@include media("<tablet") {
+  .accodianMenuParent {
+    padding-right: 14px;
+  }
+
+  .sidebar.mobinactive {
+    margin-left: 0% !important;
+  }
+
+  .sidebar.active.mobinactive {
+    margin-left: -100% !important;
+  }
+
+}
+
+@include media(">tablet") {
+  .accodianMenuParent {
+    .accodianMenu {
+      position: absolute;
+      left: 130px;
+    }
+
+    &.hasArrow a[data-toggle="collapse"]:before {
+      line-height: 100%;
+    }
+  }
+}
+
+.maxMinWidthSelect {
+
+  .SumoSelect,
+  .chosen-container {
+    max-width: 150px;
+    min-width: 150px;
+    text-align: left;
+  }
+}
+
+.daterangepicker_report[readonly] {
+  background-color: #fff;
+}
+
+.leaDistributions {
+  margin-top: 0;
+}
+
+.topHead {
+  margin-bottom: 5px;
+  border-bottom: none;
+}
+
+.btn-line-secondary {
+  font-weight: 500;
+}
+
+.chartHeading {
+  font-weight: 400;
+}
+
+.chartNotes {
+  .iconspace {
+    margin-right: 2px;
+  }
+}
+
+body.modal-open {
+  overflow: hidden !important
+}
+
+.synced {
+  font-size: 12px;
+  color: #333;
+}
+
+.thRow {
+  .thField {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.offCanvasModal {
+  .modal-header {
+    background-color: #004465;
+
+    .modal-title {
+      color: #fff;
+    }
+
+    .close {
+      font-size: 26px;
+      color: #fff;
+      opacity: 0.9;
+    }
+  }
+
+}
+
+.external-link {
+  visibility: hidden;
+  opacity: 0;
+}
+
+table tr table tr:hover > td{
+  .external-link {
+    visibility: visible;
+    opacity: 1;
+  }
+}

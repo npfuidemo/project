@@ -1,0 +1,54 @@
+.profile-sname{background-color:#d8d8d8;display:inline-block;padding:5px 18px;border-radius:50%;font-size:3rem;border:3px solid #d3d3d3;margin-bottom:10px;}
+.tpc{max-width:700px;margin:20px auto 30px;}
+.tpc .form-control{border:1px solid #ddd;border-radius:4px;background-image:none!important; padding:10px;}
+.margin-bottom-10{margin-bottom:10px;}
+.error{color:#fe5151;font-size:12px;padding:0;width:100%;display:block;text-align:left;}
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:14px !important; font-weight:300;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  font-size:14px !important;font-weight:300;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  font-size:14px !important;font-weight:300;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  font-size:14px !important;font-weight:300;
+}
+.alert-info {
+    color: #31708f !important;
+    background-color:#d9edf7 !important;
+	border:1px solid #bce8f1;
+	border-radius:4px !important;
+}
+.form-group{ position:relative;}
+.info-tooltip{position:absolute;top:8px;right:-20px;}
+.toggle-password{position:absolute;right:10px;top:10px;color:#333;}
+.toggle-password:hover, .toggle-password:focus{color:#333;text-decoration:none;}
+.tpc label{color:#333;width:90px;font-size:14px;font-weight:500;}
+.hamburger, .notification, .cont-btn{display:none;}
+.prof-form{margin-top:0;}
+.app_mode_page_text{padding:10px;border:1px solid rgba(0, 0, 0, 0.1);}
+.margin-top-30{margin-top:30px;}
+.max700{max-width:700px; margin:0 auto;}
+.svEmail{margin-top:60px;}
+
+.sve-steps{background-color:#eee;padding:20px;min-height:200px;}
+.sve-steps ol{padding:0;list-style:none;margin:0;}
+.sve-steps ol li{margin:20px 0 30px;font-size:15px;position:relative;padding-left:35px;}
+.sve-steps ol span{border: 1px solid #111;padding:2px 8px;border-radius: 50%;background-color:#fff;position:absolute;left:0;font-size:12px;}
+
+@media(min-width:768px){
+	.tpc{border:1px solid #d2d2d2;border-radius:5px;padding:20px;}
+	.sm-right{text-align:right;}
+	.sm-left{text-align:left;}
+	.pageVmid{margin-top:20px;}
+	.sve-forms{margin-top:50px;}
+}
+@media(max-width:787px){
+	.form-group .form-control{margin-bottom:0;}
+	.prof-form{margin:0;}
+	.inlineBlockFull{margin-top:60px;}
+	.mt-xs-10{margin-top:10px;}
+	#npf-form-instruction{background-color: #f2f2f2;padding: 10px;text-align: center; margin-bottom:-20px; margin-top:10px;}
+}

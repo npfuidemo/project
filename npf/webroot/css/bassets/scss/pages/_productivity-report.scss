@@ -1,0 +1,938 @@
+@keyframes fadein {
+	from {
+	  opacity: 0.1;
+	}
+	to {
+	  opacity: 1;
+	}
+  }
+
+  .disablejump{
+		border: 0;
+		pointer-events: none;
+		margin: 0;
+		max-width: 20px;
+		padding: 4px 0!important;
+		color: #777!important;
+  }
+  .tableNew.multiColorTable {
+	.totalDataRow {
+		td {
+			background-color: #fafbfe !important;
+		  }
+	}
+  }
+  .topHeadFields .thField span {
+	display: block;
+	width: 100%;
+	height: 100%;
+  }
+  .favouriteError {
+	display: none;
+  }
+  .table-new thead > tr > th {
+	color: #666;
+  }
+  .table-new th {
+	background-color: #f9fafe;
+	border-color: transparent !important;
+  }
+  .table-head-border th {
+	vertical-align: middle !important;
+  }
+  .table-head-border .bdr-r {
+	border-right: 1px solid #eee !important;
+  }
+  .table-new .bgGreyTable td {
+	padding: 8px 15px !important;
+	font-size: 96%;
+  }
+  tr.collapse.in {
+	display: table-row;
+  }
+  .collapse.in {
+	display: block;
+  }
+  .collapse {
+	display: none;
+  }
+  .table-head-border table thead > tr > th {
+	border-bottom: 1px solid #eee !important;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+  }
+  .filterslider {
+	margin: 10px 0 0 0;
+	display: flex;
+  }
+  .filterslider span.savfilter {
+	vertical-align: middle;
+	line-height: 30px;
+	min-width:100px;
+	font-weight: 600;
+  }
+  .filterslider #item_carousel {
+	width: calc(100% - 95px);
+	margin:0 auto;
+  }
+  .filterslider .newStyleUi {
+	display: flex;
+  }
+  
+  .saveupquick {
+	margin:12px 0 0 5px;
+	.btn {
+	  padding: 5px 8px;
+	}
+  
+	.saveupquick span {
+	  display: block;
+	  width: 100%;
+	  height: 100%;
+	}
+	.quick {
+	  border-radius: 50%;
+	  background: #f2f2f2;
+	  padding: 5px 0;
+	  font-size: 15px;
+	  .btn {
+		padding: 5px;
+		img {
+		  margin-top: -3px;
+		}
+	  }
+	}
+	.quick:hover {
+	  background: #f3f3f3;
+	}
+  }
+
+  
+.accodianMenuParent{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 15px;
+  &.hasArrow {
+	color: #0074d9;
+	width: 200px;
+  }
+}
+  tr.childCounsellor td {
+	padding: 8px !important;
+	font-size: 90%;
+  }
+  tr.childCounsellor td:first-child {
+	padding: 8px 8px 8px 15px !important;
+  }
+  .tableproductivity {
+	thead {
+		th {
+			white-space: nowrap;
+		}
+	}
+	tr{
+		td:first-child{
+			font-weight:500;
+		}
+	}
+  }
+  
+
+  #item_carousel {
+    .owl-stage-outer {
+        padding: 5px 0px;
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        .owl-item {
+            text-align: center;
+            display: block;
+            &.active:hover {
+                color: #4b7bdd;
+                cursor: pointer;
+            }
+            .currentactive {
+                color: #4b7bdd;
+                position: relative;
+                &:after {
+                    left: 0;
+                    height: 1px;
+                    background: #4b7bdd;
+                    width: 100%;
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                }
+            }
+			&:last-child{
+				margin-right:0!important;
+			}
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 5px;
+        width: calc(100% - 0px);
+        button {
+          a {
+            width: 24px;
+            height: 24px;
+            text-align: center; 
+            display: block;
+			position: relative;
+			 
+			i{
+				padding:6px 7px;
+			}
+          }
+          &.disabled a {
+              color: #e6e6e6;
+			  pointer-events:none;
+          }
+          &:hover a {
+              background: #f2f2f2 !important;
+              border-radius: 50%;
+          }
+       }
+        a {
+          color: #0074d9;
+        }
+        .owl-prev {
+          left:-16px;
+          position: absolute;
+          top: -2px;
+          background: #fff !important;
+        }
+        .owl-next {
+          right:-15px;
+          position: absolute;
+          top: -2px;
+          background: #fff !important;
+        }
+         
+      }
+}
+ 
+.btn_icon{
+	.lineicon-edit-column{
+		position: relative;
+		z-index:110;
+		padding:10px;
+	}
+
+	&:hover::after{
+		left:auto;
+	}
+}
+  
+  .range_inputs {
+	.applyBtn {
+		background: #0074d9;
+		border-color: #0074d9;
+		color: #fff;
+
+		&:hover,&:focus{
+			color: #fff!important;
+			background: #0074d9;
+			border-color: #0074d9;
+		}
+	  }
+  }
+
+  #SuccessPopupArea,#ErrorPopupArea{
+	.modal-content{
+		.modal-header{
+			background:#fff!important;
+			border-bottom:1px solid #4b7bdd;
+			
+			.close{
+				color: #000 !important;
+				opacity: 1 !important;
+				border-radius: 50%;
+				padding: 8px;
+				font-size: 20px;
+				margin-top: 0 !important;
+				position: absolute;
+				right: 3px;
+				top: 7px;
+				width:auto;
+				height:auto;
+				font-size: 14px;
+				z-index: 9999;
+				&:hover {
+					background: rgba(0,0,0,.07);
+				}
+			}
+			.modal-title{
+				color:#000 !important;
+			}
+		}
+	}
+  }
+
+  
+  .calander_icon input {
+	border-radius: 20px !important;
+	display: inline-block;
+	overflow: hidden;
+	width: calc(100% - 30px);
+	height: 30px;
+  }
+  .calander_icon a {
+	display: inline-block;
+	margin: 5px 0 0 5px;
+	font-size: 17px;
+  }
+  
+  .dateCardContainer .calendarContainer {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	padding: 15px 20px;
+	height: auto;
+	overflow: visible;
+	width: 700px;
+  }
+  .calendarinput {
+	position: relative;
+  }
+  .calendarinput input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	cursor: pointer;
+  }
+  
+  .primarytabbg > li.active > .viewCusttab,
+  .primarytabbg > li.active > .viewCusttab:focus {
+	background: rgba(75, 123, 221, 1) !important;
+	border-color: rgba(75, 123, 221, 1) !important;
+  }
+  .primarytabbg > li.active > .viewCusttab:hover {
+	background: rgba(75, 123, 221, 0.8) !important;
+	border-color: rgba(75, 123, 221, 0.8) !important;
+  }
+  #productivityDateRange {
+	cursor: pointer;
+	padding:3px 10px;
+	border:1px solid #e5e5e5 ;
+	animation: fadein 2s;
+	border-radius:20px;
+  }
+  #productivityDateRange .fa.fa-calendar {
+	float: right;
+	color: #4b7bdd;
+	margin: 3px 5px 0 0;
+  }
+  .topHeadFields {
+	width: auto;
+  }
+  #productivityDateRange span {
+	text-align: Center;
+	display: inline-block;
+	width: calc(100%);
+	font-size: 12px;
+  }
+  #productivityDateRange span:after {
+	content: "\f073";
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	color: #4b7bdd;
+	margin-left: 10px;
+  }
+  .collasplist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: calc(100% - 12px);
+	li {
+	  font-size: 14px;
+	  a {
+		background: none;
+		border: 0;
+		color: #000;
+		text-decoration: none;
+		&[data-toggle="collapse"] {
+		  font-weight: 500;
+		  font-size: 16px;
+		  margin: 5px 0 !important;
+		  display: block;
+		}
+		&[data-toggle="collapse"] span {
+		  margin-right: 5px;
+		  font-size: 12px;
+		  padding: 1px 2px;
+		}
+		&:hover {
+		  background: none;
+		  color: #000;
+		}
+		& .glyphicon-menu-right {
+		  display: none;
+		}
+		&.collapsed .glyphicon-menu-down {
+		  display: none;
+		}
+		&.collapsed .glyphicon-menu-right {
+		  display: inline-block;
+		}
+	  }
+	  & .fa.fa-star-o,
+	  .collasplist li .fa.fa-star {
+		color: #ccc;
+	  }
+	  &.active .fa-star {
+		color: orange;
+	  }
+	}
+  }
+  .collasplist .collasplist {
+	width: calc(100% - 0px) !important;
+  }
+  .quickviewscrollbar {
+	max-height: 250px;
+	overflow: auto;
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+  }
+  .quickviewscrollbar ul {
+	padding: 0px 0px 0px 20px;
+	li {
+	  font-size: 14px;
+	  padding: 5px 0px 5px 0px;
+	  &:hover {
+		cursor: pointer;
+	  }
+	  span {
+		position: relative;
+		&.currentactive {
+		  color: #4b7bdd;
+		}
+		&.currentactive::after {
+		  left: 0;
+		  height: 1px;
+		  background: #4b7bdd;
+		  width: 100%;
+		  content: "";
+		  position: absolute;
+		  bottom: -3px;
+		}
+	  }
+	}
+  }
+  .showfilter {
+	width: 100% !important;
+	clear: both;
+	margin-top: 20px;
+  }
+  .showfilter .showrows,
+  .showfilter .goto {
+	display: inline-block;
+	margin-right: 15px;
+  }
+  .showfilter .showrows span,
+  .showfilter .goto span {
+	display: inline-block;
+	margin-right: 5px;
+  }
+  
+  .layoutPagination {
+	display: none;
+  }
+  .scrollableContainer {
+	max-height: 300px;
+	overflow: auto;
+	width: 100%;
+  }
+  .customSection .scrollableContainer {
+	max-height: 200px !important;
+	width: calc(100% + 9px);
+  }
+  .showfilter {
+	margin-top: 0;
+  }
+  #listingContainerSectionMessage {
+	color: red;
+  }
+  .gridly,
+  .gridly > :not(.dragging) {
+	transition: all 0.4s ease-in-out;
+  }
+  .gridly .dragging {
+	z-index: 800;
+  }
+  .gridly {
+	position: relative;
+	margin-bottom: 25px;
+  }
+  .gridly .brick {
+	display: block;
+	height: 25px;
+	font-size: 14px;
+	width: 100%;
+	padding: 0px;
+	border: 1px dashed #fff;
+  }
+  .bluecolor {
+	color: #4b7bdd;
+  }
+  .titleMsg {
+	font-size: 11px;
+  }
+  
+  #filter1 .dropdown-menu {
+	width: 100%;
+  }
+  #quickview h4 {
+	margin: 5px 0 !important;
+  }
+  #quickview .gridly .brick {
+	cursor: move;
+  }
+  #quickview .gridly .brick span {
+	cursor: pointer;
+	height: 18px;
+	padding: 5px;
+	margin: -5px -5px 0 0;
+  }
+  #quickview .gridly .brick .fa-bars {
+	color: #999;
+	margin-right: 2px;
+  }
+  #quickview .gridly .brick.dragging {
+	border-color: #ccc;
+  }
+  
+  #filter1 .SumoSelect > .optWrapper.multiple > .options li.opt.selected span i {
+	background-color: #4b7bdd;
+  }
+  #filterViewModal .btn-npf {
+	background: #4b7bdd;
+	border-color: #4b7bdd;
+  }
+  
+  .tableNew.multiColorTable .totalDataRow.totalDataRow {
+	background-color: #fff !important;
+  }
+  
+  .addremoveblock {
+	text-align:right;
+	margin-top:9px;
+	float:right;
+	.btn_icon{
+		padding:5px 0px 0 10px;
+	}
+	.btn-npf {
+	  color: #fff;
+	  background-color: #4b7bdd;
+	  border-color: #4b7bdd;
+	  &:hover{
+		background-color: #4b7bdd;
+		border-color: #4b7bdd; 
+	  }
+	}
+	button.btn-for-a-view {
+	  padding: 5px 10px;
+	  min-width: 105px;
+	}
+	.filter-search {
+	  padding: 3px 10px;
+	  width: 100%;
+	  i {
+		color: #4b7bdd;
+	  }
+	  input {
+		width: 140px !important;
+		padding: 0 0 0 5px;
+	  }
+	}
+	button .glyphicon-menu-down {
+	  display: none;
+	}
+	button.collapsed .glyphicon-menu-up {
+	  display: none;
+	}
+	button.collapsed .glyphicon-menu-down {
+	  display: inline-block;
+	  color: #4b7bdd !important;
+	}
+	li {
+	  a > .glyphicon-menu-up {
+		display: none;
+		color: #fff !important;
+	  }
+	  &.active a > .glyphicon-menu-up {
+		display: inline-block;
+	  }
+	  &.active a > .glyphicon-menu-down {
+		display: none;
+	  }
+	}
+  }
+  
+  #addremovecolumn {
+	& .filter-search {
+	  border-radius: 20px;
+	  width: 100%;
+	  border: 1px solid #ccc;
+	  margin-bottom: 10px;
+	  i {
+		color: #4b7bdd;
+	  }
+	}
+  }
+  
+  .hasArrow{
+	a[data-toggle="collapse"].collapsed:before,a[aria-expanded="false"]:before {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	a[aria-expanded="true"]:before {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+  } 
+
+  
+  .topHead .topHeadFields {
+	margin-top: 8px;
+  }
+  
+  .tableNew table.table-hover tbody tr:hover td.customSection {
+	background: #fff !important;
+  }
+  .tableNew table.table-hover tbody tr:hover td.customSection tr:hover {
+	box-shadow: none !important;
+  }
+  .tableNew table.table-hover tbody tr:hover td.customSection tr:hover td {
+	background-color: #f8f8f8 !important;
+  }
+  #quickview {
+	.filterscrollbar {
+	  margin-top: 15px;
+	}
+  }
+  
+
+.quickView, .customView {
+	.filterList {
+		padding: 0;
+		width: calc(100% + 30px);
+		li {
+			padding: 5px 15px;
+			margin: 0px !important;
+			cursor:pointer;
+			&:hover {
+			background: #f1f1f1;
+			
+				.fa {
+					cursor:pointer;
+				}
+			}		
+		}
+	}
+
+	.head {
+	font-weight: 500;
+	text-decoration: none;
+	cursor: text;
+	color: #111;
+	font-size: 14px;
+	padding: 0 !important;
+	}
+}
+.viewcustom{
+	.quickView, .customView {
+		.filterList {
+		height: calc(40vh - 45px) !important;
+		}
+	}
+}
+  
+.customView {
+margin: 0 !important;
+height: auto !important;
+}
+
+.btn-npf {
+	color: #fff;
+	background-color: #4b7bdd;
+	border-color: #4b7bdd;
+	&:hover{
+	  background-color: #4b7bdd;
+	  border-color: #4b7bdd; 
+	}
+}
+
+
+th[class*="headerCollapseSubStage_"]{
+	padding-right:25px!important;
+
+	.columnCollasp{
+		position: absolute;
+		right: 0;
+		top: 22px;
+		z-index: 99;
+		color:#fff;
+		
+		&:before {
+			background:rgba(0,116,217,1);
+			padding: 10px 6px;
+			content: '';
+			z-index: -1;
+			position: absolute;
+			right: -1px;
+			width: 0px;
+			height: 25px;
+			top: -2.8px;
+			border-radius: 15px 0 0 15px;
+			font-size:10px;
+		}
+
+
+		&:after {
+			content: '';
+			width: 2px;
+			height:85px;
+			background:rgba(0,116,217,1);
+			display: block;
+			position: absolute;
+			top: -38px;
+			right: -3px;
+			z-index: 99;
+		}
+
+		.fa-chevron-right{
+			transform: rotate(180deg);
+			transform-origin: center;
+			&:before{
+				font-size:10px;
+				line-height: 20px;
+			}
+		}
+
+		&:hover,&:focus{
+			color:#fff;
+		}
+	}
+
+
+
+	.collapsed{
+		color:#4b7bdd;
+		&:before,&:after {
+			background:rgba(0,116,217,.3);	
+		}
+
+		& .fa-chevron-right:before{
+			font-size:10px;
+		}
+
+		&:hover,&:focus{
+			color:#4b7bdd; 
+		}
+		
+		.fa-chevron-right {
+			transform: rotate(0deg);
+			line-height: 18px;
+		}
+	}
+}
+
+.counsellors_counsellorproductivityreport{
+	.topHead{border-bottom:0;
+		>.row{clear:both;
+			&:first-child{
+				position:relative;
+				&:after{
+					content: '';
+					left: 15px;
+					right: 0px;
+					height: 1px;
+					width: calc(100% - 30px);
+					display: block;
+					background: #f2f2f2;
+					top:45px;
+					position: absolute;
+				}
+			}
+		}
+		.mconf{
+			margin-top:10px;
+		}
+	}
+}
+
+
+.sectionLoader{
+	background:rgba(255, 255, 255, 0.9) url("../../../img/npfLoader_new.gif") no-repeat center 50% !important;;
+}
+
+.proptip {
+	display:none;
+    border: 1px solid #c0c0c0;
+    padding: 15px;
+    background: #f1f3f4;
+	margin-top:10px;
+	
+	.propicon {
+	display: inline-block;
+	vertical-align: top;
+	min-width:40px;
+	text-align: center;
+	font-size: 40px;
+	padding: 0;
+	margin: 0;
+	line-height:40px;
+	}
+
+	.prolist{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		line-height: 22px;
+		font-size: 12px;
+		display: inline-block;
+
+	 	li{
+			display: flex;
+			align-items: center;
+			& i:before {
+				font-size: 18px;
+				margin-right:3px;
+			}
+		}
+	}
+}
+
+
+  
+  @include media("<tablet") {
+	.accodianMenuParent {
+	  padding-right: 14px;
+	}
+	.sidebar.mobinactive {
+	  margin-left: 0% !important;
+	}
+	.sidebar.active.mobinactive {
+	  margin-left: -100% !important;
+	}
+  }
+  
+  @include media(">tablet") {
+	.accodianMenuParent {
+	  .accodianMenu {
+		position: absolute;
+		left: 195px;
+	  }
+	  &.hasArrow a[data-toggle="collapse"]:before {
+		line-height: 100%;
+	  }
+	}
+  }
+  
+@media (min-width: 993px) {
+	.accodianMenuParent.hasArrow a[data-toggle="collapse"]:before {
+		line-height: 100%;
+	}
+}
+  
+@media (max-width: 767px) {
+	.counsellors_counsellorproductivityreport .topHead>.row:first-child:after{
+		top:36px;
+	}
+
+	.text-left-sm{
+		text-align:left;
+	}
+
+	#productivityDateRange {
+	  max-width: 100%;
+	  margin: 0;
+	}
+
+	.filterslider {
+	  display: block;
+	  margin: 5px 0 0 0 !important;
+		#item_carousel {
+		width: 100%;
+			.owl-stage-outer {
+				padding:0;
+				.owl-item {
+					text-align: center;
+				}
+			}
+			.owl-nav{
+				top:0;
+			}
+		}
+	}
+
+	.saveupquick {
+	  .btn {
+		padding: 5px 12px;
+	  }
+	}
+
+	#quickview{
+		.viewcustom,.filterscrollbar  {
+		text-align: left;
+		height:calc(50vh - 25px);
+		overflow-y: auto;
+		width: calc(100%);
+		overflow-x: hidden;
+		margin-bottom:25px;
+
+			.quickView,.customView {
+				.filterList{
+					height:auto!important;
+					padding-right:15px;
+				}
+			}
+		}
+		.columns_dragble {
+			max-height: calc(50vh - 152px);
+			overflow:auto;
+		}
+	}
+
+	.filterscrollbar{
+		.columns_dragble {
+			max-height: calc(50vh - 100px);
+			overflow:auto;
+		}
+	}
+  
+
+  .sel_col {
+    margin: 20px 0 0 0;
+    padding: 0;
+    font-size: 14px;
+    margin-bottom: 10px;
+	span {
+		text-align: right;
+		font-size: 12px;
+		float: right;
+		color: #cacaca;
+		font-weight: normal;
+	}
+  }
+
+  .modal-dialog{
+	  left:0!important;
+  }
+}

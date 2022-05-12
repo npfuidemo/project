@@ -1,0 +1,334 @@
+*{margin:0; padding:0;}
+body{background:#f2f2f2 url(../../img/bg-pattern.png);}
+#content{padding-bottom:45px;padding-left: 0px;padding-right: 0;}
+.marketing-automatation{margin-bottom:0;}
+.marketing_automation{}
+.marketing_automation .workflow{display:inline-block;text-align:center;padding:0 0 10px;width:100%;min-height:500px;overflow-x:auto;}
+.marketing_automation .workflow ul {
+    padding-top: 40px; 
+	position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+	white-space:nowrap;
+        z-index:11;
+}
+.marketing_automation .workflow li {
+    display: inline-block; 
+	text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 40px 15px 0 15px;
+	vertical-align:top;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+.marketing_automation .workflow li:nth-child(1){z-index:11111;}
+.marketing_automation .workflow li:nth-child(2){z-index:11110;}
+.marketing_automation .workflow li:nth-child(3){z-index:11109;}
+.marketing_automation .workflow li:nth-child(4){z-index:11108;}
+.marketing_automation .workflow li:nth-child(5){z-index:11107;}
+.marketing_automation .workflow li:nth-child(6){z-index:11106;}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.marketing_automation .workflow li:before, .marketing_automation .workflow li:after{
+    content: '';
+    position: absolute; 
+	top: 0; 
+	right: 50%;
+    border-top: 1px solid #111;
+    width: 50%; 
+	height: 40px;
+}
+.marketing_automation .workflow li:after{
+    right: auto; 
+	left: 50%;
+    border-left: 1px solid #111;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.marketing_automation .workflow li:only-child::after, .marketing_automation .workflow li:only-child::before {
+    display: none;
+}
+
+/*Remove space from the top of single children*/
+.marketing_automation .workflow li:only-child{ padding: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.marketing_automation .workflow li:first-child::before, .marketing_automation .workflow li:last-child::after{
+    border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.marketing_automation .workflow li:last-child:before{
+   border-right: 1px solid #111;
+    /* border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;*/
+}
+.marketing_automation .workflow li:first-child:after{
+   /* border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;*/
+}
+
+/*Time to add downward connectors from parents*/
+.marketing_automation .workflow ul ul:before{
+    content:'';
+    position:absolute; 
+	top: 0; 
+	left: 50%;
+    border-left: 1px solid #111;
+    width: 0; 
+	height: 40px;
+}
+
+.marketing_automation .workflow li div.blocks, 
+.marketing_automation .workflow li > a{
+    border: 1px solid #ccc;
+    text-decoration: none;
+    font-size: 11px;
+    display: inline-block;
+	-webkit-box-shadow: 0 10px 6px -6px #ccc;
+       -moz-box-shadow: 0 10px 6px -6px #ccc;
+            box-shadow: 0 10px 6px -6px #ccc;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+	text-align:left;
+	min-width:200px;
+	max-width:200px;
+	position:relative;
+    z-index: 111;
+    white-space: normal;
+	word-break: break-all;
+	color:#666;
+}
+.debugbtn .dropdown-item:active{
+	-webkit-box-shadow: 0 0 0 0;
+    box-shadow:0 0 0 0;
+	
+}
+.marketing_automation .workflow li div.blocks.leadevent{
+	min-width:250px;
+	max-width:250px;
+}
+
+/*** Custome Theming ***/
+.workflow-heading{ margin-bottom:-20px; text-align:center;}
+.controls{}
+.controls .btn-group{margin:0;width:auto;}
+.controls .btn-setting{background-color:transparent;border:none;	}
+.controls .btn-group.open .dropdown-toggle{color:green;box-shadow:none;}
+.workflow .blocks .display-cell{vertical-align:middle;}
+.listCondition .btn-group.ellipsis-left .fa{color:#fff;vertical-align: middle;}
+.workflow .blocks h4{margin-top:0;margin-bottom:5px;font-size:14px;color:#111;padding-right:10px;}
+
+.listsetting{position:absolute;right:5px;top:5px;}
+.listCondition {bottom:-22px;color:#fff;left:50%;position:absolute;z-index:1;border-radius:0 0 20px 20px;margin-left:-12px;}
+.listCondition .btn-setting{padding:0px 8px 4px;line-height:18px;}
+.listCondition .btn-group.open .dropdown-toggle{color:#fff;}
+.topActions {top:-11px;position:absolute;left: 50%;margin-left: -8px;z-index: 111;background-color: #666;padding: 2px 4px 5px;color: #fff;line-height: 10px;border-radius:50%;visibility:hidden;opacity:0;transition: visibility 0.5s, opacity 0.3s linear;}
+.topActions .ellipsis-left .fa{color:#fff;}
+
+.marketing_automation .workflow ul.li_root{margin-bottom:60px;}
+.marketing_automation .workflow li div.leadevent{border:3px solid #014365;background-color:#014365;}
+.marketing_automation .workflow li div.wait{border:3px solid #ff9a00;background-color:#ff9a00;}
+.marketing_automation .workflow li div.ifelse{border:3px solid #75b740;background-color:#75b740;}
+.marketing_automation .workflow li div.ifelse:last-child{border-right-color:#ef6362;}
+.marketing_automation .workflow li div.sendEmail{border:3px solid #9478de;background-color:#9478de;}
+.marketing_automation .workflow li div.notifyUserEmail{border:3px solid #008577;background-color:#008577;}
+.marketing_automation .workflow li div.leadStage{border:3px solid #c89d2c;background-color:#c89d2c;}
+.marketing_automation .workflow li div.removeUser{border:3px solid #ef6362;background-color:#ef6362;}
+.marketing_automation .workflow li div.ifelse .content:after,
+.marketing_automation .workflow li div.ifelse .content:before{
+	border-bottom:3px solid #ef6362;content:"";left:50%;position:absolute;width:50%;width:100px;
+}
+.marketing_automation .workflow li div.ifelse .content:after{bottom:-3px;}
+.marketing_automation .workflow li div.ifelse .content:before{top:-3px;}
+
+.marketing_automation .workflow ul.yesNo > li:before{
+	border-right-color:#ef6362 !important;
+}
+.marketing_automation .workflow ul.yesNo > li:after{
+	border-left-color:#75b740 !important;
+}
+
+.marketing_automation .workflow ul.yesNo{display:table;width:100%;}
+.marketing_automation .workflow li.yes{z-index:111; display:table-cell;}
+.marketing_automation .workflow li.no{z-index:11;display:table-cell;}
+/*.marketing_automation .workflow li.no:before{border-color:#ef6362;}
+.marketing_automation .workflow li.yes:after{border-color:#75b740;}
+
+.marketing_automation .workflow li.yes:only-child .block_form:before, 
+.marketing_automation .workflow li.no:only-child .block_form:before{content:"";position: absolute;height: 100%;left: 50%;top: -40px;width: 0;}
+.marketing_automation .workflow li.yes:only-child .block_form:before{border-left: 1px solid #75b740;}
+.marketing_automation .workflow li.no:only-child .block_form:before{border-left: 1px solid #ef6362;}
+
+.marketing_automation .workflow li.yes:only-child .block_form:after, 
+.marketing_automation .workflow li.no:only-child .block_form:after{border-style:solid;border-width:5px;top:-20px;content:"";right:50%;margin-right:-6px;position:absolute;z-index:1;}
+.marketing_automation .workflow li.yes:only-child .block_form:after{border-color:#75b740 transparent transparent transparent;}
+.marketing_automation .workflow li.no:only-child .block_form:after{border-color:#ef6362 transparent transparent transparent;}
+
+.marketing_automation .workflow ul.yesNo > li + li .block_form:before{
+	border-color:transparent transparent transparent #ef6362;border-style:solid;border-width:5px;top:-5px;content:"";right:168px;position:absolute;z-index:1;	
+}
+.marketing_automation .workflow ul.yesNo > li + li .block_form:after{
+	border-color:transparent #75b740 transparent transparent;border-style:solid;border-width:5px;top:-5px;content:"";left:-62px;position:absolute;z-index:1;	
+}
+
+.marketing_automation .workflow li.yes{z-index:111; display:table-cell; width:50%;}
+.marketing_automation .workflow li.no{z-index:11;display:table-cell; width:50%;}
+
+.marketing_automation .workflow li.no:before{border-color:#ef6362;}
+.marketing_automation .workflow li.yes:after{border-color:#75b740;}
+
+.marketing_automation .workflow ul.yesNo{padding-top:20px; display:table;}
+.marketing_automation .workflow ul.yesNo:before,
+.marketing_automation .workflow ul.yesNo:after{content:"";height:20px;position:absolute;top:0;width:0;}
+.marketing_automation .workflow ul.yesNo:before {border-left:1px solid #75b740;left:45%;}
+.marketing_automation .workflow ul.yesNo:after {border-left:1px solid #ef6362;right:45%;}
+.marketing_automation .workflow ul.yesNo > li:before, 
+.marketing_automation .workflow ul.yesNo > li:after{height:20px;}
+.marketing_automation .workflow ul.yesNo > li{padding-top:20px;}
+.marketing_automation .workflow ul.yesNo > li:only-child .block_form:before{
+	content: "";
+    height: 20px;
+    position: absolute;
+    top: 0;
+    width: 0;
+	border-left: 1px solid #75b740;
+    left: 45%;	
+}
+.marketing_automation .workflow ul.yesNo > li:only-child .block_form:after{
+	content: "";
+    height: 20px;
+    position: absolute;
+    top: 0;
+    width: 0;
+	border-left: 1px solid #ef6362;
+    right: 45%;
+	
+}*/
+
+
+/*.marketing_automation .workflow li.no li, .marketing_automation .workflow li.yes li{ padding-left:0;padding-right:0;}*/
+
+
+.leadevent .listCondition {background-color: #014365;}
+.wait .listCondition {background-color: #ff9a00;}
+.sendEmail .listCondition {background-color: #9478de;}
+.notifyUserEmail .listCondition {background-color: #008577;}
+.leadStage .listCondition {background-color: #c89d2c;}
+.removeUser .listCondition {background-color: #ef6362;}
+.ifelse .listCondition.controlNo {background-color:#ef6362;left:auto;right:0;bottom:-22px;margin-right:-3px;}
+.ifelse .listCondition.controlYes {background-color:#75b740;left:0; right:auto;margin-left:-3px;bottom:-22px;}
+
+.img-cell{padding:10px;max-width:45px;min-width: 45px;}
+.content-cell{padding:5px; background-color:#fff; width:100%;}
+
+/*** Arrow add ***/
+.blocks.hasChild.leadevent:before , 
+.blocks.hasChild.wait:before, 
+.blocks.hasChild.sendEmail:before, 
+.marketing_automation .workflow .li_root > li > ul:after{
+	border-color: #111 transparent transparent;
+	border-style:solid;
+	border-width:5px;
+	bottom:-38px;
+	content:"";
+	left:50%;
+	margin-left:-4px;
+	position:absolute;
+}
+.blocks.hasChild.ifelse:before{
+	border-color: transparent #ef6362 #75b740 transparent;
+	border-style:solid;
+	border-width:5px;
+	bottom:-25px;
+	content:"";
+	left:50%;
+	margin-left:-4px;
+	position:absolute;
+	transform: rotate(45deg);
+}
+
+.marketing_automation .workflow .li_root > li > ul:after{
+	bottom:auto;
+	top:25px;	
+}
+
+#start_li:last-child .blocks.hasChild.leadevent:before,
+.block_form:last-child .blocks.hasChild.leadevent:before , 
+.block_form:last-child .blocks.hasChild.wait:before, 
+.block_form:last-child .blocks.hasChild.sendEmail:before,
+.block_form:last-child .blocks.hasChild.ifelse:before{
+	display:none;
+}
+
+/*
+.blocks.ifelse:before{
+	border-color:transparent transparent transparent #ef6362;border-style:solid;border-width:5px;bottom:-50px;content:"";right:30px;margin-left:-4px;position:absolute;z-index:1;
+}
+.blocks.ifelse:after{
+	border-color:transparent #75b740 transparent transparent;border-style:solid;border-width:5px;bottom:-50px;content:"";left:30px;margin-left:-4px;position:absolute;z-index:1;
+}*/
+
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.marketing_automation .workflow li div.blocks:hover, .marketing_automation .workflow li div.blocks:hover+ul li div.blocks {
+    color:#000; /*border-color:#94a0b4*/;
+}
+.marketing_automation .workflow li div.blocks:hover .content-cell{background-color:#f9f9f9;	}
+
+.marketing_automation .workflow li div.blocks:hover .listCondition, .marketing_automation .workflow li div.blocks:hover .topActions {visibility:visible;opacity:1;}
+.marketing_automation  .dropdown-menu{margin-top:0;}
+.marketing_automation  .dropdown-menu .dropdown-item:hover {color:#337ab7;}
+.marketing_automation  .if_else_form  .controlYes .ellipsis-left .dropdown-menu{right: auto;}
+
+.workflow form{ display:inline-flex;}
+.marketing_automation .workflow  .content .fa{color:#fff;font-size:25px;}
+
+/*Connector styles on hover*/
+.marketing_automation .workflow li div.blocks:hover+ul li:after, 
+.marketing_automation .workflow li div.blocks:hover+ul li:before, 
+.marketing_automation .workflow li div.blocks:hover+ul:before, 
+.marketing_automation .workflow li div.blocks:hover+ul ul:before,
+.marketing_automation .workflow li div.blocks:hover+ul:after,
+.marketing_automation .workflow li div.blocks:hover+ul ul:after {
+    border-color: #111;
+	border-width:2px;
+}
+
+.marketing_automation .workflow li .block_form:hover+ul li:after, 
+.marketing_automation .workflow li .block_form:hover+ul li:before, 
+.marketing_automation .workflow li .block_form:hover+ul:before, 
+.marketing_automation .workflow li .block_form:hover+ul ul:before,
+.marketing_automation .workflow li .block_form:hover+ul:after,
+.marketing_automation .workflow li .block_form:hover+ul ul:after {
+    border-color: #111;
+	border-width:2px;
+}
+.marketing_automation .workflow li .block_form:hover div.blocks,
+.marketing_automation .workflow li .block_form:hover+ul div.blocks
+ {
+   -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+.marketing_automation .workflow li div.leadevent:hover + ul:after{
+	border-color: #111 transparent transparent;
+	border-width: 5px;
+}
+.daterangepicker {z-index: 99911 !important;}
+.automation_createworkflow .popover{z-index:11111;}
+
+.block_first.nostyle{
+	background: #fff;
+    border: none;
+    padding: 0;
+}

@@ -1,0 +1,14 @@
+.config-box {
+    border: 1px solid #eee;
+    .config-head {
+        padding: 0 10px;
+		border-bottom: 1px solid #ddd;
+		background-color: #f8f8f8;
+		display: inline-block;
+		width: 100%;
+    }
+    .configRow{
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+    }
+}

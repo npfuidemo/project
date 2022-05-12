@@ -1,0 +1,41 @@
+.footer{
+	background-color:#333;
+	padding:10px 0;
+	color:#fff;
+	margin-top:30px;	
+	.copyrighttxt{
+		font-size:13px;
+		color:#f2f2f2;
+		margin-top:3px;
+	}
+}
+.social-icons{
+	a{
+		background-color:#ddd;
+		border-radius:50%;
+		color:#fff;
+		display:inline-block;
+		height:30px;
+		line-height:30px;
+		text-align: center;
+		width:30px;
+		&.facebook{
+			background-color:#4b70aa;
+			margin-right:8px;
+		}
+		&.gplus{
+			background-color:#d23037;
+		}
+	}
+}
+
+@media screen and (min-width:769px) {
+  .social-icons{
+	text-align:right;
+ }
+}
+@media screen and (max-width:768px) {
+  .copyrighttxt{
+	text-align:center;
+ }
+}

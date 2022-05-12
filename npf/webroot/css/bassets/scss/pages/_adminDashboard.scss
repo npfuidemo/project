@@ -1,0 +1,105 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Admin Dashboard Page.
+// -----------------------------------------------------------------------------
+
+.payment-type-box{
+	border:1px solid rgb(221, 221, 221);
+	display:inline-block;
+	padding:10px;
+	width:100%; 
+	margin-bottom:10px;
+}
+.app-breakup{
+	border:1px solid #ddd;
+	background-color:#fff; 
+	margin-bottom:20px;
+}
+.total-applications{
+	padding:10px;
+	font-size:24px;
+	min-width:25%;
+	position:relative;
+	min-width:300px;
+	overflow:hidden;
+	min-height:75px;
+	strong{
+		font-size:40px;	
+	}
+	img{
+		margin:10px 0 -13px;	
+	}
+}
+.payment-breakup{
+	overflow:hidden;
+}
+.payment-approved, 
+.payment-pending{
+	padding:10px;
+	position:relative;
+	overflow:hidden;
+}
+.payment-approved{
+	border-bottom:1px solid #ddd;
+}
+.pay-breakup{
+	width:200px;
+}
+.approved-pay, 
+.pending-pay{
+	font-size:18px;	
+	width:200px;
+}
+.approved-pay strong, 
+.pending-pay strong{
+	font-size:24px;
+}
+.revenueText{
+	font-size:14px;
+}
+.popover-info{
+	background-color:#ddd;
+	border-radius:50%;
+	color:#333;
+	font-size:30px;
+	line-height:24px;
+	padding:5px 25px 10px 15px;
+	position:absolute;
+	right:-18px;
+	top: -11px;
+	i{
+		color:#666;
+		font-size:12px;
+	}
+}
+
+.lineChartbdr{
+	border-right:1px solid #ddd;
+}
+
+.SumoSelect{max-width:100%;}
+
+@include media("<=tablet") { 
+	.total-applications,
+	.payment-breakup, 
+	.pending-pay, 
+	.payment-approved > div, 
+	.approved-pay{
+		display:block;	
+	}
+	.approved-pay, 
+	.pending-pay{
+		width:100%;
+		text-align:center;
+	}
+	.payment-approved{
+		border-top: 1px solid #ddd;
+	}
+	.pay-breakup{
+		width:154px;
+	}
+}
+
+	
+
+
+

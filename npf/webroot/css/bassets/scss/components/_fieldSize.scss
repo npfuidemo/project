@@ -1,0 +1,130 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Form Field Size component.
+// -----------------------------------------------------------------------------
+
+.chosen-container{
+	vertical-align: top;
+	.chosen-single{
+		line-height: 30px;
+		-webkit-box-shadow:none;
+		box-shadow: none;
+		font-size: 13px !important;
+		border-radius: 2px;
+		color:#333;
+		span{
+			color:#333;
+		}
+	}
+	&.chosen-container-single-nosearch{
+		.chosen-search{
+			display:none;
+		}
+		.chosen-drop{
+			padding-top:5px;
+		}
+	}
+
+	&.chosen-container-multi{
+		.chosen-choices{
+			border-color:#ccc;
+			border-radius:2px;
+			box-shadow:none;
+		}
+	}
+
+}
+
+.SumoSelect{
+	min-width:100%;
+	>.CaptionCont{
+		padding:5px 10px;
+		border-radius:2px;
+		box-shadow: none;
+		>span{
+			&.placeholder{
+				color:#333;
+			}
+		}
+		>label{
+			line-height:30px;
+		}
+	}
+	&.open{
+		.search-txt{
+			padding:5px 10px;
+		}
+		>.optWrapper{
+			top:33px;
+		}
+	}
+}
+
+.form-control{
+	-webkit-box-shadow:none !important;
+	box-shadow: none !important;
+	color:#333 !important;
+	border-color:#ccc !important;
+	border-radius:2px !important;
+}
+
+.form-group {
+    padding-bottom: 0;
+}
+
+.filter-block .btn, .bottomButton .btn{
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.npf-form-group{
+	.form-control{
+		height:32px !important;
+	}
+	textarea.form-control{
+		height:auto !important;
+	}
+	.iconDate {
+		top: 7px;
+		font-size: 12px;
+	}
+}
+label {
+	font-weight:500;
+}
+
+/*** For Big Fields ***/
+.filter-block{
+	.chosen-container{
+		.chosen-single{
+			line-height: 38px;
+		}
+	}
+	.SumoSelect{
+		min-width:100%;
+		>.CaptionCont{
+			padding:8px 10px 9px;
+			>label{
+				line-height:38px;
+			}
+		}
+		&.open{
+			.search-txt{
+				padding:8px 10px;
+			}
+			>.optWrapper{
+				top:38px;
+			}
+		}
+	}
+	.npf-form-group{
+		.form-control{
+			height:40px !important;
+		}
+		.iconDate {
+			top:10px;
+		}
+	}
+	.formAreaCols{
+		margin-top:10px !important;
+	}
+}

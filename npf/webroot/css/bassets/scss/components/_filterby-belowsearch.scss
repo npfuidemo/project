@@ -1,0 +1,24 @@
+.filterby-belowsearch {
+    position: relative;
+    margin: 30px auto;
+    max-width: 960px;
+    width: 100%;
+    .filterby-handler{
+        background-color: #fff;
+        text-align: center;
+        a{
+            text-decoration:none;
+            position:relative;
+            top:-15px;
+            left: auto;
+            background-color:#fff;
+            padding:0 25px 0 15px;
+        }
+        a[aria-expanded="false"]:before, 
+        a[aria-expanded="true"]:before {
+            position: absolute;
+            right: 12px;
+            top: 5px;
+        }
+    }
+}

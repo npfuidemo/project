@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the QMS Details Page.
+// -----------------------------------------------------------------------------
+.panel-Closed{border-radius:0; border-left:2px solid #f00;}
+.panel-Open{border-radius:0; border-left:2px solid #75b740;}
+.panel-In{border-radius:0; border-left:2px solid #ffcc99;}
+.panel-for-ticket .panel-ticket-over{font-size:16px;padding:8px 15px;}
+.panel-for-ticket label{width:120px;}
+
+.ticket-over-hd{float: left;width:33.33%;}
+.ticket-over-hd .ticket-info{display: inline-block;width: auto;}
+.ticket-over-hd .application-edit-no{padding: 25px 0;}
+.ticket-over-hd .edit-app-btn{margin: 15px 0 0;}
+.seperator-line{border-left: 1px solid #ddd;}
+.ticket-conversation{display: inline-block;width:100%;position: relative;}
+.ticket-conversation h4{color:#323232;font-weight:500;font-size:18px;}
+.convers-mesg{border: 1px solid #ddd;padding: 10px;display: inline-block;width: 100%;}
+.convers-reply {
+    border: 1px solid #96be37;
+    border-radius: 4px;
+    color: #323232;
+    float: right;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding: 8px 23px;
+    text-transform: none;
+}
+.convers-reply:hover, .convers-reply:focus {background-color:#abcb5e !important;border-color: #abcb5e !important;color: #fff !important;}
+.conversation{margin:10px 0;}
+.admin-conversation{width: 100%;display: inline-block;position: relative; vertical-align:top;}
+.conversation-both{word-wrap: break-word;background-color:rgba(117,183,64,0.05); color:#313131; font-size: 14px;padding:12px 15px;width:90%;float: right;margin-top:10px;border-left:2px solid rgb(117,183,64);}
+.conversation-both:first-child, .conversation:first-child{margin-top:0;}
+.conver-attach-txt{width: 40%;background-image: none;}
+.conver-mix {font-size: 90% !important;margin-top: 5px;}
+.conversation-both p{padding: 0;margin: 0;}
+.conver-info-right{padding: 0;text-align: right;}
+.conver-info-left .convers-attach-file{float: left;font-size: 13px;text-transform: none;padding: 10px 0;}
+.conver-info-left .convers-attach-file:hover, .conver-info-left .convers-attach-file:focus, .conver-info-left .convers-attach-file:active{background-color: rgba(0, 0, 0, 0) !important;}
+.conver-info-left .convers-label{display:inline;}
+.conver-info-left .convers-attach-txt{display: inline-block;width: 200px;background-image: none;}
+.conver-info-left .convers-attach-txt:focus{border-color: #fff;box-shadow: none;}
+.stud-conversation{width: 100%;display: inline-block;position: relative;}
+.stud-conversation .stu-convers{float:left;background-color:rgb(246, 248, 254);border-left:2px solid #004465}
+.conversation-status{background-color:#f2dede; color:#111; font-size: 14px;display: inline-block;padding:8px 15px;width: 100%;margin: 10px 0 0 0; vertical-align:top;}
+.conversation-status + .conversation-status{ margin-bottom:10px;}
+.conversation-status p{padding: 0;}
+.image-link{color: #129ae6;text-decoration: underline;}
+.conver-info-left .fa-paperclip{font-size: 18px;vertical-align: bottom;}
+.convers-inside-content .form-input-control{border: 1px solid #898989;background-image: none;font-size: 13px;height: 30px;padding: 7px;}
+.convers-inside-content .form-group label.control-label{margin: 16px 0 4px;font-size: 13px;color: #96be37;}
+.convers-inside-content .form-group .form-control::-moz-placeholder{font-size: 13px;}
+.convers-inside-content .form-group .form-control::-webkit-input-placeholder{font-size: 13px;}
+.convers-inside-content .form-group .form-control::-ms-placeholder{font-size: 13px;}
+.convers-inside-content .input-browse-group{border: 1px solid #dedede;padding: 0 0 0 10px;}
+.convers-inside-content .form-browse-control{background-image: none !important;font-size: 14px;padding: 10px 0;}
+.convers-inside-content .small-btn {
+    border-radius: 0;
+    line-height: 15px;
+    font-size: 13px;
+    padding: 7px 12px;
+}
+.convers-inside-content .npf-btn {
+    background-color: rgba(117, 183, 64, 0.8) !important;
+}
+.convers-inside-content{padding: 10px 7px 0;}
+.convers-upper-content{display: inline-block;width: 100%;border: 1px solid #cbcbcb;margin: 0;padding: 10px 5px;}
+
+
+.lead-details-list{
+    font-size: 14px;
+    color: #333;
+	> label{
+		width: 120px;
+		color: #111;
+	}
+}
+
+.lead-details-content{
+	background-color:#fff;
+	border: 1px solid #75b740;
+    padding: 15px;
+    border-radius: 4px;
+	margin-bottom:20px;
+}
+
+.vlDetails{
+	position:relative;
+	&:before, &:after{
+		content: '';
+		border-width: 10px;
+		border-style: solid;
+		position: absolute;
+		left: 215px;
+	}
+
+	&:before{
+		border-color: transparent transparent #75b740;
+		top: -19px;
+	}
+	
+	&:after{
+		top:-18px;
+		border-color:transparent transparent #fff;
+	}
+}
+
+@include media("<tablet") {
+	.convers-mesg{margin-top:10px;}
+}

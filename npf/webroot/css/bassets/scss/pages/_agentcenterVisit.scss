@@ -1,0 +1,24 @@
+/*.stickyHead{position:sticky;top:54px;background-color:#fff;z-index:1111;}*/
+.category_activity_performed{margin:30px 0 15px 0;padding: 10px;}
+.category_activity_performed:first-child, .category_activity_performed h4{margin-top:0;}
+.category_activity_performed:hover {background-color: rgba(0, 0, 0, 0.02);}
+.category_activity_performed label:hover{color:#4b7bdd}
+.sepratar-heading span {border-bottom: 2px solid #4b7bdd;}
+.formHorizontalCenter{max-width:967px; margin:0 auto;}
+.childBlock{background-color:rgba(0, 0, 0, 0.02);padding:10px 20px;border-radius:5px;border:1px solid #f2f2f2;}
+.resource-download{margin-bottom:10px;}
+.resource-download > a{background-color: rgba(0, 0, 0, 0.1);display:inline-block;border-radius:50%;padding: 5px 7px;color:#333;line-height:100%;margin-right:10px;}
+.resource-download > a:hover{background-color: rgba(0, 0, 0, 0.06);}
+.modal .category_activity_performed .checkbox, .category_activity_performed .radio{margin-top:5px; margin-bottom:5px;}
+.modal .category_activity_performed input[type=checkbox] + span:after {content:'Pending';border: 1px solid red;padding: 1px 5px;font-size: 11px;margin-left: 5px;border-radius: 5px;color:red;top: -1px;position: relative;}
+.modal .category_activity_performed input[type=checkbox]:checked + span:after{content:'Completed';border: 1px solid #28a745;color:#28a745;}
+.modal .category_activity_performed input[type=checkbox]{visibility:hidden;}
+.modal .category_activity_performed input[type=checkbox]+span:before {width:6px;height:6px;content:'';position:absolute;left:0;background-color:#999;top:8px;border-radius:2px;text-align:center;}
+.modal .category_activity_performed label:hover{color:#333}
+.modal .resource-download{padding-left:15px;}
+.modal .category_activity_performed .checkbox label, 
+.modal .category_activity_performed .radio label, 
+.modal .category_activity_performed label{padding-left:15px;}
+.modal .hasFile{padding-left:15px;} 
+.category_activity_performed [class*=col-]:nth-child(2n+1){clear:both;}
+.ellipsisText{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;width: 100%;display: block;}

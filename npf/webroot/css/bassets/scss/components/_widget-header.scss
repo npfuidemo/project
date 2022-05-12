@@ -1,0 +1,14 @@
+@include media("<tablet") {
+	.widget-header{
+		width:100%;
+		background-color:#f8f8f8;
+		padding:10px;
+		vertical-align:top;
+		h3{
+			margin:0;
+		}
+		&.onlyMobile{
+			display:inline-block;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(117, 183, 64) !default;
+
+/// whatsapp brand color
+/// @type Color
+$whatsapp-color: rgb(37, 211, 102) !default;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(17, 17, 17) !default;
+
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// White color
+/// @white Color
+$white-color: rgb(255, 255, 255) !default;
+
+$sidebar-color: #2f353a;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+$primary-color: #00c0ef;
+$instance-color: #B33771;
+$secondary-color: #9d1cb2;
+$tertiary-color: #f39c12;
+$verified-color: #00a65a;
+$unverified-color: #dd4b39;
+$application-color: #195d8e;
+$enrollment-color: #e377c2;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+
+$base-image-url: '../../../img/' !default;
+$base-font-url: '../../fonts/' !default;

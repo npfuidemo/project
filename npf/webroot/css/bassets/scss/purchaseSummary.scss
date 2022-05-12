@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+'abstracts/newAbstracts/variables',
+'abstracts/functions',
+'abstracts/newAbstracts/mixins',
+'vendor/include-media';
+
+
+// 2. Components
+@import 'components/expandSearch',
+        'components/boxWidthArrow';
+
+
+.expended-search-wrpper .btn{
+  padding: 0 8px!important;
+  color: #999;
+}
+
+.expended-search-wrpper #search_common{
+    padding-left:0;
+}

@@ -1,0 +1,89 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family:'gotham_book', sans-serif;
+}
+
+@font-face{font-family:gotham_book;src:url(fonts/gotham_book-webfont.eot);src:url(fonts/gotham_book-webfont.woff2) format('woff2'),url(fonts/gotham_book-webfont.woff) format('woff'),url(fonts/gotham_book-webfont.ttf) format('truetype');font-weight:400;font-style:normal}
+
+#notfound {
+  position: relative;
+  height: 100vh;
+  display:flex;
+  align-items:center;
+}
+
+#notfound .notfound {
+
+}
+
+.notfound {
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.notfound .notfound-404 h1 {
+  color: #eee;
+  font-weight: 900;
+  font-size:150px;
+  line-height:120px;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 5px 5px #ccc;
+  -moz-text-shadow: 2px 5px 5px #ccc;
+  -webkit-text-shadow: 2px 5px 5px #ccc;
+}
+
+.notfound h2 {
+  font-size:35px;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.notfound p {
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom:30px;
+}
+
+.notfound a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background:#205c9d;
+  display: inline-block;
+  padding:15px 30px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 400;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  background-color: #fff;
+  border-color:#205c9d;
+  color:#205c9d;
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h1 {
+    font-size: 162px;
+  }
+  .notfound h2 {
+    font-size: 26px;
+  }
+}

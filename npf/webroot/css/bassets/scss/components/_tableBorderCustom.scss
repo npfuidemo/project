@@ -1,0 +1,29 @@
+.tableNew{
+	&.table-border-custom{
+		border-color:#eee;
+	}
+	.table>thead>tr>th{border-bottom:none;}
+	.table-border-custom th{
+		background-color:#f6f8fe;
+		border-color:#eee;
+	} 
+}
+ 
+
+.table-border-custom{
+	border:1px solid #ddd;
+	border-collapse:unset;
+	table{
+		margin-bottom:0;
+		td, th{
+			vertical-align:middle !important;
+		}
+	}
+}
+ 
+
+.table-align-top{
+	&.table-border-custom table td, &.table-border-custom table th{
+		vertical-align: top !important;
+	}
+}

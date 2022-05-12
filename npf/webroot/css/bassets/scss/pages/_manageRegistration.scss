@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Manage Registration Page.
+// -----------------------------------------------------------------------------
+.requiredYes {
+    border-left: 2px solid #f00;
+}
+.requiredNo {
+    border-left: 2px solid #ddd;
+}
+
+.max-width-750 {
+    max-width: 750px;
+}
+
+.m-auto{
+    margin: 0 auto;
+}
+
+.table-align-top{
+	&.table-border table td, &.table-border table th{
+		vertical-align: top !important;
+	}
+}
+
+.crf_fields{
+	label.control-label{
+		font-weight:400;
+		margin:5px 0 0;
+	}
+}
+
+fieldset{
+    margin: 0 0 30px;
+	legend {
+		margin-bottom: 15px;
+		font-size: 18px;
+		border-color:#f2f2f2;
+		color:#004465;
+		font-weight: 500;
+		.fa{
+			color:#004465;
+		}
+	}
+}
+#registrationConfigForm + #load_msg_div{display:none !important;}
+
+.customchecbox{
+	cursor:pointer;
+	label{font-weight:400; font-size:14px; cursor:pointer;}
+	input[type="checkbox"]{cursor:pointer;}
+}

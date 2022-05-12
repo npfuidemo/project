@@ -1,0 +1,59 @@
+
+
+
+@media (min-width:1025px){
+    .activeBodyNav .vpaisidebar ul.affix{width:251px!important;}
+    .equalheight{display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;  clear:both;
+      &.row > [class*='col-'] {
+        display: flex;
+        flex-direction: column;}
+    }
+    .videoniaa_wrapper{min-height:calc(100vh - 85px);}
+    .virtualpostapplications_index .vpaibox .well #vpaform{width:82%;}
+    .vpaibox.row .vpaisidebar .stickybar{height:calc(100% - 0px); min-height:calc(100vh - 150px);}
+    .vpaibox .flashMsg{max-width:600px;}
+}
+
+@media (min-width:767px){
+
+}
+
+@media (max-width:1024px){    
+    #vpaform .label{display:block; padding:0; height:20px;}
+    .vpaisidebar ul.affix{width:235px;}
+    .activeBodyNav .vpaisidebar ul.affix{width:195px;}
+    .niaabanner img{max-height:270px;}
+    .arrow.bounce{display:none;}
+    #submitNextBtn{margin-top:20px;}
+    .flashMsg{max-width:500px;}
+}
+
+@media (max-width:992px){
+    .vpaisidebar ul.affix{width:184px;}
+    .niaabanner img{max-height:240px;}
+    .postapplicationprocess{margin-top:30px; float:none;}
+    .vpaibox.row .vpaisidebar ul{min-height:auto;}
+    .vpaibox.row .vpaisidebar ul.affix{height:auto;}
+}
+
+
+@media (max-width:767px){
+    .vpaisidebar{margin:0 0 15px 0!important;
+        ul.affix{width:100%;}
+    }
+    .ui-sortable li{white-space: break-spaces;}
+    .vpaibox .vpaisidebar ul.affix{position:static!important;}
+    .postapplicationprocess {margin-top:20px;}
+    .table-responsive-m{min-height: .01%; overflow-x: auto;
+    table{
+      thead{
+          th{width:auto!important;}
+      }
+    }
+}
+}
+
+    
+
+
+  

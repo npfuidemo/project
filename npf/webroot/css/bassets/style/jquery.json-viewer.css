@@ -1,0 +1,73 @@
+.stepsErp{display: block;width:100%;margin:20px auto;text-align: center;}
+.stepsErp .nav-tabs{background-color: transparent;border: 0;}
+.stepsErp .nav-tabs li.active .step, 
+.template-steps .nav-tabs li .step:hover{background-color: rgba(117, 183, 64, 1) !important;color: #fff !important;border: 2px solid #fff;webkit-box-shadow: 0 1px 5px 1px rgba(97,97,97,0.65);-moz-box-shadow: 0 1px 5px 1px rgba(97,97,97,0.65);-ms-box-shadow: 0 1px 5px 1px rgba(97,97,97,0.65);-o-box-shadow: 0 1px 5px 1px rgba(97,97,97,0.65);box-shadow: 0 1px 5px 1px rgba(97,97,97,0.65);}
+.stepsErp .nav-tabs li .step{border-radius:50%;color:#b2b2b2;display:inline-block;margin:5px;padding: 20px;text-align:center;height:80px;width:80px;border: 2px solid #ddd;font-weight: 600;background-color: #fff;}
+.stepsErp .nav-tabs li{width:20%;position: relative;}
+.stepsErp .nav-tabs li .steps_txt{color: #b2b2b2;font-weight: 500;margin-bottom:0;}
+.stepsErp .nav-tabs li.active .steps_txt{color: #000;}
+.stepsErp .nav-tabs::before {position:absolute;bottom:34%;border-bottom:4px rgba(117, 183, 64, 0.8) solid;width:80%;z-index: 0;left:10%;}
+.request-response label{margin-right:20px;}
+.request-response input{margin-right:4px;}
+.keyValue{background-color:#fafafa;padding:10px 20px 0 !important;border:1px solid #eee;}
+.npf-form-group .keyValue .form-control{height:36px;}
+.keyValue:before{content:'';border-width:6px;border-style:solid;border-color:transparent #eee transparent transparent;position:absolute;left:-12px;top:8px;}
+.logicBox{background-color:#fafafa;padding:10px;border:1px solid #f2f2f2;}
+.alert{font-size: 14px!important;font-weight:400;}
+/* Root element */
+.json-document {padding:0;}
+.json-container{padding: 8px 10px;box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);border: 1px solid #ccc;min-height: 270px;overflow: auto !important;max-height: 270px;background-color: #f8f8f8;}
+.fullScreenIcon{color:#111;position: absolute;right:20px;bottom: 0;}
+.exitfullscreen {position: fixed;}
+/* Syntax highlighting for JSON objects */
+ul.json-dict, ol.json-array {
+  list-style-type: none;
+  margin: 0 0 0 1px;
+  border-left: 1px dotted #ccc;
+  padding-left: 2em;
+}
+.json-string {
+  color: #0B7500;
+}
+.json-literal {
+  color: #1A01CC;
+  font-weight: bold;
+}
+
+/* Toggle button */
+a.json-toggle {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+a.json-toggle:focus {
+  outline: none;
+}
+a.json-toggle:before {
+  font-size: 1.1em;
+  color: #c0c0c0;
+  content: "\25BC"; /* down arrow */
+  position: absolute;
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  line-height: 1em;
+  left: -1.2em;
+}
+a.json-toggle:hover:before {
+  color: #aaa;
+}
+a.json-toggle.collapsed:before {
+  /* Use rotated down arrow, prevents right arrow appearing smaller than down arrow in some browsers */
+  transform: rotate(-90deg);
+}
+
+/* Collapsable placeholder links */
+a.json-placeholder {
+  color: #aaa;
+  padding: 0 1em;
+  text-decoration: none;
+}
+a.json-placeholder:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,97 @@
+/*arrows*/
+.arrow-steps {
+    clear: both;
+    display: inline-block;
+}
+.arrow-steps .step.current {
+    color: #fff;
+    background-color: #4b7bdd;
+}
+.arrow-steps .step.prev {
+    color: #fff;
+    background-color:rgba(75, 123, 221, .60); 
+}
+.arrow-steps .step {
+    font-size: 14px;
+    text-align: center;
+    color: #111;
+    cursor: default;
+    margin: 0 3px;
+    padding: 7px 10px 7px 25px;
+    min-width: 180px;
+    float: left;
+    position: relative;
+    background-color:#f5f6f8;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+.arrow-steps .step.next {
+    background-color: #f5f6f8;
+}
+.arrow-steps .step.current:after {
+    border-left: 17px solid #4b7bdd;
+}
+.common-manager .btn-info-blue {
+    background-color: #e9e9e9!important;
+    color: #111!important;
+    text-transform: capitalize;
+    border-color: #e9e9e9;
+}
+.arrow-steps .step.prev:after {
+    border-left: 17px solid rgba(75, 123, 221, .60);
+}
+.common-manager .btn-info-blue:hover {
+    background-color: #4b7bdd !important;
+    color: #fff!important;
+}
+.arrow-steps .step:after, 
+.arrow-steps .step:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #f5f6f8;
+    z-index: 2;
+    transition: border-color 0.2s ease;
+}
+.arrow-steps .step.next:after {
+    border-left-color: #f5f6f8;
+}
+.arrow-steps .step:before {
+    right: auto;
+    left: 0;
+    border-left: 17px solid #fff;
+    z-index: 0;
+}
+.arrow-steps .step:first-child{
+	border-radius: 20px 0 0 20px;
+	margin-left: 0;
+}
+.arrow-steps .step:first-child:before, 
+.arrow-steps .step:last-child:after{
+	display:none;
+}
+
+.arrow-steps .step:last-child{
+	border-radius:0 20px 20px 0;
+	padding-right:30px;
+}
+
+.flashMsg{
+    position: absolute;
+    top: 54px;
+    left: 50%;
+    margin-left:-150px;
+}
+@media (max-width:767px){
+.arrow-steps .step{
+    min-width: 70px;
+    }    
+}

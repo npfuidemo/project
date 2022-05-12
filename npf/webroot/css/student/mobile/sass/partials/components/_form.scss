@@ -1,0 +1,129 @@
+.form-group{
+	label{
+		font-weight: 500;
+		font-size: 12px;
+		font-family: $font-stack-semibold;
+		margin-bottom:0;
+		line-height: 100%;
+	}
+}
+
+/*select.form-control{
+	opacity: 0;
+	visibility: hidden;
+}*/
+
+.field-select:before {
+    content: "\f107";
+    color: #999;
+    font-family: FontAwesome;
+    position: absolute;
+    bottom: 3px;
+    right: 8px;
+    font-size: 18px;
+}
+
+/*** Custome File ***/
+.form-file-custom{
+	position:relative;
+	input[type="file"]{
+		position: absolute;
+		top:0;
+		font-size:20px;
+		left:0;
+		opacity:0;
+		cursur:pointer;
+	}
+	.fileName{
+		font-size:12px;
+		color:#333;
+		margin-left:5px;
+	}
+}
+.hideShowOptBypass{position:relative;}
+.otpunverified, 
+.otpverified{
+	position: absolute;
+    top:28px;
+    right:10px;
+    font-size:12px;
+} 
+.otpunverified{color:#fe3c38;display:none;}
+.otpverified{color:green;display:none;} 
+.otpverifylink{
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	font-size: 12px;
+	z-index: 11;
+	a{
+		display: inline-block;
+		background-color:$brand-color;
+		color: #fff;
+		padding: 0 8px;
+		font-size: 10px;
+		line-height: 21px;
+		border-radius: 2px;
+		top: -1px;
+		position: relative;
+	}
+} 
+.verifytxt{font-size:12px;color:#666;}
+.otpresendlink, .otptimer{
+    font-size: 12px;
+    margin: 0 5px;
+	font-family:$font-stack-semibold;
+}
+
+.has-error .help-block, .has-error label {
+    margin:0;
+    font-size: 12px;
+	color:#f00 !important;
+}
+.has-error .form-control, .has-error .SumoSelect > .CaptionCont{border-color:#f00 !important}
+.prof-form .row .col-md-4:nth-child(4n+4){clear:both;}
+
+
+.floatBtn-box{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 16px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.14), 0 8px 16px rgba(0, 0, 0, 0.28);
+	z-index: 11;
+	width: 100%;
+	.floatBtn{
+		padding: 10px;
+		color: #fff;
+		text-align: center;
+		display:block;
+	}
+	.editProfile{
+		background-color: $brand-color;	
+	}
+	.float-cancel{
+		background-color: #eee;
+		width: 50%;
+		border: none;
+		display: inline-block;
+		color: #111;
+	}
+	.float-save{
+		background-color:$brand-color;
+		border: none;
+		width: 50%;
+		display: inline-block;
+	}
+}
+
+.showMObileVerified, .showEmailVerified {
+	color:#75b740;
+	margin-top:-30px;
+	position:relative;
+	z-index:111;
+	right:10px;
+}
+
+.withLabel .otpverifylink{
+	top:30px;
+}

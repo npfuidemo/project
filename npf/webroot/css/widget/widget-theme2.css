@@ -1,0 +1,20 @@
+/******* Responsive Layout ************/
+@media(min-width:960px){
+	.form-custom{margin-bottom:20px;}	
+	.form-custom  > .form-group, 
+	.form-custom  > .captcha,
+	.merge_field_div, 
+	.field-date{
+		width: 23%;
+		margin-bottom:0;
+	}	
+}
+
+@media(min-width:768px) and (max-width:959px){
+	.form-custom  > .form-group, 
+	.form-custom  > .captcha,
+	.merge_field_div, 
+	.field-date{
+		width: 31%;
+	}	
+}

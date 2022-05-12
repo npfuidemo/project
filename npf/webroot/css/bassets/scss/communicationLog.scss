@@ -1,0 +1,115 @@
+$sent: #fd79a8;
+$delivered: #fdcb6e;
+$open: #2ecc71;
+$click: #6c5ce7;
+$unsubscribe: #636e72;
+$failures: #d63031;
+$consumed: #2c3e50;
+
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/flex',
+  'components/leaDistributions',
+  'components/offCanvasModalheader';
+
+// Page Specific css
+.btn-warning-btm{
+	border-bottom:1px solid rgb(243, 156, 18);
+	padding:0 0 3px;
+	border-radius:0;
+	text-transform:capitalize;
+	color:rgb(243, 156, 18);
+	&:hover, &:focus{
+		color:rgba(243, 156, 18, 0.8);
+	}
+}
+.btn-warning-line{
+	border-color: rgb(243, 156, 18);
+    color:rgb(243, 156, 18);
+    background-color: #fff;
+	font-weight:500;
+	text-transform:capitalize;
+	&:hover, &:focus{
+		color:rgba(243, 156, 18, 0.8);
+		border-color: rgba(243, 156, 18, 0.8);
+	}
+}
+.btn-whatsapp-btm{
+	border-bottom:1px solid #25d366;
+	padding:0 0 3px;
+	border-radius:0;
+	text-transform:capitalize;
+	color:#25d366;
+	&:hover, &:focus{
+		color:rgba(37, 211, 102, 0.8);
+		text-decoration:none;
+	}
+}
+.leaDistributions{
+	.lditem{
+		&.sent_email, &.sent_sms, &.sent_whatsapp{
+			border-bottom-color: $sent
+		}
+		&.delivered_email, &.delivered_sms, &.delivered_whatsapp{
+			border-bottom-color:$delivered
+		}
+		&.unique_open_email, &.unique_open_sms, &.read_whatsapp{
+			border-bottom-color:$open
+		}
+		&.unique_click_email, &.Clicked_sms, &.clicked_whatsapp{
+			border-bottom-color:$click
+		}
+		&.unsubscribe_email, &.unsubscribe_email{
+			border-bottom-color:$unsubscribe
+		}
+		&.failures_email, &.failures_sms, &.failed_whatsapp{
+			border-bottom-color:$failures
+		}
+		&.consumed_sms, &.replied_whatsapp{
+			border-bottom-color:$consumed
+		}
+		&.bounced_email, &.bounced_sms, &.abuse_sms{
+			border-bottom-color: #9467bd;
+		}
+		&.dropped_email, &.dropped_sms, &.invalidsubscriber_sms, &.unsubscribe_whatsapp{
+			border-bottom-color: #17becf;
+		}
+		&.blacklist_email, &.blacklist_email, &.absentsubscriber_sms{
+			border-bottom-color: #8c564b;
+		}
+		&.msginboxfull_sms{
+			border-bottom-color: #8c564b;
+		}
+	}
+}
+
+.StatisticsBox{display:inline-block;width:100%;}
+.StatisticsInnBox{display:flex;width:100%;}
+.StatisticsFlax{min-height:100px;border-right:1px solid #ddd;flex-direction:column;justify-content:center;max-width:50%;min-width:200px;text-align:center;}
+.StatisticsFlax:last-child{border-right:none;}
+.pricing-table-plan-name{font-size:13px;margin-top:0;margin-bottom:5px;}
+h2.pricing-table-plan-price{margin-bottom:5px;margin-top:0;
+line-height:28px;font-size:26px;text-align:left;
+color:#f39c12;border:none;text-align:center;}
+#smsBox .pricing-table-plan-price{color:#31b0d5;}
+.pricing-table-plan-features{text-align:left;width:100%;}
+.Statisticshead{color:#666;padding:0;margin-bottom:15px;display:inline-block;width:100%;border-bottom:1px solid #ddd;font-weight:bold;font-size: 18px;}
+.Statisticshead p{font-size:16px;color:blue;line-height:26px;color:#f39c12;}
+.Statisticshead p span{font-weight:normal;font-size:14px;}
+#smsBox .Statisticshead p{color:#31b0d5;}
+.pricing-table-features-list{padding:0;list-style:none;line-height:19px;}
+.pricing-table-features-list .glyphicon { margin-top:-3px;}
+.Statisticsmsg{font-size:13px;margin:10px 0;}
+.SumoSelect.sumo_communication_status>.optWrapper>.options{max-height:200px;}
+.topSearch .chosen-container-single .chosen-single{border-color: #e5e5e5 !important;}
+.tableNew th.fixColLeft+th.fixColLeft{
+	border-right:0;
+}

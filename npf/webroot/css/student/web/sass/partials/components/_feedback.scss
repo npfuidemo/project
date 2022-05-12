@@ -1,0 +1,20 @@
+.provide-feedback{
+	background:url(../../images/feedback-bg.png) #ddd;
+	padding:10px;
+	margin: 20px 0;
+	text-align:center;
+	font-size:17px;
+	.provideFeedback{
+		background-color: #fcb934;
+		display: inline-block;
+		padding: 2px 15px;
+		border-radius: 20px;
+		margin: 0 10px;
+		font-size: 14px;
+		color: #111;
+		font-family:$font-stack-semibold;
+		&:hover{
+			background-color: rgba(252, 185, 52, 0.8);
+		}
+	}
+}

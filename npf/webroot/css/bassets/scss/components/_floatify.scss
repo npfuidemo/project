@@ -1,0 +1,79 @@
+/*!
+ * Floatify - A light-weight floating form label plugin for jQuery
+ *
+ * Copyright 2018, Mehdi Dehghani
+ *
+ * @author   Mehdi Dehghani (http://www.github.com/dehghani-mehdi)
+ * @license  Licensed under MIT (https://github.com/dehghani-mehdi/floatify/blob/master/LICENSE)
+ *
+ */
+.float_addedd_js{
+	display:none;
+}
+
+.floatify {
+    position: relative;
+
+    .floatify__label {
+        cursor: text;
+        user-select: none;
+        position: absolute;
+        left: 6px;
+        top: 10px;
+        opacity: 0;
+        font-size: .8em;
+        visibility: hidden;
+        transition: opacity .2s;
+        color: #004465;
+        font-weight: normal;
+    }
+
+    .floatify__input {
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        padding: 10px;
+        width: 100%;
+    }
+
+	input[type="text"]{
+		height:36px;
+	}
+
+    &.floatify__active {
+        .floatify__label {
+            opacity: 1;
+            visibility: visible;
+            top: -12px;
+            background-color: #fff;
+            padding: 2px 4px;
+			z-index:11;
+        }
+		.float_addedd_js{
+			display:block;
+		}
+
+        .floatify__input {
+            padding:10px;
+			&:focus{
+				border-color:#5897fb !important;
+			}
+        }
+    }
+
+    &.floatify__right {
+        .floatify__label {
+            left: auto;
+            right: 10px;
+        }
+    }
+}
+
+.SumoSelect{
+	.floatify__label{
+		display:none !important;
+	}
+}
+
+.merge_field_div .floatify .form-control.floatify__input{
+	padding-left:50px;
+}

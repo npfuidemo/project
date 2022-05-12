@@ -1,0 +1,20 @@
+.search-field {
+    position:relative;
+	input[readonly="readonly"]{
+		cursor:not-allowed;
+	}
+	.glyphicon-search {
+		position: absolute;
+		right:10px;
+		top: 10px;
+		color: #aaa;
+		cursor: default;
+		font-size: 12px;
+	}
+	
+	.enabled{
+		+ .glyphicon-search{
+			color:#999;
+		}
+	}
+}

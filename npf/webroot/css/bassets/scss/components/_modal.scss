@@ -1,0 +1,14 @@
+.modal{
+	.modal-content{
+		border-radius:0;
+	}
+    .modal-header {
+		background-color:#004465;
+		padding:10px 15px;
+		border-bottom: none;
+		.modal-title{
+			font-size:20px;
+			color:#fff;
+		}
+    }
+}

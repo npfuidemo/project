@@ -1,0 +1,90 @@
+.tokenModal,div[class*="cke_editor_editor_"],.cke_editor_confirm_msz_dialog{
+     
+    .cke_dialog_contents_body{
+        padding:5px 10px;
+    }
+    .chosen-container {
+        .chosen-drop{
+            position: relative;
+            box-shadow:none;
+            display:block;
+            background-color: #fafafa;
+            padding:5px;
+
+            .chosen-search,.chosen-results{
+                padding:0;
+                margin-bottom:3px;
+            }
+
+            .chosen-results{
+                margin-bottom:10px;
+                li{
+                    &.result-selected{
+                        background-color: rgba(0,68,101,.1);
+                        color: #004465;
+                    }
+                    &:focus,&:hover,&:visited{
+                        background-color: rgba(0,68,101,.1);
+                        color: #004465;
+                    }
+                }
+                &:first-child{
+                    margin-top:0;
+                }
+            }
+        }
+        .chosen-single{
+            span{
+                line-height:30px;
+            }
+            div{display:none;
+                b{
+                    text-align: center;
+                    &:before{
+                        position:relative;
+                        top:7px;
+                    }
+                }
+            }
+        }
+        .chosen-results{
+            li{
+                &.group-result{
+                    background-color: #fafafa;
+                    border-left: 2px solid $base-color;
+                }
+            }
+        }
+        .chosen-search{
+            &:before{
+                color:$base-color
+            }
+        }
+    }
+
+    .cke_dialog_ui_input_select{
+        display:block;
+    }
+
+    &.cke_reset_all *{
+        background-color: #fff;
+        box-sizing:border-box;
+        cursor: pointer;
+       
+    }
+    .cke_dialog_footer *, .cke_dialog_close_button{
+        background-color:transparent;
+    }
+    .chosen-results *{
+        font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    .chosen-single{
+        font:500 13px/30px "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+        padding:0 4px;
+    }
+
+    a.cke_dialog_ui_button_ok{
+        background: #4b7bdd !important;
+        border: 1px solid #4b7bdd;
+    }
+}

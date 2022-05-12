@@ -1,0 +1,198 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Application Manager.
+// -----------------------------------------------------------------------------
+
+@include media(">tablet") {
+	.nav-pills.customTabs > li > .viewCusttab {
+		padding: 5px 14px;
+	}
+}
+
+.alert-box{
+	display: inline-block;
+	padding:10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	&.alert-dismissible{
+		padding-right:35px;
+	}
+	.close-alert{
+		background-color: transparent;
+		border: none;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 14px;
+		display: inline-block;
+		position: relative;
+		color: #f00;
+		top: 1px;
+	}
+}
+
+.ellipsis-left .fa {
+    color: #111;
+    font-size: 18px;
+}
+
+.fixColLeft+.fixColLeft{border-right:none;}
+.fixColLeft+.fixColLeft+.fixColLeft{
+    border-right: 1px solid #eee;
+}
+th.fixColLeft{
+    border-right: 0!important;
+}
+
+.input_file{
+	position: absolute;
+	top: 0;
+	z-index: 11;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 26px;
+	opacity: 0;
+}
+.doc-view{
+	min-width: 40px;
+	padding: 9px 0 0;
+    float: left;
+}
+.doc-verification{
+	display: inline-block;
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.btn-doc{
+    color: #1f77b4;
+	vertical-align:middle;
+	&:hover{
+		text-decoration:none;
+	}
+}
+
+.font18{
+	font-size:18px !important;
+}
+
+.downloadas{
+	.items-show{line-height:10px;}
+}
+
+
+.column-icon{
+    color: #000;
+    margin-right: 3px;
+    background: #f5f2f2;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 10px;
+    padding: 5px;
+	vertical-align: middle;
+    text-align: center;
+    display:none;
+
+
+    &:before {
+        color: #666;
+        font-size: 13px;
+    }
+	&:hover{
+		background:rgba(255,255,255,1) ;
+		cursor: pointer;
+	}
+}
+
+.filter-search{
+	.floatify__label{
+	display:none;
+	}
+	.floatify__input{
+		padding: 0 8px!important;;
+	}
+}
+
+.btn_icon:hover::after{top:-8px;}
+
+
+.nav-pills>li.active>.viewCusttab, .nav-pills>li.active>.viewCusttab:hover,.nav-pills>li.active>.viewCusttab:focus{
+	background:#4b7bdd!important;
+	border-color:#4b7bdd!important;
+}
+@include media(">tablet") {
+	.text-right-d{
+		text-align:right;
+	}
+}
+
+
+#addQuickLeadForm{
+	height:calc(100vh - 110px);
+	overflow-y:auto;
+	overflow-x:hidden;
+	padding-right:5px;
+}
+
+.downloadas{
+	.text{
+		display:inline-block;
+		font-size:14px;
+		font-weight:300;
+	}
+	.styleddropdown{
+		display:inline-block;
+		position: relative;
+		margin:0 5px;
+		.chosen-container{
+			.chosen-single{
+				border:0;
+				outline:0;
+			}
+		}
+		.chosen-container-single{
+			.chosen-single {
+				padding:0;
+					span{
+						margin-right:0px;
+						font-weight:500;
+						font-size:14px;
+						line-height:24px;}
+					div{
+						display:none;
+					}
+			}
+			.chosen-drop{
+				min-width:125px;
+			}
+		}
+	&:after{content:''; height:2px; background:#4b7bdd; width:100%; position:absolute; bottom:4px; left:0;}
+	}
+}
+
+.downloadmodal{
+	.sel_col{
+		margin-top:5px;
+	}
+}
+
+@media (min-width: 768px){
+	.downloadmodal .equalheight .well {
+		height: calc(100vh - 155px) !important;
+		min-height: auto !important;
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 767px){
+	.topHead .filterAdvanceBtm{
+		float:left!important;
+		margin:0;
+	}
+}
+
+#document-details .modal-body {
+	&.full-scroll{
+		overflow: auto !important;
+	}
+}

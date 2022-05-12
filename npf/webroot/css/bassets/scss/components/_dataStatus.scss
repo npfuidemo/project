@@ -1,0 +1,14 @@
+.dataStatus{
+    position:absolute;
+    left:0;
+    height:80%;
+    border-width:3px;
+    top:10%;
+    border-style:solid;
+	&.dataEnable{
+		border-color: transparent transparent transparent #75b740;
+	}
+	&.dataDisable{
+		border-color: transparent transparent transparent #ff0000;
+	}
+}

@@ -1,0 +1,61 @@
+.modal{
+    .modal-content {
+    @include border-radius($two*5);
+    overflow:hidden;
+        .modal-header {
+            padding:$two*5 $two*7+1px ;
+            background-color:$white-color;
+            overflow: hidden;
+            color:$black-color;
+
+            .modal-title{
+                color:$black-color;
+            }
+
+        }
+        .btn {
+            min-width: 80px;
+            @include border-radius($two*2+1);
+        }
+
+        .btn-npf-alt,.btn-default {
+            background:lighten($black-color,90%);
+            border-color:lighten($black-color,90%);
+        
+            &:hover{
+                background:lighten($black-color,90%);
+                border-color:lighten($black-color,90%);
+            }
+        }
+        
+        .btn-npf,.applyBtn {
+            background-color:$base-color;
+            border-color:$base-color;
+        
+            &:hover{
+                background-color:$base-color;
+                border-color:$base-color;
+            }
+        }
+        
+        .close,.npf-close{
+            color:$black-color!important;
+        }
+    }
+
+    &.offCanvasModal {
+        .modal-content {
+            border-radius: 0px;
+            .modal-header {
+                border-color: $base-color;
+                .modal-title {
+                    color:$black-color !important;
+                }
+                .close {
+                    color:$black-color !important;
+                    font-size:$two*6;
+                }
+            }
+        }
+    }
+}

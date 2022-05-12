@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+  
+// 2. Components
+@import
+  'components/rowSpace',
+  'components/fieldSize',
+  'components/sync',
+  'components/dateRangeCompare/dateRangeCompare',
+  'components/gridly',
+  'components/tableNew',
+  'components/multicolortable',
+  'components/applicationFunnel',
+  'components/dashlet',
+  'components/modal',
+  'components/tabs',
+  'components/offcanvasModal',
+  'components/verticleScroll',
+  'components/graphTabs',
+  'components/labelviewInside',
+  'components/loader',
+  'components/bootstrap-tour';
+  
+// 3. Pages
+@import
+  'pages/gaReport',
+  'pages/reportadminDashboard';

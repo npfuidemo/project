@@ -1,0 +1,38 @@
+.offCanvasModal {
+  .modal-header{
+      background:$white-color!important;
+      border-color:$base-color;
+
+    .modal-title{
+      color:$black-color!important;
+    }
+    .close{
+        color:$black-color!important; 
+        font-size:14px; 
+        margin-top:4px;
+    }
+  }
+
+
+  .modal-content{
+      border-radius:0px; 
+      overflow: hidden;
+  
+    .btn{
+        min-width:80px;
+    }
+    .btn-npf-alt{
+        background:$grey-color;
+    }
+  }
+  .head{
+    color:$black-color;
+    font-size:$two*7;
+    .highlight {
+      border-bottom:2px solid $base-color;
+      margin-bottom:5px;
+      display:inline-flex;
+      margin-right:3px;
+    }
+  }
+}

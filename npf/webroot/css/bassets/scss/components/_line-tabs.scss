@@ -1,0 +1,141 @@
+.linetab{
+	border-radius:0;
+	border:0; 
+	border-bottom:1px solid #f3f3f3;
+	 
+	li{
+		background:none; 
+		margin:0 15px;
+			a{
+			background:none;
+			position: relative; 
+			border:0; 
+			padding:0 0 5px 0; 
+			color:lighten($black-color,70%); 
+			font-size:15px; 
+			font-weight:400; 
+			min-height:$two*15+1;
+			text-transform:capitalize;
+
+				.btn{
+					font-size:100%; 
+					padding:0; 
+					position: relative;
+				}
+
+				label{
+					color:lighten($black-color,70%); 	
+				}
+
+				.badge{
+					background:lighten($black-color, 80%);
+				}
+		 
+			&:hover,&:focus{
+				background:none; 
+				border:0;
+				color:lighten($black-color,20%);
+			}
+
+			&.mark-all-notification-read {
+				color: #4b7bdd;
+				font-size: 11px;
+				line-height: 24px;
+
+				&:hover{color:darken($base-color, 8%);}
+			}
+			
+			}
+
+	&.active {
+		a{
+			color:lighten($black-color,10%); 
+			border:0;
+			 
+			&:after{
+				height:3px; 
+				background:$base-color; 
+				position:absolute; 
+				bottom:-2px; 
+				left:0; 
+				width:100%; 
+				content:'';
+			}
+
+			&:hover,&:focus{
+				color:lighten($black-color,10%);
+				border:0;
+				 
+			}
+			label{
+				color:lighten($black-color,10%); 	
+			}
+			.badge{
+				background:lighten($base-color, 0%);
+			}
+		}
+	}
+
+	&.disabled {
+		a{
+		pointer-events:none; 
+		color:$grey-color;
+
+			&.disabled:hover{
+				cursor:not-allowed;
+			}
+		}
+	}
+ 	}
+}
+
+ 
+ .tab-content{
+	.nav-tabs{
+		 border:0; 
+		 background:rgba(0,0,0,.01); 
+		 margin:-1px -15px 0 -15px; 
+		 border:1px solid rgba(0,0,0,0.05); 
+		 border-left:0; border-right:0; 
+		 padding:10px 15px;
+
+		li{
+		border:0; 
+		margin-right:15px;
+
+			a{
+			border-radius:20px; 
+			font-size:13px; 
+			border:1px solid $white-color; 
+			background:$white-color; 
+			color:$black-color; 
+			padding:5px 15px;
+			}
+
+		&.active {
+			a{
+			background:$base-color; 
+			color:$white-color; 
+			border:0
+			}
+		}
+	  }
+	}
+}
+
+
+body.reports_notificationlist{
+   background:#f6f8fe;
+}
+
+@media (max-width:767px){
+	.linetab{
+		overflow-y: hidden;
+		overflow-x: scroll;
+		white-space:nowrap;
+		li{
+			float:none!important;
+			display:inline-block!important;
+		}
+	}
+}

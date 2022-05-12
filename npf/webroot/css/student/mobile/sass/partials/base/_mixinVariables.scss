@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@mixin box-sizing($boxsizing){
+    -webkit-box-sizing:$boxsizing;
+    -moz-box-sizing:$boxsizing;
+    -ms-box-sizing:$boxsizing;
+    -o-box-sizing:$boxsizing;
+    box-sizing:$boxsizing;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -ms-transition: $transition;
+      -moz-transition: $transition;
+        -o-transition: $transition;
+		   transition: $transition;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+	  -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+	  -o-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin background-size-cover($cover) {
+  -webkit-background-size: $cover;
+	 -moz-background-size: $cover;
+	 -ms-background-size: $cover;
+       -o-background-size: $cover;
+          background-size: $cover;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+	 -moz-transform: $transform;
+	  -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+@mixin backface-visibility($backfacevisibility) {
+  -webkit-backface-visibility: $backfacevisibility;
+	 -moz-backface-visibility: $backfacevisibility;
+	 -ms-backface-visibility: $backfacevisibility;
+       -o-backface-visibility: $backfacevisibility;
+          backface-visibility: $backfacevisibility;
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $error-color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+  }
+}

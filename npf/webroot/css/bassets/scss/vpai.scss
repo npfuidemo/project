@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+// 2. Components
+@import
+  'components/vpai/btn',
+  'components/vpai/color',
+  'components/vpai/helper',
+  'components/vpai/sidebar',
+  'components/vpai/content',
+  'components/vpai/drag',
+  'components/vpai/variable',
+  'components/vpai/_auto_assignment',
+  'components/vpai/_panel-assignment',
+  'components/vpai/_creat_evaluator',
+  'components/vpai/_fonts',
+  'components/vpai/_fakeniaa',
+  'components/vpai/_line-tabs',
+  'components/_newTableStyle',
+  'components/vpai/responsive',
+  'components/vpai/rating-scale',
+  'components/vpai/fixed-scrolling-field';
+
+
+  .equalheight.row>[class*='col-']>.well .help_video>a{
+    font-size: 18px;
+  }

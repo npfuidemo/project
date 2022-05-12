@@ -1,0 +1,35 @@
+.notifY-alert{
+    position:fixed;
+    width :100%;
+    min-width:15rem;
+    z-index: 10000;
+    top:0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    .notify-content{
+        font-size: 1.15rem;
+        border-radius: 0 0 1rem 1rem;
+        padding: 0.5rem 2rem;
+        box-shadow:0 .5rem 1rem rgba(0, 0, 0, .15);
+        font-weight: 600;
+    }
+    &.show{
+        display:flex;
+    }
+    .alert-icon{
+        display: inline-block;
+        float: none;
+        margin-right: 0.2rem;
+        vertical-align: top;
+        .material-icons,.fa{
+            font-size: 18px;
+        }
+    }
+    &.dataHidden{
+        visibility:hidden;
+        opacity:0;
+        top:-100%;
+    }
+}

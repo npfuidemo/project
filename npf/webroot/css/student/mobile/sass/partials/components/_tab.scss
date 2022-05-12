@@ -1,0 +1,35 @@
+.tabmenu{
+	margin:0 0 20px;
+	padding-left:0;
+	border-bottom: 1px solid #ddd;
+	>li{
+		display:inline-block;
+		margin-right:10px;
+		font-size:14px;
+		background-color:transparent;
+		border:none;
+		padding:0;
+		&.active{
+			background-color:#fff;
+			box-shadow:0 0 0 #fff;
+			>a{
+				color:#75b740;
+				border-bottom-color:#75b740;
+				margin-bottom:-1px;
+			}
+		}
+		>a{
+			color:$disable-color;
+			padding:5px 0;
+			display:block;
+			border-bottom:2px solid #fff;
+		}
+		&:hover{
+			background-color:#fff !important;
+			color:$link-color;
+		}
+		&:last-child{
+			margin-right:0;
+		}
+	}
+}

@@ -1,0 +1,69 @@
+.d-inline-block {
+    display: inline-block;
+}
+#templatePreviewModal{
+    .modal-body{
+        height: calc(100% - 60px) !important;
+    }
+}
+.iframeloader {
+    height: 100%;
+    border: none;
+
+    iframe {
+        border: 1px solid #ccc;
+        height: calc(100% - 50px) !important;
+    }
+}
+
+.template-preview-dropdown {
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    margin: 0;
+    top: 7px;
+    min-width: 31px;
+    min-height: 31px;
+
+    button.btn {
+        min-width: 75px;
+    }
+
+    .email-btn {
+        position: absolute;
+        right: 0;
+        background: none;
+        border: none;
+        padding: 0;
+
+        span {
+            border-radius: 100%;
+            font-size: 16px;
+            display: flex;
+            width: 31px;
+            height: 31px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &.open,
+    &:hover {
+        .email-btn span {
+            background: #ededed;
+            border-radius: 100%;
+        }
+    }
+
+    .dropdown-menu {
+        right: 0;
+        left: auto;
+        min-width: 470px;
+        padding: 10px;
+        top: 33px;
+
+        input {
+            max-height: 32px;
+        }
+    }
+}

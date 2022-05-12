@@ -1,0 +1,59 @@
+.toggle__checkbox{
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+	label{
+		cursor: pointer;
+		text-indent: -9999px;
+		width: 28px;
+		height: 16px;
+		background: #ccc;
+		top: 5px;
+		display: inline-block;
+		border-radius: 70px;
+		position: relative;
+		overflow: hidden;
+		text-align: left;
+		margin: 0;
+		&:after {
+			content:'';
+			position: absolute;
+			top:2px;
+			left:2px;
+			width:12px;
+			height:12px;
+			background:#fff;
+			border-radius:90px;
+			transition:.3s;
+		}
+	}
+	input[type=checkbox], input[type=radio]{
+		height:0;
+		width:0;
+		visibility:hidden;
+	}
+
+	input:checked, input.checked {
+		+ label{
+			background:#4b7bdd;
+			&:after{
+				left:calc(100% - 2px);
+				transform:translateX(-100%);
+			}
+		}
+	}
+	input[type="hidden"] + label{
+		opacity:0.6;
+	}
+	&.small{
+		line-height: 28px;
+		label{
+			width:30px;
+			height:15px;
+			&:after {
+				width:12px;
+				height:12px;
+			}
+		}
+	}
+}

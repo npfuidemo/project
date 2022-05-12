@@ -1,0 +1,214 @@
+.prof-form .form-group{margin-bottom:20px;}
+.form-group{
+	> label{
+		font-weight: 500;
+		font-size: 14px;
+		font-family: $font-stack-semibold;
+		margin-bottom:0;
+		line-height: 100%;
+		display: inline-block;
+		width:25%;
+		text-align: right;
+		vertical-align: top;
+		margin-top:13px;
+	}
+	.merge_field_div{
+		> label{
+			margin-top:13px;
+		}
+	}
+	.SumoSelect select[multiple="multiple"]{
+		visibility: hidden;
+	}
+	.merge_field_div{
+		> label{
+			font-weight: 500;
+			font-size: 14px;
+			font-family: $font-stack-semibold;
+			margin-bottom:0;
+			line-height: 100%;
+			display: inline-block;
+			width:25%;
+			text-align: right;
+			vertical-align: middle;
+		}
+	}
+	.required{
+		color:#f00;
+	}
+}
+
+/*** Custome File ***/
+.form-file-custom{
+	position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: auto;
+	vertical-align:middle;
+	margin-right:10px;
+	input[type="file"]{
+		position: absolute;
+		top:0;
+		font-size:20px;
+		left:0;
+		opacity: 0;
+		cursor:pointer;
+		height:100%;
+	}
+	.fileName{
+		font-size:12px;
+		color:#333;
+		margin-right: 5px;
+	}
+}
+
+.otpunverified, .otpverified{
+	position: absolute;
+    top:6px;
+    right:10px;
+    font-size:12px;
+} 
+.otpunverified{color:#fe3c38;display:none;}
+.otpverified{color:green;display:none;} 
+.otpverifylink{
+	position: absolute;
+	top: 6px;
+	right: 8px;
+	font-size: 12px;
+	z-index: 11;
+	a{
+		display: inline-block;
+		background-color:$brand-color;
+		color: #fff;
+		padding: 0 8px;
+		font-size: 10px;
+		line-height: 21px;
+		border-radius: 2px;
+		top: 1px;
+		position: relative;
+	}
+} 
+.verifytxt{font-size:12px;color:#666;}
+.otpresendlink, .otptimer{
+    font-size: 12px;
+    margin: 0 5px;
+	font-family:$font-stack-semibold;
+}
+
+/*.prof-form .help-block{
+	height:20px;
+	display:inline-block;
+}*/
+.has-error .control-label{
+	color:#111;
+}
+
+.has-error .help-block{
+    margin:0;
+    font-size: 12px;
+	color:#f00 !important;
+}
+.has-error .form-control, .has-error .SumoSelect > .CaptionCont{border-color:#f00 !important;box-shadow:none;}
+.prof-form .row .col-md-4:nth-child(3n+4){clear:both;}
+.has-error .form-control:focus{box-shadow:none;}
+
+.cont-rght-side-fixed {
+	.qms-form{
+		.chosen-container{
+			width:100% !important;
+			&.chosen-container-single .chosen-single{
+				padding: 6px 10px;
+				border-color:#ccc;
+				border-radius:5px;
+				line-height:24px;
+			}
+		}
+		.input-browse-group{
+			border:none;
+			padding:0;
+		}
+		small{
+			color:#666;
+		}
+	} 
+}
+.field-container{
+	display: inline-block;
+    width:60%;
+    margin-left: 2.5%;
+	vertical-align: top;
+	position:relative;
+	.form-control, .input-group-btn >.btn, .SumoSelect>.CaptionCont{
+		height:40px;
+	}
+	.SelectBox{ padding:7px 12px;}
+	.SumoSelect.open .search-txt{padding:7px 10px;}
+}
+/*.form-control{
+	border:none;
+	border-bottom:1px solid #ddd;
+	box-shadow:none;
+	border-radius:0;
+    padding: 0;
+    height: auto;
+}
+.help-block{margin:0 !important;}
+.SumoSelect>.CaptionCont{
+	border:none !important;
+	border-bottom:1px solid #ddd !important;
+	box-shadow:none !important;
+	border-radius:0 !important;
+	padding: 2px 0 2px;
+}*/
+.help-block{margin:0 !important;}
+.form-control[disabled], 
+.form-control[readonly], 
+fieldset[disabled] .form-control, 
+.SumoSelect.disabled>.CaptionCont{ 
+	background-color:#fff !important;
+	opacity:0.6;
+}
+.SumoSelect.disabled>.CaptionCont>label{opacity:0.2;}
+.SumoSelect.disabled:hover>.CaptionCont{
+	box-shadow: none;
+    border-color:#ccc;
+}
+/*
+.input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group{
+	border:none;
+	border-bottom:1px solid #ddd;    
+	opacity: 1;
+    border-radius: 0;
+    padding: 0px 20px 0 0;
+    background-color: #fff !important;
+    margin-top: -3px;
+}*/
+
+.sumo-select{
+	visibility: hidden;
+}
+
+.max700{
+	max-width:700px;
+    margin:0 auto;
+}
+
+.btn.bs-dropdown-to-select[disabled]{opacity:0.5;}
+/*.SumoSelect>.CaptionCont>label>i{background:none!important;}
+.SumoSelect>.CaptionCont>label>i:after {
+    content: '';
+    border-color: transparent #ccc #ccc transparent;
+    border-style: solid;
+    border-width: 7px;
+    position: absolute;
+    right: -7px;
+    bottom: -8px;
+}
+.SumoSelect.open .search-txt{padding: 2px 0 !important;}*/
+.SumoSelect>.optWrapper>.options li label{font-weight:500;color:#111!important;}
+.SumoSelect.open>.optWrapper{
+	top:40px !important;
+}
+/*.form-control:focus{border-color:transparent;border-bottom-color:#ddd;box-shadow: none}*/
+.SumoSelect>.CaptionCont>span{font-size: 14px;}
+.form-control[disabled] + .fa-lock{display:none;}

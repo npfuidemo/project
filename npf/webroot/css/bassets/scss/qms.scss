@@ -1,0 +1,104 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/expandableSearch',
+  'components/topHeading',
+  'components/rowSpace',
+  'components/fieldSize',
+  'components/filterModal',
+  'components/offcanvasModal',
+  'components/tabs',
+  'components/rmvStylePageSync',
+  'components/flex',
+  'components/leaDistributions';
+  
+  //Page Specific CSS
+	
+	$total:#086bc4;
+	$open:#ed1c24;
+	$inprogress:#f7931e;
+	$closed:#39b54a;
+	$notgiven:#00c0ef;
+	$satisfied:#9d1cb2;
+	$unsatisfied:#dd4b39;
+	.tablemaxContent{
+		max-width: 200px;
+		white-space: normal;
+		min-width: 200px;
+		display: inline-block;
+	}
+	.Name .wrapTextNormal, 
+	.Email .wrapTextNormal{
+		max-width: 150px;
+		white-space: normal;
+		min-width:100px;
+		display:inline-block;
+		word-break: break-all;
+	}
+	.Email .wrapTextNormal{
+		max-width: 200px;
+		min-width:180px;	
+	}
+	.queryTable{
+		tr{
+			font-weight:500;
+			&.readTicket{
+				font-weight:400;
+			}
+		}
+	}
+	.leaDistributions{
+		.lditem{
+			cursor: pointer;
+			&.qTotal{
+				border-color:$total;
+				&.active{
+					background-color:rgba($total, 0.1);
+				}
+			}
+			&.q10{
+				border-color:$open;
+				&.active{
+					background-color:rgba($open, 0.1);
+				}
+			}
+			&.q11{
+				border-color:$inprogress;
+				&.active{
+					background-color:rgba($inprogress, 0.1);
+				}
+			}
+			&.q12{
+				border-color:$closed;
+				&.active{
+					background-color:rgba($closed, 0.1);
+				}
+			}
+			&.qnull{
+				border-color:$notgiven;
+				&.active{
+					background-color:rgba($notgiven, 0.1);
+				}
+			}
+			&.qsatisfied{
+				border-color:$satisfied;
+				&.active{
+					background-color:rgba($satisfied, 0.1);
+				}
+			}
+			&.qunsatisfied{
+				border-color:$unsatisfied;
+				&.active{
+					background-color:rgba($unsatisfied, 0.1);
+				}
+			}
+		}
+	}	

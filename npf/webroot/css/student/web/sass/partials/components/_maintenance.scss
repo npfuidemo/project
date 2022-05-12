@@ -1,0 +1,55 @@
+.blur .main-content.fadeIn,.blur #header{filter: blur(5px); }
+
+
+.maintenance-mode{
+	background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100%;
+	z-index: 999999;
+	
+	.maintenance-message{
+		display:-webkit-box;
+		display:-mox-box;
+		display:-ms-flexbox;
+		display:-webkit-flexbox;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		max-width:700px;
+		padding:15px;
+		margin:0 auto;
+		text-align:center;
+		height: 100%;
+		height: 100vh;
+		> div{
+			background-color:#fff;
+			padding:45px 30px 30px;
+			position: relative;
+			border-bottom: 3px solid #f47f33;
+			min-width: 550px;
+			max-width: 100%;
+			.box_image{
+				background-color: #f47f33;
+				color: #fff;
+				padding: 15px;
+				border-radius: 50%;
+				position: absolute;
+				top: -40px;
+				left: 50%;
+				margin-left: -50px;
+			}
+		}
+		.text-danger{
+			color:#dc3545;
+		}
+		p{
+			margin-top:10px;
+			font-size:16px;
+			line-height:150%;
+		}
+	}
+}

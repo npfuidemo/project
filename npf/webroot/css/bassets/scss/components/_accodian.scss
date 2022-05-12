@@ -1,0 +1,53 @@
+.panel-group{
+    .panel-title{
+        font-size: 15px;
+        .expendIcon[aria-expanded="false"]:before, 
+        .expendIcon[aria-expanded="true"]:before{
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 15px;
+        } 
+        a{
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+			line-height:20px;
+        }  
+    } 
+    .panel{
+        border-radius:0;
+		box-shadow:none;
+		border-color:#eee;
+    } 
+    .panel-default{
+        > .panel-heading {
+            padding: 0;
+            border-radius: 0;
+            color: #212121;
+            background-color: #FAFAFA;
+            border-color:#eee;
+        }
+    }
+}
+
+  
+.panel-custom{
+    border-color: #ddd;
+	.panel-heading{
+		background-color: #ddd;
+		display:inline-block;
+		width:100%;
+		vertical-align: top;
+	}
+	.panel-footer{
+		background-color:#fcfcfc;
+	}
+	table{
+		margin-bottom:0;
+		th{
+			background-color: #ddd;
+		}
+	}
+}
+

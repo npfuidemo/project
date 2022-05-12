@@ -1,0 +1,22 @@
+.modal-backdrop ~ .modal-backdrop
+{
+    z-index : 1051 ;
+}
+.modal-backdrop ~ .modal-backdrop ~ .modal-backdrop
+{
+    z-index : 1052 ;
+}
+
+.mt-4{margin-top:20px;}
+
+#create_evaluatorsModal{
+	.chosen-container-single .chosen-single{border:0; background:none; padding:0;}
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu{margin:0!important; padding:0!important;}
+#allocateToScorecard .well{box-shadow:0 1px 7px 2px rgba(0,0,0,.1);}
+
+@media (min-width:1024px){ 
+#create_evaluatorsModal .modal-dialog.modal-sm{width:800px;}
+#slotAssignmentModal .modal-dialog{width:600px;}
+}

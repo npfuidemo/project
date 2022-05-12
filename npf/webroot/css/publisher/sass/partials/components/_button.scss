@@ -1,0 +1,31 @@
+.btn-publisher{
+	background-color:#e96265;
+	color:#fff;
+	border-radius:0px;
+	padding:8px 20px;
+	min-width:110px;
+	&:hover{
+		background-color:rgba(233, 98, 101, 0.8);
+		color:#fff;
+	}
+	&:focus{
+		color:#fff;
+	}
+}
+
+.btn-publisher-line{
+	background-color:#fff;
+	border:1px solid #e96265;
+	color:#e96265;
+	border-radius:0px;
+	padding:8px 20px;
+	min-width:110px;
+	&:hover{
+		background-color:rgba(233, 98, 101, 0.8);
+		color:#fff;
+	}
+}
+
+.btn-block{
+	margin:0;
+}

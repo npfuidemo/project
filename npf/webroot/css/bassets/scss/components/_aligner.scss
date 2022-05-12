@@ -1,0 +1,21 @@
+.aligner-middle{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+	padding:5rem 0;
+	width:100%;
+	.alignerIcon{
+		font-size:6rem;
+	}
+}
+
+@include media(">tablet") {
+	.aligner-middle{
+		height: 400px;
+		padding:0;
+		.alignerIcon{
+			font-size:8rem;
+		}
+	}
+}

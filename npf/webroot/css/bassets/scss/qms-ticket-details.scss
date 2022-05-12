@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'vendor/include-media';
+
+// 2. Components
+@import
+  'components/fieldSize';
+
+// 3. Pages
+@import
+  'pages/qmsTicketDetails';

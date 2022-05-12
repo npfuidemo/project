@@ -1,0 +1,137 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Studen Quality Index (SQI) page.
+// -----------------------------------------------------------------------------
+.insights{
+	h5{
+		color:#75b740;
+	}
+	ol, ul{
+		list-style-position: inside;
+		margin:0;
+		padding: 0;
+		font-size:12px;
+	}
+	li{
+		margin-bottom:8px;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+	&.min-height{
+		min-height:120px;
+	}
+}
+
+.button-box{
+	margin-bottom:20px;
+	.btn-inflow{
+		border: none;
+		border-bottom:2px solid #fff;
+		margin-right: 15px;
+		padding: 5px 8px;
+		font-size:16px;
+		background:#fff;
+		&.active, &:hover{
+			border-bottom-color:#75b740;
+			color:#75b740;
+		}
+		&.active{
+			font-weight:600;
+		}
+	}
+}
+
+.indigraph_container{
+	.inflow-table{
+		padding:0 30px 40px;
+	}
+	svg{
+		margin:0 auto;
+		display:inherit;
+	}
+    .states path{
+		stroke-width:1px;
+		stroke:#c2c2c2;
+		fill:#f2f2f2;
+		cursor:pointer;
+	}
+    .arcs path{
+		stroke-width:1px;
+		stroke:#3b5998;
+		pointer-events:none;
+		fill:none;
+	}
+    .area:hover{
+		fill:brown;
+	}
+	.map-img-right{
+		display:inline-block;
+		width:100%;
+		position:relative;
+	}
+}
+
+.d3-tip{
+	line-height:1;
+	font:12px/22px $text-font-stack;
+	z-index:999;
+	padding:0px 4px;
+	background: #fff;
+	border: 1px solid #111;
+	color:#111;
+	border-radius: 2px;
+	opacity: 0.001%;
+	top:0;
+	&:after{
+		box-sizing:border-box;
+		display:inline;
+		font-size:10px;
+		width:100%;
+		line-height:1;
+		color:#111;
+		content:"\25BC";
+		position:absolute;
+		text-align:center;
+		opacity:0.001%;
+	}
+	&.n{
+		&:after{
+			margin:-1px 0 0 0;
+			top: 100%;
+			left: 0;
+			opacity: 0.001%;
+		}
+	}
+	a{
+		text-decoration:none;
+		color:#3b5998;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+@include media(">=tablet") {
+	.chart {
+	  min-height: 300px;
+	}
+	.indigraph_container{
+		.map-img-right{
+			width:480px;
+		}
+	}
+}
+
+@include media("<=tablet") {
+	.mob-display {
+	  display:block;
+	  padding:0;
+	  width:100%;
+	}
+	svg{
+		width:100%;
+	}
+}
+
+
+

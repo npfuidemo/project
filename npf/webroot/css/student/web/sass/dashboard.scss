@@ -1,0 +1,140 @@
+@import "partials/base/mixinVariables";
+@import "partials/theme/theme";
+@import "partials/base/base";
+@import "partials/fonts/font";
+@import "partials/layout/layout";
+@import "partials/components/override";
+@import "partials/components/button";
+@import "partials/components/header";
+@import "partials/components/notification";
+@import "partials/components/profile";
+@import "partials/components/timeline";
+@import "partials/components/form";
+@import "partials/components/dropdown";
+@import "partials/components/sidebar";
+@import "partials/components/table";
+@import "partials/components/tab";
+@import "partials/components/filter";
+@import "partials/components/utility";
+@import "partials/components/chat";
+@import "partials/components/footer";
+@import "partials/components/countryCode";
+@import "partials/components/faq";
+@import "partials/components/accodian";
+@import "partials/components/feedback";
+@import "partials/components/passwordview";
+@import "partials/components/callout";
+@import "partials/components/maintenance";
+@import "partials/components/image_gallery";
+@import "partials/components/modal";
+@import "partials/components/offCanvasMOdalheader";
+@import "partials/fonts/font-awesome";
+@import "partials/components/whatsapp-communication-widget";
+@import "partials/components/checkBoxToggle";
+@import "partials/components/notify-alert";
+
+
+.bold_text{
+    font-weight: 600;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+.align-items-baseline {
+    align-items: baseline;
+}
+
+.btn-doc {
+    border: 1px solid #337ab7;
+}
+
+.text-danger{
+    color : #dc3545 !important;
+}
+
+
+.pdall8 {
+    padding: 8px;
+}
+
+.mgr10 {
+    margin-right: 10px;
+}
+
+.mgb-10{
+    margin-bottom: 10px;
+}
+
+.mgr5 {
+    margin-right: 5px;
+}
+
+.maxwidth400 {
+    max-width: 400px;
+}
+
+.help_text.small{
+    font-size: 85%;
+}
+
+.document-row {
+    display: grid;
+    row-gap: 1em;
+    column-gap: 0.5em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+table.doc-ver-table {
+    .col-mid{
+        min-width: 12%;
+        max-width: 12%;
+        width: 12%;
+    }
+    .col1{
+        min-width: 20%;
+        max-width: 20%;
+        width: 20%;
+    }
+    .col2{
+        min-width: 28%;
+        max-width: 28%;
+        width: 28%;
+    }
+    .col3 {
+        min-width: 40%;
+        max-width: 40%;
+        width: 40%;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+}
+
+.single-pay-btn{
+    .dropdown-menu{
+        border: none;
+        &:before{
+            content: '\f0d8';
+            font: normal normal normal 28px/1 FontAwesome;
+            position: absolute;
+            right: 10px;
+            color: #f0f0f0;
+            top: -20px;
+        }
+        >li>a{
+        padding: 10px;
+        font-size: 90%;
+        font-weight :600;
+        }
+    }
+}

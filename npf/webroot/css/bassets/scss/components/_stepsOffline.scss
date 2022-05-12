@@ -1,0 +1,17 @@
+/*** steps design ***/
+#steps {text-align:center;display: inline-block;list-style: none;width: 80%;padding:10px 0 0;position:relative;margin:0;}
+.step{display:inline-block;width:25%;vertical-align: top;position:relative;z-index:1;}
+.step > a{position:relative;z-index:1;color:#333;display:inline-block;text-decoration:none;}
+.step strong{display:block;font-size:13px;}
+.stepIcon{display:inline-block;background-color:#f2f2f2;border-radius:50%;padding:6px 15px;font-size:2em;border:1px solid #999;min-width:60px;
+min-height:60px;margin-bottom:5px;}
+.step.active  .stepIcon{background-color:#a0c348;border-color:#759a16;color:#fff;}
+.step.active a{color:#111;}
+.step.visited{cursor:not-allowed;}
+.step.visited a {color:#ccc;cursor:not-allowed;}
+.step.visited  .stepIcon{ background-color:#fcfcfc;border-color:#f2f2f2;}
+#steps:before, .step.active:before, .step.first:after, .step.last:after{position:absolute;border-top:2px dashed #aaa;content:'';width:100%;}
+#steps:before{top:40px;left:0;}
+.step.active:before{border-top-color:#333;top:30px;left:50%;}
+.step.first:after{border-top:2px solid #fff;width:50%;top:30px;left:0;}
+.step.last:after{border-top:2px solid #fff;top:30px;left:50%;}

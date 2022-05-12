@@ -1,0 +1,44 @@
+.topHead{
+	border-bottom:1px solid #f2f2f2;
+	padding-bottom:10px;
+	.title{
+		display:inline-block;
+		margin:0 0 14px;
+	}
+    .filterAdvanceBtm{
+		position: relative;
+		top: 0px;
+	}
+}
+.topHeadFields{
+	display:inline-block;
+	width:100%;
+	.thField{
+		display:inline-block;
+		width:auto;
+		vertical-align: middle;
+		position:relative;
+	}
+}
+
+@include media(">tablet") {
+	.topHead{
+		padding-bottom:0;
+		.title{
+			margin-top:8px;
+		}
+		.topHeadFields{
+			margin-top:4px;
+		}
+	}
+	.topHeadFields{
+		.thField{
+			margin: 0 5px;
+		}
+	}
+}
+
+@include media("<tablet") {
+	.filter_btn{float:left}
+	.import_module{float:right}
+}

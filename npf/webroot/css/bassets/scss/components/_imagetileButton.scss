@@ -1,0 +1,237 @@
+.connector-list{
+    @include border-radius($two*3);
+    min-height:$two*112;
+    position: relative;
+    border:1px solid rgba($grey-color,.2);
+    margin-top:$two*15;
+    background:$white-color;
+    padding-top:$two*15;
+
+    .connectors-img{
+        display:$bl;
+        min-height:$two*50;
+        max-height:$two*50;
+        overflow:hidden;
+        margin:$z auto;
+        text-align:$center;
+        img{
+            display:block;
+            margin:$z auto;
+            max-width: calc(100% - 10px);
+        }
+    }
+
+    .connector-disabled{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        padding:2.5rem 1.5rem;
+        word-wrap:break-word;
+        background-color: rgba(255, 255, 255, 1);
+        text-align:$center;
+        -webkit-transition: opacity 800ms, visibility 800ms;
+        transition: opacity 800ms, visibility 800ms;
+        z-index: 11; color: #111;
+        font-size: 13px;
+        opacity: 0;visibility: hidden;
+
+        & .lineicon-lock {
+            color: #0074d9;
+        }
+        .innercontent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(100% - 25px);
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .connectors-name{
+        display:block;
+        text-align:center;
+        margin:0 auto;
+        width:calc(100% - 30px);
+        min-height:$two*30;
+        font-size:13px;
+    }
+
+    &:hover{
+        border-color: #ccc;
+        box-shadow: 0 4px 17px 6px rgba(0, 0, 0, .10);
+
+        .connector-disabled{
+            display:block;
+            visibility:visible;
+            opacity:1;
+        }
+    }
+
+    .connector_key,.lblicon{
+        position:absolute;
+        right:$two*5;
+        top:$two*2;
+        color:$verified-color;
+        font-size:$two*10;
+
+        img{height:$two*9; margin-top:-$two*3;}
+
+        .fa{
+            margin:0 0 0 $two*3+1;
+            vertical-align:text-top;
+
+            &.fa-tachometer{
+                color:#f58959  !important;
+                font-size:19px;
+        }
+     }
+    }
+    .lblicon.check-icon{
+        right: 40px; top: 9px;
+    }
+    .lblicon{
+        .ext-plain-btn i.fa{
+            padding: 5px;
+            border-radius: .25rem;
+            &:hover{
+                background: #f3f3f3;
+            }
+        }
+    }
+
+    .managedisable{
+        margin:$two*7+1 auto;
+        clear:both;
+        overflow:hidden;
+        width:calc(100% - 30px)
+    }
+
+    .btn{
+        @include border-radius($two*3 - 1px);
+    }
+
+    .connectbtn{
+        margin:$two*7+1 $z;
+        clear:both;
+        overflow:hidden;
+
+        .btn{min-width:$two*58;}
+    }
+    &.add-connector{
+        padding:0;
+        min-height:252px;
+        position: relative;
+        text-align:center;
+        overflow:hidden;
+        border:1px solid rgba(40, 110, 214,.9);
+        a{
+            position:absolute;
+            top:0;
+            right:0;
+            left:0;
+            bottom:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-weight:500;
+            text-decoration:none;
+            color:#0074d9;
+
+            span{
+                display:flex;
+                align-self:center;
+                line-height:16px;
+                .fa{
+                    margin-right:3px;
+                }
+            }
+        }
+        &:hover a{
+            background:rgba(40, 110, 214,.9);
+            color:#fff;
+        }
+    }
+}
+
+
+.fileBrowseCustom{
+    .form-control {
+        height:30px;
+        padding: 8px 10px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        border-radius:5px 0 0px 5px !important;
+    }
+    .input_file {
+        position: absolute;
+        top: 0;
+        z-index: 11;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 26px;
+        opacity: 0; 
+        cursor: pointer;
+        
+    }
+    .input-group-addon {
+        background-color: #eee;
+        border: 1px solid #f2f2f2;
+}
+
+.zapierconnector{
+    width:calc(100% - 15px);
+    min-height:calc(100vh - 120px);
+    padding-bottom:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#fff;
+    .connector-list {
+        margin-top:0;
+        max-width:82%;
+        padding:15px;
+        min-height:auto;
+       
+    }
+    .connectors-name,.connectbtn{
+        min-height:auto;
+    }
+
+    .input-group{
+        .form-control{
+            border-radius:4px 0 0 4px!important;
+            border-color:#ccc!important;
+            background:#fff;
+            &:focus{
+                border-color:#28a745!important;
+                outline:0;
+            }
+        }
+    }
+
+    #copied{
+        cursor: pointer;
+        background:#4b7bdd;
+        color:#fff;
+        border-color:#4b7bdd;
+        &.active{
+        background:#28a745;
+        color:#fff;
+        border-color:#28a745;
+        }
+    }
+    .zapierCopybox{
+        display:none;
+    }
+    &.zapierEnable{
+        .zapierCopybox{
+            display:block;
+        }
+        .connectors-name,.connectbtn{
+            display:none;
+        }
+    }
+}
+}

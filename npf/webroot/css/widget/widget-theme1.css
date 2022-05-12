@@ -1,0 +1,28 @@
+.form-control, 
+.SumoSelect > .CaptionCont, 
+.bs-dropdown-to-select-group .btn{
+	border:none;
+	border-bottom:1px solid #ddd;
+	box-shadow:0 0 0 #fff;
+	border-radius:0;	
+}
+
+.form-control{padding:5px 0;height:auto;}
+
+.SumoSelect > .CaptionCont{padding:5px 0;}
+.form-control:focus,
+.SumoSelect.open > .CaptionCont, 
+.SumoSelect:focus > .CaptionCont, 
+.SumoSelect:hover > .CaptionCont{
+	box-shadow:0 0 0 #fff;
+	border-color:#ddd;
+}
+.SumoSelect > .CaptionCont > label{margin-bottom:0;}
+.SumoSelect > .CaptionCont > label > i{top:4px;}
+
+.bs-dropdown-to-select-group .btn{padding:5px 8px 6px;margin-top:1px;}
+.country_dial_code  .form-control{padding-left:10px;}
+.has-error .form-control{box-shadow:0 0 0 #fff;}
+.has-error .form-control:focus{box-shadow:0 0 0 #fff;}
+
+.field-select.field-date:before{right:0;}
