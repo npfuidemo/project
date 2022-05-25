@@ -1,48 +1,107 @@
-.gauge {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  transform: rotate(-90deg);
-  &-base {
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 6px);
-    top: 0;
-    left: 0;
-    fill: rgba($primary, .1);
-  }
-  &-arc {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    stroke: rgba($primary, .8);
-    fill: transparent;
-    stroke-linecap: round;
-    stroke-dasharray: 0, 351.858;
-    transition: stroke-dasharray 1s;
-  }
-}
-
 .gauge-headercol {
   position: relative;
   text-align: center;
   display: inline-block;
   line-height: 0;
-  top: 1;
-}
-
-.gauge-percentage {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  line-height: 1;
+
+  .gauge {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+
+    &-base {
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 6px);
+      top: 0;
+      left: 0;
+      fill: rgba($primary, .1);
+    }
+
+    &-arc {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      stroke: rgba($primary, .8);
+      fill: transparent;
+      stroke-linecap: round;
+      stroke-dasharray: 0, 351.858;
+      transition: stroke-dasharray 1s;
+    }
+  }
+
+  .gauge-percentage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1;
+    color: $primary;
+  }
+
+  &[data-color="warning"] {
+    .gauge-base {
+      fill: rgba($warning, .1);
+    }
+
+    .gauge-arc {
+      stroke: rgba($warning, .8);
+    }
+
+    .gauge-percentage {
+      color: $warning;
+    }
+  }
+
+  &[data-color="danger"] {
+    .gauge-base {
+      fill: rgba($danger, .1);
+    }
+
+    .gauge-arc {
+      stroke: rgba($danger, .8);
+    }
+
+    .gauge-percentage {
+      color: $danger;
+    }
+  }
+
+  &[data-color="success"] {
+    .gauge-base {
+      fill: rgba($success, .1);
+    }
+
+    .gauge-arc {
+      stroke: rgba($success, .8);
+    }
+
+    .gauge-percentage {
+      color: $success;
+    }
+  }
+
+  &[data-color="info"] {
+    .gauge-base {
+      fill: rgba($info, .1);
+    }
+
+    .gauge-arc {
+      stroke: rgba($info, .8);
+    }
+
+    .gauge-percentage {
+      color: $info;
+    }
+  }
 }

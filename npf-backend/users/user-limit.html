@@ -451,48 +451,48 @@
         <a href="javascript:void(0)" class="closebtn d-block d-lg-none" onclick="closeNav()">&times;</a>
       </div>
       <div class="mb-3">
-        <div class="bg-white rounded shadow-sm">
+        <div class="bg-white">
+          <!-- SVG -->
+          <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gradient" y1="0" y2="1">
+                <stop stop-color="#EEF85B" offset="0" />
+                <stop stop-color="#09E5C3" offset="1" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+        </div>
+        <div class="bg-white rounded shadow-sm pb-3">
           <div class="row">
             <div class="col-sm-12 col-md-4">
               <h6 class="mt-2 mb-3 font-weight-normal text-center">Total Users</h6>
-              <div class="circle-wrap mb-4">
-                <div class="circle c75">
-                  <div class="mask full">
-                    <div class="fill"></div>
-                  </div>
-                  <div class="mask half">
-                    <div class="fill"></div>
-                  </div>
-                  <div class="inside-circle"> 75% </div>
-                </div>
+              <div class="gauge-headercol" id="gauge-loader" data-total="300" data-used="300">
+                <svg class="gauge" viewBox="0 0 120 120">
+                  <circle class="gauge-base" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                  <circle class="gauge-arc" stroke="url(#gradient)" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                </svg>
+                <div class="gauge-percentage"></div>
               </div>
             </div>
             <div class="col-sm-12 col-md-4">
               <h6 class="mt-2 mb-3 font-weight-normal text-secondary text-center">Standard Users</h6>
-              <div class="circle-wrap mb-4">
-                <div class="circle c55">
-                  <div class="mask full">
-                    <div class="fill bg-danger"></div>
-                  </div>
-                  <div class="mask half">
-                    <div class="fill bg-danger"></div>
-                  </div>
-                  <div class="inside-circle text-danger"> 55% </div>
-                </div>
+              <div class="gauge-headercol" id="gauge-loader" data-total="300" data-used="200" data-color="danger">
+                <svg class="gauge" viewBox="0 0 120 120">
+                  <circle class="gauge-base" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                  <circle class="gauge-arc" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                </svg>
+                <div class="gauge-percentage"></div>
               </div>
             </div>
             <div class="col-sm-12 col-md-4">
               <h6 class="mt-2 mb-3 font-weight-normal text-secondary text-center">Light Users</h6>
-              <div class="circle-wrap mb-4">
-                <div class="circle c25">
-                  <div class="mask full">
-                    <div class="fill bg-warning"></div>
-                  </div>
-                  <div class="mask half">
-                    <div class="fill bg-warning"></div>
-                  </div>
-                  <div class="inside-circle text-warning"> 25% </div>
-                </div>
+              <div class="gauge-headercol" id="gauge-loader" data-total="300" data-used="190" data-color="warning">
+                <svg class="gauge" viewBox="0 0 120 120">
+                  <circle class="gauge-base" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                  <circle class="gauge-arc" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                </svg>
+                <div class="gauge-percentage"></div>
               </div>
             </div>
           </div>
@@ -571,6 +571,21 @@
     <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
 
     <!-- Plugin  -->
+    <script>
+      // Get value from Data attribute
+      $(".gauge-headercol").each(function (index) {
+
+        let total = $(this).data('total');
+        let used = $(this).data('used');
+        let percentValue = Math.ceil((used * 100) / total);
+        let gaugeValue = percentValue * 3.5;
+        $(this).find('.gauge-percentage').html(percentValue + '%');
+        setTimeout(() => {
+          $(this).find('.gauge-arc').css('stroke-dasharray', gaugeValue + ', 360');
+        }, 100);
+
+      });
+    </script>
 
 
 </body>
