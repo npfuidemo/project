@@ -131,6 +131,7 @@
                     top:6px;
                     padding:1px;
                     right: 8px;
+                    color:#777;
                     background:rgba(255,255,255,0.8);
                 }
                 &:hover{
@@ -145,6 +146,9 @@
                   border: 1px solid #4b7bdd;
                   background: #fff;
                   color:#4b7bdd;
+                  .remove{
+                    background:rgba(149,149,149,0.3);
+                  }
                 }
             }
         }
