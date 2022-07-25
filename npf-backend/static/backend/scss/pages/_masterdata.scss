@@ -1,19 +1,22 @@
-.grid-table table.table tbody tr.grid-table-row td{
+.grid-table table.table tbody tr.grid-table-row td {
     font-weight: normal !important;
- }
- .custom-file #filename{
-     border:0;
-     width:100%;
- }
+}
 
-.steps{
+.custom-file #filename {
+    border: 0;
+    width: 100%;
+}
+
+.steps {
     .h100 {
-    min-height: calc(100vh - 175px);
+        min-height: calc(100vh - 175px);
     }
 }
 
 .arrow-icon {
-    i,.fa {
+
+    i,
+    .fa {
         width: 20px;
         height: 20px;
         border: 1px solid $brand-color;
@@ -24,50 +27,60 @@
 }
 
 
- @media (max-width: 767px){
+@media (max-width: 767px) {
     #master-data-detail-popup {
         .expended-search-wrpper.active {
-            left: -140px !important;;
+            left: -165px !important;
+            top: 43px;
+            min-height: 33px;
         }
+
         .modal-header .modal-title {
-            width:calc(100% - 40px);
+            width: calc(100% - 40px);
         }
     }
-}
 
-
-#master-data-detail-popup{
-    .expandSearch .search_icon{
-        top:8px;
+    #master-data-listing,
+    #masterDataChildlisting {
+        margin-top: 42px !important;
     }
 }
 
-#ConfirmPopupArea,#addMasterDataModal{
-    z-index:1053;
+#master-data-detail-popup {
+    .expandSearch .search_icon {
+        top: 8px;
+    }
 }
 
-.zindex3{
-    z-index:111!important;
+#ConfirmPopupArea,
+#addMasterDataModal {
+    z-index: 1053;
+}
+
+.zindex3 {
+    z-index: 111 !important;
 }
 
 
-#createChildMasterData{
+#createChildMasterData {
     margin: 10px 0 0 15px;
     position: relative;
 
-    #add-child-div{
+    #add-child-div {
         position: relative;
         z-index: 1;
+
         &:before {
-                content: '';
-                width: 1px;
-                height: calc(100% - 17px);
-                position: absolute;
-                display: block;
-                background: #ccc;
-                left: -12px;
-                top: -18px;
+            content: '';
+            width: 1px;
+            height: calc(100% - 17px);
+            position: absolute;
+            display: block;
+            background: #ccc;
+            left: -12px;
+            top: -18px;
         }
+
         &:after {
             content: '';
             width: 8px;
@@ -79,8 +92,10 @@
             top: -26px;
             border-radius: 50%;
         }
-        div.rowSpaceReduce{
+
+        div.rowSpaceReduce {
             position: relative;
+
             &:after {
                 content: '';
                 width: 13px;
@@ -92,5 +107,35 @@
                 z-index: 0;
             }
         }
+    }
 }
+
+
+.appendFormChildMasterData {
+    max-height: 50vh !important;
+}
+
+.selfhelp {
+    border-radius: 20px;
+    background: rgba($brand-color, .05);
+    color:$brand-color;
+    padding: .10rem .70rem .12rem .40rem;
+    font-size: 12px;
+    font-weight: 500;
+    border:1px solid rgba($brand-color,.2);
+    line-height:24px;
+
+    .iconH {
+        border-radius: 50%;
+        margin-right:2px;
+        color: $brand-color;
+
+        &:before {
+            color: #fff !important;
+        }
+    }
+
+    &:hover {
+        background: rgba($brand-color, .1);
+    }
 }

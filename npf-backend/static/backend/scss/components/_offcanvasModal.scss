@@ -7,6 +7,8 @@
             max-height:calc(100% - 100px);
             &.fullHeight{
                 max-height:calc(100% - 0px)!important;
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
             }
         }
     }
@@ -148,10 +150,10 @@ body.scrollHidden{
         padding: .75rem 1rem;
     }
 
-    .modal-body {
-        padding: 0 0 50px !important;
-        margin: 0 0 50px !important;
-    }
+    // .modal-body {
+    //     padding: 0 0 50px !important;
+    //     margin: 0 0 50px !important;
+    // }
 
     .modal-footer {
         position: fixed;

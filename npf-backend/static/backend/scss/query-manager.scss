@@ -3,15 +3,29 @@
 "vendors/date-range-picker";
 
 // Sections and  pages
-@import "components/grid-table", "components/expandSearch",
-"components/border-card", "components/modal-accordion",
-"components/conversation", "components/status",
-"components/video-iframe-modal", "components/owl-carousal";
+@import "components/grid-table",
+"components/expandSearch",
+"components/border-card",
+"components/modal-accordion",
+"components/conversation",
+"components/status",
+"components/video-iframe-modal",
+"components/owl-carousal";
 
-@media only screen and (min-width) {
+@media only screen and (min-width: 768px) {
   .ticket-left-panel {
     min-height: 500px;
-    max-height: calc(100vh - 110px);
+    // max-height: calc(100vh - 110px);
+  }
+
+  #view-ticket-details-tab {
+    overflow: auto;
+  }
+
+  .fullHeight {
+    #view-ticket-details-tab {
+      height: calc(100vh - 95px);
+    }
   }
 }
 
@@ -45,4 +59,9 @@
   .bootstrap-select .dropdown-menu {
     min-width: 180px;
   }
+}
+
+.modal-accordion {
+  min-height: auto;
+  max-height: none;
 }

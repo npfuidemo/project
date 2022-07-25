@@ -3,10 +3,6 @@
     border-radius:5px;
     padding:5px;
     width:100%;
-
-    & input[type="checkbox"]{
-
-    }
     label{
         margin-bottom: 0;
         color: #666;
@@ -16,6 +12,15 @@
         margin-left: 5px;
         vertical-align: top;
         width:calc(100% - 25px);
+    }
+
+    & input[type="checkbox"]{
+        [disabled]{
+            cursor: not-allowed;
+            &+label{
+                cursor: not-allowed;
+            }
+        }
     }
 }
 

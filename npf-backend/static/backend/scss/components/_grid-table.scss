@@ -1,4 +1,5 @@
-@import './sorting', './table-popover';
+@import '../vendors/material-kit/variables';
+@import './sorting', './table-popover', './copy-element', './table-collapse';
 
 .grid-table table.table {
     width: 100%;
@@ -7,7 +8,10 @@
     margin-bottom: 0;
     overflow: hidden;
     border-spacing: 0;
-    border-collapse: separate;
+
+    @media (min-width:767px) {
+        border-collapse: separate;
+    }
 
     tr {
         margin: 10px 0;
@@ -20,8 +24,8 @@
             vertical-align: middle;
 
             .hover-effect {
-                // width: 22px;
-                // height: 22px;
+                width: 22px;
+                height: 22px;
                 align-items: center;
                 justify-content: center;
                 // background-color: #f1f3f4 !important;
@@ -95,7 +99,7 @@
 
                     input[type="radio"],
                     input[type="checkbox"] {
-                        margin-top:4px;
+                        margin-top: 4px;
                         margin-bottom: 0;
                     }
                 }
@@ -125,15 +129,13 @@
     thead {
         tr {
             th {
-                border:0!important;
+                border: 0 !important;
             }
         }
     }
 
     tbody tr {
         &.grid-table-row {
-
-
             td {
                 font-weight: 400;
                 vertical-align: middle;
@@ -156,7 +158,9 @@
             }
 
             &.has-selected {
-                opacity: .7;
+                td {
+                    background: lighten($primary, 40%) !important;
+                }
 
                 &+.collapse {
                     opacity: .7;
@@ -168,7 +172,7 @@
                     font-weight: 300 !important;
 
                     .badge {
-                        font-weight: 400 !important;
+                        font-weight: 300 !important;
                     }
 
                     @media only screen and (min-width: 768px) {
@@ -181,6 +185,12 @@
                     td {
                         background: #fafafa;
                     }
+                }
+            }
+
+            &.row-selected {
+                td {
+                    background: #e9edf8;
                 }
             }
 
@@ -200,8 +210,20 @@
         }
 
     }
-}
 
+    &.showtableMobile{
+        @media (max-width:767px){
+        thead{
+            display:table-header-group;
+        }
+        td{
+            display:table-cell!important;
+            padding-left:.75rem!important;
+            width:auto!important;
+        }
+        }
+    }
+}
 // @include media("<tablet") {
 @media only screen and (max-width: 768px) {
     .grid-table {
@@ -211,7 +233,7 @@
             }
 
             thead {
-                display: none;
+                display: none !important;
             }
 
             tbody {
@@ -265,8 +287,8 @@
                             input[type="radio"],
                             input[type="checkbox"] {
                                 position: absolute;
-                                left: 5px;
-                                top: 2px;
+                                left: 3px;
+                                top: 4px;
                             }
                         }
 
@@ -336,7 +358,7 @@
     }
 
     .grid-table [data-sticky="true"] {
-        table{
+        table {
             overflow: auto;
         }
 
@@ -384,6 +406,7 @@
     tbody {
         +tbody {
             border-top-color: #ddd;
+            border: none;
         }
     }
 }
@@ -396,15 +419,37 @@
         background: #ccd9f5 !important;
         padding: 5px 0;
         border-radius: 4px;
+
+        @media only screen and (max-width: 760px) {
+            font-size: 12px;
+        }
     }
 }
-.grid-table{
+
+.grid-table {
     .table-last-action {
-    visibility: hidden;
+        visibility: visible;
+        opacity: 1;
+
+        @media (min-width:767px) {
+            visibility: hidden;
+            transition: .3s;
+            opacity: 0;
+
+            &.action-clicked {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
 }
 
-table tr:hover .table-last-action {
-    visibility: visible;
-}
-
+@media (min-width:767px) {
+    .grid-table {
+        table tr:hover .table-last-action {
+            visibility: visible;
+            transition: 1s;
+            opacity: 1;
+        }
+    }
 }

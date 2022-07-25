@@ -340,7 +340,7 @@ tr.grid-table-row {
             width: 100vh;
             height: 1px;
             z-index: 9;
-            left: -3px;
+            left: 0px;
             top: 0;
             position: absolute;
             background: #ccc;
@@ -349,7 +349,7 @@ tr.grid-table-row {
    }
 
    .grid-sublist {
-      padding-left:17.5px;
+      padding-left: 17.5px;
    }
 
    .grid-sublist-item {
@@ -396,11 +396,7 @@ tr.grid-table-row {
          position: absolute;
          width: 15px;
          background: #ccc;
-<<<<<<< HEAD
          left: -3px;
-=======
-         left: 0px;
->>>>>>> b7415f8d2b2136e597a246edeaecd44f9b820520
          top: 21px;
          z-index: 1;
       }

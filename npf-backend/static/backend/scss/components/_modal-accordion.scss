@@ -1,5 +1,8 @@
 .modal-accordion {
-    max-height: calc(100vh - 150px);
+    max-height: calc(100vh - 185px);
+    min-height: calc(100vh - 200px);
+    overflow: auto;
+
     small,
     .small {
         line-height: 1.1;
@@ -27,7 +30,11 @@
         }
 
         &[aria-expanded="true"] {
-            background: rgba(0,0,0,.01);
+            background: #f8f9fa;
+            position: sticky;
+            z-index: 1;
+            top: 0;
+
             &:after {
                 transform: rotate(90deg);
                 color: #a1b9ec;
@@ -37,5 +44,16 @@
         &:hover:after {
             background: rgba(36, 93, 136, .08) !important;
         }
+    }
+
+    .modal-accordion-content {
+        padding-left: 35px;
+    }
+
+    .modal-accordion-btn {
+        position: absolute;
+        right: 15px;
+        top: -55px;
+        z-index: 1;
     }
 }

@@ -27,7 +27,7 @@
 
     &.position-sticky {
         top: 51px;
-        z-index: 11;
+        z-index: 21;
         background-color: $bg-light-blue;
     }
 
@@ -80,18 +80,29 @@
 .inline_tabs.header-tabs {
     .nav-tabs {
         overflow: visible !important;
+
+        .nav-item {
+            &:first-child {
+                border-radius: .2rem 0 0 0;
+            }
+
+            &:last-child {
+                border-radius: 0 .2rem 0 0;
+            }
+        }
+
         .nav-item .nav-link {
             border: none !important;
             position: relative;
-            padding: 8px 20px !important;
+            padding: 6px 12px 10px !important;
 
             &.active {
                 &:after {
                     content: '';
                     position: absolute;
-                    height: 4px;
+                    height: 2px;
                     left: 0;
-                    bottom: -8px;
+                    bottom: 3px;
                     width: 100%;
                     background: $primary;
                 }

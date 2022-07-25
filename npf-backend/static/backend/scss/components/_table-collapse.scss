@@ -1,0 +1,25 @@
+@media only screen and (max-width: 767px) {
+  .table-collapse {
+    pointer-events: none;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .table-collapse {
+    position: relative;
+    padding-right: 30px;
+    color: #333;
+
+    &:after {
+      content: '\e5cf';
+      font-family: 'Material Icons';
+      position: absolute;
+      right: 0;
+      transition: all ease-in-out .5s;
+    }
+
+    &[aria-expanded="true"]:after {
+      transform: rotate(180deg);
+    }
+  }
+}

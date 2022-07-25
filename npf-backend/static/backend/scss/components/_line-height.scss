@@ -4,3 +4,9 @@ $line-height: 10;
         line-height: $i / 4;
     }
 }
+$lineHeight: 18;
+@for $i from 13 through $lineHeight {
+    .lineHeight#{$i} {
+        line-height: $i+px;
+    }
+}

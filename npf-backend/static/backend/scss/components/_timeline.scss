@@ -30,9 +30,21 @@
       background-color: #fff;
       font-family: 'Material Icons';
     }
+    &-last {
+      position: relative;
+
+      &:before {
+        content: '';
+        top: 0;
+        left: -3px;
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        background: white;
+      }
+    }
   }
 }
-
 
 .timeline-group.slightly-left {
   &:before {

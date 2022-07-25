@@ -4,7 +4,7 @@
 'abstracts/mixins',
 'vendors/include-media', 'vendors/chosen/main', 'vendors/bootstrap-tagsinput/bootstrap-tagsinput', 'vendors/chosen/main';
 
-@import "./components/grid-table", "./components/expandSearch", "./components/border-card", "./components/modal-accordion", "./components/custom-input", "./components/hierarchy-structure", "./components/multi-select-pill", "./components/bulk-upload", "components/status", "components/verticalmenulist", "components/drag-input-file", "components/profile", "components/timeline","components/profile-dropdown-menu";
+@import "./components/grid-table", "./components/expandSearch", "./components/border-card", "./components/modal-accordion", "./components/custom-input", "./components/hierarchy-structure", "./components/multi-select-pill", "./components/bulk-upload", "components/status", "components/verticalmenulist", "components/drag-input-file", "components/profile", "components/timeline", "components/filled-bar", "components/notch", "components/nav-btn-group";
 
 .header-info {
   position: relative;
@@ -59,17 +59,18 @@
 }
 
 .team-group {
-    background: #fff;
-    &-header{
-        min-height: 204px;
-    }
+  background: #fff;
+
+  &-header {
+    min-height: 165px;
+  }
 
   .team-name {
     background: #f1f3f4;
   }
 
   .empty-card-link {
-    min-height: 251px;
+    min-height: 218px;
   }
 
   .team-badge {
@@ -77,7 +78,9 @@
   }
 
   .team-card-dropdown:not(.show) [data-toggle="dropdown"] {
-    opacity: 0;
+    @media only screen and (min-width :760px) {
+      opacity: 0;
+    }
   }
 
   &:hover {
@@ -104,5 +107,48 @@
     .team-user-dropdown {
       opacity: 1;
     }
+  }
+}
+
+.permission-set {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.module-list {
+  .badge-label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  &:first-child .badge-label {
+    margin-top: 0;
+  }
+}
+
+.sticky-profile-menu {
+  min-height: calc(100vh - 360px);
+
+  .setting-menu {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .expended-search-wrpper {
+    z-index: 9;
+    top: 45px;
+    left: auto !important;
+    right: -80px !important;
+  }
+}
+
+.sticky-nav-tab-pill {
+  background: #f1f3f4;
+  @media only screen and (min-width: 760px) {
+    position: sticky;
+    top: 51px;
+    z-index: 12;
   }
 }

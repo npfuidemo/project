@@ -7,8 +7,11 @@
     color: #111;
     padding: 4px 12px;
     font-size: 85%;
-    position: relative;
+    line-height: 1;
+    padding: 4px 12px;
     border: 1px solid;
+    position: relative;
+    display: inline-block;
 
     &:before {
         // content: '\002B24';
@@ -23,6 +26,7 @@
         color: $danger;
     }
 
+
     &.data-In.Progress {
         background: rgba($warning, .2);
         border-color: rgba($warning, .2);
@@ -36,31 +40,70 @@
     }
 
     &.data-schedualed {
-        margin-left: 10px;
+        padding-left: 25px;
+        background: rgba($warning, .2);
+        border-color: rgba($warning, .2);
+        color: $warning;
 
         &:before {
             color: $warning;
-            font-size: 18px;
+            font-size: 15px;
             content: '\e191';
             font-family: 'Material Icons';
             position: absolute;
-            top: 0;
-            left: -10px;
+            top: 2px;
+            left: 8px;
         }
     }
 
     &.data-excuted {
-        margin-left: 10px;
+        padding-left: 25px;
+        background: rgba($success, .2);
+        border-color: rgba($success, .2);
+        color: $success;
 
         &:before {
             color: $success;
-            font-size: 18px;
+            font-size: 15px;
             content: '\e858';
             font-family: 'Material Icons';
             position: absolute;
-            top: 0;
-            left: -8px;
+            top: 2px;
+            left: 8px;
+        }
+    }
+
+    &.data-schedualed {
+        padding-left: 25px;
+        background: rgba($warning, .2);
+        border-color: rgba($warning, .2);
+        color: $warning;
+
+        &:before {
+            color: $warning;
+            font-size: 15px;
+            content: '\e191';
+            font-family: 'Material Icons';
+            position: absolute;
+            top: 2px;
+            left: 8px;
+        }
+    }
+
+    &.data-excuted {
+        padding-left: 25px;
+        background: rgba($success, .2);
+        border-color: rgba($success, .2);
+        color: $success;
+
+        &:before {
+            color: $success;
+            font-size: 15px;
+            content: '\e858';
+            font-family: 'Material Icons';
+            position: absolute;
+            top: 2px;
+            left: 8px;
         }
     }
 }
-

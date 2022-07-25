@@ -15,7 +15,7 @@
   @include text-color(#fff);
   display: flex;
   align-items: center;
-  border-radius: 0.25rem;
+  border-radius: 0.25rem !important;
   padding: 0.5rem;
 
   .callout-icon {
@@ -165,7 +165,6 @@
         width: 100%;
         @include text-color(#333);
         @include border-color(#ec7371);
-
       }
     }
 

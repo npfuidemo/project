@@ -16,6 +16,9 @@
 
     &.shorten {
         height: calc(100vh - 260px);
+        @media only screen and (min-width: 1072px){
+            height: calc(100vh - 212px);
+        }
     }
 }
 

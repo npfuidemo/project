@@ -561,7 +561,7 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 ///  @include media('retina2x') { }
 ///
 /// @example scss - Mixing everything
-///  @include media('>=350px', '<tablet', 'retina3x') { }
+///  @include media('>=350px', '', 'retina3x') { }
 ///
 @mixin media($conditions...) {
   @if ($im-media-support and length($conditions)==0) or (not $im-media-support and im-intercepts-static-breakpoint($conditions...)) {
