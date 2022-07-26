@@ -15,6 +15,7 @@
    <!-- CSS Files -->
    <link href="../static/backend/css/main.css" rel="stylesheet" />
    <link href="../static/backend/css/reportBuilder.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://unpkg.com/webtour@1.1.0/dist/webtour.min.css">
 </head>
 
 <body class="dark-mode reportbuilder">
@@ -1667,6 +1668,69 @@
          dropdownMenuPlacement();
       });
    </script>
+
+<script src="https://unpkg.com/webtour@1.1.0/dist/webtour.min.js"></script>
+<script>
+const wt = new WebTour();
+const steps = [
+    {
+        element: '#metrices_field',            
+        title: 'METRICES',         
+        content: 'You can click on the Add button here to Add your Metrices.',    
+        placement: 'right-start',      
+    },
+    {
+        element: '#rowFields',            
+        title: 'ROWS',         
+        content: 'You can click on the Add button here to select the rows that you want to populate your report.<br><br> <strong>Note:</strong> A maximum of 3 rows can be selected at once',     
+        placement: 'right-start',       
+    },
+    {
+        element: '#columnsFields',            
+        title: 'Columns',         
+        content: 'You can click on the Add button here to select the Columns that you want to populate your report. Note: A maximum of 3 rows can be selected at once',     
+        placement: 'right-start',       
+    },
+    {
+        element: '#filterFields',            
+        title: 'Filters',         
+        content: 'You can click on the Add Button button here choose the Attributes you want to apply to filter out the populated data.',     
+        placement: 'right-start',       
+    },
+    {
+        element: '#report_name',            
+        title: 'NAME',         
+        content: 'You can start typing the name of the report in the text box here.',     
+        placement: 'right-start',       
+    },
+    {
+        element: '.favouriteBtn',            
+        title: 'Favourite',         
+        content: 'You can also mark the report as your favorite by clicking on this star. ',     
+        placement: 'right-start',       
+    },
+    {
+        element: '.toggletag',            
+        title: 'Tags',         
+        content: 'Click on this Icon to create and Edit the Tags related to this Report.',     
+        placement: 'left-start',       
+    },
+    {
+        element: '.sync',            
+        title: 'Refresh',         
+        content: 'Click on this icon to sync the data in the Report with the latest data',     
+        placement: 'left-start',       
+    },
+    {
+        element: '.save',            
+        title: 'Save',         
+        content: 'You can use this button to finally save the changes you have made in the report.',     
+        placement: 'left-start',       
+    },
+];
+wt.setSteps(steps);
+wt.start();
+</script>
 </body>
 
 </html>

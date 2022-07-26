@@ -1,9 +1,0 @@
-$opacity: 100;
-
-@for $a from 0 through $opacity {
-  @if $a%5==0 {
-    .opacity-#{$a} {
-      opacity: $a/100;
-    }
-  }
-}
