@@ -10,10 +10,6 @@
       left: -2px;
       top: 16px;
     }
-
-    .all-timeline-loaded:before {
-      height: calc(100% - 95px);
-    }
   }
 
   &-item {
@@ -29,6 +25,20 @@
       position: absolute;
       background-color: #fff;
       font-family: 'Material Icons';
+    }
+
+    &-last {
+      position: relative;
+
+      &:before {
+        content: '';
+        top: 0;
+        left: -3px;
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        background: white;
+      }
     }
   }
 }

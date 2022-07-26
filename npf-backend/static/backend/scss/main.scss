@@ -88,31 +88,9 @@
 'components/height',
 'components/z-index',
 'components/font-size',
-'components/gauge';
-
-
-.notch {
-  position: relative;
-
-  &:before,
-  &:after {
-    content: '';
-    right: -17px;
-    position: absolute;
-    pointer-events: none;
-    z-index: 9;
-  }
-
-  &.arrow-right {
-    &:before {
-      border: 10px solid #e2e1e6;
-      border-color: transparent #e2e1e6 transparent transparent;
-    }
-
-    &:after {
-      top: -4px;
-      border: 9px solid #f8f9fa;
-      border-color: transparent #f8f9fa transparent transparent;
-    }
-  }
-}
+'components/profile-dropdown-menu',
+'components/commonUtility',
+'components/fixed-select-field',
+'components/togglebuttonSmall',
+'components/radius',
+'components/font-size';

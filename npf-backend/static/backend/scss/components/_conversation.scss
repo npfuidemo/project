@@ -9,7 +9,7 @@
     height: calc(100vh - 90px);
 
     @media only screen and (max-width: 767px) {
-      height: calc(100vh - 354px);
+      height: calc(100vh - 185px);
     }
 
     .chat-container {
@@ -54,14 +54,14 @@
 .chat-container {
   width: 100%;
   max-width: 800px;
-  height: calc(100vh - 396px);
+  height: calc(100vh - 365px);
   min-height: 100%;
   margin: 0 auto;
   overflow-y: auto;
   transition: all 1s;
 
   @media only screen and (max-width: 767px) {
-    height: calc(100vh - 500px);
+    height: calc(100vh - 460px);
   }
 
   ul {

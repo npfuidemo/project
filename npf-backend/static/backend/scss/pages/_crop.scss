@@ -6,6 +6,16 @@
     .expended-search-wrpper.active {
         left: -240px !important;;
     }
+
+    #conditional-listing,#cropping-listing{
+        margin-top: 42px!important;
+    }
+
+    .expended-search-wrpper {
+    left:-295px!important;
+    z-index: 111;
+    }
+
 }
 
 
@@ -40,7 +50,7 @@
     width:100%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
     background:#fff;
-    li{ 
+    li{
         display:block;
         margin:0 5px;
         a{
@@ -69,7 +79,6 @@
     margin-bottom:5px;
     input{
         padding-left:20px;
-         
     }
     &:before{
         content: "\f002";
@@ -80,17 +89,17 @@
         position:absolute;
         left:0px;
         top:8px;
-        color:#ccc;
+        color:#4c79dc;
     }
 }
-.croplist{ 
+.croplist{
     li {
         position: relative;
         margin:0px 5px 8px 0;
         padding: 0.5em 2em 0.5em 0.6em;
         background: #bfcff2;
         border: 1px solid #88a6e7;
-        color: #4c79dc;
+        color: $brand-color;
         font-weight: 500;
         max-width: 100%;
         border-radius: 3px;
@@ -98,9 +107,9 @@
         cursor: default;
         a {
             font-size: 13px;
-            color: #4c79dc;
+            color: $brand-color;
             &:hover{
-                color:#4c79dc;
+                color:$brand-color;
             }
         }
         &.noRelventData{
@@ -117,7 +126,7 @@
                 position: absolute;
                 right: 9px;
                 top: 5px;
-                color: #4c79dc;
+                color: $brand-color;
                 cursor: pointer;
                 border: 0;
                 width: 12PX;
@@ -126,7 +135,7 @@
                 background: none;
                 &:hover{
                     background:none;
-                    color:#4c79dc;
+                    color:$brand-color;
                 }
             }
         }

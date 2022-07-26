@@ -16,5 +16,26 @@
 'components/tag-condition-label',
 'components/sortable',
 'components/lead-stage-edit',
-'components/selectPickerNoData',
-'components/status';
+'components/selectPickerNoData';
+
+.config- {
+    &condition-bar {
+        z-index: 99;
+        top: 92px;
+    }
+
+    &stage-row {
+        position: sticky;
+        top: 140px;
+        z-index: 1;
+    }
+
+    &stage-bar {
+        z-index: 99;
+        top: 92px;
+    }
+}
+
+.chosen-container-multi .chosen-choices {
+    background: transparent !important;
+}

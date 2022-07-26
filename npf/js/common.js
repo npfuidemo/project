@@ -4006,3 +4006,11 @@ function openRichTab(item,indexId,tabId) {
     document.getElementById(indexId).style.display = "block";
     item.classList.add("active")
 }
+
+$('#package-addon-modal').on('shown.bs.modal', function (event) {
+    $('#package-addon-modal .collapse').on('shown.bs.collapse', function (e) {
+        $('#package-addon-modal .modal-content').scrollTop(0);
+        let positionTop = $(this).position().top;
+        $('#package-addon-modal .modal-content').animate({scrollTop: positionTop}, 600);
+    });
+});

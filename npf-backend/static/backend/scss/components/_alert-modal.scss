@@ -11,8 +11,8 @@
     }
     .alert-badge {
         min-width: 120px;
-        max-width: 270px;
-        padding: 3px 22px;
+        max-width: 285px;
+        padding: 3px 25px;
         position: absolute;
         top: -7px;
         color: $white;
@@ -68,7 +68,7 @@
         }
     }
     .alert-content{
-        padding: 25px 10px;
+        padding: 25px 15px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -96,8 +96,8 @@
         }
         .alert-btn-outline{
             background: $white;
-            border-color: $primary;
-            color: $primary;
+            border-color: $secondary;
+            color: $secondary;
         }
     }
     &.warning{
@@ -112,18 +112,10 @@
             }
         }
         .alert-btn-group{
-            .alert-btn-filled,
-            .alert-btn-outline{
-                border-color: $warning;
-            }
             .alert-btn-filled{
                 background: $warning;
                 color: $white;
-                border: 1px solid;
-            }
-            .alert-btn-outline{
-                color: $warning;
-                background: $white;
+                border: 1px solid $warning;
             }
         }
     }
@@ -139,18 +131,10 @@
             }
         }
         .alert-btn-group{
-            .alert-btn-filled,
-            .alert-btn-outline{
-                border-color: $success;
-            }
             .alert-btn-filled{
                 background: $success;
                 color: $white;
-                border: 1px solid;
-            }
-            .alert-btn-outline{
-                color: $success;
-                background: $white;
+                border: 1px solid $success;
             }
 
         }
@@ -167,18 +151,10 @@
             }
         }
         .alert-btn-group{
-            .alert-btn-filled,
-            .alert-btn-outline{
-                border-color: $danger;
-            }
             .alert-btn-filled{
                 background: $danger;
                 color: $white;
-                border: 1px solid;
-            }
-            .alert-btn-outline{
-                color: $danger;
-                background: $white;
+                border: 1px solid $danger;
             }
 
         }

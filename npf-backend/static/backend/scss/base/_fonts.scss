@@ -1,6 +1,14 @@
+.material-icons, .material-icons-outlined{
+  &[data-icon]{
+    &:before{
+      content: attr(data-icon);
+    }
+  }
+}
+// Kindly update date in base.html while you update lineicon
 @font-face {
   font-family: 'lineicon';
-  src:  url('../fonts/lineicon.woff2?11apr22');
+  src:  url('../fonts/lineicon.woff2?29apr22');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -42,8 +50,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.lineicon-user-activity:before {
+
+.lineicon-log-out:before {
   content: "\e980";
+}
+.lineicon-change-password:before {
+  content: "\e981";
+}
+.lineicon-user-activity:before {
+  content: "\e982";
 }
 
 .lineicon-teams:before {

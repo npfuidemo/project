@@ -1,0 +1,7 @@
+$radius: 8;
+
+@for $a from 1 through $radius {
+  .radius-#{$a} {
+    border-radius: $a +px;
+  }
+}

@@ -5,7 +5,9 @@
   a {
     color: $primary;
 
-    &:hover {
+    &:hover,
+    &:focus {
+      background: none;
       color: $primary !important;
     }
   }
@@ -24,6 +26,17 @@
 
     &:hover:after {
       visibility: visible;
+    }
+  }
+
+  .profile-menu-img {
+    background-size: cover;
+  }
+
+  .hover-bg-none {
+    &:hover {
+      box-shadow: none !important;
+      background: none !important;
     }
   }
 }

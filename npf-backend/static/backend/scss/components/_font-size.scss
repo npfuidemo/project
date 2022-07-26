@@ -1,4 +1,4 @@
-$fs-css-prefix:        fs !default;
+$fs-css-prefix: fs !default;
 
 .#{$fs-css-prefix}-lg {
   font-size: (4em / 3);
@@ -15,5 +15,12 @@ $fs-css-prefix:        fs !default;
 @for $i from 1 through 6 {
   .#{$fs-css-prefix}-#{$i}xl {
     font-size: $i * 1em;
+  }
+}
+
+
+@for $i from 11 through 19 {
+  .#{$fs-css-prefix}-#{$i} {
+    font-size: $i * 1px;
   }
 }
