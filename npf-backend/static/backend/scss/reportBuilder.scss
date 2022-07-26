@@ -1021,3 +1021,25 @@
 .selectParameter.active+.selectParameterBackdrop{
   display:block;
 }
+
+#dragItemBox{
+  li{
+    margin-left:15px;
+    cursor:move;
+    .sort-handle:after {
+      content: '';
+      width: 13px;
+      height: 28px;
+      position: absolute;
+      left: -18px;
+      top: 1px;
+      background: url("../images/drag-handle.png") no-repeat center;
+      background-color: #fff;
+  }
+}
+  .ghost-drag {
+    border: 2px dashed #ccc !important;
+    background: #fff;
+    opacity: .6;
+  }
+}

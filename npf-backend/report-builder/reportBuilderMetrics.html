@@ -440,22 +440,49 @@
                                     class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
                                  </div>
                                  <div class="row" id="before_metrics_selection" style="display:block;">
-                                    <div class="col-sm-12 addmenucontainer"></div>
-                                    <div class="col-sm-12">
-                                       <p class="text-center text-secondary fs-12 mt-3 lineHeight16">No Metrics added
-                                          yet
-                                          <br>Click on the Add button to get started.
-                                       </p>
-                                       <div class="row d-flex justify-content-center mb-3">
-                                          <div class="col-sm-4 col-4 text-center">
-                                             <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1 pr-2"
-                                                href="javascript:void(0)" onclick="showhideMenuDiv();">
-                                                <span class="material-icons-outlined  fs-16">add</span>
-                                                <span class="lineHeight16 fs-12">Add</span>
-                                             </a>
-                                          </div>
+                                       <div class="col-sm-12 addmenucontainer">
+                                          <a class="d-flex align-items-center justify-content-end mr-2"
+                                             href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                             <span class="material-icons-outlined  fs-16">add</span>
+                                             <span class="lineHeight16 fs-12">Add</span>
+                                          </a>
                                        </div>
-                                    </div>
+                                       <div class="col-sm-12">
+                                          <ul class="selectedField p-2 drag-box" id="dragItemBox">
+                                             <li class="bg-light">
+                                                <span class="sort-handle">Lead</span>
+                                                <a href="javascript:void(0)" class="removeList">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      close
+                                                   </span>
+                                                </a>
+                                             </li>
+                                             <li class="bg-light">
+                                                <span class="sort-handle">Application</span>
+                                                <a href="javascript:void(0)" class="removeList">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      close
+                                                   </span>
+                                                </a>
+                                             </li>
+                                             <li class="bg-light">
+                                                <span class="sort-handle">Application2</span>
+                                                <a href="javascript:void(0)" class="removeList">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      close
+                                                   </span>
+                                                </a>
+                                             </li>
+                                             <li class="bg-light">
+                                                <span class="sort-handle">Application3</span>
+                                                <a href="javascript:void(0)" class="removeList">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      close
+                                                   </span>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
                                  </div>
                                  <div class="row" id="after_metrics_selection" style="display:none;">
                                     <div class="col-sm-12 addmenucontainer">
@@ -939,8 +966,8 @@
 
 
 
-   <div class="modal fade offCanvasModal  popup-customization right" id="customeMetricsModal" tabindex="-1" role="dialog"
-      aria-hidden="true">
+   <div class="modal fade offCanvasModal  popup-customization right" id="customeMetricsModal" tabindex="-1"
+      role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
          <div class="modal-content h-100">
             <div class="modal-header border-bottom-blue">
@@ -967,7 +994,9 @@
                            <label class="text-dark  pt-md-2">Define Logics</label>
                         </div>
                         <div class="col-12 col-lg-8">
-                           <select class="form-control selectpicker" data-actions-box="true" data-selected-text-format="count > 1" data-style="px-2 border" name="status" id="status" tabindex="-98">
+                           <select class="form-control selectpicker" data-actions-box="true"
+                              data-selected-text-format="count > 1" data-style="px-2 border" name="status" id="status"
+                              tabindex="-98">
                               <option value="">Date</option>
                               <option value="">Dropdown</option>
                               <option value="">Users</option>
@@ -985,7 +1014,8 @@
                         </div>
                         <div class="col-12 col-lg-8">
                            <div class="form-group pt-0 date-picker bmd-form-group bg-white">
-                              <input type="text" class="form-control date-range-picker"  placeholder="Select a date range" name="" id="">
+                              <input type="text" class="form-control date-range-picker"
+                                 placeholder="Select a date range" name="" id="">
                            </div>
                         </div>
                      </div>
@@ -1026,6 +1056,7 @@
    <script src="../static/backend/js/base/common.js"></script>
    <script src="../static/backend/js/plugins/bootstrap-tagsinput.min.js"></script>
    <script src="../static/backend/js/plugins/typehead.js"></script>
+   <script src="../static/backend/js/plugins/sortable.js"></script>
    <!-- <script src="../static/custom/js/qms/qms.js"></script> -->
 
    <script>
@@ -1164,37 +1195,48 @@
       });
       $(".selectParameterBackdrop").click(function () {
          $(".selectParameter").removeClass('active');
-      });  
+      });
 
 
-      if($('.date-range-picker').length){
-   $('.date-range-picker').daterangepicker({
-     "drops": "down",
-     "opens": "left",
-     showDropdowns: true,
-     showWeekNumbers: true,
-     autoUpdateInput: false,
-     "alwaysShowCalendars": false,
-     locale: {
-            format: 'DD/MM/YYYY',
-            separator: ","
-        },
-        ranges: {
-        'Today': [moment(), moment()],
-        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-        'This Month': [moment().startOf('month'), moment().endOf('month')],
-        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-    },
-   });
-    $('.date-range-picker').on('apply.daterangepicker', function (ev, picker) {
-        $(this).val(picker.startDate.format('DD/MM/YYYY') + ',' + picker.endDate.format('DD/MM/YYYY'));
-    });
-    $('.date-range-picker').on('cancel.daterangepicker', function (ev, picker) {
-        $(this).val('');
-    })
-}
+      if ($('.date-range-picker').length) {
+         $('.date-range-picker').daterangepicker({
+            "drops": "down",
+            "opens": "left",
+            showDropdowns: true,
+            showWeekNumbers: true,
+            autoUpdateInput: false,
+            "alwaysShowCalendars": false,
+            locale: {
+               format: 'DD/MM/YYYY',
+               separator: ","
+            },
+            ranges: {
+               'Today': [moment(), moment()],
+               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+               'This Month': [moment().startOf('month'), moment().endOf('month')],
+               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+         });
+         $('.date-range-picker').on('apply.daterangepicker', function (ev, picker) {
+            $(this).val(picker.startDate.format('DD/MM/YYYY') + ',' + picker.endDate.format('DD/MM/YYYY'));
+         });
+         $('.date-range-picker').on('cancel.daterangepicker', function (ev, picker) {
+            $(this).val('');
+         })
+      }
+
+
+      function enableDragDrop() {
+         new Sortable(dragItemBox, {
+            animation: 100,
+            handle: '.sort-handle',
+            ghostClass: 'ghost-drag'
+         });
+      }
+
+      enableDragDrop();
    </script>
 </body>
 
