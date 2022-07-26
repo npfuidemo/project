@@ -1,0 +1,123 @@
+/* bootstrap-tagsinput v0.8.0 */
+.bootstrap-tagsinput {
+  border: 1px solid #d2d2d2;
+  border-width: 0 0 1px;
+  background: #fff;
+  padding: 5px;
+  padding-left: 0;
+  border-radius: 0;
+  width: 100%;
+  display: block;
+  color: #495057;
+  max-width: 100%;
+  line-height: 22px;
+  cursor: text;
+  box-shadow: none;
+  outline: 0;
+  max-width: inherit;
+
+  .tag {
+    margin-right: 2px;
+    color: #fff;
+    margin-bottom: 6px;
+    display: inline-block;
+    padding: 6px;
+    cursor: pointer;
+
+    & [data-role="remove"] {
+      margin-left: 8px;
+      cursor: pointer;
+
+      &:after {
+        content: '\00D7';
+        padding: 0px 2px;
+        position: absolute;
+        right: 5px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+    padding-left: 0;
+    min-width: 220px;
+    text-overflow: initial;
+
+    &[placeholder] {
+      &::-webkit-input-placeholder {
+        color: #999;
+      }
+
+      &::-moz-placeholder {
+        color: #999;
+      }
+
+      &:-ms-input-placeholder {
+        color: #999;
+      }
+
+      &:-moz-placeholder {
+        color: #999;
+      }
+    }
+  }
+
+  &.has-tags input {
+    width: auto;
+    max-width: 110px;
+    min-width: 110px;
+    max-height: 22px;
+
+    &::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &::-moz-placeholder {
+      color: transparent;
+    }
+
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    &:-moz-placeholder {
+      color: transparent;
+    }
+  }
+
+  .label {
+    background: #bfcff2;
+    border: 1px solid #88a6e7;
+    color: #4c79dc;
+    font-weight: 500;
+    padding: 0.5em 1.5em 0.5em 0.6em;
+    margin: 0 5px 5px 0;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    position: relative;
+  }
+}
+
+.bootstrap-tagsinput {
+  .tt-menu {
+    background-color: #fff;
+    padding: 10px 10px;
+    border-radius: .25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+
+    .tt-suggestion.tt-selectable {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.expandSearch {
+  input[type="search"] {
+    min-width: 170px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    background: none;
+
+    &:focus {
+      // min-width: 250px;
+      background: none;
+    }
+  }
+
+  .search_icon {
+    top: 6px;
+  }
+
+  .form-control {
+    max-height: 30px;
+  }
+
+  .cross-icon {
+    top: 9px;
+    ;
+  }
+}
+
+.expended-search-wrpper {
+  height: 0;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+
+  @media only screen and (min-width:991px) {
+    width: 0;
+    right: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 230px;
+    right: 5px;
+  }
+
+  @media(max-width:767px) {
+    min-height: 33px;
+    min-width: 333px !important;
+    top: 13px;
+    left: -153px !important;
+    right: 0;
+    background: #fcfcfc;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  &.active {
+    z-index: 13;
+    overflow: unset;
+
+    @media only screen and (min-width: 991px) {
+      width: 350px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      min-height: 55px;
+      min-width: 343px !important;
+      top: 13px;
+      left: -153px !important;
+      right: 0;
+      background: rgb(252, 252, 252);
+      box-shadow: 0 0 999px rgba(0, 0, 0, .9);
+    }
+
+  }
+
+  .bootstrap-select .btn {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #495057;
+  }
+
+  .dropdown-toggle:after {
+    font-size: 18px;
+    opacity: .8;
+    line-height: 1.3;
+  }
+
+  .material-icons-outlined {
+    line-height: .6;
+    font-size: 20px;
+  }
+
+  .row {
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .col-1 {
+    background: #eeeded;
+  }
+}
+
+.expanded-dropdown-menu {
+  min-width: 100%;
+  left: 0 !important;
+}
+
+.searchPositionrightTop {
+  position: absolute;
+  right: 235px;
+  top: 11px;
+  z-index: 112;
+
+  .expandSearch .form-control {
+    max-height: 32.5px;
+  }
+
+  @media (max-width:767px) {
+    top: 44px;
+    right: 199px;
+  }
+
+  @media (max-width:767px) {
+    .expended-search-link {
+      display: none !important;
+    }
+  }
+}
+
+#expendedSearch {
+  @media only screen and (max-width: 760px) {
+    position: static !important;
+
+    .expended-search-wrpper {
+      z-index: 9;
+      top: 45px;
+      left: auto !important;
+      right: 15px !important;
+    }
+  }
+}

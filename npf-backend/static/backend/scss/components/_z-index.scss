@@ -1,0 +1,31 @@
+$z-index: 5;
+
+@for $i from 0 through $z-index {
+    .z-#{$i} {
+        z-index: $i;
+    }
+
+    .z-#{$i * 10} {
+        z-index: $i*10;
+    }
+}
+
+.z-index-99 {
+    z-index: 99;
+}
+
+.z-index-999 {
+    z-index: 999;
+}
+
+.z-index-9999 {
+    z-index: 9999;
+}
+
+.z-index-99999 {
+    z-index: 99999;
+}
+
+.z-index-999999 {
+    z-index: 999999;
+}

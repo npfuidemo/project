@@ -1,0 +1,20 @@
+.main-footer {
+    background: #fff;
+    padding: 10px 15px;
+    color: #444;
+    border-top: 1px solid #eee;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+@include media(">=tablet") {
+    .nav-open {
+        footer{
+            margin-left: 180px;
+            transition:all .5s;
+        }
+    }
+}

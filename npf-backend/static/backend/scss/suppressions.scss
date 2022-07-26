@@ -1,0 +1,66 @@
+// Vendor
+@import
+    "vendors/date-range-picker",
+    'vendors/material-kit/variables',
+    'abstracts/variables',
+    'vendors/material-kit/mixins',
+    'abstracts/mixins',
+    'vendors/include-media',
+    'vendors/chosen/main',
+    'vendors/bootstrap-tagsinput/bootstrap-tagsinput',
+    'components/verticalmenulist',
+    'components/tabcontent',
+    'components/configtabcontent',
+    'components/skeleton-loader',
+    'components/notifyAlert',
+    'components/plusMinushide',
+    'components/alert-modal',
+    'components/grid-table', 
+    'components/expandSearch';
+
+
+
+
+
+
+    #suppressionsDateRange{
+        cursor: pointer;
+        padding:3px 10px 3px 0;
+        border: 1px solid #e5e5e5;
+        animation: fadein 2s;
+        border-radius:4px;
+        span {
+            text-align: Center;
+            display: inline-block;
+            width: calc(100% - 20px);
+            font-size: 12px;
+            min-width:60px;
+            position: relative;
+            margin-right:20px;
+            padding-left:10px;
+            min-height:13px;
+            &:after {
+                content: "\f073";
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                color: #4b7bdd;
+                position: absolute;
+                right: -20px;
+                top:4px;
+            }
+        }
+        }
+        
+        .grid-table table.table tbody tr.grid-table-row td {
+        font-weight: normal !important;
+        }
+        
+
+        .btnRemove{
+            .fa{
+                width:15px;
+                height:15px;
+                text-align:center;
+            }
+        }

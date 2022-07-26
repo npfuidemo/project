@@ -1,0 +1,35 @@
+.togglebutton{
+  &.small{
+      label{
+          .toggle{
+              height: 10px;
+              &:after{
+                  width: 14px;
+                  height: 14px;
+                  left:0;
+                  top:-2px;
+              }
+          }
+          input[type=checkbox]{
+              &:checked{
+                  &[disabled]{
+                      &+.toggle{
+                          background-color: rgba(80,80,80,0.7);
+                          &:after{
+                              border-color: rgba(80,80,80,0.7);
+                          }
+                      }
+                  }
+                  &+.toggle{
+                      &::after{
+                          left: 16px;
+                      }
+                  }
+              }
+              &[disabled]+.toggle{
+                  height: 10px;
+              }
+          }
+      }
+  }
+}

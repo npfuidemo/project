@@ -1,0 +1,234 @@
+.badge-notify {
+    background:#ff4003;
+    position: absolute;
+    top: -4px;
+    right: -1px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 8px;
+    line-height: 16px;
+    height: 16px;
+    text-align: center;
+    width: 16px;
+    display: block;
+}
+.navbar-nav {
+    .nav-item{
+        a.call-noti{
+            margin: 9px 8px 8px 12px !important;
+        }
+    }
+}
+.navbar-nav{
+    .seprator-right {
+        .material-icons{
+            transform: rotate(0deg);
+        }
+    }
+}
+.display-cell {
+    display: table-cell !important;
+}
+.notifyCountUl{
+    padding: 0;
+    margin: 0;
+    
+    li {
+        display: table;
+        width: 100%;
+        font-size: 13px;
+        border-bottom: 1px solid #ccc;
+        -moz-border-image: -moz-linear-gradient(right, white, #ddd, #ddd, white) 1 20%;
+        border-image: linear-gradient(to right, white 0%, #ddd 40%, #ddd 60%, white 100%) 1 20%;
+        padding: 10px;
+      &:hover, &.active{
+          background-color: #f8f9fa;
+      }  
+    }
+}
+.disMobile {
+    min-width: 140px;
+    vertical-align: middle;
+}
+.modal-dialog .modal-content {
+    /* box-shadow: 0 27px 24px 0 rgb(0 0 0 / 20%), 0 40px 77px 0 rgb(0 0 0 / 8%); */
+    box-shadow: 0 15px 24px 0 rgb(0 0 0 / 10%) !important;
+}
+.notifyCountUl {
+    a{
+        color: $brand-color;
+        i{
+            color: #5f6368;
+        }
+    }
+    .callIco {
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 5px;
+        position: relative;
+        color: $brand-color;
+        i{
+            color: #4b7bdd;
+            background: #fff;
+            vertical-align: middle;
+            border-radius: 50%;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #4b7bdd;
+            font-size: 16px;
+        }
+    }
+    .btn{
+        i{
+            color: $color-white;
+            font-size: 13px !important;
+            margin-right: 4px;
+        }
+    }
+}
+.disAudio {
+    min-width: 220px;
+    vertical-align: bottom;
+}
+#call-notification {
+    z-index: 1051;
+    .modal-footer{
+        i{
+            font-size: 19px;
+        }
+    }
+}
+.notifyCountUl{
+    audio {
+        width: 90%;
+        margin: 0;
+        height: 30px;
+    }
+    source{
+        background-color: red;
+    }
+}
+.disBtn{
+    .btn{padding: 5px 15px;
+       i{
+           color: $brand-color;
+       }
+      &:hover{
+          background-color: transparent;
+      } 
+    }
+}
+.outbound-list{
+    .disBtn{
+        .btn{
+            margin-top: 11px;
+        }
+    }
+}
+.modal-detail{
+    .modal-title{
+        i{
+           color: #4b7bdd;
+           background: #fff;
+           vertical-align: middle;
+           border-radius: 50%;
+           padding: 5px;
+           margin-right: 8px;
+           text-align: center;
+           border: 1px solid #4b7bdd;
+           font-size: 16px !important;
+           }
+        }
+    .modal-content {
+        box-shadow: 0 15px 24px 0 rgb(0 0 0 / 10%) !important;
+    }
+    .modal-header{
+        .close{
+            opacity: 1 !important;
+        }
+        .material-icons{
+            font-size: 30px;
+            color: $brand-color;
+            opacity: 1;            
+        }
+    }
+}
+    .notification-popup-detail{
+        font-size: 14px;
+        padding-left: 42px;
+        .list-detail{
+            font-weight: 400;
+        }
+        .mail-maxw{
+            max-width: 175px;
+        }
+        .material-icons{
+            font-size: 16px;
+        }        
+        i{
+        color: #4b7bdd;
+        background: #fff;
+        vertical-align: middle;
+        border-radius: 50%;
+        padding: 6px;
+        margin-right: 10px;
+        text-align: center;
+        border: 1px solid #4b7bdd;
+        margin-top: 5px;
+        font-size: 16px;
+        }
+        small{
+            font-size: 13px;
+            display: block;
+            line-height: 1.3;
+        }
+    }
+
+#action-detail{
+    .modal-dialog{
+        .modal-content {
+            box-shadow: 0 15px 24px 0 rgb(0 0 0 / 10%) !important;
+        }
+    }
+}
+button.close_modal {
+    position: absolute;
+    right: 15px;
+    top: 11px;
+	border:0;
+	background:none;
+	cursor:pointer;
+}
+
+.close_modal_c{
+	z-index:1060!important;
+	 
+}
+.offCanvasModal.widthbound {
+	right:0px !important;
+    width: 550px !important;
+	z-index:1051;
+	left:auto;
+}
+.firstModal, .secondModal{
+    button{
+        &.close_modal{
+            position: absolute;
+            right: 4px;
+            top: 8px;
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.modal-backdrop.show + .modal-backdrop.show{
+    opacity: 0 !important;
+}
+
+@include media("<largephone") {    
+    .modal.right.fade.show .modal-detail {
+        right: 0px;
+    }
+}

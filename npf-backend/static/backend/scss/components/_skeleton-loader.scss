@@ -1,0 +1,47 @@
+.custom-skeleton {
+    margin-bottom: 15px;
+
+    .skeleton-loader {
+        width: 100%;
+        min-height: 12px;
+        display: block;
+        margin: 0 0 15px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 80%), #eaeaea;
+        background-repeat: repeat-y;
+        background-size: 50px 500px;
+        background-position: 0 0;
+        animation: shine 1s infinite;
+        border-radius: 10px;
+
+        &.picture{
+            min-height: 16px;
+            max-width: 16px;
+            border-radius: 100%;
+            margin-bottom: 0;
+        }
+
+        &.title {
+            min-height: 18px;
+            width: 60%;
+        }
+
+        &.description {
+            width: 80%;
+            margin-bottom: 0;
+
+            &+& {
+                width: 75%;
+
+                &+& {
+                    width: 65%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes shine {
+    to {
+        background-position: 100% 0, 0 0;
+    }
+}

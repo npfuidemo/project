@@ -1,0 +1,89 @@
+.badge-notify {
+  background: #ff4003;
+  position: absolute;
+  top: -4px;
+  right: -1px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 8px;
+  line-height: 16px;
+  height: 16px;
+  text-align: center;
+  width: 16px;
+  display: block;
+}
+
+.navbar-nav {
+  .nav-item {
+    a.call-noti {
+      margin: 9px 8px 8px 12px !important;
+      background-color: rgba(36, 93, 136, .08) !important;
+    }
+    .nav-link .material-icons,
+    .nav-link .fa{
+      @media only screen and (min-width: 760px){
+        color: #6c757d !important;
+      }
+      @media only screen and (max-width: 760px){
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.openbtn-sidebar {
+  width: 45px;
+  min-height: 50px;
+}
+
+#sectionsNav {
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        padding: 8px 4px;
+        margin: 8px 4px;
+        width: 32px;
+        height: 32px;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .select-box {
+    padding-left: 5px;
+
+    .bs-searchbox {
+      padding-top: 0;
+      .form-control {
+        padding-right: 0;
+        padding-left: 30px;
+      }
+
+      &:after {
+        right: auto;
+        left: 15px;
+        top: 13px;
+        font-size: 16px;
+        color: #6c757d;
+      }
+    }
+  }
+}
+
+@include media("<tablet") {
+  .brand-color {
+    background-color: $brand-color !important;
+  }
+
+  .navbar {
+    .navbar-toggler {
+      .navbar-toggler-icon {
+        background-color: $color-white;
+      }
+    }
+  }
+}

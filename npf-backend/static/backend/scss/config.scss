@@ -1,0 +1,41 @@
+/* vertical menu list */
+@import 'vendors/material-kit/variables',
+'abstracts/variables',
+'vendors/material-kit/mixins',
+'abstracts/mixins',
+'vendors/include-media',
+'vendors/chosen/main',
+'vendors/bootstrap-tagsinput/bootstrap-tagsinput',
+'components/verticalmenulist',
+'components/tabcontent',
+'components/configtabcontent',
+'components/skeleton-loader',
+'components/notifyAlert',
+'components/plusMinushide',
+'components/alert-modal',
+'components/tag-condition-label',
+'components/sortable',
+'components/lead-stage-edit',
+'components/selectPickerNoData';
+
+.config- {
+    &condition-bar {
+        z-index: 99;
+        top: 92px;
+    }
+
+    &stage-row {
+        position: sticky;
+        top: 140px;
+        z-index: 1;
+    }
+
+    &stage-bar {
+        z-index: 99;
+        top: 92px;
+    }
+}
+
+.chosen-container-multi .chosen-choices {
+    background: transparent !important;
+}

@@ -1,0 +1,45 @@
+.noDataFoundDiv{
+    background:$white-color;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    .innerHtml{
+        img, span{
+            display:block;
+            margin:0 auto;
+            text-align:center;
+            font-size:0.95rem;
+        }
+    }
+    &.vh-100{
+        min-height:calc(100vh - 172px);
+    }
+    &.small-img{
+        img{
+            width:120px;
+            height:auto;
+        }
+    }
+    &.vh-page-100{
+        min-height:calc(100vh - 184px);
+    }
+    &.vh-page-100-modal{
+        min-height:calc(100vh - 84px)!important;
+    }
+}
+
+.noDataFoundBlock{
+    min-height:auto;
+    background:$white-color;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    .innerHtml{
+            img, span{
+                display:block;
+                margin:0 auto;
+                text-align:center;
+                font-size:0.95rem;
+            }
+    }
+}

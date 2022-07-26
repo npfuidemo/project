@@ -1,0 +1,116 @@
+.grid-table table.table tbody tr.grid-table-row td {
+    font-weight: normal !important;
+}
+
+.custom-file #filename {
+    border: 0;
+    width: 100%;
+}
+
+.steps {
+    .h100 {
+        min-height: calc(100vh - 175px);
+    }
+}
+
+.arrow-icon {
+
+    i,
+    .fa {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $brand-color;
+        border-radius: 50%;
+        padding: 1px;
+        color: $brand-color;
+    }
+}
+
+
+@media (max-width: 767px) {
+    #master-data-detail-popup {
+        .expended-search-wrpper.active {
+            left: -165px !important;
+            top: 43px;
+            min-height: 33px;
+        }
+
+        .modal-header .modal-title {
+            width: calc(100% - 40px);
+        }
+    }
+
+    #master-data-listing,
+    #masterDataChildlisting {
+        margin-top: 42px !important;
+    }
+}
+
+#master-data-detail-popup {
+    .expandSearch .search_icon {
+        top: 8px;
+    }
+}
+
+#ConfirmPopupArea,
+#addMasterDataModal {
+    z-index: 1053;
+}
+
+.zindex3 {
+    z-index: 111 !important;
+}
+
+
+#createChildMasterData {
+    margin: 10px 0 0 15px;
+    position: relative;
+
+    #add-child-div {
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            width: 1px;
+            height: calc(100% - 17px);
+            position: absolute;
+            display: block;
+            background: #ccc;
+            left: -12px;
+            top: -18px;
+        }
+
+        &:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            display: block;
+            background: #ccc;
+            left: -15px;
+            top: -26px;
+            border-radius: 50%;
+        }
+
+        div.rowSpaceReduce {
+            position: relative;
+
+            &:after {
+                content: '';
+                width: 13px;
+                height: 1px;
+                background: #ccc;
+                position: absolute;
+                top: 17px;
+                left: -7px;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+
+.appendFormChildMasterData {
+    max-height: 50vh !important;
+}

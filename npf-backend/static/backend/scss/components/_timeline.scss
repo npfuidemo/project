@@ -1,0 +1,57 @@
+.timeline {
+  &-group {
+    position: relative;
+
+    &:before {
+      content: '';
+      height: calc(100% - 25px);
+      border-left: 1px dashed #ccc;
+      position: absolute;
+      left: -2px;
+      top: 16px;
+    }
+  }
+
+  &-item {
+    position: relative;
+
+    &:before {
+      content: '\e9c1';
+      color: $primary;
+      left: -8px;
+      top: 7px;
+      width: 15px;
+      height: 25px;
+      position: absolute;
+      background-color: #fff;
+      font-family: 'Material Icons';
+    }
+
+    &-last {
+      position: relative;
+
+      &:before {
+        content: '';
+        top: 0;
+        left: -3px;
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        background: white;
+      }
+    }
+  }
+}
+
+
+.timeline-group.slightly-left {
+  &:before {
+    left: 17px;
+  }
+
+  .timeline-item {
+    &:before {
+      content: none;
+    }
+  }
+}

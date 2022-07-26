@@ -1,0 +1,75 @@
+@import 'vendors/material-kit/variables',
+'abstracts/variables',
+'vendors/material-kit/mixins',
+'abstracts/mixins',
+'vendors/include-media', 'vendors/chosen/main', 'vendors/bootstrap-tagsinput/bootstrap-tagsinput', 'vendors/chosen/main';
+
+@import "./components/grid-table", "./components/expandSearch", "./components/border-card", "./components/modal-accordion", "./components/custom-input", "./components/hierarchy-structure", "./components/multi-select-pill", "./components/bulk-upload", "components/status", "components/verticalmenulist";
+
+.customSelectMenu{
+  max-width: 80px;
+  border:0;
+  padding: 0;
+
+  .btn{
+    border:0!important;
+    padding:0;
+  }
+}
+
+
+.rightColumnReport {
+  overflow: hidden;
+}
+
+.leftColumnReport{
+  position: relative;
+  z-index:11;
+}
+
+.leftColumnReport .card{
+  border-radius:0;
+}
+
+.addmenucontainer {
+  position: relative;
+
+      & a.active:after{
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-right: 15px solid #fff;
+      border-bottom: 15px solid transparent;
+      content: '';
+      position:absolute;
+      right: -30px;
+      }
+}
+
+.addMenudiv {
+  left: -410px;
+  position: absolute;
+  top: 140px;
+  -webkit-transition: left .2s ease;
+  -moz-transition: left .2s ease;
+  -o-transition: left .2s ease;
+  transition: left .2s ease;
+  -webkit-transition-delay: .1s;
+  -moz-transition-delay: .1s;
+  -o-transition-delay: .1s;
+  transition-delay: .1s;
+  width: 400px;
+  max-height: 400px;
+  overflow: auto;
+  z-index: 0;
+  box-shadow: 0px 0px 10px 0px rgba(217, 217, 217, 1);
+  background: #fff;
+  min-height: 200px;
+
+
+&.active {
+  display: block;
+  left: 15px;
+  z-index: 1;
+}
+}

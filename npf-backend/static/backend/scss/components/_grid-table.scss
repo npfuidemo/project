@@ -1,0 +1,448 @@
+@import '../vendors/material-kit/variables';
+@import './sorting', './table-popover', './copy-element';
+.grid-table table.table {
+    width: 100%;
+    border-radius: 4px;
+    background: #fafafa;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-spacing: 0;
+
+    @media (min-width:767px) {
+        border-collapse: separate;
+    }
+
+    tr {
+        margin: 10px 0;
+        padding: 10px 0;
+
+        td,
+        th {
+            margin: 0;
+            background-color: #fff;
+            vertical-align: middle;
+
+            .hover-effect {
+                width: 22px;
+                height: 22px;
+                align-items: center;
+                justify-content: center;
+                // background-color: #f1f3f4 !important;
+
+                i {
+                    line-height: 1rem;
+                }
+            }
+
+            small,
+            .small {
+                line-height: 1.2;
+            }
+
+            @media only screen and (min-width: 991px) {
+                &.min-max-30 {
+                    min-width: 30px;
+                    max-width: 30px;
+                    width: 30px;
+                }
+
+                &.min-max-50 {
+                    min-width: 50px;
+                    max-width: 50px;
+                    width: 50px;
+                }
+
+                &.min-max-75 {
+                    min-width: 75px;
+                    max-width: 75px;
+                    width: 75px;
+                }
+
+                &.min-max-100 {
+                    min-width: 100px;
+                    max-width: 100px;
+                    width: 100px;
+                }
+
+                &.min-max-150 {
+                    min-width: 150px;
+                    max-width: 150px;
+                    width: 150px;
+                }
+
+                &.min-max-200 {
+                    min-width: 200px;
+                    max-width: 200px;
+                    width: 200px;
+                }
+
+                &.min-max-250 {
+                    min-width: 250px;
+                    max-width: 250px;
+                    width: 250px;
+                }
+
+                &.min-max-300 {
+                    min-width: 300px;
+                    max-width: 300px;
+                    width: 300px;
+                }
+
+                &.min-max-350 {
+                    min-width: 350px;
+                    max-width: 350px;
+                    width: 350px;
+                }
+
+                &.has-checkbox {
+
+                    input[type="radio"],
+                    input[type="checkbox"] {
+                        margin-top: 4px;
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+
+        }
+
+        th {
+            border: 0;
+        }
+    }
+
+    thead {
+        tr {
+
+            td,
+            th {
+                background: #e0e4e6;
+                font-weight: 600;
+
+            }
+        }
+
+    }
+
+    thead {
+        tr {
+            th {
+                border: 0 !important;
+            }
+        }
+    }
+
+    tbody tr {
+        &.grid-table-row {
+
+
+            td {
+                font-weight: 400;
+                vertical-align: middle;
+
+                [data-toggle='collapse'] {
+                    i.fa:before {
+                        font-size: 1rem;
+                        content: '\f107';
+                    }
+
+                    &[aria-expanded='true'] i.fa:before {
+                        content: '\f106';
+                    }
+                }
+            }
+
+            .table-des {
+                max-width: 290px;
+                white-space: normal;
+            }
+
+            &.has-selected {
+                td {
+                    background: lighten($primary, 40%) !important;
+                }
+
+                &+.collapse {
+                    opacity: .7;
+                }
+            }
+
+            &.read {
+                td {
+                    font-weight: 300 !important;
+
+                    .badge {
+                        font-weight: 400 !important;
+                    }
+
+                    @media only screen and (min-width: 768px) {
+                        background: #fbfbfb;
+                    }
+                }
+
+
+                &+.collapse {
+                    td {
+                        background: #fafafa;
+                    }
+                }
+            }
+
+            &.row-selected {
+                td {
+                    background: #e9edf8;
+                }
+            }
+
+            &:hover td {
+                background: #fcfcfc;
+                border-top: 1px solid #eee;
+            }
+
+        }
+
+        &:not(.grid-table-row) td {
+            background: #fcfcfc;
+
+            p {
+                font-size: 13px;
+            }
+        }
+
+    }
+}
+
+// @include media("<tablet") {
+@media only screen and (max-width: 768px) {
+    .grid-table {
+        table.table {
+            * {
+                position: relative;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tbody {
+                tr {
+                    border-bottom: none;
+
+                    &.grid-table-row {
+                        border-top: 11px solid #f1f3f4;
+
+                        &:first-child {
+                            border: none;
+                        }
+                    }
+
+                    td {
+                        width: 100%;
+                        display: block;
+                        padding-left: 40% !important;
+                        padding-top: 10px;
+                        padding-bottom: 5px;
+
+                        @media only screen and (max-width: 767px) {
+                            padding-left: 35% !important;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 10px;
+                        }
+
+                        &:before {
+                            content: attr(data-title);
+                            font-size: 14px;
+                            color: #999;
+                            line-height: 1.2;
+                            font-weight: unset;
+                            position: absolute;
+                            width: 40%;
+                            top: 14px;
+                            left: 20px;
+
+                            @media only screen and (max-width: 767px) {
+                                font-size: 11px;
+                            }
+                        }
+
+                        &.has-checkbox {
+                            min-height: 25px;
+                            padding-top: 10px !important;
+                            padding-left: 20px !important;
+
+                            input[type="radio"],
+                            input[type="checkbox"] {
+                                position: absolute;
+                                left: 3px;
+                                top: 4px;
+                            }
+                        }
+
+                        &:empty {
+                            padding: 0;
+                        }
+                    }
+
+                    &.collapse td {
+                        padding-left: 20px !important;
+
+                        &:before {
+                            width: 0;
+                        }
+
+                        &.has-checkbox {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.grid-table table.table tbody.custom-skeleton {
+    .skeleton-loader.description {
+        width: 100%;
+    }
+
+    tr td {
+        padding-left: 10px !important;
+
+        &:before {
+            content: none;
+
+        }
+    }
+}
+
+
+.form-check .form-check-sign .check {
+    width: 15px;
+    height: 15px;
+}
+
+.form-check .form-check-sign .check:before {
+    margin-top: -5px;
+    margin-left: 5px;
+}
+
+.pagination-input {
+    max-width: 50px;
+}
+
+.responsive-table {
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .grid-table table.table tbody tr.grid-table-row {
+        &:not(:first-child) {
+            border-width: 1px 0 0 0;
+        }
+    }
+
+    .grid-table [data-sticky="true"] {
+        table {
+            overflow: auto;
+        }
+
+        table thead tr th,
+        table thead tr td {
+            position: sticky;
+            top: 0;
+        }
+
+        table[data-colfix="1"] td:first-child,
+        table[data-colfix="1"] th:first-child,
+        table[data-colfix="2"] td:first-child,
+        table[data-colfix="2"] th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 11;
+            border-right: none;
+        }
+
+        table[data-colfix="1"] td:first-child,
+        table[data-colfix="1"] th:first-child {
+            // border-right: 1px solid #eee;
+        }
+
+
+        table[data-last-col="true"] td:last-child,
+        table[data-last-col="true"] th:last-child {
+            position: sticky;
+            right: 0;
+            z-index: 11;
+            // border-left: 1px solid #eee;
+        }
+
+        table[data-colfix="2"] td:nth-child(2),
+        table[data-colfix="2"] th:nth-child(2) {
+            position: sticky;
+            z-index: 11;
+            // border-right: 1px solid #eee;
+        }
+
+    }
+}
+
+.table {
+    tbody {
+        +tbody {
+            border-top-color: #ddd;
+            border: none;
+        }
+    }
+}
+
+.selection-row {
+    min-height: 30px;
+    margin-bottom: 5px;
+
+    .selection-count {
+        background: #ccd9f5 !important;
+        padding: 5px 0;
+        border-radius: 4px;
+
+        @media only screen and (max-width: 760px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.grid-table {
+    .table-last-action {
+        visibility: visible;
+        opacity: 1;
+
+        @media (min-width:767px) {
+            visibility: hidden;
+            transition: .3s;
+            opacity: 0;
+
+            &.action-clicked,
+            &.show {
+                visibility: visible;
+                opacity: 1;
+                > a{
+                    background: $bg-light-blue;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:767px) {
+    .grid-table {
+        table tr:hover .table-last-action {
+            visibility: visible;
+            transition: 1s;
+            opacity: 1;
+        }
+    }
+}

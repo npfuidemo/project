@@ -1,0 +1,67 @@
+// Vendor
+@import "vendors/owl.carousel/src/scss/owl.carousel.scss",
+"vendors/date-range-picker";
+
+// Sections and  pages
+@import "components/grid-table",
+"components/expandSearch",
+"components/border-card",
+"components/modal-accordion",
+"components/conversation",
+"components/status",
+"components/video-iframe-modal",
+"components/owl-carousal";
+
+@media only screen and (min-width: 768px) {
+  .ticket-left-panel {
+    min-height: 500px;
+    // max-height: calc(100vh - 110px);
+  }
+
+  #view-ticket-details-tab {
+    overflow: auto;
+  }
+
+  .fullHeight {
+    #view-ticket-details-tab {
+      height: calc(100vh - 95px);
+    }
+  }
+}
+
+.ticket-left-panel {
+  overflow: hidden;
+
+  .text-danger {
+    color: #ee554b !important;
+  }
+
+  .text-success {
+    color: #65c640 !important;
+  }
+
+  .text-warning {
+    color: #e49f20 !important;
+  }
+
+  &:hover {
+    overflow: overlay;
+    scrollbar-width: thin;
+    z-index: 1;
+  }
+}
+
+.ticket-right-panel {
+  border-left: #d1d1d1 1px solid;
+}
+
+.student-query-header {
+  .bootstrap-select .dropdown-menu {
+    min-width: 180px;
+  }
+}
+
+.modal-accordion {
+  min-height: auto;
+  max-height: none;
+}
