@@ -6,6 +6,10 @@
 #h_college_id_chosen .chosen-search input[type="text"]{padding: 10px 5px; border-width: 0 0 1px; box-shadow: none;}
 #h_college_id_chosen .chosen-results li:hover{box-shadow:0 0 20px 0 rgba(0, 0, 0, .1);}
 #h_college_id_chosen .chosen-container .chosen-results{max-height: 150px;}
+#h_college_id_chosen .chosen-results li.highlighted,
+#h_college_id_chosen .chosen-results li.result-selected{
+    background: #e1e9f9 !important; color: #333 !important;
+}
 @media (max-width: 469px) {
     .collpase-mob {
         text-align: center;
