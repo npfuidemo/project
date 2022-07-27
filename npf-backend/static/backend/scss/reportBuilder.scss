@@ -1017,3 +1017,8 @@
     opacity: .6;
   }
 }
+.conditional-logic{
+  .conditional-logic-block:before{
+    height:calc(100% - 141px);
+  }
+}
