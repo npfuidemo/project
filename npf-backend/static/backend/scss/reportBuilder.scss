@@ -1016,9 +1016,10 @@
   }
 
   .ghost-drag {
-    border: 2px dashed #ccc !important;
+    border: 2px dashed #4c79dc !important;
     background: #fff;
     opacity: .6;
+    min-height:30px;
   }
 }
 .conditional-logic{
