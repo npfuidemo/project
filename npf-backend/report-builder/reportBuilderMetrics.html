@@ -968,7 +968,7 @@
 
    <div class="modal fade offCanvasModal  popup-customization right" id="customeMetricsModal" tabindex="-1"
       role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
          <div class="modal-content h-100">
             <div class="modal-header border-bottom-blue">
                <h5 class="modal-title my-0">Create Custome Metrics</h5>
@@ -988,38 +988,75 @@
                      </div>
                   </div>
 
+                  <label class="text-dark  pt-md-2 font-weight-bold">Define Logics</label>
                   <div class="p-3 bg-light">
                      <div class="row align-items-start form-group pt-0 bmd-form-groupm mb-0">
-                        <div class="col-12 col-lg-4">
-                           <label class="text-dark  pt-md-2">Define Logics</label>
-                        </div>
-                        <div class="col-12 col-lg-8">
+                        <div class="col-sm-4">
                            <select class="form-control selectpicker" data-actions-box="true"
-                              data-selected-text-format="count > 1" data-style="px-2 border" name="status" id="status"
+                              data-selected-text-format="count > 1" data-style="px-2 border" name="dateType" id="dateType"
                               tabindex="-98">
-                              <option value="">Date</option>
-                              <option value="">Dropdown</option>
-                              <option value="">Users</option>
-                              <option value="">Text</option>
-                              <option value="">Count</option>
+                              <option value="date">Date</option>
+                              <option value="dropdown">Dropdown</option>
+                              <option value="user">Users</option>
+                              <option value="text">Text</option>
+                              <option value="count">Count</option>
                            </select>
                         </div>
-                     </div>
-                  </div>
-                  <p>and</p>
-                  <div class="p-3 bg-light">
-                     <div class="row align-items-start form-group pt-0 bmd-form-groupm mb-0">
-                        <div class="col-12 col-lg-4">
-                           <label class="text-dark  pt-md-2">Date</label>
+
+                        <div class="col-sm-4">
+                           <select class="form-control selectpicker" data-actions-box="true"
+                              data-selected-text-format="count > 1" data-style="px-2 border" name="select_type" id="select_type"
+                              tabindex="-98">
+                              <option value="between">Between</option>
+                              <option value="before">Before</option>
+                              <option value="after">After</option>
+                              <option value="not_empty">Is not empty</option>
+                              <option value="empty">Is empty</option>
+                           </select>
                         </div>
-                        <div class="col-12 col-lg-8">
+
+                        <div class="col-sm-4">
                            <div class="form-group pt-0 date-picker bmd-form-group bg-white">
                               <input type="text" class="form-control date-range-picker"
                                  placeholder="Select a date range" name="" id="">
                            </div>
                         </div>
                      </div>
+
+
+                     <div class="row align-items-start form-group pt-0 bmd-form-groupm mb-0">
+                        <div class="col-sm-4">
+                           <select class="form-control selectpicker" data-actions-box="true"
+                              data-selected-text-format="count > 1" data-style="px-2 border" name="dateType" id="dateType"
+                              tabindex="-98">
+                              <option value="dropdown">Dropdown</option>
+                           </select>
+                        </div>
+
+                        <div class="col-sm-4">
+                           <select class="form-control selectpicker" data-actions-box="true"
+                              data-selected-text-format="count > 1" data-style="px-2 border" name="select_type" id="select_type"
+                              tabindex="-98">
+                              <option value="">Equals</option>
+                              <option value="">Does Not Equal</option>
+                              <option value="">Is Empty</option>
+                              <option value="">Is not Empty</option>
+                           </select>
+                        </div>
+
+                        <div class="col-sm-4">
+                           <select class="form-control selectpicker" data-actions-box="true"
+                           data-selected-text-format="count > 1" multiple="multiple" data-live-search="true" data-actions-box="true" data-size="5" data-style="px-2 border" name="select_type" id="select_type"
+                           tabindex="-98">
+                           <option value="">Option 1</option>
+                           <option value="">Option 2</option>
+                           <option value="">Option 3</option>
+                           <option value="">Option 4</option>
+                        </select>
+                        </div>
+                     </div>
                   </div>
+
                </form>
             </div>
 
