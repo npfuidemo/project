@@ -1000,14 +1000,18 @@
     cursor: move;
 
     .sort-handle:after {
-      content: '';
+      content: '\e945';
       width: 13px;
       height: 28px;
       position: absolute;
       left: -18px;
-      top: 1px;
-      background: url("../images/drag-handle.png") no-repeat center;
+      top:5px;
+      font-family: 'Material Icons Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 18px;
       background-color: #fff;
+      color: #4c79dc;
     }
   }
 
