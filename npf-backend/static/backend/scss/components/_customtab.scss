@@ -80,13 +80,11 @@
 .inline_tabs.header-tabs {
     .nav-tabs {
         overflow: visible !important;
-
-        .nav-item {
-            &:first-child {
+        .nav-item{
+            &:first-child{
                 border-radius: .2rem 0 0 0;
             }
-
-            &:last-child {
+            &:last-child{
                 border-radius: 0 .2rem 0 0;
             }
         }

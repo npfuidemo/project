@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet" />
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+ <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.14/jquery.datetimepicker.min.css" rel="stylesheet" />
+ <link rel="stylesheet" href="../static/backend/css/main.css">
+ <link rel="stylesheet" href="../static/backend/css/opportunity.css">
+</head>
+
+<body>
+ <div class="container">
+  <form action="" class="mb-0">
+   <div class="conditional-logic bg-white border rounded">
+    <div class="conditional-logic-block">
+     <div class="bg-white px-3 mt-3 position-relative z-1 d-inline-block w-100">
+      <div class="row justify-content-between">
+       <div class="col-6 d-flex align-items-center">
+        <div class="conditional-logic-btn d-inline-block py-1 px-1">
+         <label for="conditional-logic-radio-and-0" class="m-0 d-inline-block">
+          <input type="radio" name="conditional-logic-radio" id="conditional-logic-radio-and-0" checked>
+          <span class="conditional-logic-span py-1 px-3 d-inline-block">All</span>
+         </label>
+         <label for="conditional-logic-radio-or-0" class="m-0 d-inline-block">
+          <input type="radio" name="conditional-logic-radio" id="conditional-logic-radio-or-0">
+          <span class="conditional-logic-span py-1 px-3 d-inline-block">Any</span>
+         </label>
+        </div>
+        <span class="text-dark ml-2"> Meet all criteria </span>
+       </div>
+       <div class="col-1">
+        <button
+         class="align-items-center bg-white border-0 d-flex hover-effect justify-content-center p-1 rounded-circle text-muted cursor-pointer"
+         type="button" data-toggle="tooltip" data-trigger="hover" data-placement="bottom"
+         title="Click here to Remove Block">
+         <span class="material-icons-outlined"> clear </span>
+        </button>
+       </div>
+      </div>
+      <div class="position-relative">
+       <div class="row align-items-center justify-content-end">
+        <div class="col-11">
+         <div class="d-flex align-items-start my-3 condition-row">
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <button class="mt-2 px-1 py-2 remove-condition" type="button">
+           <span class="material-icons-outlined fs-18"> remove </span>
+          </button>
+         </div>
+         <div class="d-flex align-items-start my-3 condition-row">
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <button class="mt-2 px-1 py-2 remove-condition" type="button">
+           <span class="material-icons-outlined fs-18"> remove </span>
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-light w-100 p-2 border-top rounded-bottom">
+      <div class="row justify-content-end">
+       <div class="col-3 text-right">
+        <div class="d-flex justify-content-end">
+         <a href="javascript:void(0);"
+          class="align-items-center btn btn-light btn-sm d-flex justify-content-center text-primary px-3">
+          <span class="material-icons-outlined fs-13 text-primary mr-1"> add </span>
+          Add New Condition
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="conditional-logic">
+    <div class="conditional-block">
+     <div class="conditional-logic-btn d-inline-block py-1 px-1">
+      <label for="conditional-logic-radio-and-1" class="m-0 d-inline-block">
+       <input type="radio" name="conditional-logic-radio-1" id="conditional-logic-radio-and-1" checked>
+       <span class="conditional-logic-span py-1 px-3 d-inline-block">And</span>
+      </label>
+      <label for="conditional-logic-radio-or-1" class="m-0 d-inline-block">
+       <input type="radio" name="conditional-logic-radio-1" id="conditional-logic-radio-or-1">
+       <span class="conditional-logic-span py-1 px-3 d-inline-block">Or</span>
+      </label>
+     </div>
+    </div>
+   </div>
+   <div class="conditional-logic bg-white border rounded">
+    <div class="conditional-logic-block">
+     <div class="bg-white px-3 mt-3 position-relative z-1 d-inline-block w-100">
+      <div class="row justify-content-between">
+       <div class="col-3">
+        <div class="conditional-logic-btn d-inline-block py-1 px-1">
+         <label for="conditional-logic-radio-and-2" class="m-0 d-inline-block">
+          <input type="radio" name="conditional-logic-radio-2" id="conditional-logic-radio-and-2" checked>
+          <span class="conditional-logic-span py-1 px-3 d-inline-block">All</span>
+         </label>
+         <label for="conditional-logic-radio-or-2" class="m-0 d-inline-block">
+          <input type="radio" name="conditional-logic-radio-2" id="conditional-logic-radio-or-2">
+          <span class="conditional-logic-span py-1 px-3 d-inline-block">Any</span>
+         </label>
+        </div>
+       </div>
+       <div class="col-1">
+        <button
+         class="align-items-center bg-white border-0 d-flex hover-effect justify-content-center p-1 rounded-circle text-muted cursor-pointer"
+         type="button" data-toggle="tooltip" data-trigger="hover" data-placement="bottom"
+         title="Click here to Remove Block">
+         <span class="material-icons-outlined"> clear </span>
+        </button>
+       </div>
+      </div>
+      <div class="position-relative">
+       <div class="row align-items-center justify-content-end">
+        <div class="col-11">
+         <div class="d-flex align-items-start my-3 condition-row">
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <button class="mt-2 px-1 py-2 remove-condition" type="button">
+           <span class="material-icons-outlined fs-18"> remove </span>
+          </button>
+         </div>
+         <div class="d-flex align-items-start my-3 condition-row">
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <div class="col px-2">
+           <input type="text" class="form-control">
+          </div>
+          <button class="mt-2 px-1 py-2 remove-condition" type="button">
+           <span class="material-icons-outlined fs-18"> remove </span>
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-light w-100 p-2 border-top rounded-bottom rounded-left">
+      <div class="row justify-content-end">
+       <div class="col-7">
+        <small class="text">All fields</small>
+       </div>
+       <div class="col-5 text-right">
+        <a href="javascript:void(0);" class="text-primary mr-2">Add New Condition</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </form>
+ </div>
+
+</body>
+
+</html>

@@ -1364,13 +1364,6 @@ input[type="checkbox"] {
         z-index: 0;
         cursor: pointer;
     }
-
-    .range-input {
-        position: relative;
-        z-index: 1;
-        background: transparent;
-        font-size: 95%;
-    }
 }
 
 .highlightedValue {
@@ -1529,20 +1522,6 @@ input[type="checkbox"] {
     white-space: normal;
 }
 
-.daterangepicker {
-    td.in-range {
-        background-color: lighten($primary, 35%) !important;
-        color: #333 !important;
-    }
-
-    .ranges li.active,
-    td.active,
-    td.active.off,
-    td.active:hover {
-        color: #fff !important;
-        background-color: $primary !important;
-    }
-}
 .header-has-search {
     @media only screen and (max-width: 767px) {
         padding-bottom: 60px !important;

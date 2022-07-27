@@ -109,7 +109,6 @@
         padding: 10px;
         color: #000;
         border-radius: 2px;
-
         &::placeholder {
             font-size: 95%;
         }
@@ -150,7 +149,7 @@
             position: static !important;
         }
     }
-
+    
     .no-results {
         font-size: 75%;
     }
@@ -163,5 +162,23 @@
     .validation-message {
         line-height: 1.4;
         margin-top: 5px;
+    }
+
+    .chosen-container {
+        border: 1px solid #d2d2d2;
+        border-radius: 2px;
+        min-height: 56px;
+
+        .search-choice {
+            margin-left: 5px !important;
+        }
+
+        .chosen-search-input {
+            padding-left: 8px !important;
+        }
+
+        .chosen-choices {
+            border: none;
+        }
     }
 }

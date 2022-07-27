@@ -114,28 +114,3 @@
 .appendFormChildMasterData {
     max-height: 50vh !important;
 }
-
-.selfhelp {
-    border-radius: 20px;
-    background: rgba($brand-color, .05);
-    color:$brand-color;
-    padding: .10rem .70rem .12rem .40rem;
-    font-size: 12px;
-    font-weight: 500;
-    border:1px solid rgba($brand-color,.2);
-    line-height:24px;
-
-    .iconH {
-        border-radius: 50%;
-        margin-right:2px;
-        color: $brand-color;
-
-        &:before {
-            color: #fff !important;
-        }
-    }
-
-    &:hover {
-        background: rgba($brand-color, .1);
-    }
-}
