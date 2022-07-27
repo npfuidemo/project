@@ -440,49 +440,49 @@
                                     class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
                                  </div>
                                  <div class="row" id="before_metrics_selection" style="display:block;">
-                                       <div class="col-sm-12 addmenucontainer">
-                                          <a class="d-flex align-items-center justify-content-end mr-2"
-                                             href="javascript:void(0)" onclick="showhideMenuDiv(this)">
-                                             <span class="material-icons-outlined  fs-16">add</span>
-                                             <span class="lineHeight16 fs-12">Add</span>
-                                          </a>
-                                       </div>
-                                       <div class="col-sm-12">
-                                          <ul class="selectedField p-2 drag-box" id="dragItemBox">
-                                             <li class="bg-light">
-                                                <span class="sort-handle">Lead</span>
-                                                <a href="javascript:void(0)" class="removeList">
-                                                   <span class="material-icons-outlined fs-12">
-                                                      close
-                                                   </span>
-                                                </a>
-                                             </li>
-                                             <li class="bg-light">
-                                                <span class="sort-handle">Application</span>
-                                                <a href="javascript:void(0)" class="removeList">
-                                                   <span class="material-icons-outlined fs-12">
-                                                      close
-                                                   </span>
-                                                </a>
-                                             </li>
-                                             <li class="bg-light">
-                                                <span class="sort-handle">Application2</span>
-                                                <a href="javascript:void(0)" class="removeList">
-                                                   <span class="material-icons-outlined fs-12">
-                                                      close
-                                                   </span>
-                                                </a>
-                                             </li>
-                                             <li class="bg-light">
-                                                <span class="sort-handle">Application3</span>
-                                                <a href="javascript:void(0)" class="removeList">
-                                                   <span class="material-icons-outlined fs-12">
-                                                      close
-                                                   </span>
-                                                </a>
-                                             </li>
-                                          </ul>
-                                       </div>
+                                    <div class="col-sm-12 addmenucontainer">
+                                       <a class="d-flex align-items-center justify-content-end mr-2"
+                                          href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                          <span class="material-icons-outlined  fs-16">add</span>
+                                          <span class="lineHeight16 fs-12">Add</span>
+                                       </a>
+                                    </div>
+                                    <div class="col-sm-12">
+                                       <ul class="selectedField p-2 drag-box" id="dragItemBox">
+                                          <li class="bg-light">
+                                             <span class="sort-handle">Lead</span>
+                                             <a href="javascript:void(0)" class="removeList">
+                                                <span class="material-icons-outlined fs-12">
+                                                   close
+                                                </span>
+                                             </a>
+                                          </li>
+                                          <li class="bg-light">
+                                             <span class="sort-handle">Application</span>
+                                             <a href="javascript:void(0)" class="removeList">
+                                                <span class="material-icons-outlined fs-12">
+                                                   close
+                                                </span>
+                                             </a>
+                                          </li>
+                                          <li class="bg-light">
+                                             <span class="sort-handle">Application2</span>
+                                             <a href="javascript:void(0)" class="removeList">
+                                                <span class="material-icons-outlined fs-12">
+                                                   close
+                                                </span>
+                                             </a>
+                                          </li>
+                                          <li class="bg-light">
+                                             <span class="sort-handle">Application3</span>
+                                             <a href="javascript:void(0)" class="removeList">
+                                                <span class="material-icons-outlined fs-12">
+                                                   close
+                                                </span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
                                  </div>
                                  <div class="row" id="after_metrics_selection" style="display:none;">
                                     <div class="col-sm-12 addmenucontainer">
@@ -764,10 +764,21 @@
                   <div id="metrics" style="">
                      <!-- addMenuDiv  start here -->
                      <div class="searchbar bg-light p-3">
-                        <h5 class="my-0 h6 text-dark mb-0">List of metrics</h5>
-                        <div class="fs-12 text-muted lineHeight16 mb-2">
-                           Choose a Numeric value you want to measure, like the number of leads
+                        <div class="row">
+                           <div class="col-sm-8">
+                              <h5 class="my-0 h6 text-dark mb-0">List of metrics</h5>
+                              <div class="fs-12 text-muted lineHeight16 mb-2">
+                                 Choose a Numeric value you want to measure, like the number of leads
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <button class="text-center p-2  btn-block btn btn-outline-primary" type="button"
+                                 data-toggle="modal" data-target="#customeMetricsModal"><span
+                                    class="material-icons">add</span>Create
+                              </button>
+                           </div>
                         </div>
+
                         <div class="form-group pt-0 searchWidthicon mb-0 bmd-form-group">
                            <span class="material-icons-outlined">search</span>
                            <input type="text" class="form-control main_search_metrics"
@@ -782,56 +793,52 @@
                         </p>
                      </div>
                      <div class="noData pt-5 pb-5 text-muted text-center"></div>
-                     <div class="nolist nogap sortorder p-3 maxdataScroll">
-                        <label class="text-dark custom-radio metrics" onclick="createCustomeMetrics()">
-                           <input type="radio" data-name="Lead Count" name="metrics" value="lead_count" class="metrics">
+                     <div class="nolist nogap sortorder p-3 maxdataScroll metricsList">
+                        <label class="text-dark custom-checkbox metrics">
+                           <input type="checkbox" data-name="Lead Count" name="metrics" value="lead_count">
                            <span class="custom-btn-span">All Leads</span>
+                           <div class="selectParameter mt-2">
+                              <label class="text-dark custom-checkbox">
+                                 <input type="checkbox" data-name="count" name="count">
+                                 <span class="custom-btn-span">Count</span>
+                              </label>
+
+                              <label class="text-dark custom-checkbox">
+                                 <input type="checkbox" data-name="sum" name="sum">
+                                 <span class="custom-btn-span">Sum</span>
+                              </label>
+
+                              <label class="text-dark custom-checkbox">
+                                 <input type="checkbox" data-name="percentage" name="percentage">
+                                 <span class="custom-btn-span">Percentage</span>
+                              </label>
+                           </div>
                         </label>
-                        <label class="text-dark custom-radio metrics" onclick="createCustomeMetrics()">
-                           <input type="radio" data-name="Application Count" name="metrics" value="application_count"
-                              class="metrics">
+                        <label class="text-dark custom-checkbox metrics">
+                           <input type="checkbox" data-name="Application Count" name="metrics"
+                              value="application_count">
                            <span class="custom-btn-span">All Applications</span>
+                           <div class="selectParameter mt-2">
+                              <label class="text-dark custom-checkbox">
+                                 <input type="checkbox" data-name="count" name="count">
+                                 <span class="custom-btn-span">Count</span>
+                              </label>
+
+                              <label class="text-dark custom-checkbox">
+                                 <input type="checkbox" data-name="sum" name="sum">
+                                 <span class="custom-btn-span">Sum</span>
+                              </label>
+
+                              <label class="text-dark custom-checkbox">
+                                 <input type="checkbox" data-name="percentage" name="percentage">
+                                 <span class="custom-btn-span">Percentage</span>
+                              </label>
+                           </div>
                         </label>
                      </div>
                   </div>
-                  <p class="p-3 pb-0 mb-0">
-                     <button class="text-center pt-2 pb-2  btn-block btn btn-outline-primary" type="button"
-                        data-toggle="modal" data-target="#customeMetricsModal"><span class="material-icons">add</span>
-                        Create Custome</button>
-                  </p>
+
                   <button class="bottombtn text-center pt-2 pb-2  btn-block" type="button">Apply</button>
-
-
-                  <div class="selectParameter">
-                     <h5 class="my-0 h6 text-dark mb-0 mt-2">Select Parameter</h5>
-                     <a href="#" class="removeBtn" data-toggle="tooltip" data-title="Click here to Close"
-                        data-trigger="hover">
-                        <span aria-hidden="true">×</span>
-                     </a>
-                     <div class="row mt-3">
-                        <div class="col-sm-12">
-                           <label class="text-dark custom-checkbox rows">
-                              <input type="checkbox" data-name="count" name="count">
-                              <span class="custom-btn-span">Count</span>
-                           </label>
-
-                           <label class="text-dark custom-checkbox rows">
-                              <input type="checkbox" data-name="sum" name="sum">
-                              <span class="custom-btn-span">Sum</span>
-                           </label>
-
-                           <label class="text-dark custom-checkbox rows">
-                              <input type="checkbox" data-name="percentage" name="percentage">
-                              <span class="custom-btn-span">Percentage</span>
-                           </label>
-                        </div>
-                     </div>
-                     <div class="btnBottom">
-                        <button class="btn btn-primary btn-sm btn-block">Confirm</button>
-                     </div>
-                  </div>
-                  <div class="selectParameterBackdrop"></div>
-
                </div>
                <!-- addMenuDiv  end here -->
                <div class="addMenudiv-backdrop"></div>
@@ -977,92 +984,169 @@
                   <span aria-hidden="true">×</span>
                </button>
             </div>
-            <div class="modal-body npf-form-group pb15">
+            <div class="modal-body npf-form-group pb15 bg-light">
                <form action="">
                   <div class="row align-items-start form-group pt-0 bmd-form-group">
                      <div class="col-12 col-lg-4">
                         <label class="text-dark  pt-md-2">Metrics Name</label>
                      </div>
-                     <div class="col-12 col-lg-8">
+                     <div class="col-12 col-lg-8 ">
+                        <div class="bg-white">
                         <input type="text" class="form-control">
                      </div>
                   </div>
-
-                  <label class="text-dark  pt-md-2 font-weight-bold">Define Logics</label>
-                  <div class="p-3 bg-light">
-                     <div class="row align-items-start form-group pt-0 bmd-form-groupm mb-0">
-                        <div class="col-sm-4">
-                           <select class="form-control selectpicker" data-actions-box="true"
-                              data-selected-text-format="count > 1" data-style="px-2 border" name="dateType" id="dateType"
-                              tabindex="-98">
-                              <option value="date">Date</option>
-                              <option value="dropdown">Dropdown</option>
-                              <option value="user">Users</option>
-                              <option value="text">Text</option>
-                              <option value="count">Count</option>
-                           </select>
-                        </div>
-
-                        <div class="col-sm-4">
-                           <select class="form-control selectpicker" data-actions-box="true"
-                              data-selected-text-format="count > 1" data-style="px-2 border" name="select_type" id="select_type"
-                              tabindex="-98">
-                              <option value="between">Between</option>
-                              <option value="before">Before</option>
-                              <option value="after">After</option>
-                              <option value="not_empty">Is not empty</option>
-                              <option value="empty">Is empty</option>
-                           </select>
-                        </div>
-
-                        <div class="col-sm-4">
-                           <div class="form-group pt-0 date-picker bmd-form-group bg-white">
-                              <input type="text" class="form-control date-range-picker"
-                                 placeholder="Select a date range" name="" id="">
-                           </div>
-                        </div>
-                     </div>
-
-
-                     <div class="row align-items-start form-group pt-0 bmd-form-groupm mb-0">
-                        <div class="col-sm-4">
-                           <select class="form-control selectpicker" data-actions-box="true"
-                              data-selected-text-format="count > 1" data-style="px-2 border" name="dateType" id="dateType"
-                              tabindex="-98">
-                              <option value="dropdown">Dropdown</option>
-                           </select>
-                        </div>
-
-                        <div class="col-sm-4">
-                           <select class="form-control selectpicker" data-actions-box="true"
-                              data-selected-text-format="count > 1" data-style="px-2 border" name="select_type" id="select_type"
-                              tabindex="-98">
-                              <option value="">Equals</option>
-                              <option value="">Does Not Equal</option>
-                              <option value="">Is Empty</option>
-                              <option value="">Is not Empty</option>
-                           </select>
-                        </div>
-
-                        <div class="col-sm-4">
-                           <select class="form-control selectpicker" data-actions-box="true"
-                           data-selected-text-format="count > 1" multiple="multiple" data-live-search="true" data-actions-box="true" data-size="5" data-style="px-2 border" name="select_type" id="select_type"
-                           tabindex="-98">
-                           <option value="">Option 1</option>
-                           <option value="">Option 2</option>
-                           <option value="">Option 3</option>
-                           <option value="">Option 4</option>
-                        </select>
-                        </div>
-                     </div>
                   </div>
 
+                  <label class="text-dark  pt-md-2 font-weight-bold">Define Logics</label>
+                  <div class="conditional-logic bg-white border rounded">
+                     <div class="conditional-logic-block">
+                        <div class="bg-white px-3 mt-3 mb-3 position-relative z-1 d-inline-block w-100">
+                           <div class="row justify-content-between mb-2">
+                              <div class="col-6 d-flex align-items-center">
+                                 <div class="conditional-logic-btn d-inline-block py-1 px-1">
+                                    <label for="field-1" class="m-0 d-inline-block">
+                                       <input type="radio" name="field-1-2" id="field-1" checked="">
+                                       <span class="conditional-logic-span py-1 px-3 d-inline-block">All</span>
+                                    </label>
+
+                                 </div>
+                                 <span class="text-dark ml-2"> Meet all criteria </span>
+                              </div>
+                           </div>
+
+                           <div class="position-relative">
+                              <div class="row align-items-center justify-content-end">
+                                 <div class="col-11">
+                                    <div class="d-flex align-items-start condition-row">
+                                       <div class="col px-2">
+                                          <select class="form-control selectpicker" data-actions-box="true"
+                                             data-selected-text-format="count > 1" data-style="px-2 border" name="dateType"
+                                             id="dateType" tabindex="-98">
+                                             <option value="date">Date</option>
+                                             <option value="dropdown">Dropdown</option>
+                                             <option value="user">Users</option>
+                                             <option value="text">Text</option>
+                                             <option value="count">Count</option>
+                                          </select>
+                                       </div>
+
+                                       <div class="col px-2">
+                                          <select class="form-control selectpicker" data-actions-box="true"
+                                             data-selected-text-format="count > 1" data-style="px-2 border" name="select_type"
+                                             id="select_type" tabindex="-98">
+                                             <option value="between">Between</option>
+                                             <option value="before">Before</option>
+                                             <option value="after">After</option>
+                                             <option value="not_empty">Is not empty</option>
+                                             <option value="empty">Is empty</option>
+                                          </select>
+                                       </div>
+
+                                       <div class="col px-2">
+                                          <div class="form-group pt-0 date-picker bmd-form-group bg-white">
+                                             <input type="text" class="form-control date-range-picker"
+                                                placeholder="Select a date range" name="" id="">
+                                          </div>
+                                       </div>
+
+                                       <button class="mt-2 px-1 py-2 remove-condition" type="button">
+                                          <span class="material-icons-outlined fs-18"> remove </span>
+                                       </button>
+                                    </div>
+
+                                    <div class="d-flex align-items-start condition-row">
+                                       <div class="col px-2">
+                                          <select class="form-control selectpicker" data-actions-box="true"
+                                             data-selected-text-format="count > 1" data-style="px-2 border" name="dateType"
+                                             id="dateType" tabindex="-98">
+                                             <option value="dropdown">Dropdown</option>
+                                          </select>
+                                       </div>
+
+                                       <div class="col px-2">
+                                          <select class="form-control selectpicker" data-actions-box="true"
+                                             data-selected-text-format="count > 1" data-style="px-2 border" name="select_type"
+                                             id="select_type" tabindex="-98">
+                                             <option value="equals">Equals</option>
+                                             <option value="does_not_equal">Does Not Equal</option>
+                                             <option value="is_empty">Is Empty</option>
+                                             <option value="is_not_empty">Is not Empty</option>
+                                          </select>
+                                       </div>
+
+                                       <div class="col px-2">
+                                          <div class="form-group pt-0  bmd-form-group bg-white">
+                                             <input type="text" class="form-control"
+                                                placeholder="" name="" id="">
+                                          </div>
+                                       </div>
+
+                                       <button class="mt-2 px-1 py-2 remove-condition" type="button">
+                                          <span class="material-icons-outlined fs-18"> remove </span>
+                                       </button>
+                                    </div>
+
+                                    <div class="d-flex align-items-start condition-row">
+                                       <div class="col px-2">
+                                          <select class="form-control selectpicker" data-actions-box="true"
+                                             data-selected-text-format="count > 1" data-style="px-2 border" name="dateType"
+                                             id="usersType" tabindex="-98">
+                                             <option value="users">Users</option>
+                                          </select>
+                                       </div>
+
+                                       <div class="col px-2">
+                                          <select class="form-control selectpicker" data-actions-box="true"
+                                             data-selected-text-format="count > 1" data-style="px-2 border" name="select_type"
+                                             id="select_type" tabindex="-98">
+                                             <option value="equals">Equals</option>
+                                             <option value="does_not_equal">Does Not Equal</option>
+                                             <option value="is_empty">Is Empty</option>
+                                             <option value="is_not_empty">Is not Empty</option>
+                                          </select>
+                                       </div>
+
+                                       <div class="col px-2">
+                                          <div class="form-group pt-0  bmd-form-group bg-white">
+                                             <select class="form-control selectpicker" multiple="multiple" data-live-search="true" data-actions-box="true"
+                                             data-selected-text-format="count > 1" data-style="px-2 border" name="select_type"
+                                             id="select_type" tabindex="-98">
+                                             <option value="">Option 1</option>
+                                             <option value="">Option 1</option>
+                                             <option value="">Option 1</option>
+                                             <option value="">Option 1</option>
+                                          </select>
+                                          </div>
+                                       </div>
+
+                                       <button class="mt-2 px-1 py-2 remove-condition" type="button">
+                                          <span class="material-icons-outlined fs-18"> remove </span>
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="bg-light w-100 p-2 border-top rounded-bottom">
+                           <div class="row justify-content-end">
+                            <div class="col-3 text-right">
+                             <div class="d-flex justify-content-end">
+                              <a href="javascript:void(0);" class="align-items-center btn btn-s btn-secondary btn-sm d-flex justify-content-center px-3 text-primary">
+                               <span class="material-icons-outlined fs-13 text-primary mr-1"> add </span>
+                               Add New Logic
+                              </a>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                     </div>
+                  </div>
                </form>
             </div>
 
             <div class="modal-footer justify-content-between">
-               <button class="btn btn-sm btn-outline-secondary">Reset</button>
-               <button class="btn btn-sm btn-primary">Apply</button>
+               <button class="btn btn-sm btn-outline-secondary">Cancel</button>
+               <button class="btn btn-sm btn-primary">Create</button>
             </div>
          </div>
       </div>
@@ -1223,9 +1307,16 @@
          }
       });
 
-      function createCustomeMetrics() {
-         $(".selectParameter").addClass('active');
-      }
+      // function createCustomeMetrics() {
+      //    if($(".metricsList input[type='checkbox']:checked")){
+      //       //alert("Ab to jQuery Sikh lo")
+      //       $(".selectParameter").show();
+      //    }
+      //    else{
+      //       //alert("Tum se na ho payega Beta")
+      //       $(".selectParameter").hide();
+      //    }
+      // }
 
       $(".removeBtn").click(function () {
          $(".selectParameter").removeClass('active');

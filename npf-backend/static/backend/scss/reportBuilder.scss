@@ -20,7 +20,8 @@
 "./components/toggletag",
 "./components/selectPickerNoData",
 "./components/configtabcontent",
-"./components/verticalmenulist";
+"./components/verticalmenulist",
+"./components/conditional-logic-btn";
 
 
 .rowone th,
@@ -977,73 +978,21 @@
   width: 95%
 }
 
-
 .selectParameter {
-  position: absolute;
-  right: 0px;
-  opacity: 0;
-  top: 0;
-  background: #fff;
-  width: 20%;
-  padding: 0 15px 15px 15px;
-  height: 100%;
-  transition: .2s;
-  font-size: 0;
-
-  .custom-checkbox {
-    float: left;
-    width: 100%;
-  }
-
-  .removeBtn {
-    position: absolute;
-    right: 0;
-    top: 4px;
-    right: 5px;
-    padding: 0 5px;
-    width: 22px;
-    height: 22px;
-    color: #000;
-    font-size: 20px;
-    border-radius: 50%;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.1);
-      color: red;
-      ;
-    }
-  }
-
-  .btnBottom {
-    position: absolute;
-    bottom: 15px;
-    width: calc(100% - 30px);
-  }
-
-  &.active {
-    width: 50%;
-    opacity: 1;
-    font-size: 100%;
+  display:none;
+  .custom-checkbox{
+    width:fit-content!important;
+    margin-right:5px;
   }
 }
 
-.selectParameterBackdrop {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, .6);
-  width: 50%;
-  padding: 0 15px 15px 15px;
-  height: 100%;
-  transition: .5s;
-  z-index: 1;
+.custom-checkbox{
+  input[type=checkbox]:checked ~ .selectParameter{
+    display:block;
+  }
 }
 
 
-.selectParameter.active+.selectParameterBackdrop {
-  display: block;
-}
 
 #dragItemBox {
   li {
