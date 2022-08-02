@@ -1425,22 +1425,14 @@
             ghostClass: 'ghost-drag',
             onEnd: function() {
                setTimeout(() => {
-                  $('.drag-box .addMetrics').removeClass('d-flex').hide();
-                  $('.drag-box .saveDrag').show();
+                  $('#metricsFields .addMetrics').removeClass('d-flex').hide();
+                  $('#metricsFields .saveDrag').show();
                }, "")
             }
          });
-
       }
 
-      // $(".sort-handle").click(function(){
-      //       //alert("Zvzvsd");
-            
-      // });
 
-
-
-      enableDragDropMetrics();
 
       const removeDragDropMetrics = ()  => {
          var element = document.getElementById("metricsFields");
@@ -1449,9 +1441,13 @@
          dragableSpan.forEach(dragable => {
             dragable.classList.remove('sort-handle')
          })
+         setTimeout(() => {
+                  $('#metricsFields .addMetrics').addClass('d-flex').show();
+                  $('#metricsFields .saveDrag').hide();
+         }, "")
       }
 
-
+      enableDragDropMetrics();
 
 
 
