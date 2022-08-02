@@ -1022,6 +1022,12 @@
         color: #4c79dc;
       }
     }
+    .icon-info{
+      display:none;
+    }
+    &:hover .icon-info{
+      display:inline;
+    }
   }
 
   .ghost-drag {
