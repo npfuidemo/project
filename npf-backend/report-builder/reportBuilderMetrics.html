@@ -435,24 +435,20 @@
                                  <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">Choose a
                                     numeric value you want to measure, like the number of leads.</div>
                               </div>
-                              <div id="metricsFields" class="collapse left-nav-accordion show" data-parent="#accordion">
+                              <div id="metricsFields" class="collapse left-nav-accordion show drag-box" data-parent="#accordion">
                                  <div
                                     class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
                                  </div>
                                  <div class="row" id="before_metrics_selection" style="display:block;">
                                     <div class="col-sm-12 addmenucontainer d-flex align-items-center justify-content-end ">
-                                       <a class="mr-2 d-flex align-items-center justify-content-end"
+                                       <a class="mr-2 d-flex align-items-center justify-content-end addMetrics"
                                           href="javascript:void(0)" onclick="showhideMenuDiv(this)">
                                           <span class="material-icons-outlined  fs-16">add</span>
                                           <span class="lineHeight16 fs-12">Add</span>
                                        </a>
-                                       <a href="javascript:void(0)" onclick="enableDragDropMetrics();" class="mr-2 d-flex align-items-center justify-content-end enableDrag">
-                                          <span class="material-icons-outlined fs-14">edit</span>
-                                          <span class="lineHeight16 fs-12">Edit</span>
-                                       </a>
-                                       <a href="javascript:void(0)" onclick="removeDragDropMetrics();" class="mr-2 d-flex align-items-center justify-content-end saveDrag">
-                                          <span class="material-icons-outlined fs-14">done</span>
-                                          <span class="lineHeight16 fs-12">Save</span>
+                                       
+                                       <a href="javascript:void(0)" onclick="removeDragDropMetrics();" class="mr-2  btn btn-sm btn-outline-primary py-1 px-3 saveDrag">
+                                          <span class="lineHeight16">Save</span>
                                        </a>
                                     </div>
                                     <div class="col-sm-12">
@@ -542,24 +538,14 @@
                                  </div>
 
                                  <div class="row" id="after_row_selection">
-                                    <div class="col-sm-6">
-                                       <a class="d-flex align-items-center justify-content-start ml-2"
+                                    <div class="col-sm-12">
+                                       <a class="d-flex align-items-center justify-content-end mr-2"
                                           href="javascript:void(0)"
                                           onclick="showMappingData('mapping','/backend/s22/143570000957/report-builder/getMappingData','rows', '13');">
                                           <span class="material-icons-outlined  fs-16">add</span>
                                           <span class="lineHeight16 fs-12">Add</span>
                                        </a>
-                                    </div>
-                                    <div class="col-sm-6 d-flex align-items-center justify-content-end">
-                                       <a href="javascript:void(0)" onclick="enableDragDropRows();" class="mr-2 d-flex align-items-center justify-content-end enableDrag">
-                                          <span class="material-icons-outlined fs-14">edit</span>
-                                          <span class="lineHeight16 fs-12">Edit</span>
-                                       </a>
-                                       <a href="javascript:void(0)" onclick="removeDragDropRows();" class="mr-2 d-flex align-items-center justify-content-end saveDrag">
-                                          <span class="material-icons-outlined fs-14">done</span>
-                                          <span class="lineHeight16 fs-12">Save</span>
-                                       </a>
-                                    </div>
+                                    </div> 
                                     <div class="col-sm-12">
                                        <ul class="selectedField p-2" id="selected_row_field">
                                           <li class="bg-light"><span class="fs-13 dragable-span sort-handle">Lead Origin (Primary) </span></li>
@@ -1427,18 +1413,34 @@
 
 
       const enableDragDropMetrics = () => {
-         var element = document.getElementById("metricsFields");
-         element.classList.add("drag-box");
-         let dragableSpan = document.querySelectorAll('.dragable-span');
-         dragableSpan.forEach(dragable => {
-            dragable.classList.add('sort-handle')
-         })
+         // var element = document.getElementById("metricsFields");
+         // element.classList.remove("drag-box");
+         // let dragableSpan = document.querySelectorAll('.dragable-span');
+         // dragableSpan.forEach(dragable => {
+         //    dragable.classList.add('sort-handle')
+         // })
          new Sortable(dragItemBox,{
             animation: 100,
             handle: '.sort-handle',
-            ghostClass: 'ghost-drag'
+            ghostClass: 'ghost-drag',
+            onEnd: function() {
+               setTimeout(() => {
+                  $('.drag-box .addMetrics').removeClass('d-flex').hide();
+                  $('.drag-box .saveDrag').show();
+               }, "")
+            }
          });
+
       }
+
+      // $(".sort-handle").click(function(){
+      //       //alert("Zvzvsd");
+            
+      // });
+
+
+
+      enableDragDropMetrics();
 
       const removeDragDropMetrics = ()  => {
          var element = document.getElementById("metricsFields");
@@ -1456,10 +1458,6 @@
       const enableDragDropRows = () => {
          var element = document.getElementById("rowFields");
          element.classList.add("drag-box");
-         let dragableSpan = document.querySelectorAll('.dragable-span');
-         dragableSpan.forEach(dragable => {
-            dragable.classList.add('sort-handle')
-         })
          new Sortable(selected_row_field,{
             animation: 100,
             handle: '.sort-handle',
