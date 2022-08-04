@@ -36,7 +36,7 @@ body {
 }
 
 .notfound .notfound-error h1 {
-  color: #eee;
+  color:rgba(76, 121, 220 ,.52);
   font-weight: 900;
   font-size:150px;
   line-height:120px;
@@ -67,7 +67,7 @@ body {
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
-  background:#205c9d;
+  background:#4c79dc;
   display: inline-block;
   padding:15px 30px;
   border: 2px solid transparent;
@@ -80,8 +80,8 @@ body {
 
 .notfound a:hover {
   background-color: #fff;
-  border-color:#205c9d;
-  color:#205c9d;
+  border-color:#4c79dc;
+  color:#4c79dc;
 }
 
 @media only screen and (max-width: 480px) {
