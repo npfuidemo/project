@@ -1432,6 +1432,11 @@
                   $('#metricsFields .addMetrics').removeClass('d-flex').hide();
                   $('#metricsFields .saveDrag').show();
                }, "")
+            },
+            onStart: function (/**Event*/evt) {
+               evt.oldIndex;
+               $(this).addClass('xvx');
+
             }
          });
       }
@@ -1452,28 +1457,6 @@
       }
 
       enableDragDropMetrics();
-
-
-
-      const enableDragDropRows = () => {
-         var element = document.getElementById("rowFields");
-         element.classList.add("drag-box");
-         new Sortable(selected_row_field,{
-            animation: 100,
-            handle: '.sort-handle',
-            ghostClass: 'ghost-drag'
-         });
-      }
-
-      const removeDragDropRows = ()  => {
-         var element = document.getElementById("rowFields");
-         element.classList.remove("drag-box");
-         let dragableSpan = document.querySelectorAll('.dragable-span');
-         dragableSpan.forEach(dragable => {
-            dragable.classList.remove('sort-handle')
-         })
-      }
-
 
    </script>
 </body>

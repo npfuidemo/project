@@ -429,13 +429,11 @@
 
   li {
     position: relative;
-    background-color: #fff;
     padding: 5px 8px;
-    border: 0px solid #fff;
     margin-bottom: 3px;
     border-radius: 3px;
     font-size: 12px;
-
+    background-color: transparent!important;
 
     .removeList {
       top:8px;
@@ -1009,17 +1007,21 @@
       cursor:move;
       &:after{
         content: '\e945';
-        width: 13px;
-        height: 28px;
+        width:20px;
+        height:100%;
         position: absolute;
-        left: -18px;
-        top:5px;
+        left: -20px;
+        top:0;
         font-family: 'Material Icons Outlined';
         font-weight: normal;
         font-style: normal;
         font-size: 18px;
-        background-color: #fff;
+        background-color:transparent;
         color: #4c79dc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:3px 0 0 3px;
       }
     }
     .icon-info{
@@ -1032,7 +1034,7 @@
 
   .ghost-drag {
     border: 2px dashed #4c79dc !important;
-    background: #fff;
+    background:#f3f3f3!important;
     opacity: .6;
     margin-top:0;
     margin-bottom:0;
