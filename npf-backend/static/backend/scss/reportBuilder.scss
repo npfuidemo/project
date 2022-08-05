@@ -984,12 +984,19 @@
 
 .selectParameter {
   display:none;
-  .custom-checkbox{
-    width:fit-content!important;
-    margin-right:5px;
+  .custom-radio {
+    width:auto!important;
+    display:inline-block;
+    margin-right:10px;
+    & input ~ .custom-btn-span:before{
+      content:'\e836';
+    }
+    & input:checked ~ .custom-btn-span:before {
+      content: '\e837';
+ 
   }
 }
-
+}
 .custom-checkbox{
   input[type=checkbox]:checked ~ .selectParameter{
     display:block;
