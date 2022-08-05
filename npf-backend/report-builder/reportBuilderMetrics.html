@@ -597,7 +597,7 @@
                         </div>
                      </div>
                      <div class="col-12 col-md-8 pl-0 pl-md-3 d-flex align-items-end justify-content-end ">
-
+                        <a href="#reportPreview" data-toggle="modal">Preview</a>
                         <div class="toggletag tag ">
                            <a href="javascript:void(0)"
                               class="d-flex border-0 p-1 mr-2 ml-2 hover-effect rounded-circle text-secondary basicTemplateTag"
@@ -1213,6 +1213,32 @@
       </div>
    </div>
 
+
+
+
+
+
+<div class="modal fade offCanvasModal right popup-customization  modal-fullscreen" data-backdrop="static" data-keyboard="false"
+  tabindex="-1" id="reportPreview">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-blue">
+        <h5 class="modal-title my-0" id="exampleModalLabel">
+          <span class="title font-weight-bold">Report Preview</span>
+        </h5>
+        <a href="javascript:void(0)" onclick="openFullscreen()" class="btn btn-outline-primary btn-sm px-3 py-1 text-primary mr-5 fullscreen">Full Screen</a>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+          data-placement="left" data-trigger="hover" title="" data-original-title="Click Here to Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="fullHeight modal-body" id="previewContent">
+        Preview Content
+      </div>
+    </div>
+  </div>
+</div>
+
    <!--  Core JS Files  -->
    <script src="../static/backend/js/core/jquery.min.js"></script>
    <script src="../static/backend/js/core/popper.min.js"></script>
@@ -1458,7 +1484,36 @@
 
       enableDragDropMetrics();
 
-   </script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+    $('.fullscreen').hide();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+    $("#reportPreview .modal-xlg").removeAttr("style");
+    $('.escFull').addClass('d-none');
+    $('.fullscreen').show();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+
+
+$('#reportPreview').on('hidden.bs.modal', function (e) {
+   closeFullscreen();
+})
+</script>
 </body>
 
 </html>
