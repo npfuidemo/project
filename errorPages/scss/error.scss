@@ -33,19 +33,19 @@ body {
   font-weight: 900;
   font-size:150px;
   line-height:120px;
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 
 .notfound h2 {
-  font-size:35px;
-  color: #323232;
+  font-size:30px;
+  color: #999;
   font-weight:400;
   margin: 0px;
 }
 
 .notfound p {
-  font-size: 15px;
-  color: #666;
+  font-size: 16px;
+  color: #333;
   font-weight: 400;
   margin-top: 15px;
   margin-bottom:30px;
@@ -57,7 +57,7 @@ body {
   text-transform: uppercase;
   background:#4c79dc;
   display: inline-block;
-  padding:15px 30px;
+  padding:10px 25px;
   border: 2px solid transparent;
   border-radius: 40px;
   color: #fff;
