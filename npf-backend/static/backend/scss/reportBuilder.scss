@@ -204,6 +204,7 @@
 
         table {
           border: 1px solid rgba(0, 0, 0, 0.06);
+          overflow:visible!important;
         }
 
         @media(min-width:768px) {
@@ -238,7 +239,7 @@
       //   }
       // }
       @media (min-width:767px) {
-        height: calc(100vh - 137px);
+        height: calc(100vh - 144px);
         position: absolute;
         left: 0;
         right: 0;
@@ -1098,4 +1099,145 @@
   margin: 0;
   padding: 0;
   max-width: none;
+}
+
+
+
+
+
+th[class*="headerCollapseSubStage_"]{
+	padding-right:25px!important;
+  position: relative;
+	.columnCollasp{
+		position: absolute;
+		right: 0;
+		top:40px;
+		z-index: 99;
+		color:#fff;
+		
+		&:before {
+			background:rgba(0,116,217,1);
+			padding: 10px 6px;
+			content: '';
+			z-index: -1;
+			position: absolute;
+			right:2px;
+			width: 0px;
+			height: 25px;
+			top:-3px;
+			border-radius: 15px 0 0 15px;
+			font-size:10px;
+		}
+
+
+		&:after {
+			content: '';
+			width: 2px;
+			height:92px;
+			background:rgba(0,116,217,1);
+			display: block;
+			position: absolute;
+			top: -40px;
+			right:0px;
+			z-index: 99;
+		}
+
+		.material-icons-outlined{
+			transform: rotate(0deg);
+			transform-origin: center;
+			&:before{
+				font-size:10px;
+				line-height: 20px;
+			}
+		}
+
+		&:hover,&:focus{
+			color:#fff;
+		}
+    &.collapsed{
+      .material-icons-outlined{
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+  }
+	}
+
+
+
+	.collapsed{
+		color:#4b7bdd;
+		&:before,&:after {
+			background:rgba(0,116,217,.3);	
+		}
+
+		& .fa-chevron-right:before{
+			font-size:10px;
+		}
+
+		&:hover,&:focus{
+			color:#4b7bdd; 
+		}
+		
+		.fa-chevron-right {
+			transform: rotate(0deg);
+			line-height: 18px;
+		}
+	}
+}
+
+
+
+
+.accodianMenuParent{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 15px;
+  &.hasArrow {
+	color: #0074d9;
+	width: 200px;
+  }
+}
+  tr.childCounsellor td {
+	padding: 8px !important;
+	font-size: 90%;
+  }
+  tr.childCounsellor td:first-child {
+	padding: 8px 8px 8px 15px !important;
+  }
+  .tableproductivity {
+	thead {
+		th {
+			white-space: nowrap;
+		}
+	}
+	tr{
+		td:first-child{
+			font-weight:500;
+		}
+	}
+  }
+
+  .hasArrow a[data-toggle="collapse"]:before {
+    font-family:'Material Icons Outlined';
+    content: "\e313";
+    font-size:20px;
+    line-height: 12px;
+    float: right;
+    transition: all 0.5s;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+  .hasArrow a[data-toggle="collapse"].collapsed:before, .hasArrow a[aria-expanded="false"]:before {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+@media (min-width: 993px){
+  .accodianMenuParent.hasArrow a[data-toggle="collapse"]:before {
+      line-height: 100%;
+  }
 }

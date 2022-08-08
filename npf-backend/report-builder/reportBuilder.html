@@ -792,211 +792,230 @@
  
                <div class="reportData ">
                   <div class="reportinner">
-                     <table class="tableView table table-sm" cellespacing="0" cellpadding="0">
-                        <thead>
-                           <tr>
-                              <th rowspan="2" class="bdr-r fixColLeft">
-                                 Counsellor Name</th>
-                              <th rowspan="2" class="bdr-r text-center">Lead Assigned </th>
-                              <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
-                              <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
-                              <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
-                              <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
-                              <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
-                              <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
-                              <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
-                              <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
-                              <th colspan="2" data-colspan="2"
-                                 class="bdr-r text-center headerCollapseSubStage_LeadsEngaged bg-light">Leads Engaged
-                              </th>
-                              <th colspan="2" data-colspan="2"
-                                 class="bdr-r text-center headerCollapseSubStage_LeadsEngaged">new Leads Engaged</th>
-                           </tr>
-                           <tr>
-                              <th class="bdr-r nowrap text-center bg-light font-weight-normal">
-                                 Overall </th>
-                              <th
-                                 class="bdr-r nowrap text-center collapseSubStage_LeadsEngaged bg-light  font-weight-normal">
-                                 Assigned </th>
+                     <div class="row">
+                        <div class="col-sm-12">
+                            <div class="grid-table w-100 normalFont" id="tableCollapseParent">
+                                <div class="responsive-table">
+                                    <table class="table table-borderless">
+                                       <thead>
+                                          <tr>
+                                             <th rowspan="2" class="bdr-r fixColLeft">
+                                                Counsellor Name</th>
+                                             <th rowspan="2" class="bdr-r text-center">Lead Assigned </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th colspan="1" data-colspan="2"
+                                                class="bdr-r text-center headerCollapseSubStage_LeadsEngaged bg-light">Leads Engaged
+                                                <a class="columnCollasp collapsed" href="javascript:void(0)" id="collapseStage_LeadsEngaged" onclick="javascript:collapseSubColumns('LeadsEngaged')">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      arrow_back_ios
+                                                      </span>
+                                                </a>
+                                             </th>
+                                             <th colspan="1" data-colspan="2"
+                                                class="bdr-r text-center headerCollapseSubStage_LeadsEngaged1 bg-light">New Leads Engaged
+                                                <a class="columnCollasp collapsed" href="javascript:void(0)" id="collapseStage_LeadsEngaged1" onclick="javascript:collapseSubColumns('LeadsEngaged1')">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      arrow_back_ios
+                                                      </span>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                          <tr>
+                                             <th class="bdr-r nowrap text-center bg-light font-weight-normal">
+                                                Overall </th>
+                                             <th
+                                                class="bdr-r nowrap text-center collapseSubStage_LeadsEngaged bg-light  font-weight-normal d-none">
+                                                Assigned </th>
 
-                              <th class="bdr-r nowrap text-center  font-weight-normal">
-                                 Overall new</th>
-                              <th class="bdr-r nowrap text-center collapseSubStage_LeadsEngaged  font-weight-normal">
-                                 Assigned new</th>
-                           </tr>
-                        </thead>
-                        <tbody id="accordionyui" role="tablist" aria-multiselectable="true">
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
+                                             <th class="bdr-r nowrap text-center  font-weight-normal">
+                                                Overall new</th>
+                                             <th class="bdr-r nowrap text-center  font-weight-normal collapseSubStage_LeadsEngaged1 d-none">
+                                                Assigned new</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="accordionyui" role="tablist" aria-multiselectable="true">
+                                          <tr>
+                                             <td class="col1 bdr-r fixColLeft" width="200">
+                                                <div class="accodianMenuParent hasArrow">
+                                                   <a id="jsClicked_3608" data-counsellor="4455554" class="accodianMenu fetchrowData" data-toggle="collapse" data-parent="#accordionyui" data-rand="3608" href="#collapseOne3608" aria-expanded="true" aria-controls="collapseOne3608" onclick="closeAccordions(this)">KARTIM057</a>
+                                                </div>
+                                             </td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
 
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
 
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
 
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
-                           <tr>
-                              <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center bg-light">0</td>
-                              <td class="bdr-r text-center ">0</td>
-                              <td class="bdr-r text-center">0</td>
-                           </tr>
-
-
-
-                        </tbody>
-                     </table>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
+                                          <tr class="childCounsellor">
+                                             <td class="col1 bdr-r fixColLeft" width="200">KARTIM057</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">0</td>
+                                             <td class="bdr-r text-center bg-light  collapseSubStage_LeadsEngaged d-none">0</td>
+                                             <td class="bdr-r text-center ">0</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">0</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                            </div>
+                        </div>
+                     </div>
                   </div>
                </div>
-
 
 
                <!-- addMenuDiv  start here -->
@@ -1586,6 +1605,82 @@
       ];
       //wt.setSteps(steps);
       //wt.start();
+
+   $(function () {
+      $('.columnCollasp').each(function (colKey){
+         if(!$(this).hasClass('collapsed')){
+            var colKeyArr = $(this).attr('id').split('_');
+            var colKey = colKeyArr[1];
+            console.log(colKey);
+            var className = '.collapseSubStage_'+colKey;
+            $(className).addClass('d-none');
+            $('.headerCollapseSubStage_'+colKey).attr('colspan',1);
+            $(this).toggleClass('collapsed');
+         }
+      });
+   });
+
+   function collapseSubColumns(colKey){
+      var className = '.collapseSubStage_'+colKey;
+      var elementId = '#collapseStage_'+colKey;
+      var t = $('.headerCollapseSubStage_'+colKey).attr('data-colspan');
+      if($(elementId).hasClass('collapsed')){
+         $(className).removeClass('d-none');
+         $('.headerCollapseSubStage_'+colKey).attr('colspan',t);
+      } else {
+         $(className).addClass('d-none');
+         $('.headerCollapseSubStage_'+colKey).attr('colspan',1);
+      }
+      $(elementId).toggleClass('collapsed');
+   }
+
+
+   $( ".columnCollasp.collapsed" ).each(function() {
+         var el = document.querySelector('.reportData');
+         var xScrollBeforeWidth = el.scrollWidth;
+         var offsetLeft = $(this).offset().left;
+         $(this).on("click", function(){
+            var xScrollAfterWidth = el.scrollWidth;
+            var tableLeftScrollPos = $('.reportData').scrollLeft();
+            var diffScrollPos = xScrollAfterWidth - xScrollBeforeWidth;
+            var scrollAmount = tableLeftScrollPos + diffScrollPos;
+            if(offsetLeft > 150){
+               $('.reportData').animate({scrollLeft: scrollAmount});
+            }
+         });
+   });
+
+
+
+
+   // Fetch records of head counsellor
+$(document).on("click", ".fetchrowData", function(){
+    $('.fetchrowData').not($(this)).addClass("collapsed");
+    $('.fetchrowData').not($(this)).attr("aria-expanded",'false');
+    $('.fetchrowData').not($(this)).closest('tr').siblings('tr.childCounsellor').remove();
+    if($(this).hasClass('collapsed')){
+        // $(this).removeClass("fetchrowData collapsed");
+        $(this).removeClass("collapsed");
+        $(this).attr("aria-expanded", 'true');
+        var jsClickExpandElementReference = $(this).attr('id');
+    //    let targetRow = $(this).attr("href");
+        let targetRow = $(this).data("rand");
+        let headCounsellor = $(this).data("counsellor");
+        loadHeadCounsellorProductivityReport(headCounsellor, targetRow, jsClickExpandElementReference);
+    }
+    else{
+        $(this).addClass("collapsed");
+        $(this).attr("aria-expanded", 'false');
+        $(this).closest('tr').siblings('tr.childCounsellor').remove();
+    }
+   
+    $(this).attr("onclick", 'closeAccordions(this)');
+    
+    
+//    // close all open accordions
+    closeAccordions(this);
+    
+});
    </script>
 </body>
 
