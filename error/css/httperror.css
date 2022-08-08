@@ -59,9 +59,9 @@ body {
 	text-decoration: none;
 	text-transform: uppercase;
 	display: inline-block;
-	padding: 10px 25px;
+	padding: 8px 20px;
 	border: 1px solid #28a745;
-	border-radius: 40px;
+	border-radius: 5px;
 	color: #28a745;
 	font-weight: 400;
 	-webkit-transition: 0.2s all;
@@ -84,9 +84,7 @@ body {
 
 @media (min-width: 769px){
 	body{
-		background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/swirl_pattern.png);
-		background-repeat: repeat;
-		background-size: 75px;
+		background-color: #f2f2f2;
 		overflow: hidden;
 	}
 
@@ -165,9 +163,9 @@ body {
 	-moz-transform: scale(0.3);
 	transform: scale(0.3);
 	opacity: 0.9;
-	-webkit-animation: moveclouds 15s linear infinite;
-	-moz-animation: moveclouds 15s linear infinite;
-	-o-animation: moveclouds 15s linear infinite;
+	-webkit-animation: moveclouds 30s linear infinite;
+	-moz-animation: moveclouds 30s linear infinite;
+	-o-animation: moveclouds 30s linear infinite;
 }
 
 .x1_5{
@@ -176,9 +174,9 @@ body {
 	-webkit-transform: scale(0.3);
 	-moz-transform: scale(0.3);
 	transform: scale(0.3);
-	-webkit-animation: moveclouds 17s linear infinite;
-	-moz-animation: moveclouds 17s linear infinite;
-	-o-animation: moveclouds 17s linear infinite;
+	-webkit-animation: moveclouds 34s linear infinite;
+	-moz-animation: moveclouds 34s linear infinite;
+	-o-animation: moveclouds 34s linear infinite;
 }
 .x2 {
 	left: 250px;
@@ -187,9 +185,9 @@ body {
 	-moz-transform: scale(0.6);
 	transform: scale(0.6);
 	opacity: 0.6;
-	-webkit-animation: moveclouds 25s linear infinite;
-	-moz-animation: moveclouds 25s linear infinite;
-	-o-animation: moveclouds 25s linear infinite;
+	-webkit-animation: moveclouds 50s linear infinite;
+	-moz-animation: moveclouds 50s linear infinite;
+	-o-animation: moveclouds 50s linear infinite;
 }
 
 .x3 {
@@ -199,9 +197,9 @@ body {
 	-moz-transform: scale(0.6);
 	transform: scale(0.6);
 	opacity: 0.8;
-	-webkit-animation: moveclouds 25s linear infinite;
-	-moz-animation: moveclouds 25s linear infinite;
-	-o-animation: moveclouds 25s linear infinite;
+	-webkit-animation: moveclouds 50s linear infinite;
+	-moz-animation: moveclouds 50s linear infinite;
+	-o-animation: moveclouds 50s linear infinite;
 }
 
 .x4 {
@@ -211,9 +209,9 @@ body {
 	-moz-transform: scale(0.75);
 	transform: scale(0.75);
 	opacity: 0.75;
-	-webkit-animation: moveclouds 18s linear infinite;
-	-moz-animation: moveclouds 18s linear infinite;
-	-o-animation: moveclouds 18s linear infinite;
+	-webkit-animation: moveclouds 36s linear infinite;
+	-moz-animation: moveclouds 36s linear infinite;
+	-o-animation: moveclouds 36s linear infinite;
 }
 
 .x5 {
@@ -223,9 +221,9 @@ body {
 	-moz-transform: scale(0.5);
 	transform: scale(0.5);
 	opacity: 0.8;
-	-webkit-animation: moveclouds 20s linear infinite;
-	-moz-animation: moveclouds 20s linear infinite;
-	-o-animation: moveclouds 20s linear infinite;
+	-webkit-animation: moveclouds 40s linear infinite;
+	-moz-animation: moveclouds 40s linear infinite;
+	-o-animation: moveclouds 40s linear infinite;
 }
 
 @-webkit-keyframes moveclouds {
