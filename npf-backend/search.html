@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="../static/backend/css/main.css">
+</head>
+
+<body>
+ <div class="jumbotron bg-light p-5">
+  <div class="container">
+   <div class="row justify-content-center">
+    <div class="col-5">
+     <input type="text" id="searchInput" onkeyup="filterFunction()">
+     <div style="display: none;" class="" id="filter-scrollbar-nodata">
+      no data
+     </div>
+     <div class="" id="filter-scrollbar">
+      <ul class="filterList">
+        <li>First Name</li>
+        <li>Last Name</li>
+        <li>Company</li>
+        <li>Address</li>
+        <li>City</li>
+        <li>County (where applicable)</li>
+        <li>State/Province (where applicable)</li>
+        <li>ZIP/Postal Code</li>
+        <li>Phone 1</li>
+        <li>Phone 2</li>
+        <li>Email</li>
+        <li>Web</li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <script>
+  function filterFunction() {
+   debugger;
+   var input, filter, div, option, i, noData, filterList;
+   input = document.getElementById("searchInput")
+   filter = input.value.toUpperCase();
+   div = document.getElementById("filter-scrollbar");
+   option = div.getElementsByTagName("li");
+   noData = document.getElementById("filter-scrollbar-nodata");
+   filterList = document.getElementsByClassName('filterList');
+   for (i = 0; i < option.length; i++) {
+    txtValue = option[i].textContent || option[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+     option[i].style.display = "";
+     option[i].classList.add("searchItem");
+    } else {
+     option[i].style.display = "none";
+     option[i].classList.remove("searchItem");
+    }
+   }
+   if (document.getElementsByClassName('searchItem').length == 0) {
+    noData.style.display = 'block';
+    filterList[0].style.display = 'none';
+   }
+   else {
+    noData.style.display = 'none';
+    filterList[0].style.display = 'block';
+   }
+  }
+ </script>
+</body>
+
+</html>
