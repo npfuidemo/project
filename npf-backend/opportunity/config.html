@@ -1,0 +1,3152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8" />
+ <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon.png">
+ <link rel="icon" type="image/ico" href="../favicon.ico">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+ <title>NoPaperForms Backend</title>
+ <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+ <!--  Fonts and icons -->
+ <link rel="stylesheet" type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700" />
+ <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+ <!-- CSS Files -->
+ <link href="../static/backend/css/main.css" rel="stylesheet" />
+ <link rel="preload" href="../static/backend/css/config.css" as="style" onload="this.rel='stylesheet'">
+ <style>
+  .form-control:disabled, .form-control[readonly]{color: #111 !important;}
+ </style>
+</head>
+
+<body>
+ <div id="main" class="wrapper">
+  <div class="container">
+   <div>
+    <div class="accordion config-accordian subHeadingHide " id="l-allocationlist">
+     <div class="card my-3 lead_stage_and_sub_stage_configurations">
+      <div class="card-body py-3 px-3">
+       <div
+        class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer btn_lead_stage_and_sub_stage_configurations"
+        aria-expanded="true" data-toggle="collapse" data-target="#level-55a76d8b1672ab40ba3a4ea0"
+        aria-controls="level-55a76d8b1672ab40ba3a4ea0" role="tablist"
+        onclick="getLevelSettings('55a76d8b1672ab40ba3a4ea0','3','card')">
+        <div>
+         <h5 class="my-0 h6">Lead Stage and Sub stage Configurations</h5>
+         <div class="fs-12 text-dark sub-text">
+          Configure the below settings to create stages and Sub stages
+         </div>
+        </div>
+
+        <div class="d-flex ml-auto">
+         <div>
+          <button type="button" class="btn btn-link py-0 px-0 arrow-icon" aria-expanded="true" data-toggle="collapse"
+           data-target="#level-55a76d8b1672ab40ba3a4ea0">
+           <span class="fa fa-angle-down" data-toggle="tooltip" data-placement="bottom" data-container="body"
+            title="Click to expand /collapse"></span>
+          </button>
+         </div>
+        </div>
+       </div>
+       <div id="level-55a76d8b1672ab40ba3a4ea0" class="collapse show" data-parent="#l-allocationlist" style="">
+        <a href="#statusChange" data-toggle="modal" class="btn btn-outline-primary bg-white btn-sm mr-4 px-3 py-1"
+         style=" position: absolute; right: 20px; top: 20px;">Rename Status</a>
+        <form class="card-form" id="form-55a76d8b1672ab40ba3a4ea0" action="javascript:void(0);" level="4">
+         <input type="hidden" name="entity_type" class="entity_type" value="crm">
+         <input type="hidden" name="config_key" class="config_key" value="lead_stage">
+         <input type="hidden" name="config_key_child" class="config_key_child"
+          value="lead_stage_and_sub_stage_configurations">
+         <input type="hidden" name="entity_type_id" class="entity_type_id" value="60a763533825bd20ba3a4e9a">
+         <input type="hidden" name="config_key_id" class="config_key_id" value="60a36a872925bd40ba3a4e9d">
+         <input type="hidden" name="config_key_child_id" class="config_key_child_id" value="55a76d8b1672ab40ba3a4ea0">
+         <input type="hidden" name="object_id" value="628e282a84812abd313dc443" id="object_id" class="object_id">
+         <div class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+         </div>
+         <div class="row align-items-start form_blocks">
+          <input type="hidden" name="lead_stage_config" value="1">
+          <!-- <div class="col-12">
+           <p class="mt-0">Opportunity Status</p>
+          </div>
+          <div class="col-3 mb-2">
+           <div class="card my-0">
+            <div class="card-body p-3">
+             <h3 class="text-secondary my-0 h6 font-weight-normal">Open</h3>
+             <small class=""> <span class="">Stage</span> 14</small>
+            </div>
+           </div>
+          </div>
+          <div class="col-3 mb-2">
+           <div class="card my-0">
+            <div class="card-body p-3">
+             <h3 class="text-secondary my-0 h6 font-weight-normal">Connected</h3>
+            </div>
+           </div>
+          </div>
+          <div class="col-3 mb-2">
+           <div class="card my-0">
+            <div class="card-body p-3">
+             <h3 class="text-secondary my-0 h6 font-weight-normal">Qualified</h3>
+            </div>
+           </div>
+          </div>
+          <div class="col-3 mb-2">
+           <div class="card my-0">
+            <div class="card-body p-3">
+             <h3 class="text-secondary my-0 h6 font-weight-normal">Un-Qualified</h3>
+            </div>
+           </div>
+          </div> -->
+          <div class="col-12 position-sticky config-stage-bar">
+           <div class="row align-items-start d-none d-md-flex">
+            <div class="col-12">
+             <div class="px-3 d-inline-block w-100 bg-white mb-1">
+              <div class="row align-items-start mt-3 mb-2">
+               <div class="col-5"><label class="text-dark" for="pro-sen-id">Configure Lead Stages</label></div>
+               <div class="col-2"><label class="text-dark no-wrap" for="pro-sen-id">Follow up Required</label></div>
+               <div class="col-2"><label class="text-dark no-wrap" for="pro-sen-id">Sub Stage Required</label></div>
+               <div class="col-1"><label class="text-dark no-wrap" for="pro-sen-id">Select Score</label></div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-12 lead_stages_block drag-box " id="dragItemBox">
+
+           <span class="stage_count" style="display:none">21</span>
+           <input type="hidden" id="stage_count_val" value="21">
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_1">
+            <span class="sub_stage_count" style="display:none">2</span>
+            <div class="position-relative stage_config  has-tree ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                1 <small class="text-center d-block leading-6">2 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="20369"
+                  value="BUSY" readonly="" id="0_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,20369, 'lead','stage','error_lead_stage_0');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="20369">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_0"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1" selected="">Yes</option>
+                 <option value="0">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-151" aria-haspopup="listbox" aria-expanded="false" title="Yes">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">Yes</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-151" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-152" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-152" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0" selected="">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-153" aria-haspopup="listbox" aria-expanded="false" title="0">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">0</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-153" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="20369">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_20369"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_20369" data-parent="#stageList">
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 1</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="1500134" value="" readonly="" id="20369_lead_sub_stage_0">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,1500134, 'lead','subStage','error_lead_sub_stage_0');"
+                      title="Save"> done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20369]" value="1500134">
+                <div class="validation-message small text-danger error_lead_sub_stage_0"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20369]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-154" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-154" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20369]" class="sub_stage_status_val" type="hidden" value="1" data-value="1500134">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 2</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="1500136" value="dtfhgj" readonly="" id="20369_lead_sub_stage_1">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,1500136, 'lead','subStage','error_lead_sub_stage_1');"
+                      title="Save"> done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20369]" value="1500136">
+                <div class="validation-message small text-danger error_lead_sub_stage_1"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20369]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-155" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-155" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox"><span class="toggle"></span></label>
+                 <input name="status[20369]" class="sub_stage_status_val" type="hidden" value="0" data-value="1500136">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_2">
+            <span class="sub_stage_count" style="display:none">1</span>
+            <div class="position-relative stage_config  has-tree ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                2 <small class="text-center d-block leading-6">1 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="36781"
+                  value="Call Dropped" readonly="" id="1_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,36781, 'lead','stage','error_lead_stage_1');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="36781">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_1"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1" selected="">Yes</option>
+                 <option value="0">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-156" aria-haspopup="listbox" aria-expanded="false" title="Yes">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">Yes</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-156" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-157" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-157" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0" selected="">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-158" aria-haspopup="listbox" aria-expanded="false" title="0">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">0</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-158" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="36781">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_36781"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_36781" data-parent="#stageList">
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 11</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="1500135" value="" readonly="" id="36781_lead_sub_stage_0">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,1500135, 'lead','subStage','error_lead_sub_stage_0');"
+                      title="Save"> done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[36781]" value="1500135">
+                <div class="validation-message small text-danger error_lead_sub_stage_0"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[36781]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-159" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-159" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[36781]" class="sub_stage_status_val" type="hidden" value="1" data-value="1500135">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_3">
+            <span class="sub_stage_count" style="display:none">3</span>
+            <div class="position-relative stage_config  has-tree ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                3 <small class="text-center d-block leading-6">3 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="35205"
+                  value="NNNN" readonly="" id="2_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,35205, 'lead','stage','error_lead_stage_2');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="35205">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_2"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-160" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-160" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-161" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-161" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10" selected="">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-162" aria-haspopup="listbox" aria-expanded="false" title="10">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">10</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-162" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="35205">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_35205"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_35205" data-parent="#stageList">
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 21</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="1500006" value="()01" readonly="" id="35205_lead_sub_stage_0">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,1500006, 'lead','subStage','error_lead_sub_stage_0');"
+                      title="Save"> done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[35205]" value="1500006">
+                <div class="validation-message small text-danger error_lead_sub_stage_0"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[35205]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-163" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-163" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[35205]" class="sub_stage_status_val" type="hidden" value="1" data-value="1500006">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 2</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="1500007" value="()()02" readonly="" id="35205_lead_sub_stage_1">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,1500007, 'lead','subStage','error_lead_sub_stage_1');"
+                      title="Save"> done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[35205]" value="1500007">
+                <div class="validation-message small text-danger error_lead_sub_stage_1"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[35205]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-164" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-164" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[35205]" class="sub_stage_status_val" type="hidden" value="1" data-value="1500007">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 3</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="1500086" value="()()03" readonly="" id="35205_lead_sub_stage_2">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,1500086, 'lead','subStage','error_lead_sub_stage_2');"
+                      title="Save"> done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[35205]" value="1500086">
+                <div class="validation-message small text-danger error_lead_sub_stage_2"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[35205]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-165" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-165" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[35205]" class="sub_stage_status_val" type="hidden" value="1" data-value="1500086">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_4">
+            <span class="sub_stage_count" style="display:none">0</span>
+            <div class="position-relative stage_config  has-no-child ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                4 <small class="text-center d-block leading-6">0 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="35206"
+                  value="Discarded" readonly="" id="3_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,35206, 'lead','stage','error_lead_stage_3');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="35206">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_3"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-166" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-166" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-167" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-167" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10" selected="">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-168" aria-haspopup="listbox" aria-expanded="false" title="-10">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">-10</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-168" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="35206">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_35206"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_35206" data-parent="#stageList">
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_5">
+            <span class="sub_stage_count" style="display:none">0</span>
+            <div class="position-relative stage_config  has-no-child ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                5 <small class="text-center d-block leading-6">0 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="36780"
+                  value="Do Not Disturb" readonly="" id="4_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,36780, 'lead','stage','error_lead_stage_4');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="36780">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_4"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1" selected="">Yes</option>
+                 <option value="0">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-169" aria-haspopup="listbox" aria-expanded="false" title="Yes">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">Yes</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-169" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-170" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-170" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0" selected="">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-171" aria-haspopup="listbox" aria-expanded="false" title="0">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">0</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-171" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="36780">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_36780"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_36780" data-parent="#stageList">
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_6">
+            <span class="sub_stage_count" style="display:none">13</span>
+            <div class="position-relative stage_config  has-tree ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                6 <small class="text-center d-block leading-6">13 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="20152"
+                  value="Hot" readonly="" id="5_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,20152, 'lead','stage','error_lead_stage_5');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="20152">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_5"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-172" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-172" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1" selected="">Yes</option>
+                 <option value="0">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-173" aria-haspopup="listbox" aria-expanded="false" title="Yes">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">Yes</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-173" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10" selected="">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-174" aria-haspopup="listbox" aria-expanded="false" title="10">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">10</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-174" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="20152">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_20152"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_20152" data-parent="#stageList">
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 1</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="80891" value="Asked To Call Back" readonly="" id="20152_lead_sub_stage_0">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,80891, 'lead','subStage','error_lead_sub_stage_0');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="80891">
+                <div class="validation-message small text-danger error_lead_sub_stage_0"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-175" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-175" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="80891">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 2</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="80892" value="Will Submit Soon" readonly="" id="20152_lead_sub_stage_1">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,80892, 'lead','subStage','error_lead_sub_stage_1');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="80892">
+                <div class="validation-message small text-danger error_lead_sub_stage_1"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-176" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-176" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="80892">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 3</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="395012" value="Application initiated" readonly="" id="20152_lead_sub_stage_2">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,395012, 'lead','subStage','error_lead_sub_stage_2');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="395012">
+                <div class="validation-message small text-danger error_lead_sub_stage_2"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-177" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-177" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="395012">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 4</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="395013" value="Arranging funds" readonly="" id="20152_lead_sub_stage_3">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,395013, 'lead','subStage','error_lead_sub_stage_3');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="395013">
+                <div class="validation-message small text-danger error_lead_sub_stage_3"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-178" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-178" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="395013">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 5</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="216325" value="Follow up" readonly="" id="20152_lead_sub_stage_4">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,216325, 'lead','subStage','error_lead_sub_stage_4');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="216325">
+                <div class="validation-message small text-danger error_lead_sub_stage_4"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-179" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-179" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="216325">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 6</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="395014" value="Loan case" readonly="" id="20152_lead_sub_stage_5">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,395014, 'lead','subStage','error_lead_sub_stage_5');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="395014">
+                <div class="validation-message small text-danger error_lead_sub_stage_5"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-180" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-180" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="395014">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 7</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="216326" value="Will Surely visit campus" readonly="" id="20152_lead_sub_stage_6">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,216326, 'lead','subStage','error_lead_sub_stage_6');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="216326">
+                <div class="validation-message small text-danger error_lead_sub_stage_6"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-181" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-181" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="216326">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 8</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="216327" value="Will Surely pay money" readonly="" id="20152_lead_sub_stage_7">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,216327, 'lead','subStage','error_lead_sub_stage_7');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="216327">
+                <div class="validation-message small text-danger error_lead_sub_stage_7"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-182" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-182" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="216327">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 9</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="349447" value="Did Not Respond" readonly="" id="20152_lead_sub_stage_8">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,349447, 'lead','subStage','error_lead_sub_stage_8');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="349447">
+                <div class="validation-message small text-danger error_lead_sub_stage_8"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-183" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-183" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="349447">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 10</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="216328" value="Will Surely fill form" readonly="" id="20152_lead_sub_stage_9">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,216328, 'lead','subStage','error_lead_sub_stage_9');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="216328">
+                <div class="validation-message small text-danger error_lead_sub_stage_9"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-184" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-184" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="216328">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 11</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="230196" value="First Follow Up" readonly="" id="20152_lead_sub_stage_10">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,230196, 'lead','subStage','error_lead_sub_stage_10');"
+                      title="Save"> done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="230196">
+                <div class="validation-message small text-danger error_lead_sub_stage_10"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-185" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-185" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="230196">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 12</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="96606" value="REQUIRE MORE INFORMATION" readonly="" id="20152_lead_sub_stage_11">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,96606, 'lead','subStage','error_lead_sub_stage_11');" title="Save">
+                      done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="96606">
+                <div class="validation-message small text-danger error_lead_sub_stage_11"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-186" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-186" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="96606">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row align-items-start mb-3 has-sub-tree sub_stage add_substage">
+               <div class="col-12 col-md-2 pl-4 no-wrap">
+                <span
+                 class="form-label-bg px-2 py-2 bg-light text-dark d-block text-center ml-3 has-sub-tree-label sub_stage_text">Sub
+                 Stage 13</span>
+               </div>
+               <div class="col-12 col-md-3">
+                <span class="bmd-form-group is-filled">
+                 <div class="input-group mb-3 stage_value_div">
+                  <input type="text" class="form-control edit_lead_sub_stages sub_stage_data sub_stage_list stage_value"
+                   data-value="370483" value="WAITING FOR RESULTS" readonly="" id="20152_lead_sub_stage_12">
+                  <div class="input-group-append">
+                   <div class="d-block py-2 bg-white">
+                    <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                     <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                     <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                      data-placement="bottom" data-trigger="hover" data-container="body"
+                      onclick="updateStageTitle(this,370483, 'lead','subStage','error_lead_sub_stage_12');"
+                      title="Save"> done </span>
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </span>
+                <input type="hidden" class="form-control sub_stage_list" name="lead_sub_stages[20152]" value="370483">
+                <div class="validation-message small text-danger error_lead_sub_stage_12"></div>
+               </div>
+               <div class="col-6 col-md-2">
+                <span class="text-muted small d-block d-md-none">Follow up Required</span>
+                <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                  class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                  name="s_followup_required[20152]" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                  <option value="1">Yes</option>
+                  <option value="0" selected="">No</option>
+                 </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                  role="combobox" aria-owns="bs-select-187" aria-haspopup="listbox" aria-expanded="false" title="No">
+                  <div class="filter-option">
+                   <div class="filter-option-inner">
+                    <div class="filter-option-inner-inner">No</div>
+                   </div>
+                  </div>
+                 </button>
+                 <div class="dropdown-menu ">
+                  <div class="inner show" role="listbox" id="bs-select-187" tabindex="-1">
+                   <ul class="dropdown-menu inner show" role="presentation"></ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-6 col-md-4 text-right pr-4">
+                <div class="togglebutton mt-2">
+                 <label><input class="sub_stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                 <input name="status[20152]" class="sub_stage_status_val" type="hidden" value="1" data-value="370483">
+                 <div class="validation-message small text-danger error_lead_stage error_lead_sub_stage_lock"></div>
+                </div>
+               </div>
+              </div>
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_7">
+            <span class="sub_stage_count" style="display:none">0</span>
+            <div class="position-relative stage_config  has-no-child ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                7 <small class="text-center d-block leading-6">0 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="85289"
+                  value="2020 Intake" readonly="" id="6_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,85289, 'lead','stage','error_lead_stage_6');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="85289">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_6"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-188" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-188" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-189" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-189" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0" selected="">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-190" aria-haspopup="listbox" aria-expanded="false" title="0">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">0</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-190" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="85289">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_85289"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_85289" data-parent="#stageList">
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_8">
+            <span class="sub_stage_count" style="display:none">0</span>
+            <div class="position-relative stage_config  has-no-child ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                8 <small class="text-center d-block leading-6">0 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="177423"
+                  value="1st Interview Scheduled" readonly="" id="7_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,177423, 'lead','stage','error_lead_stage_7');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="177423">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_7"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-191" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-191" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-192" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-192" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0" selected="">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-193" aria-haspopup="listbox" aria-expanded="false" title="0">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">0</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-193" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="177423">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_177423"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_177423" data-parent="#stageList">
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_9">
+            <span class="sub_stage_count" style="display:none">0</span>
+            <div class="position-relative stage_config  has-no-child ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                9 <small class="text-center d-block leading-6">0 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="196786"
+                  value="Admission Taken" readonly="" id="8_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,196786, 'lead','stage','error_lead_stage_8');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="196786">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_8"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-194" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-194" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-195" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-195" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0" selected="">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-196" aria-haspopup="listbox" aria-expanded="false" title="0">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">0</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-196" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="196786">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_196786"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_196786" data-parent="#stageList">
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+           <div class="card px-3 mt-0 mb-3 accordion-card z-10 add_stage stage_10">
+            <span class="sub_stage_count" style="display:none">0</span>
+            <div class="position-relative stage_config  has-no-child ">
+             <div class="row align-items-start my-3 config-stage-row">
+              <div class="col-12 col-md-2 bg-white">
+               <span
+                class="sort-handle form-label-bg px-3 py-2 bg-light text-dark d-block text-center font-weight-bold stage_text">Stage
+                10 <small class="text-center d-block leading-6">0 Substage</small></span>
+
+              </div>
+              <div class="col-12 col-md-3 bg-white">
+               <span class="bmd-form-group is-filled">
+                <div class="input-group mb-3 stage_value_div">
+                 <input type="text" class="form-control edit_lead_stage stage_list stage_value" data-value="222331"
+                  value="Already Submitted" readonly="" id="9_lead_stage">
+                 <div class="input-group-append">
+                  <div class="d-block py-2 bg-white">
+                   <a href="javascript:void(0);" class="edit-stage-btn input-group-text bg-white px-0">
+                    <span class="material-icons-outlined stage-edit-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body" title="Edit"> edit </span>
+                    <span class="material-icons-outlined stage-save-icon fs-16" data-toggle="tooltip"
+                     data-placement="bottom" data-trigger="hover" data-container="body"
+                     onclick="updateStageTitle(this,222331, 'lead','stage','error_lead_stage_9');" title="Save"> done
+                    </span>
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </span>
+               <input type="hidden" class="form-control" name="lead_stage" value="222331">
+               <div class="validation-message small text-danger error_lead_stage error_lead_stage_9"></div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Follow up Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="followup_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-197" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-197" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-6 col-md-2 bg-white">
+               <span class="text-muted small d-block d-md-none">Sub Stage Required</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements"><select
+                 class="selectpicker form-control border-bottom-form form_elements" data-container="body"
+                 name="s_stage_required" data-virtual-scroll="false" data-dropup-auto="false" tabindex="-98">
+                 <option value="1">Yes</option>
+                 <option value="0" selected="">No</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-198" aria-haspopup="listbox" aria-expanded="false" title="No">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">No</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-198" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <span class="text-muted small d-block d-md-none">Select Score</span>
+               <div class="dropdown bootstrap-select form-control border-bottom-form form_elements lead_score"><select
+                 class="selectpicker form-control border-bottom-form form_elements lead_score" name="lead_score"
+                 data-virtual-scroll="false" data-size="5" data-dropup-auto="false" tabindex="-98">
+
+                 <option value="10">10</option>
+
+                 <option value="9">9</option>
+
+                 <option value="8">8</option>
+
+                 <option value="7">7</option>
+
+                 <option value="6">6</option>
+
+                 <option value="5">5</option>
+
+                 <option value="4">4</option>
+
+                 <option value="3">3</option>
+
+                 <option value="2">2</option>
+
+                 <option value="1">1</option>
+
+                 <option value="0" selected="">0</option>
+
+                 <option value="-1">-1</option>
+
+                 <option value="-2">-2</option>
+
+                 <option value="-3">-3</option>
+
+                 <option value="-4">-4</option>
+
+                 <option value="-5">-5</option>
+
+                 <option value="-6">-6</option>
+
+                 <option value="-7">-7</option>
+
+                 <option value="-8">-8</option>
+
+                 <option value="-9">-9</option>
+
+                 <option value="-10">-10</option>
+
+                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                 role="combobox" aria-owns="bs-select-199" aria-haspopup="listbox" aria-expanded="false" title="0">
+                 <div class="filter-option">
+                  <div class="filter-option-inner">
+                   <div class="filter-option-inner-inner">0</div>
+                  </div>
+                 </div>
+                </button>
+                <div class="dropdown-menu ">
+                 <div class="inner show" role="listbox" id="bs-select-199" tabindex="-1">
+                  <ul class="dropdown-menu inner show" role="presentation"></ul>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <div class="togglebutton mt-2">
+                <label><input class="stage_status" type="checkbox" checked=""><span class="toggle"></span></label>
+                <input type="hidden" name="status" value="1" class="stage_status_val" data-value="222331">
+                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+               </div>
+              </div>
+              <div class="col-12 col-md-1 bg-white">
+               <a href="#stage_222331"
+                class="d-flex align-items-center justify-content-center text-secondary p-1 collapse-icon"
+                data-toggle="collapse" aria-expanded="false">
+                <span class="material-icons-outlined bg-light hover-effect rounded-circle p-1" data-toggle="tooltip"
+                 data-trigger="hover" data-container="body" title="Click to expand /collapse substage"> expand_more
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="collapse sub_stage_items" id="stage_222331" data-parent="#stageList">
+
+              <div class="row mb-3 add_sub_stage_btn">
+               <div class="col-12 col-md-12 text-right">
+                <a href="javascript:void(0);" class="text-primary border-bottom-blue"
+                 onclick="getLeadStageConfig(this,'substage');">Add New Sub Stage</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+
+
+
+
+
+
+          </div>
+
+          <div class="col-12 stage_loader text-center">
+           <img src="https://uat-bkndcdn.npfs.co/static/theme/v1/images/npf-loder.gif?1660118440" id="loadMoreStage"
+            data-height="20" class="col-2 loader-img" alt="Loading..." style="">
+          </div>
+
+
+          <div class="validation-message small text-danger error_lead_stage error_lead_stage_config"></div>
+
+
+         </div>
+
+
+
+
+         <div class="row align-items-end" id="save-55a76d8b1672ab40ba3a4ea0" style="display: none;">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+           <div class="form-group mb-1 mt-4 btn-round text-right">
+            <button class="btn btn-primary btn-sm btn-round"
+             onclick="saveDetails('55a76d8b1672ab40ba3a4ea0')">Save</button>
+           </div>
+          </div>
+         </div>
+
+        </form>
+
+       </div>
+      </div>
+     </div>
+
+
+     <div class="card my-3 conditional_logics_on_lead_stage">
+      <div class="card-body py-3 px-3">
+       <div
+        class="d-flex flex-wrap justify-content-md-between align-items-start collapsed cursor-pointer btn_conditional_logics_on_lead_stage"
+        aria-expanded="false" data-toggle="collapse" data-target="#level-55a76d8b1672ab40ba3a5ba0"
+        aria-controls="level-55a76d8b1672ab40ba3a5ba0" role="tablist"
+        onclick="getLevelSettings('55a76d8b1672ab40ba3a5ba0','3','card')">
+        <div>
+         <h5 class="my-0 h6">Conditional Logics on Lead stage</h5>
+         <div class="fs-12 text-dark sub-text">
+          Configure the below settings to set conditional logics on Lead defined stages
+         </div>
+        </div>
+        <div class="d-flex ml-auto">
+         <div>
+          <button type="button" class="btn btn-link py-0 px-0 arrow-icon" aria-expanded="false" data-toggle="collapse"
+           data-target="#level-55a76d8b1672ab40ba3a5ba0">
+           <span class="fa fa-angle-down" data-toggle="tooltip" data-placement="bottom" data-container="body"
+            title="Click to expand /collapse"></span>
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="modal fade offCanvasModal right" id="statusChange">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header border-bottom-blue">
+     <button aria-hidden="true" class="close" data-container="body" data-dismiss="modal" data-placement="left"
+      data-toggle="tooltip" type="button" title="Click here to close"><span class="material-icons">close</span></button>
+     <h5 class="modal-title font-weight-bold my-0" id="alertTemplateTitle">Rename Opportunity Status</h5>
+    </div>
+    <div class="modal-body bg-light">
+     <form>
+      <div class="bg-white card mb-3 mt-0 py-2 px-3 border-bottom ">
+       <div class="form-group mb-0 pt-0 d-flex align-items-center max-w-60">
+        <input type="text" class="form-control bg-transparent fs-16 font-weight-normal mt-1 mb-0 px-2 py-1 border-0" readonly
+         placeholder="Open" Value="Open" maxlength="20">
+        <a href="javascript:void(0);" class="px-2 py-1 text-dark edit-name"><span class="material-icons-outlined fs-14"> edit
+         </span></a>
+        <a href="javascript:void(0);" class="px-2 py-1 text-primary save-name" style="display: none"><span
+          class="material-icons-outlined fs-14"> done </span></a>
+       </div>
+       <p class="m text-muted small">
+        <span>Stage 1, </span>
+        <span>Stage 2, </span>,
+        <span>Stage 3, </span>
+       </p>
+      </div>
+      <div class="bg-white card mb-3 mt-0 py-2 px-3 border-bottom ">
+       <div class="form-group mb-0 pt-0 d-flex align-items-center max-w-60">
+        <input type="text" class="form-control bg-transparent fs-16 font-weight-normal mt-1 mb-0 px-2 py-1 border-0" readonly
+         placeholder="Connected" Value="Connected" maxlength="20">
+        <a href="javascript:void(0);" class="px-2 py-1 text-dark edit-name"><span class="material-icons-outlined fs-14"> edit
+         </span></a>
+        <a href="javascript:void(0);" class="px-2 py-1 text-primary save-name" style="display: none"><span
+          class="material-icons-outlined fs-14"> done </span></a>
+       </div>
+       <p class="m text-muted small">
+        <span>Stage 11, </span>
+        <span>Stage 12, </span>,
+        <span>Stage 13, </span>
+       </p>
+      </div>
+      <div class="bg-white card mb-3 mt-0 py-2 px-3 border-bottom ">
+       <div class="form-group mb-0 pt-0 d-flex align-items-center max-w-60">
+        <input type="text" class="form-control bg-transparent fs-16 font-weight-normal mt-1 mb-0 px-2 py-1 border-0" readonly
+         placeholder="Qualified" Value="Qualified" maxlength="20">
+        <a href="javascript:void(0);" class="px-2 py-1 text-dark edit-name"><span class="material-icons-outlined fs-14"> edit
+         </span></a>
+        <a href="javascript:void(0);" class="px-2 py-1 text-primary save-name" style="display: none"><span
+          class="material-icons-outlined fs-14"> done </span></a>
+       </div>
+       <p class="m text-muted small">
+        <span>Stage 21, </span>
+        <span>Stage 22, </span>,
+        <span>Stage 23, </span>
+       </p>
+      </div>
+      <div class="bg-white card mb-3 mt-0 py-2 px-3 border-bottom ">
+       <div class="form-group mb-0 pt-0 d-flex align-items-center max-w-60">
+        <input type="text" class="form-control bg-transparent fs-16 font-weight-normal mt-1 mb-0 px-2 py-1 border-0" readonly
+         placeholder="Un-Qualified" Value="Un-Qualified" maxlength="20">
+        <a href="javascript:void(0);" class="px-2 py-1 text-dark edit-name"><span class="material-icons-outlined fs-14"> edit
+         </span></a>
+        <a href="javascript:void(0);" class="px-2 py-1 text-primary save-name" style="display: none"><span
+          class="material-icons-outlined fs-14"> done </span></a>
+       </div>
+       <p class="m text-muted small">
+        <span>Stage 31, </span>
+        <span>Stage 32, </span>,
+        <span>Stage 33, </span>
+       </p>
+      </div>
+     </form>
+     <form class="d-none">
+      <div class="callout-alert icon-filled mb-3 mt-0">
+       <div class="callout-icon mr-3">
+        <span class="lineicon-icon lineicon-info"></span>
+       </div>
+       <div class="callout-msg fs-75">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+        its layout.
+       </div>
+      </div>
+      <div class="form-group pt-0 mb-3">
+       <div class="row">
+        <div class="col-sm-4"><label class="mt-2 pt-1" for="tickets_forms">Status Open</label></div>
+        <div class="col-sm-8"><input type="text" class="form-control" placeholder="Open" Value="Open"></div>
+       </div>
+      </div>
+      <div class="form-group pt-0 mb-3">
+       <div class="row">
+        <div class="col-sm-4"><label class="mt-2 pt-1" for="tickets_forms">Status Connected</label></div>
+        <div class="col-sm-8"><input type="text" class="form-control" placeholder="Connected" Value="Connected"></div>
+       </div>
+      </div>
+      <div class="form-group pt-0 mb-3">
+       <div class="row">
+        <div class="col-sm-4"><label class="mt-2 pt-1" for="tickets_forms">Status Qualified</label></div>
+        <div class="col-sm-8"><input type="text" class="form-control" placeholder="Qualified" Value="Qualified"></div>
+       </div>
+      </div>
+      <div class="form-group pt-0 mb-3">
+       <div class="row">
+        <div class="col-sm-4"><label class="mt-2 pt-1" for="tickets_forms">Status Un-Qualified</label></div>
+        <div class="col-sm-8"><input type="text" class="form-control" placeholder="Un-Qualified" Value="Un-Qualified">
+        </div>
+       </div>
+      </div>
+     </form>
+    </div>
+    <div class="modal-footer justify-content-between">
+     <button class="btn btn-sm btn-outline-secondary text-dark font-weight-bold" data-dismiss="modal">Close</button>
+     <button class="btn btn-sm btn-primary border-primary border mr-2 font-weight-bold"
+      id="customTokenAddBtn">Update</button>
+    </div>
+   </div>
+  </div>
+ </div>
+ <script src="../static/backend/js/core/jquery.min.js"></script>
+ <script src="../static/backend/js/core/popper.min.js"></script>
+ <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
+ <script src="../static/backend/js/plugins/sortable.js"></script>
+ <script>
+  $('[data-toggle="tooltip"]').tooltip();
+  $(document).on('click', '.edit-name', function () {
+   $(this).closest('div').find('input').prop('readonly', false).focus();
+   $(this).closest('div').find('.save-name').show();
+   $(this).hide();
+  });
+  $(document).on('click', '.save-name', function () {
+   $(this).closest('div').find('input').prop('readonly', true);
+   $(this).closest('div').find('.edit-name').show();
+   $(this).hide();
+  });
+
+  new Sortable(dragItemBox, {
+   animation: 100,
+   handle: '.sort-handle',
+   ghostClass: 'ghost-drag'
+  });
+  new Sortable(dragSubItem, dragSubItem2, {
+   animation: 100,
+   handle: '.sort-handle',
+   ghostClass: 'ghost-drag'
+  });
+ </script>
+</body>
+
+</html>
