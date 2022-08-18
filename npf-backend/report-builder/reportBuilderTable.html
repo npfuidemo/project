@@ -15,9 +15,10 @@
    <!-- CSS Files -->
    <link href="../static/backend/css/main.css" rel="stylesheet" />
    <link href="../static/backend/css/reportBuilder.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://unpkg.com/webtour@1.1.0/dist/webtour.min.css">
 </head>
 
-<body class="dark-mode">
+<body class="dark-mode reportbuilder">
    <!-- Header With Side Nav Start-->
    <nav class="navbar fixed-top navbar-expand-lg border-bottom shadow-none brand-color" color-on-scroll="100"
       id="sectionsNav">
@@ -403,13 +404,26 @@
    <!-- Header With Side Nav End-->
 
    <div id="main" class="wrapper">
-      <div class="main-container p-3">
+      <div class="main-container  p-3 overflow-hidden fullHeight">
          <div class="row no-gutters h-100 bg-white reportBuilderContainer">
-            <div id="myCanvasNav" class="overlay" onclick="closeNav()">
-               <a href="javascript:void(0)" class="closebtn d-block d-lg-none" onclick="closeNav()">×</a>
-            </div>
             <!-- leftColumnReport start-->
             <div class="col-md-3 col-sm-4 border-right bg-white leftColumnReport opened" id="desktop-slide">
+               <div class="form-group p-3 mb-0 d-none">
+                  <div class="text-dark  pb-md-0 d-block font-weight-bold">Dataset</div>
+                  <select class="form-control selectpicker" data-live-search="true"
+                     data-selected-text-format="count > 1" data-style="px-2 border" name="dataset" id="" data-size="6">
+                     <option value="">Select Form</option>
+                     <option value="1">Form 1</option>
+                     <option value="1">Form 2</option>
+                     <option value="1">Form 3</option>
+                     <option value="1">Form 4</option>
+                     <option value="5">Form 5</option>
+                     <option value="6">Form 6</option>
+                     <option value="7">Form 7</option>
+                     <option value="8">Form 8</option>
+                  </select>
+               </div>
+
                <div id="accordion" class="accordion config-accordian maxheight450 mt-3">
                   <div class="row justify-content-center">
                      <div class="col-12 col-sm-12">
@@ -432,73 +446,43 @@
                                        </button>
                                     </div>
                                  </div>
-                                 <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">Choose a
-                                    numeric value you want to measure, like the number of leads.</div>
+                                 <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
+                                    institute consists of these
+                                    Registration forms
+                                    and Widgets.</div>
                               </div>
-                              <div id="metricsFields" class="collapse left-nav-accordion show drag-box" data-parent="#accordion">
+                              <div id="metricsFields" class="collapse left-nav-accordion show" data-parent="#accordion">
                                  <div
                                     class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
                                  </div>
-                                 <div class="row" id="before_metrics_selection" style="display:block;">
-                                    <div class="col-sm-12 addmenucontainer d-flex align-items-center justify-content-end ">
-                                       <a class="mr-2 d-flex align-items-center justify-content-end addMetrics"
-                                          href="javascript:void(0)" onclick="showhideMenuDiv(this)">
-                                          <span class="material-icons-outlined  fs-16">add</span>
-                                          <span class="lineHeight16 fs-12">Add</span>
-                                       </a>
-                                       
-                                       <a href="javascript:void(0)" onclick="removeDragDropMetrics();" class="mr-2  btn btn-sm btn-outline-primary py-1 px-3 saveDrag">
-                                          <span class="lineHeight16">Save</span>
-                                       </a>
-                                    </div>
+                                 <div class="row">
+                                    <div class="col-sm-12 addmenucontainer"></div>
                                     <div class="col-sm-12">
-                                       <ul class="selectedField p-2" id="dragItemBox">
-                                          <li class="bg-light">
-                                             <span class="sort-handle dragable-span">Lead</span>
-                                             <small class="d-block lineHeight13">Count,Sum</small>
-                                             <a href="javascript:void(0)" class="removeList">
-                                                <span class="material-icons-outlined fs-12">
-                                                   close
-                                                </span>
+                                       <p class="text-center text-secondary fs-12 mt-3 lineHeight16">
+                                          No Metrics Added<br>
+                                          Add your Metrics to see here
+                                       </p>
+                                       <div class="row d-flex justify-content-center mb-3">
+                                          <div class="col-sm-4 col-4 text-center">
+                                             <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1 mr-2"
+                                                href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                                <span class="material-icons-outlined  fs-16">add</span>
+                                                <span class="lineHeight16 fs-12">Add</span>
                                              </a>
-                                          </li>
-                                          <li class="bg-light">
-                                             <span class="sort-handle dragable-span">Application</span>
-                                             <small class="d-block lineHeight13">Count,Sum,Percentage</small>
-                                             <a href="javascript:void(0)" class="removeList">
-                                                <span class="material-icons-outlined fs-12">
-                                                   close
-                                                </span>
-                                             </a>
-                                          </li>
-                                          <li class="bg-light">
-                                             <span class="sort-handle dragable-span">Application2</span>
-                                             <small class="d-block lineHeight13">Count,Percentage</small>
-                                             <a href="javascript:void(0)" class="removeList">
-                                                <span class="material-icons-outlined fs-12">
-                                                   close
-                                                </span>
-                                             </a>
-                                          </li>
-                                          <li class="bg-light">
-                                             <span class="sort-handle dragable-span">Application3</span>
-                                             <small class="d-block lineHeight13">Sum,Percentage</small>
-                                             <a href="javascript:void(0)" class="removeList">
-                                                <span class="material-icons-outlined fs-12">
-                                                   close
-                                                </span>
-                                             </a>
-                                          </li>
-                                       </ul>
+                                          </div>
+                                       </div>
                                     </div>
+
                                  </div>
                               </div>
                            </div>
                         </div>
 
-                        <div class="card shadow-none mt-0 mb-3 row_fields">
+
+                        <div class="card shadow-none mt-0 mb-3">
                            <div class="card-body py-0 px-0 my-0">
-                              <div class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer"
+                              <div
+                                 class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
                                  aria-expanded="true" data-toggle="collapse" data-target="#rowFields"
                                  aria-controls="level-metricsFields" role="tablist">
                                  <div class="w-75">
@@ -506,7 +490,7 @@
                                  </div>
                                  <div class="d-flex ml-auto">
                                     <div>
-                                       <button type="button" class="btn btn-link py-0 px-0 arrow-icon"
+                                       <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
                                           aria-expanded="true" data-toggle="collapse" data-target="#rowFields">
                                           <span class="fa fa-angle-down" data-toggle="tooltip" data-placement="bottom"
                                              data-container="body"
@@ -514,54 +498,152 @@
                                        </button>
                                     </div>
                                  </div>
-                                 <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">Add
-                                    attributes to rows like dates , statuses and created fields to slice your results in
-                                    one Chart.
-                                 </div>
+                                 <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
+                                    institute consists of these
+                                    Registration forms
+                                    and Widgets.</div>
                               </div>
-                              <div id="rowFields" class="left-nav-accordion collapse show" data-parent="#accordion">
+                              <div id="rowFields" class="collapse left-nav-accordion show" data-parent="#accordion">
                                  <div
                                     class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
                                  </div>
-                                 <div class="row d-flex justify-content-center mt-3 mb-3" id="before_row_selection"
-                                    style="display:none !important;">
-                                    <div class="col-sm-12">
-                                       <p class="text-center text-secondary  fs-12 lineHeight16">
-                                          No Rows added yet<br>
-                                          Click on the Add button to get started.
-                                       </p>
-                                    </div>
-                                    <div class="col-sm-4 col-4 text-center">
-                                       <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1 pr-2"
-                                          href="javascript:void(0)"
-                                          onclick="showMappingData('mapping','/backend/s22/143570000957/report-builder/getMappingData','rows', '13');">
+                                 <div class="row">
+                                    <div class="col-sm-12 addmenucontainer">
+                                       <a class="d-flex align-items-center justify-content-end  mr-2"
+                                          href="javascript:void(0)" onclick="showhideMenuDiv(this)">
                                           <span class="material-icons-outlined  fs-16">add</span>
                                           <span class="lineHeight16 fs-12">Add</span>
                                        </a>
                                     </div>
-                                 </div>
-
-                                 <div class="row" id="after_row_selection">
                                     <div class="col-sm-12">
-                                       <a class="d-flex align-items-center justify-content-end mr-2"
-                                          href="javascript:void(0)"
-                                          onclick="showMappingData('mapping','/backend/s22/143570000957/report-builder/getMappingData','rows', '13');">
-                                          <span class="material-icons-outlined  fs-16">add</span>
-                                          <span class="lineHeight16 fs-12">Add</span>
-                                       </a>
-                                    </div> 
-                                    <div class="col-sm-12">
-                                       <ul class="selectedField p-2" id="selected_row_field">
-                                          <li class="bg-light"><span class="fs-13 dragable-span sort-handle">Lead Origin (Primary) </span></li>
-                                          <li class="bg-light"><span class="fs-13 dragable-span sort-handle">Lead Origin (Primary) </span></li>
-                                          <li class="bg-light"><span class="fs-13 dragable-span sort-handle">Lead Origin (Primary) </span></li>
+                                       <ul class="selectedField p-2">
+                                          <li class="bg-light">
+                                             <span>Lead</span>
+                                             <a href="javascript:void(0)" class="removeList">
+                                                <span class="material-icons-outlined fs-12">
+                                                   close
+                                                </span>
+                                             </a>
+                                          </li>
+                                          <li class="bg-light">
+                                             <span>Application</span>
+                                             <a href="javascript:void(0)" class="removeList">
+                                                <span class="material-icons-outlined fs-12">
+                                                   close
+                                                </span>
+                                             </a>
+                                          </li>
                                        </ul>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
+
+
+                        <div class="card shadow-none mt-0 mb-3">
+                           <div class="card-body py-0 px-0 my-0">
+                              <div
+                                 class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
+                                 aria-expanded="false" data-toggle="collapse" data-target="#columnsFields"
+                                 aria-controls="level-columnsFields" role="tablist">
+                                 <div class="w-75">
+                                    <h5 class="my-0 h6 text-dark">Columns</h5>
+                                 </div>
+                                 <div class="d-flex ml-auto">
+                                    <div>
+                                       <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
+                                          aria-expanded="false" data-toggle="collapse" data-target="#columnsFields">
+                                          <span class="fa fa-angle-down" data-toggle="tooltip" data-placement="bottom"
+                                             data-container="body"
+                                             data-original-title="Click to expand /collapse"></span>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
+                                    institute consists of these
+                                    Registration forms
+                                    and Widgets.</div>
+                              </div>
+                              <div id="columnsFields" class="collapse left-nav-accordion" data-parent="#accordion">
+                                 <div
+                                    class="heading-highlight border-bottom text-dark  mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+                                 </div>
+                                 <div class="row d-flex justify-content-center mt-3 mb-3">
+                                    <div class="col-sm-12">
+                                       <p class="text-center text-secondary  fs-12 lineHeight16">
+                                          No Columns Added<br>
+                                          Add your Columns to see here
+                                       </p>
+                                    </div>
+                                    <div class="col-sm-4 col-4 text-center">
+                                       <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1"
+                                          href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                          <span class="material-icons-outlined  fs-16">add</span>
+                                          <span class="lineHeight16 fs-12">Add</span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="card shadow-none mt-0 mb-0">
+                           <div class="card-body py-0 px-0 my-0 pt-0">
+                              <div
+                                 class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
+                                 aria-expanded="false" data-toggle="collapse" data-target="#filterFields"
+                                 aria-controls="level-filterFields" role="tablist">
+                                 <div class="w-75">
+                                    <h5 class="my-0 h6 text-dark">FIlter</h5>
+                                 </div>
+                                 <div class="d-flex ml-auto">
+                                    <div>
+                                       <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
+                                          aria-expanded="false" data-toggle="collapse" data-target="#filterFields">
+                                          <span class="fa fa-angle-down" data-toggle="tooltip" data-placement="bottom"
+                                             data-container="body"
+                                             data-original-title="Click to expand /collapse"></span>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="fs-12 text-muted lineHeight16  d-block text-truncated-custom">This
+                                    institute consists of these
+                                    Registration forms
+                                    and Widgets.</div>
+                              </div>
+                              <div id="filterFields" class="collapse left-nav-accordion" data-parent="#accordion">
+                                 <div
+                                    class="heading-highlight border-bottom text-dark mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+                                 </div>
+                                 <div class="row d-flex justify-content-center mt-3 mb-3">
+                                    <div class="col-sm-12">
+                                       <p class="text-center text-secondary  fs-12 lineHeight16">
+                                          No Filter Added<br>
+                                          Add your Filter to see here
+                                       </p>
+                                    </div>
+                                    <div class="col-sm-4 col-4 text-center">
+                                       <a class="d-flex align-items-center justify-content-center btn btn-outline-primary btn-sm py-1 px-1"
+                                          href="javascript:void(0)" onclick="showhideMenuDiv(this)">
+                                          <span class="material-icons-outlined  fs-16">add</span>
+                                          <span class="lineHeight16 fs-12">Add</span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
                      </div>
+                  </div>
+
+                  <div class="d-flex justify-content-end  totalSort ">
+                     <a href="reportBuilderTotal.html" onclick="showhideMenuDiv(this)"
+                        class=" btn btn-outline-primary btn-sm">Total</a>
+                     <a href="reportBuilderSort.html" onclick="showhideMenuDiv(this)"
+                        class="ml-3  btn btn-outline-secondary btn-sm">Sort</a>
                   </div>
                </div>
             </div>
@@ -569,335 +651,466 @@
 
             <!-- rightColumnReport start-->
             <div class="col-md-9 col-sm-8 rightColumnReport">
-               <div class="tagcontainer-backdrop" style="display: none;"></div>
-               <div class="sidebarToggle" data-toggle="tooltip" title="" data-trigger="hover"
-                  data-original-title="Hide Reports Filter">
+               <div class="sidebarToggle" data-toggle="tooltip" title="Hide Reports Filter" data-trigger="hover">
                   <a class="" href="javascript:void(0);" onclick="hideSideNav()">
                      <span class="material-icons-outlined">
                         menu_open
                      </span>
                   </a>
                </div>
-               <div class="p-3 bg-white  h-100 shadow-bottom">
-                  <div class="row" id="topsection">
-                     <div class="col-sm-4">
-                        <div class="reportName d-flex align-items-center form-group pt-0 mb-0">
-                           <a href="#" class="mr-2 favouriteBtn" data-toggle="tooltip" data-container="body"
-                              data-placement="bottom" data-trigger="hover" title="Add to favorite">
-                              <span class="material-icons-outlined text-secondary favouriteoutline">
-                                 star_outline
-                              </span>
-                              <span class="material-icons-outlined favourite favouriteFilled" style="display: none;">
-                                 star
-                              </span>
-                           </a>
-                           <input type="text" placeholder="Give a Name to the Report"
-                              class="form-control bg-light px-2 py-1" data-toggle="tooltip" data-container="body"
-                              data-placement="bottom" data-trigger="hover" title="Rename">
-                        </div>
+              
+               <div class="tagcontainer-backdrop" style="display: none;"></div>
+               <div class="row mt-2 ml-0 mr-0" id="topsection">
+                  <div class="col-sm-4">
+                     <div class="reportName d-flex align-items-center form-group pt-0 mb-0">
+                        <a href="#" class="mr-2 favouriteBtn" data-toggle="tooltip" data-container="body"
+                           data-placement="bottom" data-trigger="hover" title="Add to favorite">
+                           <span class="material-icons-outlined text-secondary favouriteoutline">
+                              star_outline
+                           </span>
+                           <span class="material-icons-outlined favourite favouriteFilled" style="display: none;">
+                              star
+                           </span>
+                        </a>
+                        <input type="text" placeholder="Give a Name to the Report"
+                           class="form-control bg-light px-2 py-1" data-toggle="tooltip" data-container="body"
+                           data-placement="bottom" data-trigger="hover" title="Rename">
                      </div>
-                     <div class="col-12 col-md-8 pl-0 pl-md-3 d-flex align-items-end justify-content-end ">
-                        <a href="#reportPreview" data-toggle="modal">Preview</a>
-                        <div class="toggletag tag ">
-                           <a href="javascript:void(0)"
-                              class="d-flex border-0 p-1 mr-2 ml-2 hover-effect rounded-circle text-secondary basicTemplateTag"
-                              data-toggle="tooltip" data-container="body" data-placement="left" data-trigger="hover"
-                              title="Tags">
-                              <span class="material-icons-outlined">
-                                 local_offer
-                              </span>
-                           </a>
+                  </div>
+                  <div
+                     class="col-12 col-md-8 pl-0 pl-md-3 d-flex align-items-end justify-content-end align-items-center">
+
+                     <div class="toggletag tag ">
+                        <a href="javascript:void(0)"
+                           class="d-flex border-0 p-1 mr-2 ml-2 hover-effect rounded-circle text-secondary basicTemplateTag"
+                           data-toggle="tooltip" data-container="body" data-placement="left" data-trigger="hover"
+                           title="Tags">
+                           <span class="tagcount fs-14 mr-1">4</span>
+                           <span class="material-icons-outlined">
+                              local_offer
+                           </span>
+                        </a>
 
 
-                           <div class="tagcontainer">
-                              <div class="falseInputTag">
-                                 <div class="createtagsbox">
-                                    <div class="input text">
-                                       <input type="text" name="search_tag" id="search_tag30595"
-                                          placeholder="Add or search for existing tag" autocomplete="off" maxlength="20"
-                                          class="auto_complete search_tag">
-                                    </div>
-                                    <div class="autoloadspan suggesstion-box"></div>
-                                    <input type="hidden" name="tag" id="" class="" value="">
+                        <div class="tagcontainer">
+                           <div class="falseInputTag">
+                              <div class="createtagsbox">
+                                 <div class="input text">
+                                    <input type="text" name="search_tag" id="search_tag30595"
+                                       placeholder="Add or search for existing tag" autocomplete="off" maxlength="20"
+                                       class="auto_complete search_tag">
                                  </div>
-                                 <div class="createdtaglist">
-                                    <div class="norelvent_search ">
-                                       <i class="material-icons-outlined ">loyalty</i>
-                                       <span class="text-center">No relevant tags on your search</span>
-                                       <span class="enterTag"></span>
-                                       <a href="javascript:void(0)" style="display:none"
-                                          class="createnewtag btn btn-fill-blue btn-small radius-20">Create
-                                       </a>
+                                 <div class="autoloadspan suggesstion-box"></div>
+                                 <input type="hidden" name="tag" id="" class="" value="">
+                              </div>
+                              <div class="createdtaglist">
+                                 <div class="norelvent_search d-none ">
+                                    <i class="material-icons-outlined ">loyalty</i>
+                                    <span class="text-center">No relevant tags on your search</span>
+                                    <span class="enterTag"></span>
+                                    <a href="javascript:void(0)"
+                                       class="createnewtag btn btn-outline-primary btn-sm radius-20 mt-2">Create
+                                    </a>
+                                 </div>
 
-                                    </div>
-                                    <div class="border_selected_tag show_tag_list d-none" id="show_tag_list132080">
-                                       <div class="tag label label-primary remove_tag">
+                                 <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                    <div id="searchsuggestion" class="mb-3">
+                                       <div class="fs-13 ml-2 font-weight-normal mt-2">Tag Suggestion</div>
+                                       <div class="tag tag-outline label label-primary remove_tag">
                                           application
                                           <a href="javascript:void(0)" class="remove">
-                                             <span class="material-icons-outlined fs-12">close</span>
+                                             <span class="material-icons-outlined fs-11">close</span>
                                           </a>
                                        </div>
                                     </div>
-                                    <input type="hidden" name="removeTagId" id="" class="removeTagId" value="">
+
+                                    <div class="tag label label-primary remove_tag">
+                                       application
+                                       <a href="javascript:void(0)" class="remove">
+                                          <span class="material-icons-outlined fs-11">close</span>
+                                       </a>
+                                    </div>
+                                    <div class="tag label label-primary remove_tag">
+                                       application new
+                                       <a href="javascript:void(0)" class="remove">
+                                          <span class="material-icons-outlined fs-11">close</span>
+                                       </a>
+                                    </div>
+                                    <div class="tag label label-primary remove_tag">
+                                       Test application case new
+                                       <a href="javascript:void(0)" class="remove">
+                                          <span class="material-icons-outlined fs-11">close</span>
+                                       </a>
+                                    </div>
+                                    <div class="tag label label-primary remove_tag">
+                                       New application
+                                       <a href="javascript:void(0)" class="remove">
+                                          <span class="material-icons-outlined fs-11">close</span>
+                                       </a>
+                                    </div>
                                  </div>
                               </div>
                            </div>
-
-
                         </div>
 
-                        <a href="" class="d-flex border-0 p-1 mr-2 ml-2 hover-effect rounded-circle text-secondary"
-                           data-toggle="tooltip" data-container="body" data-placement="bottom" data-trigger="hover"
-                           title="Edit">
-                           <span class="material-icons-outlined">
-                              mode
-                           </span>
-                        </a>
 
-                        <a href="" class="d-flex border-0 p-1 mr-2 ml-2 hover-effect rounded-circle text-secondary"
-                           data-toggle="tooltip" data-container="body" data-placement="bottom" data-trigger="hover"
-                           title="Sync">
-                           <span class="material-icons-outlined">
-                              sync
-                           </span>
-                        </a>
+                     </div>
 
-                        <a href="" class="d-flex  ml-2 btn btn-sm btn-primary">Save</a>
+                     <a href="" class="d-flex border-0 p-1 mr-2 ml-2 hover-effect rounded-circle text-secondary"
+                        data-toggle="tooltip" data-container="body" data-placement="bottom" data-trigger="hover"
+                        title="Edit">
+                        <span class="material-icons-outlined">
+                           mode
+                        </span>
+                     </a>
+
+                     <a href="" class="d-flex border-0 p-1 mr-2 ml-2 hover-effect rounded-circle text-secondary"
+                        data-toggle="tooltip" data-container="body" data-placement="bottom" data-trigger="hover"
+                        title="Sync">
+                        <span class="material-icons-outlined">
+                           sync
+                        </span>
+                     </a>
+                     <div class="d-flex dropdown" data-container="body">
+                        <button type="button" class="  ml-2 btn btn-sm btn-primary">Save</button>
+                        <button type="button" disableds
+                           class="pt-0 pb-0 pr-0 pl-0 btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                           data-toggle="dropdown" aria-expanded="false">
+                           <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">Save</a></li>
+                           <li><a class="dropdown-item" href="#">Add to Dashboard</a></li>
+                           <li><a class="dropdown-item" href="#">Save as New</a></li>
+                           <li><a class="dropdown-item" href="#">Export</a></li>
+                        </ul>
                      </div>
                   </div>
-                  <hr>
+               </div>
+               <hr class="mt-2 mb-2">
 
-                  <div class="row d-none">
-                     <div class="col-sm-12">
-                        <div class="d-flex">
-                           <div class="stickyleft bg-white">
-                              <div class="position-relative filterCount  mr-2" data-toggle="tooltip"
-                                 data-placement="bottom" data-container="body" title="Total 10 Filter Added">
-                                 <span class="material-icons-outlined text-secondary"> filter_alt</span>
-                                 <span class="badge bg-danger">10</span>
-                              </div>
-                           </div>
-                           <div class="selectedFilterContainer d-flex align-items-cente  mb-3">
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Lead Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
+ 
+               <div class="reportData ">
+                  <div class="reportinner">
+                     <div class="row">
+                        <div class="col-sm-12">
+                            <div class="grid-table w-100 normalFont" id="tableCollapseParent">
+                                <div class="responsive-table">
+                                    <table class="table table-borderless">
+                                       <thead>
+                                          <tr>
+                                             <th rowspan="2" class="bdr-r fixColLeft">
+                                                Counsellor Name</th>
+                                             <th rowspan="2" class="bdr-r text-center">Lead Assigned </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th rowspan="2" colspan="2" class="bdr-r text-center">Leads Not Engaged </th>
+                                             <th colspan="1" data-colspan="2"
+                                                class="bdr-r text-center headerCollapseSubStage_LeadsEngaged bg-light">Leads Engaged
+                                                <a class="columnCollasp collapsed" href="javascript:void(0)" id="collapseStage_LeadsEngaged" onclick="javascript:collapseSubColumns('LeadsEngaged')">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      arrow_back_ios
+                                                      </span>
+                                                </a>
+                                             </th>
+                                             <th colspan="1" data-colspan="2"
+                                                class="bdr-r text-center headerCollapseSubStage_LeadsEngaged1 bg-light">New Leads Engaged
+                                                <a class="columnCollasp collapsed" href="javascript:void(0)" id="collapseStage_LeadsEngaged1" onclick="javascript:collapseSubColumns('LeadsEngaged1')">
+                                                   <span class="material-icons-outlined fs-12">
+                                                      arrow_back_ios
+                                                      </span>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                          <tr>
+                                             <th class="bdr-r nowrap text-center bg-light font-weight-normal">
+                                                Overall </th>
+                                             <th
+                                                class="bdr-r nowrap text-center collapseSubStage_LeadsEngaged bg-light  font-weight-normal d-none">
+                                                Assigned </th>
 
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                              <div class="selectedFilter ml-2 bg-light">
-                                 Application Details
-                                 <a href="javascript:void(0)" class="fs-12 remove">
-                                    <span class="material-icons-outlined fs-12">
-                                       close
-                                    </span>
-                                 </a>
-                              </div>
-
-                           </div>
+                                             <th class="bdr-r nowrap text-center  font-weight-normal">
+                                                Overall new</th>
+                                             <th class="bdr-r nowrap text-center  font-weight-normal collapseSubStage_LeadsEngaged1 d-none">
+                                                Assigned new</th>
+                                          </tr>
+                                          <tr>
+                                             <th colspan="9"></th>
+                                             <th>Not Available</th>
+                                             <th colspan="4"></th>
+                                          </tr>
+                                          <tr>
+                                             <th colspan="9"></th>
+                                             <th>Lead Count</th>
+                                             <th>Lead %</th>
+                                             <th colspan="3"></th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="accordionyui" role="tablist" aria-multiselectable="true">
+                                          <tr>
+                                             <td class="col1 bdr-r fixColLeft" width="200">
+                                                <div class="accodianMenuParent hasArrow">
+                                                   <a id="jsClicked_3609" data-counsellor="4455554" class="accodianMenu fetchrowData" data-toggle="collapse" data-parent="#accordionyui" data-rand="3609" href="#collapseOne3609" aria-expanded="true" aria-controls="collapseOne3608" onclick="closeAccordions(this)">KARTIM058</a>
+                                                </div>
+                                             </td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center">0</td>
+                                             <td class="bdr-r text-center bg-light">Lead Count 0</td>
+                                             <td class="bdr-r text-center bg-light">Lead %	 0</td>
+                                             <td class="bdr-r text-center bg-light collapseSubStage_LeadsEngaged">Overall 0000</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">Assigned 00000</td>
+                                             <td class="bdr-r text-center bg-light collapseSubStage_LeadsEngaged">Overall 0000</td>
+                                             <td class="bdr-r text-center collapseSubStage_LeadsEngaged1 d-none">Assigned 00000</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                            </div>
                         </div>
-
-                     </div>
-                     <div class="col-sm-3 text-md-right d-none">
-                        <div class="d-flex justify-content-md-end">
-                           <span>View Type: </span>
-                           <select data-container="body" class="form-control selectpicker customSelectMenu chart"
-                              data-selected-text-format="count > 1" data-dropdown-align-right="true"
-                              data-style="px-2 border" data-windowPadding="right" name="" id="">
-                              <option value="1"
-                                 data-content="<span class='material-icons-outlined'>analytics</span><span class='content'> Graph Chart</span>">
-                              </option>
-                              <option value="1"
-                                 data-content="<span class='material-icons-outlined'>table_chart</span><span class='content'>  Line Chart</span>">
-                              </option>
-                              <option value="1"
-                                 data-content="<span class='material-icons-outlined'>pie_chart</span> <span class='content'> Pie Chart</span>">
-                              </option>
-                           </select>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="reportData row no-gutters align-items-center justify-content-center">
-                     <div class="col-2 col-sm-4 text-right d-none d-sm-block">
-                        <img src="../static/backend/images/no-record.png" alt="no record" class="img-fluid">
-                     </div>
-                     <div class="col-10 col-sm-6 py-4">
-                        <strong class="text-secondary mb-2 d-block"> Creating a query</strong>
-                        <ol class="text-muted pl-4">
-                           <li class=" ">Select metrics that you want to measure</li>
-                           <li class=" ">Slice by attributes and add filters</li>
-                           <li class="">Choose how you want to visualize the data</li>
-                           <li class="">Save your query and add it to a dashboard</li>
-                        </ol>
                      </div>
                   </div>
                </div>
 
 
                <!-- addMenuDiv  start here -->
-               <div class="addMenudiv active" id="mapping">
-                  <div id="metrics" style="">
-                     <!-- addMenuDiv  start here -->
-                     <div class="searchbar bg-light p-3">
-                        <h5 class="my-0 h6 text-dark mb-0">List of metrics</h5>
-                        <div class="row d-flex justify-content-center align-items-cente">
-                           <div class="col-sm-8">
-                              <div class="fs-12 text-muted lineHeight16 mb-2">
-                                 Choose a Numeric value you want to measure, like the number of leads
-                              </div>
-                           </div>
-                           <div class="col-sm-4">
-                              <button class="text-center px-2 btn-sm btn-block btn btn-outline-primary" type="button"
-                                 data-toggle="modal" data-target="#customeMetricsModal"><span
-                                    class="material-icons">add</span>Create
-                              </button>
-                           </div>
-                        </div>
-
-                        <div class="form-group pt-0 searchWidthicon mb-0 bmd-form-group">
-                           <span class="material-icons-outlined">search</span>
-                           <input type="text" class="form-control main_search_metrics"
-                              placeholder="Search metrics here..">
-                        </div>
-                     </div>
-                     <div class="choiceValidation">
-                        <p
-                           class="align-items-center border-bottom d-flex fs-12 justify-content-start mb-0 pl-3 py-2 text-gray">
-                           <span class="fs-16 material-icons-outlined text-warning">tips_and_updates</span>&nbsp;
-                           You can choose any 3 options
-                        </p>
-                     </div>
-                     <div class="noData pt-5 pb-5 text-muted text-center"></div>
-                     <div class="nolist nogap sortorder p-3 maxdataScroll metricsList">
-                        <label class="text-dark custom-checkbox metrics">
-                           <input type="checkbox" checked data-name="Lead Count" name="metrics" value="lead_count">
-                           <span class="custom-btn-span">All Leads</span>
-                           <span class="selectParameter mt-2 mb-2">
-                              <label class="text-dark custom-radio">
-                                 <input type="radio"  name="countSumPercentage">
-                                 <span class="custom-btn-span">Count</span>
-                              </label>
-   
-                              <label class="text-dark custom-radio">
-                                 <input type="radio" name="countSumPercentage">
-                                 <span class="custom-btn-span">Sum</span>
-                              </label>
-   
-                              <label class="text-dark custom-radio">
-                                 <input type="radio" name="countSumPercentage">
-                                 <span class="custom-btn-span">Percentage</span>
-                              </label>
-                           </span>
-                        </label>
-                        
-                        
-                        <label class="text-dark custom-checkbox metrics">
-                           <input type="checkbox" data-name="Application Count" name="metrics"
-                              value="application_count">
-                           <span class="custom-btn-span">All Applications</span>
-                           <span class="selectParameter mt-2 mb-2">
-                              <label class="text-dark custom-radio">
-                                 <input type="radio"  name="countSumPercentage1">
-                                 <span class="custom-btn-span">Count</span>
-                              </label>
-   
-                              <label class="text-dark custom-radio">
-                                 <input type="radio" name="countSumPercentage1">
-                                 <span class="custom-btn-span">Sum</span>
-                              </label>
-   
-                              <label class="text-dark custom-radio">
-                                 <input type="radio" name="countSumPercentage1">
-                                 <span class="custom-btn-span">Percentage</span>
-                              </label>
-                           </span>
-                        </label>
+               <div class="addMenudiv">
+                  <div class="searchbar bg-light p-3">
+                     <a href="javascript:void(0)" class="addMenudiv-backdrop  closebtn d-md-none">
+                        <span class="material-icons-outlined">
+                           close
+                        </span>
+                     </a>
+                     <h5 class="my-0 h6 text-dark mb-0">Metrics</h5>
+                     <div class="fs-12 text-muted lineHeight16 mb-2">This institute consists of these Registration forms
+                        and Widgets.</div>
+                     <div class="form-group pt-0 searchWidthicon mb-0">
+                        <span class="material-icons-outlined">search</span>
+                        <input type="text" class="form-control" placeholder="Search Metrics here..">
                      </div>
                   </div>
+
+                  <div id="accordion2" class="accordion config-accordian maxdataScroll p-3">
+                     <div class="row justify-content-center">
+                        <div class="col-12 col-sm-12">
+                           <div class="card shadow-none mb-0 mt-0">
+                              <div class="card-body py-0 px-0 my-0">
+                                 <div
+                                    class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
+                                    aria-expanded="false" data-toggle="collapse" data-target="#leadFields"
+                                    aria-controls="level-leadFields" role="tablist">
+                                    <h5 class="my-0 h6 text-dark">Lead Details</h5>
+                                    <div class="d-flex ml-auto">
+                                       <div>
+                                          <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
+                                             aria-expanded="true" data-toggle="collapse" data-target="#leadFields">
+                                             <span class="fa fa-angle-down" data-toggle="tooltip"
+                                                data-placement="bottom" data-container="body"
+                                                data-original-title="Click to expand /collapse"></span>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="leadFields" class="collapse show" data-parent="#accordion2">
+                                    <div
+                                       class="heading-highlight border-bottom text-dark mt-2  mt-lg-0 mb-2 pb-2 position-relative">
+                                    </div>
+                                    <div class="row mt-3">
+                                       <div class="col-sm-12">
+                                          <label class="custom-checkbox d-block">
+                                             <input type="checkbox" name="" id="totalRow">
+                                             <span class="custom-btn-span"></span>
+                                             <span class="text-secondary ml-2">Count</span>
+                                          </label>
+                                          <label class="custom-checkbox d-block">
+                                             <input type="checkbox" name="" id="totalRow">
+                                             <span class="custom-btn-span"></span>
+                                             <span class="text-secondary ml-2">Count</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="border-bottom text-dark position-relative mt-1 mb-1"></div>
+                           <div class="card shadow-none mt-0 mb-2">
+                              <div class="card-body py-0 px-0 my-0">
+                                 <div
+                                    class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer collapsed"
+                                    aria-expanded="false" data-toggle="collapse" data-target="#applicationFields"
+                                    aria-controls="level-metricsFields" role="tablist">
+                                    <h5 class="my-0 h6 text-dark">Application</h5>
+                                    <div class="d-flex ml-auto">
+                                       <div>
+                                          <button type="button" class="btn btn-link py-0 px-0 arrow-icon collapsed"
+                                             aria-expanded="false" data-toggle="collapse"
+                                             data-target="#applicationFields">
+                                             <span class="fa fa-angle-down" data-toggle="tooltip"
+                                                data-placement="bottom" data-container="body"
+                                                data-original-title="Click to expand /collapse"></span>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="applicationFields" class="collapse" data-parent="#accordion2">
+                                    <div
+                                       class="heading-highlight border-bottom text-dark  mt-2 mt-lg-0 mb-2 pb-2 position-relative">
+                                    </div>
+                                    <div class="row mt-3">
+                                       <div class="col-sm-12">
+                                          <label class="custom-checkbox d-block">
+                                             <input type="checkbox" name="" id="totalRow">
+                                             <span class="custom-btn-span"></span>
+                                             <span class="text-secondary">Count</span>
+                                          </label>
+                                          <label class="custom-checkbox d-block">
+                                             <input type="checkbox" name="" id="totalRow">
+                                             <span class="custom-btn-span"></span>
+                                             <span class="text-secondary">Count</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+
+
+
+                  <div class="nav-tabs-navigation inline_tabs mb-3 p-3 d-none">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <ul class="nav nav-tabs flex-nowrap config-nav-tabs" data-tabs="tabs">
+                              <li class="nav-item"><a class="nav-link  active show" data-toggle="tab"
+                                    href="#selectedfields" type="button" role="tab" aria-selected="true">Selected</a>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#excutedfields"
+                                    type="button" role="tab" aria-selected="true">Excuted</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="tab-content p-3 d-none">
+                     <div class="tab-pane  show active " id="selectedfields">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <p class="selectall">Select All</p>
+                              <ul class="fieldlist bg-light">
+                                 <li class="active">
+                                    <span>Count</span>
+                                    <span class="material-icons fs-16">
+                                       check_circle
+                                    </span>
+                                 </li>
+                                 <li class="">
+                                    <span>Count</span>
+                                    <span class="material-icons fs-16">
+                                       check_circle
+                                    </span>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="tab-pane " id="excutedfields" role="tabpanel">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <p class="selectall">Select All</p>
+                              <ul class="fieldlist bg-light">
+                                 <li class="active">
+                                    <span>Excuted Count</span>
+                                    <span class="material-icons fs-16">
+                                       check_circle
+                                    </span>
+                                 </li>
+                                 <li class="">
+                                    <span>Count</span>
+                                    <span class="material-icons fs-16">
+                                       check_circle
+                                    </span>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <h6 class="mt-3 mb-2 d-none">Sort</h6>
+                  <div class="nolist nogap sortorder p-3 form-radio d-none">
+                     <label class="custom-radio  d-block">
+                        <input type="radio" name="sortBy" id="az">
+                        <span class="custom-btn-span">A-Z</span>
+                     </label>
+
+                     <label class="custom-radio  d-block">
+                        <input type="radio" name="sortBy" id="za" class="form-radio-input">
+                        <span class="custom-btn-span">Z-A</span>
+                     </label>
+
+                     <label class="custom-radio  d-block">
+                        <input type="radio" name="sortBy" id="desending" class="form-radio-input">
+                        <span class="custom-btn-span">Value Desending</span>
+                     </label>
+
+                     <label class="custom-radio  d-block">
+                        <input type="radio" name="sortBy" id="assending" class="form-radio-input">
+                        <span class="custom-btn-span"> Value Assending
+                     </label>
+
+                     <label class="custom-radio  d-block">
+                        <input type="radio" name="sortBy" id="advance" class="form-radio-input">
+                        <span class="custom-btn-span">Advance</span>
+                     </label>
+
+                     <div class="pl-3">
+                        <div for="rowSelection">Row</div>
+                        <select class="form-control selectpicker" data-actions-box="true"
+                           data-selected-text-format="count > 1" data-style="px-2 border" name="status" id="status"
+                           tabindex="-98">
+                           <option value="">Counsellor A</option>
+                           <option value="1">Form 1</option>
+                        </select>
+
+                        <p class="mt-3 mb-0">Column</p>
+                        <select class="form-control selectpicker" data-actions-box="true"
+                           data-selected-text-format="count > 1" data-style="px-2 border" name="status" id="status"
+                           tabindex="-98">
+                           <option value="">Slect Column</option>
+                           <option value="1">Form 1</option>
+                        </select>
+                     </div>
+                  </div>
+
+
+                  <h6 class="mt-3 mb-2 d-none">Total</h6>
+                  <div class="nolist nogap sortorder p-3 d-none">
+                     <label class="custom-checkbox d-block">
+                        <input type="checkbox" name="" id="totalRow">
+                        <span class="custom-btn-span">Row</span>
+
+                     </label>
+                     <label class="custom-checkbox  d-block">
+                        <input type="checkbox" name="" id="totalColumn">
+                        <span class="custom-btn-span">Column</span>
+
+                     </label>
+                  </div>
+
 
                   <button class="bottombtn text-center pt-2 pb-2  btn-block" type="button">Apply</button>
                </div>
@@ -1029,221 +1242,7 @@
          </div>
       </div>
    </div>
-
-
-
-
-
-   <div class="modal fade offCanvasModal  popup-customization right" id="customeMetricsModal" tabindex="-1"
-      role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-         <div class="modal-content h-100">
-            <div class="modal-header border-bottom-blue">
-               <h5 class="modal-title my-0">Create Custome Metrics</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
-                  data-placement="left" title="" data-original-title="Click here to close">
-                  <span aria-hidden="true">×</span>
-               </button>
-            </div>
-            <div class="modal-body npf-form-group pb15 bg-light">
-               <form action="">
-                  <div class="row align-items-start form-group pt-0 bmd-form-group">
-                     <div class="col-12 col-lg-4">
-                        <label class="text-dark  pt-md-2">Metrics Name</label>
-                     </div>
-                     <div class="col-12 col-lg-8 ">
-                        <div class="bg-white">
-                           <input type="text" class="form-control">
-                        </div>
-                     </div>
-                  </div>
-
-                  <label class="text-dark  pt-md-2 font-weight-bold">Define Logics</label>
-                  <div class="conditional-logic bg-white border rounded">
-                     <div class="conditional-logic-block">
-                        <div class="bg-white px-3 mt-3 mb-3 position-relative z-1 d-inline-block w-100">
-                           <div class="row justify-content-between mb-2">
-                              <div class="col-6 d-flex align-items-center">
-                                 <div class="conditional-logic-btn d-inline-block py-1 px-1">
-                                    <label for="field-1" class="m-0 d-inline-block">
-                                       <input type="radio" name="field-1-2" id="field-1" checked="">
-                                       <span class="conditional-logic-span py-1 px-3 d-inline-block">All</span>
-                                    </label>
-
-                                 </div>
-                                 <span class="text-dark ml-2"> Meet all criteria </span>
-                              </div>
-                           </div>
-
-                           <div class="position-relative">
-                              <div class="row align-items-center justify-content-end">
-                                 <div class="col-11">
-                                    <div class="d-flex align-items-start condition-row">
-                                       <div class="col px-2">
-                                          <select class="form-control selectpicker" data-actions-box="true"
-                                             data-selected-text-format="count > 1" data-style="px-2 border"
-                                             name="dateType" id="dateType" tabindex="-98">
-                                             <option value="date">Date</option>
-                                             <option value="dropdown">Dropdown</option>
-                                             <option value="user">Users</option>
-                                             <option value="text">Text</option>
-                                             <option value="count">Count</option>
-                                          </select>
-                                          <div class="validation-message small text-danger error_enable_cloud_calling  mb-2">Please select a option </div>
-                                       </div>
-
-                                       <div class="col px-2">
-                                          <select class="form-control selectpicker" data-actions-box="true"
-                                             data-selected-text-format="count > 1" data-style="px-2 border"
-                                             name="select_type" id="select_type" tabindex="-98">
-                                             <option value="between">Between</option>
-                                             <option value="before">Before</option>
-                                             <option value="after">After</option>
-                                             <option value="not_empty">Is not empty</option>
-                                             <option value="empty">Is empty</option>
-                                          </select>
-                                          <div class="validation-message small text-danger error_enable_cloud_calling  mb-2">Please select a option </div>
-                                       </div>
-
-                                       <div class="col px-2">
-                                          <div class="form-group pt-0 date-picker bmd-form-group bg-white">
-                                             <input type="text" class="form-control date-range-picker"
-                                                placeholder="Select a date range" name="" id="">
-                                          </div>
-                                          <div class="validation-message small text-danger error_enable_cloud_calling  mb-2">Please select  </div>
-                                       </div>
-
-                                       <button class="mt-2 px-1 py-2 remove-condition" type="button">
-                                          <span class="material-icons-outlined fs-18"> remove </span>
-                                       </button>
-                                    </div>
-
-                                    <div class="d-flex align-items-start condition-row">
-                                       <div class="col px-2">
-                                          <select class="form-control selectpicker" data-actions-box="true"
-                                             data-selected-text-format="count > 1" data-style="px-2 border"
-                                             name="dateType" id="dateType" tabindex="-98">
-                                             <option value="dropdown">Dropdown</option>
-                                          </select>
-                                       </div>
-
-                                       <div class="col px-2">
-                                          <select class="form-control selectpicker" data-actions-box="true"
-                                             data-selected-text-format="count > 1" data-style="px-2 border"
-                                             name="select_type" id="select_type" tabindex="-98">
-                                             <option value="equals">Equals</option>
-                                             <option value="does_not_equal">Does Not Equal</option>
-                                             <option value="is_empty">Is Empty</option>
-                                             <option value="is_not_empty">Is not Empty</option>
-                                          </select>
-                                       </div>
-
-                                       <div class="col px-2">
-                                          <div class="form-group pt-0  bmd-form-group bg-white">
-                                             <input type="text" class="form-control" placeholder="" name="" id="">
-                                          </div>
-                                       </div>
-
-                                       <button class="mt-2 px-1 py-2 remove-condition" type="button">
-                                          <span class="material-icons-outlined fs-18"> remove </span>
-                                       </button>
-                                    </div>
-
-                                    <div class="d-flex align-items-start condition-row">
-                                       <div class="col px-2">
-                                          <select class="form-control selectpicker" data-actions-box="true"
-                                             data-selected-text-format="count > 1" data-style="px-2 border"
-                                             name="dateType" id="usersType" tabindex="-98">
-                                             <option value="users">Users</option>
-                                          </select>
-                                       </div>
-
-                                       <div class="col px-2">
-                                          <select class="form-control selectpicker" data-actions-box="true"
-                                             data-selected-text-format="count > 1" data-style="px-2 border"
-                                             name="select_type" id="select_type" tabindex="-98">
-                                             <option value="equals">Equals</option>
-                                             <option value="does_not_equal">Does Not Equal</option>
-                                             <option value="is_empty">Is Empty</option>
-                                             <option value="is_not_empty">Is not Empty</option>
-                                          </select>
-                                       </div>
-
-                                       <div class="col px-2">
-                                          <div class="form-group pt-0  bmd-form-group bg-white">
-                                             <select class="form-control selectpicker" multiple="multiple"
-                                                data-live-search="true" data-actions-box="true"
-                                                data-selected-text-format="count > 1" data-style="px-2 border"
-                                                name="select_type" id="select_type" tabindex="-98">
-                                                <option value="">Option 1</option>
-                                                <option value="">Option 1</option>
-                                                <option value="">Option 1</option>
-                                                <option value="">Option 1</option>
-                                             </select>
-                                          </div>
-                                       </div>
-
-                                       <button class="mt-2 px-1 py-2 remove-condition" type="button">
-                                          <span class="material-icons-outlined fs-18"> remove </span>
-                                       </button>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="bg-light w-100 p-2 border-top rounded-bottom">
-                           <div class="row justify-content-end">
-                              <div class="col-3 text-right">
-                                 <div class="d-flex justify-content-end">
-                                    <a href="javascript:void(0);"
-                                       class="align-items-center btn btn-s btn-secondary btn-sm d-flex justify-content-center px-3 text-primary">
-                                       <span class="material-icons-outlined fs-13 text-primary mr-1"> add </span>
-                                       Add New Logic
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </form>
-            </div>
-
-            <div class="modal-footer justify-content-between">
-               <button class="btn btn-sm btn-outline-secondary">Cancel</button>
-               <button class="btn btn-sm btn-primary">Create</button>
-            </div>
-         </div>
-      </div>
-   </div>
-
-
-
-
-
-
-<div class="modal fade offCanvasModal right popup-customization  modal-fullscreen" data-backdrop="static" data-keyboard="false"
-  tabindex="-1" id="reportPreview">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-blue">
-        <h5 class="modal-title my-0" id="exampleModalLabel">
-          <span class="title font-weight-bold">Report Preview</span>
-        </h5>
-        <a href="javascript:void(0)" onclick="openFullscreen()" class="btn btn-outline-primary btn-sm px-3 py-1 text-primary mr-5 fullscreen">Full Screen</a>
-        <a href="javascript:void(0)" data-dismiss="modal" class="btn btn-outline-primary btn-sm px-3 py-1 text-primary mr-5 d-none escFull">Close Screen</a>
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
-          data-placement="left" data-trigger="hover" title="" data-original-title="Click Here to Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="fullHeight modal-body" id="previewContent">
-        Preview Content
-      </div>
-    </div>
-  </div>
-</div>
+   
 
    <!--  Core JS Files  -->
    <script src="../static/backend/js/core/jquery.min.js"></script>
@@ -1253,7 +1252,6 @@
    <!--  Plugins Files  -->
    <script src="../static/backend/js/plugins/moment.min.js"></script>
    <script src="../static/backend/js/plugins/bootstrap-datetimepicker.js"></script>
-   <script src="../static/backend/js/plugins/date-range-picker.js"></script>
    <script src="../static/backend/js/plugins/nouislider.min.js"></script>
    <!-- <script src="../static/backend/js/plugins/ckeditor.js"></script> -->
 
@@ -1269,10 +1267,34 @@
    <script src="../static/backend/js/base/common.js"></script>
    <script src="../static/backend/js/plugins/bootstrap-tagsinput.min.js"></script>
    <script src="../static/backend/js/plugins/typehead.js"></script>
-   <script src="../static/backend/js/plugins/sortable.js"></script>
    <!-- <script src="../static/custom/js/qms/qms.js"></script> -->
 
    <script>
+      function hideSideNav() {
+         $("#desktop-slide").toggleClass("opened");
+         $("#showSidebar a").toggleClass("d-lg-none");
+         $(".sidebarToggle").toggleClass("clicked");
+         if ($(".sidebarToggle").hasClass('clicked')) {
+            $(".sidebarToggle").attr("data-original-title", "Show Reports Filter")
+         }
+         else {
+            $(".sidebarToggle").attr("data-original-title", "HIde Reports Filter")
+         }
+      }
+
+      $(document).ready(function () {
+         if ($(window).width() < 767) {
+            $("#desktop-slide").removeClass("opened");
+            $(".sidebarToggle").addClass("clicked");
+            $(".sidebarToggle").css("z-index", "1123")
+         }
+      });
+
+      function showSideNav() {
+         $("#desktop-slide").removeClass("opened");
+         $("#showSidebar a").addClass("d-lg-none");
+      }
+
       $(".toggletag a.basicTemplateTag").click(function () {
          $(this).css({ 'z-index': '12', 'position': 'relative' });
          $(".tagcontainer").toggleClass('open');
@@ -1310,20 +1332,24 @@
       });
 
       const hideMenuFn = (e) => {
-         document.getElementsByClassName('addMenudiv active')[0].classList.remove('active');
+         $(".addMenudiv.active").removeClass('active');
+         $('body').css("overflow", "auto")
       }
 
       showhideMenuDiv = () => {
          if ($(".addMenudiv").hasClass('active')) {
             $(".addMenudiv").removeClass('active');
+            $('body').css("overflow", "auto")
          }
          else {
             $(".addMenudiv").addClass('active');
+            $('body').css("overflow", "hidden")
          }
       };
 
       $('.addMenudiv-backdrop').click(function () {
          hideMenuFn();
+
       });
 
 
@@ -1332,21 +1358,18 @@
          $(this).parents().find("li").remove();
       });
 
+      $(".favouriteBtn").click(function () {
+         $(this).toggleClass('active');
+         if ($(".favouriteBtn").hasClass('active')) {
+            $('.favouriteFilled').show();
+            $('.favouriteoutline').hide()
+         }
+         else {
+            $('.favouriteoutline').show()
+            $('.favouriteFilled').hide()
+         }
+      });
 
-      $('.expended-search-link').click(function () {
-         $(this).next('.expended-search-wrpper').toggleClass('active');
-      });
-      $('.expended-search-wrpper [data-dismiss="search"]').click(function () {
-         $('#searchTicket').val('');
-         $('.expended-search-wrpper').removeClass('active');
-      });
-      $('.expended-search-wrpper #search_filter').on('shown.bs.select', function () {
-         $('.expended-search-wrpper #searchBox').css('overflow', 'unset');
-      });
-
-      $('.expended-search-wrpper #search_filter').on('hidden.bs.select', function () {
-         $('.expended-search-wrpper #searchBox').css('overflow', 'hidden');
-      });
 
       // dropdownMenuPlacement with body
       function dropdownMenuPlacement() {
@@ -1384,144 +1407,146 @@
       $('.dropdown[data-container="body"]:not(.show)').click(function () {
          dropdownMenuPlacement();
       });
-      // $('.chosen-select').chosen();
-      $('.tags-input').tagsinput();
+   </script>
 
-      $(".favouriteBtn").click(function () {
-         $(this).toggleClass('active');
-         if ($(".favouriteBtn").hasClass('active')) {
-            $('.favouriteFilled').show();
-            $('.favouriteoutline').hide()
+   <script src="https://unpkg.com/webtour@1.1.0/dist/webtour.min.js"></script>
+   <script>
+      const wt = new WebTour();
+      const steps = [
+         {
+            element: '#metrices_field',
+            title: 'METRICES',
+            content: 'You can click on the Add button here to Add your Metrices.',
+            placement: 'right-start',
+         },
+         {
+            element: '#rowFields',
+            title: 'ROWS',
+            content: 'You can click on the Add button here to select the rows that you want to populate your report.<br><br> <strong>Note:</strong> A maximum of 3 rows can be selected at once',
+            placement: 'right-start',
+         },
+         {
+            element: '#columnsFields',
+            title: 'Columns',
+            content: 'You can click on the Add button here to select the Columns that you want to populate your report. Note: A maximum of 3 rows can be selected at once',
+            placement: 'right-start',
+         },
+         {
+            element: '#filterFields',
+            title: 'Filters',
+            content: 'You can click on the Add Button button here choose the Attributes you want to apply to filter out the populated data.',
+            placement: 'right-start',
+         },
+         {
+            element: '#report_name',
+            title: 'NAME',
+            content: 'You can start typing the name of the report in the text box here.',
+            placement: 'right-start',
+         },
+         {
+            element: '.favouriteBtn',
+            title: 'Favourite',
+            content: 'You can also mark the report as your favorite by clicking on this star. ',
+            placement: 'right-start',
+         },
+         {
+            element: '.toggletag',
+            title: 'Tags',
+            content: 'Click on this Icon to create and Edit the Tags related to this Report.',
+            placement: 'left-start',
+         },
+         {
+            element: '.sync',
+            title: 'Refresh',
+            content: 'Click on this icon to sync the data in the Report with the latest data',
+            placement: 'left-start',
+         },
+         {
+            element: '.save',
+            title: 'Save',
+            content: 'You can use this button to finally save the changes you have made in the report.',
+            placement: 'left-start',
+         },
+      ];
+      //wt.setSteps(steps);
+      //wt.start();
+
+   $(function () {
+      $('.columnCollasp').each(function (colKey){
+         if(!$(this).hasClass('collapsed')){
+            var colKeyArr = $(this).attr('id').split('_');
+            var colKey = colKeyArr[1];
+            console.log(colKey);
+            var className = '.collapseSubStage_'+colKey;
+            $(className).addClass('d-none');
+            $('.headerCollapseSubStage_'+colKey).attr('colspan',1);
+            $(this).toggleClass('collapsed');
          }
-         else {
-            $('.favouriteoutline').show()
-            $('.favouriteFilled').hide()
-         }
       });
+   });
 
-      // function createCustomeMetrics() {
-      //    if($(".metricsList input[type='checkbox']:checked")){
-      //       //alert("Ab to jQuery Sikh lo")
-      //       $(".selectParameter").show();
-      //    }
-      //    else{
-      //       //alert("Tum se na ho payega Beta")
-      //       $(".selectParameter").hide();
-      //    }
-      // }
-
-      $(".removeBtn").click(function () {
-         $(".selectParameter").removeClass('active');
-      });
-      $(".selectParameterBackdrop").click(function () {
-         $(".selectParameter").removeClass('active');
-      });
-
-
-      if ($('.date-range-picker').length) {
-         $('.date-range-picker').daterangepicker({
-            "drops": "down",
-            "opens": "left",
-            showDropdowns: true,
-            showWeekNumbers: true,
-            autoUpdateInput: false,
-            "alwaysShowCalendars": false,
-            locale: {
-               format: 'DD/MM/YYYY',
-               separator: ","
-            },
-            ranges: {
-               'Today': [moment(), moment()],
-               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-               'This Month': [moment().startOf('month'), moment().endOf('month')],
-               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            },
-         });
-         $('.date-range-picker').on('apply.daterangepicker', function (ev, picker) {
-            $(this).val(picker.startDate.format('DD/MM/YYYY') + ',' + picker.endDate.format('DD/MM/YYYY'));
-         });
-         $('.date-range-picker').on('cancel.daterangepicker', function (ev, picker) {
-            $(this).val('');
-         })
+   function collapseSubColumns(colKey){
+      var className = '.collapseSubStage_'+colKey;
+      var elementId = '#collapseStage_'+colKey;
+      var t = $('.headerCollapseSubStage_'+colKey).attr('data-colspan');
+      if($(elementId).hasClass('collapsed')){
+         $(className).removeClass('d-none');
+         $('.headerCollapseSubStage_'+colKey).attr('colspan',t);
+      } else {
+         $(className).addClass('d-none');
+         $('.headerCollapseSubStage_'+colKey).attr('colspan',1);
       }
+      $(elementId).toggleClass('collapsed');
+   }
 
 
-      const enableDragDropMetrics = () => {
-         // var element = document.getElementById("metricsFields");
-         // element.classList.remove("drag-box");
-         // let dragableSpan = document.querySelectorAll('.dragable-span');
-         // dragableSpan.forEach(dragable => {
-         //    dragable.classList.add('sort-handle')
-         // })
-         new Sortable(dragItemBox,{
-            animation: 100,
-            handle: '.sort-handle',
-            ghostClass: 'ghost-drag',
-            onEnd: function() {
-               setTimeout(() => {
-                  $('#metricsFields .addMetrics').removeClass('d-flex').hide();
-                  $('#metricsFields .saveDrag').show();
-               }, "")
-            },
-            onStart: function (/**Event*/evt) {
-               evt.oldIndex;
-               $(this).addClass('xvx');
-
+   $( ".columnCollasp.collapsed" ).each(function() {
+         var el = document.querySelector('.reportData');
+         var xScrollBeforeWidth = el.scrollWidth;
+         var offsetLeft = $(this).offset().left;
+         $(this).on("click", function(){
+            var xScrollAfterWidth = el.scrollWidth;
+            var tableLeftScrollPos = $('.reportData').scrollLeft();
+            var diffScrollPos = xScrollAfterWidth - xScrollBeforeWidth;
+            var scrollAmount = tableLeftScrollPos + diffScrollPos;
+            if(offsetLeft > 150){
+               $('.reportData').animate({scrollLeft: scrollAmount});
             }
          });
-      }
-
-
-
-      const removeDragDropMetrics = ()  => {
-         // var element = document.getElementById("metricsFields");
-         // element.classList.remove("drag-box");
-         // let dragableSpan = document.querySelectorAll('.dragable-span');
-         // dragableSpan.forEach(dragable => {
-         //    dragable.classList.remove('sort-handle')
-         // })
-         setTimeout(() => {
-                  $('#metricsFields .addMetrics').addClass('d-flex').show();
-                  $('#metricsFields .saveDrag').hide();
-         }, "")
-      }
-
-      enableDragDropMetrics();
-
-var elem = document.documentElement;
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-    $('.fullscreen').hide();
-    $('.escFull').removeClass('d-none');
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-    $('.escFull').addClass('d-none');
-    $('.fullscreen').show();
-  } else if (document.webkitExitFullscreen) { /* Safari */
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE11 */
-    document.msExitFullscreen();
-  }
-}
+   });
 
 
 
 
-$('#reportPreview').on('hidden.bs.modal', function (e) {
-   closeFullscreen();
-})
-</script>
+   // Fetch records of head counsellor
+$(document).on("click", ".fetchrowData", function(){
+    $('.fetchrowData').not($(this)).addClass("collapsed");
+    $('.fetchrowData').not($(this)).attr("aria-expanded",'false');
+    $('.fetchrowData').not($(this)).closest('tr').siblings('tr.childCounsellor').remove();
+    if($(this).hasClass('collapsed')){
+        // $(this).removeClass("fetchrowData collapsed");
+        $(this).removeClass("collapsed");
+        $(this).attr("aria-expanded", 'true');
+        var jsClickExpandElementReference = $(this).attr('id');
+    //    let targetRow = $(this).attr("href");
+        let targetRow = $(this).data("rand");
+        let headCounsellor = $(this).data("counsellor");
+        loadHeadCounsellorProductivityReport(headCounsellor, targetRow, jsClickExpandElementReference);
+    }
+    else{
+        $(this).addClass("collapsed");
+        $(this).attr("aria-expanded", 'false');
+        $(this).closest('tr').siblings('tr.childCounsellor').remove();
+    }
+   
+    $(this).attr("onclick", 'closeAccordions(this)');
+    
+    
+//    // close all open accordions
+    closeAccordions(this);
+    
+});
+   </script>
 </body>
 
 </html>

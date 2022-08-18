@@ -63,6 +63,10 @@
     color: $primary;
     font-size: 21px;
   }
+  &:first-child .remove-condition{
+    opacity:0;
+    pointer-events:none;
+  }
  }
 
  .conditional-logic-btn {
@@ -94,6 +98,7 @@
    font-size: .8rem;
   }
  }
+
 }
 
 .conditional-block {
