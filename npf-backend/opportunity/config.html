@@ -21,6 +21,9 @@
     .form-control[readonly] {
       color: #111 !important;
     }
+    .save-row,.edit-row{position: relative; z-index: 1;}
+    .active-opp .save-row:after,.active-opp .edit-row:after{
+      z-index: -1; content: ''; position: absolute; top: 10px; right: 0; width: 5px; height: 5px; border: 5px solid #323232; border-color:transparent transparent transparent #666; }
   </style>
 </head>
 
@@ -54,10 +57,10 @@
                 </div>
               </div>
               <div id="level-55a76d8b1672ab40ba3a4ea0" class="collapse show" data-parent="#l-allocationlist" style="">
-                <a href="#statusChange" data-toggle="modal"
+                <!-- <a href="#statusChange" data-toggle="modal"
                   class="btn btn-outline-primary bg-white btn-sm mr-4 px-3 py-1"
-                  style=" position: absolute; right: 20px; top: 20px;">Rename Status</a>
-                <form class="bg-light pt-2 mt-2 row">
+                  style=" position: absolute; right: 20px; top: 20px;">Rename Status</a> -->
+                <!-- <form class="bg-light pt-2 mt-2 row">
                   <div class="col-12">
                     <h4 class="h6 font-weight-normal">Opportunity Status</h4>
                   </div>
@@ -141,7 +144,7 @@
                       </p>
                     </div>
                   </div>
-                </form>
+                </form> -->
                 <form class="card-form" id="form-55a76d8b1672ab40ba3a4ea0" action="javascript:void(0);" level="4">
                   <div class="row align-items-start form_blocks">
                     <input type="hidden" name="lead_stage_config" value="1">
@@ -152,7 +155,8 @@
                             <div class="row align-items-start mt-3 mb-2">
                               <div class="col-5"><label class="text-dark" for="pro-sen-id">Configure Opportunity
                                   Stages</label></div>
-                              <div class="col-2"><label class="text-dark no-wrap" for="pro-sen-id">Opportunity Status</label>
+                              <div class="col-2"><label class="text-dark no-wrap" for="pro-sen-id">Opportunity
+                                  Status</label>
                               </div>
                               <div class="col-2"><label class="text-dark no-wrap" for="pro-sen-id">Sub Stage
                                   Required</label></div>
@@ -203,7 +207,8 @@
                                 </div>
                               </span>
                               <input type="hidden" class="form-control" name="lead_stage" value="20369">
-                              <div class="validation-message small text-danger error_lead_stage error_lead_stage_0"></div>
+                              <div class="validation-message small text-danger error_lead_stage error_lead_stage_0">
+                              </div>
                             </div>
                             <div class="col-6 col-md-2 bg-white">
                               <span class="text-muted small d-block d-md-none">Follow up Required</span>
@@ -325,7 +330,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="20369">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -527,7 +534,8 @@
                                 </div>
                               </span>
                               <input type="hidden" class="form-control" name="lead_stage" value="36781">
-                              <div class="validation-message small text-danger error_lead_stage error_lead_stage_1"></div>
+                              <div class="validation-message small text-danger error_lead_stage error_lead_stage_1">
+                              </div>
                             </div>
                             <div class="col-6 col-md-2 bg-white">
                               <span class="text-muted small d-block d-md-none">Follow up Required</span>
@@ -649,7 +657,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="36781">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -781,7 +791,8 @@
                                 </div>
                               </span>
                               <input type="hidden" class="form-control" name="lead_stage" value="35205">
-                              <div class="validation-message small text-danger error_lead_stage error_lead_stage_2"></div>
+                              <div class="validation-message small text-danger error_lead_stage error_lead_stage_2">
+                              </div>
                             </div>
                             <div class="col-6 col-md-2 bg-white">
                               <span class="text-muted small d-block d-md-none">Follow up Required</span>
@@ -903,7 +914,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="35205">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -1298,7 +1311,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="35206">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -1483,7 +1498,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="36780">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -1668,7 +1685,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="20152">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -2785,7 +2804,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="85289">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -2970,7 +2991,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="177423">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -3155,7 +3178,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="196786">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -3340,7 +3365,9 @@
                                     class="toggle"></span></label>
                                 <input type="hidden" name="status" value="1" class="stage_status_val"
                                   data-value="222331">
-                                <div class="validation-message small text-danger error_lead_stage error_lead_stage_lock"></div>
+                                <div
+                                  class="validation-message small text-danger error_lead_stage error_lead_stage_lock">
+                                </div>
                               </div>
                             </div>
                             <div class="col-12 col-md-1 bg-white">
@@ -3381,6 +3408,175 @@
                     </div>
                   </div>
                 </form>
+              </div>
+            </div>
+          </div>
+          <div class="card my-3 lead_stage_and_sub_stage_configurations">
+            <div class="card-body py-3 px-3">
+              <div
+                class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer btn_lead_stage_and_sub_stage_configurations"
+                aria-expanded="false" data-toggle="collapse" data-target="#level-new" aria-controls="level-new"
+                role="tablist">
+                <div>
+                  <h5 class="my-0 h6">Opportunity Status</h5>
+                  <div class="fs-12 text-dark sub-text">
+                    Configure the below settings to Rename Status
+                  </div>
+                </div>
+
+                <div class="d-flex ml-auto">
+                  <div>
+                    <button type="button" class="btn btn-link py-0 px-0 arrow-icon" aria-expanded="true"
+                      data-toggle="collapse" data-target="#level-new">
+                      <span class="fa fa-angle-down" data-toggle="tooltip" data-placement="bottom" data-container="body"
+                        title="Click to expand /collapse"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div id="level-new" class="collapse show" data-parent="#l-allocationlist" style="">
+                <div class="row mt-3">
+                  <div class="col-sm-6 col-12">
+                    <small class="mb-0">Opportunity Status</small>
+                    <ul class="list-group bg-light py-0 rounded overflow-hidden mt-0" style="overflow: hidden">
+                      <li class="list-group-item hover-effect py-1 px-3 content-none border-bottom active-opp">
+                        <div class="save-row w-100 py-2">
+                          <div class="row align-items-center">
+                            <div class="col-sm-10">
+                              <span>Open</span>
+                            </div>
+                            <div class="col-sm-2 ">
+                              <a href="javascript:void(0);" class="edit-icon">
+                                <span class="material-icons-outlined fs-14 text-secondary">edit</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="edit-row w-100">
+                          <div class="row align-items-center">
+                            <div class="col-sm-10">
+                              <div class="form-group m-0 p-0">
+                                <input type="text" class="form-control pl-0" value="Open">
+                              </div>
+                            </div>
+                            <div class="col-sm-2">
+                              <a href="javascript:void(0);" class="save-icon">
+                                <span class="material-icons-outlined fs-14">done</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item hover-effect py-1 px-3 content-none border-bottom">
+                        <div class="save-row w-100 py-2">
+                          <div class="row align-items-center">
+                            <div class="col-sm-10">
+                              <span>Connected</span>
+                            </div>
+                            <div class="col-sm-2 ">
+                              <a href="javascript:void(0);" class="edit-icon">
+                                <span class="material-icons-outlined fs-14 text-secondary">edit</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="edit-row w-100">
+                          <div class="row align-items-center">
+                            <div class="col-sm-10">
+                              <div class="form-group m-0 p-0">
+                                <input type="text" class="form-control pl-0" value="Connected">
+                              </div>
+                            </div>
+                            <div class="col-sm-2">
+                              <a href="javascript:void(0);" class="save-icon">
+                                <span class="material-icons-outlined fs-14">done</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item hover-effect py-1 px-3 content-none border-bottom">
+                        <div class="save-row w-100 py-2">
+                          <div class="row align-items-center">
+                            <div class="col-sm-10">
+                              <span>Qualified</span>
+                            </div>
+                            <div class="col-sm-2 ">
+                              <a href="javascript:void(0);" class="edit-icon">
+                                <span class="material-icons-outlined fs-14 text-secondary">edit</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="edit-row w-100">
+                          <div class="row align-items-center">
+                            <div class="col-sm-10">
+                              <div class="form-group m-0 p-0">
+                                <input type="text" class="form-control pl-0" value="Qualified">
+                              </div>
+                            </div>
+                            <div class="col-sm-2">
+                              <a href="javascript:void(0);" class="save-icon">
+                                <span class="material-icons-outlined fs-14">done</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item hover-effect py-1 px-3 content-none">
+                        <div class="save-row w-100 py-2">
+                          <div class="row align-items-center">
+                            <div class="col-sm-10">
+                              <span>Un-Qualified</span>
+                            </div>
+                            <div class="col-sm-2 ">
+                              <a href="javascript:void(0);" class="edit-icon">
+                                <span class="material-icons-outlined fs-14 text-secondary">edit</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="edit-row w-100">
+                          <div class="row align-items-center">
+                            <div class="col-sm-10">
+                              <div class="form-group m-0 p-0">
+                                <input type="text" class="form-control pl-0" value="Un-Qualified">
+                              </div>
+                            </div>
+                            <div class="col-sm-2">
+                              <a href="javascript:void(0);" class="save-icon">
+                                <span class="material-icons-outlined fs-14">done</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6 col-12">
+                    <small class="mb-0">Opportunity Stage</small>
+                    <ul class="py-0 rounded mt-0 pl-0 overflow-hidden">
+                      <li class="bg-light d-inline-block hover-effect py-1 px-3 content-none mb-2 mr-1">
+                        <span class="text-muted my-2">Un-Touched</span>
+                      </li>
+                      <li class="bg-light d-inline-block hover-effect py-1 px-3 content-none mb-2 mr-1">
+                        <span class="text-muted my-2">Cold</span>
+                      </li>
+                      <li class="bg-light d-inline-block hover-effect py-1 px-3 content-none mb-2 mr-1">
+                        <span class="text-muted my-2">Hot</span>
+                      </li>
+                      <li class="bg-light d-inline-block hover-effect py-1 px-3 content-none mb-2 mr-1">
+                        <span class="text-muted my-2">Warm</span>
+                      </li>
+                      <li class="bg-light d-inline-block hover-effect py-1 px-3 content-none mb-2 mr-1">
+                        <span class="text-muted my-2">Premium</span>
+                      </li>
+                      <li class="bg-light d-inline-block hover-effect py-1 px-3 content-none mb-2 mr-1">
+                        <span class="text-muted my-2">Deluxe</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -3544,10 +3740,28 @@
       handle: '.sort-handle',
       ghostClass: 'ghost-drag'
     });
-    new Sortable(dragSubItem, dragSubItem2, {
-      animation: 100,
-      handle: '.sort-handle',
-      ghostClass: 'ghost-drag'
+    // new Sortable(dragSubItem, dragSubItem2, {
+    //   animation: 100,
+    //   handle: '.sort-handle',
+    //   ghostClass: 'ghost-drag'
+   // });
+  </script>
+  <script>
+    $('.edit-row').hide();
+    $('.edit-row input').prop('readonly', true);
+    $(document).on('click', '.edit-icon', function () {
+      $('li.list-group-item').removeClass('active-opp');
+      let closestLi = $(this).closest('li');
+      closestLi.addClass('active-opp');
+      closestLi.find('.edit-row').show();
+      closestLi.find('.edit-row').find('input').prop('readonly', false)
+      closestLi.find('.edit-row').find('input').focus();
+      closestLi.find('.save-row').hide();
+    });
+    $(document).on('click', '.save-icon', function () {
+      $(this).closest('li').find('.save-row').show();
+      $(this).closest('li').find('.edit-row').hide();
+      $(this).closest('li').find('.edit-row').find('input').prop('readonly', true)
     });
   </script>
 </body>
