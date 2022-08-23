@@ -2514,7 +2514,7 @@ padding:10px 0;
   padding:8px 20px;
   position: relative;
   color:#000;
-  margin-right:15px;
+  margin:0 8px 10px 8px;
 }
 
 .radio-inline span{
@@ -2539,6 +2539,10 @@ padding:10px 0;
   background-color:rgba(43,120,228,.5);
 }
 
+.docList{
+  max-height:150px;
+  overflow: auto;
+}
 
 </style>
   <!-- digilocModal start here -->
@@ -2579,50 +2583,67 @@ padding:10px 0;
             <!-- Tab panes -->
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="uploaddoc">
-                <label for="upload_tenth" class="radio radio-inline margin-top-0">
-                  <input type="radio" name="upload_document" id="upload_tenth">
-                  <span>10th Class Marksheet</span>
-                </label>
+                <div class="docList">
+                  <label for="upload_tenth" class="radio radio-inline margin-top-0">
+                    <input type="radio" name="upload_document" id="upload_tenth">
+                    <span>10th Class Marksheet</span>
+                  </label>
 
-                <label for="upload_twelth" class="radio radio-inline">
-                  <input type="radio" name="upload_document" id="upload_twelth">
-                  <span>12th Class Marksheet</span>
-                </label>
+                  <label for="upload_twelth" class="radio radio-inline">
+                    <input type="radio" name="upload_document" id="upload_twelth">
+                    <span>12th Class Marksheet</span>
+                  </label>
 
-                <label for="upload_acard" class="radio radio-inline">
-                  <input type="radio" name="upload_document" id="upload_acard">
-                  <span>Aadhar Card</span>
-                </label>
+                  <label for="upload_acard" class="radio radio-inline">
+                    <input type="radio" name="upload_document" id="upload_acard">
+                    <span>Aadhar Card</span>
+                  </label>
 
-                <label for="upload_pcard" class="radio radio-inline">
-                  <input type="radio" name="upload_document" id="upload_pcard">
-                  <span>Pan Card</span>
-                </label>
+                  <label for="upload_pcard" class="radio radio-inline">
+                    <input type="radio" name="upload_document" id="upload_pcard">
+                    <span>Pan Card</span>
+                  </label>
+                </div>
               </div>
               
               <div role="tabpanel" class="tab-pane" id="issueddoc">
-                <label for="tenth" class="radio radio-inline margin-top-0">
-                  <input type="radio" name="document" id="tenth">
-                  <span>10th Class Marksheet</span>
-                </label>
+                <div class="docList">
+                  <label for="tenth" class="radio radio-inline margin-top-0">
+                    <input type="radio" name="document" id="tenth">
+                    <span>10th Class Marksheet</span>
+                  </label>
 
+                  <label for="twelth" class="radio radio-inline">
+                    <input type="radio" name="document" id="twelth">
+                    <span>12th Class Marksheet</span>
+                  </label>
 
-                <label for="twelth" class="radio radio-inline">
-                  <input type="radio" name="document" id="twelth">
-                  <span>12th Class Marksheet</span>
-                </label>
+                  <label for="graduation" class="radio radio-inline">
+                    <input type="radio" name="document" id="graduation">
+                    <span>Graduation</span>
+                  </label>
 
+                  <label for="master" class="radio radio-inline">
+                    <input type="radio" name="document" id="master">
+                    <span>Master</span>
+                  </label>
 
-                <label for="acard" class="radio radio-inline">
-                  <input type="radio" name="document" id="acard">
-                  <span>Aadhar Card</span>
-                </label>
+                  <label for="pgraduation" class="radio radio-inline">
+                    <input type="radio" name="document" id="pgraduation">
+                    <span>Post Graduation</span>
+                  </label>
 
+                  <label for="acard" class="radio radio-inline">
+                    <input type="radio" name="document" id="acard">
+                    <span>Aadhar Card</span>
+                  </label>
 
-                <label for="pcard" class="radio radio-inline">
-                  <input type="radio" name="document" id="pcard">
-                  <span>Pan Card</span>
-                </label>
+                  <label for="pcard" class="radio radio-inline">
+                    <input type="radio" name="document" id="pcard">
+                    <span>Pan Card</span>
+                  </label>
+
+                </div>
               </div>
             </div>
           
