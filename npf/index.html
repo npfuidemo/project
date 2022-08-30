@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="webroot/css/college/fonts.css">
   <link rel="stylesheet" href="webroot/css/bassets/style/skeleton.css">
   <link rel="stylesheet" href="webroot/css/sumoselect.css">
-<link rel="stylesheet" href="webroot/css/bassets/style/createTemplate.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="webroot/css/bassets/style/createTemplate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
   <title>Hello, world!</title>
 </head>
@@ -2040,6 +2040,145 @@
     </div>
   </header>
 
+
+
+  <style>
+    .msgButtons{
+      display:none;
+      position:absolute;
+      right:45px;
+      top:75px;
+      transition:s;
+    }
+    .msgButtons.active{
+      display:inline-block;
+    }
+    .toast {
+      position: absolute;
+      max-width:500px;
+      top:65px;
+      right: 30px;
+      border-radius: 12px;
+      background: #fff;
+      padding:15px 20px 15px 15px;
+      box-shadow: 0 6px 25px -5px rgba(0, 0, 0, 0.1);
+      transform: translateX(calc(100% + 30px));
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+      z-index:9;
+    }
+
+    .toast.active {
+      transform: translateX(0%);
+    }
+
+    .toast .toast-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .toast-content .check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      min-width: 35px;
+      background-color: #4c79dc;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+
+    .toast-content .message {
+      display: flex;
+      flex-direction: column;
+      margin:0;
+    }
+
+    .message .allocate_message {
+      font-size:14px;
+      font-weight:300;
+      color: #333;
+    }
+
+    .message .allocate_message+.allocate_message{
+      border-top:1px solid #ccc;
+      padding-top:10px;
+    }
+
+    .toast .close {
+      position: absolute;
+      top:10px;
+      right:10px;
+      padding:0px;
+      cursor: pointer;
+      opacity: 0.5;
+      font-size:14px;
+      width:28px;
+      height:28px;
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: middle;
+      line-height:28px;
+    }
+
+    .toast .close:hover {
+      opacity: 1;
+      background:rgba(0,0,0,0.07);
+      color:red;
+    }
+
+    .toast .progress {
+      position: absolute;
+      bottom:0px;
+      left: 0;
+      height: 3px!important;
+      box-shadow:none!important;
+      width: 100%;
+      background-color:transparent;
+      margin-bottom: 0;
+
+    }
+
+    .toast .progress:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #4c79dc;
+    }
+
+    .progress.active:before {
+      animation: progress 5s linear forwards;
+    }
+
+    @keyframes progress {
+      100% {
+        right: 100%;
+      }
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 20px;
+      outline: none;
+      border: none;
+      background-color: #4070f4;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0e4bf1;
+    }
+
+    .toast.active~button {
+      pointer-events: none;
+    }
+  </style>
   <div class="wrapper">
     <nav id="sidebar" class="sidebar active mobinactive">
       <div class="sidebar__inner scrollCustom">
@@ -2450,6 +2589,26 @@
       <!--<div class="toggle-button sidebarCollapse"><i class="fa fa-fw fa-angle-left"></i></div>-->
     </nav><!-- Page Content Holder -->
     <div id="content">
+     
+      <div class="toast active">
+        <div class="toast-content">
+          <div class="message">
+            <p class="text allocate_message">Note that you haven’t used <strong>application</strong> related trigger <span class="mute">(for example, form initiated,payment approved etc.)</span> for the <strong>application assignment</strong> automation.</p>
+            <p class="text allocate_message">Lead counselor matches unassigned will stop <strong>applications</strong> from getting assigned. Remove the same to cater both <strong>lead and application</strong> assignment.</p>
+          </div>
+        </div>
+        <a href="javascript:void()" class="close" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" data-container="body" title="Click&nbsp;here&nbsp;to&nbsp;close"><span class="glyphicon glyphicon-remove"></span></a>
+
+        <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+        <div class="progress active"></div>
+      </div>
+
+
+
+      
+      
+      <span class="msgButtons cursor_pointer"><span class="lineicon-info" aria-hidden="true"></span></span>
+
       <div id="CreateCommunicationTemplateSection">
         <div class="topHead">
           <div class="row">
@@ -2458,6 +2617,9 @@
             </div>
           </div>
         </div>
+
+
+
         <div class="max-width-750 m-auto npf-form-group">
           <form enctype="multipart/form-data" method="post" accept-charset="utf-8" id="TemplateCreationForm" role="form"
             class="report-form margin-top-20"
@@ -3037,51 +3199,58 @@
                   <div class="radiotabs">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs linetab" role="tablist">
-                      <li role="presentation" ><a href="#quickreplytab" aria-controls="quickreplytab" role="tab" data-toggle="tab"><i class="fa fa-reply" aria-hidden="true"></i>
-                        Quick Reply</a></li>
-                      <li role="presentation" class=""><a href="#phonenumbertab" aria-controls="phonenumbertab" role="tab" data-toggle="tab"><i class="fa fa-phone-square" aria-hidden="true"></i>
-                        Phone number</a></li>
-                      <li role="presentation" ><a href="#urltab" aria-controls="urltab" role="tab" data-toggle="tab"><i class="fa fa-external-link" aria-hidden="true"></i>
-                        URL</a></li>
+                      <li role="presentation"><a href="#quickreplytab" aria-controls="quickreplytab" role="tab"
+                          data-toggle="tab"><i class="fa fa-reply" aria-hidden="true"></i>
+                          Quick Reply</a></li>
+                      <li role="presentation" class=""><a href="#phonenumbertab" aria-controls="phonenumbertab"
+                          role="tab" data-toggle="tab"><i class="fa fa-phone-square" aria-hidden="true"></i>
+                          Phone number</a></li>
+                      <li role="presentation"><a href="#urltab" aria-controls="urltab" role="tab" data-toggle="tab"><i
+                            class="fa fa-external-link" aria-hidden="true"></i>
+                          URL</a></li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
                       <div role="tabpanel" class="tab-pane " id="quickreplytab">
-                          <div class="rowSpaceReduce">
-                            <div class="col-sm-12  plusMinushide">
-                                <div class="row margin-top-15">
-                                      <div class="col-sm-4">
-                                        <label for="" class="margin-top-5">Quick Reply Button 1</label>
-                                      </div>
-                                      <div class="col-sm-6">
-                                            <input type="text" placeholder="Enter text for quick reply 1" class="form-control">
-                                      </div>
-                                      <div class="col-sm-2">
-                                          <div class="removeIcon inbl">
-                                            <a href="#" class="text-danger remove-div" ><i class="fa fa-minus-circle font20" aria-hidden="true"></i></a>
-                                          </div>
-                                          <div class="addMore inbl">
-                                              <a href="#" class="add-div margin-right-8 margin-top-5" ><i class="fa fa-plus-circle font20" aria-hidden="true"></i></a>
-                                          </div>
-                                      </div>
+                        <div class="rowSpaceReduce">
+                          <div class="col-sm-12  plusMinushide">
+                            <div class="row margin-top-15">
+                              <div class="col-sm-4">
+                                <label for="" class="margin-top-5">Quick Reply Button 1</label>
+                              </div>
+                              <div class="col-sm-6">
+                                <input type="text" placeholder="Enter text for quick reply 1" class="form-control">
+                              </div>
+                              <div class="col-sm-2">
+                                <div class="removeIcon inbl">
+                                  <a href="#" class="text-danger remove-div"><i class="fa fa-minus-circle font20"
+                                      aria-hidden="true"></i></a>
                                 </div>
+                                <div class="addMore inbl">
+                                  <a href="#" class="add-div margin-right-8 margin-top-5"><i
+                                      class="fa fa-plus-circle font20" aria-hidden="true"></i></a>
+                                </div>
+                              </div>
+                            </div>
 
-                                <div class="row margin-top-15">
-                                  <div class="col-sm-4">
-                                    <label for="" class="margin-top-5">Quick Reply Button 2</label>
-                                  </div>
-                                  <div class="col-sm-6">
-                                        <input type="text" placeholder="Enter text for quick reply 2" class="form-control">
-                                  </div>
-                                  <div class="col-sm-2">
-                                      <div class="removeIcon inbl">
-                                        <a href="#" class="text-danger remove-div" ><i class="fa fa-minus-circle font20" aria-hidden="true"></i></a>
-                                      </div>
-                                      <div class="addMore inbl">
-                                          <a href="#" class="add-div margin-right-8 margin-top-5" ><i class="fa fa-plus-circle font20" aria-hidden="true"></i></a>
-                                      </div>
-                                  </div>
+                            <div class="row margin-top-15">
+                              <div class="col-sm-4">
+                                <label for="" class="margin-top-5">Quick Reply Button 2</label>
+                              </div>
+                              <div class="col-sm-6">
+                                <input type="text" placeholder="Enter text for quick reply 2" class="form-control">
+                              </div>
+                              <div class="col-sm-2">
+                                <div class="removeIcon inbl">
+                                  <a href="#" class="text-danger remove-div"><i class="fa fa-minus-circle font20"
+                                      aria-hidden="true"></i></a>
+                                </div>
+                                <div class="addMore inbl">
+                                  <a href="#" class="add-div margin-right-8 margin-top-5"><i
+                                      class="fa fa-plus-circle font20" aria-hidden="true"></i></a>
+                                </div>
+                              </div>
                             </div>
 
 
@@ -3090,19 +3259,21 @@
                                 <label for="" class="margin-top-5">Quick Reply Button 3</label>
                               </div>
                               <div class="col-sm-6">
-                                    <input type="text" placeholder="Enter text for quick reply 3" class="form-control">
+                                <input type="text" placeholder="Enter text for quick reply 3" class="form-control">
                               </div>
                               <div class="col-sm-2">
-                                  <div class="removeIcon inbl">
-                                    <a href="#" class="text-danger remove-div" ><i class="fa fa-minus-circle font20" aria-hidden="true"></i></a>
-                                  </div>
-                                  <div class="addMore inbl">
-                                      <a href="#" class="add-div margin-right-8 margin-top-5" ><i class="fa fa-plus-circle font20" aria-hidden="true"></i></a>
-                                  </div>
+                                <div class="removeIcon inbl">
+                                  <a href="#" class="text-danger remove-div"><i class="fa fa-minus-circle font20"
+                                      aria-hidden="true"></i></a>
+                                </div>
+                                <div class="addMore inbl">
+                                  <a href="#" class="add-div margin-right-8 margin-top-5"><i
+                                      class="fa fa-plus-circle font20" aria-hidden="true"></i></a>
+                                </div>
                               </div>
-                        </div>
                             </div>
                           </div>
+                        </div>
                       </div>
 
                       <div role="tabpanel" class="tab-pane " id="phonenumbertab">
@@ -3122,55 +3293,61 @@
                               <select name="" id="" class="form-control">
                                 <option value="">+91</option>
                                 <option value="">+91</option>
-                            </select>
+                              </select>
                             </div>
                           </div>
                           <div class="col-sm-9">
                             <label for="">&nbsp;</label>
-                            <input type="text" class="form-control" id="" placeholder="Enter Phone Number" aria-describedby="basic-addon3">
+                            <input type="text" class="form-control" id="" placeholder="Enter Phone Number"
+                              aria-describedby="basic-addon3">
                           </div>
                         </div>
 
-                        <p class="text-right margin-bottom-0"><a class="linkbtn" role="button" data-toggle="collapse" href="#urlbuttondiv" aria-expanded="false" aria-controls="urlbuttondiv">Add URL Button</a></p>
+                        <p class="text-right margin-bottom-0"><a class="linkbtn" role="button" data-toggle="collapse"
+                            href="#urlbuttondiv" aria-expanded="false" aria-controls="urlbuttondiv">Add URL Button</a>
+                        </p>
 
                         <div class="collapse" id="urlbuttondiv">
-                            <div class="rowSpaceReduce">
-                              <div class="col-sm-6">
-                                  <div class="form-group">
-                                    <label for="">URL Button</label>
-                                    <input type="text" class="form-control" id="" placeholder="Enter Text for URL Button Number" aria-describedby="basic-addon3">
-                                  </div>
+                          <div class="rowSpaceReduce">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="">URL Button</label>
+                                <input type="text" class="form-control" id=""
+                                  placeholder="Enter Text for URL Button Number" aria-describedby="basic-addon3">
                               </div>
-                              <div class="col-sm-6">
-                                <div class="form-group">
-                                  <label for="">URL Type</label>
-                                  <select name="" id="" class="form-control">
-                                    <option value="">Static</option>
-                                    <option value="">Dynamic</option>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="">URL Type</label>
+                                <select name="" id="" class="form-control">
+                                  <option value="">Static</option>
+                                  <option value="">Dynamic</option>
                                 </select>
-                                </div>
                               </div>
                             </div>
+                          </div>
 
-                            <div class="rowSpaceReduce">
-                              <div class="col-sm-12">
-                                <div class="form-group">
-                                  <label for="">URL Button</label>
-                                  <input type="text" class="form-control" id="" placeholder="Enter URL" aria-describedby="basic-addon3">
-                                </div>
+                          <div class="rowSpaceReduce">
+                            <div class="col-sm-12">
+                              <div class="form-group">
+                                <label for="">URL Button</label>
+                                <input type="text" class="form-control" id="" placeholder="Enter URL"
+                                  aria-describedby="basic-addon3">
                               </div>
                             </div>
-                       </div>
+                          </div>
+                        </div>
 
                       </div>
 
                       <div role="tabpanel" class="tab-pane" id="urltab">
                         <div class="rowSpaceReduce">
                           <div class="col-sm-6">
-                              <div class="form-group">
-                                <label for="">URL Button</label>
-                                <input type="text" class="form-control" id="" placeholder="Enter Text for URL Button Number" aria-describedby="basic-addon3">
-                              </div>
+                            <div class="form-group">
+                              <label for="">URL Button</label>
+                              <input type="text" class="form-control" id=""
+                                placeholder="Enter Text for URL Button Number" aria-describedby="basic-addon3">
+                            </div>
                           </div>
                           <div class="col-sm-6">
                             <div class="form-group">
@@ -3178,7 +3355,7 @@
                               <select name="" id="" class="form-control">
                                 <option value="">Static</option>
                                 <option value="">Dynamic</option>
-                            </select>
+                              </select>
                             </div>
                           </div>
                         </div>
@@ -3187,18 +3364,22 @@
                           <div class="col-sm-12">
                             <div class="form-group">
                               <label for="">URL Button</label>
-                              <input type="text" class="form-control" id="" placeholder="Enter URL" aria-describedby="basic-addon3">
+                              <input type="text" class="form-control" id="" placeholder="Enter URL"
+                                aria-describedby="basic-addon3">
                             </div>
                           </div>
                         </div>
-                        <p class="text-right margin-bottom-0"><a role="button" class="linkbtn" data-toggle="collapse" href="#phonenumberdiv" aria-expanded="false" aria-controls="phonenumberdiv">Add Phone Number</a></p>
+                        <p class="text-right margin-bottom-0"><a role="button" class="linkbtn" data-toggle="collapse"
+                            href="#phonenumberdiv" aria-expanded="false" aria-controls="phonenumberdiv">Add Phone
+                            Number</a></p>
 
                         <div class="collapse" id="phonenumberdiv">
                           <div class="rowSpaceReduce">
                             <div class="col-sm-12">
                               <div class="form-group">
                                 <label for="">Phone Number Button</label>
-                                <input type="text" class="form-control" placeholder="Enter text for Phone Number Button">
+                                <input type="text" class="form-control"
+                                  placeholder="Enter text for Phone Number Button">
                               </div>
                             </div>
                           </div>
@@ -3210,15 +3391,16 @@
                                 <select name="" id="" class="form-control">
                                   <option value="">+91</option>
                                   <option value="">+91</option>
-                              </select>
+                                </select>
                               </div>
                             </div>
                             <div class="col-sm-9">
                               <label for="">&nbsp;</label>
-                              <input type="text" class="form-control" id="" placeholder="Enter Phone Number" aria-describedby="basic-addon3">
+                              <input type="text" class="form-control" id="" placeholder="Enter Phone Number"
+                                aria-describedby="basic-addon3">
                             </div>
                           </div>
-                       </div>
+                        </div>
 
                       </div>
                     </div>
@@ -3371,46 +3553,62 @@
     </div><!-- Layout content Division -->
   </div>
 
-<script src="js/lib/jquery.min.js"></script>
-<script src="js/college/jquery.sumoselect.min.js"></script>
-<script src="js/chosen.jquery.min.js"></script>
-<script src="js/lib/autoselect.js"></script>
-<script src="js/college/notification-list.js"></script>
-<script src="js/college/bootstrap.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    $('.sumo-select').SumoSelect({
-        placeholder: '',
-        search: true,
-        searchText: 'Search',
-        triggerChangeCombined: false
-    });
-  });
-  $('.chosen-select').chosen();
-
-  document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form');
-  const tabs = form.querySelectorAll('.tab');
-
-  form.addEventListener('change', ({target}) => {
-    if (target.name !== 'userType') return;
-
-    const tabToShow = form
-      .querySelector(`.tab-${target.value}`);
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/college/jquery.sumoselect.min.js"></script>
+  <script src="js/chosen.jquery.min.js"></script>
+  <script src="js/lib/autoselect.js"></script>
+  <script src="js/college/notification-list.js"></script>
+  <script src="js/college/bootstrap.min.js"></script>
 
 
-    tabs.forEach(tab => {
-        const tabInput = tab.querySelector('input');
+  <script>
+    const button = document.querySelector("button"),
+      toast = document.querySelector(".toast");
+      (closeIcon = document.querySelector(".close")),
+      (progress = document.querySelector(".progress"));
+      (triggerbtn = document.querySelector(".msgButtons"));
 
-      tabInput.value = '';
-      tab.classList.add('hidden');
+    let timer1,timer2;
+
+    //showtoast
+    triggerbtn.addEventListener("click", () => {
+      toast.classList.add("active");
+      progress.classList.remove("active");
+      triggerbtn.classList.remove("active")
+      // timer1 = setTimeout(() => {
+      // toast.classList.remove("active");
+      // }, 5000); //1s = 1000 milliseconds
+
+      // timer2 = setTimeout(() => {
+      // progress.classList.remove("active");
+      // triggerbtn.classList.add("active")
+      // progress.classList.remove("active");
+      // }, 15300);
     });
 
-    tabToShow.classList.remove('hidden');
-  })
-});
-</script>
+    //hidetoast
+    closeIcon.addEventListener("click", () => {
+      toast.classList.remove("active");
+      setTimeout(() => {
+        progress.classList.remove("active");
+        triggerbtn.classList.add("active")
+      }, 300);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    });
+
+    setTimeout(() => {
+      toast.classList.remove("active");
+      progress.classList.add("active");
+      triggerbtn.classList.add("active");
+    }, 5000);
+
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+
+    $('[data-toggle="tooltip"]').tooltip()
+
+  </script>
 </body>
 
 </html>
