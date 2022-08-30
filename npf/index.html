@@ -2043,28 +2043,30 @@
 
 
   <style>
-    .msgButtons{
-      display:none;
-      position:absolute;
-      right:45px;
-      top:75px;
-      transition:s;
+    .msgButtons {
+      display: none;
+      position: absolute;
+      right: 45px;
+      top: 75px;
+      transition: s;
     }
-    .msgButtons.active{
-      display:inline-block;
+
+    .msgButtons.active {
+      display: inline-block;
     }
+
     .toast {
       position: absolute;
-      max-width:500px;
-      top:65px;
+      max-width: 500px;
+      top: 65px;
       right: 30px;
       border-radius: 12px;
       background: #fff;
-      padding:15px 20px 15px 15px;
+      padding: 15px 20px 15px 15px;
       box-shadow: 0 6px 25px -5px rgba(0, 0, 0, 0.1);
       transform: translateX(calc(100% + 30px));
       transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
-      z-index:9;
+      z-index: 9;
     }
 
     .toast.active {
@@ -2091,50 +2093,50 @@
     .toast-content .message {
       display: flex;
       flex-direction: column;
-      margin:0;
+      margin: 0;
     }
 
     .message .allocate_message {
-      font-size:14px;
-      font-weight:300;
+      font-size: 13px;
+      font-weight: 400;
       color: #333;
     }
 
-    .message .allocate_message+.allocate_message{
-      border-top:1px solid #ccc;
-      padding-top:10px;
+    .message .allocate_message+.allocate_message {
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
     }
 
     .toast .close {
       position: absolute;
-      top:10px;
-      right:10px;
-      padding:0px;
+      top: 10px;
+      right: 10px;
+      padding: 0px;
       cursor: pointer;
       opacity: 0.5;
-      font-size:14px;
-      width:28px;
-      height:28px;
+      font-size: 14px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       text-align: center;
       vertical-align: middle;
-      line-height:28px;
+      line-height: 28px;
     }
 
     .toast .close:hover {
       opacity: 1;
-      background:rgba(0,0,0,0.07);
-      color:red;
+      background: rgba(0, 0, 0, 0.07);
+      color: red;
     }
 
     .toast .progress {
       position: absolute;
-      bottom:0px;
+      bottom: 0px;
       left: 0;
-      height: 3px!important;
-      box-shadow:none!important;
+      height: 3px !important;
+      box-shadow: none !important;
       width: 100%;
-      background-color:transparent;
+      background-color: transparent;
       margin-bottom: 0;
 
     }
@@ -2589,24 +2591,29 @@
       <!--<div class="toggle-button sidebarCollapse"><i class="fa fa-fw fa-angle-left"></i></div>-->
     </nav><!-- Page Content Holder -->
     <div id="content">
-     
+
       <div class="toast active">
         <div class="toast-content">
           <div class="message">
-            <p class="text allocate_message">Note that you haven’t used <strong>application</strong> related trigger <span class="mute">(for example, form initiated,payment approved etc.)</span> for the <strong>application assignment</strong> automation.</p>
-            <p class="text allocate_message">Lead counselor matches unassigned will stop <strong>applications</strong> from getting assigned. Remove the same to cater both <strong>lead and application</strong> assignment.</p>
+            <p class="text allocate_message">Note that you haven’t used <strong>application</strong> related trigger
+              <span class="mute">(for example, form initiated,payment approved etc.)</span> for the <strong>application
+                assignment</strong> automation.</p>
+            <p class="text allocate_message">Lead counselor matches unassigned will stop <strong>applications</strong>
+              from getting assigned. Remove the same to cater both <strong>lead and application</strong> assignment.</p>
           </div>
         </div>
-        <a href="javascript:void()" class="close" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" data-container="body" title="Click&nbsp;here&nbsp;to&nbsp;close"><span class="glyphicon glyphicon-remove"></span></a>
+        <a href="javascript:void()" class="close" data-toggle="tooltip" data-placement="bottom" data-trigger="hover"
+          data-container="body" title="Click&nbsp;here&nbsp;to&nbsp;close"><span
+            class="glyphicon glyphicon-remove"></span></a>
 
-        <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+        <!-- Remove 'active' class, this is just to show -->
         <div class="progress active"></div>
       </div>
 
 
 
-      
-      
+
+
       <span class="msgButtons cursor_pointer"><span class="lineicon-info" aria-hidden="true"></span></span>
 
       <div id="CreateCommunicationTemplateSection">
@@ -3564,11 +3571,11 @@
   <script>
     const button = document.querySelector("button"),
       toast = document.querySelector(".toast");
-      (closeIcon = document.querySelector(".close")),
+    (closeIcon = document.querySelector(".close")),
       (progress = document.querySelector(".progress"));
-      (triggerbtn = document.querySelector(".msgButtons"));
+    (triggerbtn = document.querySelector(".msgButtons"));
 
-    let timer1,timer2;
+    let timer1, timer2;
 
     //showtoast
     triggerbtn.addEventListener("click", () => {
