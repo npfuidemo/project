@@ -2062,7 +2062,7 @@
       right: 30px;
       border-radius: 12px;
       background: #fff;
-      padding: 15px 20px 15px 15px;
+      padding: 15px;
       box-shadow: 0 6px 25px -5px rgba(0, 0, 0, 0.1);
       transform: translateX(calc(100% + 30px));
       transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
@@ -2102,6 +2102,10 @@
       color: #333;
     }
 
+    .message .allocate_message:last-child{
+      margin-bottom:0;
+    }
+
     .message .allocate_message+.allocate_message {
       border-top: 1px solid #ccc;
       padding-top: 10px;
@@ -2109,8 +2113,8 @@
 
     .toast .close {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top:5px;
+      right:5px;
       padding: 0px;
       cursor: pointer;
       opacity: 0.5;
