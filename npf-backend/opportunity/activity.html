@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Activity</title>
+ <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet" />
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+ <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.14/jquery.datetimepicker.min.css"
+  rel="stylesheet" />
+ <link rel="stylesheet" href="../static/backend/css/main.css">
+ <link rel="stylesheet" href="../static/backend/css/opportunity.css">
+</head>
+
+<body>
+ <div class="modal fade offCanvasModal right show" id="opp-activity" role="dialog" tabindex="-1"
+  style="display: block;">
+  <div class="modal-dialog modal-md">
+   <div class="modal-content h-100">
+    <div class="modal-header border-bottom-blue">
+     <h5 class="modal-title my-0" id="exampleModalLabel"><span class="title font-weight-bold">User Activity</span></h5>
+     <div class="mr-4 pr-2"><button aria-label="Close" class="close" data-dismiss="modal" data-placement="left"
+       data-toggle="tooltip" type="button" title="Click Here to Close"><span
+        aria-hidden="true">×</span></button></div>
+    </div>
+    <div class="modal-body p-0">
+     <div class="px-3 pt-2">
+      <div class="row justify-content-end">
+       <div class="col-12 text-right"><input id="user_activity_user_id" name="user_id" type="hidden" autocomplete="off"
+         value="8899677"><input id="total_activity_record" name="total_record" type="hidden" autocomplete="off"
+         value="8"><input id="activity_user_name" name="user_name" type="hidden" autocomplete="off"
+         value="Dr Bagga "><input id="activity_role_name" name="role_name" type="hidden" autocomplete="off"
+         value="College Staff"></div>
+      </div>
+     </div>
+     <div class="px-3 pt-2 pb-3">
+      <div class="min-h-80 text-center pt-5" id="loadingTimeLine" style="display: none;"><img alt="Loading..."
+        class="col-3 loader-img mt-5 pt-5" data-height="20"
+        src="https://s29-bkndcdn.npfs.co/static/theme/v1/images/npf-loder.gif?1661336439"></div>
+      <div class="timeline-group" id="activities_list" style="">
+
+
+       <div class="timeline-item  pl-3 py-2 pr-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center">
+         <small class="text-secondary d-flex align-items-center">Step 1/2/3 </small>
+         <small class="text-dark d-flex justify-content-end align-items-center">23/08/2022 03:28 PM</small>
+        </div>
+        <div class="card mt-1 mb-0 p-2">
+         <p class="mb-1">
+          <span>Dr Bagga [College Staff] Logged In System at <font style="color:#666"><b>03:28 PM, 23 Aug 2022 </b>
+           </font> from Source IP <font style="color:#666"><b> 14.99.39.146</b></font>. </span>
+         </p>
+        </div>
+       </div>
+
+       <div class="timeline-item  pl-3 py-2 pr-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center">
+         <small class="text-secondary d-flex align-items-center">Step 1/2/3 </small>
+         <small class="text-dark d-flex justify-content-end align-items-center">23/08/2022 03:28 PM</small>
+        </div>
+        <div class="card mt-1 mb-0 p-2">
+         <p class="mb-1">
+          <span>Dr Bagga [College Staff] Logged In System at <font style="color:#666"><b>03:28 PM, 23 Aug 2022 </b>
+           </font> from Source IP <font style="color:#666"><b> 14.99.39.146</b></font>. </span>
+         </p>
+        </div>
+       </div>
+
+       <div class="timeline-item  pl-3 py-2 pr-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center">
+         <small class="text-secondary d-flex align-items-center">Step 1/2/3 </small>
+         <small class="text-dark d-flex justify-content-end align-items-center">23/08/2022 03:28 PM</small>
+        </div>
+        <div class="card mt-1 mb-0 p-2">
+         <p class="mb-1">
+          <span>Dr Bagga [College Staff] Logged In System at <font style="color:#666"><b>03:28 PM, 23 Aug 2022 </b>
+           </font> from Source IP <font style="color:#666"><b> 14.99.39.146</b></font>. </span>
+         </p>
+        </div>
+       </div>
+
+       <div class="timeline-item  pl-3 py-2 pr-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center">
+         <small class="text-secondary d-flex align-items-center">Step 1/2/3 </small>
+         <small class="text-dark d-flex justify-content-end align-items-center">23/08/2022 03:28 PM</small>
+        </div>
+        <div class="card mt-1 mb-0 p-2">
+         <p class="mb-1">
+          <span>Dr Bagga [College Staff] Logged In System at <font style="color:#666"><b>03:28 PM, 23 Aug 2022 </b>
+           </font> from Source IP <font style="color:#666"><b> 14.99.39.146</b></font>. </span>
+         </p>
+        </div>
+       </div>
+
+       <div class="timeline-item  pl-3 py-2 pr-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center">
+         <small class="text-secondary d-flex align-items-center">Step 1/2/3 </small>
+         <small class="text-dark d-flex justify-content-end align-items-center">23/08/2022 03:28 PM</small>
+        </div>
+        <div class="card mt-1 mb-0 p-2">
+         <p class="mb-1">
+          <span>Dr Bagga [College Staff] Logged In System at <font style="color:#666"><b>03:28 PM, 23 Aug 2022 </b>
+           </font> from Source IP <font style="color:#666"><b> 14.99.39.146</b></font>. </span>
+         </p>
+        </div>
+       </div>
+
+       <div class="timeline-item  pl-3 py-2 pr-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center">
+         <small class="text-secondary d-flex align-items-center">Step 1/2/3 </small>
+         <small class="text-dark d-flex justify-content-end align-items-center">23/08/2022 03:28 PM</small>
+        </div>
+        <div class="card mt-1 mb-0 p-2">
+         <p class="mb-1">
+          <span>Dr Bagga [College Staff] Logged In System at <font style="color:#666"><b>03:28 PM, 23 Aug 2022 </b>
+           </font> from Source IP <font style="color:#666"><b> 14.99.39.146</b></font>. </span>
+         </p>
+        </div>
+       </div>
+
+       <div class="timeline-item  pl-3 py-2 pr-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center">
+         <small class="text-secondary d-flex align-items-center">Step 1/2/3 </small>
+         <small class="text-dark d-flex justify-content-end align-items-center">23/08/2022 03:28 PM</small>
+        </div>
+        <div class="card mt-1 mb-0 p-2">
+         <p class="mb-1">
+          <span>Dr Bagga [College Staff] Logged In System at <font style="color:#666"><b>03:28 PM, 23 Aug 2022 </b>
+           </font> from Source IP <font style="color:#666"><b> 14.99.39.146</b></font>. </span>
+         </p>
+        </div>
+       </div>
+
+       <div class="timeline-item  pl-3 py-2 pr-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center">
+         <small class="text-secondary d-flex align-items-center">Step 1/2/3 </small>
+         <small class="text-dark d-flex justify-content-end align-items-center">23/08/2022 03:28 PM</small>
+        </div>
+        <div class="card mt-1 mb-0 p-2">
+         <p class="mb-1">
+          <span>Dr Bagga [College Staff] Logged In System at <font style="color:#666"><b>03:28 PM, 23 Aug 2022 </b>
+           </font> from Source IP <font style="color:#666"><b> 14.99.39.146</b></font>. </span>
+         </p>
+        </div>
+       </div>
+
+       <div class="align-items-center bg-white d-flex justify-content-end fixed-bottom py-2 pr-4 w-100 shadow"
+        id="popup-pager">
+        <span class="mr-1 text-muted small">Show Activities</span>
+        <div class="form-group my-0 mr-1 p-0">
+         <select name="recordspager" id="records_popup_pager" class="bg-white normal-select p-1 border small"
+          onchange="recordsPopupPager(this)">
+          <option value="20" selected="">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+         </select>
+        </div>
+        <div id="npf-popup-pager" class="d-flex align-items-center">
+         <span class="mx-2 text-muted small">Go to</span>
+         <div class="form-group m-0 p-0 mr-2">
+          <input type="number" id="goToPopUpPager" class="pagination-input border small text-center" value="1"
+           onkeypress="goToPopUpPager(this);" autocomplete="off">
+          <span class="ml-1  text-muted small goto_pages">of 9</span>
+         </div>
+
+         <div class="npf-popup-pagination npf-pagination">
+          <input type="hidden" class="current_page" value="1" autocomplete="off">
+          <input type="hidden" class="total_page" value="9" autocomplete="off">
+          <input type="hidden" class="total_records" id="total_records" value="175" autocomplete="off">
+          <a href="javascript:void(0);" class="bg-white border popup_prev_page inactive" data-toggle="tooltip"
+           data-placement="top" data-container="body" data-trigger="hover" onclick="prevValue(this)"
+           title="Previous"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+          <a href="javascript:void(0);" class="bg-white border popup_next_page" data-toggle="tooltip"
+           data-placement="top" data-container="body" data-trigger="hover" onclick="nextValue(this)"
+           title="Next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+         </div>
+        </div>
+       </div>
+
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <div class="modal fade offCanvasModal right show" id="opp-activity-step2" role="dialog" tabindex="-1">
+ <div class="modal-dialog  modal-md">
+  <div class="modal-content h-100">
+   <div class="modal-header border-bottom-blue">
+    <h5 class="modal-title my-0" id="exampleModalLabel"><span class="title font-weight-bold">Activity</span></h5>
+    <div class="mr-4 pr-2"><button aria-label="Close" class="close" data-dismiss="modal" data-placement="left"
+      data-toggle="tooltip" type="button" title="Click Here to Close"><span
+       aria-hidden="true">×</span></button></div>
+   </div>
+   <div class="modal-body fullHeight">
+    <div class="bg-white">
+     <table class="table table table-striped table-bordered">
+      <thead>
+       <tr>
+        <th class="py-3 bg-light">Field Name</th>
+        <th class="py-3 bg-light">Field Properties</th>
+        <th class="py-3 bg-light">Selected Value</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td rowspan="5" class="bg-white"> Course</td>
+        <td>Display Name</td>
+        <td>Course</td>
+       </tr>
+       <tr>
+        <td>Data Validation</td>
+        <td>-</td>
+       </tr>
+       <tr>
+        <td>Field Placeholder</td>
+        <td>-</td>
+       </tr>
+       <tr>
+        <td>Mandatory</td>
+        <td>-</td>
+       </tr>
+       <tr>
+        <td>Instructions</td>
+        <td>-</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="modal fade offCanvasModal right show" id="opp-activity-step3" role="dialog" tabindex="-1">
+ <div class="modal-dialog  modal-md">
+  <div class="modal-content h-100">
+   <div class="modal-header border-bottom-blue">
+    <h5 class="modal-title my-0" id="exampleModalLabel"><span class="title font-weight-bold">Activity</span></h5>
+    <div class="mr-4 pr-2"><button aria-label="Close" class="close" data-dismiss="modal" data-placement="left"
+      data-toggle="tooltip" type="button" title="Click Here to Close"><span
+       aria-hidden="true">×</span></button></div>
+   </div>
+   <div class="modal-body fullHeight">
+    <div class="bg-white">
+     <table class="table table table-bordered">
+      <thead>
+       <tr>
+        <th class="py-3 bg-light">Field Name</th>
+        <th class="py-3 bg-light text-center">Selected Operator</th>
+        <th class="py-3 bg-light">Selected Value</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td class="py-4">Course</td>
+        <td class="py-4 text-center">Equals to</td>
+        <td class="py-4">BBA,BCA,MBA,B.Tech,BA, LLB</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+ <script src="../static/backend/js/core/jquery.min.js"></script>
+ <script src="../static/backend/js/core/popper.min.js?1649156623"></script>
+ <script src="../static/backend/js/core/bootstrap-material-design.min.js?1649156623"></script>
+ <script src="../static/backend/js/menu-search.js?1655970095"></script>
+ <script>
+   $('[data-toggle="tooltip"]').tooltip();
+ </script>
+ <!-- <script src="../static/custom/js/opportunity/opportunity.js?1661339080"></script>
+ <script src="../static/custom/js/opportunity/opportunity_fields.js?1661339044"></script>
+ <script src="../static/custom/js/opportunity/opportunity_logic.js?1661339080"></script>
+ <script src="../static/custom/js/base/common.js?1661339044"></script>
+ <script src="../static/custom/js/base/npf_base.js?1661339044"></script> -->
+</body>
+
+</html>
