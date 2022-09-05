@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity</title>
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.14/jquery.datetimepicker.min.css"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../static/backend/css/main.css">
+  <link rel="stylesheet" href="../static/backend/css/opportunity.css">
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg border-bottom shadow-none brand-color header-nav"></nav>
+  <div id="wrapper" class="main">
+    <div class="main-container p-0">
+      <div class="bg-white d-flex flex-wrap justify-content-between px-3 py-2 shadow-bottom mb-3 header-has-search">
+        <div class="topHead w-100 d-inline-block">
+          <div class="row" id="opportunity"><input id="totalopportunity" type="hidden" value="" autocomplete="off">
+            <div class="break-word" id="opportunity_config_name" style="display:none">Opportunity</div>
+            <div class="col-12 col-md-6 d-flex justify-content-between">
+              <div class="d-flex">
+                <h3 class="align-items-center d-flex h5 justify-content-start my-1"><span
+                    class="mx-1 break-word">Opportunity</span> <span
+                    class="badge bg-light-info badge-pill text-capitalize text-dark ml-2 hidetotal"><span
+                      id="total">15</span> <span id="record_context">Records</span></span></h3><a
+                  class="d-none align-items-center ml-1 text-primary" data-container="body"
+                  data-content="<ul class='videoList ml-0 pl-0 mb-0 list-none'><li class='mb-2'> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440883765' class='btn-video mb-3 text-dark' id='qmsGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o text-primary' aria-hidden='true'></i> <span class='vidText'>Query Management System</span> </a> </li><li class='mb-2'> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440647484' class='btn-video mb-3 text-dark' id='huqmsGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o text-primary' aria-hidden='true'></i> <span class='vidText'>How to use Query Management System?</span> </a> </li><li class='mb-2'> <a href='javascript:void(0);' data-src='https://player.vimeo.com/video/440878633' class='btn-video mb-3 text-dark' id='huptffGtm' data-toggle='modal' data-target='#productVideos' data-id='productVideos' onclick='vimeoSrcVideoGenric(this)'> <i class='fa fa-play-circle-o text-primary' aria-hidden='true'></i> <span class='vidText'>How to use the Push to FAQ functionality?</span> </a> </li></ul>"
+                  data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus"
+                  href="javascript:void(0);" data-original-title="" title=""><span class="material-icons-outlined"
+                    data-icon="play_circle_outline"></span></a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 pl-0 pl-md-3 d-flex align-items-center justify-content-end">
+              <div class="d-flex" id="rightOptions">
+                <div class="position-relative" id="expendedSearch"><a
+                    class="expended-search-link d-md-flex d-none border-0 p-1 ml-2 hover-effect rounded-circle text-secondary"
+                    data-container="body" data-placement="bottom" data-toggle="tooltip" data-trigger="hover"
+                    href="javascript:void(0);" onclick="expendableSearch()" title="" data-original-title="Search"><span
+                      class="material-icons-outlined" data-icon="search"></span></a>
+                  <div class="expended-search-wrpper position-absolute">
+                    <div class="row no-gutters border" id="searchBox">
+                      <div class="col-11">
+                        <div class="expandSearch">
+                          <div class="form-group has-search mb-0 py-0 bmd-form-group"><span
+                              class="material-icons search_icon text-muted ml-1" data-icon="search"></span><input
+                              class="form-control px-4" id="searchopportunity" name="searchopportunity"
+                              onkeypress="searchOpportunity(this);" placeholder="Search By Title" type="search" value=""
+                              autocomplete="off"></div>
+                          <div class="validation-message small text-danger" id="search_error"></div>
+                        </div>
+                      </div>
+                      <div class="col-1 d-flex align-items-center"><a
+                          class="pl-1 py-2 d-flex justify-content-center align-items-center" data-container="body"
+                          data-dismiss="search" data-placement="bottom" data-toggle="tooltip" data-trigger="hover"
+                          href="javascript:void(0);" onclick="resetSearch();" title="" data-original-title="Close"><span
+                            class="material-icons-outlined text-secondary" data-icon="close"></span></a></div>
+                    </div>
+                  </div>
+                </div><a class="d-flex border-0 p-1 ml-2 hover-effect rounded-circle text-secondary" data-toggle="modal"
+                  href="javascript:void(0);" id="filterPopupBtn"
+                  onclick="openFilter('filterPopup','/backend/s29/143570001106/opportunity/getOpportunityFilters');"><span
+                    class="material-icons-outlined" data-container="body" data-icon="filter_alt" data-placement="bottom"
+                    data-toggle="tooltip" data-trigger="hover" title="" data-original-title="Filter"></span></a>
+              </div><button
+                class="ml-2 btn btn-sm btn-primary border-primary d-flex align-items-center h-9 create-new-opportunity"
+                data-target="#create-opportunity" data-toggle="modal" onclick="removeData()" type="button"><span
+                  class="d-flex material-icons-outlined fs-16 mr-1" data-icon="add"></span> <span
+                  class="d-flex font-weight-bold align-self-center fs-13">Create</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-3 pb-3">
+        <div class="row">
+          <div class="col-12">
+            <div class="grid-table w-100 mt-2" id="tableCollapseParent">
+              <div class="responsive-table" data-sticky="true" id="table-hide" data-header-sticky="true">
+                <table class="table table-borderless" data-col-left="150" data-colfix="1" data-last-col="true">
+                  <thead>
+                    <tr>
+                      <th class="min-max-200">Title</th>
+                      <th class="min-max-200" data-column="created_on">Created/Updated By</th>
+                      <th class="min-max-200" data-column="created_on">Created/Updated By</th>
+                      <th class="min-max-200" data-column="created_on">Created/Updated By</th>
+                      <th class="min-max-200" data-column="created_on">Created/Updated By</th>
+                      <th class="sorting min-max-200" data-column="created_on">Created On</th>
+                      <th class="sorting min-max-200" data-column="modified_on">Updated On</th>
+                      <th class="min-max-100">Status</th>
+                      <th class="min-max-75 text-right"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="border-0" id="load_opportunity_records">
+                    <tr class="grid-table-row " id="t_73">
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_340cb2d25a55c9738244c401941de96c"
+                            href="/backend/s29/143570001106/opportunity/view/340cb2d25a55c9738244c401941de96c/3262b17915dfbd184995ef367153e483">
+                            fda
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        05/09/2022, 10:37 AM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        05/09/2022, 10:37 AM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_340cb2d25a55c9738244c401941de96c">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('340cb2d25a55c9738244c401941de96c','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr class="grid-table-row " id="t_72">
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_0672be8ebfb909872616c2efa38d51ca"
+                            href="/backend/s29/143570001106/opportunity/view/0672be8ebfb909872616c2efa38d51ca/64dd95a350ecc946c66757799e7011f7">
+                            wqewq qwe
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 06:54 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 06:54 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_0672be8ebfb909872616c2efa38d51ca">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('0672be8ebfb909872616c2efa38d51ca','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('0672be8ebfb909872616c2efa38d51ca')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('0672be8ebfb909872616c2efa38d51ca')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr class="grid-table-row " id="t_73">
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_340cb2d25a55c9738244c401941de96c"
+                            href="/backend/s29/143570001106/opportunity/view/340cb2d25a55c9738244c401941de96c/3262b17915dfbd184995ef367153e483">
+                            fda
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        05/09/2022, 10:37 AM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        05/09/2022, 10:37 AM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_340cb2d25a55c9738244c401941de96c">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('340cb2d25a55c9738244c401941de96c','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr class="grid-table-row " id="t_73">
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_340cb2d25a55c9738244c401941de96c"
+                            href="/backend/s29/143570001106/opportunity/view/340cb2d25a55c9738244c401941de96c/3262b17915dfbd184995ef367153e483">
+                            fda
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        05/09/2022, 10:37 AM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        05/09/2022, 10:37 AM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_340cb2d25a55c9738244c401941de96c">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('340cb2d25a55c9738244c401941de96c','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr class="grid-table-row " id="t_73">
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_340cb2d25a55c9738244c401941de96c"
+                            href="/backend/s29/143570001106/opportunity/view/340cb2d25a55c9738244c401941de96c/3262b17915dfbd184995ef367153e483">
+                            fda
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        05/09/2022, 10:37 AM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        05/09/2022, 10:37 AM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_340cb2d25a55c9738244c401941de96c">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('340cb2d25a55c9738244c401941de96c','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr class="grid-table-row " id="t_73">
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_340cb2d25a55c9738244c401941de96c"
+                            href="/backend/s29/143570001106/opportunity/view/340cb2d25a55c9738244c401941de96c/3262b17915dfbd184995ef367153e483">
+                            fda
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        05/09/2022, 10:37 AM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        05/09/2022, 10:37 AM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_340cb2d25a55c9738244c401941de96c">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('340cb2d25a55c9738244c401941de96c','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr class="grid-table-row " id="t_73">
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_340cb2d25a55c9738244c401941de96c"
+                            href="/backend/s29/143570001106/opportunity/view/340cb2d25a55c9738244c401941de96c/3262b17915dfbd184995ef367153e483">
+                            fda
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        05/09/2022, 10:37 AM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        05/09/2022, 10:37 AM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_340cb2d25a55c9738244c401941de96c">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('340cb2d25a55c9738244c401941de96c','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('340cb2d25a55c9738244c401941de96c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr class="grid-table-row " id="t_71">
+
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_084d429538bf918dba119e4a9aa2dba9"
+                            href="/backend/s29/143570001106/opportunity/view/084d429538bf918dba119e4a9aa2dba9/82d093f5d99f6e34ae73b76ce66d52cd">
+                            sd sadas
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 06:47 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 06:47 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_084d429538bf918dba119e4a9aa2dba9">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('084d429538bf918dba119e4a9aa2dba9','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('084d429538bf918dba119e4a9aa2dba9')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('084d429538bf918dba119e4a9aa2dba9')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr class="grid-table-row " id="t_70">
+
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_40be7e95168f445a3db5d6b5712d6848"
+                            href="/backend/s29/143570001106/opportunity/view/40be7e95168f445a3db5d6b5712d6848/040a0c599809dca551e2f51c0d2da5de">
+                            asdasdas
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 06:46 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 06:46 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_40be7e95168f445a3db5d6b5712d6848">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('40be7e95168f445a3db5d6b5712d6848','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('40be7e95168f445a3db5d6b5712d6848')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('40be7e95168f445a3db5d6b5712d6848')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr class="grid-table-row " id="t_69">
+
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_870bf18ed5a8d31bb3915ec856bad75d"
+                            href="/backend/s29/143570001106/opportunity/view/870bf18ed5a8d31bb3915ec856bad75d/557b131395713ba7bfa1a8b804285218">
+                            xzcvgh
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 06:39 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 06:39 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_870bf18ed5a8d31bb3915ec856bad75d">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('870bf18ed5a8d31bb3915ec856bad75d','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('870bf18ed5a8d31bb3915ec856bad75d')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('870bf18ed5a8d31bb3915ec856bad75d')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr class="grid-table-row " id="t_68">
+
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_6d8a8c88ea57de1ee805f76bf9193b55"
+                            href="/backend/s29/143570001106/opportunity/view/6d8a8c88ea57de1ee805f76bf9193b55/f8d60f6cd86f3982d1942dc426d3400f">
+                            New Opportinuty
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 06:26 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 06:26 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_6d8a8c88ea57de1ee805f76bf9193b55">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('6d8a8c88ea57de1ee805f76bf9193b55','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('6d8a8c88ea57de1ee805f76bf9193b55')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('6d8a8c88ea57de1ee805f76bf9193b55')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr class="grid-table-row " id="t_67">
+
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_db68b705101a8fab8753e712c90a9167"
+                            href="/backend/s29/143570001106/opportunity/view/db68b705101a8fab8753e712c90a9167/c627ac11149a2dde6c4e0b543e03cf44">
+                            sdfwefghmj
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 06:21 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 06:21 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_db68b705101a8fab8753e712c90a9167">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('db68b705101a8fab8753e712c90a9167','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('db68b705101a8fab8753e712c90a9167')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('db68b705101a8fab8753e712c90a9167')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr class="grid-table-row " id="t_64">
+
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_56b046f192c3a116f743c56325b286af"
+                            href="/backend/s29/143570001106/opportunity/view/56b046f192c3a116f743c56325b286af/2e58378403385b8f63c8014a08dbee56">
+                            asxdfgh
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 05:50 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 05:50 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_56b046f192c3a116f743c56325b286af">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('56b046f192c3a116f743c56325b286af','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('56b046f192c3a116f743c56325b286af')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('56b046f192c3a116f743c56325b286af')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr class="grid-table-row " id="t_58">
+
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_78b39cbd7e8b00aced9c0ec475515cee"
+                            href="/backend/s29/143570001106/opportunity/view/78b39cbd7e8b00aced9c0ec475515cee/49a70630649cf6f246197808e445475f">
+                            sdfgh
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 05:13 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 05:13 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Open" id="status_78b39cbd7e8b00aced9c0ec475515cee">Inactive</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('78b39cbd7e8b00aced9c0ec475515cee','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('78b39cbd7e8b00aced9c0ec475515cee')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('78b39cbd7e8b00aced9c0ec475515cee')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr class="grid-table-row " id="t_51">
+
+                      <td class="" data-title="Name">
+                        <div class=" max-w-54 leading-4 break-word">
+                          <a class="primary-color" id="name_2227e7e87e1eb4ea30fa585cfd3df10c"
+                            href="/backend/s29/143570001106/opportunity/view/2227e7e87e1eb4ea30fa585cfd3df10c/b41d343bc2441df3ded8dce14d730b8b">
+                            ne vkkk opp
+                          </a>
+                          <!--        <small class="font-weight-normal text-muted mt-2 d-block">None</small>-->
+                        </div>
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created/Updated By">
+
+
+
+                        <span class="text-truncate max-w-52 d-block"> NPF Automation </span>
+
+
+
+                      </td>
+                      <td class="" data-title="Created On">
+                        02/09/2022, 03:02 PM
+                      </td>
+                      <td class="" data-title="Updated On">
+
+                        02/09/2022, 03:03 PM
+
+                      </td>
+                      <td class="" data-title="Status">
+
+                        <div class="badge data-Closed" id="status_2227e7e87e1eb4ea30fa585cfd3df10c">Active</div>
+
+                      </td>
+                      <td class="" data-title="Action">
+                        <div class="d-flex justify-content-lg-end table-last-action dropdown" data-container="body">
+                          <a href="javascript:void(0);"
+                            class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="material-icons-outlined" data-icon="more_horiz"></span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)"
+                              onclick="getOpportunity('2227e7e87e1eb4ea30fa585cfd3df10c','Edit')" class="dropdown-item">
+                              <span class="material-icons-outlined icon"> edit </span>
+                              Edit <span class="config_name ml-1">Opportunity</span>
+                            </a>
+                            <a href="#" onclick="javascript:showUpdateStatusPopup('2227e7e87e1eb4ea30fa585cfd3df10c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> sync_alt </span>
+                              Change Status
+                            </a>
+                            <a href="javascript:void(0)"
+                              onclick="deleteOpportunityLogic('2227e7e87e1eb4ea30fa585cfd3df10c')"
+                              class="dropdown-item">
+                              <span class="material-icons-outlined icon"> delete </span>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="tableNoRecords" style="display:none">
+                <div class="h-96 w-100 bg-white d-flex justify-content-center align-items-center flex-column"><img
+                    alt="No Data Found" height="120"
+                    src="https://s29-bkndcdn.npfs.co/static/theme/v1/images/no-record.png?1662353955" width="152"><span
+                    class="text-muted">No Data Found!</span></div>
+              </div>
+              <div id="get_pagination">
+                <div class="d-flex justify-content-end align-items-center" id="pager"><span
+                    class="mr-1 text-muted small npf-page-row">Show Rows</span>
+                  <div class="form-group my-0 mr-1 p-0"><select class="bg-white normal-select p-1 border small"
+                      id="records_pager" name="recordspager">
+                      <option selected="" value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="50">50</option>
+                      <option value="100">100</option>
+                    </select></div>
+                  <div class="d-flex align-items-center" id="npf-pager"><span class="mx-2 text-muted small">Go to</span>
+                    <div class="form-group m-0 p-0 mr-2"><input class="pagination-input border small text-center"
+                        id="goToPager" onkeypress="return goToPager(this, event);" type="number" value="1"
+                        autocomplete="off"><span class="ml-1 text-muted small goto_pages">of 2</span></div>
+                    <div class="npf-pagination"><input class="current_page" type="hidden" value="1"
+                        autocomplete="off"><input class="total_page" type="hidden" value="2" autocomplete="off"><input
+                        class="total_records" id="total_records" type="hidden" value="15" autocomplete="off"><a
+                        class="bg-white border inactive prev_page" data-container="body" data-placement="top"
+                        data-toggle="tooltip" data-trigger="hover" href="javascript:void(0);" title=""
+                        data-original-title="Previous"><i aria-hidden="true" class="fa fa-angle-left"></i></a> <a
+                        class="bg-white border next_page" data-container="body" data-placement="top"
+                        data-toggle="tooltip" data-trigger="hover" href="javascript:void(0);" title=""
+                        data-original-title="Next"><i aria-hidden="true" class="fa fa-angle-right"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../static/backend/js/core/jquery.min.js"></script>
+  <script src="../static/backend/js/core/popper.min.js?1649156623"></script>
+  <script src="../static/backend/js/core/bootstrap-material-design.min.js?1649156623"></script>
+  <script src="../static/backend/js/menu-search.js?1655970095"></script>
+  <script>
+    $('[data-toggle="tooltip"]').tooltip();
+    $(window).on('scroll', function () {
+      if ($('.grid-table [data-header-sticky="true"] table tbody tr').length > 10) {
+        let tablePosition = $('.grid-table table').offset().top;
+        let tableHeader = $('.grid-table table thead');
+        $(tableHeader).css('position', 'sticky');
+        $(tableHeader).css('z-index', 99);
+        if ($(window).scrollTop() > tablePosition) {
+          $('.grid-table > div').css('max-height', '530px');
+        }
+        else if ($(window).scrollTop() <= 10) {
+          $('.grid-table > div').css('max-height', '');
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
