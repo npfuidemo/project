@@ -1,0 +1,49 @@
+@import "vendors/date-range-picker",
+'vendors/material-kit/variables',
+'abstracts/variables',
+'vendors/material-kit/mixins',
+'abstracts/mixins',
+'vendors/include-media',
+'vendors/chosen/main',
+'vendors/bootstrap-tagsinput/bootstrap-tagsinput',
+'vendors/chosen/main';
+
+@import "./components/grid-table",
+"./components/expandSearch",
+"./components/border-card",
+"./components/modal-accordion",
+"./components/custom-input",
+"./components/hierarchy-structure",
+"./components/multi-select-pill",
+"./components/bulk-upload",
+"./components/status",
+"./components/toggletag",
+"./components/selectPickerNoData",
+"./components/_configtabcontent",
+"./components/verticalmenulist";
+
+
+.formNameList{
+  max-height:270px;
+  overflow:auto;
+  li {
+    padding: 5px 8px;
+    margin-bottom: 2px;
+    &:hover{
+      background: #f1f1f1;
+    }
+  }
+}
+
+.redadonlyField{
+  .form-control[readonly]{
+    background-color:#fff!important;
+    border-color:#ccc!important;
+    cursor:text;
+   &[disabled]{
+    background-color: #f1f1f1 !important;
+    border: 1px solid #e2e1e6 !important;
+    cursor:not-allowed!important;
+  }
+}
+}

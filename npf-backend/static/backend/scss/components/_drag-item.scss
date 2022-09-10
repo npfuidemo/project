@@ -1,0 +1,188 @@
+.clearfix {
+    zoom: 1;
+    &:after {
+      content: '.';
+      display: block;
+      clear: both;
+      visibility: hidden;
+      font-size: 0;
+      line-height: 0;
+      height: 0;
+    }
+  }
+
+  .sel_col {
+      margin:$two*10px 0 0 0;
+      padding: 0;
+      font-size: $two * 7px;
+      margin-bottom: $two * 5px;
+  
+      span {
+        text-align: left;
+        font-size: $two * 6px;
+        float: left;
+        color: #cacaca;
+        font-weight: normal;
+      }
+  }
+  
+  .columns_dragble {
+    padding: 0 $two * 2+1px 0  $two * 7+1px!important;
+    margin: 0 0 0 0;
+    background-color: $white-color;
+    border: 0;
+    border-radius: $two * 2px;
+    box-shadow: none;
+    max-height: calc(100vh - 185px);
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x:hidden!important;
+
+
+    .widgetDragableChild{
+      > li{
+        h5 {
+          margin: 0;
+          padding: 0px 0 0 0 !important;
+          font-size: 14px;
+          font-weight: normal;
+        }
+        ul.list{
+          margin:0!important;
+          li{
+            background:#fff!important;
+            margin:5px 0 ;
+            &:before{
+              content:'';
+              display:none;
+            }
+          }
+        }
+      }
+    }
+  
+  
+    & ul {
+      list-style-type: none;
+      margin: 0 0 $two * 5px $two * 5px;
+      padding: 0;
+  
+      &.list {
+        .fa {
+          margin-right: 2px;
+        }
+        li {
+          width: 100%;
+          font-size: $two * 6px;
+          border: 1px solid $border-color-enable;
+          cursor: all-scroll;
+          position: relative;
+          margin: $two * 4px 0;
+          padding: $two * 3+1px $two * 10+5px  $two * 3+1px $two * 5px;
+          background-color: $grey-50;
+          border-radius:3px;
+  
+          &.placeholder {
+            border-style: dashed;
+            background-color: rgba(255, 255, 255, 0);
+            border: 2px dashed $primary;
+            font-size: $two * 9px;
+            display: block;
+            padding: 4px 10px;
+            min-height: $two * 17+1px;
+            margin: $two * 4px 0;
+            z-index: 99;
+          }
+  
+          .remove_draggable {
+            position: absolute;
+            pointer-events:auto!important;
+            right:$two * 2+1px;
+            top: $two * 3px;
+            background: none;
+            border: 0;
+            box-shadow: none;
+            font-size: $two * 9px;
+            line-height: $two * 10px;
+            color: $black-color;
+            text-decoration: none;
+            background:transparent;
+            border-radius:50%;
+            z-index:101;
+            &:hover {
+              color: red;
+              text-decoration: none;
+              background:#f3f3f3; 
+            }
+          }
+
+          &:hover{
+              border-color : $primary;
+              background: $white !important; 
+          }
+          &.ghost-drag{
+            background: $white;
+            border: 2px dashed $primary !important;
+          }
+        }
+      }
+    }
+  }
+  #non_dragable{
+    opacity: .6;
+  }
+  .widget_dragable,
+  #non_dragable {
+    li {
+      &::before {
+        content: '\e945';
+        font-family: 'Material Icons';
+        position: absolute;
+        left: -27px;
+        font-size: 1.5rem;
+        color: $primary;
+      }
+  
+      &:after {
+        display: none;
+      }
+      &:hover{
+       border-color:rgba($primary,.8);
+       
+      }
+    }
+  }
+
+  #non_dragable {
+    li {
+      pointer-events:none!important;
+      cursor: auto !important;
+      &:before{
+        opacity: 0.3;
+      }
+      &:hover{
+        border-color:rgba(204,204,204,.5)!important;     
+       }
+    }
+  }
+  
+  .addremove_filter {
+    button.close {
+      -webkit-appearance: none;
+      padding: 0;
+      cursor: pointer;
+      background: 0 0;
+      border: 0;
+      // opacity: $two / 4px;
+    }
+  }
+  
+  #ConfirmDownloadPopupArea {
+    z-index: 11112 !important;
+  }
+  
+ 
+  
+  .greybg {
+    background: #fcfcfc;
+  }

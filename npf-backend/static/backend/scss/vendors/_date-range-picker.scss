@@ -15,7 +15,9 @@
     font-family: arial;
     font-size: 15px;
     line-height: 1em;
-
+    @media only screen and (max-width: 767px){
+      z-index: 999;
+    }
     select{
       background:transparent;
       border:0;
@@ -106,7 +108,9 @@
   }
 
   .daterangepicker.show-calendar .drp-buttons {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .daterangepicker.auto-apply .drp-buttons {

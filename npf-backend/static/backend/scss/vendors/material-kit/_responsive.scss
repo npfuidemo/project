@@ -35,7 +35,8 @@
     display: block;
     top: 0px;
     height: 100vh;
-    width: 230px;
+    width:300px;
+    max-width:300px;
     right: 0;
     margin-right: 0 !important;
     z-index: 1032;
@@ -46,10 +47,8 @@
     text-align: left;
     padding-right: 0;
     padding-left: 0;
-
     max-height: none !important;
-
-    @include transform-translate-x(230px);
+    @include transform-translate-x(300px);
     @include transitions (0.50s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
     &::after {
@@ -116,7 +115,7 @@
 
   .nav-open {
     .navbar-translate {
-      @include transform-translate-x(-230px);
+      @include transform-translate-x(-300px);
     }
   }
 

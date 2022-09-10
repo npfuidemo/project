@@ -1,9 +1,10 @@
 @import '../vendors/material-kit/variables';
-@import './sorting', './table-popover', './copy-element';
+@import './sorting', './table-popover', './copy-element', './table-collapse';
+
 .grid-table table.table {
     width: 100%;
     border-radius: 4px;
-    background: #fafafa;
+    background: $grey-50;
     margin-bottom: 0;
     overflow: hidden;
     border-spacing: 0;
@@ -135,8 +136,6 @@
 
     tbody tr {
         &.grid-table-row {
-
-
             td {
                 font-weight: 400;
                 vertical-align: middle;
@@ -173,7 +172,7 @@
                     font-weight: 300 !important;
 
                     .badge {
-                        font-weight: 400 !important;
+                        font-weight: 300 !important;
                     }
 
                     @media only screen and (min-width: 768px) {
@@ -184,7 +183,7 @@
 
                 &+.collapse {
                     td {
-                        background: #fafafa;
+                        background: $grey-50;
                     }
                 }
             }
@@ -211,8 +210,20 @@
         }
 
     }
-}
 
+    &.showtableMobile{
+        @media (max-width:767px){
+        thead{
+            display:table-header-group;
+        }
+        td{
+            display:table-cell!important;
+            padding-left:.75rem!important;
+            width:auto!important;
+        }
+        }
+    }
+}
 // @include media("<tablet") {
 @media only screen and (max-width: 768px) {
     .grid-table {
@@ -222,7 +233,7 @@
             }
 
             thead {
-                display: none;
+                display: none !important;
             }
 
             tbody {

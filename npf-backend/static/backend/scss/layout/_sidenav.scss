@@ -21,7 +21,6 @@
     overflow-x: hidden;
     @include transition(all 0.5s);
     @include transition-delay(0s);
-
     .sidebar__inner {
         background-color: inherit;
     }
@@ -46,6 +45,9 @@
                     vertical-align: middle;
                     min-width: 20px;
                     text-align: center;
+                    &.lineicon-210{
+                        font-size: 1.4rem;
+                    }
                 }
 
                 span {
@@ -412,7 +414,7 @@
 .sidebar a[aria-expanded="false"]:before,
 .sidebar a[aria-expanded="true"]:before {
     position: absolute;
-    left: 192px;
+    right:10px;
     top: 12px;
     content: 'expand_more';
     display: block;

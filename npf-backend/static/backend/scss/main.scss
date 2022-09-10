@@ -1,3 +1,4 @@
+
 @import 'abstracts/variable-overwrite',
 'vendors/material-kit/variables',
 'abstracts/variables',
@@ -37,7 +38,8 @@
 'vendors/material-kit/togglebutton',
 'vendors/material-kit/ripples',
 'vendors/material-kit/headers',
-'vendors/material-kit/footers';
+'vendors/material-kit/footers',
+'components/_footer.scss';
 
 // Component
 @import 'vendors/include-media',
@@ -93,4 +95,5 @@
 'components/fixed-select-field',
 'components/togglebuttonSmall',
 'components/radius',
-'components/font-size';
+'components/font-size',
+'components/app-download';

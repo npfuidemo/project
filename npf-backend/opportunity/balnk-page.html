@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  
+
 
 
   <script src="../static/backend/js/core/jquery.min.js"></script>
@@ -25,6 +25,23 @@
   <script src="../static/backend/js/menu-search.js?1655970095"></script>
   <script>
     $('[data-toggle="tooltip"]').tooltip();
+
+    // $(document).find('.grid-table ', function(){
+    //   console.log($(this).offset())
+    // })
+
+    $(document).on('change', '#records_pager', function () {
+      if ($(document).width() > 767) {
+        if ($('#records_pager').val() > 10) {
+          let tablePosition = $('.grid-table table').offset().top;
+          $('.grid-table table thead').css({ 'position': 'sticky', 'z-index': 999 })
+          $('.grid-table .responsive-table').css('max-height', 'calc(100vh - ' + (tablePosition + 90) + 'px)')
+        }
+        else {
+          $('.grid-table .responsive-table').css('max-height', 'unset');
+        }
+      }
+    });
   </script>
 </body>
 

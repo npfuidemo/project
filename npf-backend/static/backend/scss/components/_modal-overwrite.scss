@@ -169,7 +169,7 @@
     &-backdrop.show {
         z-index: 1051;
 
-        &+& {
+        &~& {
             z-index: 1052;
         }
     }
@@ -194,3 +194,12 @@
         background-color: #edf3ff;
     }
 }
+
+
+.modal.modal-fullscreen .modal-dialog {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+  }

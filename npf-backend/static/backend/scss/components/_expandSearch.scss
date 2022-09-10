@@ -22,7 +22,18 @@
 
   .cross-icon {
     top: 9px;
-    ;
+  }
+  &.customized-search{
+    .btn{
+      position: absolute;
+      right: 5px;
+      padding: 0px 0 10px 0;
+      margin: 0;
+      background: transparent;
+      line-height: 0;
+      box-shadow: none;
+      height: 100%;
+    }
   }
 }
 
@@ -66,8 +77,7 @@
     }
 
     @media only screen and (max-width: 767px) {
-      min-height: 55px;
-      min-width: 343px !important;
+      min-width: 333px !important;
       top: 13px;
       left: -153px !important;
       right: 0;

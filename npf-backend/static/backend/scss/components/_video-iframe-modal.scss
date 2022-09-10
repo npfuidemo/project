@@ -3,57 +3,62 @@
         max-width: 630px;
     }
 
-    .modal-header {
-        .close {
-            position: absolute;
-            right: 28px;
-            top: 20px;
-            border: 0;
-            background: none;
-            cursor: pointer;
-            opacity: 1;
-            color: #000;
-            border-radius: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: .25rem;
-            width: 32px;
-            height: 32px;
+    .close {
+        position: absolute;
+        right:0x;
+        top:5px;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        opacity: 1;
+        color: #666;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .25rem;
+        width: 32px;
+        height: 32px;
 
-            &:hover {
-                background: rgba(0, 0, 0, .1);
-                color: red;
-            }
+        &:hover {
+            background:transparent!important;
+            color: #000!important;
+            
         }
     }
-    .modal-body{
-        background: url('../images/loader.gif') center no-repeat; background-size: 10%;
-    }
-    .modal-content{
 
+    .modal-body {
+        background: url('../images/loader.gif') center no-repeat;
+        background-size: 10%;
     }
 }
 
 .outside-cross-modal .close {
     position: absolute;
-    right: 10px;
-    top: 5px;
-    color: #010;
+    right:-15px!important;
+    top:-15px!important;
+    color: #333!important;
     font-size: 1.5rem;
     z-index: 1;
     line-height: .8;
     cursor: pointer;
+    text-shadow: none;
 
     &:before {
         content: '';
-        width: 40px;
-        height: 40px;
+        width:26px;
+        height:26px;
         z-index: 9;
-        top: -5px;
-        right: -10px;
+        top:3px;
+        right:3px;
         position: absolute;
-        background: rgba(0, 0, 0, .2);
-        border-radius: 0 0 0 40px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius:40px;
+        z-index:-1;
+    }
+    &:hover {
+        &:before{
+            background: rgba(255, 255, 255, 0.8); 
+        }
     }
 }

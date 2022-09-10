@@ -8,7 +8,7 @@
 // Kindly update date in base.html while you update lineicon
 @font-face {
   font-family: 'lineicon';
-  src:  url('../fonts/lineicon.woff2?29apr22');
+  src:  url('../fonts/lineicon.woff2?02aug22');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -49,8 +49,40 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
+.lineicon-210:before,
+.lineicon-opportunity:before {
+  content: "\e98d";
+}
+.lineicon-edit-column:before {
+  content: "\e98c";
+}
+.lineicon-captcha-field:before {
+  content: "\e983";
+}
+.lineicon-checkBox-field:before {
+  content: "\e984";
+}
+.lineicon-date-field:before {
+  content: "\e985";
+}
+.lineicon-dropdown-arrow:before {
+  content: "\e986";
+}
+.lineicon-email-field:before {
+  content: "\e987";
+}
+.lineicon-mobile-field:before {
+  content: "\e988";
+}
+.lineicon-paragraph-field:before {
+  content: "\e989";
+}
+.lineicon-textBox-field:before {
+  content: "\e98a";
+}
+.lineicon-upload-field:before {
+  content: "\e98b";
+}
 .lineicon-log-out:before {
   content: "\e980";
 }

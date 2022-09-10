@@ -1,41 +1,67 @@
 /* vertical menu list */
-@import 'vendors/material-kit/variables',
-'abstracts/variables',
-'vendors/material-kit/mixins',
-'abstracts/mixins',
-'vendors/include-media',
-'vendors/chosen/main',
-'vendors/bootstrap-tagsinput/bootstrap-tagsinput',
-'components/verticalmenulist',
-'components/tabcontent',
-'components/configtabcontent',
-'components/skeleton-loader',
-'components/notifyAlert',
-'components/plusMinushide',
-'components/alert-modal',
-'components/tag-condition-label',
-'components/sortable',
-'components/lead-stage-edit',
-'components/selectPickerNoData';
+@import "vendors/material-kit/variables", "abstracts/variables",
+"vendors/material-kit/mixins", "abstracts/mixins", "vendors/include-media",
+"vendors/chosen/main", "vendors/bootstrap-tagsinput/bootstrap-tagsinput",
+"components/verticalmenulist", "components/tabcontent",
+"components/configtabcontent", "components/skeleton-loader",
+"components/notifyAlert", "components/plusMinushide", "components/alert-modal",
+"components/tag-condition-label", "components/sortable",
+"components/lead-stage-edit", "components/selectPickerNoData", "components/filled-bar", "components/status";
 
 .config- {
-    &condition-bar {
-        z-index: 99;
-        top: 92px;
-    }
+  &condition-bar {
+    z-index: 99;
+    top: 92px;
+  }
 
-    &stage-row {
-        position: sticky;
-        top: 140px;
-        z-index: 1;
-    }
+  &stage-row {
+    position: sticky;
+    top: 140px;
+    z-index: 1;
+  }
 
-    &stage-bar {
-        z-index: 99;
-        top: 92px;
+  &stage-bar {
+    z-index: 99;
+    top: 92px;
+  }
+
+  &table-view {
+    table {
+
+      td,
+      th {
+        min-width: 100px;
+        max-width: 350px;
+
+        &:last-child {
+          padding: .75rem;
+        }
+      }
     }
+  }
 }
 
+#listing_items{
+  .list-group-item:hover{
+    cursor: pointer;
+    background: lighten($primary, 38%);
+  }
+  .active-opp {
+    background: lighten($primary, 30%) !important;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 14px;
+      right: 15px;
+      width: 5px;
+      height: 5px;
+      border: 5px solid #323232;
+      border-color: transparent transparent transparent #666;
+    }
+  }
+}
+
+
 .chosen-container-multi .chosen-choices {
-    background: transparent !important;
+  background: transparent !important;
 }
