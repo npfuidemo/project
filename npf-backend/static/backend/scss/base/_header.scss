@@ -21,10 +21,10 @@
     }
     .nav-link .material-icons,
     .nav-link .fa{
-      @media only screen and (min-width: 760px){
+      @media only screen and (min-width: 991px){
         color: #6c757d !important;
       }
-      @media only screen and (max-width: 760px){
+      @media only screen and (max-width: 991px){
         color: #fff !important;
       }
     }

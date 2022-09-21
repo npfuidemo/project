@@ -6,10 +6,17 @@
 
     @media only screen and (min-width: 1025px) {
       grid-template-columns: repeat(7, minmax(0, 1fr));
+      $width: 7;
+      @for $a from 1 through $width {
+        &.grid-col-#{$a} {
+          grid-template-columns: repeat($a, minmax(0, 1fr));
+        }
+      }
     }
 
     .grid-item {
       position: relative;
+
       &:after {
         content: "";
         position: absolute;
@@ -20,13 +27,14 @@
         background-image: linear-gradient(
           to bottom,
           #ffffff,
-          #fafafa,
+          $grey-50,
           #f2f2f2,
           #f2f2f2,
-          #fafafa,
+          $grey-50,
           #ffffff
         );
       }
+
       &:last-child:after {
         content: none;
       }
@@ -39,11 +47,13 @@
     min-height: 75px;
     border-style: solid;
 
-    &:not(.active){
+    &:not(.active) {
       opacity: .8;
     }
+
     &.active {
       border-bottom-color: #4c79dc !important;
+
       &.status-open {
         border-bottom-color: #ee554b !important;
       }

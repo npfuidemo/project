@@ -1,8 +1,7 @@
 .dropdown.bootstrap-select {
-
     .bs-actionsbox .btn-group .btn {
         color: rgba(0, 0, 0, .87);
-        background-color: #fafafa;
+        background-color: $grey-50;
 
         &:nth-last-child(1) {
             color: $danger;
@@ -44,4 +43,8 @@
     .dropdown-item.selected .bs-ok-default:after {
         color: $primary;
     }
+}
+
+.bootstrap-select .dropdown-menu.inner{
+    max-height: inherit !important;
 }

@@ -140,7 +140,7 @@ div[class*="cke_editor_editor_"],
         .chosen-results {
             li {
                 &.group-result {
-                    background-color: #fafafa;
+                    background-color: $grey-50;
                     border-left: 2px solid #4c79dc;
                 }
             }

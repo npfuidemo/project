@@ -6,6 +6,7 @@ $primary: $brand-color;
 /// @white Color
 $white-color: rgb(255, 255, 255) !default;
 $sidebar-color: #2f353a;
+$font-size-base: 1rem !default;
 $font-size-exlg: ($font-size-base * 1.5) !default;
 $color-black:rgba(0,0,0,.87);
 $color-white: #fff;
@@ -17,6 +18,9 @@ $border-color-enable:#cccccc;
 $border-color-disable:#e2e1e6;
 $zero: 0;
 $two: 2;
+
+$black : #000;
+$table-hover-bg : rgba($black, .04);
 
 $theme-colors: (
   "light-warning": #fbe6b7,

@@ -77,8 +77,8 @@
             position: absolute;
             display: block;
             background: #ccc;
-            left: -12px;
-            top: -18px;
+            left:-6px;
+            top:-17px;
         }
 
         &:after {
@@ -98,7 +98,7 @@
 
             &:after {
                 content: '';
-                width: 13px;
+                width:24px;
                 height: 1px;
                 background: #ccc;
                 position: absolute;
@@ -113,4 +113,47 @@
 
 .appendFormChildMasterData {
     max-height: 50vh !important;
+}
+
+.selfhelp {
+    border-radius: 20px;
+    background: rgba($brand-color, .05);
+    color:$brand-color;
+    padding: .10rem .70rem .12rem .40rem;
+    font-size: 12px;
+    font-weight: 500;
+    border:1px solid rgba($brand-color,.2);
+    line-height:24px;
+
+    .iconH {
+        border-radius: 50%;
+        margin-right:2px;
+        color: $brand-color;
+
+        &:before {
+            color: #fff !important;
+        }
+    }
+
+    &:hover {
+        background: rgba($brand-color, .1);
+    }
+}
+
+.maxHeight200{
+    max-height:200px;
+    overflow:auto;
+    overflow-x:hidden; 
+    margin:0;
+    padding:0 0 0 0px;
+    &>li {
+        counter-increment: listCounter;
+        position: relative;
+        padding:3px 0px;
+        margin-bottom:10px;
+
+        &:hover{
+            background-color:#eee;
+        }
+    }
 }

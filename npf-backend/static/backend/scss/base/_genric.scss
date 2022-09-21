@@ -305,6 +305,7 @@ nav.navbar {
         &:last-child {
             padding-top: 0;
             padding-bottom: 0;
+            vertical-align: middle;
         }
     }
 }
@@ -438,7 +439,7 @@ nav.navbar {
 }
 
 
-.validation-message.text-danger {
+.validation-message {
     &:before {
         content: '\f1e0';
         font-family: 'Material Icons';
@@ -685,7 +686,7 @@ input {
 .dropdown.bootstrap-select {
     .bs-actionsbox .btn-group .btn {
         color: rgba(0, 0, 0, .87);
-        background-color: #fafafa;
+        background-color: $grey-50;
 
         &:nth-last-child(1) {
             color: #f44336;
@@ -1261,7 +1262,7 @@ input[type="checkbox"] {
 }
 
 .cursor-not-allowed {
-    cursor: not-allowed;
+    cursor: not-allowed !important;
 }
 
 .cam-icon {
@@ -1363,6 +1364,13 @@ input[type="checkbox"] {
         bottom: 8px;
         z-index: 0;
         cursor: pointer;
+    }
+
+    .range-input {
+        position: relative;
+        z-index: 1;
+        background: transparent;
+        font-size: 95%;
     }
 }
 
@@ -1522,6 +1530,20 @@ input[type="checkbox"] {
     white-space: normal;
 }
 
+.daterangepicker {
+    td.in-range {
+        background-color: lighten($primary, 35%) !important;
+        color: #333 !important;
+    }
+
+    .ranges li.active,
+    td.active,
+    td.active.off,
+    td.active:hover {
+        color: #fff !important;
+        background-color: $primary !important;
+    }
+}
 .header-has-search {
     @media only screen and (max-width: 767px) {
         padding-bottom: 60px !important;

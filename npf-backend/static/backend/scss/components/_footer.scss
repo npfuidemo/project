@@ -1,20 +1,25 @@
-.main-footer {
-    background: #fff;
-    padding: 10px 15px;
-    color: #444;
-    border-top: 1px solid #eee;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    font-size: 12px;
+footer {
+    .footer-brand {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 20px;
+        font-size: 11px;
+    }
+
+    .btn.btn-just-icon {
+        height: 20px;
+        min-width: 20px;
+        width: 20px;
+
+        .fa {
+            font-size: 12px;
+            line-height: 1.6;
+        }
+    }
 }
 
-@include media(">=tablet") {
-    .nav-open {
-        footer{
-            margin-left: 180px;
-            transition:all .5s;
-        }
+@media only screen and (min-width: 992px) {
+    #main {
+        min-height: calc(100vh - 85px) !important;
     }
 }

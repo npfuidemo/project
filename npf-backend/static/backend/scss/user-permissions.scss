@@ -128,7 +128,10 @@
 }
 
 .sticky-profile-menu {
-  min-height: calc(100vh - 360px);
+
+  @media only screen and (min-width: 760px) {
+    min-height: calc(100vh - 360px);
+  }
 
   .setting-menu {
     height: auto;
@@ -146,9 +149,24 @@
 
 .sticky-nav-tab-pill {
   background: #f1f3f4;
+
   @media only screen and (min-width: 760px) {
     position: sticky;
     top: 51px;
     z-index: 12;
   }
 }
+
+.date-picker[disabled] {
+  pointer-events: none;
+}
+
+ul.automation-mapped{
+  li:first-child{
+    text-indent: -20px;
+    list-style-type: none;
+  }
+  max-height: 130px;
+  overflow-y: auto;
+}
+

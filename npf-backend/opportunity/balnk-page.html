@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity</title>
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.14/jquery.datetimepicker.min.css"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../static/backend/css/main.css">
+  <link rel="stylesheet" href="../static/backend/css/opportunity.css">
+</head>
+
+<body>
+
+
+
+  <script src="../static/backend/js/core/jquery.min.js"></script>
+  <script src="../static/backend/js/core/popper.min.js?1649156623"></script>
+  <script src="../static/backend/js/core/bootstrap-material-design.min.js?1649156623"></script>
+  <script src="../static/backend/js/menu-search.js?1655970095"></script>
+  <script>
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // $(document).find('.grid-table ', function(){
+    //   console.log($(this).offset())
+    // })
+
+    $(document).on('change', '#records_pager', function () {
+      if ($(document).width() > 767) {
+        if ($('#records_pager').val() > 10) {
+          let tablePosition = $('.grid-table table').offset().top;
+          $('.grid-table table thead').css({ 'position': 'sticky', 'z-index': 999 })
+          $('.grid-table .responsive-table').css('max-height', 'calc(100vh - ' + (tablePosition + 90) + 'px)')
+        }
+        else {
+          $('.grid-table .responsive-table').css('max-height', 'unset');
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

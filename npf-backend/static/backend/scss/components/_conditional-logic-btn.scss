@@ -15,11 +15,21 @@
       left: 36px;
       top: 48px;
       z-index: 2;
+<<<<<<< HEAD
       @media only screen and (max-width:767px){
         content: none;
       }
     }
     &:after{
+=======
+
+      @media only screen and (max-width:767px) {
+        content: none;
+      }
+    }
+
+    &:after {
+>>>>>>> 00bdc2621ef03a18c596d1c2e6b12b37c079cdda
       content: '';
       background: white;
       width: 40px;
@@ -68,6 +78,7 @@
       left: -28px;
       top: 15px;
       background: lighten($black, 90%);
+<<<<<<< HEAD
       @media only screen and (max-width: 767px){
         background: $light;
         width: calc(100% - 10px);
@@ -113,6 +124,57 @@
       border-radius: 35px;
     }
 
+=======
+
+      @media only screen and (max-width: 767px) {
+        background: $light;
+        width: calc(100% - 10px);
+        height: calc(100% + 10px);
+        z-index: -1;
+        left: auto;
+        right: auto;
+        top: -5px;
+        bottom: 0;
+      }
+    }
+
+    &:after {
+      content: '\e5df';
+      position: absolute;
+      left: -15px;
+      font-family: 'Material Icons';
+      top: 5px;
+      color: $primary;
+      font-size: 21px;
+
+      @media only screen and (max-width: 767px) {
+        left: -30px;
+      }
+    }
+
+    &:only-child,
+    &:first-child {
+      .remove-condition {
+        display: none;
+      }
+    }
+  }
+
+  .conditional-logic-btn {
+    border-radius: 35px;
+    position: relative;
+    z-index: 1;
+    background: lighten($primary, 39%);
+    border: 1px solid $primary;
+
+
+    .conditional-logic-span {
+      color: $primary;
+      cursor: pointer;
+      border-radius: 35px;
+    }
+
+>>>>>>> 00bdc2621ef03a18c596d1c2e6b12b37c079cdda
     input[type="radio"] {
       position: absolute;
       left: -99999px;
@@ -160,9 +222,15 @@
   }
 }
 
+<<<<<<< HEAD
 .conditional-logic-block.input-has-error{
   &:after{
     @media only screen and (min-width: 768px){
+=======
+.conditional-logic-block.input-has-error {
+  &:after {
+    @media only screen and (min-width: 768px) {
+>>>>>>> 00bdc2621ef03a18c596d1c2e6b12b37c079cdda
       height: 53px;
     }
   }

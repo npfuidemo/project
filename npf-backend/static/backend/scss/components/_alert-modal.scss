@@ -7,8 +7,9 @@
         -moz-box-sizing: border-box;
         flex-direction: column;
         align-items: center;
-        box-shadow: 0 0 10px rgba(0,0,0,.3);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     }
+
     .alert-badge {
         min-width: 120px;
         max-width: 285px;
@@ -45,6 +46,7 @@
         }
 
         .alert-badge-paper {
+
             &:before,
             &:after {
                 content: ' ';
@@ -60,21 +62,24 @@
                 border-radius: 80px 50px 0 0;
                 left: -7px;
             }
-            &:after{
+
+            &:after {
                 width: 18px;
                 border-radius: 50px 60px 0 0;
                 right: -7px;
             }
         }
     }
-    .alert-content{
+
+    .alert-content {
         padding: 25px 15px;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        .alert-content-scroll{
+
+        .alert-content-scroll {
             display: inline-block;
             overflow-x: hidden;
             overflow-y: auto;
@@ -83,55 +88,68 @@
             padding-right: 25px;
         }
     }
-    .alert-btn-group{
+
+    .alert-btn-group {
         position: -webkit-sticky;
         position: sticky;
         bottom: 0;
         margin: 0 0 20px;
         text-align: center;
-        .alert-btn-filled{
+
+        .alert-btn-filled {
             background: $primary;
             border: 1px solid $primary;
             color: $white;
         }
-        .alert-btn-outline{
+
+        .alert-btn-outline {
             background: $white;
             border-color: $secondary;
             color: $secondary;
         }
     }
-    &.warning{
-        .alert-badge{
-            &:before{
+
+    &.warning {
+        .alert-badge {
+            &:before {
                 background: $warning;
             }
-            .alert-badge-paper{
-                &:before,&:after{
+
+            .alert-badge-paper {
+
+                &:before,
+                &:after {
                     background: #ffc266;
                 }
             }
         }
-        .alert-btn-group{
-            .alert-btn-filled{
+
+        .alert-btn-group {
+            .alert-btn-filled {
                 background: $warning;
                 color: $white;
                 border: 1px solid $warning;
             }
         }
     }
-    &.success{
-        .alert-badge{
-            &:before{
+
+    &.success {
+        .alert-badge {
+            &:before {
                 background: $success;
             }
-            .alert-badge-paper{
-                &:before,&:after{
+
+            .alert-badge-paper {
+
+                &:before,
+                &:after {
                     background: #91cf93;
                 }
             }
         }
-        .alert-btn-group{
-            .alert-btn-filled{
+
+        .alert-btn-group {
+            .alert-btn-filled {
                 background: $success;
                 color: $white;
                 border: 1px solid $success;
@@ -139,19 +157,24 @@
 
         }
     }
-    &.error{
-        .alert-badge{
-            &:before{
+
+    &.error {
+        .alert-badge {
+            &:before {
                 background: $danger;
             }
-            .alert-badge-paper{
-                &:before,&:after{
+
+            .alert-badge-paper {
+
+                &:before,
+                &:after {
                     background: #f99b94;
                 }
             }
         }
-        .alert-btn-group{
-            .alert-btn-filled{
+
+        .alert-btn-group {
+            .alert-btn-filled {
                 background: $danger;
                 color: $white;
                 border: 1px solid $danger;

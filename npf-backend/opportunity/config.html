@@ -3718,11 +3718,691 @@
       </div>
     </div>
   </div>
+  <div class="modal fade offCanvasModal right popup-customization show" data-backdrop="static" data-keyboard="false" id="create-opportunity" role="dialog" tabindex="-1" style="display: block; padding-right: 8px;">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+     <div class="modal-content">
+      <div class="modal-header border-bottom-blue">
+       <h5 class="modal-title my-0 d-flex align-items-center"><a class="text-dark back-btn" data-container="body"
+         data-placement="bottom" data-toggle="tooltip" data-trigger="hover" href="javascript:void(0);"
+         onclick="changeOpportunityStep('back')" title="Back" style=""><span
+          class="bg-light fs-1xl material-icons-outlined mr-1 p-1 rounded-circle" data-icon="arrow_back"></span></a> <span
+         class="title font-weight-bold my-0 mr-2 leading-6 d-flex align-items-center"><span class="mr-1"
+          id="modal_head_text">Edit</span> <span class="mx-0 break-word">Opportunity</span><span
+          class="d-none d-md-inline-block ml-1" id="opp_header_attr">logic</span></span> <span
+         class="badge bg-light-info badge-pill text-capitalize text-dark">Step <span id="step_no">3</span> of 3</span></h5>
+       <button aria-label="Close" class="close" data-containeropportunity="body" data-dismiss="modal" data-placement="left"
+        data-toggle="tooltip" onclick="changeOpportunityStep('exit')" type="button"
+        title="Click Here to Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body p-0 bg-light">
+       <div class="py-2 px-3">
+        <form action="" class="mb-0 px-3 mb-3 pt-1" id="opp_step_3"><input id="total_condition" type="hidden" value="1"
+          autocomplete="off">
+         <div class="conditional-logic bg-white border rounded">
+          <div class="conditional-logic-block">
+           <div class="bg-white px-3 mt-3 position-relative z-1 d-inline-block w-100">
+            <div class="row justify-content-between">
+             <div class="col-12 col-md-6 d-flex align-items-center">
+              <div class="conditional-logic-btn d-inline-block py-1 px-1"><label class="m-0 d-inline-block"
+                for="conditional-logic-radio-and-0"><input checked="" id="conditional-logic-radio-and-0"
+                 name="conditional-logic-radio" type="radio" autocomplete="off"><span
+                 class="conditional-logic-span py-1 px-3 d-inline-block">All</span></label></div><span
+               class="text-dark ml-2">Meet All Criteria</span>
+             </div>
+            </div>
+            <div class="position-relative mb-3">
+             <div class="row align-items-center justify-content-end condition_1">
+              <div class="col-11 opportunity_condition_block">
+    
+    
+               <div class="row align-items-start mt-3 condition-row">
+                <div class="col-10 col-md-4 px-2 mb-2 mb-md-0" id="opp-rules-filter">
+                  <select name="rules"
+                   id="opportunity_rule_filters" class="opportunity_rule_filters selectpicker w-100"
+                   data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true" title="Select Field"
+                   data-virtual-scroll="false" data-size="5" tabindex="-98">    
+                   <option value="ud|country_id" data-api-url="opportunity-rules/v1/524/getCountryList" data-api-type="get"
+                    data-dependent-on="" data-parameters="[]" data-fieldid="ud_country_id" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Country </option>
+    
+                   <option value="ud|state_id" data-api-url="opportunity-rules/v1/524/getStateList" data-api-type="post"
+                    data-dependent-on="" data-parameters="[]" data-fieldid="ud_state_id" data-field-type="dropdown"
+                    data-dependent-child="[[&quot;ud|city_id&quot;]]">State </option>
+    
+                   <option value="ud|city_id" data-api-url="opportunity-rules/v1/524/getCityList" data-api-type="post"
+                    data-dependent-on="[{&quot;label&quot;: &quot;State&quot;, &quot;field&quot;: &quot;ud|state_id&quot;}]"
+                    data-parameters="[{&quot;actualField&quot;: &quot;stateId&quot;, &quot;searchField&quot;: &quot;ud_state_id&quot;, &quot;required&quot;: true}]"
+                    data-fieldid="ud_city_id" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">City
+                   </option>
+    
+                   <option value="ud|university_id" data-api-url="opportunity-rules/v1/524/getUniversityList"
+                    data-api-type="get" data-dependent-on="" data-parameters="[]" data-fieldid="ud_university_id"
+                    data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">Qualification </option>
+    
+                   <option value="ud|course_id" data-api-url="opportunity-rules/v1/524/getCourseList" data-api-type="post"
+                    data-dependent-on="" data-parameters="[]" data-fieldid="ud_course_id" data-field-type="dropdown"
+                    data-dependent-child="[[&quot;ud|specialization_id&quot;]]">Discipline </option>
+    
+                   <option value="ud|specialization_id" data-api-url="opportunity-rules/v1/524/getSpecializationList"
+                    data-api-type="post"
+                    data-dependent-on="[{&quot;label&quot;: &quot;Discipline&quot;, &quot;field&quot;: &quot;ud|course_id&quot;}]"
+                    data-parameters="[{&quot;actualField&quot;: &quot;courseId&quot;, &quot;searchField&quot;: &quot;ud_course_id&quot;, &quot;required&quot;: true}]"
+                    data-fieldid="ud_specialization_id" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Program </option>
+    
+                   <option value="clgreg|field_gender" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_gender&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_gender" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Gender </option>
+    
+                   <option value="clgreg|field_degree" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_degree&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_degree" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Degree </option>
+    
+                   <option value="clgreg|field_substage" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_substage" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Substage </option>
+    
+                   <option value="clgreg|field_agency" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_agency" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Agency </option>
+    
+                   <option value="clgreg|field_keyword" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_keyword" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Keyword </option>
+    
+                   <option value="clgreg|field_placement" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_placement" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Placement </option>
+    
+                   <option value="clgreg|field_country_name" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_country_name" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Country Name </option>
+    
+                   <option value="clgreg|field_alternate_number" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_alternate_number" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Alternate Number </option>
+    
+                   <option value="clgreg|field_lead_from" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_lead_from" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Lead From </option>
+    
+                   <option value="clgreg|field_qualification_level"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_qualification_level&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_qualification_level" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Qualification Level </option>
+    
+                   <option value="clgreg|field_discipline" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_discipline&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_discipline" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Discipline (Interested In) </option>
+    
+                   <option value="clgreg|field_program" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_program&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_program" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Program </option>
+    
+                   <option value="clgreg|field_serial_number" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_serial_number" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Serial Number </option>
+    
+                   <option value="clgreg|field_12th_school_name" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_12th_school_name" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">12th School Name </option>
+    
+                   <option value="clgreg|field_12th_stream" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_12th_stream" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">12th Stream </option>
+    
+                   <option value="clgreg|field_year_of_event"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_year_of_event&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_year_of_event" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Year of Event </option>
+    
+                   <option value="clgreg|field_parent_lead_stage"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_parent_lead_stage&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_parent_lead_stage" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Parent Lead Stage </option>
+    
+                   <option value="clgreg|field_event_year" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_event_year&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_event_year" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Event Year </option>
+    
+                   <option value="clgreg|field_event_city_state" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_event_city_state" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Event City State </option>
+    
+                   <option value="clgreg|field_audience_type"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_audience_type&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_audience_type" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Audience Type </option>
+    
+                   <option value="clgreg|field_data_to_be_used"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_data_to_be_used&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_data_to_be_used" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Data To be Used </option>
+    
+                   <option value="clgreg|field_mobile_source"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_mobile_source&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_mobile_source" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Mobile Source </option>
+    
+                   <option value="clgreg|field_mobile_medium"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_mobile_medium&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_mobile_medium" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Mobile Medium </option>
+    
+                   <option value="clgreg|field_mobile_campaign"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_mobile_campaign&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_mobile_campaign" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Mobile Campaign </option>
+    
+                   <option value="clgreg|field_lead_id" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_lead_id" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Lead ID </option>
+    
+                   <option value="clgreg|field_online_session" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_online_session" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Online Session </option>
+    
+                   <option value="clgreg|field_webinar_attended"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_webinar_attended&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_webinar_attended" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Webinar Attended </option>
+    
+                   <option value="clgreg|field_event_type" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_event_type&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_event_type" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Event Type </option>
+    
+                   <option value="clgreg|field_date_of_event"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_date_of_event&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_date_of_event" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Date of Event </option>
+    
+                   <option value="clgreg|field_time" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_time&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_time" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">Hour
+                   </option>
+    
+                   <option value="clgreg|field_minutes" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_minutes&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_minutes" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Minutes </option>
+    
+                   <option value="clgreg|field_system_discipline"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_system_discipline&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_system_discipline" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">System Discipline </option>
+    
+                   <option value="clgreg|field_system_program"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_system_program&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_system_program" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">System Program </option>
+    
+                   <option value="clgreg|field_form_qualification"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_form_qualification&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_form_qualification" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Form Qualification OLD </option>
+    
+                   <option value="clgreg|field_form_program"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_form_program&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_form_program" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Form Programme old </option>
+    
+                   <option value="clgreg|field_chances_of_admission"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_chances_of_admission&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_chances_of_admission" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Chances of Taking Admission </option>
+    
+                   <option value="clgreg|field_caller_info"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_caller_info&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_caller_info" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Caller Info </option>
+    
+                   <option value="clgreg|field_percentage" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_percentage" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Percentage </option>
+    
+                   <option value="clgreg|field_fathers_name" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_fathers_name" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Father's Name </option>
+    
+                   <option value="clgreg|field_correspondence_address" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_correspondence_address" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Correspondence Address </option>
+    
+                   <option value="clgreg|field_how_did_you_come_to_know_about_lpu" data-api-url="" data-api-type=""
+                    data-dependent-on="" data-parameters="" data-fieldid="clgreg_field_how_did_you_come_to_know_about_lpu"
+                    data-field-type="text" data-dependent-child="[&quot;&quot;]">How did you come to know about LPU? Test
+                   </option>
+    
+                   <option value="clgreg|field_how_did_you_come_to_know_about_the_lpu"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_how_did_you_come_to_know_about_the_lpu&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_how_did_you_come_to_know_about_the_lpu" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">How did you come to know about LPU? </option>
+    
+                   <option value="clgreg|field_result_status"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_result_status&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_result_status" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Result Status </option>
+    
+                   <option value="clgreg|field_stream_or_subjects_studied" data-api-url="" data-api-type=""
+                    data-dependent-on="" data-parameters="" data-fieldid="clgreg_field_stream_or_subjects_studied"
+                    data-field-type="text" data-dependent-child="[&quot;&quot;]">Stream or Subjects Studied </option>
+    
+                   <option value="clgreg|field_percentage_of_marks" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_percentage_of_marks" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Percentage of Marks </option>
+    
+                   <option value="clgreg|field_form_qualification_new"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_form_qualification_new&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_form_qualification_new" data-field-type="dropdown"
+                    data-dependent-child="[[&quot;clgreg|field_form_discipline&quot;, &quot;clgreg|field_form_programme&quot;]]">
+                    Form Qualification </option>
+    
+                   <option value="clgreg|field_form_programme"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on="[{&quot;label&quot;: &quot;Form Discipline&quot;, &quot;field&quot;: &quot;clgreg|field_form_discipline&quot;}]"
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_form_programme&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}, {&quot;actualField&quot;: &quot;parentFieldId&quot;, &quot;searchField&quot;: &quot;clgreg_field_form_discipline&quot;}]"
+                    data-fieldid="clgreg_field_form_programme" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Form Programme </option>
+    
+                   <option value="clgreg|field_form_discipline"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on="[{&quot;label&quot;: &quot;Form Qualification&quot;, &quot;field&quot;: &quot;clgreg|field_form_qualification_new&quot;}]"
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_form_discipline&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}, {&quot;actualField&quot;: &quot;parentFieldId&quot;, &quot;searchField&quot;: &quot;clgreg_field_form_qualification_new&quot;}]"
+                    data-fieldid="clgreg_field_form_discipline" data-field-type="dropdown"
+                    data-dependent-child="[[&quot;clgreg|field_form_programme&quot;]]">Form Discipline </option>
+    
+                   <option value="clgreg|field_program_2" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_program_2&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_program_2" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Program 2 </option>
+    
+                   <option value="clgreg|field_please_specify" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_please_specify" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Please Specify </option>
+    
+                   <option value="clgreg|field_agent_id" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_agent_id" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Agent ID </option>
+    
+                   <option value="clgreg|field_hostel_type_interested"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_hostel_type_interested&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_hostel_type_interested" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Hostel Type interested </option>
+    
+                   <option value="clgreg|field_institution_name" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_institution_name" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Institution Name </option>
+    
+                   <option value="clgreg|field_segment" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_segment" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Segment </option>
+    
+                   <option value="clgreg|field_form_intrested_in" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_form_intrested_in" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Form Intrested In </option>
+    
+                   <option value="clgreg|field_percentile" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_percentile" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Percentile </option>
+    
+                   <option value="clgreg|field_category" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_category&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_category" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Category </option>
+    
+                   <option value="clgreg|field_specify_category" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_specify_category" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Specify Category </option>
+    
+                   <option value="clgreg|field_university_or_board" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_university_or_board" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">University or Board </option>
+    
+                   <option value="clgreg|field_parent_mobile_number" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_parent_mobile_number" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Parent Mobile Number </option>
+    
+                   <option value="clgreg|field_parent_email" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_parent_email" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Parent Email </option>
+    
+                   <option value="clgreg|field_landline" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_landline" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Landline </option>
+    
+                   <option value="clgreg|field_test_name" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_test_name" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Test Name </option>
+    
+                   <option value="clgreg|field_conducting_agency" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_conducting_agency" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Conducting Agency </option>
+    
+                   <option value="clgreg|field_roll_number_or_id_or_registration_number" data-api-url="" data-api-type=""
+                    data-dependent-on="" data-parameters=""
+                    data-fieldid="clgreg_field_roll_number_or_id_or_registration_number" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Roll Number or ID or Registration Number </option>
+    
+                   <option value="clgreg|field_test_scores_or_rank" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_test_scores_or_rank" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Test Scores or Rank </option>
+    
+                   <option value="clgreg|field_custom_remarks" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_custom_remarks" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Custom Remarks </option>
+    
+                   <option value="clgreg|field_discipline_2"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_discipline_2&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_discipline_2" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Discipline 2 </option>
+    
+                   <option value="clgreg|field_discipline_3"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_discipline_3&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_discipline_3" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Program 2 </option>
+    
+                   <option value="clgreg|field_do_you_need_brochure"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_do_you_need_brochure&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_do_you_need_brochure" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Do you need Brochure </option>
+    
+                   <option value="clgreg|field_latest_registration_campaign" data-api-url="" data-api-type=""
+                    data-dependent-on="" data-parameters="" data-fieldid="clgreg_field_latest_registration_campaign"
+                    data-field-type="text" data-dependent-child="[&quot;&quot;]">latest registration campaign </option>
+    
+                   <option value="clgreg|field_school_name"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_school_name&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_school_name" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">School Name </option>
+    
+                   <option value="clgreg|field_how_accommodating_was_the_campus_visit_staff_as_a_host"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_how_accommodating_was_the_campus_visit_staff_as_a_host&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_how_accommodating_was_the_campus_visit_staff_as_a_host"
+                    data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">How accommodating was the campus visit
+                    staff as a host? </option>
+    
+                   <option value="clgreg|field_how_was_the_quality_of_campus_tour"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_how_was_the_quality_of_campus_tour&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_how_was_the_quality_of_campus_tour" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">How was the quality of campus tour? </option>
+    
+                   <option value="clgreg|field_how_was_the_quality_of_the_residential_tour"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_how_was_the_quality_of_the_residential_tour&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_how_was_the_quality_of_the_residential_tour" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">How was the quality of the residential tour? </option>
+    
+                   <option value="clgreg|field_overall_experience"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_overall_experience&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_overall_experience" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Overall Experience </option>
+    
+                   <option value="clgreg|field_campus_tour_guide"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_campus_tour_guide&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_campus_tour_guide" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">How accommodating was the campus visit staff as Campus Tour Guide?
+                   </option>
+    
+                   <option value="clgreg|field_residential_tour_guide"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_residential_tour_guide&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_residential_tour_guide" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">How accommodating was the campus visit staff as residential tour
+                    guide? </option>
+    
+                   <option value="clgreg|field_staff_as_a_presenter"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_staff_as_a_presenter&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_staff_as_a_presenter" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">How accommodating was the campus visit staff as a presenter?
+                   </option>
+    
+                   <option value="clgreg|field_coming_to_university"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_coming_to_university&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_coming_to_university" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Did you schedule your campus visit before coming to university?
+                   </option>
+    
+                   <option value="clgreg|field_select_visitor_category"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_select_visitor_category&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_select_visitor_category" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Select Visitor's Category </option>
+    
+                   <option value="clgreg|field_enter_number_of_accompanists" data-api-url="" data-api-type=""
+                    data-dependent-on="" data-parameters="" data-fieldid="clgreg_field_enter_number_of_accompanists"
+                    data-field-type="text" data-dependent-child="[&quot;&quot;]">Enter Number of Accompanists </option>
+    
+                   <option value="clgreg|field_enter_address" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_enter_address" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Enter Address </option>
+    
+                   <option value="clgreg|field_type_of_outcampus_enquiry"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_type_of_outcampus_enquiry&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_type_of_outcampus_enquiry" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Not in use 2 </option>
+    
+                   <option value="clgreg|field_type_of_outcampus_enquiry_new"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_type_of_outcampus_enquiry_new&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_type_of_outcampus_enquiry_new" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Location </option>
+    
+                   <option value="clgreg|field_outcampus_enquiry"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_outcampus_enquiry&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_outcampus_enquiry" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Type of Outcampus Enquiry </option>
+    
+                   <option value="clgreg|field_location" data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList"
+                    data-api-type="post" data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_location&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_location" data-field-type="dropdown" data-dependent-child="[&quot;&quot;]">
+                    Not in use 2 </option>
+    
+                   <option value="clgreg|field_outcampus_entry_by" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_outcampus_entry_by" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Outcampus Entry By </option>
+    
+                   <option value="clgreg|field_outcampus_enquiry_status"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_outcampus_enquiry_status&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_outcampus_enquiry_status" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Outcampus Enquiry Status </option>
+    
+                   <option value="clgreg|field_university_or_board_dropdown"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_university_or_board_dropdown&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_university_or_board_dropdown" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">University or Board </option>
+    
+                   <option value="clgreg|field_centre_code" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_centre_code" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Centre Code </option>
+    
+                   <option value="clgreg|field_mobile_no_for_password" data-api-url="" data-api-type="" data-dependent-on=""
+                    data-parameters="" data-fieldid="clgreg_field_mobile_no_for_password" data-field-type="text"
+                    data-dependent-child="[&quot;&quot;]">Mobile No for Password </option>
+    
+                   <option value="clgreg|field_type_of_counseling"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_type_of_counseling&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_type_of_counseling" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Type of counseling </option>
+    
+                   <option value="clgreg|field_time_of_counseling"
+                    data-api-url="opportunity-rules/v1/524/getDynamicFieldOptionList" data-api-type="post"
+                    data-dependent-on=""
+                    data-parameters="[{&quot;actualField&quot;: &quot;fieldId&quot;, &quot;value&quot;: &quot;clgreg|field_time_of_counseling&quot;}, {&quot;actualField&quot;: &quot;callFrom&quot;, &quot;value&quot;: &quot;leadFilter&quot;}]"
+                    data-fieldid="clgreg_field_time_of_counseling" data-field-type="dropdown"
+                    data-dependent-child="[&quot;&quot;]">Time of counseling </option>
+    
+                  </select>
+                  <div class="validation-message small text-danger error_opportunity_msg "></div>
+                  <div class="validation-message small text-warning dependent_opportunity_msg "></div>
+                </div>
+    
+                <div class="col-10 col-md-3 px-2 mb-2 mb-md-0 operators_div">
+                  <select name="operators"
+                   id="" class="selectpicker w-100 operators" data-style="px-2 py-1 bg-white border rounded-0"
+                   title="Select operator" tabindex="-98">
+                   <option class="bs-title-option" value=""></option>
+                   <option value="include">Include</option>
+                   <option value="exclude">Exclude</option>
+                  </select>
+                 <div class="validation-message small text-danger error_opportunity_operator_msg"></div>
+                </div>
+                <div class="col-10 col-md-4 px-2 mb-2 mb-md-0 option_list_div">
+                  <select name="option_list"
+                   id="clgreg_field_degree" class="selectpicker w-100 option_list appendList"
+                   data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
+                   data-selected-text-format="count > 1" title="Select Value" data-virtual-scroll="false" data-size="5"
+                   multiple="" tabindex="-98">
+    
+                   <option value="">the quick brown fox jumps over the  lazy dog. 1</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 2</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 3</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 4</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 5</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 6</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 7</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 8</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 9</option>
+                   <option value="">the quick brown fox jumps over the  lazy dog. 10</option>
+    
+                  </select>
+                 </div>
+                 <div class="validation-message small text-danger error_opportunity_option_list_msg "></div>
+    
+                </div>
+                <div class="col-1 col-md-1 px-2">
+                 <button class="mt-2 px-1 py-2 remove-condition mx-auto mb-2 mb-md-0" type="button"
+                  onclick="removeCondition(this)" style="display: none ">
+                  <span class="material-icons-outlined fs-18"> remove </span>
+                 </button>
+                </div>
+               </div>
+    
+    
+    
+              </div>
+             </div>
+            </div>
+           </div><input id="opportunity_id_step3" type="hidden" val="" autocomplete="off">
+           <div class="w-100 p-2 border-top rounded-bottom">
+            <div class="row justify-content-end">
+             <div class="col-12 col-md-9">
+              <p class="validation-message small text-danger error_exist_msg pl-4"></p>
+             </div>
+             <div class="col-12 col-md-3 text-right">
+              <div class="d-flex justify-content-end"><a
+                class="align-items-center btn btn-light btn-sm d-flex justify-content-center text-primary px-3"
+                href="javascript:void(0);" id="add_more_rule_btn" onclick="addNewConditionLogic(this);"><span
+                 class="material-icons-outlined fs-13 text-primary mr-1">add</span> Add New Condition</a></div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </form>
+        </div>
+        </div>
+      </div>
+    </div>
   <script src="../static/backend/js/core/jquery.min.js"></script>
   <script src="../static/backend/js/core/popper.min.js"></script>
   <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
   <script src="../static/backend/js/plugins/sortable.js"></script>
+  <script src="../static/backend/js/bootstrap-select.js"></script>
+
   <script>
+    $('select.selectpicker').selectpicker();
+    $('#create-opportunity').modal('show');
     $('[data-toggle="tooltip"]').tooltip();
     $(document).on('click', '.edit-name', function () {
       $(this).closest('div').find('input').prop('readonly', false).focus();

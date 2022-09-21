@@ -1120,6 +1120,7 @@
 .saveDrag {
   display: none;
 }
+<<<<<<< HEAD
 
 span.loadingMsg {
   position: absolute;
@@ -1162,5 +1163,20 @@ span.loadingMsg {
     &:hover a.customMetricsView {
       display: block !important;
     }
+=======
+
+span.loadingMsg {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 30px);
+  display: flex;
+  transform: translate(-50%, -50%);
+}
+
+.saveupdate.disabled {
+  .btn {
+    pointer-events: none;
+    opacity: .7;
+>>>>>>> 00bdc2621ef03a18c596d1c2e6b12b37c079cdda
   }
 }

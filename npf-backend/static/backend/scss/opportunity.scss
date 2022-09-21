@@ -1,5 +1,6 @@
+@import "./abstracts/mixins", "./abstracts/variables";
 // Vendor
-@import "vendors/date-range-picker";
+@import "vendors/date-range-picker", "vendors/include-media";
 
 // Sections and  pages
 @import "components/grid-table",
@@ -7,4 +8,36 @@
 "components/status",
 "components/video-iframe-modal",
 "components/conditional-logic-btn",
-"./components/timeline";
+"components/customtab",
+"components/multiple-radio-group",
+"components/columnFilterModal",
+"components/drag-item";
+
+
+.inline_tabs.position-sticky {
+ top: 0;
+}
+
+
+#create_opportunity_field_popup {
+ #toggleAdvanceLink {
+  &:after {
+   content: '\e5cf';
+   font-family: 'Material Icons';
+   display: inline-block;
+   line-height: 1.5;
+   position: relative;
+   top: 4px;
+   transition: all ease-in-out .5s;
+  }
+  
+  &[aria-expanded="true"]:after {
+   top: 1px;
+   transform: rotate(180deg);
+  }
+ }
+
+ .row {
+  transition: all ease-in-out 1s;
+ }
+}
