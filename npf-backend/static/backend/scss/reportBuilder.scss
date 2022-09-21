@@ -1120,7 +1120,6 @@
 .saveDrag {
   display: none;
 }
-<<<<<<< HEAD
 
 span.loadingMsg {
   position: absolute;
@@ -1134,49 +1133,5 @@ span.loadingMsg {
   .btn {
     pointer-events: none;
     opacity: .7;
-  }
-}
-
-.favouriteBtnPreview{
- &.active{
-  .favouriteFilled{
-    display:inline-block;
-    margin-top:-1px!important;
-  }
- } 
-}
-
-
-#selected_metrics_field {
-  li {
-    a.customMetricsView {
-      position: absolute;
-      right: 20px;
-      font-size: 16px;
-      display: none;
-
-      .material-icons-outlined {
-        font-size: 15px !important;
-      }
-    }
-
-    &:hover a.customMetricsView {
-      display: block !important;
-    }
-=======
-
-span.loadingMsg {
-  position: absolute;
-  left: 50%;
-  top: calc(50% + 30px);
-  display: flex;
-  transform: translate(-50%, -50%);
-}
-
-.saveupdate.disabled {
-  .btn {
-    pointer-events: none;
-    opacity: .7;
->>>>>>> 00bdc2621ef03a18c596d1c2e6b12b37c079cdda
   }
 }
