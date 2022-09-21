@@ -2067,6 +2067,7 @@
       transform: translateX(calc(100% + 30px));
       transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
       z-index: 9;
+      overflow:hidden;
     }
 
     .toast.active {
@@ -2100,15 +2101,14 @@
       font-size: 13px;
       font-weight: 400;
       color: #333;
+      border-bottom: 1px solid #f2f2f2;
+      padding-bottom: 10px;
     }
 
     .message .allocate_message:last-child{
       margin-bottom:0;
-    }
-
-    .message .allocate_message+.allocate_message {
-      border-top: 1px solid #f2f2f2;
-      padding-top: 10px;
+      border-bottom:0;
+      padding-bottom:0;
     }
 
     .toast .close {
@@ -2594,8 +2594,7 @@
       </div>
       <!--<div class="toggle-button sidebarCollapse"><i class="fa fa-fw fa-angle-left"></i></div>-->
     </nav><!-- Page Content Holder -->
-    <div id="content">
-
+    <div id="content" style="overflow:hidden">
       <div class="toast active">
         <div class="toast-content">
           <div class="message">
@@ -3614,9 +3613,6 @@
       progress.classList.add("active");
       triggerbtn.classList.add("active");
     }, 5000);
-
-    clearTimeout(timer1);
-    clearTimeout(timer2);
 
     $('[data-toggle="tooltip"]').tooltip()
 

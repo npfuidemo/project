@@ -1,0 +1,41 @@
+.disabledField {
+  cursor: not-allowed;
+
+  & .conditional-logic-span {
+    cursor: not-allowed !important;
+  }
+
+  &.disabledIcon {
+    pointer-events: none;
+    position: relative;
+
+    .conditional-logic-span {
+      padding-right: 30px !important;
+    }
+
+    &::before {
+      content: '\e8b2';
+      font-family: 'Material Icons Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 18px;
+      color: red;
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      top: 1px;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.disabledClick {
+  &a,
+  &button,
+  &label,
+  &div,
+  &span,
+  &li {
+    pointer-events: none;
+  }
+}
