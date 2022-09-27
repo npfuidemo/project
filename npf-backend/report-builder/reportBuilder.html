@@ -1061,28 +1061,23 @@
                         <div class="col-12 col-sm-12 conditional-logic text-center">
                            <div class="conditional-logic-btn d-inline-block py-1 px-1">
                               <label for="leadsRadio" class="m-0 d-inline-block">
-                                 <input type="radio" name="leadeapplication" id="leadsRadio" checked="">
+                                 <input type="radio" name="leadeapplication" id="leadsRadio" checked="" value="leadFields">
                                  <span class="conditional-logic-span py-1 px-3 d-inline-block">Leads</span>
                               </label>
-                              <label for="appicationRadio" class="m-0 d-inline-block disabledIcon disabledField ">
-                                 <input type="radio" name="leadeapplication" id="appicationRadio">
+                              <label for="appicationRadio" class="m-0 d-inline-block disabledIcon ">
+                                 <input type="radio" name="leadeapplication" id="appicationRadio" value="applicationFields">
                                  <span class="conditional-logic-span py-1 px-3 d-inline-block">Application</span>
                               </label>
                            </div>
                         </div>
 
                         <div class="col-12 col-sm-12">
-                           <div id="leadFields">
+                           <div id="leadFields" class="desc">
                               <p class="lineHeight14 mb-0 pt-2 small text-danger text-left">
                                  Adding Application Fields is disabled since you have added Lead Level fields in columns.Please removed them to proceed further.
                               </p>
                               <div class="row mt-2">
                                  <div class="col-sm-12">
-                                    <label class="custom-checkbox d-block text-dark">
-                                       <input type="checkbox" name="" id="totalRow">
-                                       <span class="custom-btn-span"></span>
-                                       <span class="text-dark ml-2">Reset All</span>
-                                    </label>
                                     <label class="custom-checkbox d-block">
                                        <input type="checkbox" checked name="" id="totalRow">
                                        <span class="custom-btn-span"></span>
@@ -1097,7 +1092,7 @@
                               </div>
                            </div>
 
-                           <div id="applicationFields" style="display:none;">
+                           <div id="applicationFields" class="desc">
                               <div class="row mt-3">
                                  <div class="col-sm-12">
                                     <label class="custom-checkbox d-block">
@@ -1675,6 +1670,13 @@
          //    // close all open accordions
          closeAccordions(this);
 
+      });
+
+      $("div.desc").hide();
+      $("input[name$='leadeapplication']").click(function() {
+      var test = $(this).val();
+      $("div.desc").hide();
+      $("#" + test).show();
       });
    </script>
 </body>
