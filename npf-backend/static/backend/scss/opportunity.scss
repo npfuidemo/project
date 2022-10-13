@@ -11,7 +11,8 @@
 "components/customtab",
 "components/multiple-radio-group",
 "components/columnFilterModal",
-"components/drag-item";
+"components/drag-item",
+"components/modal-accordion";
 
 
 .inline_tabs.position-sticky {
@@ -30,7 +31,7 @@
    top: 4px;
    transition: all ease-in-out .5s;
   }
-  
+
   &[aria-expanded="true"]:after {
    top: 1px;
    transform: rotate(180deg);
@@ -40,4 +41,9 @@
  .row {
   transition: all ease-in-out 1s;
  }
+}
+
+pre {
+ white-space: pre-line;
+ margin-bottom: 0;
 }
