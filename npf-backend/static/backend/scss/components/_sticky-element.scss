@@ -1,0 +1,7 @@
+$top: 100;
+
+@for $a from 0 through $top {
+    .top-#{$a} {
+        top: $a*10+px
+    }
+}
