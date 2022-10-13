@@ -12,11 +12,12 @@
 "components/multiple-radio-group",
 "components/columnFilterModal",
 "components/drag-item",
+"components/timeline",
 "components/modal-accordion";
 
 
 .inline_tabs.position-sticky {
- top: 0;
+ // top: 0;
 }
 
 
@@ -40,6 +41,21 @@
 
  .row {
   transition: all ease-in-out 1s;
+ }
+}
+
+#opportunity_profile {
+ .modal-accordion {
+  max-height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
+ }
+
+}
+
+#opportunity_profile_modal .modal-accordion {
+ @media only screen and (min-width: 767px) {
+  max-height: 100%;
+  min-height: 100%;
  }
 }
 
