@@ -11,7 +11,7 @@
     width: 100%;
     clear: both;
     position: relative;
-    padding-left: 0;
+    padding:5px;
     cursor: pointer;
 
     span.reportIcon {
@@ -20,13 +20,15 @@
       text-align: center;
       margin-right: 8px;
       color: #fff;
-      min-width: 28px;
+      width:29px;
+      height:29px;
     }
+
 
     .custom-btn-span {
       position: absolute;
-      left:-4px;
-      top:-4px;
+      left:1px;
+      top:1px;
       display: none;
     }
 
@@ -51,7 +53,11 @@
           width:29px;
           height:29px;
           border-radius: 50%;
+          border:1px solid #4c79dc;
       }
+    }
+    &:hover{
+      background:rgba(76,121,220,.1);
     }
   }
 }
