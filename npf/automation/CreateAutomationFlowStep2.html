@@ -2461,6 +2461,8 @@
     </div><!-- Layout content Division -->
   </div>
 </div>
+
+
 <style>
 /* New Center Modal Style - Use newCenterModal.scss file */
 .newCenterModal .modal-header {background-color: #fff;padding: 10px 15px;border-bottom: 1px solid #4c79dc;}
@@ -2535,7 +2537,7 @@
               <span aria-hidden="true">×</span>
            </button>
         </div>
-        <div class="modal-body automation-modal-tab">
+        <div class="modal-body automation-modal-tab" style="display:none">
           <div class="d-flex">
             <ul class="nav nav-tabs">
               <li class="active">
@@ -2593,11 +2595,11 @@
             </div>
           </div>
        </div>
-      <div class="modal-footer">
+      <div class="modal-footer" style="display:none;">
         <button type="button" class="btn btn-primary pull-right">Next</button>
       </div>
 
-      <div class="modal-body fieldsmapping" style="display:none;">
+      <div class="modal-body fieldsmapping">
         <div class="callout callout-primary mb-4">
             <div class="callout-msg">
               <span>Select your opportunities and map with fields.</span>
@@ -2766,7 +2768,7 @@
            </div>
         </div>
       </div>
-      <div class="modal-footer" style="display:none;">
+      <div class="modal-footer">
         <button type="button" class="btn btn-primary pull-right">Create WorkFlow</button>
       </div>
 
