@@ -6,13 +6,14 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 10px;
+    margin:2px 0 0 0;
     float: left;
     width: 100%;
     clear: both;
     position: relative;
-    padding:5px;
+    padding:8px 10px;
     cursor: pointer;
+    border-radius:10px;
 
     span.reportIcon {
       border-radius: 50%;
@@ -22,38 +23,60 @@
       color: #fff;
       width:29px;
       height:29px;
+      transition: all ease-in-out .6s;
+      transform:rotate(0deg);
+      opacity:1;
     }
-
+    span.name{
+      line-height:15px;
+    }
 
     .custom-btn-span {
-      position: absolute;
-      left:1px;
-      top:1px;
-      display: none;
+      transition: all ease-in-out .5s;
+      transform:rotate(0deg);
+      opacity:0;
     }
 
-    &:first-child {
+    &:first-child{
       margin-top: 0;
     }
 
+    & input ~ .custom-btn-span:before{
+      content:'';
+    }
+
+    & input ~ .custom-btn-span:after{
+      width:0;
+    }
+
     & input:checked~.custom-btn-span{
-      display: inline-block;
+      opacity:1;
+      transform:rotate(0deg);
       &:before{
         content:'\e876';
         font-family: 'Material Icons Outlined';
         font-weight: normal;
         font-style: normal;
-        font-size:20px;
+        font-size:18px;
         color:#fff;
-        left: 8px;
-        top:5px;
+        left:5px;
+        top:-12px;
       }
       &:after{
-          background-color: #4c79dc;
-          width:29px;
-          height:29px;
-          border-radius: 50%;
-          border:1px solid #4c79dc;
+        background-color: #4c79dc;
+        width:29px;
+        height:29px;
+        border-radius: 50%;
+        border:1px solid #4c79dc;
+        top: -15px;
+        left: 0;
+      }
+    }
+    & input:checked{
+      &+.custom-btn-span+.reportIcon{
+        transform:rotate(90deg);
+        transition: all ease-in-out .4s;
+        opacity:0;
       }
     }
     &:hover{
