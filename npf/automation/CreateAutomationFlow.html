@@ -2491,13 +2491,13 @@
 
 
 /*** Trigger Points Radio ***/
-.lead-trigger-tab {position: relative;padding: 10px 30px;border-radius: 50px;margin-bottom: 15px;width: 100%;border:1px solid #eee;border-bottom: 3px solid hsl(221deg 67% 90%);}
+.lead-trigger-tab {position: relative;padding: 10px 15px;border-radius:10px;margin-bottom: 15px;width: 100%;border:1px solid #eee;border-bottom: 3px solid hsl(221deg 67% 90%);}
 .lead-trigger-tab:hover{background-color: hsl(221deg 67% 90%);cursor: pointer;border-bottom-color:hsl(221deg 67% 85%);}
 .lead-trigger-tab:hover input[type="radio"]~ .circle{border-color: #4d7adc;}
 .lead-trigger-tab .radio-heading {font-size: 14px;width: 90%;}
 .lead-trigger-tab .radio-subtitle {font-size: 12px;width: 90%;font-weight: 300;line-height: 18px;color: #777;}
 .lead-trigger-tab input[type="radio"] {opacity: 0;position: absolute;}
-.lead-trigger-tab .circle {position: absolute;top: 50%;right: 30px;margin-top: -13px;width: 20px;height: 20px;border-radius: 50%;border: 1px solid #eee;}
+.lead-trigger-tab .circle {position: absolute;top: 50%;right:10px;margin-top: -13px;width: 20px;height: 20px;border-radius: 50%;border: 1px solid #eee;}
 .lead-trigger-tab input[type="radio"]:checked~ .circle {border-color: #4c79dc;}
 .lead-trigger-tab input[type="radio"]:checked~ .circle:before{content: '';width: 10px;height: 10px;position: absolute;background-color: #4c79dc;border-radius: 50%;left: 4px;top: 4px;}
 
@@ -2777,6 +2777,8 @@
 <script src="https://uat2.npfs.co/js/lib/jquery.min.js?1666028771"></script>
 <script src="https://uat2.npfs.co/js/college/bootstrap.min.js?1666028771"></script>
 <script src="js//function.js"></script>
-<script>searchDependentField();</script>
+<script>
+$("#exampleModal").modal();
+searchDependentField();</script>
 </body>
-</html>
+</html>)
