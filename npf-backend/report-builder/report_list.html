@@ -948,7 +948,7 @@
                            <input type="checkbox" data-name="Report Name one" name="" value="" checked="">
                            <span class="custom-btn-span"></span>
                            <span class="reportIcon bg-danger">M</span>
-                           <span class="name">My reoport name max length is 50 character maximum.</span>
+                           <span class="name">My reoport name max length is 50 character.</span>
                         </label>
 
                         <label class="text-dark custom-checkbox">
@@ -1051,6 +1051,10 @@
    <!-- <script src="../static/custom/js/qms/qms.js"></script> -->
 
    <script>
+
+      $("#addtoDashboardPopup").modal();
+
+
       $(".toggletag a.basicTemplateTag").click(function () {
          $(this).css({ 'z-index': '12', 'position': 'relative' });
          $(".tagcontainer").toggleClass('open');
