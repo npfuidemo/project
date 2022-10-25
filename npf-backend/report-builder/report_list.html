@@ -402,7 +402,8 @@
 
    <!-- Header With Side Nav End-->
 
-   <div  class="header-info bg-white d-flex flex-wrap justify-content-between px-0 px-lg-3 py-0 py-lg-2 shadow-bottom position-sticky mb-2">
+   <div
+      class="header-info bg-white d-flex flex-wrap justify-content-between px-0 px-lg-3 py-0 py-lg-2 shadow-bottom position-sticky mb-2">
       <!-- <h1 class="m-0 h2">Settings</h1>-->
       <div class="section-header-breadcrumb d-flex align-items-center w-sm-100 px-3 px-lg-0 py-2 py-lg-0">
          <h3 class="h5 d-inline-block my-1">Report Builder</h3>
@@ -525,28 +526,31 @@
                            </tr>
                         </thead>
                         <tbody>
-                        <tr class="grid-table-row">
+                           <tr class="grid-table-row">
                               <td class="has-checkbox min-max-50">
                                  <input type="checkbox" class="" />
                               </td>
-                              <td class="min-max-350 font-weight-bold" >
-                                    <div class="d-flex dropdown tagdropdown" data-container="body">
-                                       <span>
-                                          Lead Stage VS Counsellor Lead Allocation
+                              <td class="min-max-350 font-weight-bold">
+                                 <div class="d-flex dropdown tagdropdown" data-container="body">
+                                    <span>
+                                       Lead Stage VS Counsellor Lead Allocation
+                                    </span>
+                                    <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button"
+                                       id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
+                                       <span class="material-icons-outlined text-muted fs-19">
+                                          local_offer
                                        </span>
-                                       <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <span class="material-icons-outlined text-muted fs-19">
-                                             local_offer
-                                          </span>
-                                        </button>
-                                        <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
-                                             <div class="createdtaglist">
-                                                <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
-                                                   <div class="tag label label-primary remove_tag">
-                                                      application
-                                                   </div>
+                                    </button>
+                                    <div class="dropdown-menu tagcontainer bg-white"
+                                       aria-labelledby="dropdownMenuButton">
+                                       <div class="createdtaglist">
+                                          <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                             <div class="tag label label-primary remove_tag">
+                                                application
                                              </div>
-                                           </div>
+                                          </div>
+                                       </div>
                                     </div>
                               </td>
                               <td class="min-max-150 ">Joseph Jhone</td>
@@ -560,7 +564,9 @@
                                           <span class="material-icons-outlined">more_horiz</span>
                                        </a>
                                        <div class="dropdown-menu">
-                                          <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Edit</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#addtoDashboardPopup">Add
+                                             to Dashboard</a>
                                           <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
                                           <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
                                           <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
@@ -568,184 +574,204 @@
                                     </div>
                                  </div>
                               </td>
-                        </tr>
+                           </tr>
 
-                        <tr class="grid-table-row">
-                           <td class="has-checkbox min-max-50">
-                              <input type="checkbox" class="" />
-                           </td>
-                           <td class="min-max-350 font-weight-bold" >
+                           <tr class="grid-table-row">
+                              <td class="has-checkbox min-max-50">
+                                 <input type="checkbox" class="" />
+                              </td>
+                              <td class="min-max-350 font-weight-bold">
                                  <div class="d-flex dropdown tagdropdown" data-container="body">
                                     <span>
                                        Lead Stage VS Counsellor Lead Allocation
                                     </span>
-                                    <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button"
+                                       id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
                                        <span class="material-icons-outlined text-muted fs-19">
                                           local_offer
                                        </span>
-                                     </button>
-                                     <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
-                                          <div class="createdtaglist">
-                                             <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
-                                                <div class="tag label label-primary remove_tag">
-                                                   application
-                                                </div>
-                                          </div>
-                                        </div>
-                                 </div>
-                           </td>
-                           <td class="min-max-150 ">Joseph Jhone</td>
-                           <td class="min-max-200 ">11/02/2022 04:07 PM</td>
-                           <td data-title="Action" class="min-max-50">
-                              <div class="d-flex justify-content-lg-end  table-last-action">
-                                 <div class="dropdown" data-container="body">
-                                    <a aria-haspopup="true"
-                                       class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
-                                       data-toggle="dropdown" href="javascript:void(0);">
-                                       <span class="material-icons-outlined">more_horiz</span>
-                                    </a>
-                                    <div class="dropdown-menu">
-                                       <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
-                                       <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
-                                       <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
-                                       <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                     </tr>
-                     <tr class="grid-table-row">
-                        <td class="has-checkbox min-max-50">
-                           <input type="checkbox" class="" />
-                        </td>
-                        <td class="min-max-350 font-weight-bold" >
-                              <div class="d-flex dropdown tagdropdown" data-container="body">
-                                 <span>
-                                    Lead Stage VS Counsellor Lead Allocation
-                                 </span>
-                                 <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="material-icons-outlined text-muted fs-19">
-                                       local_offer
-                                    </span>
-                                  </button>
-                                  <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
+                                    </button>
+                                    <div class="dropdown-menu tagcontainer bg-white"
+                                       aria-labelledby="dropdownMenuButton">
                                        <div class="createdtaglist">
                                           <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
                                              <div class="tag label label-primary remove_tag">
                                                 application
                                              </div>
-                                       </div>
-                                     </div>
-                              </div>
-                        </td>
-                        <td class="min-max-150 ">Joseph Jhone</td>
-                        <td class="min-max-200 ">11/02/2022 04:07 PM</td>
-                        <td data-title="Action" class="min-max-50">
-                           <div class="d-flex justify-content-lg-end  table-last-action">
-                              <div class="dropdown" data-container="body">
-                                 <a aria-haspopup="true"
-                                    class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
-                                    data-toggle="dropdown" href="javascript:void(0);">
-                                    <span class="material-icons-outlined">more_horiz</span>
-                                 </a>
-                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
-                                    <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
-                                    <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
-                                    <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </td>
-                  </tr>
-                  <tr class="grid-table-row">
-                     <td class="has-checkbox min-max-50">
-                        <input type="checkbox" class="" />
-                     </td>
-                     <td class="min-max-350 font-weight-bold" >
-                           <div class="d-flex dropdown tagdropdown" data-container="body">
-                              <span>
-                                 Lead Stage VS Counsellor Lead Allocation
-                              </span>
-                              <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <span class="material-icons-outlined text-muted fs-19">
-                                    local_offer
-                                 </span>
-                               </button>
-                               <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
-                                    <div class="createdtaglist">
-                                       <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
-                                          <div class="tag label label-primary remove_tag">
-                                             application
                                           </div>
-                                    </div>
-                                  </div>
-                           </div>
-                     </td>
-                     <td class="min-max-150 ">Joseph Jhone</td>
-                     <td class="min-max-200 ">11/02/2022 04:07 PM</td>
-                     <td data-title="Action" class="min-max-50">
-                        <div class="d-flex justify-content-lg-end  table-last-action">
-                           <div class="dropdown" data-container="body">
-                              <a aria-haspopup="true"
-                                 class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
-                                 data-toggle="dropdown" href="javascript:void(0);">
-                                 <span class="material-icons-outlined">more_horiz</span>
-                              </a>
-                              <div class="dropdown-menu">
-                                 <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
-                                 <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
-                                 <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
-                                 <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-               </tr>
-               <tr class="grid-table-row">
-                  <td class="has-checkbox min-max-50">
-                     <input type="checkbox" class="" />
-                  </td>
-                  <td class="min-max-350 font-weight-bold" >
-                        <div class="d-flex dropdown tagdropdown" data-container="body">
-                           <span>
-                              Lead Stage VS Counsellor Lead Allocation
-                           </span>
-                           <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <span class="material-icons-outlined text-muted fs-19">
-                                 local_offer
-                              </span>
-                            </button>
-                            <div class="dropdown-menu tagcontainer bg-white" aria-labelledby="dropdownMenuButton">
-                                 <div class="createdtaglist">
-                                    <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
-                                       <div class="tag label label-primary remove_tag">
-                                          application
                                        </div>
+                                    </div>
+                              </td>
+                              <td class="min-max-150 ">Joseph Jhone</td>
+                              <td class="min-max-200 ">11/02/2022 04:07 PM</td>
+                              <td data-title="Action" class="min-max-50">
+                                 <div class="d-flex justify-content-lg-end  table-last-action">
+                                    <div class="dropdown" data-container="body">
+                                       <a aria-haspopup="true"
+                                          class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                                          data-toggle="dropdown" href="javascript:void(0);">
+                                          <span class="material-icons-outlined">more_horiz</span>
+                                       </a>
+                                       <div class="dropdown-menu">
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Edit</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#addtoDashboardPopup">Add
+                                             to Dashboard</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
+                                       </div>
+                                    </div>
                                  </div>
-                               </div>
-                        </div>
-                  </td>
-                  <td class="min-max-150 ">Joseph Jhone</td>
-                  <td class="min-max-200 ">11/02/2022 04:07 PM</td>
-                  <td data-title="Action" class="min-max-50">
-                     <div class="d-flex justify-content-lg-end  table-last-action">
-                        <div class="dropdown" data-container="body">
-                           <a aria-haspopup="true"
-                              class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
-                              data-toggle="dropdown" href="javascript:void(0);">
-                              <span class="material-icons-outlined">more_horiz</span>
-                           </a>
-                           <div class="dropdown-menu">
-                              <a class="dropdown-item" data-toggle="modal"href="#">Edit</a>
-                              <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
-                              <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
-                              <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
-                           </div>
-                        </div>
-                     </div>
-                  </td>
-            </tr>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row">
+                              <td class="has-checkbox min-max-50">
+                                 <input type="checkbox" class="" />
+                              </td>
+                              <td class="min-max-350 font-weight-bold">
+                                 <div class="d-flex dropdown tagdropdown" data-container="body">
+                                    <span>
+                                       Lead Stage VS Counsellor Lead Allocation
+                                    </span>
+                                    <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button"
+                                       id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
+                                       <span class="material-icons-outlined text-muted fs-19">
+                                          local_offer
+                                       </span>
+                                    </button>
+                                    <div class="dropdown-menu tagcontainer bg-white"
+                                       aria-labelledby="dropdownMenuButton">
+                                       <div class="createdtaglist">
+                                          <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                             <div class="tag label label-primary remove_tag">
+                                                application
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                              </td>
+                              <td class="min-max-150 ">Joseph Jhone</td>
+                              <td class="min-max-200 ">11/02/2022 04:07 PM</td>
+                              <td data-title="Action" class="min-max-50">
+                                 <div class="d-flex justify-content-lg-end  table-last-action">
+                                    <div class="dropdown" data-container="body">
+                                       <a aria-haspopup="true"
+                                          class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                                          data-toggle="dropdown" href="javascript:void(0);">
+                                          <span class="material-icons-outlined">more_horiz</span>
+                                       </a>
+                                       <div class="dropdown-menu">
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Edit</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#addtoDashboardPopup">Add
+                                             to Dashboard</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row">
+                              <td class="has-checkbox min-max-50">
+                                 <input type="checkbox" class="" />
+                              </td>
+                              <td class="min-max-350 font-weight-bold">
+                                 <div class="d-flex dropdown tagdropdown" data-container="body">
+                                    <span>
+                                       Lead Stage VS Counsellor Lead Allocation
+                                    </span>
+                                    <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button"
+                                       id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
+                                       <span class="material-icons-outlined text-muted fs-19">
+                                          local_offer
+                                       </span>
+                                    </button>
+                                    <div class="dropdown-menu tagcontainer bg-white"
+                                       aria-labelledby="dropdownMenuButton">
+                                       <div class="createdtaglist">
+                                          <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                             <div class="tag label label-primary remove_tag">
+                                                application
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                              </td>
+                              <td class="min-max-150 ">Joseph Jhone</td>
+                              <td class="min-max-200 ">11/02/2022 04:07 PM</td>
+                              <td data-title="Action" class="min-max-50">
+                                 <div class="d-flex justify-content-lg-end  table-last-action">
+                                    <div class="dropdown" data-container="body">
+                                       <a aria-haspopup="true"
+                                          class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                                          data-toggle="dropdown" href="javascript:void(0);">
+                                          <span class="material-icons-outlined">more_horiz</span>
+                                       </a>
+                                       <div class="dropdown-menu">
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Edit</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#addtoDashboardPopup">Add
+                                             to Dashboard</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="grid-table-row">
+                              <td class="has-checkbox min-max-50">
+                                 <input type="checkbox" class="" />
+                              </td>
+                              <td class="min-max-350 font-weight-bold">
+                                 <div class="d-flex dropdown tagdropdown" data-container="body">
+                                    <span>
+                                       Lead Stage VS Counsellor Lead Allocation
+                                    </span>
+                                    <button class="border-0 dropdown-toggle ml-2 cursor-pointer" type="button"
+                                       id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
+                                       <span class="material-icons-outlined text-muted fs-19">
+                                          local_offer
+                                       </span>
+                                    </button>
+                                    <div class="dropdown-menu tagcontainer bg-white"
+                                       aria-labelledby="dropdownMenuButton">
+                                       <div class="createdtaglist">
+                                          <div class="border_selected_tag show_tag_list" id="show_tag_list132080">
+                                             <div class="tag label label-primary remove_tag">
+                                                application
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                              </td>
+                              <td class="min-max-150 ">Joseph Jhone</td>
+                              <td class="min-max-200 ">11/02/2022 04:07 PM</td>
+                              <td data-title="Action" class="min-max-50">
+                                 <div class="d-flex justify-content-lg-end  table-last-action">
+                                    <div class="dropdown" data-container="body">
+                                       <a aria-haspopup="true"
+                                          class="content-none d-flex dropdown-toggle hover-effect ml-2 p-md-3 p-2 rounded-circle text-muted"
+                                          data-toggle="dropdown" href="javascript:void(0);">
+                                          <span class="material-icons-outlined">more_horiz</span>
+                                       </a>
+                                       <div class="dropdown-menu">
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Edit</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#addtoDashboardPopup">Add
+                                             to Dashboard</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Clone</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Rename</a>
+                                          <a class="dropdown-item" data-toggle="modal" href="#">Delete</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
 
                         </tbody>
                      </table>
@@ -823,73 +849,178 @@
       aria-hidden="true">
       <div class="modal-dialog" role="document">
          <div class="modal-content h-100">
-               <div class="modal-header border-bottom-blue">
-                  <h5 class="modal-title my-0">Filter</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip" data-placement="left" title="" data-original-title="Click here to close">
-                     <span aria-hidden="true">×</span>
-                  </button>
-               </div>
-                  <div class="modal-body p-0">
-                     <form action="">
-                     <div class="row align-items-start form-group pt-0">
-                        <div class="col-12 col-lg-4">
-                           <label class="text-dark  pt-md-2">Favourite</label>
-                        </div>
-                        <div class="col-12 col-lg-8">
-                           <div class="form-group pt-0 label-static bmd-form-group">
-                                 <div class="dropdown bootstrap-select form-control">
-                                    <select class="form-control selectpicker" data-actions-box="true" data-selected-text-format="count > 1" data-style="px-2 border" name="status" id="status" tabindex="-98">
-                                       <option value="">Select Favourite</option>
-                                       <option value="1">Favourite case 1</option>
-                                       <option value="2">Favourite case 2</option>
-                                    </select>
-                                 </div>
-                           </div>
-                           </div>
+            <div class="modal-header border-bottom-blue">
+               <h5 class="modal-title my-0">Filter</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+                  data-placement="left" title="" data-original-title="Click here to close">
+                  <span aria-hidden="true">×</span>
+               </button>
+            </div>
+            <div class="modal-body p-0">
+               <form action="">
+                  <div class="row align-items-start form-group pt-0">
+                     <div class="col-12 col-lg-4">
+                        <label class="text-dark  pt-md-2">Favourite</label>
                      </div>
-
-
-                     <div class="row align-items-start form-group pt-0">
-                        <div class="col-12 col-lg-4">
-                           <label class="text-dark  pt-md-2">Tags</label>
+                     <div class="col-12 col-lg-8">
+                        <div class="form-group pt-0 label-static bmd-form-group">
+                           <div class="dropdown bootstrap-select form-control">
+                              <select class="form-control selectpicker" data-actions-box="true"
+                                 data-selected-text-format="count > 1" data-style="px-2 border" name="status"
+                                 id="status" tabindex="-98">
+                                 <option value="">Select Favourite</option>
+                                 <option value="1">Favourite case 1</option>
+                                 <option value="2">Favourite case 2</option>
+                              </select>
+                           </div>
                         </div>
-                        <div class="col-12 col-lg-8">
-                           <div class="form-group pt-0 label-static bmd-form-group">
-                                 <div class="dropdown bootstrap-select form-control">
-                                    <select class="form-control selectpicker" data-actions-box="true" data-selected-text-format="count > 1" data-style="px-2 border" name="status" id="status" tabindex="-98">
-                                       <option value="">Tags</option>
-                                       <option value="1">Tags 1</option>
-                                       <option value="2">Tags 2</option>
-                                    </select>
-                                 </div>
-                           </div>
-                           </div>
                      </div>
-
-
-                     <div class="row align-items-start form-group pt-0">
-                        <div class="col-12 col-lg-4">
-                           <label class="text-dark  pt-md-2">Updated By</label>
-                        </div>
-                        <div class="col-12 col-lg-8">
-                           <div class="form-group pt-0 label-static bmd-form-group">
-                                 <div class="dropdown bootstrap-select form-control">
-                                    <select class="form-control selectpicker" data-actions-box="true" data-selected-text-format="count > 1" data-style="px-2 border" name="status" id="status" tabindex="-98">
-                                       <option value="">Select an User</option>
-                                       <option value="1">User case 1</option>
-                                       <option value="2">User case 2</option>
-                                    </select>
-                                 </div>
-                           </div>
-                           </div>
-                     </div>
-
                   </div>
-                  <div class="modal-footer justify-content-between">
-                     <button class="btn btn-sm btn-outline-secondary">Reset</button>
-                     <button class="btn btn-sm btn-primary" >Apply</button>
+
+
+                  <div class="row align-items-start form-group pt-0">
+                     <div class="col-12 col-lg-4">
+                        <label class="text-dark  pt-md-2">Tags</label>
+                     </div>
+                     <div class="col-12 col-lg-8">
+                        <div class="form-group pt-0 label-static bmd-form-group">
+                           <div class="dropdown bootstrap-select form-control">
+                              <select class="form-control selectpicker" data-actions-box="true"
+                                 data-selected-text-format="count > 1" data-style="px-2 border" name="status"
+                                 id="status" tabindex="-98">
+                                 <option value="">Tags</option>
+                                 <option value="1">Tags 1</option>
+                                 <option value="2">Tags 2</option>
+                              </select>
+                           </div>
+                        </div>
+                     </div>
                   </div>
+
+
+                  <div class="row align-items-start form-group pt-0">
+                     <div class="col-12 col-lg-4">
+                        <label class="text-dark  pt-md-2">Updated By</label>
+                     </div>
+                     <div class="col-12 col-lg-8">
+                        <div class="form-group pt-0 label-static bmd-form-group">
+                           <div class="dropdown bootstrap-select form-control">
+                              <select class="form-control selectpicker" data-actions-box="true"
+                                 data-selected-text-format="count > 1" data-style="px-2 border" name="status"
+                                 id="status" tabindex="-98">
+                                 <option value="">Select an User</option>
+                                 <option value="1">User case 1</option>
+                                 <option value="2">User case 2</option>
+                              </select>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+               <button class="btn btn-sm btn-outline-secondary">Reset</button>
+               <button class="btn btn-sm btn-primary">Apply</button>
+            </div>
          </div>
+      </div>
+   </div>
+   </div>
+
+
+
+   <div class="modal fade  popup-customization" id="addtoDashboardPopup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+         <div class="modal-content h-100">
+            <div class="modal-header border-bottom-blue">
+               <h5 class="modal-title my-0 text-center">Add to Dashboard</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+                  data-placement="left" title="" data-original-title="Click here to close">
+                  <span aria-hidden="true">×</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <h6 class="mt-0 text-muted">Existing Dashboards</h6>
+                     <div class="listingWidthIcon">
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value="" checked="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-danger">M</span>
+                           <span class="name">My reoport name max length is 50 character.</span>
+                        </label>
+
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value="" checked="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-dark">R</span>
+                           <span class="name">Report Name one</span>
+                        </label>
+
+
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-denary">R</span>
+                           <span class="name">Report Name one</span>
+                        </label>
+
+
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-eleventh">R</span>
+                           <span class="name">Report Name one</span>
+                        </label>
+
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-fourteenth">R</span>
+                           <span class="name">Report Name one</span>
+                        </label>
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value="" checked="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-nineteenth">R</span>
+                           <span class="name">Report Name one</span>
+                        </label>
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value=="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-success">R</span>
+                           <span class="name">Report Name one</span>
+                        </label>
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value="" checked="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-warning">R</span>
+                           <span class="name">Report Name one</span>
+                        </label>
+                        <label class="text-dark custom-checkbox">
+                           <input type="checkbox" data-name="Report Name one" name="" value="">
+                           <span class="custom-btn-span"></span>
+                           <span class="reportIcon bg-eleventh">R</span>
+                           <span class="name">Report Name one</span>
+                        </label>
+                     </div>
+                  </div>
+
+                  <div class="col-12 no_data_div_on_load text-center pl-5 pr-5 d-none">
+                     <div class="noDataFoundDiv">
+                        <div class="innerHtml">
+                           <img height="120px" src="../static/backend/images/no-record.png" alt="no-record">
+                           <span class="text-muted">There is not yet a report. Please make a report to Add on
+                              Dashboard.</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="ml-2 btn btn-sm btn-primary">Confirm</button>
+            </div>
          </div>
       </div>
    </div>
@@ -920,24 +1051,28 @@
    <!-- <script src="../static/custom/js/qms/qms.js"></script> -->
 
    <script>
-   $(".toggletag a.basicTemplateTag").click(function () {
-   $(this).css({'z-index':'12', 'position':'relative'});
-   $(".tagcontainer").toggleClass('open');
-   if($(".tagcontainer").hasClass('open')){
-      $(".tagcontainer-backdrop").show();
-   }
-   else{
-      $(".tagcontainer-backdrop").hide();
-   }
-});
 
-$(".tagcontainer-backdrop").click(function () {
-   $("a.basicTemplateTag").css('z-index','0');
-   $(".tagcontainer").removeClass('open');
-   $(".tagcontainer-backdrop").hide();
-});
+      $("#addtoDashboardPopup").modal();
 
- $('.expended-search-link').click(function () {
+
+      $(".toggletag a.basicTemplateTag").click(function () {
+         $(this).css({ 'z-index': '12', 'position': 'relative' });
+         $(".tagcontainer").toggleClass('open');
+         if ($(".tagcontainer").hasClass('open')) {
+            $(".tagcontainer-backdrop").show();
+         }
+         else {
+            $(".tagcontainer-backdrop").hide();
+         }
+      });
+
+      $(".tagcontainer-backdrop").click(function () {
+         $("a.basicTemplateTag").css('z-index', '0');
+         $(".tagcontainer").removeClass('open');
+         $(".tagcontainer-backdrop").hide();
+      });
+
+      $('.expended-search-link').click(function () {
          $(this).next('.expended-search-wrpper').toggleClass('active');
       });
       $('.expended-search-wrpper [data-dismiss="search"]').click(function () {
@@ -991,7 +1126,6 @@ $(".tagcontainer-backdrop").click(function () {
       // $('.chosen-select').chosen();
       $('.tags-input').tagsinput();
    </script>
-
 </body>
 
 </html>
