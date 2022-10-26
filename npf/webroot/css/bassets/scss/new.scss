@@ -71,3 +71,18 @@
   background-color: #f2f2f2;
   margin:0 -11px;
 }
+
+#exampleModal{
+  .modal-dialog{
+    width:100%;
+    @media (min-width:992px){
+      width:768px;
+    }
+  }
+}
+
+@media (max-width:767px){
+  .d-blockM{
+    display:block!important;
+  }
+}
