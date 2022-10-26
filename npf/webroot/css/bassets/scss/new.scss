@@ -86,3 +86,19 @@
     display:block!important;
   }
 }
+
+.appliedcondition{
+  border-radius:5px;
+  position: relative;
+  .actionBox{
+    position:absolute;
+    top:7px;
+    right:5px;
+    a{
+      text-decoration:none;
+      &:hover{
+        color:#f44336;
+      }
+    }
+  }
+}
