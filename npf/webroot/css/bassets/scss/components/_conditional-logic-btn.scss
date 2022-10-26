@@ -135,6 +135,9 @@ $light:#ccc;
         &+.conditional-logic-span {
           background: $primary;
           color: #fff;
+          font-size:13px;
+          line-height:23px;
+          padding:0px 10px;
         }
       }
     }
