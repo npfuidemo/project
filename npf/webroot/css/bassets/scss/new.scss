@@ -55,6 +55,9 @@
 
 #conditional-filter-row {
   padding-left: 45px;
+  max-height: 190px;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .addNewLogic {
