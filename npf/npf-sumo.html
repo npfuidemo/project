@@ -13,6 +13,7 @@
 
 <body>
  <div class="container">
+  <span>update</span>
   <div class="row">
    <div class="col-6">
     <select name="" id="" class="sumo-select" multiple data-max="3">
@@ -40,12 +41,30 @@
  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.1.6/jquery.sumoselect.min.js"></script> -->
 
  <script>
-  $('select.sumo-select').SumoSelect();
+  $('select.sumo-select').SumoSelect({
+   triggerChangeCombined: true,
+   forceCustomRendering: true,
+   okCancelInMulti: true ,
+   // nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
+  });
 
-  $(document).on('click', '.optWrapper .options .opt', function () {
-   let selectResult = $(this).parent('.options').parent('.optWrapper').siblings('select.SumoUnder');
-   $('#result').html(selectResult)
-   alert($(selectResult).val().length);
+
+  // $(document).on('click', '.optWrapper .options .opt', function () {
+  //  let selectResult = $(this).parent('.options').parent('.optWrapper').siblings('select.SumoUnder');
+  //  $('#result').html(selectResult.val())
+  // });
+
+  $(document).on('change', 'select.sumo-select', function () {
+   let selectResult = $(this);
+   let selectMax = $(this).attr('data-max');
+   console.log($())
+   if ($(selectResult).val().length <= +selectMax) {
+    $(this).prop('disabled', 'disabled');
+    $('#result').html(selectResult.val());
+   }
+   else {
+    $(this).removeAttr('disabled');
+   }
   })
  </script>
 </body>
