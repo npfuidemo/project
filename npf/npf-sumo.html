@@ -27,6 +27,9 @@
      <option value="9999">9999</option>
     </select>
    </div>
+   <div class="col-6 bg-light">
+    <div id="result"></div>
+   </div>
   </div>
  </div>
  <script src="https://cdn.npfs.co/js/lib/jquery.min.js"></script>
@@ -40,8 +43,9 @@
   $('select.sumo-select').SumoSelect();
 
   $(document).on('click', '.optWrapper .options .opt', function () {
-   let selectSumo = $(this).parent('.options').parent('.optWrapper').siblings('select.SumoUnder');
-   alert($(selectSumo).val().length);
+   let selectResult = $(this).parent('.options').parent('.optWrapper').siblings('select.SumoUnder');
+   $('#result').html(selectResult)
+   alert($(selectResult).val().length);
   })
  </script>
 </body>
