@@ -8,12 +8,10 @@
  <title>Document</title>
  <link rel="stylesheet" href="https://cdn.npfs.co/css/college/bootstrap.min.css">
  <link rel="stylesheet" href="https://cdn.npfs.co/css/bassets/style/skeleton.css">
- <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.1.6/sumoselect.min.css"> -->
 </head>
 
 <body>
  <div class="container">
-  <span>update</span>
   <div class="row">
    <div class="col-6">
     <select name="" id="" class="sumo-select" multiple data-max="3">
@@ -37,8 +35,6 @@
  <script src="https://cdn.npfs.co/js/college/bootstrap.min.js"></script>
  <script src="https://cdn.npfs.co/js/autoselect.js"></script>
  <script src="https://cdn.npfs.co/js/jquery.sumoselect.min.js"></script>
- <!-- <script src="https://cdn.npfs.co/js/anonymous_user.js"></script> -->
- <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.1.6/jquery.sumoselect.min.js"></script> -->
 
  <script>
   $('select.sumo-select').SumoSelect({
@@ -47,25 +43,6 @@
    okCancelInMulti: true ,
    // nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
   });
-
-
-  // $(document).on('click', '.optWrapper .options .opt', function () {
-  //  let selectResult = $(this).parent('.options').parent('.optWrapper').siblings('select.SumoUnder');
-  //  $('#result').html(selectResult.val())
-  // });
-
-  $(document).on('change', 'select.sumo-select', function () {
-   let selectResult = $(this);
-   let selectMax = $(this).attr('data-max');
-   console.log($())
-   if ($(selectResult).val().length <= +selectMax) {
-    $(this).prop('disabled', 'disabled');
-    $('#result').html(selectResult.val());
-   }
-   else {
-    $(this).removeAttr('disabled');
-   }
-  })
  </script>
 </body>
 
