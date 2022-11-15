@@ -58,11 +58,12 @@
    $('#FieldClassLookingFor').SumoSelect({ floatWidth: 200 });
   }, 1000);
 
-  if($(window).width() < 767){
-   $(document).on('change', '#FieldClassLookingFor', function(){
-    if($('#FieldClassLookingFor').val().length > +$('#FieldClassLookingFor').attr('data-limit')){
+  if ($(window).width() < 767) {
+   $(document).on('change', '#FieldClassLookingFor', function () {
+    if ($('#FieldClassLookingFor').val().length > +$('#FieldClassLookingFor').attr('data-limit')) {
      alert('You have selected more value');
-     $('#FieldClassLookingFor').val('')
+     $('#FieldClassLookingFor').val('');
+     $('#FieldClassLookingFor')[0].sumo.reload();
     }
    })
   }
