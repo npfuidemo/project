@@ -3,4 +3,11 @@
     left: 0px;
     top: 11px;
     font-size: 18px;
+
+    &.align-right {
+        left: auto;
+        right: 0;
+        font-size: 20px;
+        position: static;
+    }
 }

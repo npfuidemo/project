@@ -5,3 +5,11 @@ $radius: 8;
     border-radius: $a +px;
   }
 }
+
+$radius: 21;
+
+@for $a from 20 through $radius {
+  .radius-#{$a} {
+    border-radius: $a +px;
+  }
+}

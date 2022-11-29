@@ -22,6 +22,7 @@
             margin: 0;
             background-color: #fff;
             vertical-align: middle;
+            word-break: break-word;
 
             .hover-effect {
                 width: 22px;
@@ -253,7 +254,7 @@
                         display: block;
                         padding-left: 40% !important;
                         padding-top: 10px;
-                        padding-bottom: 5px;
+                        padding-bottom: 10px;
 
                         @media only screen and (max-width: 767px) {
                             padding-left: 35% !important;
@@ -263,21 +264,24 @@
                             padding-bottom: 10px;
                         }
 
-                        &:before {
-                            content: attr(data-title);
-                            font-size: 14px;
-                            color: #999;
-                            line-height: 1.2;
-                            font-weight: unset;
-                            position: absolute;
-                            width: 40%;
-                            top: 14px;
-                            left: 20px;
-
-                            @media only screen and (max-width: 767px) {
-                                font-size: 11px;
+                        &:not(:empty){
+                            &:before {
+                                content: attr(data-title);
+                                font-size: 14px;
+                                color: #999;
+                                line-height: 1.2;
+                                font-weight: unset;
+                                position: absolute;
+                                width: 30%;
+                                top: 14px;
+                                left: 20px;
+                                word-break: break-word;
+                                @media only screen and (max-width: 767px) {
+                                    font-size: 11px;
+                                }
                             }
                         }
+
 
                         &.has-checkbox {
                             min-height: 25px;
@@ -414,7 +418,10 @@
 .selection-row {
     min-height: 30px;
     margin-bottom: 5px;
-
+    @media only screen and (max-width: 767px){
+        min-height: 47px;
+        word-break: break-word;
+    }
     .selection-count {
         background: #ccd9f5 !important;
         padding: 5px 0;

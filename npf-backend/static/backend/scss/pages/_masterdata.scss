@@ -77,7 +77,7 @@
             position: absolute;
             display: block;
             background: #ccc;
-            left:-6px;
+            left:-12px;
             top:-17px;
         }
 
@@ -155,5 +155,12 @@
         &:hover{
             background-color:#eee;
         }
+    }
+}
+
+#addChildMasterDataModal{
+    .modal-md{
+        width:630px;
+        max-width:630px;
     }
 }
