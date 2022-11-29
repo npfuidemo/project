@@ -1,4 +1,4 @@
-@import '../components/dropdown-bootstrap-select', '../components/popup-customization', '../components/hover-overwrite';
+@import '../components/dropdown-bootstrap-select', '../components/popup-customization', '../components/hover-overwrite', '../components/hover-visible';
 
 body {
     font-size: .9rem;
@@ -9,7 +9,7 @@ body {
 }
 
 .text-muted {
-    color: $color-muted !important;
+    color: $color-muted  !important;
 }
 
 .tooltip {
@@ -25,7 +25,7 @@ body {
 }
 
 .border-bottom-blue {
-    border-bottom: 1px solid $brand-color !important;
+    border-bottom: 1px solid $brand-color  !important;
 }
 
 .badge-blue {
@@ -415,10 +415,10 @@ nav.navbar {
         margin-bottom: 0 !important;
 
         .close-btn-mobile ul li .nav-link {
-            color: $white-color !important;
+            color: $white-color  !important;
 
             span {
-                color: $white-color !important;
+                color: $white-color  !important;
             }
         }
     }
@@ -915,12 +915,6 @@ footer ul li {
     }
 }
 
-.json-viewer-popup .modal-body pre {
-    min-height: calc(100vh - 140px);
-    white-space: pre-line;
-    margin-bottom: 0;
-}
-
 footer ul li {
     margin-left: 5px;
 
@@ -930,7 +924,7 @@ footer ul li {
 }
 
 .btn {
-    text-transform: capitalize;
+    text-transform: inherit;
     font-weight: 500;
 }
 
@@ -961,7 +955,7 @@ footer ul li {
     background: darken($primary, 15);
 
     &:after {
-        color: $white-color !important;
+        color: $white-color  !important;
         line-height: 1.8 !important;
     }
 }
@@ -977,9 +971,11 @@ footer ul li {
     background: lighten($primary, 35%);
 }
 
-div:not(.select-box) .dropdown.bootstrap-select .dropdown-menu {
-    max-height: 230px;
-}
+// removed code and used data size in select picker 
+
+// div:not(.select-box) .dropdown.bootstrap-select .dropdown-menu {
+//     max-height: 230px;
+// }
 
 .select-box .dropdown.bootstrap-select .dropdown-menu {
     max-height: auto;
@@ -1254,7 +1250,7 @@ input[type="checkbox"] {
 }
 
 .border-input {
-    border-color: $border-color-enable !important;
+    border-color: $border-color-enable  !important;
 }
 
 .sticky-bottom {
@@ -1362,7 +1358,7 @@ input[type="checkbox"] {
         position: absolute;
         right: 13px;
         bottom: 8px;
-        z-index: 0;
+        z-index: -1;
         cursor: pointer;
     }
 
@@ -1372,6 +1368,28 @@ input[type="checkbox"] {
         background: transparent;
         font-size: 95%;
     }
+    .date-picker-cross{
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 40px;
+        height: calc(100% - 2px);
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        display: none;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    &:hover .date-picker-cross{
+        display: flex;
+        background: #f1f1f1;
+    }
+}
+
+.topHead .date-picker:after {
+    bottom: 5px;
+    right: 10px;
 }
 
 .highlightedValue {
@@ -1469,7 +1487,7 @@ input[type="checkbox"] {
     margin-right: -5px;
     display: flex;
     flex-wrap: wrap;
-    overflow-y: overlay;
+    // overflow-y: overlay;
 }
 
 .overflow-x {
@@ -1531,6 +1549,8 @@ input[type="checkbox"] {
 }
 
 .daterangepicker {
+    z-index: 1055 !important;
+
     td.in-range {
         background-color: lighten($primary, 35%) !important;
         color: #333 !important;
@@ -1541,9 +1561,10 @@ input[type="checkbox"] {
     td.active.off,
     td.active:hover {
         color: #fff !important;
-        background-color: $primary !important;
+        background-color: $primary  !important;
     }
 }
+
 .header-has-search {
     @media only screen and (max-width: 767px) {
         padding-bottom: 60px !important;

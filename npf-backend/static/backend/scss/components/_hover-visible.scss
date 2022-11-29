@@ -1,0 +1,14 @@
+@media only screen and (min-width: 767px) {
+ .parent-element {
+  transition: all .3s ease-in-out;
+
+  .child-element {
+   visibility: hidden;
+   transition: all .3s ease-in-out;
+  }
+
+  &:hover .child-element {
+   visibility: visible;
+  }
+ }
+}

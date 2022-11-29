@@ -22,34 +22,60 @@ $two: 2;
 $black : #000;
 $table-hover-bg : rgba($black, .04);
 
+$light-warning : #fbe6b7;
+$light-success : #c7f2df;
+$light-danger : #faccd9;
+$light-info : #d4dff7;
+$tertiary: #EC808D; // Level colors
+$quaternary: #FACD91;
+$quinary: #FFFF80;
+$senary: #CAF982;
+$septenary: #80FFFF;
+$octonary: #81D3F8;
+$nonary: #8080FF;
+$denary: #C280FF;
+$eleventh: #F3B057;
+$twelfth: #63B2FF;
+$thirteenth: #C3D5FF;
+$fourteenth: #98C5FF;
+$fifteenth: #DBB3D4;
+$sixteenth: #E5D392;
+$seventeenth: #C48D81;
+$eighteenth: #E7D9A3;
+$nineteenth: #C4C6C6;
+$twentieth: #F2C080;
+$twentifirst: #DDCBB2;
+$duodenary: #EC7E74;
+
 $theme-colors: (
-  "light-warning": #fbe6b7,
-  "light-success": #c7f2df,
-  "light-danger": #faccd9,
-  "light-info": #d4dff7,
-  "tertiary": #EC808D, // Level colors
-  "quaternary": #FACD91,
-  "quinary": #FFFF80,
-  "senary": #CAF982,
-  "septenary": #80FFFF,
-  "octonary": #81D3F8,
-  "nonary": #8080FF,
-  "denary": #C280FF,
-  "eleventh": #F3B057,
-  "twelfth": #63B2FF,
-  "thirteenth": #C3D5FF,
-  "fourteenth": #98C5FF,
-  "fifteenth": #DBB3D4,
-  "sixteenth": #E5D392,
-  "seventeenth": #C48D81,
-  "eighteenth": #E7D9A3,
-  "nineteenth": #C4C6C6,
-  "twentieth": #F2C080,
-  "twentifirst": #DDCBB2,
-  "duodenary": #EC7E74,
+  "light-warning": $light-warning,
+  "light-success": $light-success,
+  "light-danger": $light-danger,
+  "light-info": $light-info,
+  "tertiary": $tertiary, // Level colors
+  "quaternary": $quaternary,
+  "quinary": $quinary,
+  "senary": $senary,
+  "septenary": $septenary,
+  "octonary": $octonary,
+  "nonary": $nonary,
+  "denary": $denary,
+  "eleventh": $eleventh,
+  "twelfth": $twelfth,
+  "thirteenth": $thirteenth,
+  "fourteenth": $fourteenth,
+  "fifteenth": $fifteenth,
+  "sixteenth": $sixteenth,
+  "seventeenth": $seventeenth,
+  "eighteenth": $eighteenth,
+  "nineteenth": $nineteenth,
+  "twentieth": $twentieth,
+  "twentifirst": $twentifirst,
+  "duodenary": $duodenary,
 );
 
 
+$modal-full : calc(100% - 65px);
 $modal-xlg : 1100px;
 $modal-llg : 950px;
 $modal-lg : 800px;

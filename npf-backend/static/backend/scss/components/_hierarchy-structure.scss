@@ -1,4 +1,4 @@
-@import '../abstracts/mixins';
+@import '../abstracts/variables','../abstracts/mixins';
 
 .team-hierarchy {
     .hierarchy-item {
@@ -111,6 +111,174 @@
             width: 110px;
             left: calc(100% - 1px);
             opacity: 1;
+        }
+    }
+}
+
+.hierarchy-item {
+    .team-hierarchy-tree {
+        .cursor-not-allowed{
+            opacity: .4;
+        }
+        >a {
+            background: $tertiary;
+            &.cursor-not-allowed{
+                cursor: not-allowed !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $quaternary;
+            }
+        }
+    }
+
+    & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $quinary;
+            }
+        }
+    }
+
+    & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $senary;
+            }
+        }
+    }
+
+    & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $septenary;
+            }
+        }
+    }
+
+    // 
+    & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $octonary;
+            }
+        }
+    }
+
+    & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $nonary;
+            }
+        }
+    }
+
+    & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $denary;
+            }
+        }
+    }
+
+    & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $eleventh;
+            }
+        }
+    }
+
+    & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $twelfth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $thirteenth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $fourteenth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $fifteenth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $sixteenth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $seventeenth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $eighteenth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $nineteenth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $twentieth;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $twentifirst;
+            }
+        }
+    }
+
+    & & & & & & & & & & & & & & & & & & & & & {
+        .team-hierarchy-tree {
+            >a {
+                background: $duodenary;
+            }
         }
     }
 }
