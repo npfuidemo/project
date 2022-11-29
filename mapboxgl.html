@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <title>Display map navigation controls</title>
+ <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+ <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+ <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+ <style>
+  body {
+   margin: 0;
+   padding: 0;
+  }
+
+  #map {
+   position: absolute;
+   width: 300px;
+   height: 300px;
+  }
+ </style>
+</head>
+
+<body>
+ <div id="map"></div>
+ <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZGhlZXJhamFyb3JhMTk5NyIsImEiOiJjbDlvM2VmbTQwZHlzM3BvNW04ODU1NTJ1In0.kpZXObzDZM5VFW3y3oq99g';
+  const map = new mapboxgl.Map({
+   container: 'map', // container ID
+   // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+   style: 'mapbox://styles/mapbox/streets-v11', // style URL
+   center: [77.2, 28.6], // starting position [lng, lat]
+   // "lat": 40.7143, "lon": -74.006
+   zoom: 11 // starting zoom
+  });
+
+  // Add zoom and rotation controls to the map.
+  // map.addControl(new mapboxgl);
+ </script>
+
+</body>
+
+</html>
+
+<!-- <pre>
+
+ https://api.mapbox.com/geocoding/v5/mapbox.places/New.json?limit=3&proximity=ip&types=place%2Cpostcode%2Caddress&access_token=pk.eyJ1IjoiZGhlZXJhamFyb3JhMTk5NyIsImEiOiJjbDlvM2VmbTQwZHlzM3BvNW04ODU1NTJ1In0.kpZXObzDZM5VFW3y3oq99g
+
+ https://api.mapbox.com/geocoding/v5/mapbox.places/New.json?limit=1&proximity=ip&types=place&access_token=pk.eyJ1IjoiZGhlZXJhamFyb3JhMTk5NyIsImEiOiJjbDlvM2VmbTQwZHlzM3BvNW04ODU1NTJ1In0.kpZXObzDZM5VFW3y3oq99g
+</pre> -->
