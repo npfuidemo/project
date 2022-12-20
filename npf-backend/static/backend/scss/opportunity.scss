@@ -13,7 +13,8 @@
 "components/columnFilterModal",
 "components/drag-item",
 "components/timeline",
-"components/modal-accordion";
+"components/modal-accordion",
+"components/steps";
 
 
 .inline_tabs.position-sticky {
@@ -46,8 +47,16 @@
 
 #opportunity_profile {
  .modal-accordion {
-  max-height: calc(100vh - 100px);
-  min-height: calc(100vh - 100px);
+  @media only screen and (min-width: 767px) {
+   max-height: calc(100vh - 130px);
+   min-height: calc(100vh - 120px);
+   overflow: overlay;
+  }
+
+  @media only screen and (max-width: 767px) {
+   max-height: 100%;
+   min-height: 100%;
+  }
  }
 
 }
@@ -57,6 +66,48 @@
   max-height: 100%;
   min-height: 100%;
  }
+}
+
+.arrow-steps {
+  width: 100%;
+ .step {
+  background: $grey-300;
+  width: 24%;
+  padding: 2px 10px !important;
+
+  @media only screen and (max-width: 1200px) {
+   width: 160px;
+   min-width: 160px;
+  }
+
+  &:before {
+   border-left-color: #f0f3f4 !important;
+  }
+
+  &:before,
+  &:after {
+   right: -12px;
+   border-top: 12px solid transparent;
+   border-bottom: 12px solid transparent;
+   border-left: 12px solid rgba(75, 123, 221, 0.2);
+  }
+
+  &.current:after {
+   border-left-width: 12px;
+  }
+
+  &:after {
+   border-left-color: $grey-300;
+  }
+
+  &.bg-light-danger:after {
+   border-left-color: $light-danger;
+  }
+ }
+}
+
+#filter-opportunity .bootstrap-select .dropdown-menu li a span.text {
+ white-space: nowrap;
 }
 
 pre {
@@ -69,4 +120,20 @@ pre {
   display:block;
   width:100%;
   margin-top:5px;
+}
+
+.timeline-group .timeline-item {
+ &.followup-item:before {
+  color: $success;
+ }
+
+ &.notes-item:before {
+  color: $info;
+ }
+}
+
+@media only screen and (max-width: 991px){
+.inline_tabs.position-sticky{
+  position: sticky !important;
+ }
 }

@@ -30,12 +30,12 @@
 
  <main id="content-container">
   <article id="content">
-   <section id="main-block">
+   <header id="main-block">
     <h1 id="main-title">Duis varius venenatis nulla et.</h1>
     <p id="main-description">
      Pellentesque nec dolor gravida, porta metus et, dignissim tellus. Vivamus facilisis erat eget condimentum volutpat.
     </p>
-   </section>
+   </header>
    <section class="site-block">
     <h2 class="subtitle">Aenean feugiat tellus vitae finibus laoreet.</h2>
     <p class="description">
@@ -98,3 +98,64 @@
 </body>
 
 </html>
+<pre>
+ 
+ Compilation successful.
+ 
+ test_main - test_website_dom_elements_have_expected_xpaths[sidepanel]
+ OK
+ 
+ test_main - test_website_dom_elements_have_expected_xpaths[main-block]
+ Output (stderr):
+ assert False
+ E   AssertionError: xpath for id: main-block is incorrect: {'/html/body/main/article/section[1]'}, this means that html5 DOM structure with this tag is not correct for SEO rules (xpath algorithm code: https://gist.github.com/ergoithz/6cf043e3fdedd1b94fcf)
+ WRONG ANSWER
+ 
+ test_main - test_website_dom_elements_have_expected_xpaths[copyright]
+ Output (stderr):
+ assert False
+ E   AssertionError: xpath for id: copyright-content is incorrect: {'/html/body/footer/div'}, this means that html5 DOM structure with this tag is not correct for SEO rules (xpath algorithm code: https://gist.github.com/ergoithz/6cf043e3fdedd1b94fcf)
+ WRONG ANSWER
+ 
+ test_main - test_dom_elements_have_correct_tags[content-container]
+ OK
+ 
+ test_main - test_dom_elements_have_correct_tags[top-menu]
+ OK
+ 
+ test_main - test_dom_elements_have_correct_tags[sidepanel]
+ OK
+ 
+ test_main - test_dom_elements_have_correct_tags[main-block]
+ Output (stderr):
+ assert False
+ E   AssertionError: current tag id: main-block (located at xpath: /html/body/main/article/section[1]) has wrong usage (xpath algorithm code: https://gist.github.com/ergoithz/6cf043e3fdedd1b94fcf)
+ WRONG ANSWER
+ 
+ test_main - test_dom_elements_have_correct_tags[copyright-container]
+ OK
+ 
+ test_main - test_dom_elements_have_correct_tags[copyright-content]
+ Output (stderr):
+ assert False
+ E   AssertionError: current tag id: copyright-content (located at xpath: /html/body/footer/div) has wrong usage (xpath algorithm code: https://gist.github.com/ergoithz/6cf043e3fdedd1b94fcf)
+ WRONG ANSWER
+ 
+ test_main - test_dom_elements_have_correct_tags[site-block]
+ OK
+ 
+ test_main - test_dom_elements_have_correct_tags[image-container]
+ OK
+ 
+ test_main - test_dom_elements_have_correct_tags[image-caption]
+ OK
+ 
+ test_main - test_dom_elements_have_correct_tags[copyright]
+ Output (stderr):
+ assert False
+ E   AssertionError: current tag class: copyright (located at xpath: /html/body/footer/div/small) has wrong usage (xpath algorithm code: https://gist.github.com/ergoithz/6cf043e3fdedd1b94fcf)
+ WRONG ANSWER
+ 
+ test_main - test_dom_elements_have_correct_tags[content]
+ OK
+ </pre>

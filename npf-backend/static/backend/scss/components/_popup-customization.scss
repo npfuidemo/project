@@ -17,15 +17,21 @@
         }
 
         &[disabled],
-        .disabled,
+        &.disabled,
         &[readonly] {
             background-color: #f1f1f1 !important;
             border: 1px solid $border-color-disable;
+            
+            &.date-readonly {
+                cursor: pointer;
+                background-color: transparent !important;
+                color: #111 !important;
+                border-color: $border-color-enable;
+                opacity: 1;
+            }
         }
 
-        &:not([readonly]),
-        &:not([disabled]),
-        &:not(.disabled) {
+        &:not([readonly]):not([disabled]):not(.disabled) {
             &:focus {
                 border-color: #4c79dc !important;
             }
@@ -50,7 +56,7 @@
 
             &[disabled],
             &.disabled {
-                border-color: $border-color-disable !important;
+                border-color: $border-color-disable  !important;
 
                 &:after {
                     color: darken($border-color-disable, 10%) !important;
@@ -60,14 +66,14 @@
 
         &.show {
             .btn.dropdown-toggle {
-                border-color: $primary !important;
+                border-color: $primary  !important;
 
                 &[disabled],
                 &.disabled {
-                    border-color: $border-color-disable !important;
+                    border-color: $border-color-disable  !important;
 
                     &:after {
-                        color: $border-color-disable !important;
+                        color: $border-color-disable  !important;
                     }
                 }
             }

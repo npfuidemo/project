@@ -39,6 +39,7 @@
             width: calc(100% - 40px) !important;
             padding: 0 $two*4px;
             border: 0;
+            font-size: 13px;
         }
 
         .fa-search {
@@ -190,7 +191,7 @@
         }
 
         .columns_dragble {
-            max-height: calc(50vh - 100px);
+            max-height: calc(50vh - 110px);
             overflow: auto;
         }
     }

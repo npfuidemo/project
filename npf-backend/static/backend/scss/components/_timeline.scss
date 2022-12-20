@@ -25,11 +25,12 @@
       left: -8px;
       top: 7px;
       width: 15px;
-      height: 25px;
+      height: 20px;
       position: absolute;
       background-color: #fff;
       font-family: 'Material Icons';
     }
+
     &-last {
       position: relative;
 
@@ -56,4 +57,32 @@
       content: none;
     }
   }
+}
+
+.timeline-group .timeline-item {
+  &.create-item:before {content: '\e148';}
+
+  &.notes-item:before {content: '\f040'; font-family: 'Material Icons Outlined';}
+
+  &.followup-item:before {content: '\e916';}
+
+  &.assign-item:before {content: '\eb64';}
+
+  &.stage-item:before {content: '\ea18';}
+
+  &.edit-item:before {content: '\e3c9';}
+
+  &.inbound-item:before {content: '\e649';}
+
+  &.outbound-item:before {content: '\e61c';}
+
+  &.campaign-item:before {content: '\ef49';}
+
+  &.email-item:before {content: '\e158';}
+
+  &.sms-item:before {content: '\e625';}
+
+  &.whatsapp-item:before {content: '\e148';}
+
+  &.niaa-item:before {content: '\e148';}
 }

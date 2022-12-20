@@ -4,7 +4,7 @@
 'abstracts/mixins',
 'vendors/include-media', 'vendors/chosen/main', 'vendors/bootstrap-tagsinput/bootstrap-tagsinput', 'vendors/chosen/main';
 
-@import "./components/grid-table", "./components/expandSearch", "./components/border-card", "./components/modal-accordion", "./components/custom-input", "./components/hierarchy-structure", "./components/multi-select-pill", "./components/bulk-upload", "components/status", "components/verticalmenulist", "components/drag-input-file", "components/profile", "components/timeline", "components/filled-bar", "components/notch", "components/nav-btn-group";
+@import "./components/grid-table", "./components/expandSearch", "./components/border-card", "./components/modal-accordion", "./components/custom-input", "./components/hierarchy-structure", "./components/multi-select-pill", "./components/bulk-upload", "components/status", "components/verticalmenulist", "components/drag-input-file", "components/profile", "components/timeline", "components/filled-bar", "components/notch", "components/nav-btn-group", "components/multiple-radio-group";
 
 .header-info {
   position: relative;
@@ -60,9 +60,10 @@
 
 .team-group {
   background: #fff;
+  min-height: 247px;
 
   &-header {
-    min-height: 165px;
+    min-height: 178px;
   }
 
   .team-name {
@@ -161,12 +162,33 @@
   pointer-events: none;
 }
 
-ul.automation-mapped{
-  li:first-child{
+ul.automation-mapped {
+  li:first-child {
     text-indent: -20px;
     list-style-type: none;
   }
+
   max-height: 130px;
   overflow-y: auto;
 }
 
+.remove-team-selected~.dropdown-menu ul.dropdown-menu li:nth-child(3) {
+  a:before {
+    content: '\f233';
+    font-family: 'Material Icons Outlined';
+    margin-right: 10px;
+    position: absolute;
+    top: 3px;
+    font-size: 20px;
+    right: 11px;
+  }
+  
+  &.selected a {
+    background-color: lighten($brand-color, 25%);
+    
+    &:before {
+      content: '\e174';
+      color: $brand-color;
+    }
+  }
+}

@@ -14,6 +14,9 @@
     &.vh-100{
         min-height:calc(100vh - 172px);
     }
+    &.vh-80{
+        min-height:calc(100vh - 220px);
+    }
     &.small-img{
         img{
             width:120px;
@@ -22,6 +25,9 @@
     }
     &.vh-page-100{
         min-height:calc(100vh - 184px);
+    }
+    &.vh-page-80{
+        min-height:calc(100vh - 220px);
     }
     &.vh-page-100-modal{
         min-height:calc(100vh - 84px)!important;

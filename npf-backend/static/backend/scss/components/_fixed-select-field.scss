@@ -4,14 +4,20 @@
       li.last-element-fixed {
         bottom: 0;
         position: sticky !important;
-        a {
+
+        a,
+        button {
           display: flex;
           font-weight: 500;
           align-items: center;
           justify-content: center;
           box-shadow: none !important;
-          color: $primary !important;
-          background: lighten($primary, 40%);
+          color: $primary  !important;
+          cursor: pointer;
+          background: lighten($primary, 38%);
+          white-space: normal;
+          align-items: center;
+          text-align: center;
         }
       }
     }

@@ -12,12 +12,17 @@
     }
   }
 
+  .search_btn{
+    right: 0;
+    top: 0;
+  }
+
   .search_icon {
     top: 6px;
   }
 
   .form-control {
-    max-height: 30px;
+    max-height: 31px;
   }
 
   .cross-icon {
@@ -69,7 +74,7 @@
   }
 
   &.active {
-    z-index: 13;
+    z-index: 9999;
     overflow: unset;
 
     @media only screen and (min-width: 991px) {
