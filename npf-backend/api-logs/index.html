@@ -2,725 +2,769 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Api Data Logs</title>
- <link rel="stylesheet" type="text/css"
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons|Material+Icons+Outlined">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
- <link rel="stylesheet" href="../static/backend/css/main.css">
- <link rel="stylesheet" href="../static/backend/css/data-logs.css">
- <style>
-  pre {
-   overflow: hidden;
-   white-space: pre-line;
-   text-overflow: ellipsis;
-  }
- </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api Data Logs</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons|Material+Icons+Outlined">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/backend/css/main.css">
+  <link rel="stylesheet" href="../static/backend/css/data-logs.css">
+  <style>
+    pre {
+      overflow: hidden;
+      white-space: pre-line;
+      text-overflow: ellipsis;
+    }
+  </style>
 </head>
 
 <body>
- <nav class="navbar fixed-top navbar-expand-lg border-bottom shadow-none brand-color" color-on-scroll="100"
-  id="sectionsNav">
-  <div class="d-flex w-100">
-   <div class="navbar-translate d-flex justify-content-between w-100 pl-2">
-    <button class="navbar-toggler d-none d-lg-block" id="navbar-toggler-desktop" type="button" data-toggle="collapse"
-     aria-expanded="false" aria-label="Toggle navigation">
-     <span class="sr-only">Toggle navigation</span>
-     <span class="navbar-toggler-icon"></span>
-     <span class="navbar-toggler-icon"></span>
-     <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand mr-2" href="#"><img src="../static/backend/images/placeholderLogo.svg" width="150"
-      class="img-responsive d-none d-lg-block" alt="NoPaperForms">
-     <img src="../static/backend/images/mobile-logo.png" class="img-responsive d-block d-lg-none d-flex ml-1"
-      height="32" alt="NoPaperForms">
-    </a>
-    <div class="select-box">
-     <div class="dropdown bootstrap-select">
-      <select class="selectpicker" id="number" data-live-search="true" data-style="select-blank" title="Select a number"
-       tabindex="-98">
-       <option class="bs-title-option" value=""></option>
-       <option selected="">Select College</option>
-       <option>ABBS College</option>
-       <option>Lovely Pro Univercity</option>
-       <option>ABES College</option>
-       <option>ABBS College</option>
-       <option>Lovely Pro Univercity</option>
-       <option>ABES College</option>
-      </select>
-      <button type="button" class="btn dropdown-toggle select-blank" data-toggle="dropdown" role="combobox"
-       aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" data-id="number" title="Select College">
-       <div class="filter-option">
-        <div class="filter-option-inner">
-         <div class="filter-option-inner-inner">Select College</div>
-        </div>
-       </div>
-      </button>
-      <div class="dropdown-menu ">
-       <div class="bs-searchbox"><span class="bmd-form-group"><input type="search" class="form-control"
-          autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-1"
-          aria-autocomplete="list"></span></div>
-       <div class="inner show" role="listbox" id="bs-select-1" tabindex="-1">
-        <ul class="dropdown-menu inner show" role="presentation"></ul>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="navbar-nav-scroll ml-auto mr-lg-2 close-btn-mobile">
-     <ul class=" navbar-nav bd-navbar-nav flex-row">
-      <li class="nav-item d-none d-lg-block">
-       <a class="nav-link hover-effect rounded-circle" href="#" data-toggle="tooltip" data-placement="bottom" title=""
-        data-container="body" data-original-title="Settings">
-        <i class="material-icons">settings</i> </a>
-      </li>
-      <li class="nav-item d-none d-lg-block">
-       <a class="nav-link hover-effect rounded-circle" href="javascript:void(0);" data-toggle="tooltip"
-        data-placement="bottom" title="" data-container="body" data-original-title="Help"
-        onclick="zE('webWidget', 'toggle');"><i class="material-icons">help_outline</i></a>
-      </li>
-      <li class="nav-item d-none d-lg-block">
-       <a class="nav-link hover-effect rounded-circle" href="#" target="_blank" rel="noopener" title=""
-        data-toggle="modal" data-target="#notification"><i class="material-icons">notifications_none</i></a>
-      </li>
-      <li class="d-sm-block ml-2">
-       <div class="nameInitials">
-        <button type="button" class="btn btn-primary btn-ni rounded-circle dropdown-toggle" data-toggle="dropdown"
-         aria-haspopup="true" aria-expanded="false">
-         DM
+  <nav class="navbar fixed-top navbar-expand-lg border-bottom shadow-none brand-color" color-on-scroll="100"
+    id="sectionsNav">
+    <div class="d-flex w-100">
+      <div class="navbar-translate d-flex justify-content-between w-100 pl-2">
+        <button class="navbar-toggler d-none d-lg-block" id="navbar-toggler-desktop" type="button"
+          data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="dropdown-menu dropdown-menu-right p-0">
-         <div class="d-flex p-3 align-items-center">
-          <div class="mr-2">
-           <span class="niVal rounded-circle">DM</span>
-          </div>
-          <div class="userInfo">
-           <div class="font-weight-bold">Dhiraj Mishra</div>
-           <div class="useremail">dhiraj.mishra@nopaperforms.com</div>
-          </div>
-         </div>
-         <div class="p-3 bg-light d-flex justify-content-between">
-          <a class="btn btn-white btn-sm" href="/users/update-password">Change Password
-          </a>
-          <a class="btn btn-white btn-sm" href="/Logout">Sign Out </a>
-         </div>
-        </div>
-       </div>
-      </li>
-      <li>
-       <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-       </button>
-      </li>
-     </ul>
-    </div>
-   </div>
-   <div class="collapse navbar-collapse">
-    <aside id="sidebar-wrapper" class="sidebar active">
-     <nav id="sidebar" class="sidebar-mask">
-      <div class="sidebar__inner scrollCustom">
-       <div class="sidebar-quickLinks active" style="display:none;">
-        <div class="pull-left ql">Quick Links</div>
-        <a href="javascript:void(0);" class="sidebarCollapse sidebarClose"><span
-          class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a>
-       </div>
-       <ul class="list-unstyled components mainList">
-        <li class="active" data-p="0" data-m="98">
-         <a data-am="98" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#Dashboard"><i
-           class="lineicon-98"></i><span>Dashboard</span></a>
-         <ul class="collapse list-unstyled" id="Dashboard" data-menu="Dashboard">
-          <li class="active " data-p="98" data-m="151"><a class="active " href="/analytics/admin-dashboard">Admin
-            Dashboard </a>
-          </li>
-          <li class="" data-p="98" data-m="72"><a class="" href="/counsellors/dashboard">Counsellor
-            Dashboard </a>
-          </li>
-          <li class="" data-p="98" data-m="154"><a class="" href="/analytics/marketing-dashboard">Marketing Dashboard
-           </a>
-          </li>
-          <li class="" data-p="98" data-m="84"><a class="" href="/colleges/benchmarking-dashboard">Benchmarking
-            Dashboard </a>
-          </li>
-          <li class="" data-p="98" data-m="86"><a class="" href="/reports/trend-analysis">Trend
-            Analysis </a>
-          </li>
-          <li class="" data-p="98" data-m="87"><a class="" href="/colleges/sqi-dashboard">Student
-            Quality Index </a>
-          </li>
-          <li class="" data-p="98" data-m="106"><a class="" href="/area/agent-dashboard">Agent
-            Dashboard </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="2">
-         <a data-am="2" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#FormDesk"><i
-           class="lineicon-2"></i><span>FormDesk</span></a>
-         <ul class="collapse list-unstyled" id="FormDesk" data-menu="FormDesk">
-          <li class="" data-p="2" data-m="3"><a class="" href="/colleges/create-institute">Create
-            Institute </a>
-          </li>
-          <li class="" data-p="2" data-m="131"><a class="" href="/colleges/manager">Manage
-            Institute
-            (New) </a>
-          </li>
-          <li class="" data-p="2" data-m="6"><a class="" href="/form/create-form">Create
-            Form </a>
-          </li>
-          <li class="" data-p="2" data-m="132"><a class="" href="/form/manager">Manage
-            Form (New)
-           </a>
-          </li>
-          <li class="" data-p="2" data-m="49"><a class="" href="/form/csv-mapping-list">Manage CSV
-            Mapping </a>
-          </li>
-          <li class="" data-p="2" data-m="36"><a class="" href="/colleges/list-documents">Manage
-            Documents </a>
-          </li>
-          <li class="" data-p="2" data-m="4"><a class="" href="/colleges/manage-institute">Manage
-            Institutes </a>
-          </li>
-          <li class="" data-p="2" data-m="7"><a class="" href="/form/manage-form">Manage
-            Forms </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="89">
-         <a data-am="89" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#LeadsManager"><i
-           class="lineicon-89"></i><span>Leads Manager</span></a>
-         <ul class="collapse list-unstyled" id="LeadsManager" data-menu="Leads Manager">
-          <li class="" data-p="89" data-m="30"><a class="" href="/leads/lead-manager">Manage Leads
-           </a>
-          </li>
-          <li class="" data-p="89" data-m="70"><a class="" href="/leads/offline_lead_import_report">Offline Upload Logs
-           </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="90">
-         <a data-am="90" class="clickableClass" data-toggle="collapse" aria-expanded="false"
-          href="#ApplicationManager"><i class="lineicon-90"></i><span>Application
-           Manager</span></a>
-         <ul class="collapse list-unstyled" id="ApplicationManager" data-menu="Application Manager">
-          <li class="" data-p="90" data-m="8"><a class="" href="/applications/application-manager">Manage Applications
-           </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="75">
-         <a data-am="75" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#Marketing"><i
-           class="lineicon-75"></i><span>Marketing</span></a>
-         <ul class="collapse list-unstyled" id="Marketing" data-menu="Marketing">
-          <li class="" data-p="75" data-m="93"><a class="" href="/offline/create-offline-list">Upload Raw Data </a></li>
-          <li class="" data-p="75" data-m="76"><a class="" href="/offline/list-manager">Manage List
-           </a>
-          </li>
-          <li class="" data-p="75" data-m="77"><a class="" href="/offline/manage-segment">Manage
-            Segment </a>
-          </li>
-          <li class="" data-p="75" data-m="91"><a class="" href="/automation/list-manager">Manage
-            Automation </a>
-          </li>
-          <li class="" data-p="75" data-m="39"><a class="" href="/communications/communications-log">Communication
-            Performance </a>
-          </li>
-          <li class="" data-p="75" data-m="79"><a class="" href="/offline/import-log">Raw
-            Data
-            Upload Logs </a>
-          </li>
-          <li class="" data-p="75" data-m="111"><a class=""
-            href="/communications/communication_transaction_report">Communication
-            Transaction
-            Report </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="66">
-         <a data-am="66" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#CampaignManager"><i
-           class="lineicon-66"></i><span>Campaign
-           Manager</span></a>
-         <ul class="collapse list-unstyled" id="CampaignManager" data-menu="Campaign Manager">
-          <li class="" data-p="66" data-m="67"><a class="" href="/campaign-manager/dashboard">Campaign Dashboard </a>
-          </li>
-          <li class="" data-p="66" data-m="62"><a class="" href="/publishers/managePublisher">Manage
-            Publishers </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="40">
-         <a data-am="40" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#QueryManager"><i
-           class="lineicon-40"></i><span>Query Manager</span></a>
-         <ul class="collapse list-unstyled" id="QueryManager" data-menu="Query Manager">
-          <li class="" data-p="40" data-m="41"><a class="" href="/query/lists">Manage
-            Applicant
-            Queries </a>
-          </li>
-          <li class="" data-p="40" data-m="42"><a class="" href="/query/faq-lists">Manage
-            FAQ </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="56">
-         <a data-am="56" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#PaymentManager"><i
-           class="lineicon-56"></i><span>Payment
-           Manager</span></a>
-         <ul class="collapse list-unstyled" id="PaymentManager" data-menu="Payment Manager">
-          <li class="" data-p="56" data-m="57"><a class="" href="/discount-coupons/create">Create
-            Discount </a>
-          </li>
-          <li class="" data-p="56" data-m="58"><a class="" href="/discount-coupons/lists">Manage
-            Discounts </a>
-          </li>
-          <li class="" data-p="56" data-m="10"><a class="" href="/voucher">Manage Voucher
-           </a>
-          </li>
-          <li class="" data-p="56" data-m="11"><a class="" href="/voucher/lists">Voucher
-            Lists </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="32">
-         <a data-am="32" class="clickableClass" data-toggle="collapse" aria-expanded="false"
-          href="#ReportsandAnalytics"><i class="lineicon-32"></i><span>Reports and
-           Analytics</span></a>
-         <ul class="collapse list-unstyled" id="ReportsandAnalytics" data-menu="Reports and Analytics">
-          <li class="" data-p="32" data-m="125">
-           <a data-am="125" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#Reports"><i
-             class="lineicon-125"></i><span>Reports</span></a>
-           <ul class="collapse list-unstyled" id="Reports" data-menu="Reports">
-            <li class="" data-p="125" data-m="35"><a class="" href="/reports/folder-listing">Manage Folder </a></li>
-            <li class="" data-p="125" data-m="34"><a class="" href="/reports/list-reports">Reports Manager </a></li>
-            <li class="" data-p="125" data-m="33"><a class="" href="/reports/manage-reports-schedule">Schedule Reports
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li class="" data-p="32" data-m="126">
-           <a data-am="126" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#NPFTracker"><i
-             class="lineicon-126"></i><span>NPF Tracker</span></a>
-           <ul class="collapse list-unstyled" id="NPFTracker" data-menu="NPF Tracker">
-            <li class="" data-p="126" data-m="81"><a class="" href="/reports/client-health-monitoring">Client Health
-              Monitoring </a>
-            </li>
-            <li class="" data-p="126" data-m="83"><a class="" href="/reports/finance-monitoring">Finance Monitoring </a>
-            </li>
-            <li class="" data-p="126" data-m="82"><a class="" href="/reports/qa-monitoring">QA
-              Monitoring </a>
-            </li>
-            <li class="" data-p="126" data-m="108"><a class="" href="/datalogs/listings">Mongo
-              Data Logs </a>
-            </li>
-           </ul>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="19">
-         <a data-am="19" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#TemplateManager"><i
-           class="lineicon-19"></i><span>Template
-           Manager</span></a>
-         <ul class="collapse list-unstyled" id="TemplateManager" data-menu="Template Manager">
-          <li class="" data-p="19" data-m="63"><a class="" href="/templates/manage-landing-page">Manage Landing Pages
-           </a>
-          </li>
-          <li class="" data-p="19" data-m="21"><a class="" href="/colleges/manage-templates">Manage
-            Document Templates </a>
-          </li>
-          <li class="" data-p="19" data-m="38"><a class="" href="/communications/manage-template">Manage Communication
-            Templates
-           </a>
-          </li>
-          <li class="" data-p="19" data-m="100"><a class="" href="/templates/manage-widget">Manage
-            Website Widgets </a>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="43">
-         <a data-am="43" class="clickableClass" data-toggle="collapse" aria-expanded="false"
-          href="#UserAccessControl"><i class="lineicon-43"></i><span>User Access
-           Control</span></a>
-         <ul class="collapse list-unstyled" id="UserAccessControl" data-menu="User Access Control">
-          <li class="" data-p="43" data-m="113"><a class="" href="/users/create">Create
-            New User
-           </a>
-          </li>
-          <li class="" data-p="43" data-m="114"><a class="" href="/users/user-manager">Manage Users
-           </a>
-          </li>
-          <li class="" data-p="43" data-m="45"><a class="" href="/users/manage-sessions">Users
-            Sessions </a>
-          </li>
-          <li class="" data-p="43" data-m="44"><a class="" href="/users/activity">Users
-            Activity
-           </a>
-          </li>
-          <li class="" data-p="43" data-m="31"><a class="" href="/users/account-manager">Account
-            Manager </a>
-          </li>
-          <li class="" data-p="43" data-m="15">
-           <a data-am="15" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#Permission"><i
-             class="lineicon-15"></i><span>Permission</span></a>
-           <ul class="collapse list-unstyled" id="Permission" data-menu="Permission">
-            <li class="" data-p="15" data-m="26"><a class="" href="/permissions/colleges-view">Manage Institute
-              Permissions
-             </a>
-            </li>
-           </ul>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="51">
-         <a data-am="51" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#PostApplication"><i
-           class="lineicon-51"></i><span>Post
-           Application</span></a>
-         <ul class="collapse list-unstyled" id="PostApplication" data-menu="Post Application">
-          <li class="" data-p="51" data-m="52"><a class="" href="/reports/generate-list">Add Custom
-            List </a>
-          </li>
-          <li class="" data-p="51" data-m="55"><a class="" href="/reports/interview-manager">Interview Shortlist </a>
-          </li>
-          <li class="" data-p="51" data-m="54"><a class="" href="/reports/merit-list-generator">Meritlist Generator </a>
-          </li>
-          <li class="" data-p="51" data-m="53"><a class="" href="/reports/list-data-normalizer">Data
-            Normalizer </a>
-          </li>
-          <li class="" data-p="51" data-m="101">
-           <a data-am="101" class="clickableClass" data-toggle="collapse" aria-expanded="false"
-            href="#GD-PIManagement"><i class="lineicon-101"></i><span>GD-PI
-             Management</span></a>
-           <ul class="collapse list-unstyled" id="GD-PIManagement" data-menu="GD-PI Management">
-            <li class="" data-p="101" data-m="102"><a class="" href="/gdpi">Venue
-              City Maximum
-              Capacity </a>
-            </li>
-            <li class="" data-p="101" data-m="103"><a class="" href="/gdpi/plan-gdpi-process/process">Plan GD-PI Process
-             </a>
-            </li>
-            <li class="" data-p="101" data-m="104"><a class="" href="/gdpi/gdpi-schedule/manage-venue">Manage Venue </a>
-            </li>
-            <li class="" data-p="101" data-m="105"><a class="" href="/gdpi/allot-venue/allot-venue-and-panel">Allot
-              Venue and
-              Panel </a>
-            </li>
-           </ul>
-          </li>
-          <li class="" data-p="51" data-m="127">
-           <a data-am="127" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#Scorecard"><i
-             class="lineicon-127"></i><span>Scorecard</span></a>
-           <ul class="collapse list-unstyled" id="Scorecard" data-menu="Scorecard">
-            <li class="" data-p="127" data-m="121"><a class="" href="/settings/scoring-panel">Manage Scorecard </a></li>
-           </ul>
-          </li>
-         </ul>
-        </li>
-        <li class="" data-p="0" data-m="73">
-         <a data-am="73" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#Settings"><i
-           class="lineicon-73"></i><span>Settings</span></a>
-         <ul class="collapse list-unstyled" id="Settings" data-menu="Settings">
-          <li class="" data-p="73" data-m="130">
-           <a data-am="130" class="clickableClass" data-toggle="collapse" aria-expanded="false"
-            href="#InstituteConfiguration"><i class="lineicon-130"></i><span>Institute
-             Configuration</span></a>
-           <ul class="collapse list-unstyled" id="InstituteConfiguration" data-menu="Institute Configuration">
-            <li class="" data-p="130" data-m="107"><a class=""
-              href="/college-settings/counsellor-allocation-logic">Counsellor
-              Allocation
-              Logic </a>
-            </li>
-            <li class="" data-p="130" data-m="99"><a class="" href="/users/manage-registration-fields">Manage
-              Registration
-              Fields </a>
-            </li>
-            <li class="" data-p="130" data-m="122"><a class="" href="/colleges/applicant-flow-configuration">Applicant
-              Flow
-              Configuration
-             </a>
-            </li>
-            <li class="" data-p="130" data-m="115"><a class="" href="/settings/enrolment-mapping">Enrolment Mapping </a>
-            </li>
-            <li class="" data-p="130" data-m="110"><a class="" href="/college-settings/lead-upload-setting">Upload Limit
-              Configuration </a>
-            </li>
-            <li class="" data-p="130" data-m="112"><a class="" href="/college-settings/role-limit-list">User Limit
-              Configuration </a>
-            </li>
-            <li class="" data-p="130" data-m="74"><a class="" href="/colleges/leadActivitiesAndScoringConfig">Lead
-              Activities
-              and Scoring
-             </a>
-            </li>
-            <li class="" data-p="130" data-m="109"><a class="" href="/college-settings/offline-campaign-tags">Offline
-              Campaign
-              Tags </a>
-            </li>
-            <li class="" data-p="130" data-m="50"><a class="" href="/colleges/get-purge-data">Purge History </a></li>
-            <li class="" data-p="130" data-m="69"><a class="" href="/campaign-manager/activity-logs">Publisher Mapping
-              Logs
-             </a>
-            </li>
-            <li class="" data-p="130" data-m="25"><a class="" href="/menu/lists">Menu </a></li>
-            <li class="" data-p="130" data-m="59"><a class="" href="/discount-coupons/activity-logs">Discount Logs </a>
-            </li>
-            <li class="" data-p="130" data-m="134"><a class="" href="/college-settings/zone-configuration">Zone
-              Configuration
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li class="" data-p="73" data-m="22">
-           <a data-am="22" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#Taxonomy"><i
-             class="lineicon-22"></i><span>Taxonomy</span></a>
-           <ul class="collapse list-unstyled" id="Taxonomy" data-menu="Taxonomy">
-            <li class="" data-p="22" data-m="23"><a class="" href="/taxonomies/create-category">Create Taxonomy </a>
-            </li>
-            <li class="" data-p="22" data-m="24"><a class="" href="/taxonomies/manage-category">Manage Taxonomy </a>
-            </li>
-           </ul>
-          </li>
-          <li class="" data-p="73" data-m="133"><a class="" href="/college-settings/connectors-list">Extensions </a>
-          </li>
-         </ul>
-        </li>
-       </ul>
-      </div>
-     </nav>
-    </aside>
-   </div>
-  </div>
- </nav>
- <div id="main" class="wrapper">
-  <div class="main-container p-0">
-   <div class="bg-white d-flex flex-wrap justify-content-between px-3 py-2 shadow-bottom mb-3">
-    <div class="topHead w-100 d-inline-block">
-     <div class="row">
-      <div class="col-4 col-md-6 d-flex justify-content-between">
-       <div class="d-flex align-items-center">
-        <a href="javascript:void(0);" class="text-secondary">
-         <span class="material-icons-outlined mr-1"> arrow_back</span>
+        <a class="navbar-brand mr-2" href="#"><img src="../static/backend/images/placeholderLogo.svg" width="150"
+            class="img-responsive d-none d-lg-block" alt="NoPaperForms">
+          <img src="../static/backend/images/mobile-logo.png" class="img-responsive d-block d-lg-none d-flex ml-1"
+            height="32" alt="NoPaperForms">
         </a>
-        <h3 class="h5 d-inline-block my-0">API / Integration Logs - <span
-          class="text-muted font-weight-normal f-14">widget</span></h3>
-       </div>
-      </div>
-      <div class="col-8 col-md-6 pl-0 pl-md-3 d-flex align-items-end justify-content-end">
-       <div class="position-relative" id="expendedSearch">
-        <a href="javascript:void(0);"
-         class="expended-search-link d-flex border-0 p-1 ml-2 hover-effect rounded-circle text-secondary"
-         data-toggle="tooltip" data-placement="bottom" data-container="body" title="" data-trigger="hover"
-         data-original-title="Search">
-         <span class="material-icons-outlined"> search </span>
-        </a>
-        <div class="expended-search-wrpper position-absolute">
-         <div class="row no-gutters border" id="searchBox">
-          <div class="col-7">
-           <div class="expandSearch">
-            <div class="form-group has-search mb-0 py-0 bmd-form-group">
-             <span class="material-icons search_icon text-muted ml-1">search</span>
-             <input type="search" name="searchticket" id="searchTicket" class="form-control pl-4" placeholder="Search"
-              value="">
-            </div>
-            <div class="validation-message small text-danger" id="search_error">
-            </div>
-           </div>
-          </div>
-          <div class="col-4">
-           <div class="form-group p-0 my-0 rounded-0">
-            <div class="dropdown bootstrap-select form-control">
-             <select name="status" id="search_filter" title="Search By" class="form-control selectpicker"
-              data-style="bg-light pl-2 pr-1 rounded-0" tabindex="-98">
+        <div class="select-box">
+          <div class="dropdown bootstrap-select">
+            <select class="selectpicker" id="number" data-live-search="true" data-style="select-blank"
+              title="Select a number" tabindex="-98">
               <option class="bs-title-option" value=""></option>
-              <option value="ticket_id" {%="" if="" not="" parameters.email="" and="" parameters.mobile="" %}=""
-               selected="" endif="">Name</option>
-              <option value="email">Email</option>
-              <option value="mobile">Role</option>
-             </select>
-             <button type="button" class="btn dropdown-toggle bg-light pl-2 pr-1 rounded-0" data-toggle="dropdown"
-              role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false"
-              data-id="search_filter" title="Name">
+              <option selected="">Select College</option>
+              <option>ABBS College</option>
+              <option>Lovely Pro Univercity</option>
+              <option>ABES College</option>
+              <option>ABBS College</option>
+              <option>Lovely Pro Univercity</option>
+              <option>ABES College</option>
+            </select>
+            <button type="button" class="btn dropdown-toggle select-blank" data-toggle="dropdown" role="combobox"
+              aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" data-id="number"
+              title="Select College">
               <div class="filter-option">
-               <div class="filter-option-inner">
-                <div class="filter-option-inner-inner">Name</div>
-               </div>
+                <div class="filter-option-inner">
+                  <div class="filter-option-inner-inner">Select College</div>
+                </div>
               </div>
-             </button>
-             <div class="dropdown-menu ">
-              <div class="inner show" role="listbox" id="bs-select-2" tabindex="-1">
-               <ul class="dropdown-menu inner show" role="presentation"></ul>
+            </button>
+            <div class="dropdown-menu ">
+              <div class="bs-searchbox"><span class="bmd-form-group"><input type="search" class="form-control"
+                    autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-1"
+                    aria-autocomplete="list"></span></div>
+              <div class="inner show" role="listbox" id="bs-select-1" tabindex="-1">
+                <ul class="dropdown-menu inner show" role="presentation"></ul>
               </div>
-             </div>
             </div>
-           </div>
-           <div class="validation-message small text-danger" id="search_filter_error">
-           </div>
           </div>
-          <div class="col-1 d-flex align-items-center">
-           <a href="javascript:void(0);" onclick="resetSearch();" data-dismiss="search"
-            class="pl-1 py-2 d-flex justify-content-center align-items-center" data-toggle="tooltip"
-            data-placement="bottom" data-container="body" title="" data-trigger="hover" data-original-title="Close">
-            <span class="material-icons-outlined text-secondary"> close </span>
-           </a>
-          </div>
-         </div>
         </div>
-       </div>
-       <a href="javascript:void(0);" id="filterPopupBtn"
-        onclick="openFilter('filterPopup','/backend/s26/143570006165/logs/getDatalogFilters');"
-        class="d-flex border-0 p-1 ml-2 hover-effect rounded-circle text-secondary">
-        <span class="material-icons-outlined" data-toggle="tooltip" data-placement="bottom" data-container="body"
-         title="Filter"> filter_alt
-        </span>
-       </a>
-       <a href="javascript:void(0);" onclick="downloadDataLogs();"
-        class="d-flex border-0 p-1 ml-2 hover-effect rounded-circle text-secondary">
-        <span class="material-icons-outlined" data-toggle="tooltip" data-placement="bottom" data-container="body"
-         title="Download"> file_download </span>
-       </a>
+        <div class="navbar-nav-scroll ml-auto mr-lg-2 close-btn-mobile">
+          <ul class=" navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link hover-effect rounded-circle" href="#" data-toggle="tooltip" data-placement="bottom"
+                title="" data-container="body" data-original-title="Settings">
+                <i class="material-icons">settings</i> </a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link hover-effect rounded-circle" href="javascript:void(0);" data-toggle="tooltip"
+                data-placement="bottom" title="" data-container="body" data-original-title="Help"
+                onclick="zE('webWidget', 'toggle');"><i class="material-icons">help_outline</i></a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link hover-effect rounded-circle" href="#" target="_blank" rel="noopener" title=""
+                data-toggle="modal" data-target="#notification"><i class="material-icons">notifications_none</i></a>
+            </li>
+            <li class="d-sm-block ml-2">
+              <div class="nameInitials">
+                <button type="button" class="btn btn-primary btn-ni rounded-circle dropdown-toggle"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DM
+                </button>
+                <div class="dropdown-menu dropdown-menu-right p-0">
+                  <div class="d-flex p-3 align-items-center">
+                    <div class="mr-2">
+                      <span class="niVal rounded-circle">DM</span>
+                    </div>
+                    <div class="userInfo">
+                      <div class="font-weight-bold">Dhiraj Mishra</div>
+                      <div class="useremail">dhiraj.mishra@nopaperforms.com</div>
+                    </div>
+                  </div>
+                  <div class="p-3 bg-light d-flex justify-content-between">
+                    <a class="btn btn-white btn-sm" href="/users/update-password">Change Password
+                    </a>
+                    <a class="btn btn-white btn-sm" href="/Logout">Sign Out </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-     </div>
+      <div class="collapse navbar-collapse">
+        <aside id="sidebar-wrapper" class="sidebar active">
+          <nav id="sidebar" class="sidebar-mask">
+            <div class="sidebar__inner scrollCustom">
+              <div class="sidebar-quickLinks active" style="display:none;">
+                <div class="pull-left ql">Quick Links</div>
+                <a href="javascript:void(0);" class="sidebarCollapse sidebarClose"><span
+                    class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a>
+              </div>
+              <ul class="list-unstyled components mainList">
+                <li class="active" data-p="0" data-m="98">
+                  <a data-am="98" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#Dashboard"><i class="lineicon-98"></i><span>Dashboard</span></a>
+                  <ul class="collapse list-unstyled" id="Dashboard" data-menu="Dashboard">
+                    <li class="active " data-p="98" data-m="151"><a class="active "
+                        href="/analytics/admin-dashboard">Admin
+                        Dashboard </a>
+                    </li>
+                    <li class="" data-p="98" data-m="72"><a class="" href="/counsellors/dashboard">Counsellor
+                        Dashboard </a>
+                    </li>
+                    <li class="" data-p="98" data-m="154"><a class="" href="/analytics/marketing-dashboard">Marketing
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="" data-p="98" data-m="84"><a class=""
+                        href="/colleges/benchmarking-dashboard">Benchmarking
+                        Dashboard </a>
+                    </li>
+                    <li class="" data-p="98" data-m="86"><a class="" href="/reports/trend-analysis">Trend
+                        Analysis </a>
+                    </li>
+                    <li class="" data-p="98" data-m="87"><a class="" href="/colleges/sqi-dashboard">Student
+                        Quality Index </a>
+                    </li>
+                    <li class="" data-p="98" data-m="106"><a class="" href="/area/agent-dashboard">Agent
+                        Dashboard </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="2">
+                  <a data-am="2" class="clickableClass" data-toggle="collapse" aria-expanded="false" href="#FormDesk"><i
+                      class="lineicon-2"></i><span>FormDesk</span></a>
+                  <ul class="collapse list-unstyled" id="FormDesk" data-menu="FormDesk">
+                    <li class="" data-p="2" data-m="3"><a class="" href="/colleges/create-institute">Create
+                        Institute </a>
+                    </li>
+                    <li class="" data-p="2" data-m="131"><a class="" href="/colleges/manager">Manage
+                        Institute
+                        (New) </a>
+                    </li>
+                    <li class="" data-p="2" data-m="6"><a class="" href="/form/create-form">Create
+                        Form </a>
+                    </li>
+                    <li class="" data-p="2" data-m="132"><a class="" href="/form/manager">Manage
+                        Form (New)
+                      </a>
+                    </li>
+                    <li class="" data-p="2" data-m="49"><a class="" href="/form/csv-mapping-list">Manage CSV
+                        Mapping </a>
+                    </li>
+                    <li class="" data-p="2" data-m="36"><a class="" href="/colleges/list-documents">Manage
+                        Documents </a>
+                    </li>
+                    <li class="" data-p="2" data-m="4"><a class="" href="/colleges/manage-institute">Manage
+                        Institutes </a>
+                    </li>
+                    <li class="" data-p="2" data-m="7"><a class="" href="/form/manage-form">Manage
+                        Forms </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="89">
+                  <a data-am="89" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#LeadsManager"><i class="lineicon-89"></i><span>Leads Manager</span></a>
+                  <ul class="collapse list-unstyled" id="LeadsManager" data-menu="Leads Manager">
+                    <li class="" data-p="89" data-m="30"><a class="" href="/leads/lead-manager">Manage Leads
+                      </a>
+                    </li>
+                    <li class="" data-p="89" data-m="70"><a class="" href="/leads/offline_lead_import_report">Offline
+                        Upload Logs
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="90">
+                  <a data-am="90" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#ApplicationManager"><i class="lineicon-90"></i><span>Application
+                      Manager</span></a>
+                  <ul class="collapse list-unstyled" id="ApplicationManager" data-menu="Application Manager">
+                    <li class="" data-p="90" data-m="8"><a class="" href="/applications/application-manager">Manage
+                        Applications
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="75">
+                  <a data-am="75" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#Marketing"><i class="lineicon-75"></i><span>Marketing</span></a>
+                  <ul class="collapse list-unstyled" id="Marketing" data-menu="Marketing">
+                    <li class="" data-p="75" data-m="93"><a class="" href="/offline/create-offline-list">Upload Raw Data
+                      </a></li>
+                    <li class="" data-p="75" data-m="76"><a class="" href="/offline/list-manager">Manage List
+                      </a>
+                    </li>
+                    <li class="" data-p="75" data-m="77"><a class="" href="/offline/manage-segment">Manage
+                        Segment </a>
+                    </li>
+                    <li class="" data-p="75" data-m="91"><a class="" href="/automation/list-manager">Manage
+                        Automation </a>
+                    </li>
+                    <li class="" data-p="75" data-m="39"><a class=""
+                        href="/communications/communications-log">Communication
+                        Performance </a>
+                    </li>
+                    <li class="" data-p="75" data-m="79"><a class="" href="/offline/import-log">Raw
+                        Data
+                        Upload Logs </a>
+                    </li>
+                    <li class="" data-p="75" data-m="111"><a class=""
+                        href="/communications/communication_transaction_report">Communication
+                        Transaction
+                        Report </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="66">
+                  <a data-am="66" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#CampaignManager"><i class="lineicon-66"></i><span>Campaign
+                      Manager</span></a>
+                  <ul class="collapse list-unstyled" id="CampaignManager" data-menu="Campaign Manager">
+                    <li class="" data-p="66" data-m="67"><a class="" href="/campaign-manager/dashboard">Campaign
+                        Dashboard </a>
+                    </li>
+                    <li class="" data-p="66" data-m="62"><a class="" href="/publishers/managePublisher">Manage
+                        Publishers </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="40">
+                  <a data-am="40" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#QueryManager"><i class="lineicon-40"></i><span>Query Manager</span></a>
+                  <ul class="collapse list-unstyled" id="QueryManager" data-menu="Query Manager">
+                    <li class="" data-p="40" data-m="41"><a class="" href="/query/lists">Manage
+                        Applicant
+                        Queries </a>
+                    </li>
+                    <li class="" data-p="40" data-m="42"><a class="" href="/query/faq-lists">Manage
+                        FAQ </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="56">
+                  <a data-am="56" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#PaymentManager"><i class="lineicon-56"></i><span>Payment
+                      Manager</span></a>
+                  <ul class="collapse list-unstyled" id="PaymentManager" data-menu="Payment Manager">
+                    <li class="" data-p="56" data-m="57"><a class="" href="/discount-coupons/create">Create
+                        Discount </a>
+                    </li>
+                    <li class="" data-p="56" data-m="58"><a class="" href="/discount-coupons/lists">Manage
+                        Discounts </a>
+                    </li>
+                    <li class="" data-p="56" data-m="10"><a class="" href="/voucher">Manage Voucher
+                      </a>
+                    </li>
+                    <li class="" data-p="56" data-m="11"><a class="" href="/voucher/lists">Voucher
+                        Lists </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="32">
+                  <a data-am="32" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#ReportsandAnalytics"><i class="lineicon-32"></i><span>Reports and
+                      Analytics</span></a>
+                  <ul class="collapse list-unstyled" id="ReportsandAnalytics" data-menu="Reports and Analytics">
+                    <li class="" data-p="32" data-m="125">
+                      <a data-am="125" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#Reports"><i class="lineicon-125"></i><span>Reports</span></a>
+                      <ul class="collapse list-unstyled" id="Reports" data-menu="Reports">
+                        <li class="" data-p="125" data-m="35"><a class="" href="/reports/folder-listing">Manage Folder
+                          </a></li>
+                        <li class="" data-p="125" data-m="34"><a class="" href="/reports/list-reports">Reports Manager
+                          </a></li>
+                        <li class="" data-p="125" data-m="33"><a class=""
+                            href="/reports/manage-reports-schedule">Schedule Reports
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="" data-p="32" data-m="126">
+                      <a data-am="126" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#NPFTracker"><i class="lineicon-126"></i><span>NPF Tracker</span></a>
+                      <ul class="collapse list-unstyled" id="NPFTracker" data-menu="NPF Tracker">
+                        <li class="" data-p="126" data-m="81"><a class=""
+                            href="/reports/client-health-monitoring">Client Health
+                            Monitoring </a>
+                        </li>
+                        <li class="" data-p="126" data-m="83"><a class="" href="/reports/finance-monitoring">Finance
+                            Monitoring </a>
+                        </li>
+                        <li class="" data-p="126" data-m="82"><a class="" href="/reports/qa-monitoring">QA
+                            Monitoring </a>
+                        </li>
+                        <li class="" data-p="126" data-m="108"><a class="" href="/datalogs/listings">Mongo
+                            Data Logs </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="19">
+                  <a data-am="19" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#TemplateManager"><i class="lineicon-19"></i><span>Template
+                      Manager</span></a>
+                  <ul class="collapse list-unstyled" id="TemplateManager" data-menu="Template Manager">
+                    <li class="" data-p="19" data-m="63"><a class="" href="/templates/manage-landing-page">Manage
+                        Landing Pages
+                      </a>
+                    </li>
+                    <li class="" data-p="19" data-m="21"><a class="" href="/colleges/manage-templates">Manage
+                        Document Templates </a>
+                    </li>
+                    <li class="" data-p="19" data-m="38"><a class="" href="/communications/manage-template">Manage
+                        Communication
+                        Templates
+                      </a>
+                    </li>
+                    <li class="" data-p="19" data-m="100"><a class="" href="/templates/manage-widget">Manage
+                        Website Widgets </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="43">
+                  <a data-am="43" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#UserAccessControl"><i class="lineicon-43"></i><span>User Access
+                      Control</span></a>
+                  <ul class="collapse list-unstyled" id="UserAccessControl" data-menu="User Access Control">
+                    <li class="" data-p="43" data-m="113"><a class="" href="/users/create">Create
+                        New User
+                      </a>
+                    </li>
+                    <li class="" data-p="43" data-m="114"><a class="" href="/users/user-manager">Manage Users
+                      </a>
+                    </li>
+                    <li class="" data-p="43" data-m="45"><a class="" href="/users/manage-sessions">Users
+                        Sessions </a>
+                    </li>
+                    <li class="" data-p="43" data-m="44"><a class="" href="/users/activity">Users
+                        Activity
+                      </a>
+                    </li>
+                    <li class="" data-p="43" data-m="31"><a class="" href="/users/account-manager">Account
+                        Manager </a>
+                    </li>
+                    <li class="" data-p="43" data-m="15">
+                      <a data-am="15" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#Permission"><i class="lineicon-15"></i><span>Permission</span></a>
+                      <ul class="collapse list-unstyled" id="Permission" data-menu="Permission">
+                        <li class="" data-p="15" data-m="26"><a class="" href="/permissions/colleges-view">Manage
+                            Institute
+                            Permissions
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="51">
+                  <a data-am="51" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#PostApplication"><i class="lineicon-51"></i><span>Post
+                      Application</span></a>
+                  <ul class="collapse list-unstyled" id="PostApplication" data-menu="Post Application">
+                    <li class="" data-p="51" data-m="52"><a class="" href="/reports/generate-list">Add Custom
+                        List </a>
+                    </li>
+                    <li class="" data-p="51" data-m="55"><a class="" href="/reports/interview-manager">Interview
+                        Shortlist </a>
+                    </li>
+                    <li class="" data-p="51" data-m="54"><a class="" href="/reports/merit-list-generator">Meritlist
+                        Generator </a>
+                    </li>
+                    <li class="" data-p="51" data-m="53"><a class="" href="/reports/list-data-normalizer">Data
+                        Normalizer </a>
+                    </li>
+                    <li class="" data-p="51" data-m="101">
+                      <a data-am="101" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#GD-PIManagement"><i class="lineicon-101"></i><span>GD-PI
+                          Management</span></a>
+                      <ul class="collapse list-unstyled" id="GD-PIManagement" data-menu="GD-PI Management">
+                        <li class="" data-p="101" data-m="102"><a class="" href="/gdpi">Venue
+                            City Maximum
+                            Capacity </a>
+                        </li>
+                        <li class="" data-p="101" data-m="103"><a class="" href="/gdpi/plan-gdpi-process/process">Plan
+                            GD-PI Process
+                          </a>
+                        </li>
+                        <li class="" data-p="101" data-m="104"><a class=""
+                            href="/gdpi/gdpi-schedule/manage-venue">Manage Venue </a>
+                        </li>
+                        <li class="" data-p="101" data-m="105"><a class=""
+                            href="/gdpi/allot-venue/allot-venue-and-panel">Allot
+                            Venue and
+                            Panel </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="" data-p="51" data-m="127">
+                      <a data-am="127" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#Scorecard"><i class="lineicon-127"></i><span>Scorecard</span></a>
+                      <ul class="collapse list-unstyled" id="Scorecard" data-menu="Scorecard">
+                        <li class="" data-p="127" data-m="121"><a class="" href="/settings/scoring-panel">Manage
+                            Scorecard </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="" data-p="0" data-m="73">
+                  <a data-am="73" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                    href="#Settings"><i class="lineicon-73"></i><span>Settings</span></a>
+                  <ul class="collapse list-unstyled" id="Settings" data-menu="Settings">
+                    <li class="" data-p="73" data-m="130">
+                      <a data-am="130" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#InstituteConfiguration"><i class="lineicon-130"></i><span>Institute
+                          Configuration</span></a>
+                      <ul class="collapse list-unstyled" id="InstituteConfiguration"
+                        data-menu="Institute Configuration">
+                        <li class="" data-p="130" data-m="107"><a class=""
+                            href="/college-settings/counsellor-allocation-logic">Counsellor
+                            Allocation
+                            Logic </a>
+                        </li>
+                        <li class="" data-p="130" data-m="99"><a class=""
+                            href="/users/manage-registration-fields">Manage
+                            Registration
+                            Fields </a>
+                        </li>
+                        <li class="" data-p="130" data-m="122"><a class=""
+                            href="/colleges/applicant-flow-configuration">Applicant
+                            Flow
+                            Configuration
+                          </a>
+                        </li>
+                        <li class="" data-p="130" data-m="115"><a class="" href="/settings/enrolment-mapping">Enrolment
+                            Mapping </a>
+                        </li>
+                        <li class="" data-p="130" data-m="110"><a class=""
+                            href="/college-settings/lead-upload-setting">Upload Limit
+                            Configuration </a>
+                        </li>
+                        <li class="" data-p="130" data-m="112"><a class="" href="/college-settings/role-limit-list">User
+                            Limit
+                            Configuration </a>
+                        </li>
+                        <li class="" data-p="130" data-m="74"><a class=""
+                            href="/colleges/leadActivitiesAndScoringConfig">Lead
+                            Activities
+                            and Scoring
+                          </a>
+                        </li>
+                        <li class="" data-p="130" data-m="109"><a class=""
+                            href="/college-settings/offline-campaign-tags">Offline
+                            Campaign
+                            Tags </a>
+                        </li>
+                        <li class="" data-p="130" data-m="50"><a class="" href="/colleges/get-purge-data">Purge History
+                          </a></li>
+                        <li class="" data-p="130" data-m="69"><a class=""
+                            href="/campaign-manager/activity-logs">Publisher Mapping
+                            Logs
+                          </a>
+                        </li>
+                        <li class="" data-p="130" data-m="25"><a class="" href="/menu/lists">Menu </a></li>
+                        <li class="" data-p="130" data-m="59"><a class=""
+                            href="/discount-coupons/activity-logs">Discount Logs </a>
+                        </li>
+                        <li class="" data-p="130" data-m="134"><a class=""
+                            href="/college-settings/zone-configuration">Zone
+                            Configuration
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="" data-p="73" data-m="22">
+                      <a data-am="22" class="clickableClass" data-toggle="collapse" aria-expanded="false"
+                        href="#Taxonomy"><i class="lineicon-22"></i><span>Taxonomy</span></a>
+                      <ul class="collapse list-unstyled" id="Taxonomy" data-menu="Taxonomy">
+                        <li class="" data-p="22" data-m="23"><a class="" href="/taxonomies/create-category">Create
+                            Taxonomy </a>
+                        </li>
+                        <li class="" data-p="22" data-m="24"><a class="" href="/taxonomies/manage-category">Manage
+                            Taxonomy </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="" data-p="73" data-m="133"><a class=""
+                        href="/college-settings/connectors-list">Extensions </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+      </div>
     </div>
-   </div>
-   <div class="p-2">
-    <div class="bg-white p-3 rounded position-sticky z-10 shadow-bottom" style="top:50px;">
-     <div class="row">
-      <div class="col-3 font-weight-bold"> Request </div>
-      <div class="col-3 font-weight-bold">Created On</div>
-      <div class="col-2 font-weight-bold">Status</div>
-      <div class="col-3 font-weight-bold">Response</div>
-      <div class="col-1"></div>
-     </div>
-    </div>
-    <div class="bg-white p-0 rounded mt-2 parent-element shadow-bottom">
-     <div class="row align-items-center m-0">
-      <div class="col-3 ">
-       <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
+  </nav>
+  <div id="main" class="wrapper">
+    <div class="main-container p-0">
+      <div class="bg-white d-flex flex-wrap justify-content-between px-3 py-2 shadow-bottom mb-3">
+        <div class="topHead w-100 d-inline-block">
+          <div class="row">
+            <div class="col-4 col-md-6 d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <a href="javascript:void(0);" class="text-secondary">
+                  <span class="material-icons-outlined mr-1"> arrow_back</span>
+                </a>
+                <h3 class="h5 d-inline-block my-0">API / Integration Logs - <span
+                    class="text-muted font-weight-normal f-14">widget</span></h3>
+              </div>
+            </div>
+            <div class="col-8 col-md-6 pl-0 pl-md-3 d-flex align-items-end justify-content-end">
+              <div class="position-relative" id="expendedSearch">
+                <a href="javascript:void(0);"
+                  class="expended-search-link d-flex border-0 p-1 ml-2 hover-effect rounded-circle text-secondary"
+                  data-toggle="tooltip" data-placement="bottom" data-container="body" title="" data-trigger="hover"
+                  data-original-title="Search">
+                  <span class="material-icons-outlined"> search </span>
+                </a>
+                <div class="expended-search-wrpper position-absolute">
+                  <div class="row no-gutters border" id="searchBox">
+                    <div class="col-7">
+                      <div class="expandSearch">
+                        <div class="form-group has-search mb-0 py-0 bmd-form-group">
+                          <span class="material-icons search_icon text-muted ml-1">search</span>
+                          <input type="search" name="searchticket" id="searchTicket" class="form-control pl-4"
+                            placeholder="Search" value="">
+                        </div>
+                        <div class="validation-message small text-danger" id="search_error">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="form-group p-0 my-0 rounded-0">
+                        <div class="dropdown bootstrap-select form-control">
+                          <select name="status" id="search_filter" title="Search By" class="form-control selectpicker"
+                            data-style="bg-light pl-2 pr-1 rounded-0" tabindex="-98">
+                            <option class="bs-title-option" value=""></option>
+                            <option value="ticket_id" {%="" if="" not="" parameters.email="" and="" parameters.mobile=""
+                              %}="" selected="" endif="">Name</option>
+                            <option value="email">Email</option>
+                            <option value="mobile">Role</option>
+                          </select>
+                          <button type="button" class="btn dropdown-toggle bg-light pl-2 pr-1 rounded-0"
+                            data-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox"
+                            aria-expanded="false" data-id="search_filter" title="Name">
+                            <div class="filter-option">
+                              <div class="filter-option-inner">
+                                <div class="filter-option-inner-inner">Name</div>
+                              </div>
+                            </div>
+                          </button>
+                          <div class="dropdown-menu ">
+                            <div class="inner show" role="listbox" id="bs-select-2" tabindex="-1">
+                              <ul class="dropdown-menu inner show" role="presentation"></ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="validation-message small text-danger" id="search_filter_error">
+                      </div>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <a href="javascript:void(0);" onclick="resetSearch();" data-dismiss="search"
+                        class="pl-1 py-2 d-flex justify-content-center align-items-center" data-toggle="tooltip"
+                        data-placement="bottom" data-container="body" title="" data-trigger="hover"
+                        data-original-title="Close">
+                        <span class="material-icons-outlined text-secondary"> close </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:void(0);" id="filterPopupBtn"
+                onclick="openFilter('filterPopup','/backend/s26/143570006165/logs/getDatalogFilters');"
+                class="d-flex border-0 p-1 ml-2 hover-effect rounded-circle text-secondary">
+                <span class="material-icons-outlined" data-toggle="tooltip" data-placement="bottom"
+                  data-container="body" title="Filter"> filter_alt
+                </span>
+              </a>
+              <a href="javascript:void(0);" onclick="downloadDataLogs();"
+                class="d-flex border-0 p-1 ml-2 hover-effect rounded-circle text-secondary">
+                <span class="material-icons-outlined" data-toggle="tooltip" data-placement="bottom"
+                  data-container="body" title="Download"> file_download </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-2">
+        <div class="bg-white p-3 rounded position-sticky z-10 shadow-bottom" style="top:50px;">
+          <div class="row">
+            <div class="col-3 font-weight-bold"> Request </div>
+            <div class="col-3 font-weight-bold">Created On</div>
+            <div class="col-2 font-weight-bold">Status</div>
+            <div class="col-3 font-weight-bold">Response</div>
+            <div class="col-1"></div>
+          </div>
+        </div>
+        <div class="bg-white p-0 rounded mt-2 parent-element shadow-bottom">
+          <div class="row align-items-center m-0">
+            <div class="col-3 ">
+              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
         {"name": "test","email": "test1234@gmail.com","country_dial_code":"+91","mobile":"8888888888"} 
        </pre>
-      </div>
-      <div class="col-3 ">16/09/2022 16:39:06 PM </div>
-      <div class="col-2 "><span class="custom-badge  data-Closed">Success</span></div>
-      <div class="col-3 ">
-       <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
+            </div>
+            <div class="col-3 ">16/09/2022 16:39:06 PM </div>
+            <div class="col-2 "><span class="custom-badge  data-Closed">Success</span></div>
+            <div class="col-3 ">
+              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
         { "code": 200, "message": "Lead has been created successfully.", "status": true, "data": { "lead_id": "{32_char_lead_id}" }}
       </pre>
-      </div>
-      <div class="col-1">
-       <div class="child-element text-md-right">
-        <button type="button"
-         class="btn btn-link d-flex  hover-effect w-11 h-11 p-1 rounded-circle d-flex justify-content-center align-items-center ml-auto"
-         data-toggle="modal" data-target="#mongoLogDetailPopup"><span class="material-icons-outlined"
-          data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-container="body" title="View Data">
-          visibility </span></button>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="bg-white p-0 rounded mt-2 parent-element shadow-bottom">
-     <div class="row align-items-center m-0">
-      <div class="col-3 ">
-       <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
+            </div>
+            <div class="col-1">
+              <div class="child-element text-md-right">
+                <button type="button"
+                  class="btn btn-link d-flex  hover-effect w-11 h-11 p-1 rounded-circle d-flex justify-content-center align-items-center ml-auto"
+                  data-toggle="modal" data-target="#mongoLogDetailPopup"><span class="material-icons-outlined"
+                    data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-container="body"
+                    title="View Data">
+                    visibility </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-0 rounded mt-2 parent-element shadow-bottom">
+          <div class="row align-items-center m-0">
+            <div class="col-3 ">
+              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
         {"name": "test","email": "test1234@gmail.com","country_dial_code":"+91","mobile":"8888888888"} 
        </pre>
-      </div>
-      <div class="col-3 ">16/09/2022 16:39:06 PM </div>
-      <div class="col-2 "><span class="custom-badge  data-Open">Failed</span></div>
-      <div class="col-3 ">
-       <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
+            </div>
+            <div class="col-3 ">16/09/2022 16:39:06 PM </div>
+            <div class="col-2 "><span class="custom-badge  data-Open">Failed</span></div>
+            <div class="col-3 ">
+              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
         { "code": 200, "message": "Lead has been created successfully.", "status": true, "data": { "lead_id": "{32_char_lead_id}" }}
       </pre>
-      </div>
-      <div class="col-1">
-       <div class="child-element text-md-right">
-        <button type="button"
-         class="btn btn-link d-flex  hover-effect w-11 h-11 p-1 rounded-circle d-flex justify-content-center align-items-center ml-auto"
-         data-toggle="modal" data-target="#mongoLogDetailPopup"><span class="material-icons-outlined"
-          data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-container="body" title="View Data">
-          visibility </span></button>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="bg-white p-0 rounded mt-2 parent-element shadow-bottom">
-     <div class="row align-items-center m-0">
-      <div class="col-3 ">
-       <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
+            </div>
+            <div class="col-1">
+              <div class="child-element text-md-right">
+                <button type="button"
+                  class="btn btn-link d-flex  hover-effect w-11 h-11 p-1 rounded-circle d-flex justify-content-center align-items-center ml-auto"
+                  data-toggle="modal" data-target="#mongoLogDetailPopup"><span class="material-icons-outlined"
+                    data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-container="body"
+                    title="View Data">
+                    visibility </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-0 rounded mt-2 parent-element shadow-bottom">
+          <div class="row align-items-center m-0">
+            <div class="col-3 ">
+              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
         {"name": "test","email": "test1234@gmail.com","country_dial_code":"+91","mobile":"8888888888"} 
        </pre>
-      </div>
-      <div class="col-3 ">16/09/2022 16:39:06 PM </div>
-      <div class="col-2 "><span class="custom-badge  data-Open">Failed</span></div>
-      <div class="col-3 ">
-       <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
+            </div>
+            <div class="col-3 ">16/09/2022 16:39:06 PM </div>
+            <div class="col-2 "><span class="custom-badge  data-Open">Failed</span></div>
+            <div class="col-3 ">
+              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
         { "code": 200, "message": "Lead has been created successfully.", "status": true, "data": { "lead_id": "{32_char_lead_id}" }}
       </pre>
-      </div>
-      <div class="col-1">
-       <div class="child-element text-md-right">
-        <button type="button"
-         class="btn btn-link d-flex  hover-effect w-11 h-11 p-1 rounded-circle d-flex justify-content-center align-items-center ml-auto"
-         data-toggle="modal" data-target="#mongoLogDetailPopup"><span class="material-icons-outlined"
-          data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-container="body" title="View Data">
-          visibility </span></button>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="bg-white p-0 rounded mt-2 parent-element shadow-bottom">
-     <div class="row align-items-center m-0">
-      <div class="col-3 ">
-       <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
+            </div>
+            <div class="col-1">
+              <div class="child-element text-md-right">
+                <button type="button"
+                  class="btn btn-link d-flex  hover-effect w-11 h-11 p-1 rounded-circle d-flex justify-content-center align-items-center ml-auto"
+                  data-toggle="modal" data-target="#mongoLogDetailPopup"><span class="material-icons-outlined"
+                    data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-container="body"
+                    title="View Data">
+                    visibility </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-0 rounded mt-2 parent-element shadow-bottom">
+          <div class="row align-items-center m-0">
+            <div class="col-3 ">
+              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
         {"name": "test","email": "test1234@gmail.com","country_dial_code":"+91","mobile":"8888888888"} 
        </pre>
-      </div>
-      <div class="col-3 ">16/09/2022 16:39:06 PM </div>
-      <div class="col-2 "><span class="custom-badge  data-Closed">Success</span></div>
-      <div class="col-3 ">
-       <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
+            </div>
+            <div class="col-3 ">16/09/2022 16:39:06 PM </div>
+            <div class="col-2 "><span class="custom-badge  data-Closed">Success</span></div>
+            <div class="col-3 ">
+              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded h-14 my-1 border" style="white-space:pre-line">
         { "code": 200, "message": "Lead has been created successfully.", "status": true, "data": { "lead_id": "{32_char_lead_id}" }}
       </pre>
+            </div>
+            <div class="col-1">
+              <div class="child-element text-md-right">
+                <button type="button"
+                  class="btn btn-link d-flex  hover-effect w-11 h-11 p-1 rounded-circle d-flex justify-content-center align-items-center ml-auto"
+                  data-toggle="modal" data-target="#mongoLogDetailPopup"><span class="material-icons-outlined"
+                    data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-container="body"
+                    title="View Data">
+                    visibility </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-1">
-       <div class="child-element text-md-right">
-        <button type="button"
-         class="btn btn-link d-flex  hover-effect w-11 h-11 p-1 rounded-circle d-flex justify-content-center align-items-center ml-auto"
-         data-toggle="modal" data-target="#mongoLogDetailPopup"><span class="material-icons-outlined"
-          data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-container="body" title="View Data">
-          visibility </span></button>
-       </div>
-      </div>
-     </div>
     </div>
-   </div>
   </div>
- </div>
- <div class="modal fade offCanvasModal right" id="mongoLogDetailPopup">
-  <div class="modal-dialog modal-lg" role="document">
-   <div class="modal-content h-100">
-    <div class="modal-header border-bottom-blue">
-     <h5 class="modal-title my-0" id="exampleModalLabel">
-      API / Integration Logs Details
-      <!--               <span id="request_id" class="text-muted font-weight-normal"></span>-->
-     </h5>
-     <button type="button" class="close" data-toggle="tooltip" title="" data-placement="left" data-dismiss="modal"
-      aria-label="Close" data-original-title="Click here to close">
-      <span aria-hidden="true">×</span>
-     </button>
-    </div>
-    <div class="modal-body p-0 fullHeight">
-     <div class="d-inline-block w-100" id="purgeDetailsCollapse">
-      <div class="row no-gutters">
-       <div class="col-sm-12 col-md-12">
-        <div class="p-2">
-         <div class="collapse show" id="632459526dd0ffbc261b3b2f" data-toggle="false"
-          data-parent="#purgeDetailsCollapse">
-          <table class="table mb-0">
-           <tbody>
-            <tr class="p-0 hover-effect">
-             <td width="30%" class="align-top border-0 position-relative">Request</td>
-             <td class="border-0">
-              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded " style="white-space:pre-line">
+  <div class="modal fade offCanvasModal right" id="mongoLogDetailPopup">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content h-100">
+        <div class="modal-header border-bottom-blue">
+          <h5 class="modal-title my-0" id="exampleModalLabel">
+            API / Integration Logs Details
+            <!--               <span id="request_id" class="text-muted font-weight-normal"></span>-->
+          </h5>
+          <button type="button" class="close" data-toggle="tooltip" title="" data-placement="left" data-dismiss="modal"
+            aria-label="Close" data-original-title="Click here to close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body p-0 fullHeight context" id="inputText">
+          <input type="text" name="keyword" class="form-control input-sm" id="mark-search" placeholder="Lorem ipsum...">
+          <div class="d-inline-block w-100" id="purgeDetailsCollapse">
+            <div class="row no-gutters">
+              <div class="col-sm-12 col-md-12">
+                <div class="p-2">
+                  <div class="collapse show" id="632459526dd0ffbc261b3b2f" data-toggle="false"
+                    data-parent="#purgeDetailsCollapse">
+                    <table class="table mb-0">
+                      <tbody>
+                        <tr class="p-0 hover-effect">
+                          <td width="30%" class="align-top border-0 position-relative">Request</td>
+                          <td class="border-0">
+                            <pre class="bg-light px-3 py-2 mb-0 w-100 rounded " style="white-space:pre-line">
                {
                 "name": "test",
                 "email": "test1234@gmail.com",
@@ -728,20 +772,20 @@
                 "mobile":"8888888888"
                }
               </pre>
-             </td>
-            </tr>
-            <tr class="p-0 hover-effect">
-             <td width="30%" class="align-top border-0 position-relative">Status</td>
-             <td class="border-0">Success</td>
-            </tr>
-            <tr class="p-0 hover-effect">
-             <td width="30%" class="align-top border-0 position-relative">Created On</td>
-             <td class="border-0">16/09/2022 16:39:06 PM</td>
-            </tr>
-            <tr class="p-0 hover-effect">
-             <td width="30%" class="align-top border-0 position-relative">Response</td>
-             <td class="border-0">
-              <pre class="bg-light px-3 py-2 mb-0 w-100 rounded " style="white-space:pre-line">
+                          </td>
+                        </tr>
+                        <tr class="p-0 hover-effect">
+                          <td width="30%" class="align-top border-0 position-relative">Status</td>
+                          <td class="border-0">Success</td>
+                        </tr>
+                        <tr class="p-0 hover-effect">
+                          <td width="30%" class="align-top border-0 position-relative">Created On</td>
+                          <td class="border-0">16/09/2022 16:39:06 PM</td>
+                        </tr>
+                        <tr class="p-0 hover-effect">
+                          <td width="30%" class="align-top border-0 position-relative">Response</td>
+                          <td class="border-0">
+                            <pre class="bg-light px-3 py-2 mb-0 w-100 rounded " style="white-space:pre-line">
                { 
                 "code": 200, 
                 "message": "Lead has been created successfully.", 
@@ -752,22 +796,67 @@
                  }
                 }
              </pre>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-         </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
       </div>
-     </div>
     </div>
-   </div>
   </div>
- </div>
- <script src="../static/backend/js/core/jquery.min.js"></script>
- <script src="../static/backend/js/core/popper.min.js"></script>
- <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../static/backend/js/core/jquery.min.js"></script>
+  <script src="../static/backend/js/core/popper.min.js"></script>
+  <script src="../static/backend/js/core/bootstrap-material-design.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/mark.js/8.6.0/mark.min.js"></script> -->
+  <style>
+    .highlight,
+    mark {
+      padding: 1px;
+      border-radius: 2px;
+      background-color: yellow;
+    }
+  </style>
+  <script>
+    let markScript = false;
+    var addJs = () => {
+      if(!markScript){
+        var script = document.createElement('script');
+        script.type = "text/javascript";
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js";
+        document.getElementsByTagName('body')[0].appendChild(script);
+        setTimeout(() => {
+          initMarkJs();
+        }, 500);
+      }
+    }
+    $(document).on('keyup', '#mark-search', function(){
+    })
+
+
+    const initMarkJs = () => {
+      var markInstance = new Mark(document.querySelector(".context"));
+      var keywordInput = document.querySelector("input[name='keyword']");
+      function performMark() {
+        var keyword = keywordInput.value;
+        var options = {};
+        markInstance.unmark({
+          done: function () {
+            markInstance.mark(keyword, options);
+          }
+        });
+      };
+
+      keywordInput.addEventListener("input", performMark);
+      markScript = true;
+    }
+
+  </script>
+
 </body>
 
 </html>
