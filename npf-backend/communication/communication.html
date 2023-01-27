@@ -112,6 +112,18 @@
          color: #666;
          background-color: transparent;
       }
+
+      .closeFullscreen {
+         display: none;
+      }
+
+      .fulscreen .closeFullscreen {
+         display: inline-block;
+      }
+
+      .fulscreen .openFullscreen {
+         display: none
+      }
    </style>
 </head>
 
@@ -555,6 +567,12 @@
          <div class="modal-content">
             <div class="modal-header border-bottom-blue">
                <h5 class="modal-title">Bulk Communication</h5>
+               <button class="btn btn-primary mr-5 btn-sm btn-outline-primary openFullscreen"
+                  onclick="openFullscreen();">Full
+                  Screen</button>
+               <button class="btn btn-primary mr-5 btn-sm btn-outline-primary closeFullscreen"
+                  onclick="closeFullscreen();">Close
+                  Screen</button>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                </button>
@@ -711,17 +729,20 @@
                   <div class="col-sm-6 text-left">
                      <div class="actionButtons pl-2">
                         <button class="preview">
-                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Preview" data-trigger="hover">
+                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Preview"
+                              data-trigger="hover">
                               remove_red_eye
                            </span>
                         </button>
                         <button class="schedule">
-                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Schedule" data-trigger="hover">
+                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Schedule"
+                              data-trigger="hover">
                               alarm
                            </span>
                         </button>
                         <button class="testmail">
-                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Send Test Mail" data-trigger="hover">
+                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Send Test Mail"
+                              data-trigger="hover">
                               mail
                            </span>
                         </button>
@@ -918,6 +939,30 @@
       })
 
       $("#communication_modal").modal();
+
+
+      var elem = document.documentElement;
+      function openFullscreen() {
+         if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+            $("#communication_modal").addClass('fulscreen');
+         } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+         } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+         }
+      }
+
+      function closeFullscreen() {
+         if (document.exitFullscreen) {
+            document.exitFullscreen();
+            $("#communication_modal").removeClass('fulscreen');
+         } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+         } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+         }
+      }
    </script>
 </body>
 
