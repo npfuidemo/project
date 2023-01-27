@@ -43,8 +43,9 @@
 
       .lineInput input,
       .lineInput select,
-      .lineInput.btn.dropdown-toggle {
-         border: 0;
+      .lineInput.btn.dropdown-toggle,
+      .lineInput .bootstrap-select .dropdown-toggle {
+         border: 0 !important;
          outline: 0;
          width: 100%;
          font-size: 14px;
@@ -57,7 +58,7 @@
 
       .cc_bcc {
          position: absolute;
-         top: 0px;
+         top: 10px;
          right: 10px;
       }
 
@@ -101,14 +102,15 @@
          color: #4c79dc !important;
          border-bottom: 2px solid #4c79dc !important;
       }
-      .actionButtons button{
-         border:0;
-         outline:0;
-         padding:0 5px!important;
-         vertical-align:middle;
-         box-shadow:none;
-         color:#666;
-         background-color:transparent;
+
+      .actionButtons button {
+         border: 0;
+         outline: 0;
+         padding: 0 5px !important;
+         vertical-align: middle;
+         box-shadow: none;
+         color: #666;
+         background-color: transparent;
       }
    </style>
 </head>
@@ -580,14 +582,22 @@
                         <div class="col-sm-6  lineInput">
                            <label class="position-relative">From</label>
                            <div class="form-group pt-0 mb-0 bmd-form-group">
-                              <input type="text" placeholder="Enter from email">
+                              <select name="" id="" class="selectpicker w-100"
+                                 data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
+                                 title="Enter From Mail" data-virtual-scroll="false" data-size="5">
+                                 <option value="">vipin.t@nopaperforms.com</option>
+                              </select>
                            </div>
                         </div>
 
                         <div class="col-sm-6  lineInput position-relative">
                            <label class="position-relative">To</label>
-                           <div class="form-group pt-0 mb-0 bmd-form-group">
-                              <input type="text" placeholder="Enter to email">
+                           <div class="form-group pt-0 mb-0 bmd-form-group" style="width:90%;">
+                              <select name="" id="" class="selectpicker w-100"
+                                 data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
+                                 title="Send T0" data-virtual-scroll="false" data-size="5">
+                                 <option value="">vipin.t@nopaperforms.com</option>
+                              </select>
                            </div>
                            <span class="cc_bcc">
                               <button type="button" data-toggle="collapse" data-target="#ccmail" aria-expanded="false"
@@ -623,10 +633,10 @@
                         <div class="col-sm-6  lineInput">
                            <label class="position-relative">Predefined Template</label>
                            <div class="form-group pt-0 mb-0 bmd-form-group">
-                              <select name="" id="" class="form">
-                                 <option value="">
-                                    Select Predefined Template
-                                 </option>
+                              <select name="" id="" class="selectpicker w-100"
+                                 data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
+                                 title="Select Predifined Template" data-virtual-scroll="false" data-size="5">
+                                 <option value="">Template</option>
                               </select>
                            </div>
                         </div>
@@ -642,8 +652,10 @@
                         <div class="col-sm-6  lineInput">
                            <label class="position-relative">Campaign Type</label>
                            <div class="form-group pt-0 mb-0 bmd-form-group">
-                              <select name="" id="" class="form-control">
-                                 <option value="">Select Campaign Type</option>
+                              <select name="" id="" class="selectpicker w-100"
+                                 data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
+                                 title="Select Campaign Type" data-virtual-scroll="false" data-size="5">
+                                 <option value="">Campaign</option>
                               </select>
                            </div>
                         </div>
@@ -651,37 +663,75 @@
 
                         <div class="col-sm-12 mt-2">
                            <div id="editor-container" class="unlayer-editor" style="height:450px;"></div>
+                        </div>
 
+                        <div class="bg-light w-100 p-3 mb-5">
+                           <h6>Scheduled</h6>
+                           <div class="row">
+                              <div class="col-md-8">
+                                 <div class="row">
+                                    <div class="col-sm-8 col-md-9">
+                                       <div class="form-group pt-0 mb-0 bmd-form-group">
+                                          <input type="text" placeholder="Select Date & Time" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-3">
+                                       <button type="button" class="btn btn-line-secondary btn-sm">Cancel</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="bg-light w-100 p-3">
+                           <h6>Send Test Email</h6>
+                           <div class="row">
+                              <div class="col-md-8">
+                                 <div class="row">
+                                    <div class="col-sm-6 col-md-7">
+                                       <div class="form-group pt-0 mb-0 bmd-form-group">
+                                          <input type="text" placeholder="Send Test Email" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-5">
+                                       <button type="button" class="btn btn-line-secondary btn-sm">Cancel</button>
+                                       <button type="button" class="btn btn-primary btn-sm">Send Email</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
             <div class="modal-footer pl-0">
-               <div class="no-gutters row w-100">
+               <div class="align-items-center d-flex justify-content-center no-gutters row w-100">
                   <div class="col-sm-6 text-left">
                      <div class="actionButtons pl-2">
-                        <button class="preview" data-toggle="tooltip" title="Preview">
-                           <span class="material-icons-outlined">
+                        <button class="preview">
+                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Preview" data-trigger="hover">
                               remove_red_eye
                            </span>
                         </button>
                         <button class="schedule">
-                           <span class="material-icons-outlined" data-toggle="tooltip" title="Schedule">
+                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Schedule" data-trigger="hover">
                               alarm
                            </span>
                         </button>
                         <button class="testmail">
-                           <span class="material-icons-outlined" data-toggle="tooltip" title="Send Test Mail">
+                           <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Send Test Mail" data-trigger="hover">
                               mail
                            </span>
                         </button>
 
-                        <button class="attachement">
-                           <span class="material-icons-outlined" data-toggle="tooltip" title="Attachement">
-                              attach_file
-                           </span>
-                        </button>
+                        <label for="attachment" class="fileBrowseCustom text-muted p-2 mx-2 h5 my-0" role="button"
+                           tabindex="0" data-toggle="tooltip" title="Attachement" data-trigger="hover">
+                           <i class="fa fa-paperclip" aria-hidden="true"></i>
+                           <input type="file" name="attachment" class="sr-only" id="attachment">
+                        </label>
+
                      </div>
                   </div>
                   <div class="col-sm-6 text-right">
