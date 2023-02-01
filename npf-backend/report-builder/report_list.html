@@ -18,8 +18,8 @@
    <style>
       .fieldTypeRadio {
          position: relative;
-         overflow:hidden;
-         cursor:pointer;
+         overflow: hidden;
+         cursor: pointer;
       }
 
       .fieldTypeRadio input[type="radio"] {
@@ -29,7 +29,9 @@
       }
 
       .fieldTypeRadio input[type="radio"]:checked+.activeBackground {
-         background:#bfcff2;
+         background: #e1e9f9;
+         border: 1px dashed #4c79dc;
+         border-radius: 8px;
          position: absolute;
          left: 0;
          width: 100%;
@@ -37,9 +39,15 @@
          z-index: 0;
       }
 
-      .fieldTypeRadio .content{
-         position:relative;
-         z-index:99;
+      .fieldTypeRadio .content {
+         position: relative;
+         z-index: 99;
+      }
+      .fieldTypeRadio input[type="radio"]:checked+.activeBackground+.content{
+         color: #4c79dc !important;
+      }
+      .fieldTypeRadio input[type="radio"]:checked+.activeBackground+.content p{
+         color: #4c79dc !important;
       }
    </style>
 </head>
@@ -1072,11 +1080,11 @@
                         <input type="radio" name="fieldType" id="leadApplicationField" value="" checked>
                         <span class="activeBackground"></span>
                         <div class="content text-center">
-                           <h5 class="fs-15">Lead/Application</h5>
-                           <span class="material-icons-outlined fs-3xl">
+                           <span class="material-icons-outlined fs-3xl mt-2">
                               leaderboard
                            </span>
-                           <p class="text-center">
+                           <h5 class="fs-15 mb-0">Lead/Application</h5>
+                           <p class="text-center  text-secondary font-weight-light">
                               Choose the value or attributes you want to measure in this report.
                            </p>
                         </div>
@@ -1088,18 +1096,19 @@
                         <input type="radio" name="fieldType" id="opportinutyField" value="">
                         <span class="activeBackground"></span>
                         <div class="content text-center">
-                           <h5 class="fs-15">Opportinuty</h5>
-                           <span class="material-icons-outlined fs-3xl">
+                           <span class="material-icons-outlined fs-3xl  mt-2">
                               assessment
-                              </span>
-                           <p class="text-center">
+                           </span>
+                           <h5 class="fs-15 mb-0">Opportinuty</h5>
+                           <p class="text-center  text-secondary font-weight-light">
                               Choose the value or attributes you want to measure in this report.
                            </p>
                         </div>
                      </label>
                   </div>
                </div>
-               <p class="mt-3 text-center text-secondary"><span class="muted">Note:</span>Once you Select the architecture, you will
+               <p class="mt-3 text-center text-secondary"><span class="muted">Note:</span>Once you Select the
+                  architecture, you will
                   not abale to edit it again.</p>
             </div>
             <div class="modal-footer">
