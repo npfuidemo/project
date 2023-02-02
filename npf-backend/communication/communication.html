@@ -16,37 +16,33 @@
    <link href="../static/backend/css/main.css" rel="stylesheet" />
    <style>
       .editorTabs {
-         margin: 0 0 8px 0;
+         margin: 0 0 8px 20px;
          padding: 0;
-      }
-
-      .editorTabs li.nav-item {
-         margin-right: 15px;
+         border: 1px solid #e1e9f9 !important;
+         border-radius: 5px;
+         overflow: hidden;
       }
 
       .editorTabs li.nav-item .nav-link,
       .editorTabs li.nav-item .nav-link,
       .editorTabs li.nav-item .nav-link:focus,
       .editorTabs li.nav-item .nav-link:hover {
-         color: #000 !important;
+         color: #666 !important;
          text-transform: capitalize;
          cursor: pointer;
-         padding: 2px 10px;
-         font-size:10px;
-         letter-spacing:.3px;
-         border:1px solid #4c79dc!important;
-         border-radius: 5px;
+         padding: 4px 10px 5px 10px;
+         letter-spacing: .3px;
+
       }
 
       .editorTabs li.nav-item .nav-link.active {
-         background: #4c79dc !important;
-         color: #fff !important;
-         
+         background: #e1e9f9 !important;
+         color: #4c79dc !important;
       }
 
-      .remove-file{
-         right:5px;
-         top:5px;
+      .remove-file {
+         right: 5px;
+         top: 5px;
       }
 
       .modal.fulscreen .modal-dialog.modal-xlg {
@@ -650,10 +646,10 @@
 
                         <div class="col-sm-6  lineInput position-relative">
                            <label class="position-relative">To</label>
-                           <div class="form-group pt-0 mb-0 bmd-form-group" style="width:90%;">
+                           <div class="form-group pt-0 mb-0 bmd-form-group" style="width:80%;">
                               <select name="" id="" class="selectpicker w-100"
                                  data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
-                                 title="Send T0" data-virtual-scroll="false" data-size="5">
+                                 title="Send To" data-virtual-scroll="false" data-size="5">
                                  <option value="">vipin.t@nopaperforms.com</option>
                               </select>
                            </div>
@@ -666,6 +662,10 @@
                                  aria-controls="bccmail">
                                  BCC
                               </button>
+                              <span class="material-icons-outlined fs-15 text-gray" data-toggle="tooltip"
+                                 title="Add CC & BCC mail id" data-placement="bottom">
+                                 info
+                              </span>
                            </span>
                         </div>
                         <div class="col-sm-6 lineInput collapse" id="ccmail">
@@ -729,6 +729,7 @@
                            </div>
                         </div>
                         <div class="col-sm-6  lineInput text-md-right">
+                           <label class="position-relative">Editor Type</label>
                            <ul class="nav nav-tabs editorTabs" id="myTab" role="tablist">
                               <li class="nav-item" role="presentation">
                                  <button class="nav-link active" id="advancedEditor-tab" data-toggle="tab"
@@ -752,10 +753,11 @@
                               <div id="editor-container" class="unlayer-editor" style="height:450px;"></div>
                            </div>
                            <div class="tab-pane fade" id="plainTextEditor" role="tabpanel"
-                              aria-labelledby="plainTextEditor-tab"> 
-                                 <div class="w-100">
-                                    <textarea name="" class="editor-container form-control  w-100">Plain Text  Editor</textarea>
-                                 </div> 
+                              aria-labelledby="plainTextEditor-tab">
+                              <div class="w-100">
+                                 <textarea name=""
+                                    class="editor-container form-control  w-100">Plain Text  Editor</textarea>
+                              </div>
                            </div>
                         </div>
 
@@ -773,7 +775,8 @@
                                        </div>
                                     </div>
                                     <div class="col-sm-4 col-md-3">
-                                       <button type="button" class="btn btn-line-secondary btn-sm" onclick="cancelSchedule()">Cancel</button>
+                                       <button type="button" class="btn btn-line-secondary btn-sm"
+                                          onclick="cancelSchedule()">Cancel</button>
                                     </div>
                                  </div>
                               </div>
@@ -792,7 +795,8 @@
                                        </div>
                                     </div>
                                     <div class="col-sm-6 col-md-5">
-                                       <button type="button" class="btn btn-line-secondary btn-sm" onclick="cancelTestMail()">Cancel</button>
+                                       <button type="button" class="btn btn-line-secondary btn-sm"
+                                          onclick="cancelTestMail()">Cancel</button>
                                        <button type="button" class="btn btn-primary btn-sm">Send Email</button>
                                     </div>
                                  </div>
@@ -807,7 +811,10 @@
                                  <div class="row">
                                     <div class="col-sm-10  lineInput position-relative">
                                        <small class="fileName">Show Attached files with extensions</small>
-                                       <button id="removeFileBtn" class="bg-transparent btn p-0 position-absolute remove-file" data-toggle="tooltip" data-placement="left" data-container="body" title="" data-trigger="hover" data-original-title="Remove">
+                                       <button id="removeFileBtn"
+                                          class="bg-transparent btn p-0 position-absolute remove-file"
+                                          data-toggle="tooltip" data-placement="left" data-container="body" title=""
+                                          data-trigger="hover" data-original-title="Remove">
                                           <i class="text-danger fa fa-trash-o"></i>
                                        </button>
                                     </div>
@@ -852,7 +859,8 @@
                   </div>
                   <div class="col-sm-6 text-right">
                      <button type="button" class="btn btn-primary btn-sm" id="sendTestMailBtn">Send Now</button>
-                     <button type="button" class="btn btn-primary btn-sm d-none" id="schedule_button">Schedule Now</button>
+                     <button type="button" class="btn btn-primary btn-sm d-none" id="schedule_button">Schedule
+                        Now</button>
                   </div>
                </div>
             </div>
