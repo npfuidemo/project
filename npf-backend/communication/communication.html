@@ -1036,6 +1036,7 @@
       function cancelSchedule() {
          $("#scheduleBox").addClass('d-none');
          $("#schedule_button").addClass('d-none');
+         $("#sendTestMailBtn").removeClass('d-none');
       }
 
 
@@ -1050,7 +1051,8 @@
 
       function cancelTestMail() {
          $("#sendTestMailBox").addClass('d-none');
-         $("#sendTestMailBtn").addClass('d-none');
+         $("#sendTestMailBtn").removeClass('d-none');
+         $("#schedule_button").addClass('d-none');
       }
 
 
