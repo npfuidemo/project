@@ -2454,7 +2454,7 @@
   </div>
 
   <div tabindex="-1" data-backdrop="static" class="modal fade" id="teliphonyVendorList">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="left:0px">
       <div class="modal-content">
         <div class="modal-header offCanvasModalheader">
           <h4 class="modal-title" id="alertTitle">Telephony Vendor List</h4>
@@ -2463,23 +2463,39 @@
         </div>
         <div class="modal-body padding-bottom-5rem">
           <p class="mute">You are free to choose the vendor you want to call.</p>
-          <div class="border-bottom padding-1rem row">
-            <div class="col-sm-6">Ozonetel</div>
-            <div class="col-sm-6">
-              <a href="#" class="align-items-center d-flex justify-content text-decoration-none fs13">
+          <div class="border-bottom mb-1 padding-bottom-2rem row">
+            <div class="col-sm-4">Ozonetel</div>
+            <div class="col-sm-3">
+              <span class="toggle__checkbox toggle__checkbox_smaller">
+                <input type="checkbox" name="Ozonetelcheck" value="1" id="1" checked="checked"> 
+                <label data-id="1" class="dash_2 " for="1">Toggle</label>
+              </span>
+            </div>
+            <div class="col-sm-5 text-right">
+              <a href="#" class="align-items-center d-flex justify-content-end text-decoration-none fs13 mt-2">
                 <span class="material-icons-outlined fs13">
-              call</span>&nbsp;Click Here</a>
+                  call</span>&nbsp;Click Here</a>
             </div>
           </div>
 
-          <div class="padding-1rem row">
-            <div class="col-sm-6">Knowlarity</div>
-            <div class="col-sm-6">
-              <a href="#" class="align-items-center d-flex justify-content text-decoration-none fs13">
+          <div class="mb-1 padding-bottom-2rem row">
+            <div class="col-sm-4">Amyeo</div>
+            <div class="col-sm-3">
+              <span class="toggle__checkbox toggle__checkbox_smaller">
+                <input type="checkbox" name="ameyo" disabled value="1" id="2"> 
+                <label data-id="1" class="dash_2 " for="2">Toggle</label>
+              </span>
+            </div>
+            <div class="col-sm-5 text-right">
+              <a href="#" class="align-items-center d-flex justify-content-end text-decoration-none fs13 mt-2">
                 <span class="material-icons-outlined fs13">
-              call</span>&nbsp;Click Here</a>
+                  call</span>&nbsp;Click Here</a>
             </div>
           </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary-blue">Cancel</button>
+          <button class="btn btn-fill-blue">Save</button>
         </div>
       </div>
     </div>
@@ -2493,4 +2509,5 @@
     $('#teliphonyVendorList').modal();
   </script>
 </body>
+
 </html>
