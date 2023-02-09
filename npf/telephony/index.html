@@ -2468,11 +2468,11 @@
             <div class="col-sm-3">
               <span class="toggle__checkbox toggle__checkbox_smaller">
                 <input type="checkbox" name="Ozonetelcheck" value="1" id="1" checked="checked"> 
-                <label data-id="1" class="dash_2 " for="1">Toggle</label>
+                <label data-id="1" class="dash_2 " for="1" data-toggle="tooltip" data-placement="bottom" title="Specified default by selecting the toggle button, only one vendor may be set as the default caller.">Toggle</label>
               </span>
             </div>
             <div class="col-sm-5 text-right">
-              <a href="#" class="align-items-center d-flex justify-content-end text-decoration-none fs13 mt-2">
+              <a href="#" class="align-items-center d-flex justify-content-end text-decoration-none fs13 mt-2" data-toggle="tooltip" data-placement="bottom" title="You can start the call by clicking here.">
                 <span class="material-icons-outlined fs13">
                   call</span>&nbsp;Click Here</a>
             </div>
@@ -2483,11 +2483,11 @@
             <div class="col-sm-3">
               <span class="toggle__checkbox toggle__checkbox_smaller">
                 <input type="checkbox" name="ameyo" disabled value="1" id="2"> 
-                <label data-id="1" class="dash_2 " for="2">Toggle</label>
+                <label data-id="1" class="dash_2" for="2" data-toggle="tooltip" data-placement="bottom" title="Specified default by selecting the toggle button, only one vendor may be set as the default caller.">Toggle</label>
               </span>
             </div>
             <div class="col-sm-5 text-right">
-              <a href="#" class="align-items-center d-flex justify-content-end text-decoration-none fs13 mt-2">
+              <a href="#" class="align-items-center d-flex justify-content-end text-decoration-none fs13 mt-2" data-toggle="tooltip" data-placement="bottom" title="You can start the call by clicking here.">
                 <span class="material-icons-outlined fs13">
                   call</span>&nbsp;Click Here</a>
             </div>
@@ -2507,6 +2507,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
   <script>
     $('#teliphonyVendorList').modal();
+    $('[data-toggle="tooltip"]').tooltip();
   </script>
 </body>
 
