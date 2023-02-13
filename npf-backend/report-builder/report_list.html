@@ -15,6 +15,41 @@
    <!-- CSS Files -->
    <link href="../static/backend/css/main.css" rel="stylesheet" />
    <link href="../static/backend/css/reportBuilder.css" rel="stylesheet" />
+   <style>
+      .fieldTypeRadio {
+         position: relative;
+         overflow: hidden;
+         cursor: pointer;
+      }
+
+      .fieldTypeRadio input[type="radio"] {
+         position: absolute;
+         opacity: 0;
+         outline: none;
+      }
+
+      .fieldTypeRadio input[type="radio"]:checked+.activeBackground {
+         background: #e1e9f9;
+         border: 1px dashed #4c79dc;
+         border-radius: 8px;
+         position: absolute;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 0;
+      }
+
+      .fieldTypeRadio .content {
+         position: relative;
+         z-index: 99;
+      }
+      .fieldTypeRadio input[type="radio"]:checked+.activeBackground+.content{
+         color: #4c79dc !important;
+      }
+      .fieldTypeRadio input[type="radio"]:checked+.activeBackground+.content p{
+         color: #4c79dc !important;
+      }
+   </style>
 </head>
 
 <body class="dark-mode">
@@ -1025,6 +1060,64 @@
       </div>
    </div>
 
+
+   <div class="modal fade  popup-customization" id="chooseFieldType" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+         <div class="modal-content h-100">
+            <div class="modal-header border-bottom-blue">
+               <h5 class="modal-title my-0 text-center">Report Builder field type selection</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip"
+                  data-placement="left" title="" data-original-title="Click here to close">
+                  <span aria-hidden="true">×</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <h6 class="mt-0">Choose a report architecture</h6>
+               <div class="row">
+                  <div class="col-sm-6">
+                     <label class="align-items-center card d-flex justify-content-center mt-0 p-2 fieldTypeRadio"
+                        for="leadApplicationField">
+                        <input type="radio" name="fieldType" id="leadApplicationField" value="" checked>
+                        <span class="activeBackground"></span>
+                        <div class="content text-center">
+                           <span class="material-icons-outlined fs-3xl mt-2">
+                              leaderboard
+                           </span>
+                           <h5 class="fs-15 mb-0">Lead/Application</h5>
+                           <p class="text-center  text-secondary font-weight-light">
+                              Choose the value or attributes you want to measure in this report.
+                           </p>
+                        </div>
+                     </label>
+                  </div>
+                  <div class="col-sm-6">
+                     <label class="align-items-center card d-flex justify-content-center mt-0 p-2 fieldTypeRadio"
+                        for="opportinutyField">
+                        <input type="radio" name="fieldType" id="opportinutyField" value="">
+                        <span class="activeBackground"></span>
+                        <div class="content text-center">
+                           <span class="material-icons-outlined fs-3xl  mt-2">
+                              assessment
+                           </span>
+                           <h5 class="fs-15 mb-0">Opportinuty</h5>
+                           <p class="text-center  text-secondary font-weight-light">
+                              Choose the value or attributes you want to measure in this report.
+                           </p>
+                        </div>
+                     </label>
+                  </div>
+               </div>
+               <p class="mt-3 text-center text-secondary"><span class="muted">Note:</span>Once you Select the
+                  architecture, you will
+                  not abale to edit it again.</p>
+            </div>
+            <div class="modal-footer">
+               <a href="reportBuilderNoreport.html" class="ml-2 btn btn-sm btn-primary">Next</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
    <!--  Core JS Files  -->
    <script src="../static/backend/js/core/jquery.min.js"></script>
    <script src="../static/backend/js/core/popper.min.js"></script>
@@ -1052,7 +1145,7 @@
 
    <script>
 
-      $("#addtoDashboardPopup").modal();
+      $("#chooseFieldType").modal();
 
 
       $(".toggletag a.basicTemplateTag").click(function () {

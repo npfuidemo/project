@@ -15,6 +15,41 @@
    <!-- CSS Files -->
    <link href="../static/backend/css/main.css" rel="stylesheet" />
    <style>
+      .editorTabs {
+         margin: 0 0 8px 20px;
+         padding: 0;
+         border: 1px solid #e1e9f9 !important;
+         border-radius: 5px;
+         overflow: hidden;
+      }
+
+      .editorTabs li.nav-item .nav-link,
+      .editorTabs li.nav-item .nav-link,
+      .editorTabs li.nav-item .nav-link:focus,
+      .editorTabs li.nav-item .nav-link:hover {
+         color: #666 !important;
+         text-transform: capitalize;
+         cursor: pointer;
+         padding: 4px 10px 5px 10px;
+         letter-spacing: .3px;
+
+      }
+
+      .editorTabs li.nav-item .nav-link.active {
+         background: #e1e9f9 !important;
+         color: #4c79dc !important;
+      }
+
+      .remove-file {
+         right: 5px;
+         top: 5px;
+      }
+
+      .modal.fulscreen .modal-dialog.modal-xlg {
+         width: calc(100% - 45px);
+         max-width: calc(100% - 45px);
+      }
+
       .lineInput {
          display: flex;
          align-items: center;
@@ -87,8 +122,9 @@
       }
 
       .icontabs {
-         margin: 0;
+         margin: 0 -15px;
          padding: 0;
+         border-bottom: 1px solid #f2f2f2;
       }
 
       .icontabs li .nav-link {
@@ -594,15 +630,15 @@
                      </div>
                   </div>
                </div>
-               <div class="tab-content pt-3">
+               <div class="tab-content">
                   <div class="tab-pane fade show active" id="email" role="tabpanel" aria-labelledby="email-tab">
                      <div class="row">
                         <div class="col-sm-6  lineInput">
                            <label class="position-relative">From</label>
                            <div class="form-group pt-0 mb-0 bmd-form-group">
-                              <select name="" id="" class="selectpicker w-100"
-                                 data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
-                                 title="Enter From Mail" data-virtual-scroll="false" data-size="5">
+                              <select name="option_list" id="" class="selectpicker w-100" data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true" data-selected-text-format="count > 1" title="Nothing Selected" data-virtual-scroll="false" multiple="">
+                                 <option value="">vipin.t@nopaperforms.com</option>
+                                 <option value="">vipin.t@nopaperforms.com</option>
                                  <option value="">vipin.t@nopaperforms.com</option>
                               </select>
                            </div>
@@ -610,10 +646,10 @@
 
                         <div class="col-sm-6  lineInput position-relative">
                            <label class="position-relative">To</label>
-                           <div class="form-group pt-0 mb-0 bmd-form-group" style="width:90%;">
+                           <div class="form-group pt-0 mb-0 bmd-form-group" style="width:80%;">
                               <select name="" id="" class="selectpicker w-100"
                                  data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
-                                 title="Send T0" data-virtual-scroll="false" data-size="5">
+                                 title="Send To" data-virtual-scroll="false" data-size="5">
                                  <option value="">vipin.t@nopaperforms.com</option>
                               </select>
                            </div>
@@ -626,12 +662,23 @@
                                  aria-controls="bccmail">
                                  BCC
                               </button>
+                              <span class="material-icons-outlined fs-12" data-toggle="tooltip"
+                                 title="Add CC & BCC mail id" data-placement="bottom">
+                                 info
+                              </span>
                            </span>
                         </div>
                         <div class="col-sm-6 lineInput collapse" id="ccmail">
                            <label class="position-relative">CC</label>
                            <div class="form-group pt-0 mb-0 bmd-form-group">
-                              <input type="text" placeholder="Enter cc mail id">
+                              <div class="form-group pt-0 mb-0 bmd-form-group">
+                                 <select name="" id="" class="selectpicker w-100"
+                                    data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
+                                    title="Select Email(CC)" data-virtual-scroll="false" data-size="5">
+                                    <option value="">vipin.t@nopaperforms.com</option>
+                                    <option value="">Other Mail</option>
+                                 </select>
+                              </div>
                            </div>
                         </div>
 
@@ -678,12 +725,53 @@
                            </div>
                         </div>
 
-
-                        <div class="col-sm-12 mt-2">
-                           <div id="editor-container" class="unlayer-editor" style="height:450px;"></div>
+                        <div class="col-sm-6  lineInput">
+                           <label class="position-relative">Use Email Template</label>
+                           <div class="form-group pt-0 mb-0 bmd-form-group">
+                              <select name="" id="" class="selectpicker w-100"
+                                 data-style="px-2 py-1 bg-white border rounded-0" data-live-search="true"
+                                 title="Select Campaign Type" data-virtual-scroll="false" data-size="5">
+                                 <option value="">Use Email Template</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-sm-6  lineInput text-md-right">
+                           <label class="position-relative">Editor Type</label>
+                           <ul class="nav nav-tabs editorTabs" id="myTab" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                 <button class="nav-link active" id="advancedEditor-tab" data-toggle="tab"
+                                    data-target="#advancedEditor" type="button" role="tab"
+                                    aria-controls="advancedEditor" aria-selected="true">Advanced Editor</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                 <button class="nav-link" id="plainTextEditor-tab" data-toggle="tab"
+                                    data-target="#plainTextEditor" type="button" role="tab"
+                                    aria-controls="plainTextEditor" aria-selected="false">Plain Text Editor</button>
+                              </li>
+                           </ul>
                         </div>
 
-                        <div class="bg-light w-100 p-3 mb-5">
+
+
+
+                        <div class="tab-content w-100" id="myTabContent">
+                           <div class="tab-pane fade show active" id="advancedEditor" role="tabpanel"
+                              aria-labelledby="advancedEditor-tab">
+                              <div id="editor-container" class="unlayer-editor" style="height:450px;"></div>
+                           </div>
+                           <div class="tab-pane fade" id="plainTextEditor" role="tabpanel"
+                              aria-labelledby="plainTextEditor-tab">
+                              <div class="w-100">
+                                 <textarea name=""
+                                    class="editor-container form-control  w-100">Plain Text  Editor</textarea>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+
+                        <div class="bg-light w-100 p-3 mb-3 d-none" id="scheduleBox">
                            <h6>Scheduled</h6>
                            <div class="row">
                               <div class="col-md-8">
@@ -694,7 +782,8 @@
                                        </div>
                                     </div>
                                     <div class="col-sm-4 col-md-3">
-                                       <button type="button" class="btn btn-line-secondary btn-sm">Cancel</button>
+                                       <button type="button" class="btn btn-line-secondary btn-sm"
+                                          onclick="cancelSchedule()">Cancel</button>
                                     </div>
                                  </div>
                               </div>
@@ -702,7 +791,7 @@
                         </div>
 
 
-                        <div class="bg-light w-100 p-3">
+                        <div class="bg-light w-100 p-3 mb-3 d-none" id="sendTestMailBox">
                            <h6>Send Test Email</h6>
                            <div class="row">
                               <div class="col-md-8">
@@ -713,8 +802,28 @@
                                        </div>
                                     </div>
                                     <div class="col-sm-6 col-md-5">
-                                       <button type="button" class="btn btn-line-secondary btn-sm">Cancel</button>
+                                       <button type="button" class="btn btn-line-secondary btn-sm"
+                                          onclick="cancelTestMail()">Cancel</button>
                                        <button type="button" class="btn btn-primary btn-sm">Send Email</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="w-100 p-3 mb-3 d-none" id="attachedFile">
+                           <h6>Attached File</h6>
+                           <div class="row">
+                              <div class="col-md-8">
+                                 <div class="row">
+                                    <div class="col-sm-10  lineInput position-relative">
+                                       <small class="fileName">Show Attached files with extensions</small>
+                                       <button id="removeFileBtn"
+                                          class="bg-transparent btn p-0 position-absolute remove-file"
+                                          data-toggle="tooltip" data-placement="left" data-container="body" title=""
+                                          data-trigger="hover" data-original-title="Remove">
+                                          <i class="text-danger fa fa-trash-o"></i>
+                                       </button>
                                     </div>
                                  </div>
                               </div>
@@ -734,13 +843,13 @@
                               remove_red_eye
                            </span>
                         </button>
-                        <button class="schedule">
+                        <button class="schedule" onclick="showschedule()">
                            <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Schedule"
                               data-trigger="hover">
                               alarm
                            </span>
                         </button>
-                        <button class="testmail">
+                        <button class="testmail" onclick="showTestMail()">
                            <span class="material-icons-outlined text-muted" data-toggle="tooltip" title="Send Test Mail"
                               data-trigger="hover">
                               mail
@@ -756,7 +865,9 @@
                      </div>
                   </div>
                   <div class="col-sm-6 text-right">
-                     <button type="button" class="btn btn-primary btn-sm">Send Now</button>
+                     <button type="button" class="btn btn-primary btn-sm" id="sendTestMailBtn">Send Now</button>
+                     <button type="button" class="btn btn-primary btn-sm d-none" id="schedule_button">Schedule
+                        Now</button>
                   </div>
                </div>
             </div>
@@ -931,12 +1042,51 @@
    </script>
 
    <script src="https://editor.unlayer.com/embed.js"></script>
+   <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
    <script>
+      function showschedule() {
+         $("#scheduleBox").removeClass('d-none');
+         $("#schedule_button").removeClass('d-none');
+         $("#sendTestMailBox").addClass('d-none');
+         $("#sendTestMailBtn").addClass('d-none');
+         $("#communication_modal .modal-body").animate({ scrollTop: $("#communication_modal .modal-body")[0].scrollHeight }, 1000);
+      }
+
+      function cancelSchedule() {
+         $("#scheduleBox").addClass('d-none');
+         $("#schedule_button").addClass('d-none');
+         $("#sendTestMailBtn").removeClass('d-none');
+      }
+
+
+
+      function showTestMail() {
+         $("#sendTestMailBox").removeClass('d-none');
+         $("#sendTestMailBtn").removeClass('d-none');
+         $("#scheduleBox").addClass('d-none');
+         $("#schedule_button").addClass('d-none');
+         $("#communication_modal .modal-body").animate({ scrollTop: $("#communication_modal .modal-body")[0].scrollHeight }, 1000);
+      }
+
+      function cancelTestMail() {
+         $("#sendTestMailBox").addClass('d-none');
+         $("#sendTestMailBtn").removeClass('d-none');
+         $("#schedule_button").addClass('d-none');
+      }
+
+
       unlayer.init({
          id: 'editor-container',
          projectId: 1234,
          displayMode: 'email'
       })
+
+      CKEDITOR.editorConfig = function (config) {
+         config.language = 'es';
+         config.uiColor = '#F7B42C';
+         config.height = 300;
+         config.toolbarCanCollapse = true;
+      };
 
       $("#communication_modal").modal();
 
