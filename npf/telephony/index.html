@@ -2449,53 +2449,50 @@
       <!--<div class="toggle-button sidebarCollapse"><i class="fa fa-fw fa-angle-left"></i></div>-->
     </nav><!-- Page Content Holder -->
     <div id="content">
-      <a href="#teliphonyVendorList" data-toggle="modal">Call Btn</a>
+      <a href="#telephonyVendorList" data-toggle="modal">Call Btn</a>
     </div>
   </div>
 
-  <div tabindex="-1" data-backdrop="static" class="modal fade" id="teliphonyVendorList">
-    <div class="modal-dialog" style="left:0px">
+  <div tabindex="-1" data-backdrop="static" class="modal fade" id="telephonyVendorList">
+    <div class="modal-dialog customModal" style="left:0px">
       <div class="modal-content">
         <div class="modal-header offCanvasModalheader">
-          <h4 class="modal-title" id="alertTitle">Telephony Vendor List</h4>
-          <button type="button" class="close" data-dismiss="modal" title="Click here to close"><span
-              aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="alertTitle">Confirmation</h4>
+          <button type="button" class="close" data-dismiss="modal" data-toggle="tooltip" data-placement="bottom"
+            title="Click&nbsp;here&nbsp;to&nbsp;close"><span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body padding-bottom-5rem">
-          <p class="mute">You are free to choose the vendor you want to call.</p>
-          <div class="border-bottom mb-1 padding-bottom-2rem row">
-            <div class="col-sm-4">Ozonetel</div>
-            <div class="col-sm-3">
-              <span class="toggle__checkbox toggle__checkbox_smaller">
-                <input type="checkbox" name="Ozonetelcheck" value="1" id="1" checked="checked"> 
-                <label data-id="1" class="dash_2 " for="1" data-toggle="tooltip" data-placement="bottom" title="Specified default by selecting the toggle button, only one vendor may be set as the default caller.">Toggle</label>
-              </span>
-            </div>
-            <div class="col-sm-5 text-right">
-              <a href="#" class="align-items-center d-flex justify-content-end text-decoration-none fs13 mt-2" data-toggle="tooltip" data-placement="bottom" title="You can start the call by clicking here.">
-                <span class="material-icons-outlined fs13">
-                  call</span>&nbsp;Click Here</a>
-            </div>
-          </div>
-
-          <div class="mb-1 padding-bottom-2rem row">
-            <div class="col-sm-4">Amyeo</div>
-            <div class="col-sm-3">
-              <span class="toggle__checkbox toggle__checkbox_smaller">
-                <input type="checkbox" name="ameyo" disabled value="1" id="2"> 
-                <label data-id="1" class="dash_2" for="2" data-toggle="tooltip" data-placement="bottom" title="Specified default by selecting the toggle button, only one vendor may be set as the default caller.">Toggle</label>
-              </span>
-            </div>
-            <div class="col-sm-5 text-right">
-              <a href="#" class="align-items-center d-flex justify-content-end text-decoration-none fs13 mt-2" data-toggle="tooltip" data-placement="bottom" title="You can start the call by clicking here.">
-                <span class="material-icons-outlined fs13">
-                  call</span>&nbsp;Click Here</a>
+          <p class="fw-500 text-center mb-4">Click on the Call icon of the vendor from whom you wish to initiate the
+            call.
+          </p>
+          <div class="row w-100 mt-2">
+            <div class="col-sm-8 col-sm-push-2 vendorList"
+              style="max-height:250px; overflow-y:auto; overflow-x:hidden;">
+              <div class="mt-3 padding-bottom-2rem row">
+                <div class="col-sm-8">Knowlarity</div>
+                <div class="col-sm-4">
+                  <a href="#" class="align-items-center d-flex justify-content-start text-decoration-none fs13 mt-2"
+                    data-toggle="tooltip" data-container=".modal-body" data-placement="bottom"
+                    title="You can start the call by clicking here.">
+                    <span class="material-icons-outlined fs13">
+                      call</span>&nbsp;Click Here</a>
+                </div>
+              </div>
+              <div class="padding-bottom-2rem row">
+                <div class="col-sm-8">Ozonetel</div>
+                <div class="col-sm-4">
+                  <a href="#" class="align-items-center d-flex justify-content-start text-decoration-none fs13 mt-2"
+                    data-toggle="tooltip" data-container=".modal-body" data-placement="bottom"
+                    title="You can start the call by clicking here.">
+                    <span class="material-icons-outlined fs13">
+                      call</span>&nbsp;Click Here</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary-blue">Cancel</button>
-          <button class="btn btn-fill-blue">Save</button>
+          <p class="text-center mt-4 mb-0 mute"><span class="fw-500">Note:</span> To avoid this pop up,please remove
+            your user Configuration from multiple vendor,<br class="hidden-xs">If user details are configured in more
+            thank one telephoney vendor, this Pop up will disapper. </p>
         </div>
       </div>
     </div>
@@ -2506,9 +2503,16 @@
   <script src="js//function.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
   <script>
-    $('#teliphonyVendorList').modal();
+    $('#telephonyVendorList').modal();
     $('[data-toggle="tooltip"]').tooltip();
   </script>
+  <style>
+    @media (min-width:992px) {
+      .customModal {
+        width: 630px;
+      }
+    }
+  </style>
 </body>
 
 </html>
