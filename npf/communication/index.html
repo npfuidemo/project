@@ -2477,15 +2477,16 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="text-center">
-            <h5>Total Email Sent&nbsp;
-              <span class="material-icons-outlined fs13" data-toggle="tooltip" data-placement="bottom"
-                title="Communication Report">
-                info</span>
-            </h5>
-            <p>20</p>
-          </div>
-          <div class="row">
+          <div class="row" id="withBcc">
+            <div class="col-sm-12 text-center">
+              <h5>Total Email Sent&nbsp;
+                <span class="material-icons-outlined fs13" data-toggle="tooltip" data-placement="bottom"
+                  title="Communication Report">
+                  info</span>
+              </h5>
+              <p>20</p>
+            </div>
+
             <div class="col-sm-6">
               <h5 class="text-center"><span class="border-bottom blackborder">CC recipient(s)</span></h5>
               <ul class="list text-muted">
@@ -2500,6 +2501,37 @@
                 <li>mukul.k@nopaperforms.com</li>
               </ul>
             </div>
+          </div>
+
+
+
+          <div id="withoutBcc">
+            <div class="row">
+              <div class="col-sm-5">
+                <h5>Total Email Sent
+                  <span class="material-icons-outlined fs13" data-toggle="tooltip" data-placement="bottom"
+                    title="Communication Report">
+                    info</span>
+                </h5>
+              </div>
+              <div class="col-sm-7 mt-3">
+                <span>20</span>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-5">
+                <h5 class="text-left"><span class="border-bottom blackborder">CC recipient(s)</span></h5>
+              </div>
+              <div class="col-sm-7">
+                <ul class="list text-muted">
+                  <li>aman.khatri@nopaperforms.com</li>
+                  <li>satyjit.s@nopaperforms.com</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
