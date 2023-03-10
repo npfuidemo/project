@@ -31,9 +31,9 @@ table.pricing-table {
     }
 
     &:nth-child(5) {
-      color: $fifteenth;
-      background: lighten($fifteenth, 18%);
-      border-bottom: 1px solid lighten($fifteenth, 12%);
+      color: $eleventh;
+      background: lighten($eleventh, 22%);
+      border-bottom: 1px solid lighten($eleventh, 15%);
       box-shadow: 0 0 10px rgba(0, 0, 0, .02)
     }
   }
@@ -79,7 +79,7 @@ table.pricing-table {
       }
 
       &:nth-child(5) {
-        background: lighten($fifteenth, 18%);
+        background: lighten($eleventh, 26%);
       }
 
       .table-collapse {
@@ -131,7 +131,7 @@ table.pricing-table {
       }
 
       &:nth-child(5) {
-        background: lighten($fifteenth, 20%);
+        background: lighten($eleventh, 28%);
       }
     }
 
