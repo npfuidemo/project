@@ -1,0 +1,239 @@
+table.pricing-table {
+
+  thead tr th {
+    color: $color-white;
+    border: none;
+    border-right: 5px solid $color-white;
+    border-left: 5px solid $color-white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px;
+    position: relative;
+
+    &:nth-child(2) {
+      color: $denary;
+      background: lighten($denary, 21%);
+      border-bottom: 1px solid lighten($denary, 15%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, .02)
+    }
+
+    &:nth-child(3) {
+      color: $nonary;
+      background: lighten($nonary, 21%);
+      border-bottom: 1px solid lighten($nonary, 15%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, .02)
+    }
+
+    &:nth-child(4) {
+      color: $tertiary;
+      background: lighten($tertiary, 21%);
+      border-bottom: 1px solid lighten($tertiary, 15%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, .02)
+    }
+
+    &:nth-child(5) {
+      color: $fifteenth;
+      background: lighten($fifteenth, 18%);
+      border-bottom: 1px solid lighten($fifteenth, 12%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, .02)
+    }
+  }
+
+  tbody tr,
+  tfoot tr {
+    &:nth-child(1) {
+      td:nth-child(1) {
+        // border: none;
+        border-radius: 4px 0 0 0;
+      }
+    }
+
+    &:nth-last-child(1) {
+      td:nth-child(1) {
+        // border: none;
+        border-radius: 4px 0 0 0;
+      }
+    }
+
+    td {
+      padding: 10px 10px;
+      border-right: 5px solid $color-white;
+      border-left: 5px solid $color-white;
+      border-top: 1px solid rgba(0, 0, 0, .025);
+
+      &:nth-child(1) {
+        padding: 0;
+        border-left: 1px solid rgba(0, 0, 0, .025);
+        // background: darken($white-color, 4%);
+      }
+
+      &:nth-child(2) {
+        background: lighten($denary, 23%);
+      }
+
+      &:nth-child(3) {
+        background: lighten($nonary, 23%);
+      }
+
+      &:nth-child(4) {
+        background: lighten($tertiary, 25%);
+      }
+
+      &:nth-child(5) {
+        background: lighten($fifteenth, 18%);
+      }
+
+      .table-collapse {
+        position: relative;
+        padding: 10px;
+
+        &:after {
+          content: '\e5cf';
+          font-family: 'Material Icons Outlined';
+          position: absolute;
+          right: 0;
+          top: 10px;
+          border-radius: 100%;
+          width: 20px;
+          height: 20px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          transition: all ease-in-out .2s;
+        }
+
+        &[aria-expanded="true"]:after {
+          transform: rotate(180deg);
+          //  background: lighten($brand-color, 35%);
+        }
+      }
+
+    }
+
+    &:nth-last-child(1) {
+      position: sticky;
+      top: 100px;
+    }
+  }
+
+  .table-row-subitem {
+
+    td {
+      &:nth-child(2) {
+        background: lighten($denary, 24%);
+      }
+
+      &:nth-child(3) {
+        background: lighten($nonary, 24%);
+      }
+
+      &:nth-child(4) {
+        background: lighten($tertiary, 27%);
+      }
+
+      &:nth-child(5) {
+        background: lighten($fifteenth, 20%);
+      }
+    }
+
+    .table-subitem {
+      padding-left: 15px;
+
+    }
+
+    &[data-display="false"] {
+      display: none;
+    }
+  }
+
+  tfoot {
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+
+    td {
+      opacity: 1 !important;
+
+      &:nth-child(1) {
+        border-left: none !important;
+      }
+    }
+  }
+}
+
+.package-pills {
+  display: inline-block;
+  list-style-type: none;
+  padding: 3px 5px;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid lighten($color-grey, 20%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+
+  .pill-slider {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    top: 3px;
+    border-radius: 100px;
+    height: calc(100% - 6px);
+    transition: all ease-in-out .2s;
+    // background: lighten($primary, 30%);
+    background: $color-grey;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      padding: 7px 20px;
+      position: relative;
+      border-radius: 20px;
+      margin: 0;
+      color: $color-grey;
+      transition: all ease-in-out .25s;
+
+      &.active {
+        // color: $primary;
+        // background: lighten($primary, 30%);
+        font-weight: 500;
+        color: $white-color;
+        background: $color-grey;
+      }
+    }
+  }
+}
+
+
+
+.pricing-table tr {
+
+  th {
+    &[data-disabled="true"] {
+      background: #cbec35 !important;
+      filter: grayscale(1);
+      border-bottom: none !important;
+      opacity: .5;
+    }
+  }
+
+  td {
+    &[data-disabled="true"] {
+      background: #ddf184 !important;
+      filter: grayscale(1);
+      opacity: .5;
+
+      .choose_plan {
+        background: #E3DFFD !important;
+        filter: grayscale(1);
+      }
+    }
+  }
+
+  &.table-row-subitem td[data-disabled="true"] {
+    background: rgba(255, 0, 0, .01) !important;
+    filter: grayscale(1);
+  }
+}

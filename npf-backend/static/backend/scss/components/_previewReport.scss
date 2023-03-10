@@ -1,0 +1,27 @@
+.favouriteBtnPreview {
+  &.active {
+    .favouriteFilled,.favouriteoutline{
+      margin-top: -1px !important;
+    }
+  }
+}
+
+.modal.modal-fullscreen .modal-dialog {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+#previewContent {
+  max-height: calc(100% - 66px) !important;
+
+  .reportData {
+    padding: 15px;
+
+    @media (min-width: 767px) {
+      height: calc(100vh - 82px);
+    }
+  }
+}

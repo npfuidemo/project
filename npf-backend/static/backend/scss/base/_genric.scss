@@ -9,7 +9,7 @@ body {
 }
 
 .text-muted {
-    color: $color-muted  !important;
+    color: $color-muted !important;
 }
 
 .tooltip {
@@ -25,7 +25,7 @@ body {
 }
 
 .border-bottom-blue {
-    border-bottom: 1px solid $brand-color  !important;
+    border-bottom: 1px solid $brand-color !important;
 }
 
 .badge-blue {
@@ -415,10 +415,10 @@ nav.navbar {
         margin-bottom: 0 !important;
 
         .close-btn-mobile ul li .nav-link {
-            color: $white-color  !important;
+            color: $white-color !important;
 
             span {
-                color: $white-color  !important;
+                color: $white-color !important;
             }
         }
     }
@@ -932,6 +932,14 @@ footer ul li {
 .form-control[readonly] {
     cursor: not-allowed;
     color: #666 !important;
+
+    &.date-readonly {
+        cursor: pointer;
+        background: transparent !important;
+        color: #111 !important;
+        border-bottom: 1px solid $border-color-enable;
+        opacity: 1;
+    }
 }
 
 .dropdown-menu {
@@ -955,7 +963,7 @@ footer ul li {
     background: darken($primary, 15);
 
     &:after {
-        color: $white-color  !important;
+        color: $white-color !important;
         line-height: 1.8 !important;
     }
 }
@@ -1250,7 +1258,7 @@ input[type="checkbox"] {
 }
 
 .border-input {
-    border-color: $border-color-enable  !important;
+    border-color: $border-color-enable !important;
 }
 
 .sticky-bottom {
@@ -1368,7 +1376,8 @@ input[type="checkbox"] {
         background: transparent;
         font-size: 95%;
     }
-    .date-picker-cross{
+
+    .date-picker-cross {
         position: absolute;
         top: 1px;
         right: 1px;
@@ -1381,7 +1390,8 @@ input[type="checkbox"] {
         cursor: pointer;
         font-size: 20px;
     }
-    &:hover .date-picker-cross{
+
+    &:hover .date-picker-cross {
         display: flex;
         background: #f1f1f1;
     }
@@ -1561,7 +1571,7 @@ input[type="checkbox"] {
     td.active.off,
     td.active:hover {
         color: #fff !important;
-        background-color: $primary  !important;
+        background-color: $primary !important;
     }
 }
 
@@ -1592,4 +1602,10 @@ input[type="checkbox"] {
             color: #333;
         }
     }
+}
+
+mark:not(:empty) {
+    padding: 1px;
+    border-radius: 2px;
+    background-color: yellow;
 }

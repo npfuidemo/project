@@ -1,0 +1,29 @@
+@import "vendors/material-kit/variables", "abstracts/variables",
+"vendors/material-kit/mixins", "abstracts/mixins", "vendors/include-media";
+
+
+@import "components/tabcontent", "components/configtabcontent", "components/skeleton-loader", "components/multiple-radio-group", "components/nav-btn-group", "components/steps", "components/pricing-table", "components/limit-counter", "components/grid-table", "components/expandSearch", "components/status";
+
+.arrow-steps .step {
+ min-width: 145px;
+ padding: 3px 0px 2px 20px;
+
+ &:before,
+ &:after {
+  border-top: 14px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 17px solid rgba(75, 123, 221, 0.2);
+ }
+
+ &:before {
+  border-left: 20px solid #fff;
+ }
+
+ &:last-child {
+  padding-right: 10px;
+ }
+}
+
+.table-responsive {
+ overflow-x: unset;
+}

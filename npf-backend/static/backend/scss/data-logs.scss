@@ -28,3 +28,17 @@
     z-index: 9;
   }
 }
+
+pre.white-pre-line{
+  overflow: hidden;
+  white-space: pre-line;
+  text-overflow: ellipsis;
+}
+
+#mongoLogDetailPopup {
+    pre{
+       @media only screen and (max-width: 767px){
+        max-width: 230px !important;
+       }
+    }
+}
