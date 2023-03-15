@@ -11,29 +11,29 @@ table.pricing-table {
 
     &:nth-child(2) {
       color: $denary;
-      background: lighten($denary, 21%);
-      border-bottom: 1px solid lighten($denary, 15%);
+      background: lighten($denary, 23%);
+      // border-bottom: 1px solid lighten($denary, 15%);
       box-shadow: 0 0 10px rgba(0, 0, 0, .02)
     }
 
     &:nth-child(3) {
       color: $nonary;
-      background: lighten($nonary, 21%);
-      border-bottom: 1px solid lighten($nonary, 15%);
+      background: lighten($nonary, 23%);
+      // border-bottom: 1px solid lighten($nonary, 15%);
       box-shadow: 0 0 10px rgba(0, 0, 0, .02)
     }
 
     &:nth-child(4) {
       color: $tertiary;
-      background: lighten($tertiary, 21%);
-      border-bottom: 1px solid lighten($tertiary, 15%);
+      background: lighten($tertiary, 26%);
+      // border-bottom: 1px solid lighten($tertiary, 15%);
       box-shadow: 0 0 10px rgba(0, 0, 0, .02)
     }
 
     &:nth-child(5) {
-      color: $eleventh;
-      background: lighten($eleventh, 22%);
-      border-bottom: 1px solid lighten($eleventh, 15%);
+      color: $fifteenth;
+      background: lighten($fifteenth, 18%);
+      // border-bottom: 1px solid lighten($fifteenth, 12%);
       box-shadow: 0 0 10px rgba(0, 0, 0, .02)
     }
   }
@@ -58,7 +58,7 @@ table.pricing-table {
       padding: 10px 10px;
       border-right: 5px solid $color-white;
       border-left: 5px solid $color-white;
-      border-top: 1px solid rgba(0, 0, 0, .025);
+      border-top: 1px solid rgba(0, 0, 0, .012);
 
       &:nth-child(1) {
         padding: 0;
@@ -67,24 +67,25 @@ table.pricing-table {
       }
 
       &:nth-child(2) {
-        background: lighten($denary, 23%);
+        background: lighten($denary, 23.5%);
       }
 
       &:nth-child(3) {
-        background: lighten($nonary, 23%);
+        background: lighten($nonary, 23.5%);
       }
 
       &:nth-child(4) {
-        background: lighten($tertiary, 25%);
+        background: lighten($tertiary, 26.5%);
       }
 
       &:nth-child(5) {
-        background: lighten($eleventh, 26%);
+        background: lighten($fifteenth, 19.5%);
       }
 
       .table-collapse {
         position: relative;
         padding: 10px;
+        background-color: rgba(0, 0, 0, .02);
 
         &:after {
           content: '\e5cf';
@@ -131,7 +132,7 @@ table.pricing-table {
       }
 
       &:nth-child(5) {
-        background: lighten($eleventh, 28%);
+        background: lighten($fifteenth, 20%);
       }
     }
 
@@ -157,6 +158,10 @@ table.pricing-table {
         border-left: none !important;
       }
     }
+  }
+
+  tbody tr:hover td {
+    background: rgba(0, 0, 0, .03) !important;
   }
 }
 
@@ -214,7 +219,7 @@ table.pricing-table {
     &[data-disabled="true"] {
       background: #cbec35 !important;
       filter: grayscale(1);
-      border-bottom: none !important;
+      // border-bottom: none !important;
       opacity: .5;
     }
   }
@@ -235,5 +240,27 @@ table.pricing-table {
   &.table-row-subitem td[data-disabled="true"] {
     background: rgba(255, 0, 0, .01) !important;
     filter: grayscale(1);
+    opacity: .5;
+  }
+}
+
+table.pricing-table {
+  .bg-light-danger {
+    background-color: lighten($light-danger, 8) !important;
+  }
+
+  .bg-light-success {
+    background: lighten($light-success, 9) !important;
+  }
+
+  .custom-radio input~.custom-btn-span:before,
+  .custom-checkbox input~.custom-btn-span:before {
+    font-size: 20px;
+  }
+  .custom-checkbox input ~ .custom-btn-span:before{
+    content: '\e836';
+  }
+  .custom-checkbox input:checked ~ .custom-btn-span:before{
+    content: '\e86c';
   }
 }
