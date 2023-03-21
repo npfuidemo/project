@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
  color: #212529;
+ font-family: 'Open Sans', sans-serif;
 }
 
 .text-dark {
@@ -20,14 +23,28 @@ p {
  line-height: 1.6;
 }
 
+.get-demo {
+ background: rgb(0, 94, 194);
+ background: linear-gradient(135deg, rgba(0, 94, 194, 1) 0%, rgba(103, 0, 143, 1) 100%);
+ color: #fff;
+}
+
+.get-demo__features-title span {
+ background: rgba(255, 255, 255, .4);
+ padding: 2px 8px;
+ color: #fff;
+ border-radius: 0 10px 10px 10px;
+}
+
 .single-logo-container {
  padding: 10px;
 }
 
 .single-logo-container img {
  filter: grayscale(100%);
- max-width: 100%;
+ max-width: 90%;
  display: block;
+ margin: 0 auto;
 }
 
 .single-logo-container:hover {
@@ -38,6 +55,7 @@ p {
 .single-logo-container:hover img {
  filter: grayscale(0%);
 }
+
 .bgblue {
  background: #e6f2ff;
  border-radius: 5px;
@@ -51,8 +69,6 @@ p {
 }
 
 .educationOrgList p {
- color: #5d5d5d;
- font-size: 14px;
  margin-top: 10px;
 }
 
