@@ -9,6 +9,16 @@ table.pricing-table {
     padding: 10px 10px;
     position: relative;
 
+    &:not(:nth-child(1)) {
+      min-width: 180px;
+      max-width: 180px;
+    }
+
+    &:nth-child(1) {
+      min-width: 280px;
+      max-width: 280px;
+    }
+
     &:nth-child(2) {
       color: $denary;
       background: lighten($denary, 23%);
@@ -68,18 +78,34 @@ table.pricing-table {
 
       &:nth-child(2) {
         background: lighten($denary, 23.5%);
+
+        .btn.btn-link {
+          background: $denary !important;
+        }
       }
 
       &:nth-child(3) {
         background: lighten($nonary, 23.5%);
+
+        .btn.btn-link {
+          background: $nonary !important;
+        }
       }
 
       &:nth-child(4) {
         background: lighten($tertiary, 26.5%);
+
+        .btn.btn-link {
+          background: $tertiary !important;
+        }
       }
 
       &:nth-child(5) {
         background: lighten($fifteenth, 19.5%);
+
+        .btn.btn-link {
+          background: $fifteenth !important;
+        }
       }
 
       .table-collapse {
@@ -137,7 +163,7 @@ table.pricing-table {
     }
 
     .table-subitem {
-      padding-left: 15px;
+      padding: 10px 0 10px 15px;
 
     }
 
@@ -152,16 +178,72 @@ table.pricing-table {
     z-index: 999;
 
     td {
+      position: relative;
       opacity: 1 !important;
 
       &:nth-child(1) {
         border-left: none !important;
       }
+
+      &[data-highlight="true"] {
+
+        .choose_plan {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          color: $denary;
+          background-color: lighten($denary, 20%);
+
+          &:after {
+            border-bottom: 2px solid $denary;
+          }
+        }
+
+        &:nth-child(3) {
+          color: $nonary;
+          background-color: lighten($nonary, 20%);
+
+          &:after {
+            border-bottom: 2px solid $nonary;
+          }
+        }
+
+        &:nth-child(4) {
+          color: $tertiary;
+          background-color: lighten($tertiary, 20%);
+
+          &:after {
+            border-bottom: 2px solid $tertiary;
+          }
+        }
+
+        &:nth-child(5) {
+          color: $fifteenth;
+          background-color: lighten($fifteenth, 20%);
+
+          &:after {
+            border-bottom: 2px solid $fifteenth;
+          }
+        }
+      }
     }
   }
 
-  tbody tr:hover td {
-    background: rgba(0, 0, 0, .03) !important;
+  tbody tr td {
+    position: relative;
+    z-index: 1;
+  }
+
+  tbody tr:hover td:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, .01) !important;
   }
 }
 
@@ -193,7 +275,6 @@ table.pricing-table {
 
     a {
       display: inline-block;
-      padding: 7px 20px;
       position: relative;
       border-radius: 20px;
       margin: 0;
@@ -207,6 +288,12 @@ table.pricing-table {
         color: $white-color;
         background: $color-grey;
       }
+      @media only screen and (min-width: 767px){
+        padding: 7px 20px;
+      }
+      @media only screen and (max-width: 767px){
+        padding: 7px 5px;
+      }
     }
   }
 }
@@ -217,30 +304,134 @@ table.pricing-table {
 
   th {
     &[data-disabled="true"] {
-      background: #cbec35 !important;
+      background: rgba(0, 0, 0, .08) !important;
       filter: grayscale(1);
-      // border-bottom: none !important;
       opacity: .5;
+    }
+
+    &[data-highlight="true"] {
+      position: relative;
+      z-index: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: #f00;
+        width: 100%;
+        height: 10px;
+        left: 0;
+        top: -7px;
+        border-radius: 8px 8px 0 0;
+        z-index: -1;
+      }
+
+      &:nth-child(2) {
+        color: #fff;
+        background-color: $denary;
+        padding-top: 0 !important;
+        padding-bottom: 5px !important;
+
+        &:before {
+          background-color: $denary;
+        }
+      }
+
+      &:nth-child(3) {
+        color: #fff;
+        background-color: $nonary;
+        padding-top: 0 !important;
+        padding-bottom: 5px !important;
+
+        &:before {
+          background-color: $nonary;
+        }
+      }
+
+      &:nth-child(4) {
+        color: #fff;
+        background-color: $tertiary;
+        padding-top: 0 !important;
+        padding-bottom: 5px !important;
+
+        &:before {
+          background-color: $tertiary;
+        }
+      }
+
+      &:nth-child(5) {
+        color: #fff;
+        background-color: $fifteenth;
+        padding-top: 0 !important;
+        padding-bottom: 5px !important;
+
+        &:before {
+          background-color: $fifteenth;
+        }
+      }
     }
   }
 
   td {
+
+    label {
+      display: none;
+    }
+
+    span.material-icons-outlined {
+      display: inline-block;
+    }
+
     &[data-disabled="true"] {
-      background: #ddf184 !important;
+      background: rgba(0, 0, 0, .05) !important;
       filter: grayscale(1);
       opacity: .5;
+      pointer-events: none;
 
       .choose_plan {
         background: #E3DFFD !important;
         filter: grayscale(1);
       }
     }
-  }
 
-  &.table-row-subitem td[data-disabled="true"] {
-    background: rgba(255, 0, 0, .01) !important;
-    filter: grayscale(1);
-    opacity: .5;
+    &[data-highlight="true"] {
+
+      label {
+        display: inline-block;
+      }
+
+      span.material-icons-outlined.text-danger,
+      span.material-icons-outlined.text-primary {
+        display: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 1px);
+        background: transparent;
+        border: 2px solid #f00;
+        border-width: 0 2px;
+      }
+
+      &:nth-child(2):after {
+        border-color: $denary;
+      }
+
+      &:nth-child(3):after {
+        border-color: $nonary;
+      }
+
+      &:nth-child(4):after {
+        border-color: $tertiary;
+      }
+
+      &:nth-child(5):after {
+        border-color: $fifteenth;
+      }
+    }
   }
 }
 
@@ -257,10 +448,19 @@ table.pricing-table {
   .custom-checkbox input~.custom-btn-span:before {
     font-size: 20px;
   }
-  .custom-checkbox input ~ .custom-btn-span:before{
+
+  .custom-checkbox input~.custom-btn-span:before {
     content: '\e836';
   }
-  .custom-checkbox input:checked ~ .custom-btn-span:before{
+
+  .custom-checkbox input:checked~.custom-btn-span:before {
     content: '\e86c';
   }
+}
+
+#package_details .table-responsive{
+  max-width: 100vw;
+  overflow: hidden;
+  overflow-x: auto;
+  padding-top: 10px;
 }
