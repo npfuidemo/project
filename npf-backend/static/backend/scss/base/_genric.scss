@@ -1226,7 +1226,7 @@ input[type="checkbox"] {
 
     .input-group-append,
     .input-group-prepend {
-        background: $border-color-enable;
+        background: $new-light !important;
     }
 
     .input-group-append {
@@ -1608,4 +1608,21 @@ mark:not(:empty) {
     padding: 1px;
     border-radius: 2px;
     background-color: yellow;
+}
+
+.dropdown-menu {
+    max-height: 220px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    .dropdown-item {
+        white-space: normal;
+    }
+}
+
+.btn.disabled,
+.btn:disabled,
+button.disabled,
+button:disabled {
+    cursor: not-allowed;
 }

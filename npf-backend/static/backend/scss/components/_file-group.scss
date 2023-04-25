@@ -1,0 +1,21 @@
+.file-group {
+ &-item {
+  box-shadow: 0px 0 5px rgba(0, 0, 0, .1);
+
+  .material-icons-outlined {
+   position: absolute;
+   right: -10px;
+   font-size: 14px;
+   top: -10px;
+   background: $light-danger;
+   border-radius: 100%;
+   width: 20px;
+   border: none;
+   height: 20px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+ }
+}

@@ -21,7 +21,8 @@
     }
     // Switch bg off and disabled
     .toggle,
-    input[type=checkbox][disabled] + .toggle {
+    input[type=checkbox][disabled] + .toggle,
+    input[type=checkbox][readonly] + .toggle {
       content: "";
       display: inline-block;
       width: 30px;
@@ -49,7 +50,8 @@
     }
     input[type=checkbox] {
       // Handle disabled
-      &[disabled] {
+      &[disabled],
+      &[readonly] {
         & + .toggle:after,
         &:checked + .toggle:after {
           background-color: #BDBDBD;
@@ -57,7 +59,8 @@
       }
 
       & + .toggle:active:after,
-      &[disabled] + .toggle:active:after {
+      &[disabled] + .toggle:active:after,
+      &[readonly] + .toggle:active:after {
         box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.1);
       }
 

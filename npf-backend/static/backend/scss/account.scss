@@ -90,12 +90,16 @@
   background-size: 170px;
   position: relative;
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 
   &:after {
     content: attr(data-no-data-text);
     position: relative;
     top: 76px;
   }
+}
+
+.dropdown-menu {
+  max-width: 210px;
 }

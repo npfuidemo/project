@@ -21,7 +21,7 @@ $two: 2;
 
 $black : #000;
 $table-hover-bg : rgba($black, .04);
-
+$new-light : #f1f1f1;
 $light-warning : #fbe6b7;
 $light-success : #c7f2df;
 $light-danger : #faccd9;
@@ -48,6 +48,7 @@ $twentifirst: #DDCBB2;
 $duodenary: #EC7E74;
 
 $theme-colors: (
+  "new-light": $new-light,
   "light-warning": $light-warning,
   "light-success": $light-success,
   "light-danger": $light-danger,
