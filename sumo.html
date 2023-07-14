@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="https://cdn.npfs.co/css/college/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.npfs.co/css/bassets/style/skeleton.css">
+</head>
+
+<body>
+ <div class="container">
+  <div class="row">
+   <div class="col-sm-6">
+    <select name="" id="" class="sumo-select" multiple csvDispCount="3"
+    okCancelInMulti="true">
+     <option value="11111">11111</option>
+     <option value="2222">2222</option>
+     <option value="3333">3333</option>
+     <option value="4444">4444</option>
+     <option value="5555">5555</option>
+     <option value="6666">6666</option>
+     <option value="7777">7777</option>
+     <option value="8888">8888</option>
+     <option value="9999">9999</option>
+    </select>
+   </div>
+  </div>
+ </div>
+ <script src="https://cdn.npfs.co/js/lib/jquery.min.js"></script>
+ <script src="https://cdn.npfs.co/js/college/bootstrap.min.js"></script>
+ <script src="https://cdn.npfs.co/js/autoselect.js"></script>
+ <script src="https://cdn.npfs.co/js/jquery.sumoselect.min.js"></script>
+
+ <script>
+  $('select.sumo-select').SumoSelect();
+
+  setTimeout(() => {
+   $('#FieldClassLookingFor')[0].sumo.unload();
+   console.log('unload')
+   $('#FieldClassLookingFor').SumoSelect({ floatWidth: 200 });
+  }, 1000);
+
+  if ($(window).width() < 767) {
+   $(document).on('change', '#FieldClassLookingFor', function () {
+    if ($('#FieldClassLookingFor').val().length > +$('#FieldClassLookingFor').attr('data-limit')) {
+     alert('You have selected more value');
+     $('#FieldClassLookingFor').val('');
+     $('#FieldClassLookingFor')[0].sumo.reload();
+    }
+   })
+  }
+
+
+ </script>
+</body>
+
+</html>
