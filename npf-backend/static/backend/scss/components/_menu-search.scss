@@ -1,11 +1,11 @@
 @import '../abstracts/variables';
 
-.search-container{
+.search-container {
   position: sticky;
   top: 0;
   z-index: 1;
   background: #2f353a;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 
 .menu-search {
@@ -108,6 +108,10 @@
       margin: 0;
       padding-left: 30px;
       width: 100%;
+
+      &::placeholder {
+        color: #b1b1b1;
+      }
     }
 
     i {

@@ -1,12 +1,13 @@
 /* vertical menu list */
 @import "vendors/material-kit/variables", "abstracts/variables",
 "vendors/material-kit/mixins", "abstracts/mixins", "vendors/include-media",
-"vendors/chosen/main", "vendors/bootstrap-tagsinput/bootstrap-tagsinput",
-"components/verticalmenulist", "components/tabcontent",
+"vendors/chosen/main", "vendors/bootstrap-tagsinput/bootstrap-tagsinput";
+
+@import "components/verticalmenulist", "components/tabcontent",
 "components/configtabcontent", "components/skeleton-loader",
 "components/notifyAlert", "components/plusMinushide", "components/alert-modal",
 "components/tag-condition-label", "components/sortable",
-"components/lead-stage-edit", "components/selectPickerNoData", "components/filled-bar", "components/status";
+"components/lead-stage-edit", "components/selectPickerNoData", "components/filled-bar", "components/status", "./components/custom-input", "./components/multiple-radio-group", "components/expandSearch", "components/searchSuggestion", "components/file-group";
 
 .config- {
   &condition-bar {
@@ -41,14 +42,16 @@
   }
 }
 
-#listing_items{
-  .list-group-item:hover{
+#listing_items {
+  .list-group-item:hover {
     cursor: pointer;
     background: lighten($primary, 38%);
   }
+
   .active-opp {
     background: lighten($primary, 30%) !important;
-    &:after{
+
+    &:after {
       content: '';
       position: absolute;
       top: 20px;
@@ -64,4 +67,55 @@
 
 .chosen-container-multi .chosen-choices {
   background: transparent !important;
+}
+
+.bootstrap-tagsinput {
+  padding: 10px;
+  min-height: 60px;
+  background-color: transparent;
+
+  input {
+    background-color: transparent;
+  }
+}
+
+.searchSuggestion {
+  margin-top: 0.25rem;
+  border-radius: 6px;
+
+  @media only screen and (min-width: 991px) {
+    right: 43px;
+  }
+
+  @media only screen and (max-width: 990px) {
+    right: 0;
+  }
+}
+
+.expended-search-wrpper.active {
+  z-index: 999;
+}
+
+.date-picker:after {
+  bottom: auto;
+  top: 7px;
+}
+
+#custom_success_modal .custom-radio input~.custom-btn-span:before,
+#custom_success_modal .custom-checkbox input~.custom-btn-span:before {
+  top: 0px;
+}
+
+#expendedSearch:not(.searchSuperAdmin) .expended-search-wrpper {
+  @media only screen and (max-width: 767px) {
+    top: 15px;
+  }
+}
+
+.multiple-radio-group label {
+  min-height: 70px;
+}
+
+#custom-list-modal .modal-body {
+  max-height: calc(100% - 96px);
 }

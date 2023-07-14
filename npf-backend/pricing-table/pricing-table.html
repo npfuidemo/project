@@ -1,0 +1,628 @@
+<link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./static/backend/css/main.css">
+<link rel="stylesheet" href="./static/backend/css/account.css">
+
+
+<div class="wrapper" id="main">
+ <div class="main-container p-0">
+  <div class="bg-white d-flex flex-wrap justify-content-between px-3 py-2 shadow-bottom mb-0">
+   <div class="topHead w-100 d-inline-block">
+    <div class="row">
+     <div class="col-12 col-md-6 d-flex justify-content-between">
+      <div class="d-flex">
+       <h3 class="align-items-center d-flex h5 justify-content-start my-1"><span class="mr-1 break-word">Packages</span>
+       </h3>
+      </div>
+     </div>
+     <div class="col-12 col-md-6 d-flex justify-content-end">
+      <div class="max-w-36">
+       <div class="dropdown bootstrap-select form-control industry"><select class="form-control selectpicker industry"
+         data-style="bg-white border px-2 py-1" tabindex="-98">
+         <option selected="" value="1">EdTech</option>
+         <option value="6">Higher Education</option>
+        </select><button type="button" class="btn dropdown-toggle bg-white border px-2 py-1" data-toggle="dropdown"
+         role="combobox" aria-owns="bs-select-4" aria-haspopup="listbox" aria-expanded="false" title="Higher Education">
+         <div class="filter-option">
+          <div class="filter-option-inner">
+           <div class="filter-option-inner-inner">Higher Education</div>
+          </div>
+         </div>
+        </button>
+        <div class="dropdown-menu"
+         style="max-height: 300px; overflow: hidden; min-height: 0px; position: absolute; top: 35px; left: 0px; will-change: top, left;"
+         x-placement="bottom-start">
+         <div class="inner show" role="listbox" id="bs-select-4" tabindex="-1"
+          style="max-height: 290px; overflow-y: auto; min-height: 0px;" aria-activedescendant="bs-select-4-1">
+          <ul class="dropdown-menu inner show" role="presentation" style="margin-top: 0px; margin-bottom: 0px;">
+           <li class="selected active"><a role="option" class="dropdown-item active selected" id="bs-select-4-0"
+             tabindex="0" aria-setsize="2" aria-posinset="1" aria-selected="true"><span class="text">EdTech</span></a>
+           </li>
+           <li class="selected active"><a role="option" class="dropdown-item active selected" id="bs-select-4-1"
+             tabindex="0" aria-setsize="2" aria-posinset="2" aria-selected="true"><span class="text">Higher
+              Education</span></a></li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="p-3">
+   <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+     <div class="tab-content">
+      <div class="card mb-3 mt-0">
+       <div class="card-body py-3 px-3">
+        <div class="d-flex flex-wrap justify-content-md-between align-items-start cursor-pointer">
+         <div class="d-flex ml-auto">
+          <div></div>
+         </div>
+        </div>
+        <div class="" id="package_details">
+         <div class="row justify-content-center mt-4 mb-3">
+          <div class="col-12 col-sm-10 mx-auto text-center"><input id="module" type="hidden" value="sales"
+            autocomplete="off">
+           <div class="row justify-content-end">
+            <div class="col-8" id="package_cat">
+             <ul class="package-pills package_names">
+              <div class="pill-slider"></div>
+
+              <input type="hidden" id="module" value="higher_ed_enrollment">
+              <li>
+               <a class="active static_module_change" data-module="higher_ed_enrollment"
+                href="javascript:void(0);">Enrollment</a>
+              </li>
+              <li>
+               <a class=" static_module_change" data-module="application" href="javascript:void(0);">Application</a>
+              </li>
+              <li>
+               <a class=" static_module_change" data-module="education_crm" href="javascript:void(0);">Education CRM</a>
+              </li>
+              <li>
+               <a class=" static_module_change" data-module="chatbot" href="javascript:void(0);">Chatbot</a>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="col-12 col-sm-10 col-md-10 mx-auto">
+          <div class="table-responsive">
+           <table class="table pricing-table text-center">
+            <thead>
+             <tr class="">
+
+              <th class="col-4 px-0"></th>
+              <th class="col-2 px-0">Starter</th>
+              <th class="col-2 px-0">Standard</th>
+              <th class="col-2 px-0">Growth</th>
+              <th class="col-2 px-0">Pro</th>
+
+             </tr>
+            </thead>
+            <tbody>
+
+             <tr data-label="3">
+              <td class="text-left">
+               <a href="javascript:void(0);" class="d-block table-collapse" aria-expanded="true">Leads Manager</a>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-danger"> close </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="3" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">One View Lead Profile</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="41"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="41"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="41"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="41"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="3" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Lead Verification</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="42"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="42"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="42"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="42"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+
+             <tr data-label="4">
+              <td class="text-left">
+               <a href="javascript:void(0);" class="d-block table-collapse" aria-expanded="true">Application Manager</a>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-danger"> close </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="4" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Data Masking</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="43"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="43"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="43"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="43"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="4" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Bulk Offline Upload</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="44"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="44"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="44"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="44"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+
+             <tr data-label="12">
+              <td class="text-left">
+               <a href="javascript:void(0);" class="d-block table-collapse" aria-expanded="true">User Manager</a>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-danger"> close </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="12" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Check-in/Check-out</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="40"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="40"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="40"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="40"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+
+             <tr data-label="20">
+              <td class="text-left">
+               <a href="javascript:void(0);" class="d-block table-collapse" aria-expanded="true">Virtual Post
+                Application Platform</a>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-danger"> close </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">ERP Integration</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="29"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="29"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="29"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="29"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Enable Offer Acceptance</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="32"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="32"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="32"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="32"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Profile Based Shortlisting</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="21"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="21"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="21"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="21"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Interview Slot Booking</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="22"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="22"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="22"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="22"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Candidate Evaluation and Scoring</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="23"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="23"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="23"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="23"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Panel Assignment</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="24"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="24"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="24"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="24"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Schedule Video Meetings</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="25"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="25"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="25"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="25"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Generate Rank/Merit List</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="26"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="26"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="26"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="26"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Token Fees/Installment Payment</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="27"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="27"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="27"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="27"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="20" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Fee Refund Manager</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="28"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="28"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="28"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="28"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+
+             <tr data-label="30">
+              <td class="text-left">
+               <a href="javascript:void(0);" class="d-block table-collapse" aria-expanded="true">Extensions</a>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-danger"> close </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+              <td><span class="material-icons-outlined fs-18 text-primary"> done </span>
+              </td>
+
+             </tr>
+
+             <tr class="table-row-subitem" data-label="30" data-display="true">
+              <td class="text-left">
+               <div class="table-subitem text-secondary">Zoho</div>
+              </td>
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="39"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="39"><span class="custom-btn-span"></span></label></td>
+
+
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="39"><span class="custom-btn-span"></span></label></td>
+
+
+              <td><label class="custom-checkbox mb-0"><input type="checkbox" class="select_module_id"
+                 name="feature_id[]" value="39"><span class="custom-btn-span"></span></label></td>
+
+             </tr>
+
+
+
+            </tbody>
+
+           </table>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="config-accordian"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div style="display:none">
+   <div id="get_package_plans">/backend/ei/ch/accounts/get-package-plans</div>
+  </div>
+ </div>
+</div>

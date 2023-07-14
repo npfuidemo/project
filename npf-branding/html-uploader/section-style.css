@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+ color: #212529;
+ font-family: 'Open Sans', sans-serif;
+}
+
+.text-dark {
+ color: #343a40 !important;
+}
+
+.fs26 {
+ font-size: 26px;
+ font-weight: 600;
+}
+
+.fs16 {
+ font-size: 16px;
+ font-weight: 400;
+}
+
+p {
+ line-height: 1.6;
+}
+
+.get-demo {
+ background: rgb(0, 94, 194);
+ background: linear-gradient(135deg, rgba(0, 94, 194, 1) 0%, rgba(103, 0, 143, 1) 100%);
+ color: #fff;
+}
+
+.get-demo__features-title span {
+ background: rgba(255, 255, 255, .4);
+ padding: 2px 8px;
+ color: #fff;
+ border-radius: 0 10px 10px 10px;
+}
+
+.single-logo-container {
+ padding: 10px;
+}
+
+.single-logo-container img {
+ filter: grayscale(100%);
+ max-width: 90%;
+ display: block;
+ margin: 0 auto;
+}
+
+.single-logo-container:hover {
+ box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+ transition: .5s;
+}
+
+.single-logo-container:hover img {
+ filter: grayscale(0%);
+}
+
+.bgblue {
+ background: #e6f2ff;
+ border-radius: 5px;
+ overflow: hidden;
+}
+
+.educationOrgList {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+.educationOrgList p {
+ margin-top: 10px;
+}
+
+.educationOrgList li {
+ margin-bottom: 30px;
+}
+
+.educationOrgList h2 {
+ margin: 0;
+ position: relative;
+ display: flex;
+ justify-content: start;
+ align-items: center;
+ font-size: 18px;
+}
+
+.educationOrgList h2 .plus {
+ font-size: 15px;
+ margin-right: 10px;
+}
+
+.highlightText {
+ position: relative;
+ white-space: nowrap;
+}
+
+.highlightText:before {
+ content: '';
+ height: 1px;
+ width: 100%;
+ margin-left: -3px;
+ margin-right: -3px;
+ position: absolute;
+ background: #4955a7;
+ transform: rotate(1deg);
+ bottom: -5px;
+ left: -1px;
+ border-radius: 20% 25% 20% 24%;
+ padding: 1px 3px 3px 10px;
+}

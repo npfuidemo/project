@@ -31,6 +31,7 @@
     display:none;
     overflow: hidden;
     border-radius:0 5px 5px 5px;
+    font-size:12px;
     .searchresult,.searchChildResult{
       list-style:none;
       padding:0;
@@ -66,6 +67,7 @@
         }
         &.noRelventData {
           cursor: auto!important;
+          list-style-type: none;
           &:hover,&:focus{
             background:transparent;
             pointer-events: none;
@@ -134,6 +136,7 @@
 .noRelventData{
   padding:10px 0!important;
   text-align:center;
+  list-style-type: none;
   span{
     color:#9f9e9e!important;
   }

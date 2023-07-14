@@ -1,0 +1,45 @@
+.limit-counter {
+ .input-group {
+  background: lighten($brand-color, 37);
+  border-radius: 30px;
+  // border-top: 1px solid lighten($brand-color, 10);
+  // border-bottom: 1px solid lighten($brand-color, 10);
+ }
+
+ .input-group-prepend {
+  color: $white-color;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  background: lighten($brand-color, 20);
+  border: 1px solid lighten($brand-color, 10);
+
+  &[disabled] {
+   cursor: not-allowed;
+   background: lighten($brand-color, 22);
+  }
+
+ }
+
+ input {
+  background: none;
+  text-align: center;
+ }
+
+ &:hover {
+  .input-group {
+   background: lighten($brand-color, 32);
+
+   .input-group-prepend {
+    background: lighten($brand-color, 15);
+
+    &:hover,
+    &:active,
+    &:focus {
+     background: lighten($brand-color, 10);
+    }
+
+   }
+  }
+ }
+}

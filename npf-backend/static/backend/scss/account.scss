@@ -1,0 +1,105 @@
+@import "vendors/material-kit/variables", "abstracts/variables",
+"vendors/material-kit/mixins", "abstracts/mixins", "vendors/include-media";
+
+
+@import "components/tabcontent", "components/configtabcontent", "components/skeleton-loader", "components/multiple-radio-group", "components/nav-btn-group", "components/steps", "components/pricing-table", "components/limit-counter", "components/grid-table", "components/expandSearch", "components/status", "components/accordion", "components/filled-bar";
+
+.arrow-steps .step {
+  min-width: 145px;
+  padding: 3px 0px 2px 20px;
+
+  &:before,
+  &:after {
+    border-top: 14px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 17px solid rgba(75, 123, 221, 0.2);
+  }
+
+  &:before {
+    border-left: 20px solid #fff;
+  }
+
+  &:last-child {
+    padding-right: 10px;
+  }
+}
+
+.table-responsive {
+  overflow-x: unset;
+}
+
+
+#package_change {
+  button {
+    position: relative;
+  }
+
+  .previous_package,
+  .ob_previous_package {
+    padding-left: 25px;
+
+    &:before {
+      font-family: 'Material Icons Outlined';
+      content: '\e5c4';
+      position: absolute;
+      top: 4px;
+      left: 5px;
+      font-size: 14px;
+    }
+  }
+
+  .next_package,
+  .ob_next_package {
+    padding-right: 25px;
+
+    &:after {
+      font-family: 'Material Icons Outlined';
+      content: '\e5c8';
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      font-size: 14px;
+    }
+  }
+
+}
+
+.clear-btn {
+  background: #fff;
+  border: none;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  height: calc(100% - 2px);
+  padding: 6px 0;
+  min-width: 30px;
+  cursor: pointer;
+}
+
+.search-icon {
+  position: absolute;
+  top: 11px;
+  font-size: 16px;
+  left: 6px;
+  color: #666;
+}
+
+.panel-group.no-data-found {
+  min-height: calc(100vh - 170px);
+  background: url('../images/no-data.png') no-repeat center;
+  background-size: 170px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:after {
+    content: attr(data-no-data-text);
+    position: relative;
+    top: 76px;
+  }
+}
+
+.dropdown-menu {
+  max-width: 210px;
+}

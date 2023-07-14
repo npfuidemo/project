@@ -43,8 +43,23 @@
     .dropdown-item.selected .bs-ok-default:after {
         color: $primary;
     }
+    .no-results{
+        white-space: normal;
+        font-size: 12px;
+        min-width: 180px;
+        text-align: center;
+        word-break: break-all;
+    }
 }
 
-.bootstrap-select .dropdown-menu.inner{
+.bootstrap-select .dropdown-menu.inner {
     max-height: inherit !important;
+}
+
+.bootstrap-select {
+    button.disabled,
+    >button.disabled {
+        background-color: #f1f1f1 !important;
+        border-bottom: 1px solid #ccc;
+    }
 }
