@@ -16,9 +16,9 @@
             // data value name
             valueName: "value",
             // tab text
-            tabNameText: "items",
+            tabNameText: "User List",
             // right tab text
-            rightTabNameText: "selected items",
+            rightTabNameText: "Excluded User(s)",
             // search placeholder text
             searchPlaceholderText: "search",
             // items data array
