@@ -130,10 +130,10 @@
 }
 
 .checkbox-group .checkbox-normal:disabled+label:before {
-    color: #fff;
-    border: 1px solid #ccc;
+    color: #ccc;
     background-color: #ddd;
     cursor: not-allowed;
+    z-index:0;
 }
 
 .checkbox-group .checkbox-indeterminate+label:before {
