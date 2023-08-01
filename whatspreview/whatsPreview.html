@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Whatsapp Preview</title>
+    <style>
+        .modal.right.fade.in .modal-dialog {
+            right: 0;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom:0;
+        }
+
+        .modal-content{
+            border-radius:0;
+            border:0;
+        }
+
+        #templatePreviewModal .modal-body {
+            height: calc(100% - 60px) !important;
+        }
+
+        #templatePreviewModalLabel .templatename {
+            float: left;
+            max-width: 400px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        #templatePreviewModalLabel .versionname {
+            float: left;
+            color: #999;
+        }
+
+        .whatsapp_previewiframe_inner {
+            overflow: auto;
+            height: calc(100vh - 135px);
+            padding: 10px;
+            width: 100%;
+        }
+
+        .iframeloader.whatsapp_previewiframe {
+            position: relative;
+        }
+
+        .iframeloader.whatsapp_previewiframe:before {
+            background-image: url("bgpattern.png");
+            width: 100%;
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 0;
+            display: block;
+            width: calc(100% + 30px);
+            height: calc(100% + 0px);
+            z-index: 0;
+        }
+
+        .iframeloader.whatsapp_previewiframe .iframe {
+            border: 0;
+            height: auto !important;
+            max-height: calc(100% - 50px) !important;
+            border-radius: 0 0 10px 10px;
+            background-color: #fff !important;
+            box-shadow: 0 1px 3px #999;
+            width: 60%;
+            margin: 40px;
+            position: relative;
+            padding: 10px 0px 0 0px;
+        }
+
+        .iframeloader.whatsapp_previewiframe .iframe:before {
+            content: '';
+            border-top: 19px solid #fff;
+            border-left: 19px solid transparent;
+            left: -17px;
+            position: absolute;
+            top: 0px;
+            z-index: 1;
+        }
+
+        .iframeloader.whatsapp_previewiframe .iframe:after {
+            content: '';
+            border-top: 20px solid #ededed;
+            border-left: 20px solid transparent;
+            left: -19px;
+            position: absolute;
+            top: -1px;
+        }
+
+        .iframeloader.whatsapp_previewiframe .iframe {
+            max-height: inherit !important;
+        }
+
+        .iframeloader.whatsapp_previewiframe .iframe p {
+            margin-bottom: 15px;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal fade offCanvasModal right in" tabindex="-1" id="templatePreviewModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header offCanvasModalheader">
+                    <h5 class="modal-title" id="templatePreviewModalLabel">
+                        <span class="templatename" data-toggle="tooltip" title="Kleyra_opp_text_marketing"
+                            data-placement="bottom">Kleyra_opp_text_marketing</span>
+                        <span class="versionname margin-left-8">(v6)</span>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+                <div class="modal-body">
+                    <div class="report-popup-main">
+                        <small class="text-muted font-weight-bold d-inline-block">Whatsapp Template Title</small>
+                        <p class="d-inline-block">complete_your_application</p>
+                        <div class="iframeloader whatsapp_previewiframe">
+                            <div class="whatsapp_previewiframe_inner" id="myIframe">
+                                <div class="iframe">
+                                    <p>Dear {{ud.name|Registered Name}}, <br>
+                                        <br>
+                                        You have completed {{ac.assigned_to|Owner}}% of your form, you can click on
+                                        {{ac.created_on|Assignment Date}} to continue with your application form.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
+        $("#templatePreviewModal").modal();
+    </script>
+</body>
+
+</html>
