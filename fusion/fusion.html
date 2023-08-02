@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FusionCharts Example</title>
+  <!-- Link to FusionCharts library -->
+  <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+  <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+</head>
+<body>
+
+<div id="chart-container">Chart will render here</div>
+
+<script>
+  FusionCharts.ready(function () {
+    var dataSource = {
+      "chart": {
+        "caption": "Monthly Revenue",
+        "xAxisName": "Month",
+        "yAxisName": "Revenue (in USD)",
+        "theme": "fusion"
+      },
+      "categories": [
+        {
+          "category": [
+            { "label": "January" },
+            { "label": "February" },
+            { "label": "March" },
+            { "label": "April" },
+            { "label": "May" }
+          ]
+        }
+      ],
+      "dataset": [
+        {
+          "seriesname": "Series 1",
+          "data": [
+            { "value": "1500" },
+            { "value": "0" },
+            { "value": "2000" },
+            { "value": "0" },
+            { "value": "1800" }
+          ]
+        },
+        {
+          "seriesname": "Series 2",
+          "data": [
+            { "value": "0" },
+            { "value": "1" },
+            { "value": "0" },
+            { "value": "0" },
+            { "value": "0" }
+          ]
+        }
+      ]
+    };
+
+    // Check if all values in Series 2 are zero
+    var series2Values = dataSource.dataset[1].data.map((item) => parseFloat(item.value));
+    var allZero = series2Values.every((value) => value === 0);
+
+    // If all values in Series 2 are zero, remove Series 2 from the data source
+    if (allZero) {
+      dataSource.dataset.splice(1, 1); // Remove Series 2
+    }
+
+    var chart = new FusionCharts({
+      type: 'msspline', // Change the chart type to msspline
+      renderAt: 'chart-container',
+      width: '500',
+      height: '300',
+      dataFormat: 'json',
+      dataSource: dataSource
+    });
+
+    chart.render();
+  });
+</script>
+
+</body>
+</html>
