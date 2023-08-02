@@ -98,9 +98,27 @@
 
 
         .alert-modal .modal-body {
-            max-height: 67vh;
+            max-height: 75vh;
             overflow: auto;
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+
+        .alert-modal .close {
+            color: #000 !important;
+            right:5px !important;
+            top: 5px !important;
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border-radius: 50%;
+            font-size: 20px !important;
+            vertical-align: top;
+            display: flex;
+            justify-content: center;
+        }
+
+        .alert-modal .close:hover {
+            background: #ccc;
         }
 
         .alert-modal .modal-content {
@@ -184,8 +202,11 @@
                     <span class="popup_title">Call Details</span>
                     <div class="alert-badge-paper"></div>
                 </div>
+                <button type="button" class="close" data-toggle="tooltip" data-placement="bottom" title="Click&nbsp;here&nbsp;to&nbsp;close&nbsp;modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <div class="modal-body" id="CampaignOutsboundCallersBody">
-                    <div class="margin-top-15" id="2g69gzbkvW-section">
+                    <div class="margin-bottom-15" id="2g69gzbkvW-section">
                         <table class="table tableCardView border-collapse-unset">
                             <thead>
                                 <tr>
@@ -227,50 +248,7 @@
                         </table>
                     </div>
 
-                    <div class="margin-top-15" id="2g69gzbkvW-section">
-                        <table class="table tableCardView border-collapse-unset">
-                            <thead>
-                                <tr>
-                                    <th id="2g69gzbkvW-head" colspan="6" white-space="nowrap"><span
-                                            class="callIco campaignCallListing"></span> Campaign Call :
-                                        9873244342 </th>
-                                </tr>
-                            </thead>
-                            <tbody id="2g69gzbkvW-body">
-                                <tr>
-                                    <td><small class="text-muted">Name</small><br>Anup Patel Three</td>
-                                    <td><small class="text-muted">Email</small><br>anup.patel3@collexo.com</td>
-                                    <td><small class="text-muted">Mobile</small><br>9873244342</td>
-                                    <td><small class="text-muted">Alternate Mobile</small><br>NA</td>
-                                    <td data-title="Status"><small class="text-muted">Status</small><br>
-                                        <span class="badge data-Open">unverified</span>
-                                    </td>
-                                    <td><a href="javascript:void(0);"
-                                            onclick="postCampaignOutboundUserFormAutomation('64c3a57407b6bb6fc9473c2b', '3430288', this, '')"
-                                            class="margin-top-20 d-block"><span
-                                                class="fs-17 material-icons-outlined">edit</span></a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><small class="text-muted">Name</small><br>Vipin Tiwari</td>
-                                    <td><small class="text-muted">Email</small><br>vipin.t@meritto.com</td>
-                                    <td><small class="text-muted">Mobile</small><br>7503089263</td>
-                                    <td><small class="text-muted">Alternate Mobile</small><br>NA</td>
-                                    <td data-title="Status"><small class="text-muted">Status</small><br><span
-                                            class="badge data-excuted">verified</span></td>
-                                    <td><a href="javascript:void(0);"
-                                            onclick="postCampaignOutboundUserFormAutomation('64c3a57407b6bb6fc9473c2b', '3430288', this, '')"
-                                            class="margin-top-20 d-block"><span
-                                                class="fs-17 material-icons-outlined">edit</span></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-                    <div class="margin-top-15" id="2g69gzbkvW-section">
+                    <div class="margin-bottom-15" id="2g69gzbkvW-section">
                         <table class="table tableCardView border-collapse-unset">
                             <thead>
                                 <tr>
@@ -313,7 +291,50 @@
                     </div>
 
 
-                    <div class="margin-top-15" id="2g69gzbkvW-section">
+                    <div class="margin-bottom-15" id="2g69gzbkvW-section">
+                        <table class="table tableCardView border-collapse-unset">
+                            <thead>
+                                <tr>
+                                    <th id="2g69gzbkvW-head" colspan="6" white-space="nowrap"><span
+                                            class="callIco campaignCallListing"></span> Campaign Call :
+                                        9873244342 </th>
+                                </tr>
+                            </thead>
+                            <tbody id="2g69gzbkvW-body">
+                                <tr>
+                                    <td><small class="text-muted">Name</small><br>Anup Patel Three</td>
+                                    <td><small class="text-muted">Email</small><br>anup.patel3@collexo.com</td>
+                                    <td><small class="text-muted">Mobile</small><br>9873244342</td>
+                                    <td><small class="text-muted">Alternate Mobile</small><br>NA</td>
+                                    <td data-title="Status"><small class="text-muted">Status</small><br>
+                                        <span class="badge data-Open">unverified</span>
+                                    </td>
+                                    <td><a href="javascript:void(0);"
+                                            onclick="postCampaignOutboundUserFormAutomation('64c3a57407b6bb6fc9473c2b', '3430288', this, '')"
+                                            class="margin-top-20 d-block"><span
+                                                class="fs-17 material-icons-outlined">edit</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><small class="text-muted">Name</small><br>Vipin Tiwari</td>
+                                    <td><small class="text-muted">Email</small><br>vipin.t@meritto.com</td>
+                                    <td><small class="text-muted">Mobile</small><br>7503089263</td>
+                                    <td><small class="text-muted">Alternate Mobile</small><br>NA</td>
+                                    <td data-title="Status"><small class="text-muted">Status</small><br><span
+                                            class="badge data-excuted">verified</span></td>
+                                    <td><a href="javascript:void(0);"
+                                            onclick="postCampaignOutboundUserFormAutomation('64c3a57407b6bb6fc9473c2b', '3430288', this, '')"
+                                            class="margin-top-20 d-block"><span
+                                                class="fs-17 material-icons-outlined">edit</span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="margin-bottom-15" id="2g69gzbkvW-section">
                         <table class="table tableCardView border-collapse-unset">
                             <thead>
                                 <tr>
@@ -355,7 +376,7 @@
                     </div>
 
 
-                    <div class="margin-top-15" id="2g69gzbkvW-section">
+                    <div class="margin-bottom-15" id="2g69gzbkvW-section">
                         <table class="table tableCardView border-collapse-unset">
                             <thead>
                                 <tr>
@@ -397,7 +418,7 @@
                         </table>
                     </div>
 
-                    <div class="margin-top-15" id="2g69gzbkvW-section">
+                    <div class="margin-bottom-15" id="2g69gzbkvW-section">
                         <table class="table tableCardView border-collapse-unset">
                             <thead>
                                 <tr>
@@ -424,11 +445,6 @@
                         </table>
                     </div>
                 </div>
-                <div class="modal-footer text-center d-flex justify-content-center">
-                        <button class="btn  btn-line-secondary radius-15 btn-sm" data-dismiss="modal">Close
-                            <div class="ripple-container"></div>
-                        </button>
-                </div>
             </div>
         </div>
     </div>
@@ -442,6 +458,7 @@
         crossorigin="anonymous"></script>
     <script>
         $("#CampaignOutboundCallersModalBox").modal();
+        $('[data-toggle="tooltip"]').tooltip();
     </script>
 </body>
 
