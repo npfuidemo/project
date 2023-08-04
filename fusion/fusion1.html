@@ -10,8 +10,7 @@
 </head>
 <body>
 
-<div id="chart-container">Chart will render here</div>
-
+<div id="chart-container">Chart will render here</div> 
 <script>
   FusionCharts.ready(function () {
     var dataSource = {
@@ -52,16 +51,49 @@
             { "value": "0" },
             { "value": "0" }
           ]
+        },
+        {
+          "seriesname": "Series 3",
+          "data": [
+          { "value": "1800" },
+            { "value": "0" },
+            { "value": "2700" },
+            { "value": "0" },
+            { "value": "1500" }
+          ]
+        },
+        {
+          "seriesname": "Series 4",
+          "data": [
+            { "value": "0" },
+            { "value": "0" },
+            { "value": "0" },
+            { "value": "0" },
+            { "value": "0" }
+          ]
         }
       ]
     };
 
-    // Check if all values in Series 2 are zero
-    var series2Values = dataSource.dataset[1].data.map((item) => parseFloat(item.value));
-    var allZero = series2Values.every((value) => value === 0);
+      
+    
+    let allSeriesZero = true;
 
-    // If all values in Series 2 are zero, disable the series; otherwise, keep it enabled
-    dataSource.dataset[1].visible = allZero ? 0 : 1;
+      for (const series of dataSource.dataset) {
+        const seriesValues = series.data.map((item) => parseFloat(item.value));
+        const allZero = seriesValues.every((value) => value === 0);
+        allSeriesZero = allSeriesZero && allZero;
+
+      // If all values in the current series are zero, disable it; otherwise, enable it
+        series.visible = allZero ? 0 : 1;
+      }
+
+      // If all series have all zero values, disable all series
+      if (allSeriesZero) {
+        for (const series of dataSource.dataset) {
+          series.visible = 0;
+        }
+    }
 
     var chart = new FusionCharts({
       type: 'msspline', // Change the chart type to msspline
@@ -74,6 +106,7 @@
 
     chart.render();
   });
+
 </script>
 
 </body>
