@@ -1,4 +1,10 @@
-@import 'colors';
+$primary: #4c79dc !default;
+$white:#fff !default;
+$secondary:#6c757d !default;
+$danger: #f44336 !default;
+$warning: #ff9800 !default;
+$success: #4caf50 !default;
+
 
 .alert-modal {
     .alert-container {
@@ -12,16 +18,48 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     }
 
+    .modal-body {
+        max-height: 75vh;
+        overflow: auto;
+        margin-top: 30px;
+    }
+
+    .modal-content {
+        border-radius: 10px;
+        border: none;
+        padding-top: 1px;
+    }
+
+    .close {
+        color: #000 !important;
+        right: 5px !important;
+        top: 5px !important;
+        width: 24px;
+        height: 24px;
+        background: #fff;
+        border-radius: 50%;
+        font-size: 20px !important;
+        vertical-align: top;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+            background: #ccc;
+        }
+    }
+
     .alert-badge {
         min-width: 120px;
         max-width: 285px;
         padding: 3px 25px;
         position: absolute;
         top: -7px;
-        color: $white;
+        color: #fff;
         text-align: center;
         background: transparent;
         z-index: 1;
+        left: 50%;
+        transform: translate(-50%, 0px);
 
         &:before {
             content: '';
@@ -184,4 +222,8 @@
 
         }
     }
+}
+
+.modalCustom .modal-lg {
+    width: 750px !important;
 }
