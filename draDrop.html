@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 3.4 Dropdown with Tabs</title>
+  <!-- Link to Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1>Bootstrap 3.4 Dropdown with Tabs Example.<br>
+    <span class="small">Avoid closing dropdown on click of link</span>
+</h1>
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown with Tabs
+    </button>
+    <div class="dropdown-menu stopClosingClick" aria-labelledby="dropdownMenuButton">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="javascript:void(0)" data-toggle="tab" data-target="#tab1">Tab 1</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" data-toggle="tab" data-target="#tab2">Tab 2</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" data-toggle="tab" data-target="#tab3">Tab 3</a>
+        </li>
+      </ul>
+      <div class="tab-content mt-2">
+        <div class="tab-pane fade in active" id="tab1">
+          <p>This is Tab 1 content.</p>
+          <p><a href="#">Click <menu></menu></a></p>
+        </div>
+        <div class="tab-pane fade" id="tab2">
+          <p>This is Tab 2 content.</p>
+        </div>
+        <div class="tab-pane fade" id="tab3">
+          <p>This is Tab 3 content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Link to Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+$('.stopClosingClick a').click(function (e) {
+    e.stopPropagation()        
+    $(this).tab('show')
+})
+
+</script>
+
+</body>
+</html>
