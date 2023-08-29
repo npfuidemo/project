@@ -1,61 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap 3.4 Dropdown with Tabs</title>
-  <!-- Link to Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
 
-<div class="container mt-5">
-  <h1>Bootstrap 3.4 Dropdown with Tabs Example.<br>
-    <span class="small">Avoid closing dropdown on click of link</span>
-</h1>
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown with Tabs
-    </button>
-    <div class="dropdown-menu stopClosingClick" aria-labelledby="dropdownMenuButton">
-      <ul class="nav nav-tabs">
-        <li class="active">
-          <a href="javascript:void(0)" data-toggle="tab" data-target="#tab1">Tab 1</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" data-toggle="tab" data-target="#tab2">Tab 2</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" data-toggle="tab" data-target="#tab3">Tab 3</a>
-        </li>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+    .d-none {
+      display: none;
+    }
+
+    .listBox {
+      max-height: 100px;
+      overflow: auto;
+      padding: 0;
+      margin: 0;
+    }
+
+    .listBox li {
+      list-style: none;
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid #ccc
+    }
+
+    .listBox li span.email {
+      font-size: 12px;
+      display: block;
+    }
+
+    .noData .searchInput {
+      display: none;
+    }
+
+    .noDataBlk {
+      display: none;
+    }
+
+    .noData .noDataBlk {
+      display: block;
+    }
+  </style>
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div style="display: flex;">
+    <div class="listParent">
+      <h3>Left List</h3>
+      <input id="leftSearch" class="searchInput" type="text" placeholder="Search...">
+      <ul id="leftList" class="leftBox listBox" style="width: 200px;">
+
       </ul>
-      <div class="tab-content mt-2">
-        <div class="tab-pane fade in active" id="tab1">
-          <p>This is Tab 1 content.</p>
-          <p><a href="#">Click <menu></menu></a></p>
-        </div>
-        <div class="tab-pane fade" id="tab2">
-          <p>This is Tab 2 content.</p>
-        </div>
-        <div class="tab-pane fade" id="tab3">
-          <p>This is Tab 3 content.</p>
-        </div>
+
+      <div class="noDataBlk">
+        No Record Found
+      </div>
+    </div>
+
+
+    <div class="listParent">
+      <h3>Right List</h3>
+      <input id="rightSearch" class="searchInput" type="text" placeholder="Search...">
+      <ul id="rightList" class="righttBox listBox" style="width: 200px;">
+
+      </ul>
+      <div class="noDataBlk">
+        No Record Found
       </div>
     </div>
   </div>
-</div>
 
-<!-- Link to Bootstrap JS and jQuery -->
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const $leftList = $('#leftList');
+    const $rightList = $('#rightList');
+    const $leftSearch = $('#leftSearch');
+    const $rightSearch = $('#rightSearch');
 
-<script>
-$('.stopClosingClick a').click(function (e) {
-    e.stopPropagation()        
-    $(this).tab('show')
-})
 
-</script>
+    $(document).on("click", "#leftList li", function () {
+      const text = $(this).html();
+      const dataId = $(this).data('id');
 
+      $rightList.append($('<li data-id=' + dataId + '>' + text + '</li>'));
+
+      $(this).addClass('deactive d-none')
+      listBlockBlank('left')
+    })
+
+    $(document).on("click", "#rightList li", function () {
+      var rightDataId = $(this).data("id");
+      $("#leftList li").each(function () {
+        var listID = $(this).data('id')
+        if (rightDataId.includes(listID)) {
+          $(this).removeClass('d-none');
+        }
+      })
+      $(this).remove();
+      listBlockBlank('right')
+    });
+
+    function listBlockBlank(ele) {
+      $('.listBox').each(function () {
+
+        if (ele == 'left') {
+          if ($(this).find('li:not(.deactive)').length == 0) {
+            $(this).parents('.listParent').addClass('noData');
+          }
+          else {
+            $(this).parents('.listParent').removeClass('noData');
+          }
+        }
+        else {
+          if ($(this).find('li').length == 0) {
+            $(this).parents('.listParent').addClass('noData');
+          }
+          else {
+            $(this).parents('.listParent').removeClass('noData');
+          }
+        }
+
+
+      })
+    }
+
+
+    var dataURL = 'https://jsonplaceholder.typicode.com/users/'
+    $(document).ready(function () {
+      var itemsPerPage = 5;
+      var currentPage = 1;
+      var isLoading = false;
+      var totalRecords = 10
+
+      function loadItems(page) {
+        $.ajax({
+          url: dataURL, // URL to fetch additional items
+          method: 'GET',
+          data: { _page: page, _limit: itemsPerPage },
+          beforeSend: function () {
+            isLoading = true;
+            // Show loading spinner or message within the container
+            $leftList.append('<div class="loading">Loading...</div>');
+          },
+          success: function (data) {
+            // Remove loading indicator
+            $('.loading').remove();
+            // Append the new items to the container
+            $.each(data, function (index, item) {
+              const $dataItem = $(`<li data-id="transfer_${item.id}">`);
+              $dataItem.html("<span>" + item.name + "</span><span class='email'>" + item.email + "</span>");
+              $leftList.append($dataItem);
+
+            });
+
+            isLoading = false;
+            currentPage++;
+            listBlockBlank()
+          },
+          error: function () {
+            // Handle error
+            isLoading = false;
+            $('.loading').remove(); // Remove loading indicator on error
+          }
+        });
+      }
+
+      // Initial load
+      loadItems(currentPage);
+
+      // Load more on div scroll
+
+      $leftList.scroll(function () {
+        if ($("#leftList li").length < totalRecords) {
+          var container = $(this);
+          if (!isLoading && container.scrollTop() + container.innerHeight() >= container[0].scrollHeight - 100) {
+            loadItems(currentPage);
+          }
+        }
+      });
+
+
+
+
+      // Search functionality
+      $leftSearch.on('input', function () {
+        const filterValue = $(this).val().toLowerCase();
+        $leftList.find('li').each(function () {
+          $(this).toggle($(this).text().toLowerCase().includes(filterValue));
+        });
+      });
+
+      $rightSearch.on('input', function () {
+        const filterValue = $(this).val().toLowerCase();
+        $rightList.find('li').each(function () {
+          $(this).toggle($(this).text().toLowerCase().includes(filterValue));
+        });
+      });
+
+
+
+
+      //   $('#searchInput').keypress(function(event) {
+      //     if (event.which === 13) {
+      //       performSearch();
+      //     }
+      //   });
+
+      // function performSearch() {
+      //   var searchTerm = $('#searchInput').val();
+      //   var apiUrl = 'https://jsonplaceholder.typicode.com/users/search?query=' + searchTerm;
+
+      //   $.ajax({
+      //     url: apiUrl,
+      //     method: 'GET',
+      //     success: function(data) {
+      //       console.log('API Response:', response);
+      // $.each(data, function(index, item) {
+      //     const $dataItem = $(`<li data-id="transfer_${item.id}">`);
+      //     $dataItem.html("<span>"+item.name+"</span><span class='email'>"+item.email+"</span>");
+      //     $leftList.append($dataItem);                
+      //   });
+      //     },
+      //     error: function(error) {
+
+      //       console.error('API Error:', error);
+      //     }
+      //   });
+      // }
+
+    });
+  </script>
 </body>
+
 </html>
