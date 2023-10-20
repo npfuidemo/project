@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="body.css">
+</head>
+
+<body class="leads_leadmanager">
+<!-- Button trigger modal -->
+<button type="button" class="multivenderIcon" data-toggle="modal" data-target="#multivenderModal">
+  <span class="material-icons-outlined" data-toggle="tooltip" data-position="left" data-title="Click Here to show all Vendor List" data-trigger="hover">
+    settings_phone
+    </span>
+    <span class="bubbles"></span>
+</button>
+
+<!-- Modal -->
+<div class="modal fade offCanvasModal right popup-customization" id="multivenderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <button type="button" class="closeoutside" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="">
+            <ul class="nav nav-tabs" id="telephonyVendorList" role="tablist">
+              <li class="nav-item ameyotab position-relative" role="presentation">
+                <button class="nav-link active" id="ameyo-tab" data-toggle="tab" data-target="#ameyoVendor" type="button" role="tab" aria-controls="ameyoVendor" aria-selected="true">
+                  <img src="ameyo_icon.png" height="30px" alt="ameyo_icon">
+                  <span class="ml-2">Ameyo</span>
+                 
+                </button>
+              </li>
+              <li class="nav-item ozonetelotab position-relative" role="presentation">
+                <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#ozonetelVendor" type="button" role="tab" aria-controls="ozonetelVendor" aria-selected="false">
+                  <img src="ozonetel_icon.png"  height="30px" alt="ozonetel_icon">
+                  <span class="ml-2">Ozonetel</span>
+                  <span class="badge badge-success calling"><span class="material-icons-outlined" style="font-size:10px; line-height:11px;">call</span>
+                </button>
+              </li>
+              <li class="nav-item myopratortab position-relative" role="presentation">
+                <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#myopratorVendor" type="button" role="tab" aria-controls="myopratorVendor" aria-selected="false">
+                  <img src="myoprator_icon.png"  height="30px" alt="myoprator_icon">
+                  <span class="ml-2">Myoprator</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="ameyoVendor" role="tabpanel" aria-labelledby="ameyoVendor-tab">
+                    <iframe src="https://www.ameyo.com/ameyowebaccess/toolbarLogin-vl.htm?" id="ameyoIframe"></iframe>
+              </div>
+
+                <div class="tab-pane fade" id="ozonetelVendor" role="tabpanel" aria-labelledby="ozonetelVendor-tab">
+                  <iframe src="https://agent1.cloudagent.in/OCCDV2/cloudagent/agent_toolbar.jsp" id="ameyoIframe"></iframe>
+                </div>
+
+
+                <div class="tab-pane fade" id="myopratorVendor" role="tabpanel" aria-labelledby="myopratorVendor-tab">
+                  <iframe src="https://myoperator.com/" id="ameyoIframe"></iframe>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  <script>
+    jQuery('[data-toggle="tooltip"]').tooltip()
+     </script>
+</body>
+</html>
