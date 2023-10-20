@@ -17,6 +17,11 @@ body.counsellors_userprofile{background:url(./profileDetails.png) 0 0 no-repeat;
   -webkit-font-smoothing: antialiased;
 }
 
+
+.modal-open .bubbles{
+    display:none!important;
+}
+
 .multivenderIcon{
     position:fixed;
     bottom:2px;
