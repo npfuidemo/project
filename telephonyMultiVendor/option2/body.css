@@ -1,6 +1,12 @@
 body.leads_leadmanager{background:url(./leadBackground.png) 0 0 no-repeat;}
 body.counsellors_userprofile{background:url(./profileDetails.png) 0 0 no-repeat;}
 
+
+
+.modal-open .bubbles{
+    display:none!important;
+}
+
 .material-icons-outlined {
   font-family: 'Material Icons Outlined';
   font-weight: normal;
