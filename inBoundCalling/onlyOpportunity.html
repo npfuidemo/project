@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preload" href="{% static 'theme/v1/fonts/lineicon.woff2' %}?29apr22" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/materialicons/v130/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/materialiconsoutlined/v106/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2" as="font" type="font/woff2" crossorigin>
+    <!--  Fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/inboundCall.css"> 
+  <style>
+    
+  </style>
+    <title>Hello, world!</title>
+  </head>
+  <body style="background:url(dashboard.png) 0 0 no-repeat">
+
+   <!-- Button trigger modal -->
+<button type="button" class="btn-btn-link" style="padding:5px; border-radius:50%; position:absolute; width:36px; background-color:#eef2f6; border:0; color:#4285f4; height:36px; right:255px; top:5px; display:flex; justify-content:center; align-items:center;" data-toggle="modal" data-target="#missedActioModal">
+  <span class="material-icons-outlined">
+    phone_missed
+    </span>
+</button>
+
+<button type="button" class="btn-btn-link" style="padding:5px; border-radius:50%; position:absolute; width:36px; background-color:#eef2f6; border:0; color:#4285f4; height:36px; right:210px; top:5px; display:flex; justify-content:center; align-items:center;" data-toggle="modal" data-target="#missedActioModal">
+  <span class="material-icons-outlined">
+    local_phone
+    </span>
+</button>
+  
+  <!-- missedActioModal start here -->
+  <div class="modal fade offCanvasModal right popup-customization" id="missedActioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-blue">
+          <h5 class="modal-title" id="exampleModalLabel">Missed Actions <span class="badge bg-warning">10</span></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-light pt-2 fullHeight">
+          <div class="nav-tabs-navigation inline_tabs mb-0 header-tabs">
+            <div class="nav-tabs-wrapper content-none">
+              <ul class="nav nav-tabs flex-nowrap border-bottom-1" data-tabs="tabs" role="tablist">
+                  <li class="nav-item mr-2"><a class="nav-link active show" data-toggle="tab" href="#inboundCall_details">Inbound Call</a></li>
+                  <li class="nav-item mr-2"><a class="nav-link" data-toggle="tab" href="#campaignCall_details">Campaign Call</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-content mt-3" id="inBoundCampaignTabContent">
+            <div class="tab-pane fade show bg-white active" id="inboundCall_details" role="tabpanel" aria-labelledby="inboundCall-tab">
+              <div class="table-responsive border-0 shadow-bottom table-sticky" data-sticky="true">
+                <table class="table mb-0">
+                  <thead>
+                    <tr>
+                      <th class="min-max-200 text-left font-weight-normal border-bottom-0">Call Info</th>
+                      <th class="text-left font-weight-normal  border-bottom-0">Recording</th>
+                      <th class="text-left  border-bottom-0"></th>  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td>
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="material-icons-outlined mr-2">contacts</div>
+                          <div class="text-left lineHeight14">
+                             <span class="fs-13">7503089263</span>
+                            <div><span class="text-muted">Call Start - </span> <span>27-10-2023 10:55</span></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pt-2">
+                        <div class="d-flex justify-content-start align-items-center position-relative">
+                          <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="border-0 btn-link" data-toggle="modal" data-target="#callDetailModal">
+                          <span class="fs-18 material-icons-outlined text-secondary">edit</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="d-flex align-items-center justify-content-center pt-3 pb-2">
+                  <button id="load_more_button" type="button" onclick="" class="btn btn-sm btn-outline-primary d-flex justify-content-center align-items-center">
+                    <span>Show More</span>
+                    <span class="material-icons-outlined fs-13 ml-1">autorenew</span>
+                  </button>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="campaignCall_details" role="tabpanel" aria-labelledby="campaignCall-tab">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- missedActioModal end here -->
+
+
+
+
+  <!-- callDetailModal start here -->
+  <div class="modal fade offCanvasModal right popup-customization" id="callDetailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-blue">
+          <h5 class="modal-title d-flex justify-content-start align-items-center" id="exampleModalLabel">
+            <a href="javascript:void(0)" data-dismiss="modal" data-toggle="tooltip" title="Back">
+              <span class="material-icons-outlined fs-18 mr-1">keyboard_backspace</span>
+            </a>
+            <span>Call Details</span></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-light pt-0 fullHeight">
+          <div class="row bg-new-light">
+            <div class="col-sm-12 col-12">
+              <h6>Opportunity Details</h6>
+            </div>
+          </div>
+
+          <div class="row callDetailContainer">
+            <div class="col-sm-12 opportunityContainer">
+              <div class="accordion config-accordian subHeadingHide leadOppoDetails" id="opportunityDetails">
+                <div class="card my-3">
+                   <div class="card-body p-0">
+                      <div aria-controls="opportunity-one" aria-expanded="false" class="px-2 py-2 d-flex flex-wrap justify-content-md-between align-items-start collapsed cursor-pointer " data-target="#opportunity-oneCollaspe"  data-toggle="collapse" role="tablist">
+                         <div>
+                            <h5 class="my-0 h6 d-flex justify-content-start align-items-center">
+                              <span class="lineicon-210 fs-12 mr-1"></span>
+                              <span>PW Banking</span>
+                            </h5> 
+                         </div>
+                         <div class="d-flex ml-auto position-absolute toggleArrow">
+                            <div><button aria-expanded="false" class="btn btn-link py-0 px-0 arrow-icon" data-target="#opportunity-oneCollaspe" data-toggle="collapse" type="button"><span class="fa fa-angle-down" data-container="body" data-original-title="Click to expand /collapse" data-placement="bottom" data-toggle="tooltip"></span></button></div>
+                            
+                         </div>
+                      </div>
+                      <div class="collapse bg-light-blue px-3 py-3" data-parent="#opportunityDetails" id="opportunity-oneCollaspe">
+                         <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                            <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <span>Dhiraj Mishra</span>
+                                <span class="material-icons-outlined text-success fs-15 ml-2" data-toggle="tooltip" data-trigger="hover" data-placement="right" data-title="This lead is marked as Verfied Lead">verified</span>
+                              </div>
+                              
+
+                              <div class="dropdown float-right">
+                                <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                   <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                                </a>
+                                <div class="dropdown-menu">
+                                   <a href="javascript:void(0)" class="dropdown-item">
+                                      <span class="material-icons-outlined fs-14">edit</span>
+                                      Edit Lead
+                                   </a>
+                                   <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Opportunity
+                                  </a>
+                                   <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                                </div>
+                             </div>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="lineicon-210 fs-14 mr-1"></span>
+                              <div class="font-weight-bold">PW Banking - <span class="text-muted small">Opportunity List</span></div>
+                            </div>
+
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="material-icons-outlined fs-14 mr-1">email</span>
+                              <span class="fs-13">dhiraj.mishra@yopmail.com</span>
+                            </div>
+
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="material-icons-outlined fs-14 mr-1">call</span>
+                              <span class="fs-13">7503089263 - Primary</span>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+
+
+                <div class="card my-3">
+                    <div class="card-body p-0">
+                      <div aria-controls="opportunity-two" aria-expanded="true" class="px-2 py-2 d-flex flex-wrap justify-content-md-between align-items-start collapsed cursor-pointer " data-target="#opportunity-oneCollaspetwo"  data-toggle="collapse" role="tablist">
+                          <div>
+                            <h5 class="my-0 h6 d-flex justify-content-start align-items-center">
+                              <span class="lineicon-210 fs-12 mr-1"></span>
+                              <span>PW SSC</span>
+                            </h5> 
+                          </div>
+                          <div class="d-flex ml-auto position-absolute toggleArrow">
+                            <div><button aria-expanded="true" class="btn btn-link py-0 px-0 arrow-icon" data-target="#opportunity-oneCollaspetwo" data-toggle="collapse" type="button"><span class="fa fa-angle-down" data-container="body" data-original-title="Click to expand /collapse" data-placement="bottom" data-toggle="tooltip"></span></button></div>
+                            
+                          </div>
+                      </div>
+                      <div class="collapse show bg-light-blue px-3 py-3" data-parent="#opportunityDetails" id="opportunity-oneCollaspetwo">
+                          <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                            <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <span>Dhiraj Mishra</span>
+                                <span class="material-icons-outlined text-success fs-15 ml-2" data-toggle="tooltip" data-trigger="hover" data-placement="right" data-title="This lead is marked as Verfied Lead">verified</span>
+                              </div>
+                              
+
+                              <div class="dropdown float-right">
+                                <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                    <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="javascript:void(0)" class="dropdown-item">
+                                      <span class="material-icons-outlined fs-14">edit</span>
+                                      Edit Lead
+                                    </a>
+                                    <a href="javascript:void(0)" class="dropdown-item">
+                                      <span class="material-icons-outlined fs-14">edit</span>
+                                      Edit Opportunity
+                                    </a>
+                                    <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="lineicon-210 fs-14 mr-1"></span>
+                              <div class="font-weight-bold">PW Banking - <span class="text-muted small">Opportunity List</span></div>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="material-icons-outlined fs-14 mr-1">email</span>
+                              <span class="fs-13">dhiraj.mishra@yopmail.com</span>
+                            </div>
+
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="material-icons-outlined fs-14 mr-1">call</span>
+                              <span class="fs-13">7503089263 - Primary <span class="text-primary cursor-pointer" data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-html="true" data-content="<ul class='list-none m-0 p-0'><li>7503089263</li><li>8503089268</li></ul>">+2</span></span>
+                            </div>
+                          </div>
+
+
+                          <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                            <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <span>Vipin Tiwari</span>
+                              </div>
+                              
+
+                              <div class="dropdown float-right">
+                                <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                  <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                      <span class="material-icons-outlined fs-14">edit</span>
+                                      Edit Lead
+                                  </a>
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Opportunity
+                                  </a>
+                                  <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="lineicon-210 fs-14 mr-1"></span>
+                              <div class="font-weight-bold">PW SSC - <span class="text-muted small">Opportunity List</span></div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="material-icons-outlined fs-14 mr-1">email</span>
+                              <span class="fs-13">vipin.tiwari@yopmail.com</span>
+                            </div>
+
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="material-icons-outlined fs-14 mr-1">call</span>
+                              <span class="fs-13">9503089263 - Primary</span>
+                            </div>
+                        </div>                       
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class="card my-3">
+                  <div class="card-body p-0">
+                    <div aria-controls="opportunity-three" aria-expanded="false" class="px-2 py-2 d-flex flex-wrap justify-content-md-between align-items-start collapsed cursor-pointer " data-target="#opportunity-oneCollaspethree"  data-toggle="collapse" role="tablist">
+                        <div>
+                          <h5 class="my-0 h6 d-flex justify-content-start align-items-center">
+                            <span class="lineicon-210 fs-12 mr-1"></span>
+                            <span>Opp chandigarh</span>
+                          </h5> 
+                        </div>
+                        <div class="d-flex ml-auto position-absolute toggleArrow">
+                          <div><button aria-expanded="false" class="btn btn-link py-0 px-0 arrow-icon" data-target="#opportunity-oneCollaspethree" data-toggle="collapse" type="button"><span class="fa fa-angle-down" data-container="body" data-original-title="Click to expand /collapse" data-placement="bottom" data-toggle="tooltip"></span></button></div>
+                          
+                        </div>
+                    </div>
+                    <div class="collapse bg-light-blue px-3 py-3" data-parent="#opportunityDetails" id="opportunity-oneCollaspethree">
+                        <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                          <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span>Dhiraj Mishra</span>
+                              <span class="material-icons-outlined text-success fs-15 ml-2" data-toggle="tooltip" data-trigger="hover" data-placement="right" data-title="This lead is marked as Verfied Lead">verified</span>
+                            </div>
+                            
+
+                            <div class="dropdown float-right">
+                              <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                  <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                              </a>
+                              <div class="dropdown-menu">
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Lead
+                                  </a>
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Opportunity
+                                  </a>
+                                  <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="lineicon-210 fs-14 mr-1"></span>
+                            <div class="font-weight-bold">Opp chandigarh - <span class="text-muted small">Opportunity List</span></div>
+                          </div>
+
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">email</span>
+                            <span class="fs-13">dhiraj.mishra@yopmail.com</span>
+                          </div>
+
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">call</span>
+                            <span class="fs-13">7503089263</span>
+                          </div>
+                        </div>
+
+
+                        <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                          <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span>Vipin Tiwari</span>
+                              
+                            </div>
+                            
+
+                            <div class="dropdown float-right">
+                              <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Lead
+                                </a>
+                                <a href="javascript:void(0)" class="dropdown-item">
+                                  <span class="material-icons-outlined fs-14">edit</span>
+                                  Edit Opportunity
+                                </a>
+                                <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">email</span>
+                            <span class="fs-13">vipin.tiwari@yopmail.com</span>
+                          </div>
+
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">call</span>
+                            <span class="fs-13">9503089263 - Primary</span>
+                          </div>
+                        </div>
+                        
+                        <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                          <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span>Vipin Tiwari</span>
+                              <span class="material-icons-outlined text-success fs-15 ml-2" data-toggle="tooltip" data-trigger="hover" data-placement="right" data-title="This lead is marked as Verfied Lead">verified</span>
+                            </div>
+                            
+
+                            <div class="dropdown float-right">
+                              <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Lead
+                                </a>
+                                <a href="javascript:void(0)" class="dropdown-item">
+                                  <span class="material-icons-outlined fs-14">edit</span>
+                                  Edit Opportunity
+                                </a>
+                                <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">email</span>
+                            <span class="fs-13">vipin.tiwari@yopmail.com</span>
+                          </div>
+
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">call</span>
+                            <span class="fs-13">9503089263</span>
+                          </div>
+                        </div>
+
+
+                        <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                          <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span>Vipin Tiwari</span>
+                              <span class="material-icons-outlined text-success fs-15 ml-2" data-toggle="tooltip" data-trigger="hover" data-placement="right" data-title="This lead is marked as Verfied Lead">verified</span>
+                            </div>
+                            
+
+                            <div class="dropdown float-right">
+                              <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Lead
+                                </a>
+                                <a href="javascript:void(0)" class="dropdown-item">
+                                  <span class="material-icons-outlined fs-14">edit</span>
+                                  Edit Opportunity
+                                </a>
+                                <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">email</span>
+                            <span class="fs-13">vipin.tiwari@yopmail.com</span>
+                          </div>
+
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">call</span>
+                            <span class="fs-13">9503089263</span>
+                          </div>
+                        </div>
+                        
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card my-3">
+                  <div class="card-body p-0">
+                     <div aria-controls="opportunity-four" aria-expanded="false" class="px-2 py-2 d-flex flex-wrap justify-content-md-between align-items-start collapsed cursor-pointer " data-target="#opportunity-oneCollaspefour"  data-toggle="collapse" role="tablist">
+                        <div>
+                          <h5 class="my-0 h6 d-flex justify-content-start align-items-center">
+                            <span class="lineicon-210 fs-12 mr-1"></span>
+                            <span>test opp report</span>
+                          </h5> 
+                        </div>
+                        <div class="d-flex ml-auto position-absolute toggleArrow">
+                           <div><button aria-expanded="false" class="btn btn-link py-0 px-0 arrow-icon" data-target="#opportunity-oneCollaspefour" data-toggle="collapse" type="button"><span class="fa fa-angle-down" data-container="body" data-original-title="Click to expand /collapse" data-placement="bottom" data-toggle="tooltip"></span></button></div>
+                           
+                        </div>
+                     </div>
+                     <div class="collapse bg-light-blue px-3 py-3" data-parent="#opportunityDetails" id="opportunity-oneCollaspefour">
+                        <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                           <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                             <div class="d-flex justify-content-start align-items-center">
+                               <span>Dhiraj Mishra</span>
+                               <span class="material-icons-outlined text-success fs-15 ml-2" data-toggle="tooltip" data-trigger="hover" data-placement="right" data-title="This lead is marked as Verfied Lead">verified</span>
+                             </div>
+                             
+
+                             <div class="dropdown float-right">
+                               <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                  <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                               </a>
+                               <div class="dropdown-menu">
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                     <span class="material-icons-outlined fs-14">edit</span>
+                                     Edit Lead
+                                  </a>
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Opportunity
+                                  </a>
+                                                                    <a href="#create-opportunity" data-toggle="modal" class="dropdown-item">
+                                  <span class="material-icons-outlined fs-14">add</span>
+                                  Add Opportunity
+                                  </a>
+                               </div>
+                            </div>
+                           </div>
+                           <div class="d-flex justify-content-start align-items-center">
+                            <span class="lineicon-210 fs-14 mr-1"></span>
+                            <div class="font-weight-bold">test opp report - <span class="text-muted small">Opportunity List</span></div>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                             <span class="material-icons-outlined fs-14 mr-1">email</span>
+                             <span class="fs-13">dhiraj.mishra@yopmail.com</span>
+                           </div>
+
+                           <div class="d-flex justify-content-start align-items-center">
+                             <span class="material-icons-outlined fs-14 mr-1">call</span>
+                              <span class="fs-13">7503089263</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                </div>
+
+
+                <div class="card my-3">
+                  <div class="card-body p-0">
+                    <div aria-controls="opportunity-five" aria-expanded="false" class="px-2 py-2 d-flex flex-wrap justify-content-md-between align-items-start collapsed cursor-pointer " data-target="#opportunity-oneCollaspefive"  data-toggle="collapse" role="tablist">
+                        <div>
+                          <h5 class="my-0 h6 d-flex justify-content-start align-items-center">
+                            <span class="lineicon-210 fs-12 mr-1"></span>
+                            <span>new opp with state assam + baksa</span>
+                          </h5> 
+                        </div>
+                        <div class="d-flex ml-auto position-absolute toggleArrow">
+                          <div><button aria-expanded="false" class="btn btn-link py-0 px-0 arrow-icon" data-target="#opportunity-oneCollaspefive" data-toggle="collapse" type="button"><span class="fa fa-angle-down" data-container="body" data-original-title="Click to expand /collapse" data-placement="bottom" data-toggle="tooltip"></span></button></div>
+                          
+                        </div>
+                    </div>
+                    <div class="collapse bg-light-blue px-3 py-3" data-parent="#opportunityDetails" id="opportunity-oneCollaspefive">
+                        <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                          <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span>Dhiraj Mishra</span>
+                              <span class="material-icons-outlined text-success fs-15 ml-2" data-toggle="tooltip" data-trigger="hover" data-placement="right" data-title="This lead is marked as Verfied Lead">verified</span>
+                            </div>
+                            
+
+                            <div class="dropdown float-right">
+                              <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                  <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                              </a>
+                              <div class="dropdown-menu">
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Lead
+                                  </a>
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Opportunity
+                                  </a>
+                                  <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="lineicon-210 fs-14 mr-1"></span>
+                            <div class="font-weight-bold">new opp with state assam + baksa - <span class="text-muted small">Opportunity List</span></div>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">email</span>
+                            <span class="fs-13">dhiraj.mishra@yopmail.com</span>
+                          </div>
+
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">call</span>
+                            <span class="fs-13">7503089263</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="card my-3">
+                  <div class="card-body p-0">
+                    <div aria-controls="opportunity-six" aria-expanded="false" class="px-2 py-2 d-flex flex-wrap justify-content-md-between align-items-start collapsed cursor-pointer " data-target="#opportunity-oneCollaspesix"  data-toggle="collapse" role="tablist">
+                        <div>
+                          <h5 class="my-0 h6 d-flex justify-content-start align-items-center">
+                            <span class="lineicon-210 fs-12 mr-1"></span>
+                            <span>PW SSC</span>
+                          </h5> 
+                        </div>
+                        <div class="d-flex ml-auto position-absolute toggleArrow">
+                          <div><button aria-expanded="false" class="btn btn-link py-0 px-0 arrow-icon" data-target="#opportunity-oneCollaspesix" data-toggle="collapse" type="button"><span class="fa fa-angle-down" data-container="body" data-original-title="Click to expand /collapse" data-placement="bottom" data-toggle="tooltip"></span></button></div>
+                          
+                        </div>
+                    </div>
+                    <div class="collapse bg-light-blue px-3 py-3" data-parent="#opportunityDetails" id="opportunity-oneCollaspesix">
+                        <div class="card bg-white px-2 py-2 mt-1 mb-3 text-body">
+                          <div class="font-weight-bold d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span>Dhiraj Mishra</span>
+                              <span class="material-icons-outlined text-success fs-15 ml-2" data-toggle="tooltip" data-trigger="hover" data-placement="right" data-title="This lead is marked as Verfied Lead">verified</span>
+                            </div>
+                            
+
+                            <div class="dropdown float-right">
+                              <a href="javascript:void(0);" class="d-flex ml-1 p-1 dropdown-toggle content-none hover-effect rounded-circle text-secondary" data-toggle="dropdown" aria-haspopup="true">
+                                  <span class="material-icons-outlined fs-14" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" title="" data-original-title="More Actions"> more_vert </span>
+                              </a>
+                              <div class="dropdown-menu">
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Lead
+                                  </a>
+                                  <a href="javascript:void(0)" class="dropdown-item">
+                                    <span class="material-icons-outlined fs-14">edit</span>
+                                    Edit Opportunity
+                                  </a>
+                                  <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="lineicon-210 fs-14 mr-1"></span>
+                            <div class="font-weight-bold">Opp chandigarh - <span class="text-muted small">Opportunity List</span></div>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">email</span>
+                            <span class="fs-13">dhiraj.mishra@yopmail.com</span>
+                          </div>
+
+                          <div class="d-flex justify-content-start align-items-center">
+                            <span class="material-icons-outlined fs-14 mr-1">call</span>
+                            <span class="fs-13">7503089263</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- callDetailModal end here -->
+
+
+
+  <script type="text/javascript" src="js/core/jquery.min.js?1697805256"></script>
+  <script type="text/javascript" src="js/core/popper.min.js?1697805256"></script>
+  <script type="text/javascript" src="js/core/bootstrap-material-design.min.js?1697805256"></script>
+  <script type="text/javascript" src="js/core/crypto.js?1697805256"></script>
+  <script type="text/javascript" src="js/bootstrap-show-modal.js?1697805256"></script>
+  <script type="text/javascript" src="js/timer.js?1697805256"></script>
+  <script type="text/javascript" src="js/plugins/moment.min.js?1697805256"></script>
+  <script type="text/javascript" src="js/plugins/bootstrap-datetimepicker.js?1697805256"></script>
+  <script type="text/javascript" src="js/material-kit.js?1697805256"></script>
+  <script type="text/javascript" src="js/bootstrap-select.js?1697805256"></script>
+  <script type="text/javascript" src="js/daterangepicker.min.js?1697805256"></script>
+  <script type="text/javascript" src="js/jquery.datetimepicker.full.js?1697805256"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js?1697805256"></script>
+  <script type="text/javascript" src="js/menu-search.js?1697805256"></script>
+  
+  <!--  Core JS Files  -->
+   <script type="text/javascript" src="js/vimeofroogaloop.min.js?1697805256"></script>
+   <script type="text/javascript" src="js/plugins/moment.min.js?1697805256"></script>
+   <script type="text/javascript" src="js/plugins/date-range-picker.js?1697805256"></script>
+   <script type="text/javascript" src="js/scrollSync.js?1697805256"></script>
+   <script>
+        $("#callDetailModal").modal('show');
+        $("#missedActioModal").modal('show');
+
+
+  $(document).on("click",".collapsed",function() {
+    if($('.card').hasClass('newCallDetails')) {
+      $(".card").removeClass('newCallDetails');
+    }
+  });
+
+        
+    // dropdownMenuPlacement with body
+function dropdownMenuPlacement() {
+  $('.dropdown.show[data-container="body"]').dropdown('toggle');
+  // hold onto the drop down menu
+  var dropdownMenu;
+  // and when you show it, move it to the body
+  $('.dropdown[data-container="body"]').on('show.bs.dropdown', function (e) {
+
+     // grab the menu
+     dropdownMenu = $(e.target).find('.dropdown-menu');
+     var dropHeight = dropdownMenu.outerHeight() - 50;
+
+     // detach it and append it to the body
+     $('body').append(dropdownMenu.detach());
+
+     // grab the new offset position
+     var eOffset = $(e.target).offset();
+     var offsetDropPos = eOffset.top - dropHeight;
+     // make sure to place it where it would normally go (this could be improved)
+     dropdownMenu.css({
+        'display': 'block',
+        //'top': eOffset.top + $(e.target).outerHeight(),
+        'top': (offsetDropPos < 0) ? 0 : offsetDropPos,
+        'left': eOffset.left - 135
+     });
+  });
+  // and when you hide it, reattach the drop down, and hide it normally
+  $('.dropdown[data-container="body"]').on('hide.bs.dropdown', function (e) {
+     $(e.target).append(dropdownMenu.detach());
+     dropdownMenu.hide();
+  });
+}
+
+$('.dropdown[data-container="body"]:not(.show)').click(function () {
+  dropdownMenuPlacement();
+});
+   </script>
+  </body>
+</html>
