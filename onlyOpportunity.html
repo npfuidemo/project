@@ -422,7 +422,7 @@
                                     <span class="material-icons-outlined fs-14">edit</span>
                                     Edit Opportunity
                                   </a>
-                                   <a href="#" target="_blank" class="dropdown-item">
+                                   <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
                                       <span class="material-icons-outlined fs-14">add</span>
                                       Add Opportunity
                                    </a>
@@ -485,10 +485,10 @@
                                       <span class="material-icons-outlined fs-14">edit</span>
                                       Edit Opportunity
                                     </a>
-                                    <a href="#" target="_blank" class="dropdown-item">
+                                    <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
                                       <span class="material-icons-outlined fs-14">add</span>
                                       Add Opportunity
-                                    </a>
+                                   </a>
                                 </div>
                               </div>
                             </div>
@@ -529,10 +529,10 @@
                                     <span class="material-icons-outlined fs-14">edit</span>
                                     Edit Opportunity
                                   </a>
-                                  <a href="#" target="_blank" class="dropdown-item">
+                                  <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
                                       <span class="material-icons-outlined fs-14">add</span>
                                       Add Opportunity
-                                  </a>
+                                   </a>
                                 </div>
                             </div>
                             </div>
@@ -592,10 +592,10 @@
                                     <span class="material-icons-outlined fs-14">edit</span>
                                     Edit Opportunity
                                   </a>
-                                  <a href="#" target="_blank" class="dropdown-item">
-                                    <span class="material-icons-outlined fs-14">add</span>
-                                    Add Opportunity
-                                  </a>
+                                  <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
                               </div>
                             </div>
                           </div>
@@ -638,10 +638,10 @@
                                   <span class="material-icons-outlined fs-14">edit</span>
                                   Edit Opportunity
                                 </a>
-                                <a href="#" target="_blank" class="dropdown-item">
-                                    <span class="material-icons-outlined fs-14">add</span>
-                                    Add Opportunity
-                                </a>
+                                <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
                               </div>
                           </div>
                           </div>
@@ -677,10 +677,10 @@
                                   <span class="material-icons-outlined fs-14">edit</span>
                                   Edit Opportunity
                                 </a>
-                                <a href="#" target="_blank" class="dropdown-item">
-                                    <span class="material-icons-outlined fs-14">add</span>
-                                    Add Opportunity
-                                </a>
+                                <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
                               </div>
                           </div>
                           </div>
@@ -717,10 +717,10 @@
                                   <span class="material-icons-outlined fs-14">edit</span>
                                   Edit Opportunity
                                 </a>
-                                <a href="#" target="_blank" class="dropdown-item">
-                                    <span class="material-icons-outlined fs-14">add</span>
-                                    Add Opportunity
-                                </a>
+                                <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
                               </div>
                           </div>
                           </div>
@@ -838,10 +838,10 @@
                                     <span class="material-icons-outlined fs-14">edit</span>
                                     Edit Opportunity
                                   </a>
-                                  <a href="#" target="_blank" class="dropdown-item">
-                                    <span class="material-icons-outlined fs-14">add</span>
-                                    Add Opportunity
-                                  </a>
+                                  <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
                               </div>
                             </div>
                           </div>
@@ -900,10 +900,10 @@
                                     <span class="material-icons-outlined fs-14">edit</span>
                                     Edit Opportunity
                                   </a>
-                                  <a href="#" target="_blank" class="dropdown-item">
-                                    <span class="material-icons-outlined fs-14">add</span>
-                                    Add Opportunity
-                                  </a>
+                                  <a href="#create-opportunity"  class="dropdown-item" data-toggle="modal">
+                                      <span class="material-icons-outlined fs-14">add</span>
+                                      Add Opportunity
+                                   </a>
                               </div>
                             </div>
                           </div>
@@ -959,6 +959,15 @@
    <script>
         $("#callDetailModal").modal('show');
         $("#missedActioModal").modal('show');
+
+
+  $(document).on("click",".collapsed",function() {
+    if($('.card').hasClass('newCallDetails')) {
+      $(".card").removeClass('newCallDetails');
+    }
+  });
+
+        
     // dropdownMenuPlacement with body
 function dropdownMenuPlacement() {
   $('.dropdown.show[data-container="body"]').dropdown('toggle');
