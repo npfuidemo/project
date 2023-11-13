@@ -25,16 +25,16 @@
   </style>
     <title>Hello, world!</title>
   </head>
-  <body style="background:url(dashboard.png) 0 0 no-repeat">
+  <body style="background:url(dashboard.png) 0 0 no-repeat;background-size:100%;">
 
    <!-- Button trigger modal -->
-<button type="button" class="btn-btn-link" style="padding:5px; border-radius:50%; position:absolute; width:36px; background-color:#eef2f6; border:0; color:#4285f4; height:36px; right:255px; top:5px; display:flex; justify-content:center; align-items:center;" data-toggle="modal" data-target="#missedActioModal">
+<button type="button" class="btn-btn-link" style="padding:5px; border-radius:50%; position:absolute; width:36px; background-color:#eef2f6; border:0; color:#4285f4; height:36px; right:16%; top:1.5%; display:flex; justify-content:center; align-items:center;" data-toggle="modal" data-target="#missedActioModal">
   <span class="material-icons-outlined">
     phone_missed
     </span>
 </button>
 
-<button type="button" class="btn-btn-link" style="padding:5px; border-radius:50%; position:absolute; width:36px; background-color:#eef2f6; border:0; color:#4285f4; height:36px; right:210px; top:5px; display:flex; justify-content:center; align-items:center;" data-toggle="modal" data-target="#missedActioModal">
+<button type="button" class="btn-btn-link" style="padding:5px; border-radius:50%; position:absolute; width:36px; background-color:#eef2f6; border:0; color:#4285f4; height:36px; right:19.5%; top:1.5%; display:flex; justify-content:center; align-items:center;" data-toggle="modal" data-target="#missedActioModal">
   <span class="material-icons-outlined">
     local_phone
     </span>
@@ -368,9 +368,6 @@
       <div class="modal-content">
         <div class="modal-header border-bottom-blue">
           <h5 class="modal-title d-flex justify-content-start align-items-center" id="exampleModalLabel">
-            <a href="javascript:void(0)" data-dismiss="modal" data-toggle="tooltip" title="Back">
-              <span class="material-icons-outlined fs-18 mr-1">keyboard_backspace</span>
-            </a>
             <span>Call Details</span></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -439,7 +436,7 @@
 
                             <div class="d-flex justify-content-start align-items-center">
                               <span class="material-icons-outlined fs-14 mr-1">call</span>
-                              <span class="fs-13">7503089263 - Primary</span>
+                              <span class="fs-13">7503089263 - <a href="javascript:void(0)" class="campaign-status P-status" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Lead that has first time successfully registered in the system with a unique Email ID">P</a></span>
                             </div>
                          </div>
                       </div>
@@ -496,7 +493,7 @@
 
                             <div class="d-flex justify-content-start align-items-center">
                               <span class="material-icons-outlined fs-14 mr-1">call</span>
-                              <span class="fs-13">7503089263 - Primary <span class="text-primary cursor-pointer" data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-html="true" data-content="<ul class='list-none m-0 p-0'><li>7503089263</li><li>8503089268</li></ul>">+2</span></span>
+                              <span class="fs-13">7503089263 - <a href="javascript:void(0)" class="campaign-status P-status" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Lead that has first time successfully registered in the system with a unique Email ID">P</a> <span class="text-primary cursor-pointer" data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-html="true" data-content="<ul class='list-none m-0 p-0'><li>7503089263</li><li>8503089268</li></ul>">+2</span></span>
                             </div>
                           </div>
 
@@ -531,7 +528,7 @@
 
                             <div class="d-flex justify-content-start align-items-center">
                               <span class="material-icons-outlined fs-14 mr-1">call</span>
-                              <span class="fs-13">9503089263 - Primary</span>
+                              <span class="fs-13">9503089263 - <a href="javascript:void(0)" class="campaign-status P-status" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="" data-original-title="Lead that has first time successfully registered in the system with a unique Email ID">P</a></span>
                             </div>
                         </div>                       
                       </div>
@@ -624,7 +621,7 @@
 
                           <div class="d-flex justify-content-start align-items-center">
                             <span class="material-icons-outlined fs-14 mr-1">call</span>
-                            <span class="fs-13">9503089263 - Primary</span>
+                            <span class="fs-13">9503089263 - <a href="javascript:void(0)" class="campaign-status P-status" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="" data-original-title="Lead that has first time successfully registered in the system with a unique Email ID">P</a></span>
                           </div>
                         </div>
                         
@@ -889,7 +886,7 @@
                 <div class="noData d-flex h-100 justify-content-center align-items-center flex-column">
                   <i class="lineicon-210 fs-50 text-muted"></i>
                   <span class="pt-2 pb-2 text-muted">No Opportunity against selected lead</span>
-                  <button class="pl-3 pr-3 btn btn-outline-primary btn-sm d-flex justify-content-center align-items-center">
+                  <button class="pl-3 pr-3 btn btn-outline-primary btn-sm d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#opportunity_lead_modal">
                     <span class="d-flex material-icons-outlined fs-16 mr-1" data-icon="add"></span>
                     <span class="d-flex font-weight-bold align-self-center fs-13">Create</span>
                   </button>
@@ -903,80 +900,319 @@
     <!-- callDetailModal end here -->
 
 
-<!-- create-opportunity start here-->
-<div class="modal fade offCanvasModal right popup-customization" data-backdrop="static" data-keyboard="false" id="create-opportunity" role="dialog" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-        <div class="modal-header border-bottom-blue">
-           <h5 class="modal-title my-0 d-flex align-items-center"><a class="text-dark back-btn" data-container="body" data-placement="bottom" data-toggle="tooltip" data-trigger="hover" href="javascript:void(0);" onclick="changeOpportunityStep('back')" style="display:none" title="" data-original-title="Back"><span class="bg-light fs-1xl material-icons-outlined mr-1 p-1 rounded-circle" data-icon="arrow_back"></span></a> <span class="title font-weight-bold my-0 mr-2 leading-6 d-flex align-items-center"><span class="mr-1" id="modal_head_text">Create</span> <span class="mx-0 break-word">Opportunity</span><span class="d-none d-md-inline-block ml-1" id="opp_header_attr"></span></span> <span class="badge bg-light-info badge-pill text-capitalize text-dark">Step <span id="step_no">1</span> of 3</span></h5>
-           <button aria-label="Close" class="close" data-containeropportunity="body" data-dismiss="modal" data-placement="left" data-toggle="tooltip" onclick="changeOpportunityStep('exit')" title="" type="button" data-original-title="Click Here to Close"><span aria-hidden="true">×</span></button>
+<!-- opportunity_lead_modal start here-->
+<div class="modal fade offCanvasModal right popup-customization" data-backdrop="static" id="opportunity_lead_modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+   <div class="modal-content h-100">
+    <div class="modal-header border-bottom-blue">
+     <h5 class="modal-title my-0">
+      <a href="javascript:void(0)" data-dismiss="modal" data-toggle="tooltip" title="" data-original-title="Back">
+        <span class="material-icons-outlined fs-18 mr-1">keyboard_backspace</span>
+      </a>
+      <span class="title font-weight-bold">Associate Lead <span class="config_name"></span></span>
+  </h5>
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip" data-placement="left" data-container="body" title="" data-original-title="Click Here to Close">
+      <span aria-hidden="true">×</span>
+     </button>
+    </div>
+    <div class="modal-body p-0">
+     <div class="bg-light d-flex m-0 py-2 sticky-top m-0">
+      <div class="col-12">
+        <div class="row no-gutters border radius-2">
+         <div class="col-4">
+          <div class="form-group p-0 my-0 rounded-0">
+            <select class="form-control selectpicker" data-style="bg-white border-right pl-2 pr-1 rounded-0" id="search_on" tabindex="-98">
+              <option value="name">Name</option>
+              <option value="email">Email</option>
+              <option value="mobile">Mobile</option>
+             </select>
+          </div>
+         </div>
+         <div class="col">
+          <div class="form-group p-0 my-0 rounded-0 bg-white d-flex align-items-center bmd-form-group is-filled">
+           <input type="text" class="form-control pr-4 border-0 first_search" placeholder="Search for Name, Email and Mobile No." minlength="3" id="search_data" onkeypress="searchLead(this)" autocomplete="off">
+           <button class="btn search_btn bg-transparent border-0 py-2 px-1 rounded-0 h-100 shadow-none h-100 first_search" onclick="searchLeadData(this)">
+            <span class="material-icons search_icon align-right text-muted" data-icon="search"></span>
+           </button>
+          </div>
+         </div>
         </div>
-        <div class="modal-body p-0">
-           <div class="py-2 px-3">
-              <div class="bordered callout-alert bg-light fs-14 my-0 bg-white text-dark my-0">
-                 <p class="fs-12 leading-6 mb-0 oppo_step oppo_step_1" style=""><span class="d-block mb-2 break-word">Opportunity will empower you to capture multiple interest of a lead and channelise your teams towards higher conversion, customised by you as per your business logic.</span> <span class="d-block mb-2 break-word">Defined Opportunity title will be visible as a header. For Instance, Data Science for Beginners, or IIT Learning Batch etc.</span></p>
-                 <p class="fs-12 leading-6 mb-0 oppo_step oppo_step_2" style="display: none;"><span class="d-block mb-2 break-word">Opportunity fields can be created and customised as per your business logic. You can use the created fields to capture, view and update the data within the List.</span> <span class="d-block mb-2">For Instance, Course Expiry Date to store and track the course end date of a course.</span></p>
-                 <p class="fs-12 leading-6 mb-0 oppo_step oppo_step_3" style="display: none;"><span class="d-block mb-2 break-word">Opportunity can be created as per your business logic to capture multiple interests of a single lead.</span> <span class="d-block mb-2">For Instance, A Candidate can show interest in Data Science for Beginners and IIT Learning Batch at the same time on your portal. <span class="break-word">Opportunity</span> logic will help you capture both the interest of a lead separately by creating two separate <span class="break-word">Opportunity</span> list with different logic.</span><img alt="" class="mt-2 img-fluid ml-md-5" id="logic-example-img" src="https://uat2-bkndcdn.npfcdn.com/static/theme/v1/images/opportunity-logic-single.png?1698726604" style="display: block; opacity: .9"></p>
-              </div>
-           </div>
-           <div class="py-2 px-3 bg-light-info text-dark border-bottom d-none">
-              <p class="fs-12 leading-6 mb-0 oppo_step oppo_step_1" style=""><span class="d-block mb-2 break-word">Opportunity will empower you to capture multiple interest of a lead and channelise your teams towards higher conversion, customised by you as per your business logic.</span> <span class="d-block mb-2 break-word">Defined Opportunity title will be visible as a header. For Instance, Data Science for Beginners, or IIT Learning Batch etc.</span></p>
-              <p class="fs-12 leading-6 mb-0 oppo_step oppo_step_2" style="display: none;"><span class="d-block mb-2 break-word">Opportunity fields can be created and customised as per your business logic. You can use the created fields to capture, view and update the data within the List.</span> <span class="d-block mb-2">For Instance, Course Expiry Date to store and track the course end date of a course.</span></p>
-              <p class="fs-12 leading-6 mb-0 oppo_step oppo_step_3" style="display: none;"><span class="d-block mb-2 break-word">Opportunity can be created as per your business logic to capture multiple interests of a single lead.</span> <span class="d-block mb-2">For Instance, A Candidate can show interest in Data Science for Beginners and IIT Learning Batch at the same time on your portal. <span class="mx-1 break-word">Opportunity</span> logic will help you capture both the interest of a lead separately by creating two separate <span class="mx-1 break-word">Opportunity</span> list with different logic.</span><img alt="" class="mt-2 img-fluid ml-md-5" src="https://uat2-bkndcdn.npfcdn.com/static/theme/v1/images/opportunity-logic-single.png?1698726604" style="opacity: .7"></p>
-           </div>
-           <div class="loader_logic pt-5" style="display:none;">
-              <div class="w-100 text-center mt-5"><img alt="loader" class="col-2 my-5" src="https://uat2-bkndcdn.npfcdn.com/static/theme/v1/images/npf-loder.gif?1698726604"></div>
-           </div>
-           <input id="oppo_id" type="hidden" value="" autocomplete="off">
-           <form action="javascript:void(0);" class="px-3 pb-3 pt-1" id="opp_step_1">
-              <div class="row">
-                 <div class="col-sm-4"><label class="mt-2 pt-1 position-relative" for="">Title <sup class="text-danger">*</sup></label></div>
-                 <div class="col-sm-8">
-                    <div class="form-group pt-0 mb-3 bmd-form-group">
-                       <input id="hidden_name" type="hidden" val="" autocomplete="off" value=""><input class="form-control" id="opportunity_name" maxlength="50" name="name" placeholder="Add Opportunity Title" type="text" val="" autocomplete="off">
-                       <div class="validation-message small text-danger" id="opportunity_name_error"></div>
-                    </div>
-                 </div>
-              </div>
-           </form>
-           <div class="px-3 pb-3 pt-1" id="opp_step_2" style="display:none"></div>
-           <form action="" class="mb-0 px-3 mb-3 pt-1" id="opp_step_3" style="display:none">
-              <input id="total_condition" type="hidden" value="1" autocomplete="off">
-              <div class="conditional-logic bg-white border rounded">
-                 <div class="conditional-logic-block">
-                    <div class="bg-white px-3 mt-3 position-relative z-1 d-inline-block w-100">
-                       <div class="row justify-content-between">
-                          <div class="col-12 col-md-6 d-flex align-items-center">
-                             <div class="conditional-logic-btn d-inline-block py-1 px-1"><label class="m-0 d-inline-block" for="conditional-logic-radio-and-0"><input checked="" id="conditional-logic-radio-and-0" name="conditional-logic-radio" type="radio" autocomplete="off"><span class="conditional-logic-span py-1 px-3 d-inline-block">All</span></label></div>
-                             <span class="text-dark ml-2">Meet All Criteria</span>
-                          </div>
-                       </div>
-                       <div class="position-relative mb-3">
-                          <div class="row align-items-center justify-content-end condition_1">
-                             <div class="col-11 opportunity_condition_block"></div>
-                          </div>
-                       </div>
-                    </div>
-                    <input id="opportunity_id_step3" type="hidden" val="" autocomplete="off" value="">
-                    <div class="w-100 p-2 border-top rounded-bottom">
-                       <div class="row justify-content-end">
-                          <div class="col-12 col-md-9">
-                             <p class="validation-message small text-danger error_exist_msg pl-4"></p>
-                          </div>
-                          <div class="col-12 col-md-3 text-right">
-                             <div class="d-flex justify-content-end"><a class="align-items-center btn btn-light btn-sm d-flex justify-content-center text-primary px-3" href="javascript:void(0);" id="add_more_rule_btn" onclick="addNewConditionLogic(this);"><span class="material-icons-outlined fs-13 text-primary mr-1">add</span> Add New Condition</a></div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </form>
+       <div class="row justify-content-end">
+        <div class="col-8">
+         <div class="validation-message small text-danger opportunity_stage_error" id="add_opportunity_searh_error"></div>
         </div>
-        <div class="modal-footer justify-content-between"><button class="btn btn-sm btn-outline-secondary justify-content-center align-items-center pl-2" id="backBtn" onclick="changeOpportunityStep('back')" style="display:none;" type="button"><span class="material-icons-outlined fs-17" style="line-height: 0;">chevron_left</span> Back</button><button class="btn btn-sm btn-outline-secondary d-flex justify-content-center align-items-center" id="cancelbtn" onclick="changeOpportunityStep('exit')" type="button">Cancel</button><button class="btn btn-sm btn-primary d-flex justify-content-center align-items-center pr-2 next_logic_btn" id="nextBtn" onclick="createOppName()" type="button">Save &amp; Next <span class="material-icons-outlined fs-17" style="line-height: 0;">chevron_right</span></button><button class="btn btn-sm btn-primary save_logic_btn d-none" onclick="saveOpportunityLogicData()" type="button">Save</button></div>
+       </div>
+      </div>
      </div>
+     <div class="w-100 px-3 pb-3 d-none" id="opportunity_lead_placeholder">
+       <div class="col-12 no_data_div_on_load p-0">
+         <div class="noDataFoundDiv vh-page-80">
+           <div class="innerHtml">
+             <span class="material-icons-outlined text-muted" style="font-size: 54px;"> search </span>
+             <p class="text-secondary">Search the lead to add the Opportunity against it.</p>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="d-inline-block w-100 px-3 pb-3" id="add_opportunity_lead_data">
+          <a href="#opportunity_add_modal" data-toggle="modal" class="row align-items-center hover-effect px-1 py-2 text-dark add_fields_multihits" onclick="add_opportunity_fields(this,'609a212c14aaf5fd47ea35e6336dce48')">
+          <div class="col-12 d-flex align-items-center">
+          <span class="w-9 h-9 mr-2 d-flex justify-content-center align-items-center rounded-circle bg-fifteenth">T
+          </span>
+          <div class="d-flex flex-column">
+          <span class="d-block">test</span>
+          <div class="d-flex align-items-center">
+          <span class="text-secondary small mr-2 d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> call </span> 4413523652 </span>
+          <span class="text-secondary small d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> email </span>test13523652@yopmail.com</span>
+          </div>
+          </div>
+          </div>
+          </a>
+
+          <a href="#opportunity_add_modal" data-toggle="modal" class="row align-items-center hover-effect px-1 py-2 text-dark add_fields_multihits" onclick="add_opportunity_fields(this,'53ea84fad15f7b94eefc0595662f5f15')">
+          <div class="col-12 d-flex align-items-center">
+          <span class="w-9 h-9 mr-2 d-flex justify-content-center align-items-center rounded-circle bg-fifteenth">T
+          </span>
+          <div class="d-flex flex-column">
+          <span class="d-block">test</span>
+          <div class="d-flex align-items-center">
+          <span class="text-secondary small mr-2 d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> call </span> 4413523666 </span>
+          <span class="text-secondary small d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> email </span>test13523666@yopmail.com</span>
+          </div>
+          </div>
+          </div>
+          </a>
+
+          <a href="#opportunity_add_modal" data-toggle="modal" class="row align-items-center hover-effect px-1 py-2 text-dark add_fields_multihits" onclick="add_opportunity_fields(this,'2fa78ac5a0eadf8f172190e7a18c8647')">
+          <div class="col-12 d-flex align-items-center">
+          <span class="w-9 h-9 mr-2 d-flex justify-content-center align-items-center rounded-circle bg-fifteenth">T
+          </span>
+          <div class="d-flex flex-column">
+          <span class="d-block">test</span>
+          <div class="d-flex align-items-center">
+          <span class="text-secondary small mr-2 d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> call </span> 4413523920 </span>
+          <span class="text-secondary small d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> email </span>test13523920@yopmail.com</span>
+          </div>
+          </div>
+          </div>
+          </a>
+
+          <a href="#opportunity_add_modal" data-toggle="modal" class="row align-items-center hover-effect px-1 py-2 text-dark add_fields_multihits" onclick="add_opportunity_fields(this,'aba84f4847eb9764e3445a021be73739')">
+          <div class="col-12 d-flex align-items-center">
+          <span class="w-9 h-9 mr-2 d-flex justify-content-center align-items-center rounded-circle bg-fifteenth">T
+          </span>
+          <div class="d-flex flex-column">
+          <span class="d-block">test</span>
+          <div class="d-flex align-items-center">
+          <span class="text-secondary small mr-2 d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> call </span> 4413523921 </span>
+          <span class="text-secondary small d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> email </span>test13523921@yopmail.com</span>
+          </div>
+          </div>
+          </div>
+          </a>
+      </div>
+    </div>
+    <div class="modal-footer justify-content-between">
+     <button class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Close</button>
+     <button class="btn btn-sm btn-primary apply_opportunity_btn d-flex first_search" onclick="searchLeadData(this)">Apply</button>
+    </div>
+   </div>
+  </div>
+ </div>
+<!-- opportunity_lead_modal end here-->
+
+
+
+<div class="modal fade offCanvasModal right popup-customization show" data-backdrop="static" id="opportunity_add_modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" xmlns="http://www.w3.org/1999/html">
+    <div class="modal-content h-100">
+     <div class="modal-header border-bottom-blue">
+      <h5 class="modal-title my-0">
+        <a href="javascript:void(0)" data-dismiss="modal" data-toggle="tooltip" title="" data-original-title="Back">
+          <span class="material-icons-outlined fs-18 mr-1">keyboard_backspace</span>
+        </a>
+          <span class="title font-weight-bold">Add <span class="config_name"></span></span>
+      </h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="tooltip" data-placement="left" data-container="body" title="" data-original-title="Click Here to Close">
+       <span aria-hidden="true">×</span>
+      </button>
+     </div>
+     <div class="modal-body pt-0">
+        <form id="create_opportunity">
+           <div class="sticky-top bg-white pb-2">
+              <div id="applicant_data">
+                 <a href="#" data-toggle="modal" class="row align-items-center hover-effect px-1 py-2 text-dark add_fields_multihits bg-light pointers-none">
+                    <div class="col-12 d-flex align-items-center">
+                    <span class="w-9 h-9 mr-2 d-flex justify-content-center align-items-center rounded-circle bg-fifteenth">T</span>
+                    <div class="d-flex flex-column">
+                    <span class="d-block">test</span>
+                    <div class="d-flex align-items-center">
+                    <span class="text-secondary small mr-2 d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> call </span> 4413523652 </span>
+                    <span class="text-secondary small d-flex align-items-center"><span class="material-icons-outlined fs-11 mr-1"> email </span>test13523652@yopmail.com</span>
+                    </div>
+                    </div>
+                    </div>
+                 </a>
+              </div>
+              <div class="row bg-light border-bottom">
+                 <div class="col-12">
+                    <h6 class="text-dark mt-0 mb-2 font-weight-normal fs-13">
+                       Profile Details
+                    </h6>
+                 </div>
+              </div>
+           </div>
+           <div class="form-group mb-3 pt-0">
+              <div class="row">
+                 <div class="col-12 col-sm-3">
+                       <label class="pt-1 mt-2 mb-0 text-secondary d-flex" for="">
+                          <span class="text-truncate">State</span>
+                          
+                             <small class="text-danger ml-1">*</small>
+                          
+                       </label>
+                 </div>
+                 <div class="col-12 col-sm-9">
+                        <select class="form-control selectpicker" onchange="getChildDataAjax(this);" data-max-options="" data-size="5" data-style="bg-white border pl-2 pr-1 rounded-0" id="state_id" name="state_id" data-live-search="true" title=" Select State " tabindex="-98"><option class="bs-title-option" value=""></option>
+                          <option value=""> Select an option</option> 
+                             <option value="28655">
+                                   Delhi
+                             </option>
+                          
+                             <option value="28972">
+                                   Haryana
+                             </option>
+                       </select>
+                  </div>
+                       
+                       <span class="validation-message text-danger small state_id_error create_error"></span>
+              </div>
+           </div>   
+           <div class="form-group mb-3 pt-0">
+                 <div class="row">
+                    <div class="col-12 col-sm-3">
+                       <label class="pt-1 mt-2 mb-0 text-secondary d-flex" for="">
+                             <span class="text-truncate">City</span>
+                             
+                                <small class="text-danger ml-1">*</small>
+                             
+                       </label>
+                    </div>
+                    <div class="col-12 col-sm-9">
+                      <select class="form-control selectpicker" onchange="getChildDataAjax(this);" data-max-options="" data-size="5" data-style="bg-white border pl-2 pr-1 rounded-0" id="city_id" name="city_id" data-live-search="true" title=" Select City " tabindex="-98"><option class="bs-title-option" value=""></option>
+                             <option value=""> Select an option</option>   
+                      </select>
+                    </div>
+                  </div>
+                  <span class="validation-message text-danger small city_id_error create_error"></span>
+           </div>
+           <input type="hidden" value="609a212c14aaf5fd47ea35e6336dce48" id="add_applicant_id" autocomplete="off">
+           <div class="row">
+              <div class="col-12 col-sm-3">
+                  <label class="pt-1 mt-2 mb-0 text-secondary d-flex">
+                  Assign to
+                  </label>
+              </div>
+              <div class="col-12 col-sm-9">
+                    <select class="form-control selectpicker" id="reassign_to" data-size="5" data-style="bg-white border pl-2 pr-1 rounded-0" data-live-search="true" name="reassign_to" tabindex="-98">
+                        <option value="">
+                          Select Owner
+                        </option>
+                        
+                          <option value="16036009">
+                          aman test new user (test16036009@yopmail.com)
+                          </option>
+                        
+                          <option value="13100160">
+                          as (test13100160@yopmail.com)
+                          </option>
+                        
+                          <option value="13100159">
+                          deeepti Yadav (test13100159@yopmail.com)
+                          </option>
+                        
+                          <option value="13100161">
+                          deep (test13100161@yopmail.com)
+                          </option>
+                        
+                          <option value="2239120">
+                          Hello Sushil34 (test2239120@yopmail.com)
+                          </option>
+                        
+                          <option value="16036041">
+                          ishwar test (test16036041@yopmail.com)
+                          </option>
+                        
+                          <option value="16032906">
+                          Kanishak Anand (test16032906@yopmail.com)
+                          </option>
+                        
+                          <option value="16023283">
+                          Mridul 2 (test16023283@yopmail.com)
+                          </option>
+                        
+                          <option value="13100162">
+                          QAtest (test13100162@yopmail.com)
+                          </option>
+                        
+                          <option value="2117141">
+                          Team Admissions (test2117141@yopmail.com)
+                          </option>
+                        
+                          <option value="2117163">
+                          Team Admissions (test2117163@yopmail.com)
+                          </option>
+                        
+                          <option value="13105153">
+                          test (test16000389@yopmail.com)
+                          </option>
+                        
+                          <option value="13106118">
+                          Test Ankita (test16002219@yopmail.com)
+                          </option>
+                        
+                          <option value="13096362">
+                          Test Counsellor (BNS) (test13096362@yopmail.com)
+                          </option>
+                        
+                          <option value="13097963">
+                          test|user (test13097963@yopmail.com)
+                          </option>
+                        
+                          <option value="16035770">
+                          User (test16035770@yopmail.com)
+                          </option>
+                        
+                          <option value="16036287">
+                          User (FNCrEYI@mailinator.com)
+                          </option>
+                        
+                          <option value="16026815">
+                          user (test16026815@yopmail.com)
+                          </option>
+                        
+                          <option value="16036039">
+                          User Aman (test16036039@yopmail.com)
+                          </option>
+                        
+                          <option value="16036040">
+                          yogesh test (test16036040@yopmail.com)
+                          </option>
+                        
+                        
+                    </select>
+              </div>
+                <span class="validation-message text-danger small _error create_error"></span>
+           </div>
+        </form>
+     </div>
+     <div class="modal-footer justify-content-between">
+        <button class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Back</button>
+        <button class="btn btn-sm btn-primary apply_opportunity_btn d-flex" onclick="addOpportunity()">Add</button>
+     </div>
+    </div>
   </div>
 </div>
-<!-- create-opportunity end here-->
 
 
 
@@ -1001,7 +1237,12 @@
    <script type="text/javascript" src="js/plugins/date-range-picker.js?1697805256"></script>
    <script type="text/javascript" src="js/scrollSync.js?1697805256"></script>
    <script>
-    $("#missedActioModal").modal('show');
+ $("#missedActioModal").modal('show');
+$('#callDetailModal').on('show.bs.modal', function (e) {
+  $("#missedActioModal").modal('hide');
+})
+
+    
     // dropdownMenuPlacement with body
 function dropdownMenuPlacement() {
   $('.dropdown.show[data-container="body"]').dropdown('toggle');
